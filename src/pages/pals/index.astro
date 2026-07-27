@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import PalImage from '@components/PalImage.astro';
 import { PAL_TYPES } from '@/config';
 import palsData from '@data/pals.json';
 import type { Pal } from '@data/types';
@@ -82,7 +83,7 @@ const schema = {
     {filteredPals.map((pal) => (
       <a href={`/pals/${pal.id}/`} class="pal-tile" data-name-zh={pal.name.zh.toLowerCase()} data-name-en={pal.name.en.toLowerCase()}>
         <div class="pal-tile-img">
-          <span class="pal-tile-emoji">{pal.types[0] === 'fire' ? '🔥' : pal.types[0] === 'water' ? '💧' : pal.types[0] === 'grass' ? '🌿' : pal.types[0] === 'electric' ? '⚡' : pal.types[0] === 'ice' ? '❄️' : pal.types[0] === 'dark' ? '🌑' : pal.types[0] === 'dragon' ? '🐉' : '⭐'}</span>
+          <PalImage pal={pal} size="medium" rounded />
           <div class="pal-tile-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
         </div>
         <div class="pal-tile-info">

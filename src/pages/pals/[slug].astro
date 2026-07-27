@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import AdSlot from '@components/AdSlot.astro';
+import PalImage from '@components/PalImage.astro';
 import { PAL_TYPES, WORK_SUITABILITIES } from '@/config';
 import palsData from '@data/pals.json';
 import type { Pal, PalType, WorkSuitability } from '@data/types';
@@ -69,9 +70,7 @@ const relatedPals = (palsData as Pal[])
   <article class="pal-detail">
     <!-- Header -->
     <header class="pal-header">
-      <div class="pal-header-img">
-        <span class="pal-header-emoji">{pal.types[0] === 'fire' ? '🔥' : pal.types[0] === 'water' ? '💧' : pal.types[0] === 'grass' ? '🌿' : pal.types[0] === 'electric' ? '⚡' : pal.types[0] === 'ice' ? '❄️' : pal.types[0] === 'dark' ? '🌑' : pal.types[0] === 'dragon' ? '🐉' : '⭐'}</span>
-      </div>
+      <PalImage pal={pal} size="large" rounded />
       <div class="pal-header-info">
         <div class="pal-header-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
         <h1 class="pal-header-name">{pal.name.zh}</h1>

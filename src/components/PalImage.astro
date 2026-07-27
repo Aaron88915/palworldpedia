@@ -1,0 +1,92 @@
+---
+/**
+ * 帕鲁图片组件 - 自适应父容器
+ * - 优先显示真实图片（从 Fandom Wiki 下载）
+ * - 图片不存在时回退到 emoji 占位
+ * - 自动 lazy load
+ */
+import type { Pal } from '@data/types';
+
+export interface Props {
+  pal: Pal;
+  size?: 'small' | 'medium' | 'large';
+  rounded?: boolean;
+}
+
+const { pal, size = 'medium', rounded = false } = Astro.props;
+
+const hasImage = !!(pal.image && pal.image.startsWith('/images/'));
+
+const sizeClass = `pal-image-${size}`;
+
+function getEmoji(types: string[]) {
+  const map: Record<string, string> = {
+    fire: '🔥', water: '💧', grass: '🌿', electric: '⚡',
+    ice: '❄️', ground: '⛰️', dark: '🌑', dragon: '🐉', neutral: '⭐',
+  };
+  return map[types[0] || 'neutral'] || '⭐';
+}
+---
+
+<div class={`pal-image-wrap ${sizeClass} ${rounded ? 'rounded' : ''}`}>
+  {hasImage ? (
+    <img
+      src={pal.image}
+      alt={pal.name.zh}
+      class="pal-image"
+      loading="lazy"
+      decoding="async"
+    />
+  ) : (
+    <div class="pal-image-fallback">
+      <span>{getEmoji(pal.types)}</span>
+    </div>
+  )}
+</div>
+
+<style>
+  .pal-image-wrap {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .pal-image-wrap.rounded {
+    border-radius: var(--radius);
+  }
+
+  .pal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+  }
+
+  .pal-image-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+  }
+
+  .pal-image-fallback span {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .pal-image-small {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .pal-image-large .pal-image-fallback span {
+    font-size: 5rem;
+  }
+</style>

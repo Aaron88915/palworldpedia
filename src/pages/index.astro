@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import PalImage from '@components/PalImage.astro';
 import { SITE, PAL_TYPES } from '@/config';
 import palsData from '@data/pals.json';
 import type { Pal } from '@data/types';
@@ -69,9 +70,7 @@ const schema = {
     <div class="grid grid-pals">
       {featuredPals.map((pal) => (
         <a href={`/pals/${pal.id}/`} class="pal-card">
-          <div class="pal-image-placeholder">
-            <span class="pal-emoji">{pal.types[0] === 'fire' ? '🔥' : pal.types[0] === 'water' ? '💧' : pal.types[0] === 'grass' ? '🌿' : '⚡'}</span>
-          </div>
+          <PalImage pal={pal} size="medium" rounded />
           <div class="pal-info">
             <div class="pal-name">{pal.name.zh}</div>
             <div class="pal-name-en">{pal.name.en}</div>
