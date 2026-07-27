@@ -188,7 +188,6 @@ const schema = {
     if (!p) return '';
     return `<a href="/pals/${p.id}/" class="result-pal-link">
       <div class="result-pal-name">${p.zh}</div>
-      <div class="result-pal-name-en">${p.en}</div>
     </a>`;
   }
 
@@ -239,7 +238,7 @@ const schema = {
     const childrenHtml = children
       .map((e) => palCard(palMap.get(e.c)))
       .filter(Boolean)
-      .join('<span class="result-or">或</span>');
+      .join('');
     out.innerHTML = `
       <p class="mb-2">可能孵出 <strong>${children.length}</strong> 种帕鲁：</p>
       <div class="result-pal-grid">${childrenHtml}</div>
@@ -367,33 +366,46 @@ const schema = {
   document.getElementById('start-pal').addEventListener('change', showPath);
   document.getElementById('end-pal').addEventListener('change', showPath);
 
-  // 完整配种表
+  // 完整配种表（默认过滤同种繁殖）
   async function loadEdgeTable() {
     const data = await getEdges();
+    // 过滤：去掉 X + X = X 的同种繁殖（无实际意义）
+    const crossBreedData = data.filter((e) => !(e.p1 === e.p2 && e.p1 === e.c));
+
     const tbody = document.getElementById('edge-tbody');
-    document.getElementById('edge-count').textContent = `共 ${data.length} 条边`;
-
     const MAX_DISPLAY = 100;
-    const initial = data.slice(0, MAX_DISPLAY);
-    renderRows(initial);
+    let currentData = crossBreedData;
+    let shown = 0;
 
-    if (data.length > MAX_DISPLAY) {
-      const tr = document.createElement('tr');
-      tr.id = 'load-more-row';
-      tr.innerHTML = `<td colspan="5" class="text-center"><button id="load-more-btn" class="btn btn-secondary">显示更多（剩余 ${data.length - MAX_DISPLAY} 条）</button></td>`;
-      tbody.appendChild(tr);
-      let shown = MAX_DISPLAY;
-      document.getElementById('load-more-btn').addEventListener('click', () => {
-        const next = data.slice(shown, shown + MAX_DISPLAY);
-        renderRows(next);
-        shown += next.length;
-        if (shown >= data.length) {
-          document.getElementById('load-more-row')?.remove();
-        } else {
-          const btn = document.getElementById('load-more-btn');
-          if (btn) btn.textContent = `显示更多（剩余 ${data.length - shown} 条）`;
-        }
-      });
+    function setCount(n) {
+      document.getElementById('edge-count').textContent = `共 ${n} 条边`;
+    }
+
+    function clearLoadMore() {
+      const old = document.getElementById('load-more-row');
+      if (old) old.remove();
+    }
+
+    function addLoadMore() {
+      clearLoadMore();
+      const remaining = currentData.length - shown;
+      if (remaining > 0) {
+        const tr = document.createElement('tr');
+        tr.id = 'load-more-row';
+        tr.innerHTML = `<td colspan="5" class="text-center"><button id="load-more-btn" class="btn btn-secondary">显示更多（剩余 ${remaining} 条）</button></td>`;
+        tbody.appendChild(tr);
+        document.getElementById('load-more-btn').addEventListener('click', () => {
+          const next = currentData.slice(shown, shown + MAX_DISPLAY);
+          renderRows(next);
+          shown += next.length;
+          if (shown >= currentData.length) {
+            clearLoadMore();
+          } else {
+            const btn = document.getElementById('load-more-btn');
+            if (btn) btn.textContent = `显示更多（剩余 ${currentData.length - shown} 条）`;
+          }
+        });
+      }
     }
 
     function renderRows(rows) {
@@ -416,19 +428,34 @@ const schema = {
       const t = document.createElement('template');
       t.innerHTML = html;
       while (t.content.firstChild) {
-        if (document.getElementById('load-more-row')) {
-          tbody.insertBefore(t.content.firstChild, document.getElementById('load-more-row'));
-        } else {
-          tbody.appendChild(t.content.firstChild);
-        }
+        const loadMore = document.getElementById('load-more-row');
+        if (loadMore) tbody.insertBefore(t.content.firstChild, loadMore);
+        else tbody.appendChild(t.content.firstChild);
       }
     }
+
+    function render(data) {
+      currentData = data;
+      tbody.innerHTML = '';
+      shown = 0;
+      setCount(data.length);
+      if (data.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted">无匹配结果</td></tr>';
+        return;
+      }
+      renderRows(data.slice(0, MAX_DISPLAY));
+      shown = Math.min(MAX_DISPLAY, data.length);
+      addLoadMore();
+    }
+
+    // 初始渲染
+    render(crossBreedData);
 
     // 搜索
     document.getElementById('edge-search').addEventListener('input', (e) => {
       const q = e.target.value.toLowerCase().trim();
       const filtered = q
-        ? data.filter((edge) => {
+        ? crossBreedData.filter((edge) => {
             const p1 = palMap.get(edge.p1);
             const p2 = palMap.get(edge.p2);
             const c = palMap.get(edge.c);
@@ -438,19 +465,8 @@ const schema = {
               (c && (c.zh.toLowerCase().includes(q) || c.en.toLowerCase().includes(q)))
             );
           })
-        : data;
-      tbody.innerHTML = '';
-      document.getElementById('edge-count').textContent = `共 ${filtered.length} 条边`;
-      if (filtered.length > 0) {
-        renderRows(filtered.slice(0, MAX_DISPLAY));
-        if (filtered.length > MAX_DISPLAY) {
-          const tr = document.createElement('tr');
-          tr.innerHTML = `<td colspan="5" class="text-center"><button id="load-more-btn" class="btn btn-secondary">显示更多（剩余 ${filtered.length - MAX_DISPLAY} 条）</button></td>`;
-          tbody.appendChild(tr);
-        }
-      } else {
-        tbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted">无匹配结果</td></tr>';
-      }
+        : crossBreedData;
+      render(filtered);
     });
   }
 
