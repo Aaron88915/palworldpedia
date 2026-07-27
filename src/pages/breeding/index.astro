@@ -1,20 +1,13 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import AdSlot from '@components/AdSlot.astro';
-import palsData from '@data/pals.json';
-import breedingData from '@data/breeding.json';
-import type { Pal, BreedingEdge } from '@data/types';
-
-const pals = palsData as Pal[];
-const edges = breedingData as BreedingEdge[];
-
-const palMap = new Map(pals.map((p) => [p.id, p]));
+import { SITE } from '@/config';
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: 'Palworld 配种计算器',
-  description: 'Palworld 配种计算器 - 输入两只帕鲁，立即计算后代配方。支持反向查询和最短路径搜索。',
+  description: 'Palworld 配种计算器 - 输入两只帕鲁，立即计算后代配方。支持反向查询（目标帕鲁→父母）和最短配种路径。',
   applicationCategory: 'GameApplication',
   operatingSystem: 'Web',
 };
@@ -22,60 +15,110 @@ const schema = {
 
 <Layout
   title="配种计算器 - Palworld 帕鲁繁殖公式"
-  description="Palworld 配种计算器。输入两只帕鲁，立即计算可孵出的后代。包含完整配种表和反向查询功能。"
+  description="Palworld 配种计算器。输入两只帕鲁，立即计算可孵出的后代。包含完整配种表、反向查询和最短配种路径搜索。"
   schema={schema}
 >
   <header class="page-header">
     <h1>🧬 配种计算器</h1>
-    <p class="text-secondary">输入两只帕鲁，计算可能孵出的后代</p>
+    <p class="text-secondary">输入两只帕鲁 → 查后代 · 选目标 → 反查父母 · 跨 N 代孵目标 → 最短路径</p>
   </header>
 
   <AdSlot slot="top" />
 
-  <!-- 计算器主面板 -->
-  <section class="calculator">
+  <!-- Tab 切换 -->
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="forward">父母 → 后代</button>
+    <button class="tab-btn" data-tab="reverse">目标 → 父母</button>
+    <button class="tab-btn" data-tab="path">最短配种链</button>
+  </nav>
+
+  <!-- Tab 1: 父母 → 后代 -->
+  <section class="tab-panel active" id="tab-forward">
     <div class="breeder-grid">
       <div class="parent-slot">
         <label class="parent-label">父母 A</label>
         <select id="parent-a" class="parent-select">
           <option value="">选择帕鲁 A...</option>
-          {pals.map((p) => (
-            <option value={p.id}>{p.name.zh} ({p.name.en})</option>
-          ))}
         </select>
         <div id="parent-a-preview" class="parent-preview"></div>
       </div>
-
       <div class="plus-icon">+</div>
-
       <div class="parent-slot">
         <label class="parent-label">父母 B</label>
         <select id="parent-b" class="parent-select">
           <option value="">选择帕鲁 B...</option>
-          {pals.map((p) => (
-            <option value={p.id}>{p.name.zh} ({p.name.en})</option>
-          ))}
         </select>
         <div id="parent-b-preview" class="parent-preview"></div>
       </div>
     </div>
-
     <div class="result-area">
       <div class="result-arrow">↓</div>
-      <div id="result" class="result-box">
+      <div id="forward-result" class="result-box">
         <p class="text-muted">请选择两只帕鲁以查看结果</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tab 2: 目标 → 父母 -->
+  <section class="tab-panel" id="tab-reverse">
+    <div class="single-slot">
+      <label class="parent-label">目标帕鲁（想孵出）</label>
+      <select id="target-pal" class="parent-select">
+        <option value="">选择目标帕鲁...</option>
+      </select>
+      <div id="target-preview" class="parent-preview"></div>
+    </div>
+    <div class="result-area">
+      <div class="result-arrow">↑</div>
+      <div id="reverse-result" class="result-box">
+        <p class="text-muted">选择目标帕鲁，列出所有可能的父母组合</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tab 3: 最短配种链 -->
+  <section class="tab-panel" id="tab-path">
+    <p class="text-secondary mb-2">输入起始帕鲁（你已有的）和目标帕鲁（想孵的），自动找出最短的配种链。</p>
+    <div class="breeder-grid">
+      <div class="parent-slot">
+        <label class="parent-label">起始帕鲁（已有）</label>
+        <select id="start-pal" class="parent-select">
+          <option value="">选择起始帕鲁...</option>
+        </select>
+      </div>
+      <div class="plus-icon">→</div>
+      <div class="parent-slot">
+        <label class="parent-label">目标帕鲁</label>
+        <select id="end-pal" class="parent-select">
+          <option value="">选择目标帕鲁...</option>
+        </select>
+      </div>
+    </div>
+    <div class="result-area">
+      <div class="result-arrow">→</div>
+      <div id="path-result" class="result-box">
+        <p class="text-muted">选择起始 + 目标帕鲁，查找最短配种链</p>
       </div>
     </div>
   </section>
 
   <AdSlot slot="inline" />
 
-  <!-- 配种表 -->
+  <!-- 完整配种表（可筛选） -->
   <section class="mt-4">
-    <h2>已知配种组合</h2>
-    <p class="text-secondary mb-2">以下是已确认的配种公式（数据持续更新中）</p>
+    <div class="flex items-center justify-between mb-2">
+      <h2>📋 完整配种表</h2>
+      <span class="text-secondary" id="edge-count">加载中...</span>
+    </div>
+    <input
+      type="search"
+      id="edge-search"
+      class="edge-search"
+      placeholder="搜索帕鲁名（中/英）..."
+      autocomplete="off"
+    />
     <div class="table-wrapper">
-      <table>
+      <table id="edge-table">
         <thead>
           <tr>
             <th>父母 A</th>
@@ -85,52 +128,370 @@ const schema = {
             <th>后代</th>
           </tr>
         </thead>
-        <tbody id="breeding-tbody">
-          {edges.map((edge) => {
-            const p1 = palMap.get(edge.parent1);
-            const p2 = palMap.get(edge.parent2);
-            const child = palMap.get(edge.child);
-            if (!p1 || !p2 || !child) return null;
-            return (
-              <tr>
-                <td><a href={`/pals/${p1.id}/`}>{p1.name.zh}</a></td>
-                <td>+</td>
-                <td><a href={`/pals/${p2.id}/`}>{p2.name.zh}</a></td>
-                <td>→</td>
-                <td><a href={`/pals/${child.id}/`}><strong>{child.name.zh}</strong></a></td>
-              </tr>
-            );
-          })}
+        <tbody id="edge-tbody">
+          <tr><td colspan="5" class="text-center text-muted">加载配种数据中...</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- SEO 内容 -->
+  <!-- SEO 文本 -->
   <section class="seo-text mt-4">
     <h2>关于 Palworld 配种系统</h2>
     <p>
-      Palworld 的配种系统是游戏的核心玩法之一。通过将两只不同性别的帕鲁放入<strong>配种牧场</strong>，
+      Palworld 的配种系统是游戏的核心玩法之一。通过将两只不同（可相同）性别的帕鲁放入<strong>配种牧场</strong>，
       可以孵出全新的帕鲁。许多稀有和强大的帕鲁只能通过配种获得。
     </p>
-    <p>
-      配种的关键规则：
-    </p>
+    <p>本计算器支持三种查询模式：</p>
     <ul>
-      <li>需要一只雄性和一只雌性帕鲁（同一只帕鲁可以跟多只配对）</li>
-      <li>后代会继承父母的<strong>随机技能词条</strong></li>
-      <li>部分后代有特殊组合（异色帕鲁）需要特定父母</li>
-      <li>某些稀有帕鲁只能通过<strong>多代配种</strong>获得</li>
+      <li><strong>父母 → 后代</strong>：输入 A 和 B，立即算出能孵出什么</li>
+      <li><strong>目标 → 父母</strong>：想孵某只帕鲁，列出所有可能的父母组合</li>
+      <li><strong>最短配种链</strong>：已有 A，想孵 Z，自动找 A → ... → Z 的最短路径（BFS 算法）</li>
     </ul>
-    <p>
-      使用本计算器可以快速查询任意两只帕鲁的配种结果，并发现最短的配种路径。
-    </p>
   </section>
 </Layout>
+
+<script>
+  // 加载帕鲁 + 配种数据（从 public/ JSON）
+  let pals = null;
+  let edges = null;
+  const palMap = new Map();
+
+  async function getPals() {
+    if (!pals) {
+      const res = await fetch('/pals-data.json');
+      pals = await res.json();
+    }
+    return pals;
+  }
+  async function getEdges() {
+    if (!edges) {
+      const res = await fetch('/breeding-data.json');
+      edges = await res.json();
+    }
+    return edges;
+  }
+
+  async function init() {
+    const list = await getPals();
+    list.forEach((p) => palMap.set(p.id, p));
+    const opts = list.map((p) => `<option value="${p.id}">${p.zh} (${p.en})</option>`).join('');
+    document.getElementById('parent-a').innerHTML = '<option value="">选择帕鲁 A...</option>' + opts;
+    document.getElementById('parent-b').innerHTML = '<option value="">选择帕鲁 B...</option>' + opts;
+    document.getElementById('target-pal').innerHTML = '<option value="">选择目标帕鲁...</option>' + opts;
+    document.getElementById('start-pal').innerHTML = '<option value="">选择起始帕鲁...</option>' + opts;
+    document.getElementById('end-pal').innerHTML = '<option value="">选择目标帕鲁...</option>' + opts;
+    loadEdgeTable();
+  }
+
+  function palCard(p) {
+    if (!p) return '';
+    return `<a href="/pals/${p.id}/" class="result-pal-link">
+      <div class="result-pal-name">${p.zh}</div>
+      <div class="result-pal-name-en">${p.en}</div>
+    </a>`;
+  }
+
+  // Tab 切换
+  document.querySelectorAll('.tab-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach((b) => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach((p) => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Forward: A+B → C
+  async function findChildren(a, b) {
+    const data = await getEdges();
+    return data.filter(
+      (e) => (e.p1 === a && e.p2 === b) || (e.p1 === b && e.p2 === a)
+    );
+  }
+
+  async function showForward() {
+    const a = document.getElementById('parent-a').value;
+    const b = document.getElementById('parent-b').value;
+    const palA = palMap.get(a);
+    const palB = palMap.get(b);
+    document.getElementById('parent-a-preview').innerHTML = palCard(palA);
+    document.getElementById('parent-b-preview').innerHTML = palCard(palB);
+
+    const out = document.getElementById('forward-result');
+    if (!a || !b) {
+      out.className = 'result-box';
+      out.innerHTML = '<p class="text-muted">请选择两只帕鲁以查看结果</p>';
+      return;
+    }
+    if (a === b) {
+      out.className = 'result-box';
+      out.innerHTML = '<p class="text-muted">同种配对通常孵出同种，请选择不同的两只帕鲁</p>';
+      return;
+    }
+    const children = await findChildren(a, b);
+    if (children.length === 0) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">未找到 ${palA?.name.zh || a} + ${palB?.name.zh || b} 的已知配种组合</p>`;
+      return;
+    }
+    out.className = 'result-box has-result';
+    const childrenHtml = children
+      .map((e) => palCard(palMap.get(e.c)))
+      .filter(Boolean)
+      .join('<span class="result-or">或</span>');
+    out.innerHTML = `
+      <p class="mb-2">可能孵出 <strong>${children.length}</strong> 种帕鲁：</p>
+      <div class="result-pal-grid">${childrenHtml}</div>
+    `;
+  }
+
+  document.getElementById('parent-a').addEventListener('change', showForward);
+  document.getElementById('parent-b').addEventListener('change', showForward);
+
+  // Reverse: C → A+B
+  async function showReverse() {
+    const c = document.getElementById('target-pal').value;
+    const palC = palMap.get(c);
+    document.getElementById('target-preview').innerHTML = palCard(palC);
+
+    const out = document.getElementById('reverse-result');
+    if (!c) {
+      out.className = 'result-box';
+      out.innerHTML = '<p class="text-muted">选择目标帕鲁，列出所有可能的父母组合</p>';
+      return;
+    }
+    const data = await getEdges();
+    const parents = data.filter((e) => e.c === c);
+    if (parents.length === 0) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">${palC?.name.zh || c} 没有已知的配种记录</p>`;
+      return;
+    }
+    out.className = 'result-box has-result';
+    // 去重（同一对父母可能孵多个）
+    const uniquePairs = new Map();
+    for (const e of parents) {
+      const key = [e.p1, e.p2].sort().join('|');
+      if (!uniquePairs.has(key)) uniquePairs.set(key, e);
+    }
+    const rows = Array.from(uniquePairs.values())
+      .map((e) => {
+        const p1 = palMap.get(e.p1);
+        const p2 = palMap.get(e.p2);
+        if (!p1 || !p2) return '';
+        return `<tr>
+          <td>${palCard(p1)}</td>
+          <td class="text-center">+</td>
+          <td>${palCard(p2)}</td>
+        </tr>`;
+      })
+      .filter(Boolean)
+      .join('');
+    out.innerHTML = `
+      <p class="mb-2"><strong>${palC?.name.zh || c}</strong> 可由 <strong>${uniquePairs.size}</strong> 种父母组合孵出：</p>
+      <div class="table-wrapper">
+        <table><tbody>${rows}</tbody></table>
+      </div>
+    `;
+  }
+  document.getElementById('target-pal').addEventListener('change', showReverse);
+
+  // Shortest path: A → C via BFS
+  async function findShortestPath(start, end) {
+    const data = await getEdges();
+    // 构建图：每个 pal 节点 → 它能孵出的后代列表
+    const adj = new Map();
+    for (const e of data) {
+      if (!adj.has(e.p1)) adj.set(e.p1, new Set());
+      if (!adj.has(e.p2)) adj.set(e.p2, new Set());
+      adj.get(e.p1).add(e.c);
+      adj.get(e.p2).add(e.c);
+    }
+    // BFS
+    const queue = [{ node: start, path: [start] }];
+    const visited = new Set([start]);
+    while (queue.length > 0) {
+      const { node, path } = queue.shift();
+      if (node === end) return path;
+      const neighbors = adj.get(node) || [];
+      for (const next of neighbors) {
+        if (!visited.has(next)) {
+          visited.add(next);
+          queue.push({ node: next, path: [...path, next] });
+        }
+      }
+    }
+    return null;
+  }
+
+  async function showPath() {
+    const start = document.getElementById('start-pal').value;
+    const end = document.getElementById('end-pal').value;
+    const out = document.getElementById('path-result');
+    if (!start || !end) {
+      out.className = 'result-box';
+      out.innerHTML = '<p class="text-muted">选择起始 + 目标帕鲁，查找最短配种链</p>';
+      return;
+    }
+    if (start === end) {
+      out.className = 'result-box';
+      out.innerHTML = '<p class="text-muted">起始和目标相同</p>';
+      return;
+    }
+    const path = await findShortestPath(start, end);
+    if (!path) {
+      out.className = 'result-box';
+      out.innerHTML = '<p class="text-muted">找不到连接这两个帕鲁的配种链</p>';
+      return;
+    }
+    out.className = 'result-box has-result';
+    const steps = path
+      .map((id, i) => {
+        const p = palMap.get(id);
+        if (!p) return '';
+        const arrow = i < path.length - 1 ? '<span class="path-arrow">↓</span>' : '';
+        return `<div class="path-step">${palCard(p)}${arrow}</div>`;
+      })
+      .filter(Boolean)
+      .join('');
+    const stepsDesc =
+      path.length === 2
+        ? `直接配种 ${palMap.get(start)?.name.zh} × ${palMap.get(end)?.name.zh}`
+        : `需要 <strong>${path.length - 1}</strong> 步配种`;
+    out.innerHTML = `
+      <p class="mb-2">${stepsDesc}</p>
+      <div class="path-flow">${steps}</div>
+    `;
+  }
+  document.getElementById('start-pal').addEventListener('change', showPath);
+  document.getElementById('end-pal').addEventListener('change', showPath);
+
+  // 完整配种表
+  async function loadEdgeTable() {
+    const data = await getEdges();
+    const tbody = document.getElementById('edge-tbody');
+    document.getElementById('edge-count').textContent = `共 ${data.length} 条边`;
+
+    const MAX_DISPLAY = 100;
+    const initial = data.slice(0, MAX_DISPLAY);
+    renderRows(initial);
+
+    if (data.length > MAX_DISPLAY) {
+      const tr = document.createElement('tr');
+      tr.id = 'load-more-row';
+      tr.innerHTML = `<td colspan="5" class="text-center"><button id="load-more-btn" class="btn btn-secondary">显示更多（剩余 ${data.length - MAX_DISPLAY} 条）</button></td>`;
+      tbody.appendChild(tr);
+      let shown = MAX_DISPLAY;
+      document.getElementById('load-more-btn').addEventListener('click', () => {
+        const next = data.slice(shown, shown + MAX_DISPLAY);
+        renderRows(next);
+        shown += next.length;
+        if (shown >= data.length) {
+          document.getElementById('load-more-row')?.remove();
+        } else {
+          const btn = document.getElementById('load-more-btn');
+          if (btn) btn.textContent = `显示更多（剩余 ${data.length - shown} 条）`;
+        }
+      });
+    }
+
+    function renderRows(rows) {
+      const html = rows
+        .map((e) => {
+          const p1 = palMap.get(e.p1);
+          const p2 = palMap.get(e.p2);
+          const c = palMap.get(e.c);
+          if (!p1 || !p2 || !c) return '';
+          return `<tr>
+            <td><a href="/pals/${p1.id}/">${p1.name.zh}</a></td>
+            <td class="text-center text-muted">+</td>
+            <td><a href="/pals/${p2.id}/">${p2.name.zh}</a></td>
+            <td class="text-center text-muted">→</td>
+            <td><a href="/pals/${c.id}/"><strong>${c.name.zh}</strong></a></td>
+          </tr>`;
+        })
+        .filter(Boolean)
+        .join('');
+      const t = document.createElement('template');
+      t.innerHTML = html;
+      while (t.content.firstChild) {
+        if (document.getElementById('load-more-row')) {
+          tbody.insertBefore(t.content.firstChild, document.getElementById('load-more-row'));
+        } else {
+          tbody.appendChild(t.content.firstChild);
+        }
+      }
+    }
+
+    // 搜索
+    document.getElementById('edge-search').addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      const filtered = q
+        ? data.filter((edge) => {
+            const p1 = palMap.get(edge.p1);
+            const p2 = palMap.get(edge.p2);
+            const c = palMap.get(edge.c);
+            return (
+              (p1 && (p1.name.zh.toLowerCase().includes(q) || p1.name.en.toLowerCase().includes(q))) ||
+              (p2 && (p2.name.zh.toLowerCase().includes(q) || p2.name.en.toLowerCase().includes(q))) ||
+              (c && (c.name.zh.toLowerCase().includes(q) || c.name.en.toLowerCase().includes(q)))
+            );
+          })
+        : data;
+      tbody.innerHTML = '';
+      document.getElementById('edge-count').textContent = `共 ${filtered.length} 条边`;
+      if (filtered.length > 0) {
+        renderRows(filtered.slice(0, MAX_DISPLAY));
+        if (filtered.length > MAX_DISPLAY) {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `<td colspan="5" class="text-center"><button id="load-more-btn" class="btn btn-secondary">显示更多（剩余 ${filtered.length - MAX_DISPLAY} 条）</button></td>`;
+          tbody.appendChild(tr);
+        }
+      } else {
+        tbody.innerHTML = '<tr><td colspan="5" class="text-center text-muted">无匹配结果</td></tr>';
+      }
+    });
+  }
+
+  loadEdgeTable();
+</script>
 
 <style>
   .page-header {
     margin-bottom: 1.5rem;
+  }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 0.25rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+  }
+  .tab-btn {
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  .tab-btn:hover {
+    color: var(--text-primary);
+  }
+  .tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .tab-panel {
+    display: none;
+  }
+  .tab-panel.active {
+    display: block;
   }
 
   .calculator {
@@ -157,7 +518,8 @@ const schema = {
     }
   }
 
-  .parent-slot {
+  .parent-slot,
+  .single-slot {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -183,8 +545,6 @@ const schema = {
     background: var(--bg-tertiary);
     border-radius: var(--radius);
     min-height: 60px;
-    font-size: 0.875rem;
-    color: var(--text-secondary);
   }
 
   .plus-icon {
@@ -210,6 +570,7 @@ const schema = {
     border-radius: var(--radius);
     padding: 1.5rem;
     min-height: 80px;
+    text-align: left;
   }
 
   .result-box.has-result {
@@ -218,14 +579,67 @@ const schema = {
     border-color: var(--accent);
   }
 
-  .result-child {
-    font-size: 1.25rem;
-    font-weight: 700;
+  .result-pal-link {
+    display: block;
+    color: inherit;
+    padding: 0.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-align: center;
+    transition: all 0.15s ease;
+  }
+  .result-pal-link:hover {
+    border-color: var(--accent);
+  }
+
+  .result-pal-name {
+    font-weight: 600;
+  }
+  .result-pal-name-en {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .result-pal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .result-or {
+    display: none;
+  }
+
+  .path-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .path-step {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .path-arrow {
+    font-size: 1.5rem;
     color: var(--accent);
   }
 
-  .result-no-match {
-    color: var(--danger);
+  /* 表格 */
+  .edge-search {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .table-wrapper {
@@ -238,90 +652,15 @@ const schema = {
     padding: 1.5rem;
     border: 1px solid var(--border);
   }
-
-  .seo-text p, .seo-text li {
+  .seo-text p,
+  .seo-text li {
     color: var(--text-secondary);
     line-height: 1.7;
   }
-
   .seo-text strong {
     color: var(--text-primary);
   }
-
   .seo-text ul {
     padding-left: 1.5rem;
   }
 </style>
-
-<script define:vars={{ pals, edges }}>
-  // 客户端计算器逻辑
-  const selectA = document.getElementById('parent-a');
-  const selectB = document.getElementById('parent-b');
-  const previewA = document.getElementById('parent-a-preview');
-  const previewB = document.getElementById('parent-b-preview');
-  const resultEl = document.getElementById('result');
-
-  const palMap = new Map(pals.map((p) => [p.id, p]));
-
-  function showPreview(select, target) {
-    const val = select.value;
-    if (!val) {
-      target.innerHTML = '';
-      return;
-    }
-    const pal = palMap.get(val);
-    if (!pal) return;
-    target.innerHTML = `
-      <div><strong>${pal.name.zh}</strong> (${pal.name.en})</div>
-      <div class="text-muted">#${String(pal.paldeckNo).padStart(3, '0')} · ${pal.types.join(' / ')}</div>
-    `;
-  }
-
-  function calculate() {
-    const a = selectA.value;
-    const b = selectB.value;
-    if (!a || !b) {
-      resultEl.className = 'result-box';
-      resultEl.innerHTML = '<p class="text-muted">请选择两只帕鲁以查看结果</p>';
-      return;
-    }
-
-    if (a === b) {
-      resultEl.className = 'result-box';
-      resultEl.innerHTML = '<p class="text-muted">相同帕鲁配对不会产生新组合，请选择两只不同的帕鲁</p>';
-      return;
-    }
-
-    // 查找配种结果（无向图）
-    const match = edges.find(
-      (e) =>
-        (e.parent1 === a && e.parent2 === b) ||
-        (e.parent1 === b && e.parent2 === a)
-    );
-
-    if (match) {
-      const child = palMap.get(match.child);
-      if (child) {
-        resultEl.className = 'result-box has-result';
-        resultEl.innerHTML = `
-          <p>可能孵出：</p>
-          <a href="/pals/${child.id}/" class="result-child">${child.name.zh} (${child.name.en})</a>
-          <p class="text-muted mt-1">#${String(child.paldeckNo).padStart(3, '0')}</p>
-        `;
-        return;
-      }
-    }
-
-    resultEl.className = 'result-box';
-    resultEl.innerHTML = `<p class="result-no-match">未找到已确认的配种组合。完整数据持续更新中...</p>`;
-  }
-
-  selectA.addEventListener('change', () => {
-    showPreview(selectA, previewA);
-    calculate();
-  });
-  selectB.addEventListener('change', () => {
-    showPreview(selectB, previewB);
-    calculate();
-  });
-</script>
