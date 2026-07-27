@@ -57,11 +57,11 @@
     "id": "clovee",
     "paldeckNo": 0,
     "name": {
-      "zh": "Clovee",
+      "zh": "幸叶茸",
       "en": "Clovee"
     },
     "types": [
-      "normal"
+      "grass"
     ],
     "rarity": 1,
     "stats": {
@@ -149,7 +149,7 @@
     "id": "pupperai",
     "paldeckNo": 0,
     "name": {
-      "zh": "Pupperai",
+      "zh": "宗铭丸",
       "en": "Pupperai"
     },
     "types": [
@@ -185,7 +185,7 @@
     "id": "ribunny",
     "paldeckNo": 0,
     "name": {
-      "zh": "Ribunny",
+      "zh": "兔兔",
       "en": "Ribunny"
     },
     "types": [
@@ -221,7 +221,7 @@
     "id": "rooby",
     "paldeckNo": 0,
     "name": {
-      "zh": "Rooby",
+      "zh": "燎火鹿",
       "en": "Rooby"
     },
     "types": [
@@ -257,7 +257,7 @@
     "id": "sparkit",
     "paldeckNo": 0,
     "name": {
-      "zh": "Sparkit",
+      "zh": "伏特喵",
       "en": "Sparkit"
     },
     "types": [
@@ -293,7 +293,7 @@
     "id": "tanzee",
     "paldeckNo": 0,
     "name": {
-      "zh": "Tanzee",
+      "zh": "新叶猿",
       "en": "Tanzee"
     },
     "types": [
@@ -329,7 +329,7 @@
     "id": "caprity-noct",
     "paldeckNo": 0,
     "name": {
-      "zh": "Caprity Noct",
+      "zh": "郁木羊",
       "en": "Caprity Noct"
     },
     "types": [
@@ -365,7 +365,7 @@
     "id": "cryolinx-terra",
     "paldeckNo": 0,
     "name": {
-      "zh": "Cryolinx Terra",
+      "zh": "金棘兽",
       "en": "Cryolinx Terra"
     },
     "types": [
@@ -490,11 +490,11 @@
     "id": "dazzi-noct",
     "paldeckNo": 0,
     "name": {
-      "zh": "Dazzi Noct",
+      "zh": "天阴童子",
       "en": "Dazzi Noct"
     },
     "types": [
-      "dark"
+      "water"
     ],
     "rarity": 1,
     "stats": {
@@ -526,7 +526,7 @@
     "id": "dumud-gild",
     "paldeckNo": 0,
     "name": {
-      "zh": "Dumud Gild",
+      "zh": "梆梆鲶",
       "en": "Dumud Gild"
     },
     "types": [
@@ -598,7 +598,7 @@
     "id": "fenglope-lux",
     "paldeckNo": 0,
     "name": {
-      "zh": "Fenglope Lux",
+      "zh": "雷隐鹿",
       "en": "Fenglope Lux"
     },
     "types": [
@@ -703,7 +703,7 @@
     "id": "gumoss-special",
     "paldeckNo": 0,
     "name": {
-      "zh": "Gumoss (Special)",
+      "zh": "叶泥泥",
       "en": "Gumoss (Special)"
     },
     "types": [
@@ -740,7 +740,7 @@
     "id": "kitsun-noct",
     "paldeckNo": 0,
     "name": {
-      "zh": "Kitsun Noct",
+      "zh": "幽焰狼",
       "en": "Kitsun Noct"
     },
     "types": [
@@ -776,7 +776,7 @@
     "id": "loupmoon-cryst",
     "paldeckNo": 0,
     "name": {
-      "zh": "Loupmoon Cryst",
+      "zh": "霜镰魔",
       "en": "Loupmoon Cryst"
     },
     "types": [
@@ -2113,7 +2113,7 @@
     "id": "celaray-lux",
     "paldeckNo": 7,
     "name": {
-      "zh": "Celaray Lux",
+      "zh": "雷米儿",
       "en": "Celaray Lux"
     },
     "types": [
@@ -2685,7 +2685,7 @@
     "id": "fuack",
     "paldeckNo": 10,
     "name": {
-      "zh": "Fuack",
+      "zh": "冲浪鸭",
       "en": "Fuack"
     },
     "types": [
@@ -6669,7 +6669,7 @@
     "id": "foxparks-cryst",
     "paldeckNo": 29,
     "name": {
-      "zh": "Foxparks Cryst",
+      "zh": "雪绒狐",
       "en": "Foxparks Cryst"
     },
     "types": [
