@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+env:
+  USE_PROJECT_PATH: 'true'  # GitHub Pages 子路径模式；接入自定义域名后改为 false
+
 # 最小权限原则
 permissions:
   contents: read
