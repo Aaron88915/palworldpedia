@@ -232,7 +232,7 @@ const schema = {
     const children = await findChildren(a, b);
     if (children.length === 0) {
       out.className = 'result-box';
-      out.innerHTML = `<p class="text-muted">未找到 ${palA?.name.zh || a} + ${palB?.name.zh || b} 的已知配种组合</p>`;
+      out.innerHTML = `<p class="text-muted">未找到 ${palA?.zh || a} + ${palB?.zh || b} 的已知配种组合</p>`;
       return;
     }
     out.className = 'result-box has-result';
@@ -265,7 +265,7 @@ const schema = {
     const parents = data.filter((e) => e.c === c);
     if (parents.length === 0) {
       out.className = 'result-box';
-      out.innerHTML = `<p class="text-muted">${palC?.name.zh || c} 没有已知的配种记录</p>`;
+      out.innerHTML = `<p class="text-muted">${palC?.zh || c} 没有已知的配种记录</p>`;
       return;
     }
     out.className = 'result-box has-result';
@@ -289,7 +289,7 @@ const schema = {
       .filter(Boolean)
       .join('');
     out.innerHTML = `
-      <p class="mb-2"><strong>${palC?.name.zh || c}</strong> 可由 <strong>${uniquePairs.size}</strong> 种父母组合孵出：</p>
+      <p class="mb-2"><strong>${palC?.zh || c}</strong> 可由 <strong>${uniquePairs.size}</strong> 种父母组合孵出：</p>
       <div class="table-wrapper">
         <table><tbody>${rows}</tbody></table>
       </div>
@@ -357,7 +357,7 @@ const schema = {
       .join('');
     const stepsDesc =
       path.length === 2
-        ? `直接配种 ${palMap.get(start)?.name.zh} × ${palMap.get(end)?.name.zh}`
+        ? `直接配种 ${palMap.get(start)?.zh} × ${palMap.get(end)?.zh}`
         : `需要 <strong>${path.length - 1}</strong> 步配种`;
     out.innerHTML = `
       <p class="mb-2">${stepsDesc}</p>
@@ -404,11 +404,11 @@ const schema = {
           const c = palMap.get(e.c);
           if (!p1 || !p2 || !c) return '';
           return `<tr>
-            <td><a href="/pals/${p1.id}/">${p1.name.zh}</a></td>
+            <td><a href="/pals/${p1.id}/">${p1.zh}</a></td>
             <td class="text-center text-muted">+</td>
-            <td><a href="/pals/${p2.id}/">${p2.name.zh}</a></td>
+            <td><a href="/pals/${p2.id}/">${p2.zh}</a></td>
             <td class="text-center text-muted">→</td>
-            <td><a href="/pals/${c.id}/"><strong>${c.name.zh}</strong></a></td>
+            <td><a href="/pals/${c.id}/"><strong>${c.zh}</strong></a></td>
           </tr>`;
         })
         .filter(Boolean)
@@ -433,9 +433,9 @@ const schema = {
             const p2 = palMap.get(edge.p2);
             const c = palMap.get(edge.c);
             return (
-              (p1 && (p1.name.zh.toLowerCase().includes(q) || p1.name.en.toLowerCase().includes(q))) ||
-              (p2 && (p2.name.zh.toLowerCase().includes(q) || p2.name.en.toLowerCase().includes(q))) ||
-              (c && (c.name.zh.toLowerCase().includes(q) || c.name.en.toLowerCase().includes(q)))
+              (p1 && (p1.zh.toLowerCase().includes(q) || p1.en.toLowerCase().includes(q))) ||
+              (p2 && (p2.zh.toLowerCase().includes(q) || p2.en.toLowerCase().includes(q))) ||
+              (c && (c.zh.toLowerCase().includes(q) || c.en.toLowerCase().includes(q)))
             );
           })
         : data;
@@ -455,6 +455,7 @@ const schema = {
   }
 
   loadEdgeTable();
+  init();
 </script>
 
 <style>
