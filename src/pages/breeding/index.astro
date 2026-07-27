@@ -153,8 +153,17 @@ const schema = {
 
 <script>
   // 加载帕鲁 + 配种数据（从 public/ JSON）
+  // breeding-data.json 现在是紧凑索引格式: [[idx1, idx2, child_idx], ...]
+  // pals-data.json 是 {id, zh, en, types, img}[]
   let pals = null;
   let edges = null;
+  // 派生查找表
+  let idxToId = null;        // index -> id
+  let idToIdx = null;        // id -> index
+  let forwardMap = null;     // "idx1|idx2" (排序) -> child_idx
+  let reverseMap = null;     // child_idx -> [p1_idx, p2_idx][]
+  let adjMap = null;         // parent_idx -> Set<child_idx>
+  let edgeList = null;       // [{p1, p2, c, p1Id, p2Id, cId}, ...] 用于表格
   const palMap = new Map();
 
   async function getPals() {
@@ -164,23 +173,57 @@ const schema = {
     }
     return pals;
   }
-  async function getEdges() {
-    if (!edges) {
-      const res = await fetch('/breeding-data.json');
-      edges = await res.json();
+
+  async function getData() {
+    if (edges) return { pals, edges, idxToId, idToIdx, forwardMap, reverseMap, adjMap, edgeList };
+    pals = await getPals();
+    const res = await fetch('/breeding-data.json');
+    edges = await res.json();
+
+    // 构建索引
+    idxToId = pals.map((p) => p.id);
+    idToIdx = new Map(pals.map((p, i) => [p.id, i]));
+
+    forwardMap = new Map();
+    reverseMap = new Map();
+    adjMap = new Map();
+    edgeList = [];
+
+    for (const [i1, i2, c] of edges) {
+      // 父对归一化 (排序)
+      const a = i1 < i2 ? i1 : i2;
+      const b = i1 < i2 ? i2 : i1;
+      const key = a + '|' + b;
+      // 同对多子保留第一个（理论上矩阵里只有 1 个）
+      if (!forwardMap.has(key)) forwardMap.set(key, c);
+      // 反向表
+      if (!reverseMap.has(c)) reverseMap.set(c, []);
+      reverseMap.get(c).push([a, b]);
+      // 邻接表（BFS）
+      if (!adjMap.has(a)) adjMap.set(a, new Set());
+      if (!adjMap.has(b)) adjMap.set(b, new Set());
+      adjMap.get(a).add(c);
+      adjMap.get(b).add(c);
+      // 边列表（用 ID 形式）
+      edgeList.push({
+        p1: idxToId[a], p2: idxToId[b], c: idxToId[c],
+        p1Id: a, p2Id: b, cId: c,
+      });
     }
-    return edges;
+
+    return { pals, edges, idxToId, idToIdx, forwardMap, reverseMap, adjMap, edgeList };
   }
 
   async function init() {
-    const list = await getPals();
-    list.forEach((p) => palMap.set(p.id, p));
-    const opts = list.map((p) => `<option value="${p.id}">${p.zh} (${p.en})</option>`).join('');
+    const data = await getData();
+    data.pals.forEach((p) => palMap.set(p.id, p));
+    const opts = data.pals.map((p) => `<option value="${p.id}">${p.zh} (${p.en})</option>`).join('');
     document.getElementById('parent-a').innerHTML = '<option value="">选择帕鲁 A...</option>' + opts;
     document.getElementById('parent-b').innerHTML = '<option value="">选择帕鲁 B...</option>' + opts;
     document.getElementById('target-pal').innerHTML = '<option value="">选择目标帕鲁...</option>' + opts;
     document.getElementById('start-pal').innerHTML = '<option value="">选择起始帕鲁...</option>' + opts;
     document.getElementById('end-pal').innerHTML = '<option value="">选择目标帕鲁...</option>' + opts;
+    document.getElementById('edge-count').textContent = `共 ${data.edgeList.length} 条边`;
     loadEdgeTable();
   }
 
@@ -203,10 +246,13 @@ const schema = {
 
   // Forward: A+B → C
   async function findChildren(a, b) {
-    const data = await getEdges();
-    return data.filter(
-      (e) => (e.p1 === a && e.p2 === b) || (e.p1 === b && e.p2 === a)
-    );
+    const data = await getData();
+    const ia = data.idToIdx.get(a);
+    const ib = data.idToIdx.get(b);
+    if (ia === undefined || ib === undefined) return [];
+    const key = (ia < ib ? ia : ib) + '|' + (ia < ib ? ib : ia);
+    const c = data.forwardMap.get(key);
+    return c !== undefined ? [data.idxToId[c]] : [];
   }
 
   async function showForward() {
@@ -228,19 +274,24 @@ const schema = {
       out.innerHTML = '<p class="text-muted">同种配对通常孵出同种，请选择不同的两只帕鲁</p>';
       return;
     }
-    const children = await findChildren(a, b);
-    if (children.length === 0) {
+    const childIds = await findChildren(a, b);
+    if (childIds.length === 0) {
       out.className = 'result-box';
-      out.innerHTML = `<p class="text-muted">未找到 ${palA?.zh || a} + ${palB?.zh || b} 的已知配种组合</p>`;
+      // 提示反向查询
+      out.innerHTML = `
+        <p class="text-muted">未找到 ${palA?.zh || a} + ${palB?.zh || b} 的已知配种组合。</p>
+        <p class="text-secondary mt-2">提示：试试切换到 <strong>反向查询</strong> 标签页，
+        输入你想孵的目标帕鲁。</p>
+      `;
       return;
     }
     out.className = 'result-box has-result';
-    const childrenHtml = children
-      .map((e) => palCard(palMap.get(e.c)))
+    const childrenHtml = childIds
+      .map((id) => palCard(palMap.get(id)))
       .filter(Boolean)
       .join('');
     out.innerHTML = `
-      <p class="mb-2">可能孵出 <strong>${children.length}</strong> 种帕鲁：</p>
+      <p class="mb-2">可能孵出：</p>
       <div class="result-pal-grid">${childrenHtml}</div>
     `;
   }
@@ -260,24 +311,30 @@ const schema = {
       out.innerHTML = '<p class="text-muted">选择目标帕鲁，列出所有可能的父母组合</p>';
       return;
     }
-    const data = await getEdges();
-    const parents = data.filter((e) => e.c === c);
-    if (parents.length === 0) {
+    const data = await getData();
+    const idx = data.idToIdx.get(c);
+    if (idx === undefined) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">找不到 ${palC?.zh || c} 的数据</p>`;
+      return;
+    }
+    const pairs = data.reverseMap.get(idx) || [];
+    if (pairs.length === 0) {
       out.className = 'result-box';
       out.innerHTML = `<p class="text-muted">${palC?.zh || c} 没有已知的配种记录</p>`;
       return;
     }
     out.className = 'result-box has-result';
-    // 去重（同一对父母可能孵多个）
+    // 去重（理论上 [a,b] 已经是 sorted，但以防万一）
     const uniquePairs = new Map();
-    for (const e of parents) {
-      const key = [e.p1, e.p2].sort().join('|');
-      if (!uniquePairs.has(key)) uniquePairs.set(key, e);
+    for (const [p1i, p2i] of pairs) {
+      const key = p1i < p2i ? `${p1i}|${p2i}` : `${p2i}|${p1i}`;
+      if (!uniquePairs.has(key)) uniquePairs.set(key, [p1i, p2i]);
     }
     const rows = Array.from(uniquePairs.values())
-      .map((e) => {
-        const p1 = palMap.get(e.p1);
-        const p2 = palMap.get(e.p2);
+      .map(([i1, i2]) => {
+        const p1 = data.pals[i1];
+        const p2 = data.pals[i2];
         if (!p1 || !p2) return '';
         return `<tr>
           <td>${palCard(p1)}</td>
@@ -297,28 +354,26 @@ const schema = {
   document.getElementById('target-pal').addEventListener('change', showReverse);
 
   // Shortest path: A → C via BFS
-  async function findShortestPath(start, end) {
-    const data = await getEdges();
-    // 构建图：每个 pal 节点 → 它能孵出的后代列表
-    const adj = new Map();
-    for (const e of data) {
-      if (!adj.has(e.p1)) adj.set(e.p1, new Set());
-      if (!adj.has(e.p2)) adj.set(e.p2, new Set());
-      adj.get(e.p1).add(e.c);
-      adj.get(e.p2).add(e.c);
-    }
-    // BFS
+  async function findShortestPath(startId, endId) {
+    const data = await getData();
+    const start = data.idToIdx.get(startId);
+    const end = data.idToIdx.get(endId);
+    if (start === undefined || end === undefined) return null;
+    if (start === end) return [start];
+
+    // BFS over pal indices
     const queue = [{ node: start, path: [start] }];
     const visited = new Set([start]);
     while (queue.length > 0) {
       const { node, path } = queue.shift();
-      if (node === end) return path;
-      const neighbors = adj.get(node) || [];
+      const neighbors = data.adjMap.get(node);
+      if (!neighbors) continue;
       for (const next of neighbors) {
-        if (!visited.has(next)) {
-          visited.add(next);
-          queue.push({ node: next, path: [...path, next] });
-        }
+        if (visited.has(next)) continue;
+        visited.add(next);
+        const newPath = [...path, next];
+        if (next === end) return newPath;
+        queue.push({ node: next, path: newPath });
       }
     }
     return null;
@@ -346,17 +401,19 @@ const schema = {
     }
     out.className = 'result-box has-result';
     const steps = path
-      .map((id, i) => {
-        const p = palMap.get(id);
+      .map((idx, i) => {
+        const p = data.pals[idx];
         if (!p) return '';
         const arrow = i < path.length - 1 ? '<span class="path-arrow">↓</span>' : '';
         return `<div class="path-step">${palCard(p)}${arrow}</div>`;
       })
       .filter(Boolean)
       .join('');
+    const palStart = palMap.get(start);
+    const palEnd = palMap.get(end);
     const stepsDesc =
       path.length === 2
-        ? `直接配种 ${palMap.get(start)?.zh} × ${palMap.get(end)?.zh}`
+        ? `直接配种 ${palStart?.zh} × ${palEnd?.zh}`
         : `需要 <strong>${path.length - 1}</strong> 步配种`;
     out.innerHTML = `
       <p class="mb-2">${stepsDesc}</p>
@@ -368,9 +425,9 @@ const schema = {
 
   // 完整配种表（默认过滤同种繁殖）
   async function loadEdgeTable() {
-    const data = await getEdges();
+    const data = await getData();
     // 过滤：去掉 X + X = X 的同种繁殖（无实际意义）
-    const crossBreedData = data.filter((e) => !(e.p1 === e.p2 && e.p1 === e.c));
+    const crossBreedData = data.edgeList.filter((e) => !(e.p1 === e.p2 && e.p1 === e.c));
 
     const tbody = document.getElementById('edge-tbody');
     const MAX_DISPLAY = 100;
