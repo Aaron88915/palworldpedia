@@ -12,6 +12,7 @@ import Footer from '@components/Footer.astro';
 import AdSlot from '@components/AdSlot.astro';
 import { SITE } from '@/config';
 import faviconUrl from '/favicon.svg?url';
+import '../styles/global.css';
 
 export interface Props {
   title?: string;
@@ -84,10 +85,6 @@ const rssUrl = new URL('rss.xml', Astro.site).href;
 
     {/* RSS */}
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href={rssUrl} />
-
-    <style is:global>
-      @import '../styles/global.css';
-    </style>
   </head>
 
   <body>
