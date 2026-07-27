@@ -1,0 +1,38 @@
+---
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout
+  title="基地电力计算器 - Palworld 电力管理"
+  description="Palworld 基地电力计算器。自动计算你的基地电力消耗与生产，找出电力缺口。"
+>
+  <header class="page-header">
+    <h1>⚡ 基地电力计算器</h1>
+    <p class="text-secondary">电力生产 / 消耗 / 缺口 一目了然</p>
+  </header>
+
+  <div class="coming-soon">
+    <div class="coming-soon-icon">🔌</div>
+    <h2>即将上线</h2>
+    <p class="text-secondary mt-1">智能计算你的基地电力平衡。包含各类发电机输出、所有电力设备消耗、推荐配置方案。</p>
+  </div>
+</Layout>
+
+<style>
+  .page-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .coming-soon {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .coming-soon-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+</style>

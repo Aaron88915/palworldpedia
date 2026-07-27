@@ -1,0 +1,115 @@
+---
+/**
+ * 基础布局 - 所有页面继承这个
+ * @prop {string} title - 页面标题
+ * @prop {string} description - 页面描述
+ * @prop {string} image - OG 图片
+ * @prop {'zh' | 'en'} lang - 语言
+ * @prop {string} canonical - 规范 URL
+ */
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { SITE } from '@/config';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  lang?: 'zh' | 'en';
+  canonical?: string;
+  schema?: Record<string, any>;
+  showTopAd?: boolean;
+}
+
+const {
+  title,
+  description = SITE.description,
+  image = SITE.defaultImage,
+  lang = 'zh',
+  canonical,
+  schema,
+  showTopAd = true,
+} = Astro.props;
+
+const fullTitle = title ? `${title} | ${SITE.name}` : SITE.name;
+const canonicalUrl = canonical || new URL(Astro.url.pathname, Astro.site).href;
+
+// hreflang 标签
+const hreflangs = [
+  { lang: 'zh-CN', url: new URL(Astro.url.pathname.replace(/^\/en/, ''), Astro.site).href },
+  { lang: 'en', url: new URL(`/en${Astro.url.pathname.replace(/^\/en/, '')}`, Astro.site).href },
+  { lang: 'x-default', url: new URL(Astro.url.pathname.replace(/^\/en/, ''), Astro.site).href },
+];
+---
+
+<!doctype html>
+<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    {/* hreflang - 英文版就绪后启用 */}
+    {/* {hreflangs.map(({ lang: hl, url }) => (
+      <link rel="alternate" hreflang={hl} href={url} />
+    ))} */}
+
+    {/* Open Graph */}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site).href} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : 'en_US'} />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, Astro.site).href} />
+
+    {/* Favicon */}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    {/* 主题色 */}
+    <meta name="theme-color" content="#0f1419" />
+
+    {/* 结构化数据 */}
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+
+    {/* RSS */}
+    <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
+
+    <style is:global>
+      @import '../styles/global.css';
+    </style>
+  </head>
+
+  <body>
+    <Header lang={lang} />
+
+    {showTopAd && <AdSlot slot="top" />}
+
+    <main>
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+
+    <AdSlot slot="bottom" />
+
+    <Footer lang={lang} />
+
+    {/* AdSense 接入位 - 申请通过后开启 */}
+    {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX" crossorigin="anonymous"></script> */}
+  </body>
+</html>

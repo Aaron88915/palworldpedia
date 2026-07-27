@@ -1,0 +1,122 @@
+---
+import { SITE } from '@/config';
+
+export interface Props {
+  lang?: 'zh' | 'en';
+}
+
+const { lang = 'zh' } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4 class="footer-title">{SITE.name}</h4>
+        <p class="footer-desc">{SITE.shortDescription}</p>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">{lang === 'zh' ? '工具' : 'Tools'}</h4>
+        <ul class="footer-links">
+          <li><a href={lang === 'zh' ? '/pals/' : '/en/pals/'}>{lang === 'zh' ? '帕鲁图鉴' : 'Paldex'}</a></li>
+          <li><a href={lang === 'zh' ? '/breeding/' : '/en/breeding/'}>{lang === 'zh' ? '配种计算器' : 'Breeding Calculator'}</a></li>
+          <li><a href={lang === 'zh' ? '/tech-tree/' : '/en/tech-tree/'}>{lang === 'zh' ? '科技树' : 'Tech Tree'}</a></li>
+          <li><a href={lang === 'zh' ? '/calculator/power/' : '/en/calculator/power/'}>{lang === 'zh' ? '基地电力' : 'Power Calculator'}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">{lang === 'zh' ? '关于' : 'About'}</h4>
+        <ul class="footer-links">
+          <li><a href={lang === 'zh' ? '/about/' : '/en/about/'}>{lang === 'zh' ? '关于本站' : 'About'}</a></li>
+          <li><a href={lang === 'zh' ? '/contact/' : '/en/contact/'}>{lang === 'zh' ? '联系我们' : 'Contact'}</a></li>
+          <li><a href={lang === 'zh' ? '/privacy/' : '/en/privacy/'}>{lang === 'zh' ? '隐私政策' : 'Privacy Policy'}</a></li>
+          <li><a href={lang === 'zh' ? '/terms/' : '/en/terms/'}>{lang === 'zh' ? '服务条款' : 'Terms'}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-title">{lang === 'zh' ? '声明' : 'Disclaimer'}</h4>
+        <p class="footer-desc">
+          {lang === 'zh'
+            ? '本站为非官方攻略站，与 Pocketpair 无关联。Palworld 是 Pocketpair 的注册商标。'
+            : 'Unofficial fan site. Not affiliated with Pocketpair. Palworld is a trademark of Pocketpair.'}
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© {year} {SITE.name}. {lang === 'zh' ? '数据基于 CC-BY-SA 协议。' : 'Data under CC-BY-SA.'}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    padding: 2rem 0 1rem;
+    margin-top: 3rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .footer-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .footer-links {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+</style>

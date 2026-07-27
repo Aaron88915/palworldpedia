@@ -1,0 +1,73 @@
+---
+/**
+ * 广告位组件
+ * 在 AdSense 申请通过前显示占位符，避免布局抖动
+ */
+import { SITE } from '@/config';
+
+export interface Props {
+  slot: 'top' | 'bottom' | 'inline' | 'sidebar';
+  className?: string;
+}
+
+const { slot, className = '' } = Astro.props;
+const isAdSenseEnabled = SITE.adsense.enabled;
+---
+
+<div class={`ad-slot ad-slot-${slot} ${className}`}>
+  {isAdSenseEnabled ? (
+    <ins
+      class="adsbygoogle"
+      style="display:block"
+      data-ad-client={SITE.adsense.client}
+      data-ad-slot=""
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    />
+  ) : (
+    <div class="ad-placeholder">
+      <span>广告位 · Ad Placeholder</span>
+    </div>
+  )}
+</div>
+
+<style>
+  .ad-slot {
+    width: 100%;
+    margin: 1.5rem 0;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ad-slot-top { min-height: 100px; }
+  .ad-slot-bottom { min-height: 100px; }
+  .ad-slot-inline { min-height: 120px; margin: 2rem 0; }
+  .ad-slot-sidebar { min-height: 250px; }
+
+  .ad-placeholder {
+    width: 100%;
+    max-width: 728px;
+    height: 90px;
+    background: var(--bg-tertiary);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .ad-slot-sidebar .ad-placeholder {
+    height: 250px;
+    max-width: 300px;
+  }
+
+  .ad-slot-inline .ad-placeholder {
+    height: 120px;
+  }
+</style>

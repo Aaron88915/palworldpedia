@@ -1,0 +1,327 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
+import palsData from '@data/pals.json';
+import breedingData from '@data/breeding.json';
+import type { Pal, BreedingEdge } from '@data/types';
+
+const pals = palsData as Pal[];
+const edges = breedingData as BreedingEdge[];
+
+const palMap = new Map(pals.map((p) => [p.id, p]));
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Palworld 配种计算器',
+  description: 'Palworld 配种计算器 - 输入两只帕鲁，立即计算后代配方。支持反向查询和最短路径搜索。',
+  applicationCategory: 'GameApplication',
+  operatingSystem: 'Web',
+};
+---
+
+<Layout
+  title="配种计算器 - Palworld 帕鲁繁殖公式"
+  description="Palworld 配种计算器。输入两只帕鲁，立即计算可孵出的后代。包含完整配种表和反向查询功能。"
+  schema={schema}
+>
+  <header class="page-header">
+    <h1>🧬 配种计算器</h1>
+    <p class="text-secondary">输入两只帕鲁，计算可能孵出的后代</p>
+  </header>
+
+  <AdSlot slot="top" />
+
+  <!-- 计算器主面板 -->
+  <section class="calculator">
+    <div class="breeder-grid">
+      <div class="parent-slot">
+        <label class="parent-label">父母 A</label>
+        <select id="parent-a" class="parent-select">
+          <option value="">选择帕鲁 A...</option>
+          {pals.map((p) => (
+            <option value={p.id}>{p.name.zh} ({p.name.en})</option>
+          ))}
+        </select>
+        <div id="parent-a-preview" class="parent-preview"></div>
+      </div>
+
+      <div class="plus-icon">+</div>
+
+      <div class="parent-slot">
+        <label class="parent-label">父母 B</label>
+        <select id="parent-b" class="parent-select">
+          <option value="">选择帕鲁 B...</option>
+          {pals.map((p) => (
+            <option value={p.id}>{p.name.zh} ({p.name.en})</option>
+          ))}
+        </select>
+        <div id="parent-b-preview" class="parent-preview"></div>
+      </div>
+    </div>
+
+    <div class="result-area">
+      <div class="result-arrow">↓</div>
+      <div id="result" class="result-box">
+        <p class="text-muted">请选择两只帕鲁以查看结果</p>
+      </div>
+    </div>
+  </section>
+
+  <AdSlot slot="inline" />
+
+  <!-- 配种表 -->
+  <section class="mt-4">
+    <h2>已知配种组合</h2>
+    <p class="text-secondary mb-2">以下是已确认的配种公式（数据持续更新中）</p>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>父母 A</th>
+            <th></th>
+            <th>父母 B</th>
+            <th>→</th>
+            <th>后代</th>
+          </tr>
+        </thead>
+        <tbody id="breeding-tbody">
+          {edges.map((edge) => {
+            const p1 = palMap.get(edge.parent1);
+            const p2 = palMap.get(edge.parent2);
+            const child = palMap.get(edge.child);
+            if (!p1 || !p2 || !child) return null;
+            return (
+              <tr>
+                <td><a href={`/pals/${p1.id}/`}>{p1.name.zh}</a></td>
+                <td>+</td>
+                <td><a href={`/pals/${p2.id}/`}>{p2.name.zh}</a></td>
+                <td>→</td>
+                <td><a href={`/pals/${child.id}/`}><strong>{child.name.zh}</strong></a></td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SEO 内容 -->
+  <section class="seo-text mt-4">
+    <h2>关于 Palworld 配种系统</h2>
+    <p>
+      Palworld 的配种系统是游戏的核心玩法之一。通过将两只不同性别的帕鲁放入<strong>配种牧场</strong>，
+      可以孵出全新的帕鲁。许多稀有和强大的帕鲁只能通过配种获得。
+    </p>
+    <p>
+      配种的关键规则：
+    </p>
+    <ul>
+      <li>需要一只雄性和一只雌性帕鲁（同一只帕鲁可以跟多只配对）</li>
+      <li>后代会继承父母的<strong>随机技能词条</strong></li>
+      <li>部分后代有特殊组合（异色帕鲁）需要特定父母</li>
+      <li>某些稀有帕鲁只能通过<strong>多代配种</strong>获得</li>
+    </ul>
+    <p>
+      使用本计算器可以快速查询任意两只帕鲁的配种结果，并发现最短的配种路径。
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .calculator {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .breeder-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  @media (max-width: 640px) {
+    .breeder-grid {
+      grid-template-columns: 1fr;
+    }
+    .plus-icon {
+      transform: rotate(90deg);
+    }
+  }
+
+  .parent-slot {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .parent-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  .parent-select {
+    padding: 0.75rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
+
+  .parent-preview {
+    padding: 0.75rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    min-height: 60px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  .plus-icon {
+    font-size: 2rem;
+    color: var(--accent);
+    text-align: center;
+  }
+
+  .result-area {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .result-arrow {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .result-box {
+    background: var(--bg-tertiary);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    min-height: 80px;
+  }
+
+  .result-box.has-result {
+    background: var(--bg-primary);
+    border-style: solid;
+    border-color: var(--accent);
+  }
+
+  .result-child {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .result-no-match {
+    color: var(--danger);
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .seo-text {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+  }
+
+  .seo-text p, .seo-text li {
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .seo-text strong {
+    color: var(--text-primary);
+  }
+
+  .seo-text ul {
+    padding-left: 1.5rem;
+  }
+</style>
+
+<script define:vars={{ pals, edges }}>
+  // 客户端计算器逻辑
+  const selectA = document.getElementById('parent-a');
+  const selectB = document.getElementById('parent-b');
+  const previewA = document.getElementById('parent-a-preview');
+  const previewB = document.getElementById('parent-b-preview');
+  const resultEl = document.getElementById('result');
+
+  const palMap = new Map(pals.map((p) => [p.id, p]));
+
+  function showPreview(select, target) {
+    const val = select.value;
+    if (!val) {
+      target.innerHTML = '';
+      return;
+    }
+    const pal = palMap.get(val);
+    if (!pal) return;
+    target.innerHTML = `
+      <div><strong>${pal.name.zh}</strong> (${pal.name.en})</div>
+      <div class="text-muted">#${String(pal.paldeckNo).padStart(3, '0')} · ${pal.types.join(' / ')}</div>
+    `;
+  }
+
+  function calculate() {
+    const a = selectA.value;
+    const b = selectB.value;
+    if (!a || !b) {
+      resultEl.className = 'result-box';
+      resultEl.innerHTML = '<p class="text-muted">请选择两只帕鲁以查看结果</p>';
+      return;
+    }
+
+    if (a === b) {
+      resultEl.className = 'result-box';
+      resultEl.innerHTML = '<p class="text-muted">相同帕鲁配对不会产生新组合，请选择两只不同的帕鲁</p>';
+      return;
+    }
+
+    // 查找配种结果（无向图）
+    const match = edges.find(
+      (e) =>
+        (e.parent1 === a && e.parent2 === b) ||
+        (e.parent1 === b && e.parent2 === a)
+    );
+
+    if (match) {
+      const child = palMap.get(match.child);
+      if (child) {
+        resultEl.className = 'result-box has-result';
+        resultEl.innerHTML = `
+          <p>可能孵出：</p>
+          <a href="/pals/${child.id}/" class="result-child">${child.name.zh} (${child.name.en})</a>
+          <p class="text-muted mt-1">#${String(child.paldeckNo).padStart(3, '0')}</p>
+        `;
+        return;
+      }
+    }
+
+    resultEl.className = 'result-box';
+    resultEl.innerHTML = `<p class="result-no-match">未找到已确认的配种组合。完整数据持续更新中...</p>`;
+  }
+
+  selectA.addEventListener('change', () => {
+    showPreview(selectA, previewA);
+    calculate();
+  });
+  selectB.addEventListener('change', () => {
+    showPreview(selectB, previewB);
+    calculate();
+  });
+</script>

@@ -1,0 +1,39 @@
+---
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout
+  title="科技树 - Palworld 古科技点分配"
+  description="Palworld 科技树完整图谱。古科技点最优分配方案、解锁等级、解锁物品。"
+>
+  <header class="page-header">
+    <h1>🔬 科技树</h1>
+    <p class="text-secondary">古科技点分配 · 解锁等级 · 实用配方</p>
+  </header>
+
+  <div class="coming-soon">
+    <div class="coming-soon-icon">🚧</div>
+    <h2>即将上线</h2>
+    <p class="text-secondary mt-1">完整的科技树可视化图谱正在制作中。包含所有古科技点配方、解锁等级、最优升级路径。</p>
+    <p class="text-muted mt-2">预计下个版本上线</p>
+  </div>
+</Layout>
+
+<style>
+  .page-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .coming-soon {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .coming-soon-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+</style>

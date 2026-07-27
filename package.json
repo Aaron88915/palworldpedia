@@ -1,0 +1,30 @@
+{
+  "name": "palworldpedia",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Palworld Guide & Tools - Comprehensive Palworld companion site",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "data:validate": "node scripts/validate-data.mjs",
+    "data:build": "node scripts/build-pages.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.1.5",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/mdx": "^4.0.3",
+    "@astrojs/rss": "^4.0.11"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "sharp": "^0.33.5"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

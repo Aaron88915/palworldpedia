@@ -1,0 +1,316 @@
+[
+  {
+    "id": "lamball",
+    "paldeckNo": 1,
+    "name": { "zh": "棉悠悠", "en": "Lamball" },
+    "types": ["neutral"],
+    "rarity": 1,
+    "stats": {
+      "hp": 100,
+      "attack": { "melee": 70, "ranged": 50 },
+      "defense": 70,
+      "speed": 70
+    },
+    "workSuitability": {
+      "gathering": 1
+    },
+    "skills": [
+      {
+        "id": "rushing_press",
+        "name": { "zh": "猛冲碾压", "en": "Rushing Press" },
+        "level": 1,
+        "type": "neutral",
+        "power": 40,
+        "cooldown": 4,
+        "description": {
+          "zh": "冲向敌人并将其压扁。",
+          "en": "Rams into the enemy, crushing them."
+        }
+      }
+    ],
+    "passives": [
+      {
+        "id": "fluffy",
+        "name": { "zh": "蓬松", "en": "Fluffy" },
+        "description": {
+          "zh": "受到的伤害降低 10%。",
+          "en": "Damage taken is reduced by 10%."
+        }
+      }
+    ],
+    "drops": ["wool", "lamball_mutton"],
+    "food": 1,
+    "price": 1000,
+    "biomes": ["starting_plains"],
+    "description": {
+      "zh": "温顺的绵羊型帕鲁。产的羊毛是很好的纺织品原料。",
+      "en": "A docile sheep Pal. Its wool makes for excellent textile material."
+    },
+    "image": "/images/pals/lamball.webp",
+    "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "cattiva",
+    "paldeckNo": 2,
+    "name": { "zh": "猫鼬喵", "en": "Cattiva" },
+    "types": ["dark"],
+    "rarity": 1,
+    "stats": {
+      "hp": 90,
+      "attack": { "melee": 60, "ranged": 70 },
+      "defense": 60,
+      "speed": 80
+    },
+    "workSuitability": {
+      "handiwork": 1
+    },
+    "skills": [
+      {
+        "id": "cat_punch",
+        "name": { "zh": "猫猫拳", "en": "Cat Punch" },
+        "level": 1,
+        "type": "dark",
+        "power": 35,
+        "cooldown": 2,
+        "description": {
+          "zh": "用小爪子连续攻击敌人。",
+          "en": "The user unleashes a flurry of weak punches."
+        }
+      }
+    ],
+    "passives": [
+      {
+        "id": "cheery_naughty",
+        "name": { "zh": "调皮捣蛋", "en": "Cheery Naughty" },
+        "description": {
+          "zh": "偶尔会偷取掉落物。",
+          "en": "Sometimes picks up dropped items."
+        }
+      }
+    ],
+    "drops": ["cat_pelt"],
+    "food": 1,
+    "price": 1000,
+    "biomes": ["starting_plains"],
+    "description": {
+      "zh": "调皮的小猫型帕鲁，喜欢玩弄亮闪闪的物品。",
+      "en": "A mischievous cat Pal that loves to play with shiny objects."
+    },
+    "image": "/images/pals/cattiva.webp",
+    "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "foxparks",
+    "paldeckNo": 4,
+    "name": { "zh": "火绒狐", "en": "Foxparks" },
+    "types": ["fire"],
+    "rarity": 1,
+    "stats": {
+      "hp": 95,
+      "attack": { "melee": 75, "ranged": 65 },
+      "defense": 65,
+      "speed": 95
+    },
+    "workSuitability": {
+      "kindling": 1
+    },
+    "skills": [
+      {
+        "id": "ignis_blast",
+        "name": { "zh": "火球术", "en": "Ignis Blast" },
+        "level": 1,
+        "type": "fire",
+        "power": 50,
+        "cooldown": 4,
+        "description": {
+          "zh": "向敌人发射火球。",
+          "en": "Hurls a fireball at an enemy."
+        }
+      }
+    ],
+    "passives": [
+      {
+        "id": "huggy_fire",
+        "name": { "zh": "热情如火", "en": "Huggy Fire" },
+        "description": {
+          "zh": "靠近时会温暖周围的帕鲁。",
+          "en": "Warms nearby Pals when placed in a Ranch."
+        }
+      }
+    ],
+    "drops": ["flame_organ"],
+    "food": 2,
+    "price": 1000,
+    "biomes": ["starting_plains", "volcano"],
+    "description": {
+      "zh": "小型狐狸型火属性帕鲁。性格温顺但一被惹毛会喷火。",
+      "en": "A small fox Pal. Mild-mannered, but will spit fire when angered."
+    },
+    "image": "/images/pals/foxparks.webp",
+    "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "pengullet",
+    "paldeckNo": 5,
+    "name": { "zh": "企鹅丸", "en": "Pengullet" },
+    "types": ["water", "ice"],
+    "rarity": 1,
+    "stats": {
+      "hp": 100,
+      "attack": { "melee": 70, "ranged": 60 },
+      "defense": 80,
+      "speed": 70
+    },
+    "workSuitability": {
+      "watering": 1,
+      "cooling": 1
+    },
+    "skills": [
+      {
+        "id": "ice_smash",
+        "name": { "zh": "冰霜打击", "en": "Ice Smash" },
+        "level": 1,
+        "type": "ice",
+        "power": 40,
+        "cooldown": 4,
+        "description": {
+          "zh": "用冰覆盖的翅膀拍打敌人。",
+          "en": "Strikes the enemy with a frost-covered wing."
+        }
+      }
+    ],
+    "passives": [
+      {
+        "id": "freezer_body",
+        "name": { "zh": "冰冻体质", "en": "Freezer Body" },
+        "description": {
+          "zh": "靠近时会降低周围温度，让食物不易腐败。",
+          "en": "Cools down nearby items when placed in a Cooler."
+        }
+      }
+    ],
+    "drops": ["ice_organ", "pengullet_lettuce"],
+    "food": 2,
+    "price": 1000,
+    "biomes": ["starting_plains", "frost_mountain"],
+    "description": {
+      "zh": "小型企鹅型帕鲁，水冰双属性，能制冷也能浇水。",
+      "en": "A small penguin Pal with both Water and Ice types."
+    },
+    "image": "/images/pals/pengullet.webp",
+    "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "lifmunk",
+    "paldeckNo": 9,
+    "name": { "zh": "叶泥泥", "en": "Lifmunk" },
+    "types": ["grass"],
+    "rarity": 1,
+    "stats": {
+      "hp": 95,
+      "attack": { "melee": 65, "ranged": 70 },
+      "defense": 65,
+      "speed": 90
+    },
+    "workSuitability": {
+      "planting": 1,
+      "lumbering": 1
+    },
+    "skills": [
+      {
+        "id": "wind_cutter",
+        "name": { "zh": "风之刃", "en": "Wind Cutter" },
+        "level": 1,
+        "type": "grass",
+        "power": 40,
+        "cooldown": 4,
+        "description": {
+          "zh": "用锋利的叶片攻击敌人。",
+          "en": "Uses a sharp leaf to cut at the enemy."
+        }
+      }
+    ],
+    "passives": [
+      {
+        "id": "arboreal_booster",
+        "name": { "zh": "树木伙伴", "en": "Arboreal Booster" },
+        "description": {
+          "zh": "在伐木场时伐木效率提升。",
+          "en": "Increases lumbering efficiency when assigned to a Logging Site."
+        }
+      }
+    ],
+    "drops": ["low_grade_medical_supplies", "lifmunk_meat"],
+    "food": 2,
+    "price": 1000,
+    "biomes": ["starting_plains", "verdant_brook"],
+    "description": {
+      "zh": "小型松鼠型帕鲁。背上的叶子既是武器也是它最爱的食物。",
+      "en": "A small squirrel Pal. The leaves on its back are both weapons and its favorite food."
+    },
+    "image": "/images/pals/lifmunk.webp",
+    "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "jormuntide",
+    "paldeckNo": 74,
+    "name": { "zh": "海之霸主", "en": "Jormuntide" },
+    "types": ["water", "dragon"],
+    "rarity": 5,
+    "stats": {
+      "hp": 180,
+      "attack": { "melee": 130, "ranged": 110 },
+      "defense": 120,
+      "speed": 80
+    },
+    "workSuitability": {
+      "watering": 4
+    },
+    "skills": [
+      {
+        "id": "aqua_jet",
+        "name": { "zh": "水流喷射", "en": "Aqua Jet" },
+        "level": 1,
+        "type": "water",
+        "power": 50,
+        "cooldown": 4,
+        "description": {
+          "zh": "向敌人喷出高压水流。",
+          "en": "Shoots a high-pressure jet of water at the enemy."
+        }
+      },
+      {
+        "id": "draconic_breath",
+        "name": { "zh": "巨龙吐息", "en": "Draconic Breath" },
+        "level": 30,
+        "type": "dragon",
+        "power": 120,
+        "cooldown": 18,
+        "description": {
+          "zh": "向敌人喷出强大的龙息。",
+          "en": "Unleashes a powerful draconic breath at enemies."
+        }
+      }
+    ],
+    "passives": [
+      {
+        "id": "lord_of_the_seas",
+        "name": { "zh": "海洋之主", "en": "Lord of the Seas" },
+        "description": {
+          "zh": "在水中移动速度大幅提升。",
+          "en": "Greatly increases movement speed in water."
+        }
+      }
+    ],
+    "drops": ["high_grade_medical_supplies", "jormuntide_meat"],
+    "food": 7,
+    "price": 8000,
+    "biomes": ["deep_sea"],
+    "description": {
+      "zh": "传说级的深海龙蛇型帕鲁。极其稀有。",
+      "en": "A legendary deep-sea dragon Pal. Extremely rare."
+    },
+    "image": "/images/pals/jormuntide.webp",
+    "updatedAt": "2026-07-27"
+  }
+]

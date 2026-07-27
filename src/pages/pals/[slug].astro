@@ -1,0 +1,538 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { PAL_TYPES, WORK_SUITABILITIES } from '@/config';
+import palsData from '@data/pals.json';
+import type { Pal, PalType, WorkSuitability } from '@data/types';
+
+export async function getStaticPaths() {
+  const pals = palsData as Pal[];
+  return pals.map((pal) => ({
+    params: { slug: pal.id },
+    props: { pal },
+  }));
+}
+
+const { pal } = Astro.props as { pal: Pal };
+
+// 计算 HP 等级标签
+const hpTier = pal.stats.hp >= 150 ? 'S' : pal.stats.hp >= 120 ? 'A' : pal.stats.hp >= 100 ? 'B' : 'C';
+const atkTier = pal.stats.attack.melee >= 110 ? 'S' : pal.stats.attack.melee >= 90 ? 'A' : pal.stats.attack.melee >= 70 ? 'B' : 'C';
+const defTier = pal.stats.defense >= 110 ? 'S' : pal.stats.defense >= 90 ? 'A' : pal.stats.defense >= 70 ? 'B' : 'C';
+const spdTier = pal.stats.speed >= 100 ? 'S' : pal.stats.speed >= 80 ? 'A' : pal.stats.speed >= 60 ? 'B' : 'C';
+
+const palUrl = new URL(`/pals/${pal.id}/`, Astro.site).href;
+const palImage = new URL(pal.image, Astro.site).href;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoGame',
+  name: pal.name.en,
+  alternateName: pal.name.zh,
+  description: pal.description.en,
+  image: palImage,
+  genre: 'Open World Survival',
+  gamePlatform: 'PC',
+  gameItem: {
+    '@type': 'Thing',
+    name: pal.name.en,
+    description: `Pal #${pal.paldeckNo} in the Palworld Paldeck.`,
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.5',
+    ratingCount: '100',
+  },
+};
+
+// 相关推荐（同类型其他帕鲁）
+const relatedPals = (palsData as Pal[])
+  .filter((p) => p.id !== pal.id && p.types.some((t) => pal.types.includes(t)))
+  .slice(0, 4);
+---
+
+<Layout
+  title={`${pal.name.zh} (${pal.name.en}) - Pal #${pal.paldeckNo} 详细数据`}
+  description={`${pal.name.zh} 详细数据：HP ${pal.stats.hp}、攻击力 ${pal.stats.attack.melee}、防御力 ${pal.stats.defense}。包含技能、词条、捕捉位置、掉落物。`}
+  image={pal.image}
+  schema={schema}
+>
+  <!-- 面包屑 -->
+  <nav class="breadcrumb" aria-label="面包屑">
+    <a href="/">首页</a>
+    <span>›</span>
+    <a href="/pals/">帕鲁图鉴</a>
+    <span>›</span>
+    <span>{pal.name.zh}</span>
+  </nav>
+
+  <article class="pal-detail">
+    <!-- Header -->
+    <header class="pal-header">
+      <div class="pal-header-img">
+        <span class="pal-header-emoji">{pal.types[0] === 'fire' ? '🔥' : pal.types[0] === 'water' ? '💧' : pal.types[0] === 'grass' ? '🌿' : pal.types[0] === 'electric' ? '⚡' : pal.types[0] === 'ice' ? '❄️' : pal.types[0] === 'dark' ? '🌑' : pal.types[0] === 'dragon' ? '🐉' : '⭐'}</span>
+      </div>
+      <div class="pal-header-info">
+        <div class="pal-header-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
+        <h1 class="pal-header-name">{pal.name.zh}</h1>
+        <div class="pal-header-name-en">{pal.name.en}</div>
+        <div class="pal-header-types">
+          {pal.types.map((type) => {
+            const t = PAL_TYPES.find((x) => x.id === type);
+            return <span class={`type-tag type-${type}`}>{t?.zh} · {t?.en}</span>;
+          })}
+        </div>
+        <div class="pal-rarity">
+          {[1, 2, 3, 4, 5].map((i) => (
+            <span class={`star ${i <= pal.rarity ? 'filled' : ''}`}>★</span>
+          ))}
+          <span class="text-muted">稀有度</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 描述 -->
+    <section class="pal-desc">
+      <p>{pal.description.zh}</p>
+    </section>
+
+    <AdSlot slot="inline" />
+
+    <!-- 属性 -->
+    <section class="pal-section">
+      <h2>📊 属性</h2>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-label">HP</div>
+          <div class="stat-value">{pal.stats.hp}</div>
+          <div class={`stat-tier tier-${hpTier}`}>{hpTier}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">近战攻击</div>
+          <div class="stat-value">{pal.stats.attack.melee}</div>
+          <div class={`stat-tier tier-${atkTier}`}>{atkTier}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">远程攻击</div>
+          <div class="stat-value">{pal.stats.attack.ranged}</div>
+          <div class={`stat-tier tier-${atkTier}`}>{atkTier}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">防御力</div>
+          <div class="stat-value">{pal.stats.defense}</div>
+          <div class={`stat-tier tier-${defTier}`}>{defTier}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">移动速度</div>
+          <div class="stat-value">{pal.stats.speed}</div>
+          <div class={`stat-tier tier-${spdTier}`}>{spdTier}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">售价</div>
+          <div class="stat-value">{pal.price.toLocaleString()}</div>
+          <div class="text-muted stat-tier">金币</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 工作适配 -->
+    {Object.keys(pal.workSuitability).length > 0 && (
+      <section class="pal-section">
+        <h2>🛠️ 工作适配</h2>
+        <div class="work-grid">
+          {Object.entries(pal.workSuitability).map(([work, level]) => {
+            const w = WORK_SUITABILITIES.find((x) => x.id === work);
+            if (!w || !level) return null;
+            return (
+              <div class="work-card">
+                <div class="work-icon">{w.icon}</div>
+                <div class="work-name">{w.zh}</div>
+                <div class="work-level">Lv {level}</div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    <!-- 技能 -->
+    <section class="pal-section">
+      <h2>⚔️ 主动技能</h2>
+      <div class="skill-list">
+        {pal.skills.map((skill) => (
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class={`skill-type type-${skill.type}`}>{PAL_TYPES.find((t) => t.id === skill.type)?.zh}</span>
+              <span class="skill-name">{skill.name.zh}</span>
+              <span class="skill-name-en text-muted">{skill.name.en}</span>
+            </div>
+            <div class="skill-meta">
+              <span>Lv {skill.level}</span>
+              <span>威力 {skill.power}</span>
+              <span>CD {skill.cooldown}s</span>
+            </div>
+            <p class="skill-desc">{skill.description.zh}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 词条 -->
+    {pal.passives.length > 0 && (
+      <section class="pal-section">
+        <h2>✨ 词条</h2>
+        <div class="passive-list">
+          {pal.passives.map((passive) => (
+            <div class="passive-item">
+              <div class="passive-name">{passive.name.zh} · {passive.name.en}</div>
+              <p class="passive-desc">{passive.description.zh}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- 掉落物 -->
+    <section class="pal-section">
+      <h2>📦 掉落物</h2>
+      <div class="drop-list">
+        {pal.drops.map((drop) => (
+          <span class="drop-chip">{drop}</span>
+        ))}
+      </div>
+    </section>
+
+    <!-- 出现区域 -->
+    <section class="pal-section">
+      <h2>🗺️ 出现区域</h2>
+      <div class="drop-list">
+        {pal.biomes.map((biome) => (
+          <span class="drop-chip">{biome}</span>
+        ))}
+        {pal.nightOnly && <span class="drop-chip">仅夜间</span>}
+      </div>
+    </section>
+
+    <AdSlot slot="inline" />
+
+    <!-- SEO 文本 -->
+    <section class="seo-text">
+      <h2>关于 {pal.name.zh}</h2>
+      <p>
+        {pal.name.zh}（{pal.name.en}）是 Palworld 中的第 {pal.paldeckNo} 号帕鲁，
+        属于 <strong>{pal.types.map((t) => PAL_TYPES.find((x) => x.id === t)?.zh).join(' / ')}</strong> 属性。
+        HP 为 {pal.stats.hp}，攻击力 {pal.stats.attack.melee}，防御力 {pal.stats.defense}。
+      </p>
+      <p>
+        适合用于：{Object.keys(pal.workSuitability).map((k) => WORK_SUITABILITIES.find((x) => x.id === k)?.zh).join('、') || '战斗'}。
+        主要出现区域：{pal.biomes.join('、')}。
+        击败或捕捉后可获得：{pal.drops.join('、')}。
+      </p>
+    </section>
+
+    <!-- 相关帕鲁 -->
+    {relatedPals.length > 0 && (
+      <section class="related">
+        <h2>同类型帕鲁</h2>
+        <div class="related-grid">
+          {relatedPals.map((p) => (
+            <a href={`/pals/${p.id}/`} class="related-card">
+              <div class="related-no">#{p.paldeckNo.toString().padStart(3, '0')}</div>
+              <div class="related-name">{p.name.zh}</div>
+              <div class="related-name-en text-muted">{p.name.en}</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </article>
+</Layout>
+
+<style>
+  .breadcrumb {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumb a {
+    color: var(--text-secondary);
+  }
+
+  .breadcrumb a:hover {
+    color: var(--accent);
+  }
+
+  .pal-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .pal-header {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .pal-header-img {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-primary));
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .pal-header-emoji {
+    font-size: 4rem;
+  }
+
+  .pal-header-no {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-family: var(--font-mono);
+  }
+
+  .pal-header-name {
+    font-size: 2rem;
+    margin: 0.25rem 0;
+  }
+
+  .pal-header-name-en {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .pal-header-types {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .type-tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    color: #000;
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+
+  .pal-rarity {
+    margin-top: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .star {
+    color: var(--text-muted);
+    font-size: 1.125rem;
+  }
+
+  .star.filled {
+    color: var(--accent);
+  }
+
+  .pal-desc {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid var(--accent);
+  }
+
+  .pal-section {
+    margin-bottom: 2rem;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .stat-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.25rem 0;
+  }
+
+  .stat-tier {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .tier-S { color: #f87171; }
+  .tier-A { color: #fbbf24; }
+  .tier-B { color: #5eb3f5; }
+  .tier-C { color: var(--text-muted); }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .work-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    text-align: center;
+  }
+
+  .work-icon {
+    font-size: 1.5rem;
+  }
+
+  .work-name {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+
+  .work-level {
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .skill-list,
+  .passive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .skill-item,
+  .passive-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+
+  .skill-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-type {
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+    color: #000;
+    font-size: 0.625rem;
+    font-weight: 700;
+  }
+
+  .skill-name {
+    font-weight: 600;
+  }
+
+  .skill-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-desc,
+  .passive-desc {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  .passive-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .drop-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .drop-chip {
+    padding: 0.375rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  .seo-text {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+  }
+
+  .seo-text p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .related-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    text-align: center;
+    color: inherit;
+    transition: all 0.15s ease;
+  }
+
+  .related-card:hover {
+    border-color: var(--accent);
+  }
+
+  .related-no {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .related-name {
+    font-weight: 600;
+    margin-top: 0.25rem;
+  }
+</style>

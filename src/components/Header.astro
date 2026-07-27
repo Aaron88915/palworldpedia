@@ -1,0 +1,166 @@
+---
+import { NAV } from '@/config';
+
+export interface Props {
+  lang?: 'zh' | 'en';
+}
+
+const { lang = 'zh' } = Astro.props;
+const nav = lang === 'zh' ? NAV.zh : NAV.en;
+const homeHref = lang === 'zh' ? '/' : '/en/';
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href={homeHref} class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">Palworldpedia</span>
+    </a>
+
+    <nav class="main-nav" aria-label="主导航">
+      <button class="nav-toggle" aria-label="切换菜单" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-list" id="nav-list">
+        {nav.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+        {/* 英文版翻译就绪后启用：locales.includes('en') && (
+          <li class="lang-switch">
+            <a href={lang === 'zh' ? '/en' + (Astro.url.pathname === '/' ? '/' : Astro.url.pathname) : (Astro.url.pathname.replace(/^\/en/, '') || '/')}>
+              {lang === 'zh' ? 'EN' : '中文'}
+            </a>
+          </li>
+        ) */}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .logo:hover {
+    color: var(--accent);
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
+    align-items: center;
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    transition: all 0.15s ease;
+  }
+
+  .nav-list a:hover {
+    color: var(--text-primary);
+    background: var(--bg-tertiary);
+  }
+
+  .lang-switch a {
+    border: 1px solid var(--border);
+    margin-left: 0.5rem;
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: all 0.2s ease;
+  }
+
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-list {
+      display: none;
+      position: absolute;
+      top: 56px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 1rem;
+      gap: 0.25rem;
+    }
+
+    .nav-list.open {
+      display: flex;
+    }
+
+    .nav-list a {
+      padding: 0.75rem;
+    }
+
+    .lang-switch a {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const list = document.getElementById('nav-list');
+  if (toggle && list) {
+    toggle.addEventListener('click', () => {
+      list.classList.toggle('open');
+    });
+  }
+</script>

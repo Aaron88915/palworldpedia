@@ -1,0 +1,38 @@
+---
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout
+  title="攻略合集 - Palworld 中文攻略"
+  description="Palworld 中文攻略合集。新手入门、BOSS 打法、基地建设、稀有帕鲁获取等实用攻略。"
+>
+  <header class="page-header">
+    <h1>📚 攻略合集</h1>
+    <p class="text-secondary">新手入门 · BOSS 攻略 · 基地建设 · 稀有帕鲁</p>
+  </header>
+
+  <div class="coming-soon">
+    <div class="coming-soon-icon">📝</div>
+    <h2>攻略内容准备中</h2>
+    <p class="text-secondary mt-1">我们正在撰写高质量的 Palworld 中文攻略，涵盖所有玩家关心的主题。</p>
+  </div>
+</Layout>
+
+<style>
+  .page-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .coming-soon {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .coming-soon-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+</style>

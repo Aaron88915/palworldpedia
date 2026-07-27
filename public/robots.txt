@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://palworldpedia.cc/sitemap-index.xml

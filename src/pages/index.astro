@@ -1,0 +1,254 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { SITE, PAL_TYPES } from '@/config';
+import palsData from '@data/pals.json';
+import type { Pal } from '@data/types';
+
+const pals = palsData as Pal[];
+const featuredPals = pals.slice(0, 8);
+const totalPals = pals.length;  // TODO: 接入完整数据后展示真实数字
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  description: SITE.description,
+  url: SITE.url,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE.url}/search?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+
+<Layout
+  title="幻兽帕鲁最全攻略站 - Palworld Guide"
+  description="Palworld 玩家必备攻略站。400+ 帕鲁图鉴、配种计算器、科技树、词条筛选、基地电力计算。最专业的 Palworld 工具集。"
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="hero-title">幻兽帕鲁<span class="hero-accent">最全攻略</span></h1>
+    <p class="hero-subtitle">400+ 帕鲁图鉴 · 配种计算器 · 科技树 · 词条筛选 · 基地电力</p>
+    <div class="hero-cta">
+      <a href="/pals/" class="btn btn-primary">浏览帕鲁图鉴</a>
+      <a href="/breeding/" class="btn btn-secondary">配种计算器</a>
+    </div>
+  </section>
+
+  <!-- 核心功能入口 -->
+  <section class="features">
+    <h2>核心功能</h2>
+    <div class="grid grid-auto mt-3">
+      <a href="/pals/" class="card card-link">
+        <h3>📖 帕鲁图鉴</h3>
+        <p class="text-secondary mt-1">所有帕鲁的属性、技能、词条、捕捉位置</p>
+      </a>
+      <a href="/breeding/" class="card card-link">
+        <h3>🧬 配种计算器</h3>
+        <p class="text-secondary mt-1">输入两只帕鲁，计算后代配方</p>
+      </a>
+      <a href="/tech-tree/" class="card card-link">
+        <h3>🔬 科技树</h3>
+        <p class="text-secondary mt-1">完整科技点分配方案</p>
+      </a>
+      <a href="/calculator/power/" class="card card-link">
+        <h3>⚡ 基地电力</h3>
+        <p class="text-secondary mt-1">计算你的基地电力需求</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- 热门帕鲁 -->
+  <section class="mt-4">
+    <div class="flex items-center justify-between mb-2">
+      <h2>热门帕鲁</h2>
+      <a href="/pals/" class="text-secondary">查看全部 →</a>
+    </div>
+    <div class="grid grid-pals">
+      {featuredPals.map((pal) => (
+        <a href={`/pals/${pal.id}/`} class="pal-card">
+          <div class="pal-image-placeholder">
+            <span class="pal-emoji">{pal.types[0] === 'fire' ? '🔥' : pal.types[0] === 'water' ? '💧' : pal.types[0] === 'grass' ? '🌿' : '⚡'}</span>
+          </div>
+          <div class="pal-info">
+            <div class="pal-name">{pal.name.zh}</div>
+            <div class="pal-name-en">{pal.name.en}</div>
+            <div class="pal-types">
+              {pal.types.map((type) => (
+                <span class={`type-badge type-${type}`}>{type}</span>
+              ))}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- 类型筛选 -->
+  <section class="mt-4">
+    <h2>按类型浏览</h2>
+    <div class="type-grid mt-2">
+      {PAL_TYPES.map((type) => (
+        <a href={`/pals/?type=${type.id}`} class={`type-card type-${type.id}`}>
+          <span class="type-name">{type.zh}</span>
+          <span class="type-name-en">{type.en}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- SEO 文本（机器人友好） -->
+  <section class="seo-content mt-4">
+    <h2>关于 Palworld 攻略</h2>
+    <p>
+      Palworld（幻兽帕鲁）是由 Pocketpair 开发的开放世界生存制作游戏，自 2024 年 1 月发布以来风靡全球。
+      玩家可以捕捉被称为"帕鲁"的神秘生物、建造基地、与帕鲁一起战斗、繁殖稀有帕鲁。
+    </p>
+    <p>
+      本站提供最全面的 Palworld 中文攻略，包括：<strong>帕鲁图鉴</strong>（每只帕鲁的详细数据）、
+      <strong>配种公式</strong>（哪些帕鲁能孵出什么）、<strong>科技树</strong>（最优点法）、
+      <strong>词条/性格/体型筛选</strong>（最强帕鲁搭配）以及<strong>基地电力计算</strong>等实用工具。
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-accent {
+    color: var(--accent);
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .pal-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    text-align: center;
+    transition: all 0.15s ease;
+    color: inherit;
+  }
+
+  .pal-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .pal-image-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .pal-emoji {
+    font-size: 2.5rem;
+  }
+
+  .pal-info {
+    font-size: 0.875rem;
+  }
+
+  .pal-name {
+    font-weight: 600;
+  }
+
+  .pal-name-en {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+  }
+
+  .pal-types {
+    margin-top: 0.25rem;
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .type-badge {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+  }
+
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .type-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: all 0.15s ease;
+    color: inherit;
+  }
+
+  .type-card:hover {
+    border-color: var(--accent);
+  }
+
+  .type-card .type-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  .type-card .type-name-en {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .seo-content {
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+  }
+
+  .seo-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .seo-content strong {
+    color: var(--text-primary);
+  }
+</style>

@@ -1,0 +1,76 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { SITE } from '@/config';
+---
+
+<Layout
+  title="联系我们"
+  description="联系 Palworldpedia - 报告数据错误、提交建议、咨询合作"
+>
+  <article class="content">
+    <h1>联系我们</h1>
+
+    <h2>📧 邮件</h2>
+    <p>
+      <a href={`mailto:${SITE.email}`} class="contact-link">{SITE.email}</a>
+    </p>
+
+    <h2>🐙 GitHub</h2>
+    <p>
+      <a href="https://github.com/Aaron88915/palworldpedia" class="contact-link">github.com/Aaron88915/palworldpedia</a>
+    </p>
+
+    <h2>📝 报告数据错误</h2>
+    <p>
+      在我们的攻略内容中发现错误？请通过邮件告知我们，并附上：
+    </p>
+    <ul>
+      <li>错误页面 URL</li>
+      <li>错误内容描述</li>
+      <li>正确数据来源（截图、官方公告链接等）</li>
+    </ul>
+    <p>我们会在确认后 24 小时内更新。</p>
+
+    <h2>🤝 合作</h2>
+    <p>接受以下形式的合作：</p>
+    <ul>
+      <li>内容贡献（原创攻略、翻译）</li>
+      <li>数据校对</li>
+      <li>工具建议</li>
+    </ul>
+    <p>请通过邮件详细说明合作意向。</p>
+
+    <h2>🚫 不接受</h2>
+    <ul>
+      <li>付费外链 / SEO 链接买卖</li>
+      <li>未授权的游戏素材使用授权</li>
+      <li>任何违反游戏 EULA 的内容</li>
+    </ul>
+  </article>
+</Layout>
+
+<style>
+  .content {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .content h2 {
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+
+  .content ul {
+    padding-left: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .content p, .content li {
+    color: var(--text-secondary);
+  }
+
+  .contact-link {
+    font-size: 1.125rem;
+  }
+</style>

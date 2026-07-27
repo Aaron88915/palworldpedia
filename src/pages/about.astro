@@ -1,0 +1,90 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { SITE } from '@/config';
+---
+
+<Layout
+  title="关于本站"
+  description="关于 Palworldpedia - 我们是谁、为什么做、怎么做"
+>
+  <article class="content">
+    <h1>关于 {SITE.name}</h1>
+
+    <p class="lead">
+      {SITE.name}（{SITE.shortName}）是 Palworld（幻兽帕鲁）玩家的非官方攻略站，致力于提供<strong>最全面、最准确、最实用</strong>的 Palworld 中文资料和工具。
+    </p>
+
+    <h2>我们提供什么</h2>
+    <ul>
+      <li><strong>帕鲁图鉴</strong>：所有帕鲁的详细数据，包括属性、技能、词条、捕捉位置</li>
+      <li><strong>配种计算器</strong>：输入两只帕鲁，立即计算可孵出的后代</li>
+      <li><strong>科技树</strong>：完整的古科技点分配方案</li>
+      <li><strong>词条筛选</strong>：找出最强词条组合</li>
+      <li><strong>基地计算</strong>：电力、生产效率、产线规划</li>
+      <li><strong>BOSS 攻略</strong>：所有地下城 BOSS 的详细打法</li>
+    </ul>
+
+    <h2>数据来源</h2>
+    <p>
+      本站数据来源于：
+    </p>
+    <ul>
+      <li>官方游戏数据（解包 + 人工校对）</li>
+      <li>Palworld Fandom Wiki（CC-BY-SA 协议，二次加工）</li>
+      <li>社区玩家贡献（数据提交 + 投票验证）</li>
+    </ul>
+
+    <h2>更新频率</h2>
+    <p>
+      Palworld 处于 Early Access 阶段，内容更新频繁。我们会在游戏每次大版本更新后<strong>48 小时内</strong>同步更新站内数据。
+    </p>
+
+    <h2>免责声明</h2>
+    <p>
+      本站为<strong>非官方粉丝站</strong>，与 Pocketpair 公司无任何关联。
+      Palworld 是 Pocketpair 的注册商标。
+      本站所有游戏素材（图片、图标）均归 Pocketpair 所有，仅供玩家学习交流使用。
+    </p>
+
+    <h2>联系我们</h2>
+    <p>
+      发现数据错误？有改进建议？欢迎联系我们：
+    </p>
+    <ul>
+      <li>邮箱：<a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+      <li>GitHub：<a href="https://github.com/Aaron88915/palworldpedia">@palworldpedia</a></li>
+    </ul>
+  </article>
+</Layout>
+
+<style>
+  .content {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .lead {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .content h2 {
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+
+  .content ul {
+    padding-left: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .content p, .content li {
+    color: var(--text-secondary);
+  }
+
+  .content strong {
+    color: var(--text-primary);
+  }
+</style>
