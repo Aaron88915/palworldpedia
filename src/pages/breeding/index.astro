@@ -431,6 +431,21 @@ const schema = {
     // 过滤：去掉 X + X = X 的同种繁殖（无实际意义）
     const crossBreedData = data.edgeList.filter((e) => !(e.p1 === e.p2 && e.p1 === e.c));
 
+    // 排序：按父母 A 中文名 → 父母 B 中文名 → 后代
+    function sortByPalName(list) {
+      return [...list].sort((a, b) => {
+        const p1a = palMap.get(a.p1)?.zh || '';
+        const p1b = palMap.get(b.p1)?.zh || '';
+        if (p1a !== p1b) return p1a.localeCompare(p1b, 'zh');
+        const p2a = palMap.get(a.p2)?.zh || '';
+        const p2b = palMap.get(b.p2)?.zh || '';
+        if (p2a !== p2b) return p2a.localeCompare(p2b, 'zh');
+        const ca = palMap.get(a.c)?.zh || '';
+        const cb = palMap.get(b.c)?.zh || '';
+        return ca.localeCompare(cb, 'zh');
+      });
+    }
+
     const tbody = document.getElementById('edge-tbody');
     const MAX_DISPLAY = 100;
     let currentData = crossBreedData;
@@ -508,7 +523,7 @@ const schema = {
     }
 
     // 初始渲染
-    render(crossBreedData);
+    render(sortByPalName(crossBreedData));
 
     // 搜索
     document.getElementById('edge-search').addEventListener('input', (e) => {
@@ -525,7 +540,7 @@ const schema = {
             );
           })
         : crossBreedData;
-      render(filtered);
+      render(sortByPalName(filtered));
     });
   }
 
