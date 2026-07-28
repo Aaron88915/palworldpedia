@@ -82,10 +82,13 @@ const relatedPals = (palsData as Pal[])
           })}
         </div>
         <div class="pal-rarity">
-          {[1, 2, 3, 4, 5].map((i) => (
-            <span class={`star ${i <= pal.rarity ? 'filled' : ''}`}>★</span>
-          ))}
-          <span class="text-muted">稀有度</span>
+          <div class="rarity-bar-detail" data-tier={(pal.rarityTier || 'common').toLowerCase()}>
+            <div class="rarity-fill" style={`width: ${(pal.rarity / 20) * 100}%`}></div>
+          </div>
+          <div class="rarity-meta">
+            <span class={`rarity-tag rarity-${(pal.rarityTier || 'common').toLowerCase()}`}>{pal.rarityTier || 'Common'}</span>
+            <span class="text-muted">{pal.rarity}/20</span>
+          </div>
         </div>
       </div>
     </header>
@@ -155,36 +158,38 @@ const relatedPals = (palsData as Pal[])
     )}
 
     <!-- 技能 -->
-    <section class="pal-section">
-      <h2>⚔️ 主动技能</h2>
-      <div class="skill-list">
-        {pal.skills.map((skill) => (
-          <div class="skill-item">
-            <div class="skill-header">
-              <span class={`skill-type type-${skill.type}`}>{PAL_TYPES.find((t) => t.id === skill.type)?.zh}</span>
-              <span class="skill-name">{skill.name.zh}</span>
-              <span class="skill-name-en text-muted">{skill.name.en}</span>
+    {pal.skills.length > 0 && (
+      <section class="pal-section">
+        <h2>⚔️ 主动技能</h2>
+        <div class="skill-list">
+          {pal.skills.map((skill) => (
+            <div class="skill-item">
+              <div class="skill-header">
+                <span class={`skill-type type-${skill.type}`}>{PAL_TYPES.find((t) => t.id === skill.type)?.zh}</span>
+                <span class="skill-name">{skill.name.zh}</span>
+                <span class="skill-name-en text-muted">{skill.name.en}</span>
+              </div>
+              <div class="skill-meta">
+                <span>Lv {skill.level}</span>
+                <span>威力 {skill.power}</span>
+                <span>CD {skill.cooldown}s</span>
+              </div>
+              <p class="skill-desc">{skill.description.zh}</p>
             </div>
-            <div class="skill-meta">
-              <span>Lv {skill.level}</span>
-              <span>威力 {skill.power}</span>
-              <span>CD {skill.cooldown}s</span>
-            </div>
-            <p class="skill-desc">{skill.description.zh}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    )}
 
     <!-- 词条 -->
     {pal.passives.length > 0 && (
       <section class="pal-section">
-        <h2>✨ 词条</h2>
+        <h2>✨ 词条（被动技能）</h2>
         <div class="passive-list">
           {pal.passives.map((passive) => (
             <div class="passive-item">
               <div class="passive-name">{passive.name.zh} · {passive.name.en}</div>
-              <p class="passive-desc">{passive.description.zh}</p>
+              <p class="passive-desc">{passive.description.zh || '（描述待补充）'}</p>
             </div>
           ))}
         </div>
@@ -192,25 +197,29 @@ const relatedPals = (palsData as Pal[])
     )}
 
     <!-- 掉落物 -->
-    <section class="pal-section">
-      <h2>📦 掉落物</h2>
-      <div class="drop-list">
-        {pal.drops.map((drop) => (
-          <span class="drop-chip">{drop}</span>
-        ))}
-      </div>
-    </section>
+    {pal.drops.length > 0 && (
+      <section class="pal-section">
+        <h2>📦 掉落物</h2>
+        <div class="drop-list">
+          {pal.drops.map((drop) => (
+            <span class="drop-chip">{drop}</span>
+          ))}
+        </div>
+      </section>
+    )}
 
     <!-- 出现区域 -->
-    <section class="pal-section">
-      <h2>🗺️ 出现区域</h2>
-      <div class="drop-list">
-        {pal.biomes.map((biome) => (
-          <span class="drop-chip">{biome}</span>
-        ))}
-        {pal.nightOnly && <span class="drop-chip">仅夜间</span>}
-      </div>
-    </section>
+    {(pal.biomes.length > 0 || pal.nightOnly) && (
+      <section class="pal-section">
+        <h2>🗺️ 出现区域</h2>
+        <div class="drop-list">
+          {pal.biomes.map((biome) => (
+            <span class="drop-chip">{biome}</span>
+          ))}
+          {pal.nightOnly && <span class="drop-chip">仅夜间</span>}
+        </div>
+      </section>
+    )}
 
     <AdSlot slot="inline" />
 
@@ -332,17 +341,47 @@ const relatedPals = (palsData as Pal[])
     margin-top: 0.75rem;
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.75rem;
   }
 
-  .star {
-    color: var(--text-muted);
-    font-size: 1.125rem;
+  .rarity-bar-detail {
+    width: 120px;
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+    overflow: hidden;
   }
 
-  .star.filled {
-    color: var(--accent);
+  .rarity-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
   }
+
+  .rarity-bar-detail[data-tier="common"] .rarity-fill { background: linear-gradient(90deg, #888, #c0c0c0); }
+  .rarity-bar-detail[data-tier="rare"] .rarity-fill { background: linear-gradient(90deg, #4a90e2, #5cb0ff); }
+  .rarity-bar-detail[data-tier="epic"] .rarity-fill { background: linear-gradient(90deg, #a855f7, #c878ff); }
+  .rarity-bar-detail[data-tier="legendary"] .rarity-fill { background: linear-gradient(90deg, #f59e0b, #ffd700); }
+
+  .rarity-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .rarity-tag {
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .rarity-tag.rarity-common { background: rgba(150,150,150,0.2); color: #c0c0c0; }
+  .rarity-tag.rarity-rare { background: rgba(80,170,255,0.2); color: #5cb0ff; }
+  .rarity-tag.rarity-epic { background: rgba(180,90,255,0.2); color: #c878ff; }
+  .rarity-tag.rarity-legendary { background: rgba(255,180,40,0.2); color: #ffb830; }
 
   .pal-desc {
     background: var(--bg-secondary);

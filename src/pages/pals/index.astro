@@ -106,15 +106,10 @@ const config = {
         <span class="filter-label">稀有度</span>
         <div class="filter-chips small" data-filter-group="rarity">
           <button type="button" data-filter-value="" class="chip active">全部</button>
-          {[1, 2, 3, 4, 5].map((r) => (
-            <button
-              type="button"
-              data-filter-value={String(r)}
-              class="chip rarity-chip"
-            >
-              {'★'.repeat(r)}
-            </button>
-          ))}
+          <button type="button" data-filter-value="Common" class="chip rarity-chip rarity-common">Common</button>
+          <button type="button" data-filter-value="Rare" class="chip rarity-chip rarity-rare">Rare</button>
+          <button type="button" data-filter-value="Epic" class="chip rarity-chip rarity-epic">Epic</button>
+          <button type="button" data-filter-value="Legendary" class="chip rarity-chip rarity-legendary">Legendary</button>
         </div>
       </div>
 
@@ -165,14 +160,15 @@ const config = {
         data-name-en={pal.name.en.toLowerCase()}
         data-type={pal.types.join(' ')}
         data-work={workEntries}
-        data-rarity={pal.rarity}
+        data-rarity={pal.rarityTier || 'Common'}
+        data-rarity-num={pal.rarity}
         data-variant={isVariant ? 'only' : 'base'}
         data-paldeck={pal.paldeckNo}
       >
         <div class="pal-tile-img">
           <PalImage pal={pal} size="medium" rounded />
           <div class="pal-tile-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
-          <div class="pal-tile-rarity">{'★'.repeat(pal.rarity)}</div>
+          <div class={`pal-tile-rarity rarity-${(pal.rarityTier || 'common').toLowerCase()}`}>{pal.rarityTier || 'Common'}</div>
         </div>
         <div class="pal-tile-info">
           <div class="pal-tile-name">{pal.name.zh}</div>
@@ -388,12 +384,24 @@ const config = {
 
   .pal-tile-rarity {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 0.4rem;
+    right: 0.4rem;
     font-size: 0.625rem;
-    color: var(--accent);
-    letter-spacing: -0.05em;
+    font-weight: 700;
+    padding: 0.125rem 0.4rem;
+    border-radius: 0.25rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
   }
+  .pal-tile-rarity.rarity-common { background: rgba(150,150,150,0.2); color: #c0c0c0; }
+  .pal-tile-rarity.rarity-rare { background: rgba(80,170,255,0.2); color: #5cb0ff; }
+  .pal-tile-rarity.rarity-epic { background: rgba(180,90,255,0.2); color: #c878ff; }
+  .pal-tile-rarity.rarity-legendary { background: rgba(255,180,40,0.2); color: #ffb830; }
+
+  .rarity-chip.rarity-common.active { border-color: #c0c0c0; color: #c0c0c0; }
+  .rarity-chip.rarity-rare.active { border-color: #5cb0ff; color: #5cb0ff; }
+  .rarity-chip.rarity-epic.active { border-color: #c878ff; color: #c878ff; }
+  .rarity-chip.rarity-legendary.active { border-color: #ffb830; color: #ffb830; }
 
   .pal-tile-info {
     padding: 0.5rem 0.75rem 0.75rem;
@@ -564,7 +572,7 @@ const config = {
     const sorted = [...tiles].sort((a, b) => {
       switch (state.sort) {
         case 'rarity':
-          if (Number(b.dataset.rarity) !== Number(a.dataset.rarity)) return Number(b.dataset.rarity) - Number(a.dataset.rarity);
+          if (Number(b.dataset.rarityNum) !== Number(a.dataset.rarityNum)) return Number(b.dataset.rarityNum) - Number(a.dataset.rarityNum);
           return Number(a.dataset.paldeck) - Number(b.dataset.paldeck);
         case 'name-zh':
           return (a.dataset.nameZh || '').localeCompare(b.dataset.nameZh || '', 'zh');
@@ -592,7 +600,7 @@ const config = {
     const labels = {
       type: state.type ? config.types.find((t) => t.id === state.type)?.zh : null,
       work: state.work ? config.works.find((w) => w.id === state.work)?.zh : null,
-      rarity: state.rarity ? '★'.repeat(Number(state.rarity)) : null,
+      rarity: state.rarity || null,
       variants: state.variants === 'base' ? '仅基础' : state.variants === 'only' ? '仅变种' : null,
     };
     const entries = Object.entries(labels).filter(([_, v]) => v);

@@ -8,16 +8,18 @@ import type { Pal } from '@data/types';
 const pals = palsData as Pal[];
 
 // === 计算每个帕鲁的"战力评分"（原创算法） ===
-// 公式：HP×1 + ATK×2 + DEF×1.5 + 稀有度×50 + 速度×0.5
-// 这是我们自己定义的"实用度"评分，区别于纯稀有度
+// 公式：HP×1 + ATK×2 + DEF×1.5 + 速度×0.3 + 稀有度等级×50 + 工作适配×5
+// 注意：rarity 用 tier 映射 (Common=1, Rare=2, Epic=3, Legendary=4) 保持数值平衡
+const TIER_WEIGHT: Record<string, number> = { Common: 1, Rare: 2, Epic: 3, Legendary: 4 };
 function powerScore(pal: Pal): number {
   const s = pal.stats;
+  const tierWeight = TIER_WEIGHT[pal.rarityTier || 'Common'] || 1;
   return Math.round(
     s.hp * 1 +
     s.attack.melee * 2 +
     s.defense * 1.5 +
     s.speed * 0.3 +
-    pal.rarity * 50 +
+    tierWeight * 50 +
     Object.values(pal.workSuitability || {}).reduce((a, b) => a + (b as number), 0) * 5
   );
 }
@@ -52,11 +54,11 @@ const popularCombos = [
   { a: 'foxparks', b: 'cattiva', c: 'foxparks-cryst' },
 ];
 
-// === 稀有度分布 ===
-const rarityDist: Record<number, number> = {};
+// === 稀有度分布（按 tier） ===
+const rarityDist: Record<string, number> = { Common: 0, Rare: 0, Epic: 0, Legendary: 0 };
 pals.forEach((p) => {
-  const r = p.rarity || 0;
-  rarityDist[r] = (rarityDist[r] || 0) + 1;
+  const t = p.rarityTier || 'Common';
+  rarityDist[t] = (rarityDist[t] || 0) + 1;
 });
 
 // === 属性分布 ===
@@ -176,7 +178,7 @@ const schema = {
           {featuredPal.types.map((type) => (
             <span class={`type-tag type-${type}`}>{PAL_TYPES.find((t) => t.id === type)?.zh}</span>
           ))}
-          <span class="rarity-badge">{'★'.repeat(featuredPal.rarity)}</span>
+          <span class={`rarity-tag rarity-${(featuredPal.rarityTier || 'common').toLowerCase()}`}>{featuredPal.rarityTier || 'Common'}</span>
         </div>
         <div class="stat-row">
           <div class="stat-cell-big">
@@ -300,7 +302,7 @@ const schema = {
         <a href={`/pals/${pal.id}/`} class="featured-card">
           <div class="featured-img">
             <PalImage pal={pal} size="medium" rounded />
-            <div class="featured-rarity">{'★'.repeat(pal.rarity)}</div>
+            <div class={`featured-rarity rarity-${(pal.rarityTier || 'common').toLowerCase()}`}>{pal.rarityTier || 'Common'}</div>
           </div>
           <div class="featured-info">
             <div class="featured-name">{pal.name.zh}</div>
@@ -330,7 +332,7 @@ const schema = {
         <a href={`/pals/${pal.id}/`} class="new-pal-tile">
           <PalImage pal={pal} size="small" rounded />
           <div class="new-pal-name">{pal.name.zh}</div>
-          <div class="new-pal-rarity">{'★'.repeat(pal.rarity)}</div>
+          <div class={`new-pal-rarity rarity-${(pal.rarityTier || 'common').toLowerCase()}`}>{pal.rarityTier || 'Common'}</div>
         </a>
       ))}
     </div>
@@ -426,22 +428,23 @@ const schema = {
     </div>
   </section>
 
-  <!-- ===== 稀有度分布（1-4 星） ===== -->
+  <!-- ===== 稀有度分布（4 档） ===== -->
   <section class="section">
     <div class="section-head">
       <h2>⭐ 稀有度分布</h2>
-      <p class="text-secondary">游戏内最高 4 星（palcalc Rarity 已 cap）</p>
+      <p class="text-secondary">按 in-game 稀有度分级（共 288 只）</p>
     </div>
     <div class="rarity-bar">
-      {[1, 2, 3, 4].map((r) => {
-        const c = rarityDist[r] || 0;
+      {['Common', 'Rare', 'Epic', 'Legendary'].map((t) => {
+        const c = rarityDist[t] || 0;
         if (c === 0) return null;
         const pct = (c / totalPals) * 100;
+        const tierKey = t.toLowerCase();
         return (
-          <a href={`/pals/?rarity=${r}`} class="rarity-bar-cell" title={`★${r} × ${c} 只 (${pct.toFixed(1)}%)`}>
-            <div class="rarity-bar-num">★{r}</div>
+          <a href={`/pals/?rarity=${t}`} class={`rarity-bar-cell rarity-${tierKey}`} title={`${t} × ${c} 只 (${pct.toFixed(1)}%)`}>
+            <div class={`rarity-bar-num rarity-${tierKey}`}>{t}</div>
             <div class="rarity-bar-fill" style={`--pct: ${pct}%`}></div>
-            <div class="rarity-bar-count">{c}</div>
+            <div class="rarity-bar-count">{c} 只 ({pct.toFixed(0)}%)</div>
           </a>
         );
       })}
@@ -690,11 +693,18 @@ const schema = {
     color: #000;
   }
 
-  .rarity-badge {
-    color: var(--accent);
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
+  .rarity-tag {
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
+  .rarity-tag.rarity-common { background: rgba(150,150,150,0.2); color: #c0c0c0; }
+  .rarity-tag.rarity-rare { background: rgba(80,170,255,0.2); color: #5cb0ff; }
+  .rarity-tag.rarity-epic { background: rgba(180,90,255,0.2); color: #c878ff; }
+  .rarity-tag.rarity-legendary { background: rgba(255,184,48,0.2); color: #ffb830; }
 
   .stat-row {
     display: grid;
@@ -953,8 +963,16 @@ const schema = {
     right: 0.375rem;
     color: var(--accent);
     font-size: 0.625rem;
+    font-weight: 700;
+    padding: 0.1rem 0.35rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
     text-shadow: 0 1px 2px rgba(0,0,0,0.5);
   }
+  .featured-rarity.rarity-common { background: rgba(150,150,150,0.25); color: #c0c0c0; }
+  .featured-rarity.rarity-rare { background: rgba(80,170,255,0.25); color: #5cb0ff; }
+  .featured-rarity.rarity-epic { background: rgba(180,90,255,0.25); color: #c878ff; }
+  .featured-rarity.rarity-legendary { background: rgba(255,184,48,0.3); color: #ffd700; }
 
   .featured-info { padding: 0.5rem 0.625rem 0.75rem; }
   .featured-name { font-weight: 600; font-size: 0.875rem; }
@@ -987,7 +1005,11 @@ const schema = {
   }
 
   .new-pal-name { font-size: 0.75rem; font-weight: 600; margin-top: 0.25rem; }
-  .new-pal-rarity { font-size: 0.625rem; color: var(--accent); }
+  .new-pal-rarity { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; }
+  .new-pal-rarity.rarity-common { color: #c0c0c0; }
+  .new-pal-rarity.rarity-rare { color: #5cb0ff; }
+  .new-pal-rarity.rarity-epic { color: #c878ff; }
+  .new-pal-rarity.rarity-legendary { color: #ffb830; }
 
   /* === Combo list === */
   .combo-list { display: flex; flex-direction: column; gap: 0.5rem; }
@@ -1107,12 +1129,22 @@ const schema = {
 
   .rarity-bar-cell:hover { border-color: var(--accent); }
 
+  /* Tier colors for rarity bar */
+  .rarity-bar-cell.rarity-common { border-color: rgba(192,192,192,0.3); }
+  .rarity-bar-cell.rarity-rare { border-color: rgba(92,176,255,0.3); }
+  .rarity-bar-cell.rarity-epic { border-color: rgba(200,120,255,0.3); }
+  .rarity-bar-cell.rarity-legendary { border-color: rgba(255,184,48,0.4); }
+
   .rarity-bar-num {
     color: var(--accent);
     font-size: 0.875rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
   }
+  .rarity-bar-num.rarity-common { color: #c0c0c0; }
+  .rarity-bar-num.rarity-rare { color: #5cb0ff; }
+  .rarity-bar-num.rarity-epic { color: #c878ff; }
+  .rarity-bar-num.rarity-legendary { color: #ffb830; }
 
   .rarity-bar-fill {
     height: 4px;
@@ -1129,6 +1161,10 @@ const schema = {
     height: 100%;
     background: var(--accent);
   }
+  .rarity-bar-cell.rarity-common .rarity-bar-fill::after { background: #c0c0c0; }
+  .rarity-bar-cell.rarity-rare .rarity-bar-fill::after { background: #5cb0ff; }
+  .rarity-bar-cell.rarity-epic .rarity-bar-fill::after { background: #c878ff; }
+  .rarity-bar-cell.rarity-legendary .rarity-bar-fill::after { background: linear-gradient(90deg, #f59e0b, #ffd700); }
 
   .rarity-bar-count {
     font-size: 0.75rem;

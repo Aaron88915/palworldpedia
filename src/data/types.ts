@@ -54,7 +54,8 @@ export interface Pal {
   paldeckNo: number;               // 图鉴编号 1-N
   name: { zh: string; en: string };
   types: PalType[];                // 1-2 个类型
-  rarity: 1 | 2 | 3 | 4 | 5;       // 稀有度
+  rarity: number;                  // 稀有度 1-20 (paldb.cc 标准)
+  rarityTier: 'Common' | 'Rare' | 'Epic' | 'Legendary';  // 稀有度分级
   stats: {
     hp: number;
     attack: { melee: number; ranged: number };
