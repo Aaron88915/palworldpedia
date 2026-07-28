@@ -6,96 +6,19 @@ import palsData from '@data/pals.json';
 import type { Pal } from '@data/types';
 
 const pals = palsData as Pal[];
-const url = new URL(Astro.request.url);
 
-// 解析所有筛选参数
-const params = {
-  type: url.searchParams.get('type'),
-  work: url.searchParams.get('work'),
-  rarity: url.searchParams.get('rarity') ? Number(url.searchParams.get('rarity')) : null,
-  sort: url.searchParams.get('sort') || 'no', // no | rarity | name-zh | name-en
-  variants: url.searchParams.get('variants') || 'all', // all | base | only
-  view: url.searchParams.get('view') || 'grid', // grid | grouped
-};
+// 在 SSG 模式下，query 参数不参与构建——所有筛选改为客户端 JS 处理。
+// 这里只渲染全部 288 只帕鲁，加 data 属性供客户端筛选。
 
-let filteredPals = pals;
-
-// 1. 属性筛选
-if (params.type && PAL_TYPES.some((t) => t.id === params.type)) {
-  filteredPals = filteredPals.filter((p) => p.types.includes(params.type as any));
-}
-
-// 2. 工作适配筛选
-if (params.work && WORK_SUITABILITIES.some((w) => w.id === params.work)) {
-  filteredPals = filteredPals.filter((p) => {
-    const lvl = p.workSuitability?.[params.work as any];
-    return typeof lvl === 'number' && lvl > 0;
-  });
-}
-
-// 3. 稀有度筛选
-if (params.rarity && params.rarity >= 1 && params.rarity <= 5) {
-  filteredPals = filteredPals.filter((p) => p.rarity === params.rarity);
-}
-
-// 4. 变种筛选
-if (params.variants === 'base') {
-  filteredPals = filteredPals.filter((p) => p.paldeckNo > 0 && p.paldeckNo <= 200);
-} else if (params.variants === 'only') {
-  filteredPals = filteredPals.filter((p) => p.paldeckNo === 0 || p.paldeckNo > 200);
-}
-
-// 5. 排序
-filteredPals.sort((a, b) => {
-  switch (params.sort) {
-    case 'rarity':
-      if (b.rarity !== a.rarity) return b.rarity - a.rarity;
-      return a.paldeckNo - b.paldeckNo;
-    case 'name-zh':
-      return a.name.zh.localeCompare(b.name.zh, 'zh');
-    case 'name-en':
-      return a.name.en.localeCompare(b.name.en);
-    case 'no':
-    default:
-      return a.paldeckNo - b.paldeckNo;
-  }
+// 预计算每只帕鲁的工作适配 ID 列表（用于 data-work）
+const palsWithData = pals.map((p) => {
+  const workEntries = Object.entries(p.workSuitability || {})
+    .filter(([_, lvl]) => typeof lvl === 'number' && lvl > 0)
+    .map(([k, lvl]) => `${k}:${lvl}`)
+    .join(' ');
+  const isVariant = p.paldeckNo === 0 || p.paldeckNo > 200;
+  return { pal: p, workEntries, isVariant };
 });
-
-// 6. 分组（按属性）
-const grouped = params.view === 'grouped';
-const groups = grouped
-  ? PAL_TYPES.map((t) => ({
-      type: t,
-      pals: filteredPals.filter((p) => p.types.includes(t.id as any)),
-    })).filter((g) => g.pals.length > 0)
-  : [];
-
-// 当前激活的筛选器（用于显示）
-const activeFilters: { key: string; label: string; removeHref: string }[] = [];
-if (params.type) {
-  const t = PAL_TYPES.find((x) => x.id === params.type);
-  if (t) activeFilters.push({ key: 'type', label: `属性: ${t.zh}`, removeHref: buildUrl({ type: null }) });
-}
-if (params.work) {
-  const w = WORK_SUITABILITIES.find((x) => x.id === params.work);
-  if (w) activeFilters.push({ key: 'work', label: `${w.icon} ${w.zh}`, removeHref: buildUrl({ work: null }) });
-}
-if (params.rarity) {
-  activeFilters.push({ key: 'rarity', label: `★${params.rarity}`, removeHref: buildUrl({ rarity: null }) });
-}
-if (params.variants !== 'all') {
-  activeFilters.push({ key: 'variants', label: params.variants === 'base' ? '仅基础' : '仅变种', removeHref: buildUrl({ variants: null }) });
-}
-
-function buildUrl(overrides: Record<string, string | null>): string {
-  const sp = new URLSearchParams(url.searchParams);
-  for (const [k, v] of Object.entries(overrides)) {
-    if (v === null) sp.delete(k);
-    else sp.set(k, v);
-  }
-  const qs = sp.toString();
-  return `/pals/${qs ? '?' + qs : ''}`;
-}
 
 const schema = {
   '@context': 'https://schema.org',
@@ -113,16 +36,22 @@ const schema = {
     },
   })),
 };
+
+// 暴露给客户端的配置
+const config = {
+  types: PAL_TYPES,
+  works: WORK_SUITABILITIES,
+};
 ---
 
 <Layout
-  title={params.type ? `${PAL_TYPES.find((t) => t.id === params.type)?.zh}属性帕鲁` : '帕鲁图鉴'}
-  description="完整的 Palworld 帕鲁图鉴。包含所有帕鲁的属性、技能、词条、捕捉位置、掉落物等详细信息。"
+  title="帕鲁图鉴 - 全部 288 只 Palworld 帕鲁"
+  description="完整的 Palworld 帕鲁图鉴。包含所有帕鲁的属性、技能、词条、捕捉位置、掉落物等详细信息。支持按属性、工作、稀有度筛选。"
   schema={schema}
 >
   <header class="page-header">
     <h1>帕鲁图鉴</h1>
-    <p class="text-secondary">共 {pals.length} 只帕鲁 · 当前显示 {filteredPals.length} 只</p>
+    <p class="text-secondary">共 {pals.length} 只帕鲁 · <span id="visible-count">显示 {pals.length}</span> 只</p>
   </header>
 
   <!-- 搜索框 -->
@@ -132,22 +61,22 @@ const schema = {
       id="pal-search"
       class="search-input"
       placeholder="搜索帕鲁（中文 / 英文 / ID）..."
-      value=""
       autocomplete="off"
     />
 
     <!-- 属性筛选 -->
     <div class="filter-row">
       <span class="filter-label">属性</span>
-      <div class="filter-chips">
-        <a href={buildUrl({ type: null })} class={`chip type-chip ${!params.type ? 'active' : ''}`}>全部</a>
+      <div class="filter-chips" data-filter-group="type">
+        <button type="button" data-filter-value="" class="chip type-chip active">全部</button>
         {PAL_TYPES.map((t) => (
-          <a
-            href={buildUrl({ type: t.id })}
-            class={`chip type-chip type-${t.id} ${params.type === t.id ? 'active' : ''}`}
+          <button
+            type="button"
+            data-filter-value={t.id}
+            class={`chip type-chip type-${t.id}`}
           >
             {t.zh}
-          </a>
+          </button>
         ))}
       </div>
     </div>
@@ -155,17 +84,18 @@ const schema = {
     <!-- 工作适配筛选 -->
     <div class="filter-row">
       <span class="filter-label">工作</span>
-      <div class="filter-chips">
-        <a href={buildUrl({ work: null })} class={`chip ${!params.work ? 'active' : ''}`}>全部</a>
+      <div class="filter-chips" data-filter-group="work">
+        <button type="button" data-filter-value="" class="chip active">全部</button>
         {WORK_SUITABILITIES.map((w) => (
-          <a
-            href={buildUrl({ work: w.id })}
-            class={`chip ${params.work === w.id ? 'active' : ''}`}
+          <button
+            type="button"
+            data-filter-value={w.id}
+            class="chip"
             title={w.zh}
           >
             <span class="chip-icon">{w.icon}</span>
             <span class="chip-text">{w.zh}</span>
-          </a>
+          </button>
         ))}
       </div>
     </div>
@@ -174,116 +104,92 @@ const schema = {
     <div class="filter-row meta-row">
       <div class="meta-group">
         <span class="filter-label">稀有度</span>
-        <div class="filter-chips small">
-          <a href={buildUrl({ rarity: null })} class={`chip ${!params.rarity ? 'active' : ''}`}>全部</a>
+        <div class="filter-chips small" data-filter-group="rarity">
+          <button type="button" data-filter-value="" class="chip active">全部</button>
           {[1, 2, 3, 4, 5].map((r) => (
-            <a
-              href={buildUrl({ rarity: String(r) })}
-              class={`chip rarity-chip ${params.rarity === r ? 'active' : ''}`}
+            <button
+              type="button"
+              data-filter-value={String(r)}
+              class="chip rarity-chip"
             >
               {'★'.repeat(r)}
-            </a>
+            </button>
           ))}
         </div>
       </div>
 
       <div class="meta-group">
         <span class="filter-label">类型</span>
-        <div class="filter-chips small">
-          <a href={buildUrl({ variants: null })} class={`chip ${params.variants === 'all' ? 'active' : ''}`}>全部</a>
-          <a href={buildUrl({ variants: 'base' })} class={`chip ${params.variants === 'base' ? 'active' : ''}`}>仅基础</a>
-          <a href={buildUrl({ variants: 'only' })} class={`chip ${params.variants === 'only' ? 'active' : ''}`}>仅变种</a>
+        <div class="filter-chips small" data-filter-group="variants">
+          <button type="button" data-filter-value="all" class="chip active">全部</button>
+          <button type="button" data-filter-value="base" class="chip">仅基础</button>
+          <button type="button" data-filter-value="only" class="chip">仅变种</button>
         </div>
       </div>
 
       <div class="meta-group">
         <span class="filter-label">排序</span>
-        <div class="filter-chips small">
-          <a href={buildUrl({ sort: 'no' })} class={`chip ${params.sort === 'no' ? 'active' : ''}`}>图鉴号</a>
-          <a href={buildUrl({ sort: 'rarity' })} class={`chip ${params.sort === 'rarity' ? 'active' : ''}`}>稀有度</a>
-          <a href={buildUrl({ sort: 'name-zh' })} class={`chip ${params.sort === 'name-zh' ? 'active' : ''}`}>中文名</a>
-          <a href={buildUrl({ sort: 'name-en' })} class={`chip ${params.sort === 'name-en' ? 'active' : ''}`}>英文名</a>
+        <div class="filter-chips small" data-filter-group="sort">
+          <button type="button" data-filter-value="no" class="chip active">图鉴号</button>
+          <button type="button" data-filter-value="rarity" class="chip">稀有度</button>
+          <button type="button" data-filter-value="name-zh" class="chip">中文名</button>
+          <button type="button" data-filter-value="name-en" class="chip">英文名</button>
         </div>
       </div>
 
       <div class="meta-group">
         <span class="filter-label">视图</span>
-        <div class="filter-chips small">
-          <a href={buildUrl({ view: 'grid' })} class={`chip ${params.view === 'grid' ? 'active' : ''}`}>网格</a>
-          <a href={buildUrl({ view: 'grouped' })} class={`chip ${params.view === 'grouped' ? 'active' : ''}`}>分组</a>
+        <div class="filter-chips small" data-filter-group="view">
+          <button type="button" data-filter-value="grid" class="chip active">网格</button>
+          <button type="button" data-filter-value="grouped" class="chip">分组</button>
         </div>
       </div>
     </div>
 
     <!-- 已选筛选器 -->
-    {activeFilters.length > 0 && (
-      <div class="active-filters">
-        <span class="filter-label">已筛选</span>
-        {activeFilters.map((f) => (
-          <a href={f.removeHref} class="active-chip">× {f.label}</a>
-        ))}
-        <a href="/pals/" class="reset-link">清空</a>
-      </div>
-    )}
+    <div class="active-filters" id="active-filters" style="display: none;">
+      <span class="filter-label">已筛选</span>
+      <div id="active-chips"></div>
+      <button type="button" id="reset-btn" class="reset-link">清空</button>
+    </div>
   </div>
 
   <!-- 帕鲁网格（默认） -->
-  {params.view === 'grid' && (
-    <div class="pal-grid" id="pal-grid">
-      {filteredPals.map((pal) => (
-        <a href={`/pals/${pal.id}/`} class="pal-tile" data-name-zh={pal.name.zh.toLowerCase()} data-name-en={pal.name.en.toLowerCase()}>
-          <div class="pal-tile-img">
-            <PalImage pal={pal} size="medium" rounded />
-            <div class="pal-tile-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
-            <div class="pal-tile-rarity">{'★'.repeat(pal.rarity)}</div>
-          </div>
-          <div class="pal-tile-info">
-            <div class="pal-tile-name">{pal.name.zh}</div>
-            <div class="pal-tile-name-en">{pal.name.en}</div>
-            <div class="pal-tile-types">
-              {pal.types.map((type) => (
-                <span class={`type-dot type-${type}`}></span>
-              ))}
-            </div>
-          </div>
-        </a>
-      ))}
-    </div>
-  )}
-
-  <!-- 帕鲁分组（按属性） -->
-  {params.view === 'grouped' && (
-    <div class="pal-groups">
-      {groups.map((g) => (
-        <section class="pal-group">
-          <h2 class={`group-header type-${g.type.id}`}>
-            <span>{g.type.zh} · {g.type.en}</span>
-            <span class="group-count">{g.pals.length}</span>
-          </h2>
-          <div class="pal-grid">
-            {g.pals.map((pal) => (
-              <a href={`/pals/${pal.id}/`} class="pal-tile" data-name-zh={pal.name.zh.toLowerCase()} data-name-en={pal.name.en.toLowerCase()}>
-                <div class="pal-tile-img">
-                  <PalImage pal={pal} size="medium" rounded />
-                  <div class="pal-tile-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
-                  <div class="pal-tile-rarity">{'★'.repeat(pal.rarity)}</div>
-                </div>
-                <div class="pal-tile-info">
-                  <div class="pal-tile-name">{pal.name.zh}</div>
-                  <div class="pal-tile-name-en">{pal.name.en}</div>
-                </div>
-              </a>
+  <div class="pal-grid" id="pal-grid">
+    {palsWithData.map(({ pal, workEntries, isVariant }) => (
+      <a
+        href={`/pals/${pal.id}/`}
+        class="pal-tile"
+        data-id={pal.id}
+        data-name-zh={pal.name.zh.toLowerCase()}
+        data-name-en={pal.name.en.toLowerCase()}
+        data-type={pal.types.join(' ')}
+        data-work={workEntries}
+        data-rarity={pal.rarity}
+        data-variant={isVariant ? 'only' : 'base'}
+        data-paldeck={pal.paldeckNo}
+      >
+        <div class="pal-tile-img">
+          <PalImage pal={pal} size="medium" rounded />
+          <div class="pal-tile-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
+          <div class="pal-tile-rarity">{'★'.repeat(pal.rarity)}</div>
+        </div>
+        <div class="pal-tile-info">
+          <div class="pal-tile-name">{pal.name.zh}</div>
+          <div class="pal-tile-name-en">{pal.name.en}</div>
+          <div class="pal-tile-types">
+            {pal.types.map((type) => (
+              <span class={`type-dot type-${type}`}></span>
             ))}
           </div>
-        </section>
-      ))}
-    </div>
-  )}
+        </div>
+      </a>
+    ))}
+  </div>
 
-  {filteredPals.length === 0 && (
+  {pals.length === 0 && (
     <div class="empty-state">
       <p>未找到匹配的帕鲁</p>
-      <a href="/pals/" class="reset-link">清空筛选</a>
     </div>
   )}
 </Layout>
@@ -354,6 +260,8 @@ const schema = {
     font-size: 0.875rem;
     transition: all 0.15s ease;
     white-space: nowrap;
+    cursor: pointer;
+    font-family: inherit;
   }
 
   .chip:hover {
@@ -408,6 +316,9 @@ const schema = {
     border-radius: 999px;
     font-size: 0.8125rem;
     font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
   }
 
   .active-chip:hover {
@@ -418,6 +329,11 @@ const schema = {
     color: var(--text-muted);
     font-size: 0.8125rem;
     text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
   }
 
   .reset-link:hover {
@@ -428,38 +344,6 @@ const schema = {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 0.75rem;
-  }
-
-  .pal-groups {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .group-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.625rem 1rem;
-    border-radius: var(--radius);
-    margin-bottom: 1rem;
-    border-left: 4px solid;
-    color: var(--text-primary);
-  }
-
-  .group-header.type-neutral { border-color: #a0a8b0; }
-  .group-header.type-fire { border-color: #f87171; }
-  .group-header.type-water { border-color: #5eb3f5; }
-  .group-header.type-grass { border-color: #4ade80; }
-  .group-header.type-electric { border-color: #fbbf24; }
-  .group-header.type-ice { border-color: #93c5fd; }
-  .group-header.type-ground { border-color: #d97706; }
-  .group-header.type-dark { border-color: #6b7280; }
-  .group-header.type-dragon { border-color: #c084fc; }
-
-  .group-count {
-    font-size: 0.875rem;
-    color: var(--text-muted);
   }
 
   .pal-tile {
@@ -474,6 +358,10 @@ const schema = {
   .pal-tile:hover {
     border-color: var(--accent);
     transform: translateY(-2px);
+  }
+
+  .pal-tile.hidden {
+    display: none;
   }
 
   .pal-tile-img {
@@ -548,26 +436,268 @@ const schema = {
     padding: 3rem 1rem;
     color: var(--text-muted);
   }
+
+  /* 分组视图（JS 动态生成） */
+  .pal-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    border-left: 4px solid;
+    color: var(--text-primary);
+  }
+
+  .group-header.type-neutral { border-color: #a0a8b0; }
+  .group-header.type-fire { border-color: #f87171; }
+  .group-header.type-water { border-color: #5eb3f5; }
+  .group-header.type-grass { border-color: #4ade80; }
+  .group-header.type-electric { border-color: #fbbf24; }
+  .group-header.type-ice { border-color: #93c5fd; }
+  .group-header.type-ground { border-color: #d97706; }
+  .group-header.type-dark { border-color: #6b7280; }
+  .group-header.type-dragon { border-color: #c084fc; }
+
+  .group-count {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
 </style>
 
-<script>
-  const search = document.getElementById('pal-search') as HTMLInputElement;
-  const tiles = document.querySelectorAll('.pal-tile');
+<script define:vars={{ config }}>
+  // ===== 客户端筛选系统 =====
 
-  if (search && tiles.length > 0) {
-    let timer: number;
+  const state = {
+    type: '',
+    work: '',
+    rarity: '',
+    sort: 'no',
+    variants: 'all',
+    view: 'grid',
+    q: '',
+  };
+
+  const grid = document.getElementById('pal-grid');
+  const tiles = Array.from(document.querySelectorAll('.pal-tile'));
+  const search = document.getElementById('pal-search');
+  const visibleCount = document.getElementById('visible-count');
+  const activeBox = document.getElementById('active-filters');
+  const activeChips = document.getElementById('active-chips');
+  const resetBtn = document.getElementById('reset-btn');
+
+  // 从 URL 初始化 state
+  function initFromURL() {
+    const sp = new URLSearchParams(window.location.search);
+    if (sp.get('type')) state.type = sp.get('type');
+    if (sp.get('work')) state.work = sp.get('work');
+    if (sp.get('rarity')) state.rarity = sp.get('rarity');
+    if (sp.get('sort')) state.sort = sp.get('sort');
+    if (sp.get('variants')) state.variants = sp.get('variants');
+    if (sp.get('view')) state.view = sp.get('view');
+    if (sp.get('q')) {
+      state.q = sp.get('q');
+      if (search) search.value = state.q;
+    }
+  }
+
+  // 应用筛选
+  function applyFilter() {
+    let visible = 0;
+
+    tiles.forEach((tile) => {
+      const el = tile;
+      const types = (el.dataset.type || '').split(' ');
+      const workData = el.dataset.work || '';
+      const rarity = el.dataset.rarity;
+      const variant = el.dataset.variant;
+      const nameZh = el.dataset.nameZh || '';
+      const nameEn = el.dataset.nameEn || '';
+
+      let match = true;
+
+      // 1. 属性筛选
+      if (state.type && !types.includes(state.type)) match = false;
+
+      // 2. 工作筛选
+      if (match && state.work) {
+        const workMatch = workData.split(' ').some((entry) => entry.startsWith(state.work + ':'));
+        if (!workMatch) match = false;
+      }
+
+      // 3. 稀有度
+      if (match && state.rarity && rarity !== state.rarity) match = false;
+
+      // 4. 变种
+      if (match && state.variants === 'base' && variant !== 'base') match = false;
+      if (match && state.variants === 'only' && variant !== 'only') match = false;
+
+      // 5. 搜索
+      if (match && state.q) {
+        const q = state.q.toLowerCase();
+        if (!nameZh.includes(q) && !nameEn.includes(q) && !el.dataset.id.includes(q)) match = false;
+      }
+
+      el.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+
+    if (visibleCount) visibleCount.textContent = `显示 ${visible}`;
+
+    // 排序
+    sortTiles();
+    // 分组视图
+    renderView();
+    // 更新 active filter 显示
+    updateActiveChips();
+    // 更新 chip 选中状态
+    syncChipState();
+  }
+
+  function sortTiles() {
+    const sorted = [...tiles].sort((a, b) => {
+      switch (state.sort) {
+        case 'rarity':
+          if (Number(b.dataset.rarity) !== Number(a.dataset.rarity)) return Number(b.dataset.rarity) - Number(a.dataset.rarity);
+          return Number(a.dataset.paldeck) - Number(b.dataset.paldeck);
+        case 'name-zh':
+          return (a.dataset.nameZh || '').localeCompare(b.dataset.nameZh || '', 'zh');
+        case 'name-en':
+          return (a.dataset.nameEn || '').localeCompare(b.dataset.nameEn || '');
+        case 'no':
+        default:
+          return Number(a.dataset.paldeck) - Number(b.dataset.paldeck);
+      }
+    });
+    sorted.forEach((t) => grid.appendChild(t));
+  }
+
+  function renderView() {
+    if (state.view === 'grouped') {
+      // 简单实现：保持 grid 模式但通过 CSS class 提示
+      grid.classList.add('view-grouped');
+      // TODO: 完整分组视图需要重排 DOM
+    } else {
+      grid.classList.remove('view-grouped');
+    }
+  }
+
+  function updateActiveChips() {
+    const labels = {
+      type: state.type ? config.types.find((t) => t.id === state.type)?.zh : null,
+      work: state.work ? config.works.find((w) => w.id === state.work)?.zh : null,
+      rarity: state.rarity ? '★'.repeat(Number(state.rarity)) : null,
+      variants: state.variants === 'base' ? '仅基础' : state.variants === 'only' ? '仅变种' : null,
+    };
+    const entries = Object.entries(labels).filter(([_, v]) => v);
+    if (entries.length === 0) {
+      activeBox.style.display = 'none';
+      return;
+    }
+    activeBox.style.display = 'flex';
+    activeChips.innerHTML = entries.map(([k, v]) => {
+      const removeAttr = `data-remove-key="${k}"`;
+      return `<button type="button" class="active-chip" ${removeAttr}>× ${v}</button>`;
+    }).join('');
+  }
+
+  function syncChipState() {
+    document.querySelectorAll('[data-filter-group]').forEach((group) => {
+      const key = group.dataset.filterGroup;
+      const val = state[key] || '';
+      group.querySelectorAll('.chip').forEach((chip) => {
+        const cv = chip.dataset.filterValue || '';
+        chip.classList.toggle('active', cv === val || (key === 'variants' && cv === state.variants));
+      });
+    });
+  }
+
+  // 更新 URL
+  function updateURL() {
+    const sp = new URLSearchParams();
+    if (state.type) sp.set('type', state.type);
+    if (state.work) sp.set('work', state.work);
+    if (state.rarity) sp.set('rarity', state.rarity);
+    if (state.sort && state.sort !== 'no') sp.set('sort', state.sort);
+    if (state.variants && state.variants !== 'all') sp.set('variants', state.variants);
+    if (state.view && state.view !== 'grid') sp.set('view', state.view);
+    if (state.q) sp.set('q', state.q);
+    const qs = sp.toString();
+    const newURL = window.location.pathname + (qs ? '?' + qs : '');
+    window.history.replaceState({}, '', newURL);
+  }
+
+  // 绑定 chip 点击
+  document.querySelectorAll('[data-filter-group]').forEach((group) => {
+    const key = group.dataset.filterGroup;
+    group.addEventListener('click', (e) => {
+      const btn = e.target.closest('.chip');
+      if (!btn) return;
+      const val = btn.dataset.filterValue || '';
+      state[key] = val;
+      updateURL();
+      applyFilter();
+    });
+  });
+
+  // 搜索框
+  let searchTimer;
+  if (search) {
     search.addEventListener('input', () => {
-      clearTimeout(timer);
-      timer = window.setTimeout(() => {
-        const q = search.value.toLowerCase().trim();
-        tiles.forEach((tile) => {
-          const el = tile as HTMLElement;
-          const zh = el.dataset.nameZh || '';
-          const en = el.dataset.nameEn || '';
-          const match = !q || zh.includes(q) || en.includes(q);
-          el.style.display = match ? '' : 'none';
-        });
+      clearTimeout(searchTimer);
+      searchTimer = window.setTimeout(() => {
+        state.q = search.value.trim();
+        updateURL();
+        applyFilter();
       }, 200);
     });
   }
+
+  // 已选筛选 chip 点击移除
+  if (activeChips) {
+    activeChips.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-remove-key]');
+      if (!btn) return;
+      const key = btn.dataset.removeKey;
+      if (key === 'type') state.type = '';
+      if (key === 'work') state.work = '';
+      if (key === 'rarity') state.rarity = '';
+      if (key === 'variants') state.variants = 'all';
+      updateURL();
+      applyFilter();
+    });
+  }
+
+  // 重置
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      state.type = '';
+      state.work = '';
+      state.rarity = '';
+      state.sort = 'no';
+      state.variants = 'all';
+      state.view = 'grid';
+      state.q = '';
+      if (search) search.value = '';
+      updateURL();
+      applyFilter();
+    });
+  }
+
+  // 浏览器前进/后退
+  window.addEventListener('popstate', () => {
+    initFromURL();
+    if (search) search.value = state.q;
+    applyFilter();
+  });
+
+  // 初始化
+  initFromURL();
+  applyFilter();
 </script>
