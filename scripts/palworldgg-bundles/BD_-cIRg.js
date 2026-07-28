@@ -1,0 +1,1 @@
+import{j as n,z as s}from"./Crnsudxy.js";const e={__name:"NitroAnchor",props:{max_width:{type:String}},setup(o){const r=o;return n(()=>{{const{$NitroAnchor:t}=s();t(r.max_width)}}),(t,p)=>null}};export{e as _};

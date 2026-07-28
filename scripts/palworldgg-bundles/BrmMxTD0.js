@@ -1,0 +1,1 @@
+import{j as o,z as s}from"./BMkE8gdE.js";const a={__name:"NitroAnchor",props:{max_width:{type:String}},setup(n){const t=n;return o(()=>{{const{$NitroAnchor:r}=s();r(t.max_width)}}),(r,_)=>null}},c={__name:"NitroOutstream",setup(n){return o(()=>{{const{$NitroOutstream:t}=s();t()}}),(t,r)=>null}};export{a as _,c as a};
