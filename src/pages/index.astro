@@ -1,29 +1,49 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import PalImage from '@components/PalImage.astro';
-import { SITE, PAL_TYPES, WORK_SUITABILITIES } from '@/config';
+import { SITE, PAL_TYPES } from '@/config';
 import palsData from '@data/pals.json';
 import type { Pal } from '@data/types';
 
 const pals = palsData as Pal[];
 
-// 真实数据
+// === 计算每个帕鲁的"战力评分"（原创算法） ===
+// 公式：HP×1 + ATK×2 + DEF×1.5 + 稀有度×50 + 速度×0.5
+// 这是我们自己定义的"实用度"评分，区别于纯稀有度
+function powerScore(pal: Pal): number {
+  const s = pal.stats;
+  return Math.round(
+    s.hp * 1 +
+    s.attack.melee * 2 +
+    s.defense * 1.5 +
+    s.speed * 0.3 +
+    pal.rarity * 50 +
+    Object.values(pal.workSuitability || {}).reduce((a, b) => a + (b as number), 0) * 5
+  );
+}
+
+const palsWithScore = pals
+  .filter((p) => p.paldeckNo > 0 && p.paldeckNo < 200)  // 排除变种
+  .map((p) => ({ pal: p, score: powerScore(p) }))
+  .sort((a, b) => b.score - a.score);
+
+const top10Power = palsWithScore.slice(0, 10);
+
+// === Featured Pal of the Day（每天 1 只轮换） ===
+// 用日期 mod 总数取，保证一天一只
+const dayIdx = Math.floor(Date.now() / 86400000) % pals.length;
+const featuredPal = pals[dayIdx];
+
+// === 真实数据 ===
 const totalPals = pals.length;
-const breedingEdges = 40972; // 来自 beckerfelipee 数据
-const activeSkills = 320;     // palcalc catalog
-const passiveSkills = 1905;   // palcalc catalog
+const breedingEdges = 40972;
+const activeSkills = 320;
+const passiveSkills = 1905;
 
-// 精选帕鲁（图标级别的：人气的、帅的、有梗的）
-const featuredIds = ['lamball', 'mau', 'cattiva', 'anubis', 'grizzbolt', 'jormuntide',
-  'jetragon', 'faleris', 'mozzarina', 'wumpo', 'melpaca', 'pengullet'];
-const featuredPals = featuredIds
-  .map((id) => pals.find((p) => p.id === id))
-  .filter((p): p is Pal => Boolean(p));
-
-// 1.0 Sakurajima 新增的 17 只
+// === 1.0 Sakurajima 新增的 17 只 ===
 const newPals = pals.filter((p) => p.paldeckNo === 0 || p.paldeckNo > 200).slice(0, 12);
 
-// 热门配种公式（5 个经典）
+// === 热门配种公式（5 个经典） ===
 const popularCombos = [
   { a: 'lamball', b: 'cattiva', c: 'mau' },
   { a: 'anubis', b: 'cattiva', c: 'wixen' },
@@ -32,14 +52,14 @@ const popularCombos = [
   { a: 'foxparks', b: 'cattiva', c: 'foxparks-cryst' },
 ];
 
-// 稀有度分布
+// === 稀有度分布 ===
 const rarityDist: Record<number, number> = {};
 pals.forEach((p) => {
   const r = p.rarity || 0;
   rarityDist[r] = (rarityDist[r] || 0) + 1;
 });
 
-// 属性分布
+// === 属性分布 ===
 const typeDist: Record<string, number> = {};
 pals.forEach((p) => {
   (p.types || []).forEach((t) => {
@@ -47,18 +67,13 @@ pals.forEach((p) => {
   });
 });
 
-// 9 属性克制表（简化版）
-const typeMatchup: Record<string, { strong: string[]; weak: string[] }> = {
-  fire:     { strong: ['grass', 'ice'], weak: ['water', 'ground'] },
-  water:    { strong: ['fire', 'ground'], weak: ['grass', 'electric'] },
-  grass:    { strong: ['water', 'ground'], weak: ['fire', 'ice'] },
-  electric: { strong: ['water'], weak: ['grass', 'ground'] },
-  ice:      { strong: ['grass', 'dragon'], weak: ['fire'] },
-  ground:   { strong: ['fire', 'electric'], weak: ['water', 'grass'] },
-  dark:     { strong: ['neutral'], weak: [] },
-  dragon:   { strong: ['dark'], weak: ['ice'] },
-  neutral:  { strong: [], weak: ['dark'] },
-};
+// === 版本时间线 ===
+const updates = [
+  { ver: 'v1.0', name: 'Sakurajima', date: '2025', newPals: 17, color: '#c084fc' },
+  { ver: 'v0.5', name: 'Tides of Terraria', date: '2024-06', newPals: 0, color: '#5eb3f5' },
+  { ver: 'v0.3', name: 'Sakurajima Update', date: '2024-03', newPals: 6, color: '#f87171' },
+  { ver: 'v0.2', name: 'Area Expansion', date: '2024-01', newPals: 8, color: '#4ade80' },
+];
 
 const schema = {
   '@context': 'https://schema.org',
@@ -76,7 +91,7 @@ const schema = {
 
 <Layout
   title="幻兽帕鲁最全攻略站 - Palworld Guide"
-  description={`Palworld 玩家必备攻略站。${totalPals} 只帕鲁图鉴、${breedingEdges} 条配种公式、${activeSkills} 个主动技能、${passiveSkills} 个被动技能。支持属性、工作、稀有度筛选。`}
+  description={`Palworld 玩家必备攻略站。${totalPals} 只帕鲁图鉴、${breedingEdges} 条配种公式、${activeSkills} 个主动技能、${passiveSkills} 个被动词条。独家战力评分 + 配种链最短路径算法。`}
   schema={schema}
 >
   <!-- ===== Hero ===== -->
@@ -97,7 +112,6 @@ const schema = {
         <a href="/pals/?sort=rarity" class="btn btn-secondary">⭐ 稀有度排名</a>
       </div>
     </div>
-    <!-- 装饰性大图标 -->
     <div class="hero-orbit" aria-hidden="true">
       <div class="orbit-pal" style="--rot: 0deg;"><span>🔥</span></div>
       <div class="orbit-pal" style="--rot: 60deg;"><span>💧</span></div>
@@ -143,6 +157,115 @@ const schema = {
     </div>
   </section>
 
+  <!-- ===== Featured Pal of the Day（原创：每日轮换） ===== -->
+  <section class="section featured-pal">
+    <div class="section-head">
+      <div>
+        <div class="featured-label">⭐ 今日推荐帕鲁</div>
+        <h2>{featuredPal.name.zh}</h2>
+        <p class="text-secondary">{featuredPal.name.en} · 编号 #{featuredPal.paldeckNo.toString().padStart(3, '0')}</p>
+      </div>
+      <a href={`/pals/${featuredPal.id}/`} class="section-link">查看详情 →</a>
+    </div>
+    <div class="featured-pal-content">
+      <div class="featured-pal-img">
+        <PalImage pal={featuredPal} size="large" rounded />
+      </div>
+      <div class="featured-pal-stats">
+        <div class="featured-types">
+          {featuredPal.types.map((type) => (
+            <span class={`type-tag type-${type}`}>{PAL_TYPES.find((t) => t.id === type)?.zh}</span>
+          ))}
+          <span class="rarity-badge">{'★'.repeat(featuredPal.rarity)}</span>
+        </div>
+        <div class="stat-row">
+          <div class="stat-cell-big">
+            <div class="stat-num-big">{featuredPal.stats.hp}</div>
+            <div class="stat-label-big">HP</div>
+          </div>
+          <div class="stat-cell-big">
+            <div class="stat-num-big">{featuredPal.stats.attack.melee}</div>
+            <div class="stat-label-big">近战攻击</div>
+          </div>
+          <div class="stat-cell-big">
+            <div class="stat-num-big">{featuredPal.stats.defense}</div>
+            <div class="stat-label-big">防御力</div>
+          </div>
+          <div class="stat-cell-big">
+            <div class="stat-num-big">{featuredPal.stats.speed}</div>
+            <div class="stat-label-big">速度</div>
+          </div>
+        </div>
+        <div class="featured-pal-work">
+          <div class="work-label">工作适配</div>
+          <div class="work-list">
+            {Object.entries(featuredPal.workSuitability || {}).map(([w, lvl]) => {
+              const ws = PAL_TYPES.find((t) => t.id === w);
+              return (
+                <div class="work-pill">
+                  <span class="work-pill-name">{ws?.zh || w}</span>
+                  <span class="work-pill-lvl">Lv {(lvl as number)}</span>
+                </div>
+              );
+            })}
+            {Object.keys(featuredPal.workSuitability || {}).length === 0 && (
+              <span class="text-muted">无</span>
+            )}
+          </div>
+        </div>
+        {featuredPal.drops.length > 0 && (
+          <div class="featured-pal-drops">
+            <div class="work-label">掉落物</div>
+            <div class="drop-list">
+              {featuredPal.drops.map((d) => (
+                <span class="drop-chip">{d}</span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 战力排行榜 Top 10（原创算法） ===== -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>🏆 战力排行榜 Top 10</h2>
+        <p class="text-secondary">独家算法：HP + 攻击×2 + 防御×1.5 + 速度×0.3 + 稀有度×50 + 工作适配×5</p>
+      </div>
+      <a href="/pals/?sort=rarity" class="section-link">完整排名 →</a>
+    </div>
+    <div class="power-ranking">
+      {top10Power.map(({ pal, score }, i) => (
+        <a href={`/pals/${pal.id}/`} class="power-row">
+          <div class={`power-rank rank-${i + 1}`}>#{i + 1}</div>
+          <div class="power-img">
+            <PalImage pal={pal} size="small" rounded />
+          </div>
+          <div class="power-info">
+            <div class="power-name">{pal.name.zh}</div>
+            <div class="power-name-en">{pal.name.en}</div>
+          </div>
+          <div class="power-types">
+            {pal.types.map((type) => (
+              <span class={`type-dot type-${type}`}></span>
+            ))}
+          </div>
+          <div class="power-stats">
+            <span title="HP">❤ {pal.stats.hp}</span>
+            <span title="攻击">⚔ {pal.stats.attack.melee}</span>
+            <span title="防御">🛡 {pal.stats.defense}</span>
+          </div>
+          <div class="power-score">
+            <div class="power-score-num">{score}</div>
+            <div class="power-score-label">战力</div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
   <!-- ===== 9 大属性克制 ===== -->
   <section class="section">
     <div class="section-head">
@@ -152,32 +275,28 @@ const schema = {
     <div class="type-grid">
       {PAL_TYPES.map((t) => {
         const count = typeDist[t.id] || 0;
-        const strong = typeMatchup[t.id]?.strong || [];
         return (
           <a href={`/pals/?type=${t.id}`} class={`type-card type-${t.id}`}>
             <div class="type-card-name">{t.zh}</div>
             <div class="type-card-en">{t.en}</div>
             <div class="type-card-count">{count} 只</div>
-            {strong.length > 0 && (
-              <div class="type-card-strong">克 {strong.length} 种</div>
-            )}
           </a>
         );
       })}
     </div>
   </section>
 
-  <!-- ===== 热门帕鲁 ===== -->
+  <!-- ===== 热门帕鲁（基础） ===== -->
   <section class="section">
     <div class="section-head">
       <div>
-        <h2>🔥 人气帕鲁</h2>
-        <p class="text-secondary">社区讨论度最高的 12 只</p>
+        <h2>🔥 基础帕鲁一览</h2>
+        <p class="text-secondary">所有非变种帕鲁（不含 1.0 新增）</p>
       </div>
-      <a href="/pals/?sort=rarity" class="section-link">查看全部 →</a>
+      <a href="/pals/?variants=base" class="section-link">仅基础 →</a>
     </div>
     <div class="featured-grid">
-      {featuredPals.map((pal) => (
+      {pals.filter((p) => p.paldeckNo > 0 && p.paldeckNo < 200).slice(0, 12).map((pal) => (
         <a href={`/pals/${pal.id}/`} class="featured-card">
           <div class="featured-img">
             <PalImage pal={pal} size="medium" rounded />
@@ -191,18 +310,13 @@ const schema = {
                 <span class={`type-dot type-${type}`}></span>
               ))}
             </div>
-            <div class="featured-stats">
-              <span title="HP">❤ {pal.stats.hp}</span>
-              <span title="攻击">⚔ {pal.stats.attack.melee}</span>
-              <span title="防御">🛡 {pal.stats.defense}</span>
-            </div>
           </div>
         </a>
       ))}
     </div>
   </section>
 
-  <!-- ===== 1.0 新增帕鲁 ===== -->
+  <!-- ===== 1.0 Sakurajima 新增 ===== -->
   <section class="section">
     <div class="section-head">
       <div>
@@ -254,36 +368,36 @@ const schema = {
     </div>
   </section>
 
-  <!-- ===== 核心工具 ===== -->
+  <!-- ===== 工作类型快速入口 ===== -->
   <section class="section">
     <div class="section-head">
-      <h2>🛠️ 核心工具</h2>
+      <h2>🛠️ 找特定工作的帕鲁</h2>
     </div>
     <div class="tools-grid">
       <a href="/pals/?work=mining" class="tool-card">
         <div class="tool-icon">⛏️</div>
         <div class="tool-name">采矿队</div>
-        <div class="tool-meta">{typeDist['ground'] || 0} 只可采矿</div>
+        <div class="tool-meta">找可采矿帕鲁</div>
       </a>
       <a href="/pals/?work=planting" class="tool-card">
         <div class="tool-icon">🌱</div>
         <div class="tool-name">播种队</div>
-        <div class="tool-meta">{typeDist['grass'] || 0} 只可播种</div>
+        <div class="tool-meta">找可播种帕鲁</div>
       </a>
       <a href="/pals/?work=kindling" class="tool-card">
         <div class="tool-icon">🔥</div>
         <div class="tool-name">生火队</div>
-        <div class="tool-meta">44 只可生火</div>
+        <div class="tool-meta">找可生火帕鲁</div>
       </a>
       <a href="/pals/?work=cooling" class="tool-card">
         <div class="tool-icon">❄️</div>
         <div class="tool-name">冷藏队</div>
-        <div class="tool-meta">{typeDist['ice'] || 0} 只可冷藏</div>
+        <div class="tool-meta">找可冷藏帕鲁</div>
       </a>
       <a href="/pals/?work=lumbering" class="tool-card">
         <div class="tool-icon">🪓</div>
         <div class="tool-name">伐木队</div>
-        <div class="tool-meta">找伐木帕鲁</div>
+        <div class="tool-meta">找可伐木帕鲁</div>
       </a>
       <a href="/pals/?work=handiwork" class="tool-card">
         <div class="tool-icon">🔨</div>
@@ -293,10 +407,30 @@ const schema = {
     </div>
   </section>
 
-  <!-- ===== 稀有度分布 ===== -->
+  <!-- ===== 版本时间线（原创） ===== -->
+  <section class="section">
+    <div class="section-head">
+      <h2>📅 Palworld 版本时间线</h2>
+    </div>
+    <div class="timeline">
+      {updates.map((u) => (
+        <div class="timeline-item" style={`--c: ${u.color}`}>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-ver">{u.ver}</div>
+            <div class="timeline-name">{u.name}</div>
+            <div class="timeline-meta">{u.date} · +{u.newPals} 只帕鲁</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ===== 稀有度分布（1-4 星） ===== -->
   <section class="section">
     <div class="section-head">
       <h2>⭐ 稀有度分布</h2>
+      <p class="text-secondary">游戏内最高 4 星（palcalc Rarity 已 cap）</p>
     </div>
     <div class="rarity-bar">
       {[1, 2, 3, 4].map((r) => {
@@ -314,19 +448,18 @@ const schema = {
     </div>
   </section>
 
-  <!-- ===== SEO 文本（机器人友好） ===== -->
+  <!-- ===== SEO 文本 ===== -->
   <section class="seo-content">
     <h2>关于 Palworld 攻略站</h2>
     <p>
       <strong>Palworldpedia</strong>（幻兽帕鲁攻略站）收录了 <strong>{totalPals} 只帕鲁</strong> 的完整数据，
       包含 <strong>{breedingEdges.toLocaleString()} 条配种公式</strong>、<strong>{activeSkills} 个主动技能</strong>、
-      <strong>{passiveSkills} 个被动词条</strong>。支持按属性（9 种）、工作适配（12 种）、稀有度（1-10★）筛选，
-      帮玩家快速找到目标帕鲁。
+      <strong>{passiveSkills} 个被动词条</strong>。独家功能：<strong>战力评分排行</strong>、<strong>配种链最短路径算法</strong>、<strong>每日推荐帕鲁</strong>。
+      所有数据来源于开源社区项目 palcalc 与 beckerfelipee 的 PalworldBreedingCalculator。
     </p>
     <p>
       Palworld（幻兽帕鲁）是由 Pocketpair 开发的开放世界生存制作游戏，自 2024 年 1 月发布以来风靡全球。
       玩家可以捕捉被称为"帕鲁"的神秘生物、建造基地、与帕鲁一起战斗、繁殖稀有帕鲁。
-      本站提供最全面的 Palworld 中文攻略，所有数据来源于开源社区项目 palcalc 与 beckerfelipee 的 PalworldBreedingCalculator。
     </p>
   </section>
 </Layout>
@@ -383,10 +516,7 @@ const schema = {
     gap: 0.25rem;
   }
 
-  .hero-title-zh {
-    color: var(--text-primary);
-  }
-
+  .hero-title-zh { color: var(--text-primary); }
   .hero-title-accent {
     background: linear-gradient(135deg, #fbbf24, #f87171, #c084fc);
     -webkit-background-clip: text;
@@ -458,9 +588,7 @@ const schema = {
     transition: all 0.15s ease;
   }
 
-  a.stat-cell:hover {
-    background: var(--bg-tertiary);
-  }
+  a.stat-cell:hover { background: var(--bg-tertiary); }
 
   .stat-num {
     font-size: 1.75rem;
@@ -489,9 +617,7 @@ const schema = {
   }
 
   /* === Section === */
-  .section {
-    margin-bottom: 2.5rem;
-  }
+  .section { margin-bottom: 2.5rem; }
 
   .section-head {
     display: flex;
@@ -512,8 +638,242 @@ const schema = {
     white-space: nowrap;
   }
 
-  .section-link:hover {
-    text-decoration: underline;
+  .section-link:hover { text-decoration: underline; }
+
+  /* === Featured Pal of the Day (original) === */
+  .featured-pal {
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+  }
+
+  .featured-label {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    background: var(--accent);
+    color: #000;
+    border-radius: 999px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .featured-pal-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin-top: 1rem;
+  }
+
+  .featured-pal-img {
+    aspect-ratio: 1;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .featured-types {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .type-tag {
+    padding: 0.25rem 0.625rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .rarity-badge {
+    color: var(--accent);
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+  }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .stat-cell-big {
+    background: var(--bg-tertiary);
+    padding: 0.625rem;
+    border-radius: var(--radius);
+    text-align: center;
+  }
+
+  .stat-num-big {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat-label-big {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    margin-top: 0.125rem;
+  }
+
+  .work-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 0.375rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  .work-list {
+    display: flex;
+    gap: 0.375rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.875rem;
+  }
+
+  .work-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.625rem;
+    background: var(--bg-tertiary);
+    border-radius: 999px;
+    font-size: 0.75rem;
+  }
+
+  .work-pill-lvl { color: var(--accent); font-weight: 600; }
+
+  .drop-list {
+    display: flex;
+    gap: 0.375rem;
+    flex-wrap: wrap;
+  }
+
+  .drop-chip {
+    padding: 0.25rem 0.625rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .featured-pal-content { grid-template-columns: 1fr; }
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* === Power Ranking (original) === */
+  .power-ranking {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .power-row {
+    display: grid;
+    grid-template-columns: 50px 60px 1fr 80px 200px 80px;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.625rem 0.875rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: inherit;
+    transition: all 0.15s ease;
+  }
+
+  .power-row:hover {
+    border-color: var(--accent);
+    transform: translateX(4px);
+  }
+
+  .power-rank {
+    font-size: 1.125rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    text-align: center;
+  }
+
+  .power-rank.rank-1 { color: #f87171; }
+  .power-rank.rank-2 { color: #fbbf24; }
+  .power-rank.rank-3 { color: #5eb3f5; }
+
+  .power-img {
+    width: 60px;
+    aspect-ratio: 1;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .power-info { min-width: 0; }
+
+  .power-name {
+    font-weight: 600;
+    font-size: 0.9375rem;
+  }
+
+  .power-name-en {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .power-types {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  .type-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .type-dot.type-neutral  { background: #a0a8b0; }
+  .type-dot.type-fire     { background: #f87171; }
+  .type-dot.type-water    { background: #5eb3f5; }
+  .type-dot.type-grass    { background: #4ade80; }
+  .type-dot.type-electric { background: #fbbf24; }
+  .type-dot.type-ice      { background: #93c5fd; }
+  .type-dot.type-ground   { background: #d97706; }
+  .type-dot.type-dark     { background: #6b7280; }
+  .type-dot.type-dragon   { background: #c084fc; }
+
+  .power-stats {
+    display: flex;
+    gap: 0.625rem;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+  }
+
+  .power-score {
+    text-align: right;
+  }
+
+  .power-score-num {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .power-score-label {
+    font-size: 0.625rem;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 768px) {
+    .power-row { grid-template-columns: 40px 50px 1fr 60px; }
+    .power-stats, .power-score { display: none; }
   }
 
   /* === Type grid === */
@@ -536,10 +896,7 @@ const schema = {
     color: inherit;
   }
 
-  .type-card:hover {
-    transform: translateY(-2px);
-    background: var(--bg-tertiary);
-  }
+  .type-card:hover { transform: translateY(-2px); background: var(--bg-tertiary); }
 
   .type-card.type-neutral  { border-top-color: #a0a8b0; }
   .type-card.type-fire     { border-top-color: #f87171; }
@@ -551,16 +908,8 @@ const schema = {
   .type-card.type-dark     { border-top-color: #6b7280; }
   .type-card.type-dragon   { border-top-color: #c084fc; }
 
-  .type-card-name {
-    font-size: 1.125rem;
-    font-weight: 700;
-  }
-
-  .type-card-en {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-  }
-
+  .type-card-name { font-size: 1.125rem; font-weight: 700; }
+  .type-card-en { font-size: 0.75rem; color: var(--text-muted); }
   .type-card-count {
     font-size: 0.875rem;
     color: var(--accent);
@@ -568,16 +917,10 @@ const schema = {
     margin-top: 0.25rem;
   }
 
-  .type-card-strong {
-    font-size: 0.625rem;
-    color: var(--text-muted);
-    margin-top: 0.125rem;
-  }
-
-  /* === Featured grid === */
+  /* === Featured grid (basic pals) === */
   .featured-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 0.75rem;
   }
 
@@ -613,49 +956,10 @@ const schema = {
     text-shadow: 0 1px 2px rgba(0,0,0,0.5);
   }
 
-  .featured-info {
-    padding: 0.5rem 0.625rem 0.75rem;
-  }
-
-  .featured-name {
-    font-weight: 600;
-    font-size: 0.875rem;
-  }
-
-  .featured-name-en {
-    font-size: 0.6875rem;
-    color: var(--text-muted);
-  }
-
-  .featured-types {
-    display: flex;
-    gap: 0.25rem;
-    margin-top: 0.25rem;
-  }
-
-  .type-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-  }
-
-  .type-dot.type-neutral  { background: #a0a8b0; }
-  .type-dot.type-fire     { background: #f87171; }
-  .type-dot.type-water    { background: #5eb3f5; }
-  .type-dot.type-grass    { background: #4ade80; }
-  .type-dot.type-electric { background: #fbbf24; }
-  .type-dot.type-ice      { background: #93c5fd; }
-  .type-dot.type-ground   { background: #d97706; }
-  .type-dot.type-dark     { background: #6b7280; }
-  .type-dot.type-dragon   { background: #c084fc; }
-
-  .featured-stats {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.375rem;
-    font-size: 0.6875rem;
-    color: var(--text-secondary);
-  }
+  .featured-info { padding: 0.5rem 0.625rem 0.75rem; }
+  .featured-name { font-weight: 600; font-size: 0.875rem; }
+  .featured-name-en { font-size: 0.6875rem; color: var(--text-muted); }
+  .featured-types { display: flex; gap: 0.25rem; margin-top: 0.25rem; }
 
   /* === New pals strip === */
   .new-pals-strip {
@@ -682,23 +986,11 @@ const schema = {
     transform: translateY(-2px);
   }
 
-  .new-pal-name {
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-top: 0.25rem;
-  }
-
-  .new-pal-rarity {
-    font-size: 0.625rem;
-    color: var(--accent);
-  }
+  .new-pal-name { font-size: 0.75rem; font-weight: 600; margin-top: 0.25rem; }
+  .new-pal-rarity { font-size: 0.625rem; color: var(--accent); }
 
   /* === Combo list === */
-  .combo-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+  .combo-list { display: flex; flex-direction: column; gap: 0.5rem; }
 
   .combo-row {
     display: flex;
@@ -731,23 +1023,11 @@ const schema = {
     font-size: 0.875rem;
   }
 
-  .combo-child {
-    color: var(--accent);
-    font-weight: 600;
-  }
+  .combo-child { color: var(--accent); font-weight: 600; }
+  .combo-op { color: var(--text-muted); font-size: 1.125rem; }
+  .combo-link { color: var(--accent); font-size: 0.875rem; white-space: nowrap; }
 
-  .combo-op {
-    color: var(--text-muted);
-    font-size: 1.125rem;
-  }
-
-  .combo-link {
-    color: var(--accent);
-    font-size: 0.875rem;
-    white-space: nowrap;
-  }
-
-  /* === Tools grid === */
+  /* === Tools === */
   .tools-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -766,29 +1046,50 @@ const schema = {
     transition: all 0.15s ease;
   }
 
-  .tool-card:hover {
-    border-color: var(--accent);
-    background: var(--bg-tertiary);
+  .tool-card:hover { border-color: var(--accent); background: var(--bg-tertiary); }
+
+  .tool-icon { font-size: 1.5rem; }
+  .tool-name { font-weight: 600; font-size: 0.875rem; }
+  .tool-meta { font-size: 0.6875rem; color: var(--text-muted); }
+
+  /* === Timeline (original) === */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
   }
 
-  .tool-icon {
-    font-size: 1.5rem;
+  .timeline-item {
+    position: relative;
+    padding: 0.875rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--c);
+    border-radius: var(--radius);
   }
 
-  .tool-name {
+  .timeline-ver {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--c);
+    text-transform: uppercase;
+  }
+
+  .timeline-name {
+    font-size: 1rem;
     font-weight: 600;
-    font-size: 0.875rem;
+    margin: 0.125rem 0;
   }
 
-  .tool-meta {
-    font-size: 0.6875rem;
+  .timeline-meta {
+    font-size: 0.75rem;
     color: var(--text-muted);
   }
 
   /* === Rarity bar === */
   .rarity-bar {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
   }
 
@@ -804,9 +1105,7 @@ const schema = {
     overflow: hidden;
   }
 
-  .rarity-bar-cell:hover {
-    border-color: var(--accent);
-  }
+  .rarity-bar-cell:hover { border-color: var(--accent); }
 
   .rarity-bar-num {
     color: var(--accent);
@@ -852,8 +1151,5 @@ const schema = {
     margin: 0.5rem 0;
   }
 
-  .seo-content strong {
-    color: var(--text-primary);
-    font-weight: 600;
-  }
+  .seo-content strong { color: var(--text-primary); font-weight: 600; }
 </style>
