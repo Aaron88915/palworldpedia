@@ -68,7 +68,7 @@
       "grass",
       "ground"
     ],
-    "rarity": 10,
+    "rarity": 4,
     "stats": {
       "hp": 70,
       "attack": {
@@ -239,7 +239,7 @@
     "types": [
       "neutral"
     ],
-    "rarity": 3,
+    "rarity": 1,
     "stats": {
       "hp": 70,
       "attack": {
@@ -428,7 +428,7 @@
     "types": [
       "neutral"
     ],
-    "rarity": 3,
+    "rarity": 1,
     "stats": {
       "hp": 70,
       "attack": {
@@ -628,7 +628,7 @@
     "types": [
       "neutral"
     ],
-    "rarity": 3,
+    "rarity": 1,
     "stats": {
       "hp": 60,
       "attack": {
@@ -811,7 +811,7 @@
     "types": [
       "grass"
     ],
-    "rarity": 3,
+    "rarity": 1,
     "stats": {
       "hp": 75,
       "attack": {
@@ -29008,7 +29008,7 @@
     "types": [
       "dragon"
     ],
-    "rarity": 5,
+    "rarity": 4,
     "stats": {
       "hp": 105,
       "attack": {
@@ -29467,7 +29467,7 @@
     "types": [
       "dark"
     ],
-    "rarity": 6,
+    "rarity": 4,
     "stats": {
       "hp": 100,
       "attack": {
@@ -32079,7 +32079,7 @@
       "dragon",
       "water"
     ],
-    "rarity": 3,
+    "rarity": 4,
     "stats": {
       "hp": 130,
       "attack": {
@@ -32286,7 +32286,7 @@
       "dragon",
       "fire"
     ],
-    "rarity": 3,
+    "rarity": 4,
     "stats": {
       "hp": 130,
       "attack": {
@@ -35618,7 +35618,7 @@
     "types": [
       "ground"
     ],
-    "rarity": 7,
+    "rarity": 4,
     "stats": {
       "hp": 100,
       "attack": {
@@ -36784,7 +36784,7 @@
     "types": [
       "fire"
     ],
-    "rarity": 3,
+    "rarity": 4,
     "stats": {
       "hp": 100,
       "attack": {
@@ -36998,7 +36998,7 @@
       "dragon",
       "fire"
     ],
-    "rarity": 3,
+    "rarity": 4,
     "stats": {
       "hp": 105,
       "attack": {
@@ -50114,7 +50114,7 @@
     "types": [
       "dark"
     ],
-    "rarity": 3,
+    "rarity": 4,
     "stats": {
       "hp": 120,
       "attack": {
@@ -50292,7 +50292,7 @@
     "types": [
       "dark"
     ],
-    "rarity": 3,
+    "rarity": 4,
     "stats": {
       "hp": 120,
       "attack": {
@@ -50870,7 +50870,7 @@
     "types": [
       "neutral"
     ],
-    "rarity": 3,
+    "rarity": 4,
     "stats": {
       "hp": 130,
       "attack": {
@@ -51099,7 +51099,7 @@
     "types": [
       "dark"
     ],
-    "rarity": 3,
+    "rarity": 4,
     "stats": {
       "hp": 130,
       "attack": {
@@ -51328,7 +51328,7 @@
     "types": [
       "ice"
     ],
-    "rarity": 3,
+    "rarity": 4,
     "stats": {
       "hp": 140,
       "attack": {
@@ -52013,7 +52013,7 @@
     "types": [
       "dragon"
     ],
-    "rarity": 3,
+    "rarity": 4,
     "stats": {
       "hp": 115,
       "attack": {
