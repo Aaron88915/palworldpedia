@@ -1042,15 +1042,15 @@ const schema = {
     align-items: center;
     gap: 0.4rem;
   }
-  .combo-icon .pal-image-wrap {
-    width: 56px;
-    height: 56px;
+  .combo-icon :global(.pal-image-wrap) {
+    width: 56px !important;
+    height: 56px !important;
     flex-shrink: 0;
     border-radius: 0.5rem;
   }
-  .combo-icon-child .pal-image-wrap {
-    width: 64px;
-    height: 64px;
+  .combo-icon-child :global(.pal-image-wrap) {
+    width: 64px !important;
+    height: 64px !important;
     border: 2px solid var(--accent);
   }
   .combo-op {
