@@ -217,7 +217,9 @@ const schema = {
   async function init() {
     const data = await getData();
     data.pals.forEach((p) => palMap.set(p.id, p));
-    const opts = data.pals.map((p) => `<option value="${p.id}">${p.zh} (${p.en})</option>`).join('');
+    // 按中文名（拼音）排序
+    const sortedPals = [...data.pals].sort((a, b) => (a.zh || '').localeCompare(b.zh || '', 'zh'));
+    const opts = sortedPals.map((p) => `<option value="${p.id}">${p.zh} (${p.en})</option>`).join('');
     document.getElementById('parent-a').innerHTML = '<option value="">选择帕鲁 A...</option>' + opts;
     document.getElementById('parent-b').innerHTML = '<option value="">选择帕鲁 B...</option>' + opts;
     document.getElementById('target-pal').innerHTML = '<option value="">选择目标帕鲁...</option>' + opts;
