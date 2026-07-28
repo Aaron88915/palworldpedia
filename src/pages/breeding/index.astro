@@ -30,6 +30,7 @@ const schema = {
     <button class="tab-btn active" data-tab="forward">父母 → 后代</button>
     <button class="tab-btn" data-tab="reverse">目标 → 父母</button>
     <button class="tab-btn" data-tab="path">最短配种链</button>
+    <button class="tab-btn" data-tab="finder">🗺️ Path Finder</button>
   </nav>
 
   <!-- Tab 1: 父母 → 后代 -->
@@ -102,6 +103,44 @@ const schema = {
     </div>
   </section>
 
+  <!-- Tab 4: Path Finder (多源 BFS) -->
+  <section class="tab-panel" id="tab-finder">
+    <p class="text-secondary mb-2">🗺️ 勾选你<strong>已有的帕鲁</strong>，选择想孵的<strong>目标</strong>，自动找出最优配种链（多源 BFS 算法）。</p>
+
+    <div class="finder-target-row">
+      <label class="parent-label">🎯 目标帕鲁（想孵出）</label>
+      <select id="finder-target" class="parent-select finder-target-select">
+        <option value="">选择目标帕鲁...</option>
+      </select>
+    </div>
+
+    <div class="finder-owned-section">
+      <div class="finder-owned-head">
+        <label class="parent-label">📦 我已有的帕鲁（<span id="owned-count">0</span>）</label>
+        <div class="finder-owned-tools">
+          <button type="button" class="btn-chip" id="btn-clear-owned">清空</button>
+          <button type="button" class="btn-chip" id="btn-preset-starters">常用帕鲁</button>
+        </div>
+      </div>
+      <div class="finder-search-row">
+        <input type="search" id="finder-search" class="finder-search" placeholder="搜索帕鲁名（中/英），点击下方列表添加..." autocomplete="off" />
+      </div>
+      <div class="finder-pal-grid" id="finder-pal-grid">
+        <!-- 全部 288 只帕鲁通过 JS 渲染 -->
+      </div>
+      <div class="finder-selected-chips" id="finder-selected-chips">
+        <!-- 选中的帕鲁作为 chip 显示 -->
+      </div>
+    </div>
+
+    <div class="result-area">
+      <div class="result-arrow">→</div>
+      <div id="finder-result" class="result-box">
+        <p class="text-muted">勾选你已有的帕鲁 + 选择目标帕鲁，查找最优配种链</p>
+      </div>
+    </div>
+  </section>
+
   <AdSlot slot="inline" />
 
   <!-- 完整配种表（可筛选） -->
@@ -142,11 +181,12 @@ const schema = {
       Palworld 的配种系统是游戏的核心玩法之一。通过将两只不同（可相同）性别的帕鲁放入<strong>配种牧场</strong>，
       可以孵出全新的帕鲁。许多稀有和强大的帕鲁只能通过配种获得。
     </p>
-    <p>本计算器支持三种查询模式：</p>
+    <p>本计算器支持四种查询模式：</p>
     <ul>
       <li><strong>父母 → 后代</strong>：输入 A 和 B，立即算出能孵出什么</li>
       <li><strong>目标 → 父母</strong>：想孵某只帕鲁，列出所有可能的父母组合</li>
-      <li><strong>最短配种链</strong>：已有 A，想孵 Z，自动找 A → ... → Z 的最短路径（BFS 算法）</li>
+      <li><strong>最短配种链</strong>：已有 A，想孵 Z，自动找 A → ... → Z 的最短路径（单源 BFS）</li>
+      <li><strong>Path Finder</strong>：勾选你<strong>全部已有的帕鲁</strong>，从整个集合出发找出到目标的最优路径（多源 BFS）— 玩家视角的最实用功能</li>
     </ul>
   </section>
 </Layout>
@@ -219,7 +259,11 @@ const schema = {
     data.pals.forEach((p) => palMap.set(p.id, p));
     // 按中文名（拼音）排序
     const sortedPals = [...data.pals].sort((a, b) => (a.zh || '').localeCompare(b.zh || '', 'zh'));
-    const opts = sortedPals.map((p) => `<option value="${p.id}">${p.zh} (${p.en})</option>`).join('');
+    // 下拉项：显示 breedRank 星级（★1 最容易配，★5 最难）
+    const opts = sortedPals.map((p) => {
+      const stars = p.breedRank ? '★'.repeat(p.breedRank) : '';
+      return `<option value="${p.id}">${p.zh} (${p.en}) ${stars}</option>`;
+    }).join('');
     document.getElementById('parent-a').innerHTML = '<option value="">选择帕鲁 A...</option>' + opts;
     document.getElementById('parent-b').innerHTML = '<option value="">选择帕鲁 B...</option>' + opts;
     document.getElementById('target-pal').innerHTML = '<option value="">选择目标帕鲁...</option>' + opts;
@@ -424,6 +468,299 @@ const schema = {
   }
   document.getElementById('start-pal').addEventListener('change', showPath);
   document.getElementById('end-pal').addEventListener('change', showPath);
+
+  // === Path Finder (多源 BFS) ===
+  // 玩家从多个起点（"我拥有的帕鲁"集合）出发，找最短路径到目标
+  // 区别于上面 Tab 3 的单源 BFS
+  const STARTER_PRESET = [
+    'lamball', 'cattiva', 'lifmunk', 'foxparks', 'hoocrates', 'teafant',
+    'pengullet', 'jormuntide', 'anubis', 'mau', 'faleris',
+    'grizzbolt', 'relaxaurus', 'chillet', 'flopie', 'gumoss', 'daedream',
+    'killamari', 'flambelle', 'pengullet', 'mozzarina',
+  ];
+
+  // 选中的 owned 帕鲁（Set<id>）
+  const ownedSet = new Set();
+  let finderGridRendered = false;
+
+  async function initFinder() {
+    const data = await getData();
+    // 目标下拉
+    const sortedPals = [...data.pals].sort((a, b) => (a.zh || '').localeCompare(b.zh || '', 'zh'));
+    const targetOpts = sortedPals.map((p) => {
+      const stars = p.breedRank ? '★'.repeat(p.breedRank) : '';
+      return `<option value="${p.id}">${p.zh} (${p.en}) ${stars}</option>`;
+    }).join('');
+    document.getElementById('finder-target').innerHTML = '<option value="">选择目标帕鲁...</option>' + targetOpts;
+
+    // 渲染 288 只帕鲁的网格（按 breedRank 升序，breedRank=5 排前面 — 容易配的放前面）
+    const grid = document.getElementById('finder-pal-grid');
+    if (!finderGridRendered) {
+      const cellHtml = data.pals
+        .map((p) => {
+          const stars = p.breedRank ? '★'.repeat(p.breedRank) : '';
+          return `<div class="finder-pal-cell" data-pal-id="${p.id}" data-zh="${(p.zh || '').toLowerCase()}" data-en="${(p.en || '').toLowerCase()}">
+            <div class="finder-pal-name">${p.zh}</div>
+            <div class="finder-pal-meta">${stars}</div>
+          </div>`;
+        })
+        .join('');
+      grid.innerHTML = cellHtml;
+      finderGridRendered = true;
+
+      // 点击 toggle owned
+      grid.addEventListener('click', (e) => {
+        const cell = e.target.closest('.finder-pal-cell');
+        if (!cell) return;
+        const id = cell.dataset.palId;
+        if (ownedSet.has(id)) {
+          ownedSet.delete(id);
+        } else {
+          ownedSet.add(id);
+        }
+        cell.classList.toggle('selected');
+        updateOwnedUI();
+        runFinder();
+      });
+    }
+
+    // 搜索过滤
+    document.getElementById('finder-search').addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      grid.querySelectorAll('.finder-pal-cell').forEach((cell) => {
+        const match = !q || cell.dataset.zh.includes(q) || cell.dataset.en.includes(q);
+        cell.style.display = match ? '' : 'none';
+      });
+    });
+
+    // 工具按钮
+    document.getElementById('btn-clear-owned').addEventListener('click', () => {
+      ownedSet.clear();
+      grid.querySelectorAll('.finder-pal-cell.selected').forEach((c) => c.classList.remove('selected'));
+      updateOwnedUI();
+      runFinder();
+    });
+
+    document.getElementById('btn-preset-starters').addEventListener('click', () => {
+      ownedSet.clear();
+      STARTER_PRESET.forEach((id) => ownedSet.add(id));
+      grid.querySelectorAll('.finder-pal-cell').forEach((c) => {
+        c.classList.toggle('selected', ownedSet.has(c.dataset.palId));
+      });
+      updateOwnedUI();
+      runFinder();
+    });
+
+    // 目标变化
+    document.getElementById('finder-target').addEventListener('change', runFinder);
+  }
+
+  function updateOwnedUI() {
+    document.getElementById('owned-count').textContent = String(ownedSet.size);
+    const chipsBox = document.getElementById('finder-selected-chips');
+    const ids = Array.from(ownedSet);
+    if (ids.length === 0) {
+      chipsBox.innerHTML = '<span class="text-muted text-sm">还没选任何帕鲁</span>';
+      return;
+    }
+    chipsBox.innerHTML = `<span class="text-secondary text-sm">已选：</span>` + ids
+      .map((id) => {
+        const p = palMap.get(id);
+        if (!p) return '';
+        return `<span class="owned-chip" data-pal-id="${id}">${p.zh} ✕</span>`;
+      })
+      .join('');
+    // 点击 chip 移除
+    chipsBox.querySelectorAll('.owned-chip').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const id = chip.dataset.palId;
+        ownedSet.delete(id);
+        const cell = document.querySelector(`.finder-pal-cell[data-pal-id="${id}"]`);
+        if (cell) cell.classList.remove('selected');
+        updateOwnedUI();
+        runFinder();
+      });
+    });
+  }
+
+  // 多源 BFS：从 ownedSet 全部节点同时出发，找最短路径到 target
+  async function findPathFinder(ownedIds, targetId) {
+    const data = await getData();
+    const target = data.idToIdx.get(targetId);
+    if (target === undefined) return null;
+
+    // 起点集合转 idx
+    const sources = ownedIds.map((id) => data.idToIdx.get(id)).filter((i) => i !== undefined);
+    if (sources.length === 0) return null;
+    if (sources.includes(target)) return { sourceIdx: target, path: [target] };
+
+    // 多源 BFS：queue = [node]，visited = Map<node, {parent, source_idx}>
+    const visited = new Map();
+    const queue = [];
+    sources.forEach((s) => {
+      visited.set(s, { parent: null, sourceIdx: s });
+      queue.push(s);
+    });
+    let found = null;
+    while (queue.length > 0) {
+      const node = queue.shift();
+      if (node === target) {
+        found = visited.get(target);
+        break;
+      }
+      const neighbors = data.adjMap.get(node);
+      if (!neighbors) continue;
+      for (const next of neighbors) {
+        if (visited.has(next)) continue;
+        visited.set(next, { parent: node, sourceIdx: visited.get(node).sourceIdx });
+        if (next === target) {
+          found = visited.get(next);
+          break;
+        }
+        queue.push(next);
+      }
+      if (found) break;
+    }
+    if (!found) return null;
+
+    // 重建路径：从 target 回溯到 source
+    const path = [];
+    let cur = target;
+    while (cur !== null) {
+      path.push(cur);
+      const info = visited.get(cur);
+      if (!info || info.parent === null) break;
+      cur = info.parent;
+    }
+    path.reverse();
+    return { sourceIdx: found.sourceIdx, path };
+  }
+
+  async function runFinder() {
+    const out = document.getElementById('finder-result');
+    const target = document.getElementById('finder-target').value;
+
+    if (ownedSet.size === 0 && !target) {
+      out.className = 'result-box';
+      out.innerHTML = '<p class="text-muted">勾选你已有的帕鲁 + 选择目标帕鲁，查找最优配种链</p>';
+      return;
+    }
+    if (ownedSet.size === 0) {
+      out.className = 'result-box';
+      out.innerHTML = '<p class="text-muted">请至少勾选一只你已有的帕鲁</p>';
+      return;
+    }
+    if (!target) {
+      out.className = 'result-box';
+      out.innerHTML = '<p class="text-muted">请选择目标帕鲁</p>';
+      return;
+    }
+
+    const result = await findPathFinder(Array.from(ownedSet), target);
+    if (!result) {
+      out.className = 'result-box';
+      const data2 = await getData();
+      const targetIdx = data2.idToIdx.get(target);
+      const targetPal = palMap.get(target);
+      // 检查是否是 self-only 帕鲁（只有自身 + 自身 = 自身 配方）
+      const producers = data2.reverseMap.get(targetIdx) || [];
+      const isSelfOnly = producers.length === 1 && producers[0][0] === targetIdx && producers[0][1] === targetIdx;
+      if (isSelfOnly) {
+        out.innerHTML = `
+          <p class="text-muted">
+            <strong>${targetPal?.zh || target}</strong> 是 <strong>${palMap.get(target)?.rarityTier || '稀有'}</strong> 帕鲁，
+            游戏中<strong>只能通过野外捕捉 / 击败头目获得</strong>，无法通过配种获得。
+          </p>
+          <p class="text-secondary mt-2">💡 提示：试试换个非 boss 帕鲁作为目标。</p>
+        `;
+      } else {
+        out.innerHTML = `<p class="text-muted">你拥有的 <strong>${ownedSet.size}</strong> 只帕鲁中无法配出 <strong>${targetPal?.zh || target}</strong>。试试多勾选几只已有帕鲁。</p>`;
+      }
+      return;
+    }
+
+    const { sourceIdx, path } = result;
+    const sourcePal = palMap.get(data.pals[sourceIdx].id);
+    const targetPal = palMap.get(target);
+    const data2 = await getData();
+
+    // 路径可视化
+    // path = [p0, p1, p2, ..., pk]
+    // 每步：(p_{i-1} + p_i → p_{i+1}) — 但实际边是 p_{i-1} 和某个其他父母 → p_i
+    // 简化显示：直接列出所有经过的帕鲁
+    const stepsHtml = path
+      .map((idx, i) => {
+        const p = data2.pals[idx];
+        if (!p) return '';
+        const arrow = i < path.length - 1 ? '<span class="path-arrow">↓</span>' : '';
+        const isStart = idx === sourceIdx;
+        const isEnd = i === path.length - 1;
+        const tag = isStart ? '<span class="path-tag start">起点</span>' : isEnd ? '<span class="path-tag end">目标</span>' : `<span class="path-tag">第 ${i} 步</span>`;
+        return `<div class="path-step">${tag}${palCard(p)}${arrow}</div>`;
+      })
+      .filter(Boolean)
+      .join('');
+
+    const breedingPairsHtml = buildBreedingPairsFromPath(path, data2);
+
+    out.className = 'result-box has-result';
+    const totalSteps = path.length - 1;
+    out.innerHTML = `
+      <p class="mb-2">
+        从 <strong>${sourcePal?.zh}</strong> 出发，共 <strong>${totalSteps}</strong> 步配出 <strong>${targetPal?.zh}</strong>：
+      </p>
+      <div class="path-flow">${stepsHtml}</div>
+      ${breedingPairsHtml ? `<div class="breeding-pairs mt-2"><h4>📋 详细配种步骤：</h4>${breedingPairsHtml}</div>` : ''}
+    `;
+  }
+
+  // 从 BFS 路径反推每一步的"父母 → 后代"
+  // path 是 [p0, p1, p2, ...]
+  // 第 1 步：p0 + ? → p1   第 2 步：? + p1 → p2  ... 等等
+  // 利用 reverseMap 找每个 child 的可能父母对
+  function buildBreedingPairsFromPath(path, data) {
+    if (path.length < 2) return '';
+    const rows = [];
+    for (let i = 1; i < path.length; i++) {
+      const childIdx = path[i];
+      const pairs = data.reverseMap.get(childIdx) || [];
+      // 找一对父母，其中至少有一个在前一步可达
+      const prevReachable = new Set(path.slice(0, i));  // 0..i-1
+      const validPair = pairs.find(([a, b]) => prevReachable.has(a) || prevReachable.has(b));
+      if (!validPair) {
+        // fallback：找包含 path[i-1] 的 pair
+        const prevIdx = path[i - 1];
+        const fallback = pairs.find(([a, b]) => a === prevIdx || b === prevIdx);
+        if (fallback) {
+          rows.push([fallback[0], fallback[1], childIdx]);
+          continue;
+        }
+        // 否则用任意一对
+        if (pairs.length > 0) rows.push([pairs[0][0], pairs[0][1], childIdx]);
+        continue;
+      }
+      rows.push([validPair[0], validPair[1], childIdx]);
+    }
+    const html = rows
+      .map(([a, b, c], i) => {
+        const pa = data.pals[a];
+        const pb = data.pals[b];
+        const pc = data.pals[c];
+        if (!pa || !pb || !pc) return '';
+        return `<div class="bp-row">
+          <span class="bp-step">第 ${i + 1} 步</span>
+          <span class="bp-parents"><a href="/pals/${pa.id}/">${pa.zh}</a> + <a href="/pals/${pb.id}/">${pb.zh}</a></span>
+          <span class="bp-arrow">→</span>
+          <span class="bp-child"><a href="/pals/${pc.id}/"><strong>${pc.zh}</strong></a></span>
+        </div>`;
+      })
+      .filter(Boolean)
+      .join('');
+    return html;
+  }
+
+  // 初始化 Path Finder
+  initFinder().then(() => updateOwnedUI());
 
   // 完整配种表（默认过滤同种繁殖）
   async function loadEdgeTable() {
@@ -720,6 +1057,170 @@ const schema = {
     font-size: 1.5rem;
     color: var(--accent);
   }
+
+  .path-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
+    background: var(--bg-tertiary);
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+  .path-tag.start { background: rgba(94, 179, 245, 0.2); color: #5eb3f5; }
+  .path-tag.end { background: rgba(255, 184, 48, 0.2); color: #ffb830; }
+
+  /* === Path Finder === */
+  .finder-target-row {
+    margin-bottom: 1.5rem;
+  }
+  .finder-target-select {
+    width: 100%;
+  }
+  .finder-owned-section {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .finder-owned-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  .finder-owned-tools {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .btn-chip {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .btn-chip:hover {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+  }
+  .finder-search-row {
+    margin-bottom: 0.75rem;
+  }
+  .finder-search {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+  }
+  .finder-pal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.4rem;
+    max-height: 280px;
+    overflow-y: auto;
+    padding: 0.25rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    margin-bottom: 0.75rem;
+  }
+  .finder-pal-cell {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.4rem 0.25rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+  }
+  .finder-pal-cell:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  .finder-pal-cell.selected {
+    background: rgba(94, 179, 245, 0.15);
+    border-color: var(--accent);
+  }
+  .finder-pal-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+  .finder-pal-meta {
+    font-size: 0.625rem;
+    color: var(--accent);
+    margin-top: 0.15rem;
+  }
+
+  .finder-selected-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    min-height: 1.5rem;
+  }
+  .owned-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: rgba(94, 179, 245, 0.2);
+    color: #5eb3f5;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .owned-chip:hover {
+    background: rgba(248, 113, 113, 0.2);
+    color: #f87171;
+  }
+
+  /* Breeding pairs (Path Finder) */
+  .breeding-pairs {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+  .breeding-pairs h4 {
+    margin: 0 0 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+  }
+  .bp-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.4rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.875rem;
+  }
+  .bp-row:last-child { border-bottom: none; }
+  .bp-step {
+    background: var(--accent);
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.25rem;
+    min-width: 3.5rem;
+    text-align: center;
+  }
+  .bp-parents { color: var(--text-secondary); }
+  .bp-arrow { color: var(--accent); font-size: 1.125rem; }
+  .bp-child { color: var(--accent); }
 
   /* 表格 */
   .edge-search {
