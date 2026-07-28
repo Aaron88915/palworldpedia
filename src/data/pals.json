@@ -1,636 +1,5 @@
 [
   {
-    "id": "boltmane",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "Boltmane",
-      "en": "Boltmane"
-    },
-    "types": [
-      "electric"
-    ],
-    "rarity": 3,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {
-      "kindling": 2
-    },
-    "skills": [],
-    "passives": [
-      {
-        "id": "partner-skill",
-        "name": {
-          "zh": "Partner Skill",
-          "en": "Partner Skill"
-        },
-        "description": {
-          "zh": "",
-          "en": ""
-        }
-      }
-    ],
-    "drops": [
-      "Flame Organ",
-      "Electric",
-      "Kindling"
-    ],
-    "food": 5,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Boltmane.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-27"
-  },
-  {
-    "id": "clovee",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "幸叶茸",
-      "en": "Clovee"
-    },
-    "types": [
-      "grass"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Clovee.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "dragostrophe",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "Dragostrophe",
-      "en": "Dragostrophe"
-    },
-    "types": [
-      "dragon",
-      "dark"
-    ],
-    "rarity": 3,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {
-      "transporting": 3
-    },
-    "skills": [],
-    "passives": [
-      {
-        "id": "the-black-winged-shooter",
-        "name": {
-          "zh": "The Black Winged Shooter",
-          "en": "The Black Winged Shooter"
-        },
-        "description": {
-          "zh": "",
-          "en": ""
-        }
-      }
-    ],
-    "drops": [
-      "Bone",
-      "Dark",
-      "Dragon",
-      "Transporting"
-    ],
-    "food": 8,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Dragostrophe.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-27"
-  },
-  {
-    "id": "pupperai",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "宗铭丸",
-      "en": "Pupperai"
-    },
-    "types": [
-      "dark"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Pupperai.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "ribunny",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "兔兔",
-      "en": "Ribunny"
-    },
-    "types": [
-      "grass"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Ribunny.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "rooby",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "燎火鹿",
-      "en": "Rooby"
-    },
-    "types": [
-      "fire"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Rooby.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "sparkit",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "伏特喵",
-      "en": "Sparkit"
-    },
-    "types": [
-      "electric"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Sparkit.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "tanzee",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "新叶猿",
-      "en": "Tanzee"
-    },
-    "types": [
-      "grass"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Tanzee.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "caprity-noct",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "郁木羊",
-      "en": "Caprity Noct"
-    },
-    "types": [
-      "dark"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Caprity Noct.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "cryolinx-terra",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "金棘兽",
-      "en": "Cryolinx Terra"
-    },
-    "types": [
-      "ground"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Cryolinx Terra.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "cyan-wolf-cub",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "Cyan Wolf Cub",
-      "en": "Cyan Wolf Cub"
-    },
-    "types": [
-      "neutral"
-    ],
-    "rarity": 3,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Cyan Wolf Cub.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-27"
-  },
-  {
-    "id": "dark-mutant",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "Dark Mutant",
-      "en": "Dark Mutant"
-    },
-    "types": [
-      "dark"
-    ],
-    "rarity": 3,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {
-      "handiwork": 3,
-      "transporting": 2
-    },
-    "skills": [],
-    "passives": [
-      {
-        "id": "teleki-explosion",
-        "name": {
-          "zh": "Teleki Explosion",
-          "en": "Teleki Explosion"
-        },
-        "description": {
-          "zh": "",
-          "en": ""
-        }
-      }
-    ],
-    "drops": [
-      "Dark"
-    ],
-    "food": 8,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/DarkMutant.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-27"
-  },
-  {
-    "id": "dazzi-noct",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "天阴童子",
-      "en": "Dazzi Noct"
-    },
-    "types": [
-      "water"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Dazzi Noct.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "dumud-gild",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "梆梆鲶",
-      "en": "Dumud Gild"
-    },
-    "types": [
-      "dragon"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Dumud Gild.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "feathered-dragon",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "Feathered Dragon",
-      "en": "Feathered Dragon"
-    },
-    "types": [
-      "neutral"
-    ],
-    "rarity": 3,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Dragostrophe&#39;s Cousin.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-27"
-  },
-  {
-    "id": "fenglope-lux",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "雷隐鹿",
-      "en": "Fenglope Lux"
-    },
-    "types": [
-      "electric"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Fenglope Lux.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
     "id": "green-slime",
     "paldeckNo": 0,
     "name": {
@@ -733,78 +102,6 @@
       "en": ""
     },
     "image": "/images/pals/Gumoss (Special).png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "kitsun-noct",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "幽焰狼",
-      "en": "Kitsun Noct"
-    },
-    "types": [
-      "dark"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Kitsun Noct.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
-    "id": "loupmoon-cryst",
-    "paldeckNo": 0,
-    "name": {
-      "zh": "霜镰魔",
-      "en": "Loupmoon Cryst"
-    },
-    "types": [
-      "ice"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Loupmoon Cryst.png",
     "breedpower": 0,
     "updatedAt": "2026-07-28"
   },
@@ -1564,6 +861,47 @@
     "updatedAt": "2026-07-27"
   },
   {
+    "id": "fuack",
+    "paldeckNo": 5,
+    "name": {
+      "zh": "冲浪鸭",
+      "en": "Fuack"
+    },
+    "types": [
+      "water"
+    ],
+    "rarity": 1,
+    "stats": {
+      "hp": 60,
+      "attack": {
+        "melee": 80,
+        "ranged": 0
+      },
+      "defense": 60,
+      "speed": 300
+    },
+    "workSuitability": {
+      "watering": 1,
+      "handiwork": 1,
+      "transporting": 1
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 1,
+    "price": 376,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Fuack.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "XS"
+  },
+  {
     "id": "fuack-ignis",
     "paldeckNo": 5,
     "name": {
@@ -2119,22 +1457,26 @@
     "types": [
       "electric"
     ],
-    "rarity": 1,
+    "rarity": 4,
     "stats": {
-      "hp": 0,
+      "hp": 80,
       "attack": {
-        "melee": 0,
+        "melee": 75,
         "ranged": 0
       },
-      "defense": 0,
-      "speed": 0
+      "defense": 80,
+      "speed": 550
     },
-    "workSuitability": {},
+    "workSuitability": {
+      "watering": 1,
+      "electricity": 2,
+      "transporting": 1
+    },
     "skills": [],
     "passives": [],
     "drops": [],
-    "food": 0,
-    "price": 0,
+    "food": 2,
+    "price": 658,
     "biomes": [],
     "nightOnly": false,
     "description": {
@@ -2143,7 +1485,8 @@
     },
     "image": "/images/pals/Celaray Lux.png",
     "breedpower": 0,
-    "updatedAt": "2026-07-28"
+    "updatedAt": "2026-07-28",
+    "size": "M"
   },
   {
     "id": "cremis",
@@ -2682,42 +2025,6 @@
     "updatedAt": "2026-07-27"
   },
   {
-    "id": "fuack",
-    "paldeckNo": 10,
-    "name": {
-      "zh": "冲浪鸭",
-      "en": "Fuack"
-    },
-    "types": [
-      "water"
-    ],
-    "rarity": 1,
-    "stats": {
-      "hp": 0,
-      "attack": {
-        "melee": 0,
-        "ranged": 0
-      },
-      "defense": 0,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "",
-      "en": ""
-    },
-    "image": "/images/pals/Fuack.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-28"
-  },
-  {
     "id": "herbil",
     "paldeckNo": 10,
     "name": {
@@ -3253,6 +2560,87 @@
     "image": "/images/pals/Gumoss.png",
     "breedpower": 2950,
     "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "pupperai",
+    "paldeckNo": 13,
+    "name": {
+      "zh": "宗铭丸",
+      "en": "Pupperai"
+    },
+    "types": [
+      "dark"
+    ],
+    "rarity": 2,
+    "stats": {
+      "hp": 70,
+      "attack": {
+        "melee": 80,
+        "ranged": 0
+      },
+      "defense": 70,
+      "speed": 400
+    },
+    "workSuitability": {
+      "gathering": 1,
+      "lumbering": 1,
+      "transporting": 1
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 1,
+    "price": 476,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Pupperai.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "XS"
+  },
+  {
+    "id": "clovee",
+    "paldeckNo": 14,
+    "name": {
+      "zh": "幸叶茸",
+      "en": "Clovee"
+    },
+    "types": [
+      "grass"
+    ],
+    "rarity": 2,
+    "stats": {
+      "hp": 80,
+      "attack": {
+        "melee": 65,
+        "ranged": 0
+      },
+      "defense": 65,
+      "speed": 400
+    },
+    "workSuitability": {
+      "planting": 1,
+      "gathering": 1
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 1,
+    "price": 407,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Clovee.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "XS"
   },
   {
     "id": "jolthog",
@@ -5420,6 +4808,49 @@
     "updatedAt": "2026-07-27"
   },
   {
+    "id": "tanzee",
+    "paldeckNo": 23,
+    "name": {
+      "zh": "新叶猿",
+      "en": "Tanzee"
+    },
+    "types": [
+      "grass"
+    ],
+    "rarity": 1,
+    "stats": {
+      "hp": 80,
+      "attack": {
+        "melee": 70,
+        "ranged": 0
+      },
+      "defense": 70,
+      "speed": 300
+    },
+    "workSuitability": {
+      "planting": 1,
+      "handiwork": 1,
+      "gathering": 1,
+      "lumbering": 1,
+      "transporting": 1
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 1,
+    "price": 512,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Tanzee.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "XS"
+  },
+  {
     "id": "tanzee-ignis",
     "paldeckNo": 23,
     "name": {
@@ -5950,6 +5381,46 @@
     "image": "/images/pals/Flambelle.png",
     "breedpower": 2700,
     "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "rooby",
+    "paldeckNo": 26,
+    "name": {
+      "zh": "燎火鹿",
+      "en": "Rooby"
+    },
+    "types": [
+      "fire"
+    ],
+    "rarity": 2,
+    "stats": {
+      "hp": 75,
+      "attack": {
+        "melee": 70,
+        "ranged": 0
+      },
+      "defense": 75,
+      "speed": 400
+    },
+    "workSuitability": {
+      "kindling": 1,
+      "farming": 1
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 1,
+    "price": 459,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Rooby.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "S"
   },
   {
     "id": "mau",
@@ -6677,20 +6148,22 @@
     ],
     "rarity": 1,
     "stats": {
-      "hp": 0,
+      "hp": 65,
       "attack": {
-        "melee": 0,
+        "melee": 80,
         "ranged": 0
       },
-      "defense": 0,
-      "speed": 0
+      "defense": 70,
+      "speed": 400
     },
-    "workSuitability": {},
+    "workSuitability": {
+      "cooling": 2
+    },
     "skills": [],
     "passives": [],
     "drops": [],
-    "food": 0,
-    "price": 0,
+    "food": 1,
+    "price": 472,
     "biomes": [],
     "nightOnly": false,
     "description": {
@@ -6699,7 +6172,8 @@
     },
     "image": "/images/pals/Foxparks Cryst.png",
     "breedpower": 0,
-    "updatedAt": "2026-07-28"
+    "updatedAt": "2026-07-28",
+    "size": "XS"
   },
   {
     "id": "killamari",
@@ -8005,6 +7479,46 @@
     "image": "/images/pals/Caprity.png",
     "breedpower": 2610,
     "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "caprity-noct",
+    "paldeckNo": 34,
+    "name": {
+      "zh": "郁木羊",
+      "en": "Caprity Noct"
+    },
+    "types": [
+      "dark"
+    ],
+    "rarity": 3,
+    "stats": {
+      "hp": 100,
+      "attack": {
+        "melee": 75,
+        "ranged": 0
+      },
+      "defense": 90,
+      "speed": 400
+    },
+    "workSuitability": {
+      "planting": 2,
+      "farming": 1
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 2,
+    "price": 928,
+    "biomes": [],
+    "nightOnly": true,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Caprity Noct.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "S"
   },
   {
     "id": "swee",
@@ -9957,6 +9471,48 @@
     "updatedAt": "2026-07-27"
   },
   {
+    "id": "sparkit",
+    "paldeckNo": 42,
+    "name": {
+      "zh": "伏特喵",
+      "en": "Sparkit"
+    },
+    "types": [
+      "electric"
+    ],
+    "rarity": 1,
+    "stats": {
+      "hp": 60,
+      "attack": {
+        "melee": 75,
+        "ranged": 0
+      },
+      "defense": 70,
+      "speed": 350
+    },
+    "workSuitability": {
+      "electricity": 1,
+      "handiwork": 1,
+      "transporting": 1,
+      "farming": 1
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 1,
+    "price": 410,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Sparkit.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "XS"
+  },
+  {
     "id": "kelpsea",
     "paldeckNo": 43,
     "name": {
@@ -10321,9 +9877,9 @@
       "en": "Ribbuny"
     },
     "types": [
-      "neutral"
+      "normal"
     ],
-    "rarity": 3,
+    "rarity": 1,
     "stats": {
       "hp": 75,
       "attack": {
@@ -10331,12 +9887,12 @@
         "ranged": 0
       },
       "defense": 70,
-      "speed": 0
+      "speed": 245
     },
     "workSuitability": {
       "handiwork": 1,
-      "transporting": 1,
-      "gathering": 1
+      "gathering": 1,
+      "transporting": 1
     },
     "skills": [
       {
@@ -10481,7 +10037,7 @@
       "Neutral"
     ],
     "food": 1,
-    "price": 0,
+    "price": 421,
     "biomes": [],
     "nightOnly": false,
     "description": {
@@ -10490,7 +10046,8 @@
     },
     "image": "/images/pals/Ribbuny.png",
     "breedpower": 2860,
-    "updatedAt": "2026-07-27"
+    "updatedAt": "2026-07-28",
+    "size": "XS"
   },
   {
     "id": "jelliette",
@@ -13162,6 +12719,46 @@
     "image": "/images/pals/Loupmoon.png",
     "breedpower": 2110,
     "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "loupmoon-cryst",
+    "paldeckNo": 56,
+    "name": {
+      "zh": "霜镰魔",
+      "en": "Loupmoon Cryst"
+    },
+    "types": [
+      "ice"
+    ],
+    "rarity": 3,
+    "stats": {
+      "hp": 80,
+      "attack": {
+        "melee": 105,
+        "ranged": 0
+      },
+      "defense": 80,
+      "speed": 600
+    },
+    "workSuitability": {
+      "handiwork": 4,
+      "cooling": 4
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 3,
+    "price": 1176,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Loupmoon Cryst.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "M"
   },
   {
     "id": "cawgnito",
@@ -20068,6 +19665,46 @@
     "updatedAt": "2026-07-27"
   },
   {
+    "id": "fenglope-lux",
+    "paldeckNo": 83,
+    "name": {
+      "zh": "雷隐鹿",
+      "en": "Fenglope Lux"
+    },
+    "types": [
+      "electric"
+    ],
+    "rarity": 3,
+    "stats": {
+      "hp": 110,
+      "attack": {
+        "melee": 115,
+        "ranged": 0
+      },
+      "defense": 90,
+      "speed": 750
+    },
+    "workSuitability": {
+      "electricity": 5,
+      "lumbering": 4
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 5,
+    "price": 2164,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Fenglope Lux.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "S"
+  },
+  {
     "id": "dinossom",
     "paldeckNo": 84,
     "name": {
@@ -22835,6 +22472,48 @@
     "image": "/images/pals/Dazzi.png",
     "breedpower": 2400,
     "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "dazzi-noct",
+    "paldeckNo": 92,
+    "name": {
+      "zh": "天阴童子",
+      "en": "Dazzi Noct"
+    },
+    "types": [
+      "water"
+    ],
+    "rarity": 2,
+    "stats": {
+      "hp": 70,
+      "attack": {
+        "melee": 80,
+        "ranged": 0
+      },
+      "defense": 75,
+      "speed": 400
+    },
+    "workSuitability": {
+      "electricity": 1,
+      "handiwork": 1,
+      "medicine": 1,
+      "transporting": 2
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 2,
+    "price": 599,
+    "biomes": [],
+    "nightOnly": true,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Dazzi Noct.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "XS"
   },
   {
     "id": "pyrin",
@@ -27781,6 +27460,48 @@
     "updatedAt": "2026-07-27"
   },
   {
+    "id": "dumud-gild",
+    "paldeckNo": 109,
+    "name": {
+      "zh": "梆梆鲶",
+      "en": "Dumud Gild"
+    },
+    "types": [
+      "dragon"
+    ],
+    "rarity": 5,
+    "stats": {
+      "hp": 105,
+      "attack": {
+        "melee": 75,
+        "ranged": 0
+      },
+      "defense": 100,
+      "speed": 450
+    },
+    "workSuitability": {
+      "watering": 2,
+      "mining": 2,
+      "transporting": 1,
+      "farming": 4
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 3,
+    "price": 19900,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Dumud Gild.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "M"
+  },
+  {
     "id": "braloha",
     "paldeckNo": 110,
     "name": {
@@ -28171,6 +27892,45 @@
     "image": "/images/pals/Kitsun.png",
     "breedpower": 1670,
     "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "kitsun-noct",
+    "paldeckNo": 111,
+    "name": {
+      "zh": "幽焰狼",
+      "en": "Kitsun Noct"
+    },
+    "types": [
+      "dark"
+    ],
+    "rarity": 6,
+    "stats": {
+      "hp": 100,
+      "attack": {
+        "melee": 115,
+        "ranged": 0
+      },
+      "defense": 105,
+      "speed": 700
+    },
+    "workSuitability": {
+      "kindling": 4
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 5,
+    "price": 2014,
+    "biomes": [],
+    "nightOnly": true,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Kitsun Noct.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "M"
   },
   {
     "id": "blazehowl",
@@ -34041,6 +33801,48 @@
     "image": "/images/pals/Cryolinx.png",
     "breedpower": 1040,
     "updatedAt": "2026-07-27"
+  },
+  {
+    "id": "cryolinx-terra",
+    "paldeckNo": 132,
+    "name": {
+      "zh": "金棘兽",
+      "en": "Cryolinx Terra"
+    },
+    "types": [
+      "ground"
+    ],
+    "rarity": 7,
+    "stats": {
+      "hp": 100,
+      "attack": {
+        "melee": 105,
+        "ranged": 0
+      },
+      "defense": 110,
+      "speed": 720
+    },
+    "workSuitability": {
+      "handiwork": 2,
+      "lumbering": 6,
+      "mining": 5,
+      "transporting": 4
+    },
+    "skills": [],
+    "passives": [],
+    "drops": [],
+    "food": 7,
+    "price": 2484,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "",
+      "en": ""
+    },
+    "image": "/images/pals/Cryolinx Terra.png",
+    "breedpower": 0,
+    "updatedAt": "2026-07-28",
+    "size": "L"
   },
   {
     "id": "snugloo",
@@ -50312,45 +50114,6 @@
       "en": "The last of its species, keeping its sacred duty close to heart.<br/>Even should its long obligation ever be fulfilled, its cries for its mother would only be answered by a solitary echo."
     },
     "image": "/images/pals/Panthalus.png",
-    "breedpower": 0,
-    "updatedAt": "2026-07-27"
-  },
-  {
-    "id": "astralym",
-    "paldeckNo": 204,
-    "name": {
-      "zh": "Astralym",
-      "en": "Astralym"
-    },
-    "types": [
-      "neutral"
-    ],
-    "rarity": 3,
-    "stats": {
-      "hp": 200,
-      "attack": {
-        "melee": 200,
-        "ranged": 0
-      },
-      "defense": 200,
-      "speed": 0
-    },
-    "workSuitability": {},
-    "skills": [],
-    "passives": [],
-    "drops": [
-      "Leather",
-      "High Quality Pal Oil"
-    ],
-    "food": 0,
-    "price": 0,
-    "biomes": [],
-    "nightOnly": false,
-    "description": {
-      "zh": "A shadow of its former self, this mysterious Pal descended upon the Palpagos long ago.<br/>Bringing ruin and calamity, it was sealed away for millennia until it was ultimately defeated by a certain Pal Tamer",
-      "en": "A shadow of its former self, this mysterious Pal descended upon the Palpagos long ago.<br/>Bringing ruin and calamity, it was sealed away for millennia until it was ultimately defeated by a certain Pal Tamer"
-    },
-    "image": "/images/pals/Astralym.png",
     "breedpower": 0,
     "updatedAt": "2026-07-27"
   }

@@ -1,47 +1,37 @@
 ---
-/**
- * 帕鲁图片组件 - 自适应父容器
- * - 优先显示真实图片（从 Fandom Wiki 下载）
- * - 图片不存在时回退到 emoji 占位
- * - 自动 lazy load
- */
 import type { Pal } from '@data/types';
-
-export interface Props {
+interface Props {
   pal: Pal;
   size?: 'small' | 'medium' | 'large';
   rounded?: boolean;
+  class?: string;
 }
-
-const { pal, size = 'medium', rounded = false } = Astro.props;
-
-const hasImage = !!(pal.image && pal.image.startsWith('/images/'));
-
-const sizeClass = `pal-image-${size}`;
-
-function getEmoji(types: string[]) {
-  const map: Record<string, string> = {
-    fire: '🔥', water: '💧', grass: '🌿', electric: '⚡',
-    ice: '❄️', ground: '⛰️', dark: '🌑', dragon: '🐉', neutral: '⭐',
-  };
-  return map[types[0] || 'neutral'] || '⭐';
-}
+const { pal, size = 'medium', rounded = false, class: className = '' } = Astro.props;
+const sizeClass = size === 'small' ? 'pal-image-small' : size === 'large' ? 'pal-image-large' : 'pal-image-medium';
+const roundedClass = rounded ? 'rounded' : '';
+// Type-based color for fallback
+const typeColors: Record<string, string> = {
+  normal: '#9ca3af', fire: '#ef4444', water: '#3b82f6', grass: '#22c55e',
+  electric: '#eab308', ice: '#67e8f9', ground: '#a16207', dark: '#6b21a8',
+  dragon: '#7c3aed', light: '#fde047', neutral: '#9ca3af',
+};
+const primaryType = pal.types[0] || 'normal';
+const bgColor = typeColors[primaryType] || typeColors.normal;
+const initial = (pal.name?.zh || pal.name?.en || '?').charAt(0);
 ---
 
-<div class={`pal-image-wrap ${sizeClass} ${rounded ? 'rounded' : ''}`}>
-  {hasImage ? (
-    <img
-      src={pal.image}
-      alt={pal.name.zh}
-      class="pal-image"
-      loading="lazy"
-      decoding="async"
-    />
-  ) : (
-    <div class="pal-image-fallback">
-      <span>{getEmoji(pal.types)}</span>
-    </div>
-  )}
+<div class:list={['pal-image-wrap', sizeClass, roundedClass, className]} style={`--pal-bg: ${bgColor}`} data-pal-id={pal.id}>
+  <img
+    src={pal.image}
+    alt={pal.name?.zh || pal.name?.en || 'pal'}
+    class="pal-image"
+    loading="lazy"
+    decoding="async"
+    onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';"
+  />
+  <div class="pal-image-fallback" style="display: none;">
+    <span style="color: white; font-weight: 800; font-size: 2em; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">{initial}</span>
+  </div>
 </div>
 
 <style>
@@ -55,38 +45,26 @@ function getEmoji(types: string[]) {
     justify-content: center;
     position: relative;
   }
-
-  .pal-image-wrap.rounded {
-    border-radius: var(--radius);
-  }
-
+  .pal-image-wrap.rounded { border-radius: var(--radius); }
   .pal-image {
     width: 100%;
     height: 100%;
     object-fit: contain;
     image-rendering: -webkit-optimize-contrast;
   }
-
   .pal-image-fallback {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-tertiary);
+    background: var(--pal-bg, #6b7280);
+    background: linear-gradient(135deg, var(--pal-bg, #6b7280), color-mix(in srgb, var(--pal-bg) 70%, black));
   }
-
   .pal-image-fallback span {
     font-size: 3rem;
     line-height: 1;
   }
-
-  .pal-image-small {
-    max-width: 60px;
-    max-height: 60px;
-  }
-
-  .pal-image-large .pal-image-fallback span {
-    font-size: 5rem;
-  }
+  .pal-image-small .pal-image-fallback span { font-size: 1.5rem; }
+  .pal-image-large .pal-image-fallback span { font-size: 5rem; }
 </style>
