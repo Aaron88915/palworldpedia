@@ -1,31 +1,101 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import PalImage from '@components/PalImage.astro';
-import { PAL_TYPES } from '@/config';
+import { PAL_TYPES, WORK_SUITABILITIES } from '@/config';
 import palsData from '@data/pals.json';
 import type { Pal } from '@data/types';
 
 const pals = palsData as Pal[];
 const url = new URL(Astro.request.url);
-const typeFilter = url.searchParams.get('type');
-const searchQuery = url.searchParams.get('q')?.toLowerCase() || '';
+
+// 解析所有筛选参数
+const params = {
+  type: url.searchParams.get('type'),
+  work: url.searchParams.get('work'),
+  rarity: url.searchParams.get('rarity') ? Number(url.searchParams.get('rarity')) : null,
+  sort: url.searchParams.get('sort') || 'no', // no | rarity | name-zh | name-en
+  variants: url.searchParams.get('variants') || 'all', // all | base | only
+  view: url.searchParams.get('view') || 'grid', // grid | grouped
+};
 
 let filteredPals = pals;
 
-if (typeFilter && PAL_TYPES.some((t) => t.id === typeFilter)) {
-  filteredPals = filteredPals.filter((p) => p.types.includes(typeFilter as any));
+// 1. 属性筛选
+if (params.type && PAL_TYPES.some((t) => t.id === params.type)) {
+  filteredPals = filteredPals.filter((p) => p.types.includes(params.type as any));
 }
 
-if (searchQuery) {
-  filteredPals = filteredPals.filter((p) =>
-    p.name.zh.toLowerCase().includes(searchQuery) ||
-    p.name.en.toLowerCase().includes(searchQuery) ||
-    p.id.includes(searchQuery)
-  );
+// 2. 工作适配筛选
+if (params.work && WORK_SUITABILITIES.some((w) => w.id === params.work)) {
+  filteredPals = filteredPals.filter((p) => {
+    const lvl = p.workSuitability?.[params.work as any];
+    return typeof lvl === 'number' && lvl > 0;
+  });
 }
 
-// 按图鉴编号排序
-filteredPals.sort((a, b) => a.paldeckNo - b.paldeckNo);
+// 3. 稀有度筛选
+if (params.rarity && params.rarity >= 1 && params.rarity <= 5) {
+  filteredPals = filteredPals.filter((p) => p.rarity === params.rarity);
+}
+
+// 4. 变种筛选
+if (params.variants === 'base') {
+  filteredPals = filteredPals.filter((p) => p.paldeckNo > 0 && p.paldeckNo <= 200);
+} else if (params.variants === 'only') {
+  filteredPals = filteredPals.filter((p) => p.paldeckNo === 0 || p.paldeckNo > 200);
+}
+
+// 5. 排序
+filteredPals.sort((a, b) => {
+  switch (params.sort) {
+    case 'rarity':
+      if (b.rarity !== a.rarity) return b.rarity - a.rarity;
+      return a.paldeckNo - b.paldeckNo;
+    case 'name-zh':
+      return a.name.zh.localeCompare(b.name.zh, 'zh');
+    case 'name-en':
+      return a.name.en.localeCompare(b.name.en);
+    case 'no':
+    default:
+      return a.paldeckNo - b.paldeckNo;
+  }
+});
+
+// 6. 分组（按属性）
+const grouped = params.view === 'grouped';
+const groups = grouped
+  ? PAL_TYPES.map((t) => ({
+      type: t,
+      pals: filteredPals.filter((p) => p.types.includes(t.id as any)),
+    })).filter((g) => g.pals.length > 0)
+  : [];
+
+// 当前激活的筛选器（用于显示）
+const activeFilters: { key: string; label: string; removeHref: string }[] = [];
+if (params.type) {
+  const t = PAL_TYPES.find((x) => x.id === params.type);
+  if (t) activeFilters.push({ key: 'type', label: `属性: ${t.zh}`, removeHref: buildUrl({ type: null }) });
+}
+if (params.work) {
+  const w = WORK_SUITABILITIES.find((x) => x.id === params.work);
+  if (w) activeFilters.push({ key: 'work', label: `${w.icon} ${w.zh}`, removeHref: buildUrl({ work: null }) });
+}
+if (params.rarity) {
+  activeFilters.push({ key: 'rarity', label: `★${params.rarity}`, removeHref: buildUrl({ rarity: null }) });
+}
+if (params.variants !== 'all') {
+  activeFilters.push({ key: 'variants', label: params.variants === 'base' ? '仅基础' : '仅变种', removeHref: buildUrl({ variants: null }) });
+}
+
+function buildUrl(overrides: Record<string, string | null>): string {
+  const sp = new URLSearchParams(url.searchParams);
+  for (const [k, v] of Object.entries(overrides)) {
+    if (v === null) sp.delete(k);
+    else sp.set(k, v);
+  }
+  const qs = sp.toString();
+  return `/pals/${qs ? '?' + qs : ''}`;
+}
 
 const schema = {
   '@context': 'https://schema.org',
@@ -46,62 +116,174 @@ const schema = {
 ---
 
 <Layout
-  title={typeFilter ? `${PAL_TYPES.find((t) => t.id === typeFilter)?.zh}属性帕鲁` : '帕鲁图鉴'}
+  title={params.type ? `${PAL_TYPES.find((t) => t.id === params.type)?.zh}属性帕鲁` : '帕鲁图鉴'}
   description="完整的 Palworld 帕鲁图鉴。包含所有帕鲁的属性、技能、词条、捕捉位置、掉落物等详细信息。"
   schema={schema}
 >
   <header class="page-header">
     <h1>帕鲁图鉴</h1>
-    <p class="text-secondary">共 {pals.length} 只帕鲁 · 持续更新中</p>
+    <p class="text-secondary">共 {pals.length} 只帕鲁 · 当前显示 {filteredPals.length} 只</p>
   </header>
 
-  <!-- 搜索框 + 类型筛选 -->
+  <!-- 搜索框 -->
   <div class="filter-bar">
     <input
       type="search"
       id="pal-search"
       class="search-input"
-      placeholder="搜索帕鲁（中文 / 英文）..."
-      value={searchQuery}
+      placeholder="搜索帕鲁（中文 / 英文 / ID）..."
+      value=""
       autocomplete="off"
     />
-    <div class="type-filters">
-      <a href="/pals/" class={`type-chip ${!typeFilter ? 'active' : ''}`}>全部</a>
-      {PAL_TYPES.map((type) => (
-        <a
-          href={`/pals/?type=${type.id}`}
-          class={`type-chip type-${type.id} ${typeFilter === type.id ? 'active' : ''}`}
-        >
-          {type.zh}
+
+    <!-- 属性筛选 -->
+    <div class="filter-row">
+      <span class="filter-label">属性</span>
+      <div class="filter-chips">
+        <a href={buildUrl({ type: null })} class={`chip type-chip ${!params.type ? 'active' : ''}`}>全部</a>
+        {PAL_TYPES.map((t) => (
+          <a
+            href={buildUrl({ type: t.id })}
+            class={`chip type-chip type-${t.id} ${params.type === t.id ? 'active' : ''}`}
+          >
+            {t.zh}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- 工作适配筛选 -->
+    <div class="filter-row">
+      <span class="filter-label">工作</span>
+      <div class="filter-chips">
+        <a href={buildUrl({ work: null })} class={`chip ${!params.work ? 'active' : ''}`}>全部</a>
+        {WORK_SUITABILITIES.map((w) => (
+          <a
+            href={buildUrl({ work: w.id })}
+            class={`chip ${params.work === w.id ? 'active' : ''}`}
+            title={w.zh}
+          >
+            <span class="chip-icon">{w.icon}</span>
+            <span class="chip-text">{w.zh}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- 稀有度 + 变种 + 排序 + 视图 -->
+    <div class="filter-row meta-row">
+      <div class="meta-group">
+        <span class="filter-label">稀有度</span>
+        <div class="filter-chips small">
+          <a href={buildUrl({ rarity: null })} class={`chip ${!params.rarity ? 'active' : ''}`}>全部</a>
+          {[1, 2, 3, 4, 5].map((r) => (
+            <a
+              href={buildUrl({ rarity: String(r) })}
+              class={`chip rarity-chip ${params.rarity === r ? 'active' : ''}`}
+            >
+              {'★'.repeat(r)}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="meta-group">
+        <span class="filter-label">类型</span>
+        <div class="filter-chips small">
+          <a href={buildUrl({ variants: null })} class={`chip ${params.variants === 'all' ? 'active' : ''}`}>全部</a>
+          <a href={buildUrl({ variants: 'base' })} class={`chip ${params.variants === 'base' ? 'active' : ''}`}>仅基础</a>
+          <a href={buildUrl({ variants: 'only' })} class={`chip ${params.variants === 'only' ? 'active' : ''}`}>仅变种</a>
+        </div>
+      </div>
+
+      <div class="meta-group">
+        <span class="filter-label">排序</span>
+        <div class="filter-chips small">
+          <a href={buildUrl({ sort: 'no' })} class={`chip ${params.sort === 'no' ? 'active' : ''}`}>图鉴号</a>
+          <a href={buildUrl({ sort: 'rarity' })} class={`chip ${params.sort === 'rarity' ? 'active' : ''}`}>稀有度</a>
+          <a href={buildUrl({ sort: 'name-zh' })} class={`chip ${params.sort === 'name-zh' ? 'active' : ''}`}>中文名</a>
+          <a href={buildUrl({ sort: 'name-en' })} class={`chip ${params.sort === 'name-en' ? 'active' : ''}`}>英文名</a>
+        </div>
+      </div>
+
+      <div class="meta-group">
+        <span class="filter-label">视图</span>
+        <div class="filter-chips small">
+          <a href={buildUrl({ view: 'grid' })} class={`chip ${params.view === 'grid' ? 'active' : ''}`}>网格</a>
+          <a href={buildUrl({ view: 'grouped' })} class={`chip ${params.view === 'grouped' ? 'active' : ''}`}>分组</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 已选筛选器 -->
+    {activeFilters.length > 0 && (
+      <div class="active-filters">
+        <span class="filter-label">已筛选</span>
+        {activeFilters.map((f) => (
+          <a href={f.removeHref} class="active-chip">× {f.label}</a>
+        ))}
+        <a href="/pals/" class="reset-link">清空</a>
+      </div>
+    )}
+  </div>
+
+  <!-- 帕鲁网格（默认） -->
+  {params.view === 'grid' && (
+    <div class="pal-grid" id="pal-grid">
+      {filteredPals.map((pal) => (
+        <a href={`/pals/${pal.id}/`} class="pal-tile" data-name-zh={pal.name.zh.toLowerCase()} data-name-en={pal.name.en.toLowerCase()}>
+          <div class="pal-tile-img">
+            <PalImage pal={pal} size="medium" rounded />
+            <div class="pal-tile-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
+            <div class="pal-tile-rarity">{'★'.repeat(pal.rarity)}</div>
+          </div>
+          <div class="pal-tile-info">
+            <div class="pal-tile-name">{pal.name.zh}</div>
+            <div class="pal-tile-name-en">{pal.name.en}</div>
+            <div class="pal-tile-types">
+              {pal.types.map((type) => (
+                <span class={`type-dot type-${type}`}></span>
+              ))}
+            </div>
+          </div>
         </a>
       ))}
     </div>
-  </div>
+  )}
 
-  <!-- 帕鲁网格 -->
-  <div class="pal-grid" id="pal-grid">
-    {filteredPals.map((pal) => (
-      <a href={`/pals/${pal.id}/`} class="pal-tile" data-name-zh={pal.name.zh.toLowerCase()} data-name-en={pal.name.en.toLowerCase()}>
-        <div class="pal-tile-img">
-          <PalImage pal={pal} size="medium" rounded />
-          <div class="pal-tile-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
-        </div>
-        <div class="pal-tile-info">
-          <div class="pal-tile-name">{pal.name.zh}</div>
-          <div class="pal-tile-name-en">{pal.name.en}</div>
-          <div class="pal-tile-types">
-            {pal.types.map((type) => (
-              <span class={`type-dot type-${type}`}></span>
+  <!-- 帕鲁分组（按属性） -->
+  {params.view === 'grouped' && (
+    <div class="pal-groups">
+      {groups.map((g) => (
+        <section class="pal-group">
+          <h2 class={`group-header type-${g.type.id}`}>
+            <span>{g.type.zh} · {g.type.en}</span>
+            <span class="group-count">{g.pals.length}</span>
+          </h2>
+          <div class="pal-grid">
+            {g.pals.map((pal) => (
+              <a href={`/pals/${pal.id}/`} class="pal-tile" data-name-zh={pal.name.zh.toLowerCase()} data-name-en={pal.name.en.toLowerCase()}>
+                <div class="pal-tile-img">
+                  <PalImage pal={pal} size="medium" rounded />
+                  <div class="pal-tile-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
+                  <div class="pal-tile-rarity">{'★'.repeat(pal.rarity)}</div>
+                </div>
+                <div class="pal-tile-info">
+                  <div class="pal-tile-name">{pal.name.zh}</div>
+                  <div class="pal-tile-name-en">{pal.name.en}</div>
+                </div>
+              </a>
             ))}
           </div>
-        </div>
-      </a>
-    ))}
-  </div>
+        </section>
+      ))}
+    </div>
+  )}
 
   {filteredPals.length === 0 && (
     <div class="empty-state">
       <p>未找到匹配的帕鲁</p>
+      <a href="/pals/" class="reset-link">清空筛选</a>
     </div>
   )}
 </Layout>
@@ -113,6 +295,9 @@ const schema = {
 
   .filter-bar {
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   .search-input {
@@ -123,7 +308,6 @@ const schema = {
     border-radius: var(--radius);
     color: var(--text-primary);
     font-size: 1rem;
-    margin-bottom: 0.75rem;
   }
 
   .search-input:focus {
@@ -131,13 +315,37 @@ const schema = {
     border-color: var(--accent);
   }
 
-  .type-filters {
+  .filter-row {
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 0.75rem;
     flex-wrap: wrap;
   }
 
-  .type-chip {
+  .filter-label {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    min-width: 48px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .filter-chips {
+    display: flex;
+    gap: 0.375rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-chips.small .chip {
+    padding: 0.25rem 0.625rem;
+    font-size: 0.8125rem;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
     padding: 0.375rem 0.75rem;
     background: var(--bg-secondary);
     border: 1px solid var(--border);
@@ -145,23 +353,113 @@ const schema = {
     color: var(--text-secondary);
     font-size: 0.875rem;
     transition: all 0.15s ease;
+    white-space: nowrap;
   }
 
-  .type-chip:hover {
+  .chip:hover {
     border-color: var(--accent);
     color: var(--text-primary);
   }
 
-  .type-chip.active {
+  .chip.active {
     background: var(--accent);
     color: #000;
     border-color: var(--accent);
+    font-weight: 600;
+  }
+
+  .chip-icon {
+    font-size: 1em;
+  }
+
+  .rarity-chip:not(.active) {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+  }
+
+  .meta-row {
+    gap: 1rem;
+  }
+
+  .meta-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .meta-group .filter-label {
+    min-width: auto;
+  }
+
+  .active-filters {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0.625rem 0.875rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+  }
+
+  .active-chip {
+    padding: 0.25rem 0.625rem;
+    background: var(--accent);
+    color: #000;
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+
+  .active-chip:hover {
+    background: #ff9d4a;
+  }
+
+  .reset-link {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    text-decoration: underline;
+  }
+
+  .reset-link:hover {
+    color: var(--accent);
   }
 
   .pal-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 0.75rem;
+  }
+
+  .pal-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    border-left: 4px solid;
+    color: var(--text-primary);
+  }
+
+  .group-header.type-neutral { border-color: #a0a8b0; }
+  .group-header.type-fire { border-color: #f87171; }
+  .group-header.type-water { border-color: #5eb3f5; }
+  .group-header.type-grass { border-color: #4ade80; }
+  .group-header.type-electric { border-color: #fbbf24; }
+  .group-header.type-ice { border-color: #93c5fd; }
+  .group-header.type-ground { border-color: #d97706; }
+  .group-header.type-dark { border-color: #6b7280; }
+  .group-header.type-dragon { border-color: #c084fc; }
+
+  .group-count {
+    font-size: 0.875rem;
+    color: var(--text-muted);
   }
 
   .pal-tile {
@@ -200,6 +498,15 @@ const schema = {
     font-family: var(--font-mono);
   }
 
+  .pal-tile-rarity {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.625rem;
+    color: var(--accent);
+    letter-spacing: -0.05em;
+  }
+
   .pal-tile-info {
     padding: 0.5rem 0.75rem 0.75rem;
   }
@@ -226,6 +533,16 @@ const schema = {
     border-radius: 50%;
   }
 
+  .type-neutral { background: #a0a8b0; }
+  .type-fire { background: #f87171; }
+  .type-water { background: #5eb3f5; }
+  .type-grass { background: #4ade80; }
+  .type-electric { background: #fbbf24; }
+  .type-ice { background: #93c5fd; }
+  .type-ground { background: #d97706; }
+  .type-dark { background: #6b7280; }
+  .type-dragon { background: #c084fc; }
+
   .empty-state {
     text-align: center;
     padding: 3rem 1rem;
@@ -234,12 +551,10 @@ const schema = {
 </style>
 
 <script>
-  // 客户端搜索过滤
   const search = document.getElementById('pal-search') as HTMLInputElement;
-  const grid = document.getElementById('pal-grid');
-  const tiles = grid?.querySelectorAll('.pal-tile');
+  const tiles = document.querySelectorAll('.pal-tile');
 
-  if (search && tiles) {
+  if (search && tiles.length > 0) {
     let timer: number;
     search.addEventListener('input', () => {
       clearTimeout(timer);
