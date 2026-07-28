@@ -1694,7 +1694,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -2045,7 +2052,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Compared to [[Lamball]], it has finer wool and a temperament more suited for domestication.<br/>However, it has historically always been kept as a pet.<br/>Cuteness is considered a virtue.",
@@ -2222,7 +2236,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -2580,7 +2601,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "When in doubt, punch it till it works—that’s Herbil's approach to fixing things.<br/>With strength perfectly tuned for humans, sometimes just one punch is enough to restart a stopped heart.",
@@ -2757,7 +2785,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Large amounts of water pour from what is thought to be its nose, though some say that it is, in fact, just snot. This has sparked a fierce debate among Pal scholars.",
@@ -2936,7 +2971,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "A strange Pal with a body resembling tree sap. It gradually loses strength if it has nothing to cover its body with, eventually rotting away.",
@@ -2989,7 +3031,14 @@
     ],
     "food": 1,
     "price": 476,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -3042,7 +3091,14 @@
     ],
     "food": 1,
     "price": 407,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -3218,7 +3274,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "It releases the electricity stored in its body when under attack.<br/>The voltage it generates exceeds 10 million volts, making it more lethal than any conventional heavy firearms when thrown.",
@@ -3571,7 +3634,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "It has few friends because of the perpetually grouchy look on its face, but it is in fact kindhearted. Some have seen it feeding [[Vixy]] who have strayed from their pack.",
@@ -4473,7 +4543,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "''Often lost in thought, it sometimes finds it difficult to sleep. \"I think, therefore I am.\"'",
@@ -4647,7 +4724,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -5220,7 +5304,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "It puts those it is interested in to sleep and shows them an endless stream of happy dreams. Those who fall under its spell are never to wake until death takes them.",
@@ -5396,7 +5487,14 @@
     ],
     "food": 1,
     "price": 512,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -5749,7 +5847,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -5926,7 +6031,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -6634,7 +6746,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Being an extremely aggressive Pal, it often picks fights before gauging its opponents' strength.<br/>Though small, its powerful charge can even send boulders flying.",
@@ -7542,7 +7661,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -7724,7 +7850,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "The one who possesses the most impressive antlers becomes the leader of the herd. If their antlers are broken, they become depressed and leave the herd never to be seen again.",
@@ -8107,7 +8240,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -8285,7 +8425,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "The shrub on this pal's back produces berries as long as it is properly fed. It offers these berries to potential mates, and if the flavor is to their liking, romance blossoms.",
@@ -8637,7 +8784,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -8811,7 +8965,14 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -8987,7 +9148,13 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "To protect its fragile body, it developed an incredibly tough shell.<br/>Unfortunately, it's utterly defenseless underneath.<br/>Even a little tickle could knock it out cold.",
@@ -9341,7 +9508,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -9693,7 +9867,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -10041,7 +10222,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -10224,7 +10412,14 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -10757,7 +10952,14 @@
     ],
     "food": 1,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -11112,7 +11314,14 @@
     ],
     "food": 1,
     "price": 421,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -11289,7 +11498,10 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "A Pal that closely resembles {{p|Jellroy",
@@ -11467,7 +11679,10 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "A Pal that closely resembles {{p|Jelliette",
@@ -11640,7 +11855,14 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "If one disappears, another simply shows up to take its place, and life goes on like nothing happened. For Amione, companionship is everything.",
@@ -11818,7 +12040,11 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Be sure to check your plans for the next day before falling asleep with this Pal.<br/>Its suction cups leave marks that look suspiciously like hickeys.<br/>One sleepy cuddle session could lead to some truly awkward misunderstandings.",
@@ -12170,7 +12396,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -12354,7 +12587,14 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -12527,7 +12767,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -12703,7 +12950,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Often appears out of the blue to flaunt its prized wings in front of other Pals.<br/>Although this appears to be an intimidation tactic, the Pal seems to derive some kind of pleasure from the display.",
@@ -13075,7 +13329,14 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -13433,7 +13694,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -13781,7 +14049,14 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -14488,7 +14763,14 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -14672,7 +14954,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -14850,7 +15139,14 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -15035,7 +15331,14 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Its fluffy fur absorbs tremendous amounts of water when soaked.<br/>Shaking it dry releases a powerful electrical discharge, making bath time together a serious gamble.",
@@ -15214,7 +15517,14 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -15585,7 +15895,13 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "The melodies of a flute made from the exoskeleton of a Vanwyrm are said to cross whole mountain ranges.<br/>In ages past, such flutes were used to signal an attack.",
@@ -15952,7 +16268,10 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Attacking from the shadows, this Pal traps its prey within its cloak-like wings.<br/>It's probably best not to know what happens within them, or why the inside of its wings are stained red.",
@@ -16130,7 +16449,14 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -16330,7 +16656,13 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -16512,7 +16844,13 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -16909,7 +17247,11 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Grintale's eyes light up the moment anyone enters its territory.<br/>This is no figure of speech—its eyes literally light up.",
@@ -17085,7 +17427,14 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -17261,7 +17610,12 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Among Polapups, the fastest slider on the snow earns the highest respect.<br/>Sometimes, a too-forceful leap sends one tumbling from the sky— a common sight during territorial season.<br/>Forecast: clear skies with a chance of flying Polapups.",
@@ -17622,7 +17976,13 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -17997,7 +18357,13 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -18378,7 +18744,13 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -18730,7 +19102,13 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -19265,7 +19643,13 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "With the power of light, it produces arcane phenomena.<br/>It prefers to eat food well-done and is particularly hostile towards {{p|Katress",
@@ -19981,7 +20365,14 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "It calls forth lightning from the depths of hell.<br/>Those who dies from Helzephyr's lightning are sure to have their soul sent to the underworld.",
@@ -20341,7 +20732,14 @@
     ],
     "food": 8,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -20701,7 +21099,13 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -21237,7 +21641,14 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -21612,7 +22023,14 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Its body becomes a blade upon death, to be taken up by the next generation.<br/>If someone other than a Bushi wields this blade, the soul within torments them until they are driven mad.",
@@ -21987,7 +22405,12 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "The inside of its mouth stays pleasantly cold, making it a natural fridge when closed.<br/>Its saliva contains enzymes that prevent food from rotting.<br/>Thus, it can serve as a food locker for humans— whether it is sanitary or not is another matter entirely.",
@@ -22185,7 +22608,14 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -22916,7 +23346,14 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "A pal that transforms into a massive plant when at the end of its life. Once every ten years, a beautiful flower blooms and a new Petallia is born.",
@@ -23278,7 +23715,13 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -23461,7 +23904,13 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -23835,7 +24284,13 @@
     ],
     "food": 2,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -24194,7 +24649,13 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -24567,7 +25028,14 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -24919,7 +25387,13 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "On nights when the aurora is visible, it looks up towards the sky and begins to howl a beautiful song. This does, however, leave it vulnerable to attacks from enemies.",
@@ -25357,7 +25831,10 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "With its shining lure, it illuminates the darkness.<br/>The wandering Pals drawn in by the light stand no chance of escape once spotted by Ghangler.<br/>No matter how far, it will keep guiding them until they get home safe and sound.",
@@ -25630,7 +26107,12 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -26032,7 +26514,12 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Being made of pure energy, its insides are completely hollow. This Pal crams still-living prey into its hollow body, where it absorbs them. Hellish screams of pain can often be heard coming from inside this Pal.",
@@ -26746,7 +27233,13 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -26930,7 +27423,13 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -27316,7 +27815,14 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "It can curl up its body and roll around at extremely high speeds.<br/>Long ago, people would tie bags of milk to domesticated Chillet as they grazed to produce butter using this spinning force.",
@@ -27690,7 +28196,13 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Some think it is a related species to [[Beakon]], but there is in fact no connection. It mainly eats rocks, and after many long years its beak and head have hardened to accommodate this diet.",
@@ -27873,7 +28385,13 @@
     ],
     "food": 8,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -28227,7 +28745,12 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Disrupts enemies’ rhythm with a signature dance.<br/>In turf battles, the first to fall in sync with the other’s rhythm loses.<br/>Courtship, boredom, battle—it all comes down to dance!<br/>Now then, what could a dance aimed at a human possibly mean?",
@@ -28414,7 +28937,14 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -28608,7 +29138,14 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -28977,7 +29514,14 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -29232,7 +29776,14 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Its breath carries a miraculous, pollen-like substance that pollinates any plant it touches.<br/>For plant-based Pals, being near it can be a bit… complicated.",
@@ -29436,7 +29987,13 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Despite its appearance, Kitsun is extremely sensitive and will flee into a cave when spooked.<br/>Long ago, it was considered an ill omen if one ran away from you.",
@@ -29838,7 +30395,14 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "While it prefers raw meat, it always ends up eating well-done meat. This is due to its blistering claws, which it uses as its weapon—it simply doesn't realize its prey gets burned to a crisp.",
@@ -30229,7 +30793,13 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -30593,7 +31163,12 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "So precise is its sense of time that it awakens at the exact same hour every morning.<br/>According to Palpagos lore, a day was divided into 24 parts because when Frostplume spreads its tail feathers wide, it reveals a pattern with 24 distinct spaces.",
@@ -31330,7 +31905,12 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -31516,7 +32096,12 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -32047,7 +32632,12 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -32254,7 +32844,13 @@
     ],
     "food": 8,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "Legend says the Jormuntide was once a wise man who, after being wrongly convicted and cast into a whirlpool, returned as this Pal to annihilate the kingdom.",
@@ -32626,7 +33222,12 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "It was once believed to usher in the dry season.<br/>Whenever there was a drought the previous year, people would relentlessly seek to cull its numbers, hoping to bring about a plentiful harvest in the next year.",
@@ -32974,7 +33575,12 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -33524,7 +34130,11 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -33902,7 +34512,11 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -34073,7 +34687,14 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "草原",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "A bizarre species which temporarily separates its body and uses its bones to slice through enemies, at the risk of perishing itself upon taking too long.<br/> While unconfirmed, older individuals are said to deliberately stay separated in order to trigger their survival instincts and prolong their lifespans.",
@@ -34446,7 +35067,13 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -34830,7 +35457,10 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -35587,7 +36217,12 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "It can easily climb steep mountains with its hard claws. However, its short legs make it difficult to descend, often leaving it stranded in high places.",
@@ -35962,7 +36597,13 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -36175,7 +36816,12 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -36567,7 +37213,11 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -37357,7 +38007,12 @@
     ],
     "food": 8,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -37952,7 +38607,12 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -38128,7 +38788,12 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -38484,7 +39149,12 @@
     ],
     "food": 8,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -38841,7 +39511,10 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -39573,7 +40246,10 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -39749,7 +40425,10 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -40134,7 +40813,11 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -40506,7 +41189,10 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -41478,7 +42164,10 @@
     ],
     "food": 8,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -41832,7 +42521,11 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -42607,7 +43300,13 @@
     ],
     "food": 9,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛",
+      "樱岛",
+      "火山林",
+      "雪原"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -43189,7 +43888,10 @@
     ],
     "food": 8,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -43362,7 +44064,9 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -43534,7 +44238,10 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -43890,7 +44597,9 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -44066,7 +44775,9 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -44241,7 +44952,9 @@
     ],
     "food": 3,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -44413,7 +45126,10 @@
     ],
     "food": 4,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛",
+      "暗月岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -44589,7 +45305,9 @@
     ],
     "food": 5,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -45120,7 +45838,9 @@
     ],
     "food": 7,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -45661,7 +46381,9 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -45836,7 +46558,9 @@
     ],
     "food": 6,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "",
@@ -45895,7 +46619,9 @@
     ],
     "food": 8,
     "price": 0,
-    "biomes": [],
+    "biomes": [
+      "云海岛"
+    ],
     "nightOnly": false,
     "description": {
       "zh": "It focuses its mind and reads the future through flames.<br/> Should it glimpse an inconvenient destiny, it relentlessly rerolls the prophecy until it gets a favorable result.<br/> That is why the future of Flaracle is always exceptionally bright!",
