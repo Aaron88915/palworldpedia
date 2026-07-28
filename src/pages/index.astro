@@ -1049,6 +1049,18 @@ const schema = {
   .combo-op { color: var(--text-muted); font-size: 1.125rem; }
   .combo-link { color: var(--accent); font-size: 0.875rem; white-space: nowrap; }
 
+  /* Constrain combo pal images to a small fixed size */
+  .combo-parent .pal-image-wrap,
+  .combo-child .pal-image-wrap {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+  .combo-child .pal-image-wrap {
+    width: 56px;
+    height: 56px;
+  }
+
   /* === Tools === */
   .tools-grid {
     display: grid;
