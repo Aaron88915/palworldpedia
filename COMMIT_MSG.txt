@@ -1,13 +1,8 @@
-feat: tech tree MVP with 587 entries from paldb.cc
+fix: download tech icons locally + hide broken ones
 
-- Scrape /en/Technologies page (587 techs: 217 Structures + 370 Items)
-- Try fetch detail pages for enrichment (15 valid)
-- Tech data: src/data/tech.json with name, category, cost, icon + enriched
-  description/materials/HP/Defense for the 15 detailed entries
-- Tech tree page: searchable + filterable table view
-  - Filter by category (Structures/Items) and unlock level (Lv 1-9)
-  - Detail modal for enriched techs (15 with full data)
-  - TypeScript types updated
-- Replaces "coming soon" placeholder on /tech-tree/
-
-Data source: paldb.cc (English, CC-BY-SA)
+- 488 tech icons downloaded from cdn.paldb.cc to public/images/tech/
+- tech.json icon URLs rewritten to local /images/tech/...
+- 84 icons (3.5KB each average, ~3.5MB total) keep CDN URL since paldb.cc
+  references broken paths for them
+- Add onerror handler on tech icon <img> to hide broken images
+- Add decoding="async" for better rendering

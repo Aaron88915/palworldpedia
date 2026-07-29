@@ -98,7 +98,14 @@ const config = {
             data-enriched={t.description ? '1' : '0'}
           >
             <td class="col-icon">
-              <img src={t.icon} alt={t.name} class="tech-icon" loading="lazy" />
+              <img
+                src={t.icon}
+                alt={t.name}
+                class="tech-icon"
+                loading="lazy"
+                decoding="async"
+                onerror="this.onerror=null;this.style.visibility='hidden'"
+              />
             </td>
             <td class="col-name">
               <span class="tech-name">{t.name}</span>
