@@ -1,0 +1,934 @@
+{
+  "Lamball": {
+    "handiwork": 1,
+    "transporting": 1,
+    "farming": 1
+  },
+  "Cattiva": {
+    "handiwork": 1,
+    "gathering": 1,
+    "mining": 1,
+    "transporting": 1
+  },
+  "Chikipi": {
+    "gathering": 1,
+    "farming": 1
+  },
+  "Lifmunk": {
+    "planting": 1,
+    "handiwork": 1,
+    "gathering": 1,
+    "lumbering": 1,
+    "medicine_production": 1
+  },
+  "Fuack": {
+    "watering": 1,
+    "handiwork": 1,
+    "transporting": 1
+  },
+  "Vixy": {
+    "gathering": 1,
+    "farming": 1
+  },
+  "Celaray": {
+    "watering": 1,
+    "transporting": 1
+  },
+  "Cremis": {
+    "gathering": 1,
+    "farming": 2
+  },
+  "Croajiro": {
+    "watering": 1,
+    "handiwork": 1,
+    "gathering": 1,
+    "transporting": 1
+  },
+  "Herbil": {
+    "planting": 1,
+    "gathering": 1,
+    "transporting": 1
+  },
+  "Teafant": {
+    "watering": 1
+  },
+  "Gumoss": {
+    "planting": 1
+  },
+  "Pupperai": {
+    "gathering": 1,
+    "lumbering": 1,
+    "transporting": 1
+  },
+  "Clovee": {
+    "planting": 1,
+    "gathering": 1
+  },
+  "Jolthog": {
+    "generating_electricity": 1
+  },
+  "Depresso": {
+    "handiwork": 1,
+    "mining": 1,
+    "transporting": 1,
+    "farming": 1
+  },
+  "Pengullet": {
+    "watering": 1,
+    "handiwork": 1,
+    "cooling": 1,
+    "transporting": 1
+  },
+  "Penking": {
+    "watering": 2,
+    "handiwork": 2,
+    "mining": 3,
+    "cooling": 2,
+    "transporting": 3
+  },
+  "Hoocrates": {
+    "gathering": 1
+  },
+  "Melpaca": {
+    "farming": 2
+  },
+  "Kingpaca": {
+    "gathering": 2
+  },
+  "Daedream": {
+    "handiwork": 1,
+    "gathering": 1,
+    "transporting": 1
+  },
+  "Tanzee": {
+    "planting": 1,
+    "handiwork": 1,
+    "gathering": 1,
+    "lumbering": 1,
+    "transporting": 1
+  },
+  "Nox": {
+    "gathering": 1
+  },
+  "Flambelle": {
+    "kindling": 1,
+    "handiwork": 1,
+    "transporting": 1,
+    "farming": 1
+  },
+  "Rooby": {
+    "kindling": 1,
+    "farming": 1
+  },
+  "Mau": {
+    "gathering": 1,
+    "farming": 1
+  },
+  "Rushoar": {
+    "mining": 1
+  },
+  "Foxparks": {
+    "kindling": 1
+  },
+  "Killamari": {
+    "watering": 1,
+    "gathering": 1,
+    "transporting": 2
+  },
+  "Fuddler": {
+    "handiwork": 1,
+    "mining": 1,
+    "transporting": 1
+  },
+  "Eikthyrdeer": {
+    "lumbering": 2
+  },
+  "Direhowl": {
+    "gathering": 1
+  },
+  "Caprity": {
+    "planting": 2,
+    "farming": 1
+  },
+  "Swee": {
+    "gathering": 1,
+    "cooling": 1
+  },
+  "Sweepa": {
+    "gathering": 2,
+    "cooling": 3
+  },
+  "Turtacle": {
+    "watering": 2,
+    "mining": 1,
+    "transporting": 1
+  },
+  "Hangyu": {
+    "handiwork": 1,
+    "gathering": 1,
+    "transporting": 2
+  },
+  "Woolipop": {
+    "farming": 1
+  },
+  "Mozzarina": {
+    "farming": 2
+  },
+  "Azurobe": {
+    "watering": 4
+  },
+  "Sparkit": {
+    "generating_electricity": 1,
+    "handiwork": 1,
+    "transporting": 1,
+    "farming": 1
+  },
+  "Kelpsea": {
+    "watering": 1,
+    "farming": 1
+  },
+  "Ribbuny": {
+    "handiwork": 1,
+    "gathering": 1,
+    "transporting": 1
+  },
+  "Jelliette": {
+    "watering": 2,
+    "handiwork": 1,
+    "transporting": 1
+  },
+  "Jellroy": {
+    "watering": 2,
+    "handiwork": 1,
+    "medicine_production": 1,
+    "transporting": 1
+  },
+  "Amione": {
+    "watering": 1,
+    "handiwork": 2,
+    "transporting": 1
+  },
+  "Gloopie": {
+    "watering": 2,
+    "handiwork": 2,
+    "transporting": 2
+  },
+  "Galeclaw": {
+    "gathering": 2
+  },
+  "Wispaw": {
+    "handiwork": 2,
+    "lumbering": 1,
+    "medicine_production": 1,
+    "transporting": 1
+  },
+  "Nitewing": {
+    "gathering": 2
+  },
+  "Tombat": {
+    "gathering": 2,
+    "mining": 3,
+    "transporting": 2
+  },
+  "Tocotoco": {
+    "gathering": 1
+  },
+  "Univolt": {
+    "generating_electricity": 3,
+    "lumbering": 1
+  },
+  "Gobfin": {
+    "watering": 2,
+    "handiwork": 2,
+    "transporting": 1
+  },
+  "Loupmoon": {
+    "handiwork": 2
+  },
+  "Cawgnito": {
+    "lumbering": 2,
+    "farming": 1
+  },
+  "Arsox": {
+    "kindling": 3,
+    "lumbering": 2
+  },
+  "Muffly": {
+    "cooling": 2,
+    "transporting": 1
+  },
+  "Bristla": {
+    "planting": 2,
+    "handiwork": 2,
+    "gathering": 2,
+    "medicine_production": 2,
+    "transporting": 1
+  },
+  "Cinnamoth": {
+    "planting": 2,
+    "gathering": 2,
+    "medicine_production": 2
+  },
+  "Puffolt": {
+    "generating_electricity": 2,
+    "transporting": 1
+  },
+  "Elphidran": {
+    "lumbering": 3
+  },
+  "Vanwyrm": {
+    "kindling": 2,
+    "transporting": 3
+  },
+  "Felbat": {
+    "medicine_production": 3
+  },
+  "Vaelet": {
+    "planting": 3,
+    "handiwork": 3,
+    "gathering": 3,
+    "medicine_production": 3,
+    "transporting": 2,
+    "farming": 2
+  },
+  "Beegarde": {
+    "planting": 2,
+    "handiwork": 2,
+    "gathering": 3,
+    "lumbering": 2,
+    "medicine_production": 2,
+    "transporting": 2,
+    "farming": 3
+  },
+  "Elizabee": {
+    "planting": 4,
+    "handiwork": 4,
+    "gathering": 4,
+    "lumbering": 3,
+    "medicine_production": 4
+  },
+  "Lovander": {
+    "handiwork": 3,
+    "mining": 2,
+    "medicine_production": 3,
+    "transporting": 2
+  },
+  "Grintale": {
+    "gathering": 3
+  },
+  "Tarantriss": {
+    "handiwork": 3,
+    "gathering": 3,
+    "medicine_production": 2,
+    "transporting": 2
+  },
+  "Polapup": {
+    "watering": 3,
+    "cooling": 4
+  },
+  "Leezpunk": {
+    "handiwork": 2,
+    "gathering": 1,
+    "transporting": 1
+  },
+  "Gorirat": {
+    "handiwork": 2,
+    "lumbering": 3,
+    "transporting": 3
+  },
+  "Surfent": {
+    "watering": 3,
+    "farming": 2
+  },
+  "Robinquill": {
+    "planting": 2,
+    "handiwork": 3,
+    "gathering": 3,
+    "lumbering": 2,
+    "medicine_production": 1,
+    "transporting": 2
+  },
+  "Flopie": {
+    "planting": 2,
+    "handiwork": 2,
+    "gathering": 2,
+    "medicine_production": 1,
+    "transporting": 1
+  },
+  "Wixen": {
+    "kindling": 3,
+    "handiwork": 3,
+    "transporting": 2
+  },
+  "Katress": {
+    "handiwork": 3,
+    "medicine_production": 3,
+    "transporting": 2
+  },
+  "Helzephyr": {
+    "transporting": 4
+  },
+  "Elgrove": {
+    "planting": 3,
+    "gathering": 2,
+    "lumbering": 3,
+    "mining": 2,
+    "transporting": 3
+  },
+  "Lunaris": {
+    "handiwork": 4,
+    "gathering": 2,
+    "transporting": 2
+  },
+  "Fenglope": {
+    "lumbering": 3
+  },
+  "Dinossom": {
+    "planting": 3,
+    "lumbering": 3
+  },
+  "Bushi": {
+    "kindling": 2,
+    "handiwork": 2,
+    "gathering": 1,
+    "lumbering": 3,
+    "transporting": 2
+  },
+  "Munchill": {
+    "watering": 2,
+    "cooling": 3,
+    "transporting": 1
+  },
+  "Mammorest": {
+    "planting": 4,
+    "lumbering": 4,
+    "mining": 4
+  },
+  "Finsider": {
+    "watering": 2,
+    "transporting": 1
+  },
+  "Petallia": {
+    "planting": 4,
+    "handiwork": 3,
+    "gathering": 3,
+    "medicine_production": 4,
+    "transporting": 2
+  },
+  "Leafan": {
+    "planting": 3,
+    "handiwork": 3,
+    "gathering": 3,
+    "transporting": 2
+  },
+  "Incineram": {
+    "kindling": 3,
+    "handiwork": 2,
+    "mining": 3,
+    "transporting": 2
+  },
+  "Dazzi": {
+    "generating_electricity": 3,
+    "handiwork": 2,
+    "transporting": 2
+  },
+  "Pyrin": {
+    "kindling": 4,
+    "lumbering": 2
+  },
+  "Relaxaurus": {
+    "watering": 3,
+    "transporting": 3
+  },
+  "Foxcicle": {
+    "cooling": 4,
+    "farming": 3
+  },
+  "Beakon": {
+    "generating_electricity": 4,
+    "gathering": 2,
+    "transporting": 5
+  },
+  "Ghangler": {
+    "watering": 5,
+    "transporting": 2
+  },
+  "Rayhound": {
+    "generating_electricity": 4
+  },
+  "Menasting": {
+    "lumbering": 3,
+    "mining": 5
+  },
+  "Needoll": {
+    "planting": 3,
+    "gathering": 3,
+    "transporting": 1
+  },
+  "Reindrix": {
+    "lumbering": 3,
+    "cooling": 3
+  },
+  "Mossanda": {
+    "planting": 3,
+    "handiwork": 2,
+    "lumbering": 4,
+    "transporting": 4
+  },
+  "Chillet": {
+    "gathering": 1,
+    "cooling": 2
+  },
+  "Ragnahawk": {
+    "kindling": 4,
+    "transporting": 5
+  },
+  "Moldron": {
+    "kindling": 5,
+    "mining": 5
+  },
+  "Palumba": {
+    "planting": 4,
+    "gathering": 4,
+    "mining": 5
+  },
+  "Digtoise": {
+    "mining": 4
+  },
+  "Broncherry": {
+    "planting": 5
+  },
+  "Dumud": {
+    "watering": 2,
+    "mining": 2,
+    "transporting": 1,
+    "farming": 1
+  },
+  "Braloha": {
+    "planting": 5,
+    "gathering": 5,
+    "mining": 3
+  },
+  "Kitsun": {
+    "kindling": 3
+  },
+  "Blazehowl": {
+    "kindling": 5,
+    "lumbering": 3
+  },
+  "Warsect": {
+    "planting": 3,
+    "handiwork": 3,
+    "lumbering": 4,
+    "transporting": 5
+  },
+  "Frostplume": {
+    "gathering": 2,
+    "cooling": 4
+  },
+  "Majex": {
+    "kindling": 4,
+    "handiwork": 5,
+    "medicine_production": 3,
+    "transporting": 2
+  },
+  "Sibelyx": {
+    "medicine_production": 3,
+    "cooling": 3,
+    "farming": 3
+  },
+  "Maraith": {
+    "gathering": 4,
+    "mining": 4
+  },
+  "Shroomer": {
+    "planting": 3,
+    "handiwork": 2,
+    "gathering": 3,
+    "lumbering": 2,
+    "farming": 3
+  },
+  "Icelyn": {
+    "handiwork": 5,
+    "medicine_production": 4,
+    "cooling": 5,
+    "transporting": 2
+  },
+  "Gildra": {
+    "handiwork": 5,
+    "medicine_production": 4,
+    "transporting": 2
+  },
+  "Jormuntide": {
+    "watering": 7
+  },
+  "Suzaku": {
+    "kindling": 5
+  },
+  "Dazemu": {
+    "gathering": 2
+  },
+  "Quivern": {
+    "handiwork": 2,
+    "gathering": 3,
+    "mining": 4,
+    "transporting": 5
+  },
+  "Lullu": {
+    "planting": 3,
+    "handiwork": 3,
+    "gathering": 2,
+    "medicine_production": 3
+  },
+  "Kikit": {
+    "mining": 1
+  },
+  "Yakumo": {
+    "gathering": 2
+  },
+  "Skutlass": {
+    "watering": 4,
+    "gathering": 1,
+    "lumbering": 4
+  },
+  "Reptyro": {
+    "kindling": 5,
+    "mining": 5
+  },
+  "Starryon": {
+    "gathering": 5
+  },
+  "Pierdon": {
+    "mining": 5
+  },
+  "Cryolinx": {
+    "handiwork": 3,
+    "lumbering": 4,
+    "cooling": 4,
+    "transporting": 4
+  },
+  "Snugloo": {
+    "handiwork": 2,
+    "mining": 3,
+    "cooling": 3,
+    "transporting": 2
+  },
+  "Wumpo": {
+    "handiwork": 3,
+    "lumbering": 5,
+    "cooling": 5,
+    "transporting": 6
+  },
+  "Sootseer": {
+    "kindling": 3,
+    "handiwork": 3,
+    "gathering": 2,
+    "mining": 3,
+    "farming": 2
+  },
+  "Carnibora": {
+    "planting": 6,
+    "handiwork": 4,
+    "gathering": 4,
+    "transporting": 2
+  },
+  "Blazamut": {
+    "kindling": 6,
+    "mining": 7
+  },
+  "Dualith": {
+    "planting": 3,
+    "gathering": 3,
+    "lumbering": 5,
+    "mining": 6,
+    "transporting": 6
+  },
+  "Anubis": {
+    "handiwork": 6,
+    "mining": 6,
+    "transporting": 4
+  },
+  "Sekhmet": {
+    "handiwork": 6,
+    "mining": 3,
+    "transporting": 2
+  },
+  "Prixter": {
+    "gathering": 2,
+    "lumbering": 4,
+    "medicine_production": 2
+  },
+  "Tetroise ": {
+    "mining": 4
+  },
+  "Nyafia": {
+    "handiwork": 4,
+    "gathering": 4,
+    "lumbering": 2,
+    "transporting": 3
+  },
+  "Mimog": {
+    "gathering": 1,
+    "transporting": 2
+  },
+  "Xenovader": {
+    "lumbering": 3,
+    "transporting": 2
+  },
+  "Xenogard": {
+    "mining": 4
+  },
+  "Prunelia": {
+    "planting": 3,
+    "handiwork": 1,
+    "gathering": 2,
+    "medicine_production": 3,
+    "transporting": 1
+  },
+  "Nitemary": {
+    "handiwork": 4,
+    "transporting": 2
+  },
+  "Smokie": {
+    "gathering": 2
+  },
+  "Omascul": {
+    "gathering": 5
+  },
+  "Whalaska": {
+    "watering": 5,
+    "cooling": 6
+  },
+  "Verdash": {
+    "planting": 4,
+    "handiwork": 5,
+    "gathering": 5,
+    "lumbering": 3,
+    "transporting": 3
+  },
+  "Splatterina": {
+    "handiwork": 6,
+    "lumbering": 3,
+    "medicine_production": 5,
+    "transporting": 2
+  },
+  "Gildane": {
+    "gathering": 5
+  },
+  "Dogen": {
+    "handiwork": 4,
+    "gathering": 3,
+    "lumbering": 3,
+    "medicine_production": 2,
+    "transporting": 3
+  },
+  "Bulldosu": {
+    "mining": 4,
+    "transporting": 3
+  },
+  "Celesdir": {
+    "gathering": 4,
+    "lumbering": 7
+  },
+  "Astegon": {
+    "handiwork": 3,
+    "mining": 7
+  },
+  "Knocklem": {
+    "gathering": 4,
+    "mining": 7,
+    "transporting": 7
+  },
+  "Silvegis": {
+    "lumbering": 6
+  },
+  "Azurmane": {
+    "generating_electricity": 5
+  },
+  "Valentail": {
+    "gathering": 2
+  },
+  "Snock": {
+    "generating_electricity": 4
+  },
+  "Souffline": {
+    "planting": 2,
+    "transporting": 2
+  },
+  "Lapiron": {
+    "handiwork": 3,
+    "gathering": 4,
+    "mining": 2,
+    "transporting": 1
+  },
+  "Hoodle": {
+    "handiwork": 1,
+    "transporting": 1
+  },
+  "Slowatt": {
+    "generating_electricity": 3
+  },
+  "Bakemi": {
+    "handiwork": 3,
+    "medicine_production": 4,
+    "transporting": 2
+  },
+  "Solmora": {
+    "watering": 4
+  },
+  "Lapure": {
+    "handiwork": 6,
+    "gathering": 5
+  },
+  "Eidrolon": {
+    "transporting": 6
+  },
+  "Dynamoff": {
+    "generating_electricity": 6,
+    "gathering": 3,
+    "transporting": 3
+  },
+  "Tropicaw": {
+    "planting": 5,
+    "gathering": 5
+  },
+  "Flaracle": {
+    "kindling": 7,
+    "handiwork": 6,
+    "transporting": 2
+  },
+  "Ophydia": {
+    "watering": 5,
+    "planting": 7
+  },
+  "Dupin": {
+    "kindling": 7,
+    "handiwork": 5,
+    "medicine_production": 4,
+    "transporting": 2
+  },
+  "Roujay": {
+    "gathering": 5,
+    "transporting": 5
+  },
+  "Venusa": {
+    "handiwork": 6,
+    "gathering": 6,
+    "medicine_production": 5,
+    "transporting": 2
+  },
+  "Mycora": {
+    "planting": 6,
+    "handiwork": 4,
+    "gathering": 4,
+    "medicine_production": 6
+  },
+  "Loomen": {
+    "kindling": 4,
+    "handiwork": 4,
+    "medicine_production": 4
+  },
+  "Wistella": {
+    "handiwork": 6,
+    "medicine_production": 6,
+    "transporting": 1
+  },
+  "Solenne": {
+    "handiwork": 8,
+    "gathering": 4,
+    "transporting": 2
+  },
+  "Renjishi": {
+    "kindling": 8,
+    "handiwork": 6,
+    "gathering": 5,
+    "transporting": 5
+  },
+  "Aegidron": {
+    "mining": 8
+  },
+  "Grizzbolt": {
+    "generating_electricity": 5,
+    "handiwork": 4,
+    "lumbering": 3,
+    "transporting": 5
+  },
+  "Lyleen": {
+    "planting": 7,
+    "handiwork": 5,
+    "gathering": 6,
+    "medicine_production": 5
+  },
+  "Orserk": {
+    "generating_electricity": 8,
+    "handiwork": 3,
+    "transporting": 4
+  },
+  "Faleris": {
+    "kindling": 6,
+    "transporting": 3
+  },
+  "Shadowbeak": {
+    "gathering": 2
+  },
+  "Selyne": {
+    "handiwork": 7,
+    "medicine_production": 6,
+    "transporting": 3
+  },
+  "Bastigor": {
+    "lumbering": 6,
+    "mining": 5,
+    "cooling": 8
+  },
+  "Shaolong": {
+    "watering": 8,
+    "gathering": 5
+  },
+  "Silvance": {
+    "planting": 6,
+    "handiwork": 6,
+    "gathering": 4,
+    "medicine_production": 8,
+    "transporting": 2
+  },
+  "Dandilord": {
+    "planting": 8,
+    "handiwork": 6,
+    "gathering": 5,
+    "medicine_production": 6,
+    "transporting": 3
+  },
+  "Bellanoir": {
+    "handiwork": 5,
+    "medicine_production": 5,
+    "transporting": 4
+  },
+  "Xenolord": {
+    "gathering": 2
+  },
+  "Hartalis": {
+    "gathering": 7,
+    "lumbering": 7
+  },
+  "Paladius": {
+    "lumbering": 6,
+    "mining": 6
+  },
+  "Necromus": {
+    "lumbering": 6,
+    "mining": 6
+  },
+  "Frostallion": {
+    "cooling": 7
+  },
+  "Neptilius": {
+    "watering": 7
+  },
+  "Jetragon": {
+    "gathering": 8
+  },
+  "Astralym": {
+    "transporting": 4
+  }
+}

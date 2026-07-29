@@ -836,7 +836,8 @@
 "handiwork": 1,
 "planting": 1,
 "lumbering": 1,
-"gathering": 1
+"gathering": 1,
+"medicine_production": 1
 },
 "skills": [
 {
@@ -1770,8 +1771,8 @@
 },
 "workSuitability": {
 "watering": 1,
-"electricity": 2,
-"transporting": 1
+"transporting": 1,
+"generating_electricity": 2
 },
 "skills": [
 {
@@ -3193,7 +3194,9 @@
 "defense": 70,
 "speed": 0
 },
-"workSuitability": {},
+"workSuitability": {
+"generating_electricity": 1
+},
 "skills": [
 {
 "id": "shockwave",
@@ -3559,7 +3562,8 @@
 "workSuitability": {
 "handiwork": 1,
 "transporting": 1,
-"mining": 1
+"mining": 1,
+"farming": 1
 },
 "skills": [
 {
@@ -6361,7 +6365,8 @@
 "speed": 0
 },
 "workSuitability": {
-"farming": 1
+"farming": 1,
+"gathering": 1
 },
 "skills": [
 {
@@ -10814,10 +10819,10 @@
 "speed": 350
 },
 "workSuitability": {
-"electricity": 1,
 "handiwork": 1,
 "transporting": 1,
-"farming": 1
+"farming": 1,
+"generating_electricity": 1
 },
 "skills": [
 {
@@ -11737,7 +11742,8 @@
 "workSuitability": {
 "handiwork": 1,
 "transporting": 1,
-"watering": 2
+"watering": 2,
+"medicine_production": 1
 },
 "skills": [
 {
@@ -11918,7 +11924,9 @@
 "speed": 0
 },
 "workSuitability": {
-"watering": 1
+"watering": 1,
+"handiwork": 2,
+"transporting": 1
 },
 "skills": [
 {
@@ -12653,7 +12661,8 @@
 "workSuitability": {
 "handiwork": 2,
 "transporting": 1,
-"lumbering": 1
+"lumbering": 1,
+"medicine_production": 1
 },
 "skills": [
 {
@@ -13393,7 +13402,8 @@
 "speed": 0
 },
 "workSuitability": {
-"lumbering": 1
+"lumbering": 1,
+"generating_electricity": 3
 },
 "skills": [
 {
@@ -14508,7 +14518,8 @@
 "speed": 0
 },
 "workSuitability": {
-"lumbering": 2
+"lumbering": 2,
+"farming": 1
 },
 "skills": [
 {
@@ -15060,7 +15071,8 @@
 "handiwork": 2,
 "transporting": 1,
 "planting": 2,
-"gathering": 2
+"gathering": 2,
+"medicine_production": 2
 },
 "skills": [
 {
@@ -15251,7 +15263,9 @@
 "speed": 0
 },
 "workSuitability": {
-"planting": 2
+"planting": 2,
+"gathering": 2,
+"medicine_production": 2
 },
 "skills": [
 {
@@ -15438,7 +15452,10 @@
 "defense": 70,
 "speed": 0
 },
-"workSuitability": {},
+"workSuitability": {
+"generating_electricity": 2,
+"transporting": 1
+},
 "skills": [
 {
 "id": "double-fang-electric",
@@ -16402,7 +16419,9 @@
 "defense": 110,
 "speed": 0
 },
-"workSuitability": {},
+"workSuitability": {
+"medicine_production": 3
+},
 "skills": [
 {
 "id": "poison-blast",
@@ -16585,7 +16604,9 @@
 "handiwork": 3,
 "transporting": 2,
 "planting": 3,
-"gathering": 3
+"gathering": 3,
+"medicine_production": 3,
+"farming": 2
 },
 "skills": [
 {
@@ -16775,7 +16796,8 @@
 "farming": 3,
 "planting": 2,
 "lumbering": 2,
-"gathering": 3
+"gathering": 3,
+"medicine_production": 2
 },
 "skills": [
 {
@@ -16982,7 +17004,8 @@
 "handiwork": 4,
 "planting": 4,
 "lumbering": 3,
-"gathering": 4
+"gathering": 4,
+"medicine_production": 4
 },
 "skills": [
 {
@@ -17172,7 +17195,8 @@
 "workSuitability": {
 "handiwork": 3,
 "transporting": 2,
-"mining": 2
+"mining": 2,
+"medicine_production": 3
 },
 "skills": [
 {
@@ -17579,7 +17603,8 @@
 "workSuitability": {
 "handiwork": 3,
 "transporting": 2,
-"gathering": 3
+"gathering": 3,
+"medicine_production": 2
 },
 "skills": [
 {
@@ -18918,7 +18943,8 @@
 "speed": 0
 },
 "workSuitability": {
-"watering": 3
+"watering": 3,
+"farming": 2
 },
 "skills": [
 {
@@ -19281,7 +19307,8 @@
 "transporting": 2,
 "planting": 2,
 "lumbering": 2,
-"gathering": 3
+"gathering": 3,
+"medicine_production": 1
 },
 "skills": [
 {
@@ -19648,7 +19675,8 @@
 "handiwork": 2,
 "transporting": 1,
 "planting": 2,
-"gathering": 2
+"gathering": 2,
+"medicine_production": 1
 },
 "skills": [
 {
@@ -20196,7 +20224,8 @@
 },
 "workSuitability": {
 "handiwork": 3,
-"transporting": 2
+"transporting": 2,
+"medicine_production": 3
 },
 "skills": [
 {
@@ -21677,8 +21706,8 @@
 "speed": 750
 },
 "workSuitability": {
-"electricity": 5,
-"lumbering": 4
+"lumbering": 4,
+"generating_electricity": 5
 },
 "skills": [
 {
@@ -23589,7 +23618,8 @@
 "handiwork": 3,
 "transporting": 2,
 "planting": 4,
-"gathering": 3
+"gathering": 3,
+"medicine_production": 4
 },
 "skills": [
 {
@@ -24544,7 +24574,8 @@
 },
 "workSuitability": {
 "handiwork": 2,
-"transporting": 2
+"transporting": 2,
+"generating_electricity": 3
 },
 "skills": [
 {
@@ -24730,10 +24761,10 @@
 "speed": 400
 },
 "workSuitability": {
-"electricity": 1,
 "handiwork": 1,
-"medicine": 1,
-"transporting": 2
+"transporting": 2,
+"generating_electricity": 1,
+"medicine_production": 1
 },
 "skills": [
 {
@@ -25668,7 +25699,8 @@
 "speed": 0
 },
 "workSuitability": {
-"cooling": 4
+"cooling": 4,
+"farming": 3
 },
 "skills": [
 {
@@ -25852,7 +25884,8 @@
 },
 "workSuitability": {
 "transporting": 5,
-"gathering": 2
+"gathering": 2,
+"generating_electricity": 4
 },
 "skills": [
 {
@@ -26360,7 +26393,9 @@
 "defense": 80,
 "speed": 0
 },
-"workSuitability": {},
+"workSuitability": {
+"generating_electricity": 4
+},
 "skills": [
 {
 "id": "double-fang-electric",
@@ -29878,7 +29913,8 @@
 "workSuitability": {
 "transporting": 1,
 "watering": 2,
-"mining": 2
+"mining": 2,
+"farming": 1
 },
 "skills": [
 {
@@ -31725,7 +31761,8 @@
 "workSuitability": {
 "handiwork": 5,
 "transporting": 2,
-"kindling": 4
+"kindling": 4,
+"medicine_production": 3
 },
 "skills": [
 {
@@ -31911,7 +31948,8 @@
 },
 "workSuitability": {
 "farming": 3,
-"cooling": 3
+"cooling": 3,
+"medicine_production": 3
 },
 "skills": [
 {
@@ -32479,7 +32517,8 @@
 "handiwork": 2,
 "planting": 3,
 "lumbering": 2,
-"gathering": 3
+"gathering": 3,
+"farming": 3
 },
 "skills": [
 {
@@ -32854,7 +32893,8 @@
 "workSuitability": {
 "handiwork": 5,
 "transporting": 2,
-"cooling": 5
+"cooling": 5,
+"medicine_production": 4
 },
 "skills": [
 {
@@ -33032,7 +33072,8 @@
 },
 "workSuitability": {
 "handiwork": 5,
-"transporting": 2
+"transporting": 2,
+"medicine_production": 4
 },
 "skills": [
 {
@@ -34551,7 +34592,8 @@
 "workSuitability": {
 "handiwork": 3,
 "planting": 3,
-"gathering": 2
+"gathering": 2,
+"medicine_production": 3
 },
 "skills": [
 {
@@ -34915,7 +34957,9 @@
 "defense": 85,
 "speed": 0
 },
-"workSuitability": {},
+"workSuitability": {
+"gathering": 2
+},
 "skills": [
 {
 "id": "double-fang",
@@ -35123,7 +35167,11 @@
 "defense": 80,
 "speed": 0
 },
-"workSuitability": {},
+"workSuitability": {
+"watering": 4,
+"lumbering": 4,
+"gathering": 1
+},
 "skills": [
 {
 "id": "hydro-jet",
@@ -36658,7 +36706,8 @@
 "workSuitability": {
 "handiwork": 3,
 "lumbering": 4,
-"cooling": 4
+"cooling": 4,
+"transporting": 4
 },
 "skills": [
 {
@@ -39285,7 +39334,8 @@
 },
 "workSuitability": {
 "lumbering": 4,
-"gathering": 2
+"gathering": 2,
+"medicine_production": 2
 },
 "skills": [
 {
@@ -40200,7 +40250,8 @@
 "speed": 0
 },
 "workSuitability": {
-"gathering": 1
+"gathering": 1,
+"transporting": 2
 },
 "skills": [
 {
@@ -40765,7 +40816,8 @@
 "handiwork": 1,
 "transporting": 1,
 "planting": 3,
-"gathering": 2
+"gathering": 2,
+"medicine_production": 3
 },
 "skills": [
 {
@@ -42486,7 +42538,8 @@
 "workSuitability": {
 "handiwork": 6,
 "transporting": 2,
-"lumbering": 3
+"lumbering": 3,
+"medicine_production": 5
 },
 "skills": [
 {
@@ -42898,7 +42951,8 @@
 "handiwork": 4,
 "transporting": 3,
 "lumbering": 3,
-"gathering": 3
+"gathering": 3,
+"medicine_production": 2
 },
 "skills": [
 {
@@ -44446,7 +44500,8 @@
 "speed": 0
 },
 "workSuitability": {
-"gathering": 1
+"gathering": 1,
+"generating_electricity": 5
 },
 "skills": [
 {
@@ -44823,7 +44878,9 @@
 "defense": 75,
 "speed": 0
 },
-"workSuitability": {},
+"workSuitability": {
+"generating_electricity": 4
+},
 "skills": [
 {
 "id": "shockwave",
@@ -45726,7 +45783,9 @@
 "defense": 70,
 "speed": 0
 },
-"workSuitability": {},
+"workSuitability": {
+"generating_electricity": 3
+},
 "skills": [
 {
 "id": "thunder-spear",
@@ -45906,7 +45965,8 @@
 },
 "workSuitability": {
 "handiwork": 3,
-"transporting": 2
+"transporting": 2,
+"medicine_production": 4
 },
 "skills": [
 {
@@ -47002,7 +47062,8 @@
 },
 "workSuitability": {
 "transporting": 3,
-"gathering": 3
+"gathering": 3,
+"generating_electricity": 6
 },
 "skills": [
 {
@@ -47360,7 +47421,9 @@
 "speed": 0
 },
 "workSuitability": {
-"kindling": 7
+"kindling": 7,
+"handiwork": 6,
+"transporting": 2
 },
 "skills": [],
 "passives": [],
@@ -47424,7 +47487,10 @@
 "defense": 120,
 "speed": 0
 },
-"workSuitability": {},
+"workSuitability": {
+"watering": 5,
+"planting": 7
+},
 "skills": [
 {
 "id": "bubble-blast",
@@ -47609,7 +47675,8 @@
 "workSuitability": {
 "handiwork": 5,
 "transporting": 2,
-"kindling": 7
+"kindling": 7,
+"medicine_production": 4
 },
 "skills": [
 {
@@ -47980,7 +48047,8 @@
 "workSuitability": {
 "handiwork": 6,
 "transporting": 2,
-"gathering": 6
+"gathering": 6,
+"medicine_production": 5
 },
 "skills": [
 {
@@ -48166,7 +48234,8 @@
 "workSuitability": {
 "handiwork": 4,
 "planting": 6,
-"gathering": 4
+"gathering": 4,
+"medicine_production": 6
 },
 "skills": [
 {
@@ -48352,7 +48421,8 @@
 },
 "workSuitability": {
 "handiwork": 4,
-"kindling": 4
+"kindling": 4,
+"medicine_production": 4
 },
 "skills": [
 {
@@ -48539,7 +48609,8 @@
 },
 "workSuitability": {
 "handiwork": 6,
-"transporting": 1
+"transporting": 1,
+"medicine_production": 6
 },
 "skills": [
 {
@@ -49297,7 +49368,8 @@
 "workSuitability": {
 "handiwork": 4,
 "transporting": 5,
-"lumbering": 3
+"lumbering": 3,
+"generating_electricity": 5
 },
 "skills": [
 {
@@ -49497,7 +49569,8 @@
 "workSuitability": {
 "handiwork": 5,
 "planting": 7,
-"gathering": 6
+"gathering": 6,
+"medicine_production": 5
 },
 "skills": [
 {
@@ -49917,7 +49990,8 @@
 },
 "workSuitability": {
 "handiwork": 3,
-"transporting": 4
+"transporting": 4,
+"generating_electricity": 8
 },
 "skills": [
 {
@@ -50715,7 +50789,8 @@
 },
 "workSuitability": {
 "handiwork": 7,
-"transporting": 3
+"transporting": 3,
+"medicine_production": 6
 },
 "skills": [
 {
@@ -51116,7 +51191,10 @@
 "defense": 120,
 "speed": 0
 },
-"workSuitability": {},
+"workSuitability": {
+"watering": 8,
+"gathering": 5
+},
 "skills": [
 {
 "id": "aqua-gun",
@@ -51304,7 +51382,8 @@
 "handiwork": 6,
 "transporting": 2,
 "planting": 6,
-"gathering": 4
+"gathering": 4,
+"medicine_production": 8
 },
 "skills": [
 {
@@ -51492,7 +51571,8 @@
 "handiwork": 6,
 "transporting": 3,
 "planting": 8,
-"gathering": 5
+"gathering": 5,
+"medicine_production": 6
 },
 "skills": [
 {
@@ -51679,7 +51759,8 @@
 },
 "workSuitability": {
 "handiwork": 5,
-"transporting": 4
+"transporting": 4,
+"medicine_production": 5
 },
 "skills": [
 {
