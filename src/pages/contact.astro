@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
 import { SITE } from '@/config';
 ---
 
@@ -9,6 +10,9 @@ import { SITE } from '@/config';
 >
   <article class="content">
     <h1>联系我们</h1>
+
+    <!-- 广告位 #1：标题后 -->
+    <AdSlot slot="inline" />
 
     <h2>📧 邮件</h2>
     <p>

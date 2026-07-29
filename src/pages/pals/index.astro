@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import PalImage from '@components/PalImage.astro';
+import AdSlot from '@components/AdSlot.astro';
 import { PAL_TYPES, WORK_SUITABILITIES } from '@/config';
 import palsData from '@data/pals.json';
 import type { Pal } from '@data/types';
@@ -147,6 +148,9 @@ const config = {
       <button type="button" id="reset-btn" class="reset-link">清空</button>
     </div>
   </div>
+
+  <!-- 广告位 #1：筛选与网格之间 -->
+  <AdSlot slot="inline" />
 
   <!-- 帕鲁网格（默认） -->
   <div class="pal-grid" id="pal-grid">

@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
 import { SITE } from '@/config';
 ---
 
@@ -13,6 +14,9 @@ import { SITE } from '@/config';
     <p class="lead">
       {SITE.name}（{SITE.shortName}）是 Palworld（幻兽帕鲁）玩家的非官方攻略站，致力于提供<strong>最全面、最准确、最实用</strong>的 Palworld 中文资料和工具。
     </p>
+
+    <!-- 广告位 #1：介绍段落之间 -->
+    <AdSlot slot="inline" />
 
     <h2>我们提供什么</h2>
     <ul>

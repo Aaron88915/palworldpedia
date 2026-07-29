@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
 ---
 
 <Layout
@@ -16,6 +17,8 @@ import Layout from '@layouts/Layout.astro';
       <a href="/pals/" class="btn btn-secondary">浏览帕鲁图鉴</a>
     </div>
   </div>
+
+  <AdSlot slot="inline" />
 </Layout>
 
 <style>

@@ -1,6 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import PalImage from '@components/PalImage.astro';
+import AdSlot from '@components/AdSlot.astro';
 import { SITE, PAL_TYPES } from '@/config';
 import palsData from '@data/pals.json';
 import type { Pal } from '@data/types';
@@ -274,6 +275,9 @@ const schema = {
       ))}
     </div>
   </section>
+
+  <!-- ===== 广告位 #1：战力榜之后 ===== -->
+  <AdSlot slot="inline" />
 
   <!-- ===== 9 大属性克制 ===== -->
   <section class="section">

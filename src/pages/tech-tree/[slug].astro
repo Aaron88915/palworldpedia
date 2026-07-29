@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
 import techsData from '@data/tech.json';
 import type { TechNode } from '@data/types';
 
@@ -103,6 +104,9 @@ const hasDetail = !!(tech.description || tech.materials);
       )}
     </div>
   </article>
+
+  <!-- 广告位 #1：详情与相关科技之间 -->
+  <AdSlot slot="inline" />
 
   {related.length > 0 && (
     <section class="related-section">
