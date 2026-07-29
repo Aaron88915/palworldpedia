@@ -1,0 +1,320 @@
+---
+import Layout from '@layouts/Layout.astro';
+import techsData from '@data/tech.json';
+import type { TechNode } from '@data/types';
+
+export function getStaticPaths() {
+  const techs = techsData as TechNode[];
+  return techs.map((t) => ({
+    params: { slug: t.slug },
+    props: { tech: t },
+  }));
+}
+
+interface Props {
+  tech: TechNode;
+}
+const { tech } = Astro.props;
+
+// Find related techs in same category
+const allTechs = techsData as TechNode[];
+const related = allTechs
+  .filter(t => t.category === tech.category && t.slug !== tech.slug)
+  .slice(0, 12);
+
+const categoryZh = tech.category === 'Structures' ? '建筑' : '道具';
+const hasDetail = !!(tech.description || tech.materials);
+---
+
+<Layout
+  title={`${tech.name} - 解锁 Lv ${tech.cost} · ${categoryZh} | Palworld科技树`}
+  description={tech.description || `Palworld ${tech.name}（${categoryZh}）的详细信息：解锁等级 Lv ${tech.cost}、所需材料、属性。`}
+>
+  <nav class="breadcrumb">
+    <a href="/tech-tree/">← 科技树</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-cat">{tech.category}</span>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-cur">{tech.name}</span>
+  </nav>
+
+  <article class="tech-detail">
+    <header class="tech-detail-header">
+      <div class="tech-detail-icon-wrap">
+        <img src={tech.icon} alt={tech.name} class="tech-detail-icon" />
+      </div>
+      <div class="tech-detail-titles">
+        <h1>{tech.name}</h1>
+        <div class="tech-detail-meta">
+          <span class={`cat-tag cat-${tech.category.toLowerCase()}`}>{tech.category}</span>
+          <span class={`cost-tag cost-${tech.cost}`}>解锁 Lv {tech.cost}</span>
+          {tech.product && tech.product !== tech.name && (
+            <span class="product-tag">产出: {tech.product}</span>
+          )}
+        </div>
+      </div>
+    </header>
+
+    <div class="tech-detail-body">
+      {tech.description ? (
+        <section class="tech-section">
+          <h2>介绍</h2>
+          <p class="tech-description">{tech.description}</p>
+        </section>
+      ) : (
+        <section class="tech-section tech-section-empty">
+          <h2>介绍</h2>
+          <p class="text-muted">该科技的详细描述待补充。基础信息：{tech.category === 'Structures' ? '可建造的建筑设施' : '可制作/使用的物品'}。</p>
+        </section>
+      )}
+
+      {tech.materials && tech.materials.length > 0 && (
+        <section class="tech-section">
+          <h2>所需材料</h2>
+          <div class="mat-grid">
+            {tech.materials.map((m) => (
+              <div class="mat-item">
+                <span class="mat-name">{m.name}</span>
+                <span class="mat-count">×{m.count}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {(tech.hp || tech.defense) && (
+        <section class="tech-section">
+          <h2>建筑属性</h2>
+          <div class="stats-grid">
+            {tech.hp && (
+              <div class="stat-item">
+                <span class="stat-label">HP</span>
+                <span class="stat-value">{tech.hp.toLocaleString()}</span>
+              </div>
+            )}
+            {tech.defense && (
+              <div class="stat-item">
+                <span class="stat-label">Defense</span>
+                <span class="stat-value">{tech.defense}</span>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="related-section">
+      <h2>相关科技</h2>
+      <div class="related-grid">
+        {related.map((r) => (
+          <a href={`/tech-tree/${r.slug}/`} class="related-card">
+            <img src={r.icon} alt={r.name} class="related-icon" loading="lazy" />
+            <span class="related-name">{r.name}</span>
+            <span class={`cost-tag cost-${r.cost}`}>Lv {r.cost}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+</Layout>
+
+<style>
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+  .breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb-sep { color: var(--border); }
+  .breadcrumb-cur { color: var(--text-primary); font-weight: 600; }
+
+  .tech-detail {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .tech-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tech-detail-icon-wrap {
+    width: 100px;
+    height: 100px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .tech-detail-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .tech-detail-titles { flex: 1; }
+  .tech-detail-titles h1 {
+    font-size: 1.75rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+  }
+  .tech-detail-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+
+  .cat-tag {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .cat-tag.cat-structures { background: rgba(94, 179, 245, 0.15); color: #5eb3f5; }
+  .cat-tag.cat-items { background: rgba(248, 113, 113, 0.15); color: #f87171; }
+
+  .cost-tag {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: var(--bg-tertiary);
+  }
+  .cost-tag.cost-1 { color: #a0a8b0; }
+  .cost-tag.cost-2 { color: #4ade80; }
+  .cost-tag.cost-3 { color: #5eb3f5; }
+  .cost-tag.cost-4 { color: #c084fc; }
+  .cost-tag.cost-5, .cost-tag.cost-6, .cost-tag.cost-7, .cost-tag.cost-8, .cost-tag.cost-9 { color: #ffb830; }
+
+  .product-tag {
+    padding: 0.25rem 0.625rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+
+  .tech-detail-body { padding: 1.5rem 2rem 2rem; }
+
+  .tech-section { margin-bottom: 2rem; }
+  .tech-section:last-child { margin-bottom: 0; }
+  .tech-section h2 {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .tech-description {
+    color: var(--text-primary);
+    line-height: 1.7;
+    white-space: pre-wrap;
+  }
+
+  .mat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.75rem;
+  }
+  .mat-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+  }
+  .mat-name { font-weight: 500; }
+  .mat-count {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+  }
+  .stat-item {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .stat-label { color: var(--text-muted); font-size: 0.875rem; }
+  .stat-value { color: var(--accent); font-weight: 700; font-size: 1.125rem; }
+
+  .related-section { margin-top: 2rem; }
+  .related-section h2 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+  .related-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+  .related-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .related-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    background: var(--bg-tertiary);
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .related-name {
+    display: block;
+    font-size: 0.8125rem;
+    margin-bottom: 0.25rem;
+    word-break: break-word;
+  }
+
+  @media (max-width: 640px) {
+    .tech-detail-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+    .tech-detail-titles h1 { font-size: 1.375rem; }
+    .tech-detail-body { padding: 1.25rem; }
+  }
+</style>

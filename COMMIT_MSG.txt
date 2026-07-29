@@ -1,8 +1,13 @@
-fix: fill remaining 76+8 tech icons from palworld.gg
+feat: tech tree card grid + per-tech detail pages (587 SEO pages)
 
-palworld.gg/technology-tree has all 587 tech icons referenced.
-- Parse name->icon URL mapping from page (537 unique)
-- Fill 76 missing icons from this source (.png vs paldb.cc's broken .webp)
-- Manually map 8 more for ancient techs (class="item ancient" was missed)
-- 0 CDN references remain in tech.json
-- 571 unique icons in public/images/tech/
+- List page: table view -> responsive card grid
+  - Each card: icon (top) + name + Lv badge + type badge + "click for details"
+  - Card minmax(150px, 1fr), mobile: 2 columns
+- New route /tech-tree/[slug]/ with full detail page
+  - Header: large icon + name + category + Lv tag + product
+  - Description section
+  - Materials grid (auto-fill, minmax(180px, 1fr))
+  - Building stats (HP/Defense) when available
+  - Related techs (same category) section
+  - Breadcrumb: Tech Tree / Category / Name
+- Detail pages: 587 generated (each tech gets its own SEO page)
