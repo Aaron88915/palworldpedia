@@ -1,0 +1,7 @@
+fix: type chip text color invisible on Paldex page
+
+- Move type chip color rules from pals/index.astro (scoped) to global.css
+- Use `.chip.type-X:not(.active)` selector to boost specificity above scoped `.chip[data-astro-cid-xxx]`
+- Light bg types (fire/water/grass/electric/ice/dragon/neutral) get black text
+- Dark bg types (ground/dark) get white text
+- `:not(.active)` keeps the active orange state intact

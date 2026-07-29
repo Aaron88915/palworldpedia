@@ -428,15 +428,23 @@ const config = {
     border-radius: 50%;
   }
 
-  .type-neutral { background: #a0a8b0; }
-  .type-fire { background: #f87171; }
-  .type-water { background: #5eb3f5; }
-  .type-grass { background: #4ade80; }
-  .type-electric { background: #fbbf24; }
-  .type-ice { background: #93c5fd; }
-  .type-ground { background: #d97706; }
-  .type-dark { background: #6b7280; }
-  .type-dragon { background: #c084fc; }
+  .type-neutral { background: #a0a8b0; color: #000; }
+  .type-fire { background: #f87171; color: #000; }
+  .type-water { background: #5eb3f5; color: #000; }
+  .type-grass { background: #4ade80; color: #000; }
+  .type-electric { background: #fbbf24; color: #000; }
+  .type-ice { background: #93c5fd; color: #000; }
+  .type-ground { background: #d97706; color: #fff; }
+  .type-dark { background: #6b7280; color: #fff; }
+  .type-dragon { background: #c084fc; color: #000; }
+  .type-chip:not(.active) {
+    color: #000;
+    font-weight: 600;
+  }
+  .type-ground.type-chip:not(.active),
+  .type-dark.type-chip:not(.active) {
+    color: #fff;
+  }
 
   .empty-state {
     text-align: center;

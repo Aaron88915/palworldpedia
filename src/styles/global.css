@@ -275,16 +275,18 @@ tr:hover {
 .justify-between { justify-content: space-between; }
 .justify-center { justify-content: center; }
 
-/* 类型色 */
-.type-fire { background: var(--type-fire); }
-.type-water { background: var(--type-water); }
-.type-grass { background: var(--type-grass); }
-.type-electric { background: var(--type-electric); }
-.type-ice { background: var(--type-ice); }
-.type-ground { background: var(--type-ground); }
-.type-dark { background: var(--type-dark); }
-.type-dragon { background: var(--type-dragon); }
-.type-neutral { background: var(--type-neutral); }
+/* 类型色（同时设置 background + color，确保文字可读）
+   用 .chip.type-X:not(.active) 提升 specificity，盖过 scoped CSS 里的 .chip
+   :not(.active) 避免覆盖 .chip.active 的选中样式 */
+.chip.type-neutral:not(.active) { background-color: var(--type-neutral); color: #000; }
+.chip.type-fire:not(.active) { background-color: var(--type-fire); color: #000; }
+.chip.type-water:not(.active) { background-color: var(--type-water); color: #000; }
+.chip.type-grass:not(.active) { background-color: var(--type-grass); color: #000; }
+.chip.type-electric:not(.active) { background-color: var(--type-electric); color: #000; }
+.chip.type-ice:not(.active) { background-color: var(--type-ice); color: #000; }
+.chip.type-ground:not(.active) { background-color: var(--type-ground); color: #fff; }
+.chip.type-dark:not(.active) { background-color: var(--type-dark); color: #fff; }
+.chip.type-dragon:not(.active) { background-color: var(--type-dragon); color: #000; }
 
 /* 隐藏但可访问 */
 .sr-only {
