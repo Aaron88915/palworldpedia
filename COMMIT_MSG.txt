@@ -1,8 +1,1 @@
-chore: update contact email to 126.com + add Terms of Service
-
-- SITE.email: contact@palworldpedia.cc -> palworldpedia@126.com
-- contact.astro: remove GitHub link section
-- terms.astro: new page with 13-section ToS covering:
-  acceptance, service description, non-official disclaimer, data accuracy,
-  user conduct, IP, liability, ads, third-party links, changes,
-  modifications, jurisdiction, contact
+chore: add Google Search Console verification meta tag
