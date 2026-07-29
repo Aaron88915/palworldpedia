@@ -1,10 +1,10 @@
-feat: add sort filter to tech tree (level asc/desc + A-Z/Z-A)
+fix: active filter chip white background bug
 
-- New filter row "排序" with 4 options:
-  - 等级 ↑ (Lv 1 -> 9)
-  - 等级 ↓ (Lv 9 -> 1)
-  - A-Z (alphabetical)
-  - Z-A (reverse alphabetical)
-- Apply via JS by sorting cards array and re-appending to grid
-- Added to active filter chips display
-- Reset button now clears sort too
+Bug: Astro scoped CSS .active-chip[data-astro-cid-xxx] didn't match
+JS-generated elements (created via innerHTML), so the chip fell back
+to default browser button styling (white bg, ugly in dark theme).
+
+Fix: move .active-chip and .reset-link styles to global.css so they
+apply everywhere. Also redesign active chip to subtle outlined style
+(dark bg + accent border + accent text + orange fill on hover) instead
+of solid orange - matches dark theme better.
