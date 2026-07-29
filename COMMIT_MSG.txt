@@ -1,13 +1,1 @@
-feat: tech tree card grid + per-tech detail pages (587 SEO pages)
-
-- List page: table view -> responsive card grid
-  - Each card: icon (top) + name + Lv badge + type badge + "click for details"
-  - Card minmax(150px, 1fr), mobile: 2 columns
-- New route /tech-tree/[slug]/ with full detail page
-  - Header: large icon + name + category + Lv tag + product
-  - Description section
-  - Materials grid (auto-fill, minmax(180px, 1fr))
-  - Building stats (HP/Defense) when available
-  - Related techs (same category) section
-  - Breadcrumb: Tech Tree / Category / Name
-- Detail pages: 587 generated (each tech gets its own SEO page)
+style: enlarge tech card icons (72px -> 104px container, 60px -> 88px img)
