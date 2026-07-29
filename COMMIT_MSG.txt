@@ -1,10 +1,9 @@
-fix: active filter chip white background bug
+feat: enrich 486 techs with descriptions from palworld.wiki.gg
 
-Bug: Astro scoped CSS .active-chip[data-astro-cid-xxx] didn't match
-JS-generated elements (created via innerHTML), so the chip fell back
-to default browser button styling (white bg, ugly in dark theme).
-
-Fix: move .active-chip and .reset-link styles to global.css so they
-apply everywhere. Also redesign active chip to subtle outlined style
-(dark bg + accent border + accent text + orange fill on hover) instead
-of solid orange - matches dark theme better.
+- User downloaded Technology overview from palworld.wiki.gg
+  (Cloudflare blocks our IP, so user ran the fetch via browser)
+- Crawled 530 individual tech pages -> C:\Users\31963\Desktop\palwiki-pages\
+- Parsed all 529 valid pages: 500 with descriptions, 35 with materials
+- Merged into tech.json: 468 -> 486 desc (+18), 15 -> 48 mats (+33),
+  +20 unlock levels
+- 83% of techs now have descriptions, 8% have material lists
