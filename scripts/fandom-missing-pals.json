@@ -1,0 +1,145 @@
+{
+  "gumoss-special": {
+    "drops": [
+      "Berry Seeds",
+      "Gumoss Leaf"
+    ],
+    "partner_skill": "Logging Assistance",
+    "active_skills": [],
+    "biomes": []
+  },
+  "fuack": {
+    "drops": [
+      "Leather",
+      "Aquatic Pal Fluids"
+    ],
+    "partner_skill": "Surfing Slam",
+    "active_skills": [],
+    "biomes": []
+  },
+  "celaray-lux": {
+    "drops": [
+      "Aquatic Pal Fluids"
+    ],
+    "partner_skill": "Jolt Glider",
+    "active_skills": [],
+    "biomes": []
+  },
+  "pupperai": {
+    "drops": [
+      "Bone"
+    ],
+    "partner_skill": "Best Boy|gathering=1|lumbering=1|transporting=1|maps=<gallery>",
+    "active_skills": [],
+    "biomes": []
+  },
+  "clovee": {
+    "drops": [
+      "Berry Seeds"
+    ],
+    "partner_skill": "Happy Clover|planting=1|gathering=1|maps=<gallery>",
+    "active_skills": [],
+    "biomes": []
+  },
+  "tanzee": {
+    "drops": [
+      "Mushroom"
+    ],
+    "partner_skill": "Cheery Rifle",
+    "active_skills": [],
+    "biomes": []
+  },
+  "rooby": {
+    "drops": [
+      "Flame Organ",
+      "Leather"
+    ],
+    "partner_skill": "Tiny Spark",
+    "active_skills": [],
+    "biomes": []
+  },
+  "foxparks-cryst": {
+    "drops": [
+      "Leather",
+      "Ice Organ"
+    ],
+    "partner_skill": "Huggy Frost",
+    "active_skills": [],
+    "biomes": []
+  },
+  "caprity-noct": {
+    "drops": [
+      "Caprity Meat",
+      "Red Berries",
+      "Horn",
+      "Venom Gland"
+    ],
+    "partner_skill": "Venom Picker",
+    "active_skills": [],
+    "biomes": []
+  },
+  "sparkit": {
+    "drops": [
+      "Electric Organ"
+    ],
+    "partner_skill": "Static Electricity",
+    "active_skills": [],
+    "biomes": []
+  },
+  "loupmoon-cryst": {
+    "drops": [
+      "Bone"
+    ],
+    "partner_skill": "Frozen Gleam Strike",
+    "active_skills": [],
+    "biomes": []
+  },
+  "fenglope-lux": {
+    "drops": [
+      "Leather",
+      "Horn",
+      "Electric Organ"
+    ],
+    "partner_skill": "Stormcloud",
+    "active_skills": [],
+    "biomes": []
+  },
+  "dazzi-noct": {
+    "drops": [
+      "Electric Organ",
+      "Dazzi Cloud",
+      "Dark Fragment"
+    ],
+    "partner_skill": "Lady of Dark Lightning",
+    "active_skills": [],
+    "biomes": []
+  },
+  "dumud-gild": {
+    "drops": [
+      "Raw Dumud",
+      "High Quality Pal Oil",
+      "Gold Coin"
+    ],
+    "partner_skill": "Golden Harvest",
+    "active_skills": [],
+    "biomes": []
+  },
+  "kitsun-noct": {
+    "drops": [
+      "Flame Organ",
+      "Leather",
+      "Dark Fragment"
+    ],
+    "partner_skill": "Gloomhowl",
+    "active_skills": [],
+    "biomes": []
+  },
+  "cryolinx-terra": {
+    "drops": [
+      "Ore"
+    ],
+    "partner_skill": "Explosive Strength",
+    "active_skills": [],
+    "biomes": []
+  }
+}

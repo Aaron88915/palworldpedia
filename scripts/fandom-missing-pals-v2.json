@@ -1,0 +1,595 @@
+{
+  "gumoss-special": {
+    "title": "Gumoss",
+    "drops": [
+      "Berry Seeds",
+      "Gumoss Leaf"
+    ],
+    "partner_skill": "Logging Assistance",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Bog Blast",
+        "level": 1
+      },
+      {
+        "name": "Wind Cutter",
+        "level": 7
+      },
+      {
+        "name": "Stone Blast",
+        "level": 15
+      },
+      {
+        "name": "Seed Machine Gun",
+        "level": 22
+      },
+      {
+        "name": "Seed Mine",
+        "level": 30
+      },
+      {
+        "name": "Sand Tornado",
+        "level": 40
+      },
+      {
+        "name": "Solar Blast",
+        "level": 50
+      },
+      {
+        "name": "Wind Burst",
+        "level": 70
+      }
+    ],
+    "biomes": [],
+    "food": 1
+  },
+  "fuack": {
+    "title": "Fuack",
+    "drops": [
+      "Leather",
+      "Aquatic Pal Fluids"
+    ],
+    "partner_skill": "Surfing Slam",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Aqua Gun",
+        "level": 1
+      },
+      {
+        "name": "Power Shot",
+        "level": 7
+      },
+      {
+        "name": "Hydro Jet",
+        "level": 15
+      },
+      {
+        "name": "Ice Missile",
+        "level": 22
+      },
+      {
+        "name": "Bubble Blast",
+        "level": 30
+      },
+      {
+        "name": "Aqua Burst",
+        "level": 40
+      },
+      {
+        "name": "Hydro Laser",
+        "level": 50
+      },
+      {
+        "name": "Geyser Gush",
+        "level": 70
+      }
+    ],
+    "biomes": [
+      "Windswept Island",
+      "Bamboo Groves",
+      "Marsh Island"
+    ],
+    "food": 1
+  },
+  "celaray-lux": {
+    "title": "Celaray Lux",
+    "drops": [
+      "Aquatic Pal Fluids"
+    ],
+    "partner_skill": "Jolt Glider",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Thunder Spear",
+        "level": 1
+      },
+      {
+        "name": "Shockwave",
+        "level": 7
+      },
+      {
+        "name": "Bubble Blast",
+        "level": 15
+      },
+      {
+        "name": "Lightning Streak",
+        "level": 22
+      },
+      {
+        "name": "Splash",
+        "level": 30
+      },
+      {
+        "name": "Torrential Blast",
+        "level": 40
+      },
+      {
+        "name": "Lightning Bolt",
+        "level": 50
+      },
+      {
+        "name": "Thunderstorm",
+        "level": 70
+      }
+    ],
+    "biomes": [],
+    "food": 2
+  },
+  "pupperai": {
+    "title": "Pupperai",
+    "drops": [
+      "Bone"
+    ],
+    "partner_skill": "Best Boy",
+    "partner_skill_desc": null,
+    "active_skills": [],
+    "biomes": [],
+    "food": 1
+  },
+  "clovee": {
+    "title": "Clovee",
+    "drops": [
+      "Berry Seeds"
+    ],
+    "partner_skill": "Happy Clover",
+    "partner_skill_desc": null,
+    "active_skills": [],
+    "biomes": [],
+    "food": 1
+  },
+  "tanzee": {
+    "title": "Tanzee",
+    "drops": [
+      "Mushroom"
+    ],
+    "partner_skill": "Cheery Rifle",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Wind Cutter",
+        "level": 1
+      },
+      {
+        "name": "Bog Blast",
+        "level": 7
+      },
+      {
+        "name": "Seed Machine Gun",
+        "level": 15
+      },
+      {
+        "name": "Seed Mine",
+        "level": 22
+      },
+      {
+        "name": "Stone Cannon",
+        "level": 30
+      },
+      {
+        "name": "Grass Tornado",
+        "level": 40
+      },
+      {
+        "name": "Solar Blast",
+        "level": 50
+      },
+      {
+        "name": "Wind Burst",
+        "level": 70
+      }
+    ],
+    "biomes": [],
+    "food": 1
+  },
+  "foxparks-cryst": {
+    "title": "Foxparks Cryst",
+    "drops": [
+      "Leather",
+      "Ice Organ"
+    ],
+    "partner_skill": "Huggy Frost",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Ice Missile",
+        "level": 1
+      },
+      {
+        "name": "Hydro Jet",
+        "level": 7
+      },
+      {
+        "name": "Icicle Cutter",
+        "level": 15
+      },
+      {
+        "name": "Iceberg",
+        "level": 22
+      },
+      {
+        "name": "Crystal Breath",
+        "level": 30
+      },
+      {
+        "name": "Icicle Bullet",
+        "level": 40
+      },
+      {
+        "name": "Blizzard Spike",
+        "level": 50
+      },
+      {
+        "name": "Diamond Rain",
+        "level": 70
+      }
+    ],
+    "biomes": [],
+    "food": 1
+  },
+  "caprity-noct": {
+    "title": "Caprity Noct",
+    "drops": [
+      "Caprity Meat",
+      "Red Berries",
+      "Horn",
+      "Venom Gland"
+    ],
+    "partner_skill": "Venom Picker",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Poison Fog",
+        "level": 1
+      },
+      {
+        "name": "Wind Cutter",
+        "level": 7
+      },
+      {
+        "name": "Poison Blast",
+        "level": 15
+      },
+      {
+        "name": "Multicutter",
+        "level": 22
+      },
+      {
+        "name": "Poison Shower",
+        "level": 30
+      },
+      {
+        "name": "Circle Vine",
+        "level": 40
+      },
+      {
+        "name": "Dark Laser",
+        "level": 50
+      },
+      {
+        "name": "Dark Whisp",
+        "level": 70
+      }
+    ],
+    "biomes": [],
+    "food": 2
+  },
+  "sparkit": {
+    "title": "Sparkit",
+    "drops": [
+      "Electric Organ"
+    ],
+    "partner_skill": "Static Electricity",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Spark Blast",
+        "level": 1
+      },
+      {
+        "name": "Bog Blast",
+        "level": 7
+      },
+      {
+        "name": "Shockwave",
+        "level": 15
+      },
+      {
+        "name": "Electric Ball",
+        "level": 22
+      },
+      {
+        "name": "Tri-Lightning",
+        "level": 30
+      },
+      {
+        "name": "Lightning Streak",
+        "level": 40
+      },
+      {
+        "name": "Lightning Bolt",
+        "level": 50
+      },
+      {
+        "name": "Railbolt",
+        "level": 70
+      }
+    ],
+    "biomes": [
+      "Windswept Hills"
+    ],
+    "food": 1
+  },
+  "loupmoon-cryst": {
+    "title": "Loupmoon Cryst",
+    "drops": [
+      "Bone"
+    ],
+    "partner_skill": "Frozen Gleam Strike",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Ice Missile",
+        "level": 1
+      },
+      {
+        "name": "Icicle Cutter",
+        "level": 7
+      },
+      {
+        "name": "Snow Claw",
+        "level": 15
+      },
+      {
+        "name": "Freeze Wall",
+        "level": 22
+      },
+      {
+        "name": "Icicle Bullet",
+        "level": 30
+      },
+      {
+        "name": "Icicle Line",
+        "level": 40
+      },
+      {
+        "name": "Blizzard Spike",
+        "level": 50
+      },
+      {
+        "name": "Diamond Rain",
+        "level": 70
+      }
+    ],
+    "biomes": [],
+    "food": 3
+  },
+  "fenglope-lux": {
+    "title": "Fenglope Lux",
+    "drops": [
+      "Leather",
+      "Horn",
+      "Electric Organ"
+    ],
+    "partner_skill": "Stormcloud",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Shockwave",
+        "level": 1
+      },
+      {
+        "name": "Lightning Streak",
+        "level": 7
+      },
+      {
+        "name": "Acid Rain",
+        "level": 15
+      },
+      {
+        "name": "Thunder Tempest",
+        "level": 22
+      },
+      {
+        "name": "Thunder Rain",
+        "level": 30
+      },
+      {
+        "name": "Lightning Bolt",
+        "level": 40
+      },
+      {
+        "name": "Thunderstorm",
+        "level": 50
+      },
+      {
+        "name": "Railbolt",
+        "level": 70
+      }
+    ],
+    "biomes": [],
+    "food": 5
+  },
+  "dazzi-noct": {
+    "title": "Dazzi Noct",
+    "drops": [
+      "Electric Organ",
+      "Dazzi Cloud",
+      "Dark Fragment"
+    ],
+    "partner_skill": "Lady of Dark Lightning",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Air Cannon",
+        "level": 1
+      },
+      {
+        "name": "Shadow Burst",
+        "level": 7
+      },
+      {
+        "name": "Dark Arrow",
+        "level": 15
+      },
+      {
+        "name": "Acid Rain",
+        "level": 22
+      },
+      {
+        "name": "Tri-Lightning",
+        "level": 30
+      },
+      {
+        "name": "Apocalypse",
+        "level": 40
+      },
+      {
+        "name": "Thunder Rain",
+        "level": 50
+      },
+      {
+        "name": "Dark Whisp",
+        "level": 70
+      }
+    ],
+    "biomes": [],
+    "food": 2
+  },
+  "dumud-gild": {
+    "title": "Dumud Gild",
+    "drops": [
+      "Raw Dumud",
+      "High Quality Pal Oil",
+      "Gold Coin"
+    ],
+    "partner_skill": "Golden Harvest",
+    "partner_skill_desc": null,
+    "active_skills": [],
+    "biomes": [],
+    "food": 3
+  },
+  "kitsun-noct": {
+    "title": "Kitsun Noct",
+    "drops": [
+      "Flame Organ",
+      "Leather",
+      "Dark Fragment"
+    ],
+    "partner_skill": "Gloomhowl",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Double Fang (Dark)",
+        "level": 1
+      },
+      {
+        "name": "Fierce Fang (Dark)",
+        "level": 2
+      },
+      {
+        "name": "Dark Cannon",
+        "level": 3
+      },
+      {
+        "name": "Spirit Fire",
+        "level": 7
+      },
+      {
+        "name": "Spirit Flame",
+        "level": 15
+      },
+      {
+        "name": "Daring Shadowstorm",
+        "level": 22
+      },
+      {
+        "name": "Nightmare Ball",
+        "level": 30
+      },
+      {
+        "name": "Flame Funnel",
+        "level": 40
+      },
+      {
+        "name": "Dark Whisp",
+        "level": 50
+      },
+      {
+        "name": "Dragon Meteor",
+        "level": 70
+      }
+    ],
+    "biomes": [],
+    "food": 5
+  },
+  "cryolinx-terra": {
+    "title": "Cryolinx Terra",
+    "drops": [
+      "Ore"
+    ],
+    "partner_skill": "Explosive Strength",
+    "partner_skill_desc": null,
+    "active_skills": [
+      {
+        "name": "Power Shot",
+        "level": 1
+      },
+      {
+        "name": "Stone Blast",
+        "level": 7
+      },
+      {
+        "name": "Stone Cannon",
+        "level": 15
+      },
+      {
+        "name": "Sand Tornado",
+        "level": 22
+      },
+      {
+        "name": "Stone Claw",
+        "level": 30
+      },
+      {
+        "name": "Rockburst",
+        "level": 35
+      },
+      {
+        "name": "Rock Lance",
+        "level": 40
+      },
+      {
+        "name": "Rocky Impact",
+        "level": 50
+      },
+      {
+        "name": "Thunderstorm",
+        "level": 70
+      }
+    ],
+    "biomes": [],
+    "food": 7
+  }
+}

@@ -7,7 +7,8 @@ param(
 
 for ($i = 1; $i -le $MaxRetries; $i++) {
     Write-Host "[$i/$MaxRetries] Pushing..." -ForegroundColor Cyan
-    git push 2>&1 | Out-Host
+    $output = git push 2>&1
+    $output | Out-Host
     if ($LASTEXITCODE -eq 0) {
         Write-Host "Push succeeded!" -ForegroundColor Green
         exit 0
