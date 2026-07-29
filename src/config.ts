@@ -15,10 +15,10 @@ export const SITE = {
   // 社交
   twitter: '@palworldpedia',
 
-  // AdSense（申请通过后填入）
+  // AdSense
   adsense: {
-    enabled: false,
-    client: '',
+    enabled: true,
+    client: 'ca-pub-6473783239192829',
   },
 
   // 联系

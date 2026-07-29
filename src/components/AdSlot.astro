@@ -1,7 +1,8 @@
 ---
 /**
  * 广告位组件
- * 在 AdSense 申请通过前显示占位符，避免布局抖动
+ * AdSense 已启用时显示 ins 标签（auto ads 会自动填充）；
+ * 未启用时显示占位符，避免布局抖动
  */
 import { SITE } from '@/config';
 
@@ -20,7 +21,6 @@ const isAdSenseEnabled = SITE.adsense.enabled;
       class="adsbygoogle"
       style="display:block"
       data-ad-client={SITE.adsense.client}
-      data-ad-slot=""
       data-ad-format="auto"
       data-full-width-responsive="true"
     />

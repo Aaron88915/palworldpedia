@@ -52,6 +52,15 @@ const rssUrl = new URL('rss.xml', Astro.site).href;
     <link rel="canonical" href={canonicalUrl} />
     <meta name="google-site-verification" content="2hRMJPHytmhSma8SEv1fTUOpq8Msl5vktP0oDp_mxP8" />
 
+    {/* Google AdSense */}
+    {SITE.adsense.enabled && (
+      <script
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${SITE.adsense.client}`}
+        crossorigin="anonymous"
+      />
+    )}
+
     {/* hreflang - 英文版就绪后启用 */}
     {/* {hreflangs.map(({ lang: hl, url }) => (
       <link rel="alternate" hreflang={hl} href={url} />

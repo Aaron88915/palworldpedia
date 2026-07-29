@@ -1,1 +1,5 @@
-chore: add Google Search Console verification meta tag
+feat: enable Google AdSense (ca-pub-6473783239192829)
+
+- config.ts: adsense.enabled = true, client ID set
+- Layout.astro: add global AdSense script tag in head (only when enabled)
+- AdSlot.astro: remove empty data-ad-slot, let auto-ads fill ins tags
