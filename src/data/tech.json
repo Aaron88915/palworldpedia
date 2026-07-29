@@ -44,7 +44,7 @@
   "name": "Palbox",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_PalBoxV2.webp",
+  "icon": "/images/tech/T_icon_buildObject_PalBoxV2.png",
   "id": "palbox"
  },
  {
@@ -158,7 +158,7 @@
   "name": "Global Palbox",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_GlobalPalStorage.webp",
+  "icon": "/images/tech/T_icon_buildObject_GlobalPalStorage.png",
   "id": "globalpalstorage"
  },
  {
@@ -214,7 +214,7 @@
   "name": "Normal Parachute",
   "category": "Items",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Glider_Glider_Old.webp",
+  "icon": "/images/tech/T_itemicon_Glider_Glider_Old.png",
   "id": "battle_glider_grade_01"
  },
  {
@@ -538,7 +538,7 @@
   "name": "Bear Trap (Small)",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Trap_LegHold.webp",
+  "icon": "/images/tech/T_icon_buildObject_Trap_LegHold.png",
   "id": "trap_leghold"
  },
  {
@@ -658,7 +658,7 @@
   "name": "Faux Greenery Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Green.webp",
+  "icon": "/images/tech/T_icon_buildObject_FurnitureTree01_Green.png",
   "id": "furnituretree_green"
  },
  {
@@ -666,7 +666,7 @@
   "name": "Tidy Table Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TableCircular_Wood_None.webp",
+  "icon": "/images/tech/T_icon_buildObject_TableCircular_Wood_None.png",
   "id": "tablecircular"
  },
  {
@@ -778,7 +778,7 @@
   "name": "Faux Crimson Foliage Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Red.webp",
+  "icon": "/images/tech/T_icon_buildObject_FurnitureTree01_Red.png",
   "id": "furnituretree_red"
  },
  {
@@ -786,7 +786,7 @@
   "name": "Antique Desk Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Desk01_Stone.webp",
+  "icon": "/images/tech/T_icon_buildObject_Desk01_Stone.png",
   "id": "furnitureset_24"
  },
  {
@@ -826,7 +826,7 @@
   "name": "Wooden Board",
   "category": "Items",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Processed_Wood.webp",
+  "icon": "/images/tech/T_itemicon_Material_Processed_Wood.png",
   "id": "processed_wood"
  },
  {
@@ -890,7 +890,7 @@
   "name": "Faux Golden Foliage Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Yellow.webp",
+  "icon": "/images/tech/T_icon_buildObject_FurnitureTree01_Yellow.png",
   "id": "furnituretree_yellow"
  },
  {
@@ -906,7 +906,7 @@
   "name": "Antique Mirror Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Mirror01_Stone.webp",
+  "icon": "/images/tech/T_icon_buildObject_Mirror01_Stone.png",
   "id": "furnitureset_16"
  },
  {
@@ -1006,7 +1006,7 @@
   "name": "Mega Glider",
   "category": "Items",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Glider_Glider_Good.webp",
+  "icon": "/images/tech/T_itemicon_Glider_Glider_Good.png",
   "id": "battle_glider_grade_02"
  },
  {
@@ -1066,7 +1066,7 @@
   "name": "Bathroom Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Toilet01_Stone.webp",
+  "icon": "/images/tech/T_icon_buildObject_Toilet01_Stone.png",
   "id": "furnitureset_25"
  },
  {
@@ -1136,7 +1136,7 @@
   "name": "Stone Structure Set",
   "category": "Structures",
   "cost": 3,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Stone_Foundation.webp",
+  "icon": "/images/tech/T_icon_buildObject_Stone_Foundation.png",
   "id": "stone_houseset"
  },
  {
@@ -1212,7 +1212,7 @@
   "name": "Free Pal Alliance Flag Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Believer_Flag.webp",
+  "icon": "/images/tech/T_icon_buildObject_Believer_Flag.png",
   "id": "believerflagset"
  },
  {
@@ -1290,7 +1290,7 @@
   "name": "Gunpowder",
   "category": "Items",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Gunpowder2.webp",
+  "icon": "/images/tech/T_itemicon_Material_Gunpowder2.png",
   "id": "battle_gunpowder_grade_02"
  },
  {
@@ -1306,7 +1306,7 @@
   "name": "Tomato Plantation",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FarmBlockV2_tomato.webp",
+  "icon": "/images/tech/T_icon_buildObject_FarmBlockV2_tomato.png",
   "id": "product_farm_tomato"
  },
  {
@@ -1322,7 +1322,7 @@
   "name": "Bear Trap (Large)",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Trap_LegHold.webp",
+  "icon": "/images/tech/T_icon_buildObject_Trap_LegHold.png",
   "id": "trap_leghold_big"
  },
  {
@@ -1346,7 +1346,7 @@
   "name": "Antique Dresser",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TableDresser01_Stone.webp",
+  "icon": "/images/tech/T_icon_buildObject_TableDresser01_Stone.png",
   "id": "tabledresser01_stone"
  },
  {
@@ -1354,7 +1354,7 @@
   "name": "Pal Expedition Station",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Expedition.webp",
+  "icon": "/images/tech/T_icon_buildObject_Expedition.png",
   "id": "expedition"
  },
  {
@@ -1386,7 +1386,7 @@
   "name": "Flea Market (Pals)",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_PalBooth.webp",
+  "icon": "/images/tech/T_icon_buildObject_PalBooth.png",
   "id": "palbooth"
  },
  {
@@ -1474,7 +1474,7 @@
   "name": "Faux Bamboo Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Bamboo.webp",
+  "icon": "/images/tech/T_icon_buildObject_FurnitureTree01_Bamboo.png",
   "id": "furnituretree_bamboo"
  },
  {
@@ -1514,7 +1514,7 @@
   "name": "Clinic",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Clinic.webp",
+  "icon": "/images/tech/T_icon_buildObject_Clinic.png",
   "description": "A basic medical facility for managing the health of Pals working at the base.\n\nAssigning a Pal with Medicine Production suitability helps reduce SAN depletion and prevent illness and injury.\n\nWhile sanitation has its limits, it plays a crucial role in early base development.",
   "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Clinic.webp",
   "materials": [
@@ -1606,7 +1606,7 @@
   "name": "Lettuce Plantation",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FarmBlockV2_Lettuce.webp",
+  "icon": "/images/tech/T_icon_buildObject_FarmBlockV2_Lettuce.png",
   "id": "product_farm_lettuce"
  },
  {
@@ -1686,7 +1686,7 @@
   "name": "Power Generator",
   "category": "Structures",
   "cost": 3,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_EnergyGenerator_Electric.webp",
+  "icon": "/images/tech/T_icon_buildObject_EnergyGenerator_Electric.png",
   "id": "infra_electricgenerator_grade_01"
  },
  {
@@ -1694,7 +1694,7 @@
   "name": "Lamp",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_LampStand.webp",
+  "icon": "/images/tech/T_icon_buildObject_LampStand.png",
   "description": "A light source that provides illumination to a base even at night.\n\nRequires electricity, but lights up a larger area.",
   "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_LampStand.webp",
   "materials": [
@@ -1726,7 +1726,7 @@
   "name": "Human-Powered Generator",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ManualElectricGenerator.webp",
+  "icon": "/images/tech/T_icon_buildObject_ManualElectricGenerator.png",
   "id": "manualelectricgenerator"
  },
  {
@@ -1734,7 +1734,7 @@
   "name": "Mounted Crossbow",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_efenseBulletLauncher_BowGun.webp",
+  "icon": "/images/tech/T_icon_buildObject_efenseBulletLauncher_BowGun.png",
   "id": "battle_defense_bowgun"
  },
  {
@@ -1758,7 +1758,7 @@
   "name": "Antique Lamp Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Light_FloorLamp01.webp",
+  "icon": "/images/tech/T_icon_buildObject_Light_FloorLamp01.png",
   "id": "furnitureset_29"
  },
  {
@@ -1806,7 +1806,7 @@
   "name": "Ceiling Lamp",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_LampTop.webp",
+  "icon": "/images/tech/T_icon_buildObject_LampTop.png",
   "id": "ceilinglamp"
  },
  {
@@ -1830,7 +1830,7 @@
   "name": "Faux Tropical Greenery Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Tropical.webp",
+  "icon": "/images/tech/T_icon_buildObject_FurnitureTree01_Tropical.png",
   "id": "furnituretree_tropical"
  },
  {
@@ -1862,7 +1862,7 @@
   "name": "Fine Bed",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_PlayerBed_03.webp",
+  "icon": "/images/tech/T_icon_buildObject_PlayerBed_03.png",
   "id": "infra_playerbed_grade_02"
  },
  {
@@ -1870,7 +1870,7 @@
   "name": "High Quality Monitoring Stand",
   "category": "Structures",
   "cost": 3,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BaseCampWorkHard02.webp",
+  "icon": "/images/tech/T_icon_buildObject_BaseCampWorkHard02.png",
   "id": "basecampworkhard02"
  },
  {
@@ -1878,7 +1878,7 @@
   "name": "Stump and Axe",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Stump.webp",
+  "icon": "/images/tech/T_icon_buildObject_Stump.png",
   "id": "stump"
  },
  {
@@ -2094,7 +2094,7 @@
   "name": "High Quality Hot Spring",
   "category": "Structures",
   "cost": 3,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Spa_2.webp",
+  "icon": "/images/tech/T_icon_buildObject_Spa_2.png",
   "id": "spa2"
  },
  {
@@ -2150,7 +2150,7 @@
   "name": "Carrot Plantation",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FarmBlockV2_Carrot.webp",
+  "icon": "/images/tech/T_icon_buildObject_FarmBlockV2_Carrot.png",
   "id": "product_farm_carrot"
  },
  {
@@ -2166,7 +2166,7 @@
   "name": "Palbox Control Device",
   "category": "Structures",
   "cost": 3,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BaseCampWorkerExtraStation.webp",
+  "icon": "/images/tech/T_icon_buildObject_BaseCampWorkerExtraStation.png",
   "id": "basecampworkerextrastation"
  },
  {
@@ -2232,7 +2232,7 @@
   "name": "Electric Mine",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Trap_MineElecShock.webp",
+  "icon": "/images/tech/T_icon_buildObject_Trap_MineElecShock.png",
   "id": "trap_mineelecshock"
  },
  {
@@ -2248,7 +2248,7 @@
   "name": "Snowman",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Snowman.webp",
+  "icon": "/images/tech/T_icon_buildObject_Snowman.png",
   "description": "Place in base to improve cooling speed.\n\nPlacing more than one has no additional effect.",
   "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Snowman.webp",
   "materials": [
@@ -2300,7 +2300,7 @@
   "name": "Summoning Altar",
   "category": "Structures",
   "cost": 3,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Altar.webp",
+  "icon": "/images/tech/T_icon_buildObject_Altar.png",
   "id": "altar"
  },
  {
@@ -2380,7 +2380,7 @@
   "name": "Ultra Sphere",
   "category": "Items",
   "cost": 4,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere_Master.webp",
+  "icon": "/images/tech/T_itemicon_PalSphere_Master.png",
   "id": "special_palsphere_grade_05"
  },
  {
@@ -2544,7 +2544,7 @@
   "name": "Electric Egg Incubator",
   "category": "Structures",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ElectricHatchingPalEgg.webp",
+  "icon": "/images/tech/T_icon_buildObject_ElectricHatchingPalEgg.png",
   "id": "special_electrichatchingpalegg"
  },
  {
@@ -2560,7 +2560,7 @@
   "name": "Refined Metal Armor",
   "category": "Items",
   "cost": 3,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_IronArmor.webp",
+  "icon": "/images/tech/T_itemicon_Armor_IronArmor.png",
   "id": "battle_armor_grade_03_iron"
  },
  {
@@ -2602,7 +2602,7 @@
   "name": "Accumulator",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_EnergyStorage_Electric.webp",
+  "icon": "/images/tech/T_icon_buildObject_EnergyStorage_Electric.png",
   "id": "energystorage_electric"
  },
  {
@@ -2618,7 +2618,7 @@
   "name": "Faux Desert Greenery Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Desert.webp",
+  "icon": "/images/tech/T_icon_buildObject_FurnitureTree01_Desert.png",
   "id": "furnituretree_desert"
  },
  {
@@ -2722,7 +2722,7 @@
   "name": "Leather Chair Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Sofa01_Iron.webp",
+  "icon": "/images/tech/T_icon_buildObject_Sofa01_Iron.png",
   "id": "furnitureset_7"
  },
  {
@@ -2834,7 +2834,7 @@
   "name": "Mounted Machine Gun",
   "category": "Structures",
   "cost": 3,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DefenseMachinegun.webp",
+  "icon": "/images/tech/T_icon_buildObject_DefenseMachinegun.png",
   "id": "battle_defense_machinegun"
  },
  {
@@ -3122,7 +3122,7 @@
   "name": "Pal Metal Axe",
   "category": "Items",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Axe_Tier_03.webp",
+  "icon": "/images/tech/T_itemicon_Weapon_Axe_Tier_03.png",
   "id": "battle_meleeweapon_axe_steal"
  },
  {
@@ -3146,7 +3146,7 @@
   "name": "Glass Structure Set",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Glass_foundation.webp",
+  "icon": "/images/tech/T_icon_buildObject_Glass_foundation.png",
   "id": "glass_houseset"
  },
  {
@@ -3266,7 +3266,7 @@
   "name": "Street Lamp Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Light_LightPole01.webp",
+  "icon": "/images/tech/T_icon_buildObject_Light_LightPole01.png",
   "id": "furnitureset_27"
  },
  {
@@ -3346,7 +3346,7 @@
   "name": "Emergency Exit Sign Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SignExit_Ceiling_Iron.webp",
+  "icon": "/images/tech/T_icon_buildObject_SignExit_Ceiling_Iron.png",
   "id": "furnitureset_8"
  },
  {
@@ -3410,7 +3410,7 @@
   "name": "Large Incubator",
   "category": "Structures",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MultiHatchingPalEgg.webp",
+  "icon": "/images/tech/T_icon_buildObject_MultiHatchingPalEgg.png",
   "id": "multihatchingpalegg"
  },
  {
@@ -3434,7 +3434,7 @@
   "name": "Japanese-Style Structure Set",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_JapaneseStyle_foundation.webp",
+  "icon": "/images/tech/T_icon_buildObject_JapaneseStyle_foundation.png",
   "id": "japanesestyle_houseset"
  },
  {
@@ -3442,7 +3442,7 @@
   "name": "Faux Snowy Greenery Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Snow.webp",
+  "icon": "/images/tech/T_icon_buildObject_FurnitureTree01_Snow.png",
   "id": "furnituretree_snow"
  },
  {
@@ -3450,7 +3450,7 @@
   "name": "Road Sign Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TrafficSign01_Iron.webp",
+  "icon": "/images/tech/T_icon_buildObject_TrafficSign01_Iron.png",
   "id": "furnitureset_12"
  },
  {
@@ -3522,7 +3522,7 @@
   "name": "Large Power Generator",
   "category": "Structures",
   "cost": 4,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ElectricGenerator_Large.webp",
+  "icon": "/images/tech/T_icon_buildObject_ElectricGenerator_Large.png",
   "id": "electricgenerator_large"
  },
  {
@@ -3530,7 +3530,7 @@
   "name": "Ultimate Sphere",
   "category": "Items",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere_Ultimate.webp",
+  "icon": "/images/tech/T_itemicon_PalSphere_Ultimate.png",
   "id": "special_palsphere_grade_07"
  },
  {
@@ -3594,7 +3594,7 @@
   "name": "Hyper Glider",
   "category": "Items",
   "cost": 4,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Glider_Glider_Legendary.webp",
+  "icon": "/images/tech/T_itemicon_Glider_Glider_Legendary.png",
   "id": "battle_glider_grade_04"
  },
  {
@@ -3666,7 +3666,7 @@
   "name": "Grenade Ammo",
   "category": "Items",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_GrenadeBullet.webp",
+  "icon": "/images/tech/T_itemicon_Ammo_GrenadeBullet.png",
   "id": "grenadebullet"
  },
  {
@@ -3850,7 +3850,7 @@
   "name": "Pal Disassembly Conveyor",
   "category": "Structures",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DismantlingConveyor.webp",
+  "icon": "/images/tech/T_icon_buildObject_DismantlingConveyor.png",
   "id": "dismantlingconveyor"
  },
  {
@@ -3858,7 +3858,7 @@
   "name": "Pal Pod",
   "category": "Structures",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MedicalPalBed_05.webp",
+  "icon": "/images/tech/T_icon_buildObject_MedicalPalBed_05.png",
   "id": "medicalpalbed_05"
  },
  {
@@ -3890,7 +3890,7 @@
   "name": "Advanced Arrow",
   "category": "Items",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_SFArrow.webp",
+  "icon": "/images/tech/T_itemicon_Ammo_SFArrow.png",
   "id": "sfarrow"
  },
  {
@@ -3994,7 +3994,7 @@
   "name": "Large-Scale Electric Egg Incubator",
   "category": "Structures",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MultiElectricHatchingPalEgg.webp",
+  "icon": "/images/tech/T_icon_buildObject_MultiElectricHatchingPalEgg.png",
   "id": "multielectrichatchingpalegg"
  },
  {
@@ -4018,7 +4018,7 @@
   "name": "Laser Gatling Cartridge",
   "category": "Items",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_LaserGatlingBullet.webp",
+  "icon": "/images/tech/T_itemicon_Ammo_LaserGatlingBullet.png",
   "id": "lasergatlingbullet"
  },
  {
@@ -4082,7 +4082,7 @@
   "name": "Feybreak Flag Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DarkIsland_Flag.webp",
+  "icon": "/images/tech/T_icon_buildObject_DarkIsland_Flag.png",
   "id": "darkislandflagset"
  },
  {
@@ -4122,7 +4122,7 @@
   "name": "Plasma Cartridge",
   "category": "Items",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_EnergyLauncherBullet.webp",
+  "icon": "/images/tech/T_itemicon_Ammo_EnergyLauncherBullet.png",
   "id": "energylauncherbullet"
  },
  {
@@ -4146,7 +4146,7 @@
   "name": "Advanced Medicine Workbench",
   "category": "Structures",
   "cost": 4,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MedicineFacility_03.webp",
+  "icon": "/images/tech/T_icon_buildObject_MedicineFacility_03.png",
   "id": "medicinefacility_03"
  },
  {
@@ -4202,7 +4202,7 @@
   "name": "Futuristic Structure Set",
   "category": "Structures",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SF_foundation.webp",
+  "icon": "/images/tech/T_icon_buildObject_SF_foundation.png",
   "id": "sf_houseset"
  },
  {
@@ -4346,7 +4346,7 @@
   "name": "Rocket Ammo",
   "category": "Items",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_ExplosiveBullet.webp",
+  "icon": "/images/tech/T_itemicon_Ammo_ExplosiveBullet.png",
   "id": "launcherbullet"
  },
  {
@@ -4394,7 +4394,7 @@
   "name": "Ancient Furnace",
   "category": "Structures",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_AncientBlastFurnace.webp",
+  "icon": "/images/tech/T_icon_buildObject_AncientBlastFurnace.png",
   "id": "ancientblastfurnace"
  },
  {
@@ -4482,7 +4482,7 @@
   "name": "Ancient Structure Set",
   "category": "Structures",
   "cost": 3,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Ancient_foundation.webp",
+  "icon": "/images/tech/T_icon_buildObject_Ancient_foundation.png",
   "id": "ancient_houseset"
  },
  {
@@ -4578,7 +4578,7 @@
   "name": "Heavy Assault Rifle",
   "category": "Items",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SkyAssaultRifle.webp",
+  "icon": "/images/tech/T_itemicon_Weapon_SkyAssaultRifle.png",
   "id": "skyassaultrifle"
  },
  {
@@ -4634,7 +4634,7 @@
   "name": "Ancient Monitoring Stand",
   "category": "Structures",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BaseCampWorkHard03.webp",
+  "icon": "/images/tech/T_icon_buildObject_BaseCampWorkHard03.png",
   "id": "basecampworkhard03"
  },
  {
@@ -4650,7 +4650,7 @@
   "name": "Azure Covenant Flag Set",
   "category": "Structures",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SkyIsland_Flag.webp",
+  "icon": "/images/tech/T_icon_buildObject_SkyIsland_Flag.png",
   "id": "skyislandflagset"
  },
  {
@@ -4722,7 +4722,7 @@
   "name": "Gold Coin Assembly Line",
   "category": "Structures",
   "cost": 4,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Factory_Money.webp",
+  "icon": "/images/tech/T_icon_buildObject_Factory_Money.png",
   "id": "factory_money"
  },
  {
@@ -4770,7 +4770,7 @@
   "name": "Ancient Relic Recycler",
   "category": "Structures",
   "cost": 3,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_AncientRelicRecycler.webp",
+  "icon": "/images/tech/T_icon_buildObject_AncientRelicRecycler.png",
   "id": "ancientrelicrecycler"
  },
  {
@@ -4794,7 +4794,7 @@
   "name": "Beam Scatter Ammo",
   "category": "Items",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_WidePenetrateShotgunBullet.webp",
+  "icon": "/images/tech/T_itemicon_Ammo_WidePenetrateShotgunBullet.png",
   "id": "widepenetrateshotgunbullet"
  },
  {
@@ -4810,7 +4810,7 @@
   "name": "Ancient Power Generator",
   "category": "Structures",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_AncientElectricGenerator.webp",
+  "icon": "/images/tech/T_icon_buildObject_AncientElectricGenerator.png",
   "id": "ancientelectricgenerator"
  },
  {
@@ -4842,7 +4842,7 @@
   "name": "Explosion-Resistant Undershirt",
   "category": "Items",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_ExplosionResist.webp",
+  "icon": "/images/tech/T_itemicon_Accessory_ExplosionResist.png",
   "id": "accessory_explosionresist"
  },
  {
@@ -4858,7 +4858,7 @@
   "name": "Ancient Hatchery",
   "category": "Structures",
   "cost": 8,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MultiElectricHatchingPalEggWithBreed.webp",
+  "icon": "/images/tech/T_icon_buildObject_MultiElectricHatchingPalEggWithBreed.png",
   "id": "multielectrichatchingpaleggwithbreed"
  },
  {
@@ -4906,7 +4906,7 @@
   "name": "Plasma Rifle Ammo",
   "category": "Items",
   "cost": 1,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_ElectricArcAssaultRifleBullet.webp",
+  "icon": "/images/tech/T_itemicon_Ammo_ElectricArcAssaultRifleBullet.png",
   "id": "electricarcassaultriflebullet"
  },
  {
@@ -4914,7 +4914,7 @@
   "name": "Ancient Material Synthesizer",
   "category": "Structures",
   "cost": 5,
-  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_AncientMultiProduct.webp",
+  "icon": "/images/tech/T_icon_buildObject_AncientMultiProduct.png",
   "id": "ancientmultiproduct"
  },
  {
@@ -4986,7 +4986,7 @@
   "name": "Beam Launcher Ammo",
   "category": "Items",
   "cost": 2,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_BeamLauncherBullet.webp",
+  "icon": "/images/tech/T_itemicon_Ammo_BeamLauncherBullet.png",
   "id": "beamlauncherbullet"
  },
  {
@@ -5002,7 +5002,7 @@
   "name": "Wing Pack",
   "category": "Items",
   "cost": 9,
-  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Glider_WingGlider.webp",
+  "icon": "/images/tech/T_itemicon_Glider_WingGlider.png",
   "id": "wingglider"
  }
 ]

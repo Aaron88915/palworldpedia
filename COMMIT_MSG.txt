@@ -1,8 +1,8 @@
-fix: download tech icons locally + hide broken ones
+fix: fill remaining 76+8 tech icons from palworld.gg
 
-- 488 tech icons downloaded from cdn.paldb.cc to public/images/tech/
-- tech.json icon URLs rewritten to local /images/tech/...
-- 84 icons (3.5KB each average, ~3.5MB total) keep CDN URL since paldb.cc
-  references broken paths for them
-- Add onerror handler on tech icon <img> to hide broken images
-- Add decoding="async" for better rendering
+palworld.gg/technology-tree has all 587 tech icons referenced.
+- Parse name->icon URL mapping from page (537 unique)
+- Fill 76 missing icons from this source (.png vs paldb.cc's broken .webp)
+- Manually map 8 more for ancient techs (class="item ancient" was missed)
+- 0 CDN references remain in tech.json
+- 571 unique icons in public/images/tech/
