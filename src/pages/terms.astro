@@ -1,0 +1,158 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { SITE } from '@/config';
+---
+
+<Layout
+  title="服务条款"
+  description="Palworldpedia 服务条款 - 使用本站的规则、限制和责任声明"
+>
+  <article class="content">
+    <h1>服务条款</h1>
+    <p class="text-muted">最后更新：2026-07-29</p>
+
+    <h2>1. 接受条款</h2>
+    <p>
+      访问和使用 {SITE.name}（以下简称"本站"）即表示你同意遵守以下服务条款。如果你不同意这些条款，请不要使用本站。
+    </p>
+
+    <h2>2. 服务说明</h2>
+    <p>
+      本站是一个非官方的《幻兽帕鲁》（Palworld）游戏攻略网站，提供：
+    </p>
+    <ul>
+      <li>帕鲁图鉴（288 只帕鲁的属性、技能、词条等数据）</li>
+      <li>配种计算器（基于配种矩阵推算结果）</li>
+      <li>科技树查询（587 个科技点的解锁等级、材料、用途）</li>
+      <li>基地电力计算器</li>
+      <li>其他相关工具与攻略</li>
+    </ul>
+
+    <h2>3. 非官方声明</h2>
+    <p>
+      本站为<strong>非官方粉丝站点</strong>，与 Pocketpair 株式会社及其关联公司无任何关联、赞助或背书关系。
+    </p>
+    <p>
+      "Palworld"、帕鲁形象、游戏素材均为 Pocketpair 的注册商标或版权财产，仅在合理使用范围内用于信息性、评论性目的。
+    </p>
+
+    <h2>4. 数据来源与准确性</h2>
+    <p>本站数据来源于：</p>
+    <ul>
+      <li>公开游戏数据提取</li>
+      <li>Pocketpair 官方公告与更新日志</li>
+      <li>第三方数据库（paldb.cc、palworld.gg 等 CC-BY-SA 协议内容）</li>
+      <li>用户反馈与社区贡献</li>
+    </ul>
+    <p>
+      <strong>我们努力保证数据准确，但不保证完整性、时效性或无错误。</strong>游戏版本更新可能导致数据过时。在重要决策前请以游戏内实际显示为准。
+    </p>
+
+    <h2>5. 用户行为规范</h2>
+    <p>使用本站时，你同意不：</p>
+    <ul>
+      <li>进行任何非法活动</li>
+      <li>试图破坏本站安全或访问未授权内容</li>
+      <li>使用自动化工具大规模抓取本站内容（爬虫、机器人等）</li>
+      <li>发布虚假、误导、骚扰、歧视或其他不当内容（评论区、表单等）</li>
+      <li>侵犯 Pocketpair 或第三方的知识产权</li>
+    </ul>
+
+    <h2>6. 知识产权</h2>
+    <p>
+      本站文字、代码、UI 设计等原创内容的版权归 {SITE.name} 所有（除非另有说明），基于 CC-BY-SA 协议共享。
+    </p>
+    <p>
+      游戏相关的名称、形象、图像等版权归 Pocketpair 所有，仅在合理使用范围内引用。
+    </p>
+    <p>
+      如有版权问题，请联系我们：<a href={`mailto:${SITE.email}`}>{SITE.email}</a>，我们会在 24 小时内处理。
+    </p>
+
+    <h2>7. 免责声明</h2>
+    <p>本站按"现状"提供服务。在法律允许的最大范围内：</p>
+    <ul>
+      <li>本站不对数据准确性、完整性、可用性做任何明示或暗示的保证</li>
+      <li>本站不对因使用本站内容造成的任何损失（包括但不限于游戏内损失、数据丢失等）承担责任</li>
+      <li>本站可能随时修改、暂停或终止服务，恕不另行通知</li>
+    </ul>
+
+    <h2>8. 广告</h2>
+    <p>
+      本站通过 Google AdSense 展示第三方广告。广告内容由 Google 及其广告主提供，不代表本站立场。
+    </p>
+    <p>
+      通过本站购买第三方产品或服务产生的任何问题，本站不承担责任。
+    </p>
+
+    <h2>9. 第三方链接</h2>
+    <p>
+      本站可能包含指向第三方网站的链接（如 Pocketpair 官方、游戏商店等）。这些链接仅为方便用户而提供，本站不对第三方网站的内容、政策或服务负责。
+    </p>
+
+    <h2>10. 服务变更</h2>
+    <p>
+      本站保留随时修改、暂停或终止任何功能、内容的权利，无需事先通知。
+    </p>
+
+    <h2>11. 条款修改</h2>
+    <p>
+      本站保留随时修改这些条款的权利。修改后的条款自发布之日起生效。继续使用本站即表示你接受修改后的条款。
+    </p>
+
+    <h2>12. 法律适用</h2>
+    <p>
+      本条款的解释、效力及争议解决均适用中华人民共和国的法律。如有争议，应通过友好协商解决。
+    </p>
+
+    <h2>13. 联系我们</h2>
+    <p>如有疑问或建议，请联系：</p>
+    <ul>
+      <li>邮箱：<a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+    </ul>
+
+    <p class="text-muted" style="margin-top: 2rem;">
+      © {new Date().getFullYear()} {SITE.name}. 本站为非官方粉丝站点。
+    </p>
+  </article>
+</Layout>
+
+<style>
+  .content {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .content h2 {
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+
+  .content h3 {
+    margin-top: 1.5rem;
+    color: var(--text-primary);
+  }
+
+  .content p, .content li {
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .content ul {
+    padding-left: 1.5rem;
+  }
+
+  .content ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .content a {
+    color: var(--accent);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+  }
+</style>

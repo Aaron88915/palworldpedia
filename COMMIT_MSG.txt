@@ -1,9 +1,8 @@
-feat: enrich 486 techs with descriptions from palworld.wiki.gg
+chore: update contact email to 126.com + add Terms of Service
 
-- User downloaded Technology overview from palworld.wiki.gg
-  (Cloudflare blocks our IP, so user ran the fetch via browser)
-- Crawled 530 individual tech pages -> C:\Users\31963\Desktop\palwiki-pages\
-- Parsed all 529 valid pages: 500 with descriptions, 35 with materials
-- Merged into tech.json: 468 -> 486 desc (+18), 15 -> 48 mats (+33),
-  +20 unlock levels
-- 83% of techs now have descriptions, 8% have material lists
+- SITE.email: contact@palworldpedia.cc -> palworldpedia@126.com
+- contact.astro: remove GitHub link section
+- terms.astro: new page with 13-section ToS covering:
+  acceptance, service description, non-official disclaimer, data accuracy,
+  user conduct, IP, liability, ads, third-party links, changes,
+  modifications, jurisdiction, contact

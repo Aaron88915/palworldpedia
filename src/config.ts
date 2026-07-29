@@ -22,7 +22,7 @@ export const SITE = {
   },
 
   // 联系
-  email: 'contact@palworldpedia.cc',
+  email: 'palworldpedia@126.com',
 
   // i18n
   defaultLocale: 'zh' as const,
