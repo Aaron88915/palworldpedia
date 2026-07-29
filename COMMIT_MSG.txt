@@ -1,1 +1,10 @@
-style: enlarge tech card icons (72px -> 104px container, 60px -> 88px img)
+feat: add sort filter to tech tree (level asc/desc + A-Z/Z-A)
+
+- New filter row "排序" with 4 options:
+  - 等级 ↑ (Lv 1 -> 9)
+  - 等级 ↓ (Lv 9 -> 1)
+  - A-Z (alphabetical)
+  - Z-A (reverse alphabetical)
+- Apply via JS by sorting cards array and re-appending to grid
+- Added to active filter chips display
+- Reset button now clears sort too

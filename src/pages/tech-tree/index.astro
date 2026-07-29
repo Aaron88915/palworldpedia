@@ -62,6 +62,17 @@ const config = {
       </div>
     </div>
 
+    <div class="filter-row">
+      <span class="filter-label">排序</span>
+      <div class="filter-chips" data-filter-group="sort">
+        <button type="button" data-filter-value="" class="chip active">默认</button>
+        <button type="button" data-filter-value="level-asc" class="chip">等级 ↑</button>
+        <button type="button" data-filter-value="level-desc" class="chip">等级 ↓</button>
+        <button type="button" data-filter-value="name-asc" class="chip">A-Z</button>
+        <button type="button" data-filter-value="name-desc" class="chip">Z-A</button>
+      </div>
+    </div>
+
     <div class="active-filters" id="active-filters" style="display: none;">
       <span class="filter-label">已筛选</span>
       <div id="active-chips"></div>
@@ -306,7 +317,7 @@ const config = {
 </style>
 
 <script is:inline define:vars={{ config }}>
-  const state = { category: '', cost: '', q: '' };
+  const state = { category: '', cost: '', sort: '', q: '' };
   const search = document.getElementById('tech-search');
   const grid = document.getElementById('tech-grid');
   const cards = Array.from(document.querySelectorAll('.tech-card'));
@@ -332,8 +343,34 @@ const config = {
       if (match) visible++;
     });
     if (empty) empty.style.display = visible === 0 ? 'block' : 'none';
+    applySort();
     syncChipState();
     updateActiveChips();
+  }
+
+  function applySort() {
+    const sortVal = state.sort;
+    if (!sortVal) return;
+    const sorted = [...cards].sort((a, b) => {
+      const costA = Number(a.dataset.cost);
+      const costB = Number(b.dataset.cost);
+      const nameA = a.dataset.name || '';
+      const nameB = b.dataset.name || '';
+      switch (sortVal) {
+        case 'level-asc':
+          if (costA !== costB) return costA - costB;
+          return nameA.localeCompare(nameB);
+        case 'level-desc':
+          if (costA !== costB) return costB - costA;
+          return nameA.localeCompare(nameB);
+        case 'name-asc':
+          return nameA.localeCompare(nameB);
+        case 'name-desc':
+          return nameB.localeCompare(nameA);
+      }
+      return 0;
+    });
+    sorted.forEach(c => grid.appendChild(c));
   }
 
   function syncChipState() {
@@ -351,6 +388,7 @@ const config = {
     const labels = {
       category: state.category,
       cost: state.cost ? `Lv ${state.cost}` : null,
+      sort: ({'level-asc':'等级 ↑','level-desc':'等级 ↓','name-asc':'A-Z','name-desc':'Z-A'})[state.sort] || null,
     };
     const entries = Object.entries(labels).filter(([_, v]) => v);
     if (entries.length === 0) {
@@ -396,6 +434,7 @@ const config = {
     resetBtn.addEventListener('click', () => {
       state.category = '';
       state.cost = '';
+      state.sort = '';
       state.q = '';
       if (search) search.value = '';
       applyFilter();
