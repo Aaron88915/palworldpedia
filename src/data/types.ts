@@ -95,13 +95,20 @@ export interface Item {
 
 // 科技树节点
 export interface TechNode {
-  id: string;
-  name: { zh: string; en: string };
-  level: number;          // 解锁等级
-  cost: number;           // 古科技点
-  category: string;
-  description: { zh: string; en: string };
-  unlocks?: string[];     // 解锁内容
+  id: string;             // slug-based id
+  slug: string;           // paldb.cc 原始 slug
+  name: string;           // 英文名（paldb.cc 是英文）
+  category: 'Structures' | 'Items';
+  cost: number;           // 古科技点（1-9）
+  icon: string;           // 图标 URL
+  // 可选：详情页 enrich
+  description?: string;
+  image?: string;         // 大图
+  materials?: { name: string; count: number }[];
+  product?: string;
+  unlockLevel?: number;
+  defense?: number;
+  hp?: number;
 }
 
 // 地图区域

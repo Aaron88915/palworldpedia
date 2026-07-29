@@ -1,39 +1,599 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import techsData from '@data/tech.json';
+import type { TechNode } from '@data/types';
+
+const techs = techsData as TechNode[];
+
+// 统计
+const structures = techs.filter(t => t.category === 'Structures').length;
+const items = techs.filter(t => t.category === 'Items').length;
+const enriched = techs.filter(t => t.description).length;
+const maxCost = Math.max(...techs.map(t => t.cost));
+
+// SEO schema
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Palworld 科技树 - 全部科技点',
+  description: 'Palworld 1.0 完整科技树列表。包含所有 Structures 和 Items 科技点、解锁等级、所需材料。',
+  numberOfItems: techs.length,
+};
+
+const config = {
+  categories: ['Structures', 'Items'] as const,
+  maxCost,
+};
 ---
 
 <Layout
-  title="科技树 - Palworld 古科技点分配"
-  description="Palworld 科技树完整图谱。古科技点最优分配方案、解锁等级、解锁物品。"
+  title="科技树 - 全部 587 个科技点 · Palworld 1.0"
+  description="Palworld 1.0 完整科技树列表。包含所有 Structures（建筑）和 Items（道具）科技点、解锁等级、所需材料。可按类型、等级筛选，按名称搜索。"
+  schema={schema}
 >
   <header class="page-header">
     <h1>🔬 科技树</h1>
-    <p class="text-secondary">古科技点分配 · 解锁等级 · 实用配方</p>
+    <p class="text-secondary">全部 {techs.length} 个科技点 · Structures {structures} · Items {items}</p>
   </header>
 
-  <div class="coming-soon">
-    <div class="coming-soon-icon">🚧</div>
-    <h2>即将上线</h2>
-    <p class="text-secondary mt-1">完整的科技树可视化图谱正在制作中。包含所有古科技点配方、解锁等级、最优升级路径。</p>
-    <p class="text-muted mt-2">预计下个版本上线</p>
+  <!-- 搜索 -->
+  <div class="filter-bar">
+    <input
+      type="search"
+      id="tech-search"
+      class="search-input"
+      placeholder="搜索科技点（英文名）..."
+      autocomplete="off"
+    />
+
+    <!-- 类别筛选 -->
+    <div class="filter-row">
+      <span class="filter-label">类型</span>
+      <div class="filter-chips" data-filter-group="category">
+        <button type="button" data-filter-value="" class="chip active">全部</button>
+        {config.categories.map((c) => (
+          <button type="button" data-filter-value={c} class="chip">{c}</button>
+        ))}
+      </div>
+    </div>
+
+    <!-- 解锁等级筛选 -->
+    <div class="filter-row">
+      <span class="filter-label">解锁</span>
+      <div class="filter-chips" data-filter-group="cost">
+        <button type="button" data-filter-value="" class="chip active">全部</button>
+        {Array.from({length: maxCost}, (_, i) => i + 1).map((c) => (
+          <button type="button" data-filter-value={String(c)} class="chip cost-chip">Lv {c}</button>
+        ))}
+      </div>
+    </div>
+
+    <div class="active-filters" id="active-filters" style="display: none;">
+      <span class="filter-label">已筛选</span>
+      <div id="active-chips"></div>
+      <button type="button" id="reset-btn" class="reset-link">清空</button>
+    </div>
+  </div>
+
+  <!-- 科技表格 -->
+  <div class="tech-table-wrap">
+    <table class="tech-table">
+      <thead>
+        <tr>
+          <th class="col-icon">图标</th>
+          <th class="col-name">名称</th>
+          <th class="col-cat">类型</th>
+          <th class="col-cost">解锁</th>
+          <th class="col-mat">材料</th>
+        </tr>
+      </thead>
+      <tbody id="tech-tbody">
+        {techs.map((t) => (
+          <tr
+            class="tech-row"
+            data-id={t.id}
+            data-name={(t.name || '').toLowerCase()}
+            data-category={t.category}
+            data-cost={String(t.cost)}
+            data-enriched={t.description ? '1' : '0'}
+          >
+            <td class="col-icon">
+              <img src={t.icon} alt={t.name} class="tech-icon" loading="lazy" />
+            </td>
+            <td class="col-name">
+              <span class="tech-name">{t.name}</span>
+              {t.product && t.product !== t.name && <small class="tech-product">→ {t.product}</small>}
+              {t.description && <span class="enriched-dot" title="含详细数据">●</span>}
+            </td>
+            <td class="col-cat"><span class={`cat-tag cat-${t.category.toLowerCase()}`}>{t.category}</span></td>
+            <td class="col-cost">
+              <span class={`cost-tag cost-${t.cost}`}>Lv {t.cost}</span>
+            </td>
+            <td class="col-mat">
+              {t.materials && t.materials.length > 0 ? (
+                <div class="mat-list">
+                  {t.materials.map((m) => (
+                    <span class="mat-pill">{m.name}×{m.count}</span>
+                  ))}
+                </div>
+              ) : (
+                <span class="text-muted">—</span>
+              )}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="empty-state" id="empty-state" style="display: none;">
+    <p>未找到匹配的科技点</p>
+  </div>
+
+  <!-- 详情弹窗（仅对 enriched 触发） -->
+  <div class="tech-modal" id="tech-modal" style="display: none;">
+    <div class="tech-modal-overlay"></div>
+    <div class="tech-modal-content">
+      <button type="button" class="tech-modal-close" id="tech-modal-close">×</button>
+      <div class="tech-modal-header">
+        <img id="tech-modal-icon" src="" alt="" class="tech-modal-icon" />
+        <div>
+          <h2 id="tech-modal-name"></h2>
+          <div class="tech-modal-meta">
+            <span id="tech-modal-cat" class="cat-tag"></span>
+            <span id="tech-modal-cost" class="cost-tag"></span>
+          </div>
+        </div>
+      </div>
+      <div class="tech-modal-body">
+        <p id="tech-modal-desc" class="tech-modal-desc"></p>
+        <div class="tech-modal-section">
+          <h3>所需材料</h3>
+          <div id="tech-modal-mats" class="mat-list"></div>
+        </div>
+        <div class="tech-modal-section" id="tech-modal-stats-section" style="display: none;">
+          <h3>建筑属性</h3>
+          <div id="tech-modal-stats" class="stats-grid"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </Layout>
 
 <style>
-  .page-header {
+  .page-header { margin-bottom: 1.5rem; }
+
+  .filter-bar {
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
+  .search-input:focus { outline: none; border-color: var(--accent); }
+
+  .filter-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .filter-label {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    min-width: 48px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .filter-chips { display: flex; gap: 0.375rem; flex-wrap: wrap; }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s ease;
+  }
+  .chip:hover { border-color: var(--accent); color: var(--text-primary); }
+  .chip.active {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+    font-weight: 600;
   }
 
-  .coming-soon {
+  .active-filters {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0.625rem 0.875rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+  }
+  .active-chip {
+    padding: 0.25rem 0.625rem;
+    background: var(--accent);
+    color: #000;
+    border-radius: 999px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .reset-link {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+  }
+  .reset-link:hover { color: var(--accent); }
+
+  /* 表格 */
+  .tech-table-wrap {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  .tech-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    background: var(--bg-tertiary);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+  }
+  .tech-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+    vertical-align: middle;
+  }
+  .tech-table tbody tr:last-child td { border-bottom: none; }
+  .tech-table tbody tr:hover { background: var(--bg-tertiary); cursor: pointer; }
+  .tech-table tbody tr.has-detail:hover { background: rgba(245, 166, 35, 0.08); }
+  .tech-table tbody tr.hidden { display: none; }
+
+  .col-icon { width: 56px; }
+  .col-cat { width: 110px; }
+  .col-cost { width: 80px; }
+  .col-name { word-break: break-word; }
+  .col-mat { word-break: break-word; }
+
+  .tech-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background: var(--bg-tertiary);
+    border-radius: 0.25rem;
+  }
+  .tech-name { font-weight: 500; }
+  .tech-product { color: var(--text-muted); margin-left: 0.5rem; font-size: 0.75rem; }
+  .enriched-dot {
+    color: var(--accent);
+    margin-left: 0.4rem;
+    font-size: 0.6rem;
+    vertical-align: middle;
+  }
+
+  .cat-tag {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .cat-tag.cat-structures { background: rgba(94, 179, 245, 0.15); color: #5eb3f5; }
+  .cat-tag.cat-items { background: rgba(248, 113, 113, 0.15); color: #f87171; }
+
+  .cost-tag {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: var(--bg-tertiary);
+  }
+  .cost-tag.cost-1 { color: #a0a8b0; }
+  .cost-tag.cost-2 { color: #4ade80; }
+  .cost-tag.cost-3 { color: #5eb3f5; }
+  .cost-tag.cost-4 { color: #c084fc; }
+  .cost-tag.cost-5, .cost-tag.cost-6, .cost-tag.cost-7, .cost-tag.cost-8, .cost-tag.cost-9 { color: #ffb830; }
+
+  .mat-list { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+  .mat-pill {
+    padding: 0.125rem 0.5rem;
+    background: var(--bg-tertiary);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-muted);
+  }
+
+  /* Modal */
+  .tech-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  .tech-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .tech-modal-content {
+    position: relative;
     background: var(--bg-secondary);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 3rem 1.5rem;
-    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 1.5rem;
   }
+  .tech-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+  .tech-modal-close:hover { color: var(--text-primary); }
+  .tech-modal-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .tech-modal-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+  }
+  .tech-modal-header h2 { margin-bottom: 0.5rem; font-size: 1.5rem; }
+  .tech-modal-meta { display: flex; gap: 0.5rem; }
+  .tech-modal-desc {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    white-space: pre-wrap;
+    margin-bottom: 1.5rem;
+  }
+  .tech-modal-section { margin-bottom: 1.5rem; }
+  .tech-modal-section h3 {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+  .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .stats-grid > div {
+    background: var(--bg-tertiary);
+    padding: 0.625rem 0.875rem;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between;
+  }
+  .stats-grid > div span:first-child { color: var(--text-muted); font-size: 0.8125rem; }
+  .stats-grid > div span:last-child { font-weight: 700; color: var(--accent); }
 
-  .coming-soon-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    .tech-table { font-size: 0.875rem; }
+    .col-mat { display: none; }
+    .tech-table th:nth-child(5), .tech-table td:nth-child(5) { display: none; }
   }
 </style>
+
+<script is:inline define:vars={{ config, techs }}>
+  // ===== 客户端筛选 + 详情弹窗 =====
+
+  const state = { category: '', cost: '', q: '' };
+  const search = document.getElementById('tech-search');
+  const tbody = document.getElementById('tech-tbody');
+  const rows = Array.from(document.querySelectorAll('.tech-row'));
+  const empty = document.getElementById('empty-state');
+  const activeBox = document.getElementById('active-filters');
+  const activeChips = document.getElementById('active-chips');
+  const resetBtn = document.getElementById('reset-btn');
+
+  // Build a tech-data lookup for modal
+  const techMap = {};
+  for (const t of techs) techMap[t.id] = t;
+
+  function applyFilter() {
+    let visible = 0;
+    rows.forEach(row => {
+      const cat = row.dataset.category;
+      const cost = row.dataset.cost;
+      const name = row.dataset.name || '';
+      let match = true;
+      if (state.category && cat !== state.category) match = false;
+      if (match && state.cost && cost !== state.cost) match = false;
+      if (match && state.q) {
+        const q = state.q.toLowerCase();
+        if (!name.includes(q) && !cat.toLowerCase().includes(q)) match = false;
+      }
+      row.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+    if (empty) empty.style.display = visible === 0 ? 'block' : 'none';
+    syncChipState();
+    updateActiveChips();
+  }
+
+  function syncChipState() {
+    document.querySelectorAll('[data-filter-group]').forEach(g => {
+      const key = g.dataset.filterGroup;
+      const val = state[key] || '';
+      g.querySelectorAll('.chip').forEach(c => {
+        const cv = c.dataset.filterValue || '';
+        c.classList.toggle('active', cv === val);
+      });
+    });
+  }
+
+  function updateActiveChips() {
+    const labels = {
+      category: state.category,
+      cost: state.cost ? `Lv ${state.cost}` : null,
+    };
+    const entries = Object.entries(labels).filter(([_, v]) => v);
+    if (entries.length === 0) {
+      activeBox.style.display = 'none';
+      return;
+    }
+    activeBox.style.display = 'flex';
+    activeChips.innerHTML = entries.map(([k, v]) => {
+      return `<button type="button" class="active-chip" data-remove-key="${k}">× ${v}</button>`;
+    }).join('');
+  }
+
+  // Filter chip click
+  document.querySelectorAll('[data-filter-group]').forEach(group => {
+    group.addEventListener('click', e => {
+      const chip = e.target.closest('.chip');
+      if (!chip) return;
+      const key = group.dataset.filterGroup;
+      const val = chip.dataset.filterValue || '';
+      state[key] = val;
+      applyFilter();
+    });
+  });
+
+  // Search input
+  if (search) {
+    search.addEventListener('input', () => {
+      state.q = search.value.trim();
+      applyFilter();
+    });
+  }
+
+  // Remove chip
+  if (activeChips) {
+    activeChips.addEventListener('click', e => {
+      const chip = e.target.closest('.active-chip');
+      if (!chip) return;
+      const key = chip.dataset.removeKey;
+      state[key] = '';
+      if (key === 'q' && search) search.value = '';
+      applyFilter();
+    });
+  }
+
+  // Reset
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      state.category = '';
+      state.cost = '';
+      state.q = '';
+      if (search) search.value = '';
+      applyFilter();
+    });
+  }
+
+  // ===== 详情弹窗 =====
+  const modal = document.getElementById('tech-modal');
+  const mIcon = document.getElementById('tech-modal-icon');
+  const mName = document.getElementById('tech-modal-name');
+  const mCat = document.getElementById('tech-modal-cat');
+  const mCost = document.getElementById('tech-modal-cost');
+  const mDesc = document.getElementById('tech-modal-desc');
+  const mMats = document.getElementById('tech-modal-mats');
+  const mStatsSec = document.getElementById('tech-modal-stats-section');
+  const mStats = document.getElementById('tech-modal-stats');
+  const mClose = document.getElementById('tech-modal-close');
+
+  function openModal(tech) {
+    if (!tech || !tech.description) return; // Only open for enriched
+    mIcon.src = tech.image || tech.icon;
+    mName.textContent = tech.name;
+    mCat.textContent = tech.category;
+    mCat.className = 'cat-tag cat-' + tech.category.toLowerCase();
+    mCost.textContent = `Lv ${tech.cost}`;
+    mCost.className = 'cost-tag cost-' + tech.cost;
+    mDesc.textContent = tech.description;
+    mMats.innerHTML = (tech.materials || []).map(m =>
+      `<span class="mat-pill">${m.name}×${m.count}</span>`
+    ).join('');
+    if (tech.hp || tech.defense) {
+      mStatsSec.style.display = 'block';
+      mStats.innerHTML = '';
+      if (tech.hp) mStats.innerHTML += `<div><span>HP</span><span>${tech.hp}</span></div>`;
+      if (tech.defense) mStats.innerHTML += `<div><span>Defense</span><span>${tech.defense}</span></div>`;
+    } else {
+      mStatsSec.style.display = 'none';
+    }
+    modal.style.display = 'flex';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  if (tbody) {
+    tbody.addEventListener('click', e => {
+      const row = e.target.closest('.tech-row');
+      if (!row) return;
+      const id = row.dataset.id;
+      const tech = techMap[id];
+      if (tech) openModal(tech);
+    });
+  }
+  if (mClose) mClose.addEventListener('click', closeModal);
+  if (modal) modal.querySelector('.tech-modal-overlay').addEventListener('click', closeModal);
+
+  // Mark rows with detail
+  rows.forEach(r => {
+    if (r.dataset.enriched === '1') r.classList.add('has-detail');
+  });
+
+  // Init
+  applyFilter();
+</script>

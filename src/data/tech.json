@@ -1,0 +1,5008 @@
+[
+ {
+  "slug": "Workbench",
+  "name": "Primitive Workbench",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_WorkBench.webp",
+  "id": "workbench"
+ },
+ {
+  "slug": "Product_Axe_Grade_01",
+  "name": "Stone Axe",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Axe_Tier_00.webp",
+  "id": "product_axe_grade_01"
+ },
+ {
+  "slug": "Product_Pickaxe_Grade_01",
+  "name": "Stone Pickaxe",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Pickaxe_Tier_00.webp",
+  "id": "product_pickaxe_grade_01"
+ },
+ {
+  "slug": "HandTorch",
+  "name": "Hand-Held Torch",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Torch.webp",
+  "id": "handtorch"
+ },
+ {
+  "slug": "Battle_MeleeWeapon_Bat",
+  "name": "Wooden Club",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Bat.webp",
+  "id": "battle_meleeweapon_bat"
+ },
+ {
+  "slug": "PALBOX",
+  "name": "Palbox",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_PalBoxV2.webp",
+  "id": "palbox"
+ },
+ {
+  "slug": "Special_PalSphere_Grade_01",
+  "name": "Pal Sphere",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere.webp",
+  "id": "special_palsphere_grade_01"
+ },
+ {
+  "slug": "Product_Cooking_Grade_01",
+  "name": "Campfire",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CampFire.webp",
+  "id": "product_cooking_grade_01"
+ },
+ {
+  "slug": "Infra_ItemChest_Grade_01",
+  "name": "Wooden Chest",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ItemChest.webp",
+  "id": "infra_itemchest_grade_01"
+ },
+ {
+  "slug": "RepairBench",
+  "name": "Repair Bench",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_RepairBench.webp",
+  "id": "repairbench"
+ },
+ {
+  "slug": "Wooden_houseset",
+  "name": "Wooden Structure Set",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Wood_Foundation.webp",
+  "id": "wooden_houseset"
+ },
+ {
+  "slug": "SkinChange",
+  "name": "Pal Dressing Facility",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SkinChange.webp",
+  "id": "skinchange"
+ },
+ {
+  "slug": "Battle_RangeWeapon_Bow1",
+  "name": "Old Bow",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_WeakerBow.webp",
+  "id": "battle_rangeweapon_bow1"
+ },
+ {
+  "slug": "Arrow",
+  "name": "Arrow",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_Arrow.webp",
+  "description": "Arrows for use with bows.\n\nCan be crafted at Primitive Workbench.",
+  "image": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_Arrow.webp",
+  "materials": [
+   {
+    "name": "Wood",
+    "count": 2
+   },
+   {
+    "name": "Stone",
+    "count": 2
+   },
+   {
+    "name": "Arrow",
+    "count": 10
+   }
+  ],
+  "product": "Arrow 10",
+  "unlockLevel": 3,
+  "id": "arrow"
+ },
+ {
+  "slug": "Spear",
+  "name": "Stone Spear",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Spear_Tier_00.webp",
+  "id": "spear"
+ },
+ {
+  "slug": "Infra_PlayerBed_Grade_01",
+  "name": "Shoddy Bed",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_PlayerBed_02.webp",
+  "id": "infra_playerbed_grade_01"
+ },
+ {
+  "slug": "Infra_PalBed_Grade_01",
+  "name": "Straw Pal Bed",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MedicalPalBed_02.webp",
+  "id": "infra_palbed_grade_01"
+ },
+ {
+  "slug": "GlobalPalStorage",
+  "name": "Global Palbox",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_GlobalPalStorage.webp",
+  "id": "globalpalstorage"
+ },
+ {
+  "slug": "Shield_01",
+  "name": "Common Shield",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_Shield_01.webp",
+  "id": "shield_01"
+ },
+ {
+  "slug": "Battle_Armor_Grade_01_Cloth",
+  "name": "Cloth Outfit",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_ClothArmor.webp",
+  "id": "battle_armor_grade_01_cloth"
+ },
+ {
+  "slug": "Battle_Cloth",
+  "name": "Cloth",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Cloth.webp",
+  "id": "battle_cloth"
+ },
+ {
+  "slug": "PalFoodBox",
+  "name": "Feed Box",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_PalFoodBox.webp",
+  "id": "palfoodbox"
+ },
+ {
+  "slug": "Product_Farm_Berries",
+  "name": "Berry Plantation",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FarmBlockV2_Berries.webp",
+  "id": "product_farm_berries"
+ },
+ {
+  "slug": "MonsterFarm",
+  "name": "Ranch",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MonsterFarm.webp",
+  "id": "monsterfarm"
+ },
+ {
+  "slug": "Battle_Glider_Grade_01",
+  "name": "Normal Parachute",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Glider_Glider_Old.webp",
+  "id": "battle_glider_grade_01"
+ },
+ {
+  "slug": "FurnitureSet_1",
+  "name": "Wooden Living Room Furniture Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TableSquare_Wood.webp",
+  "id": "furnitureset_1"
+ },
+ {
+  "slug": "FurnitureSet_3",
+  "name": "Wooden Tavern Furniture Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Counter_Wood.webp",
+  "id": "furnitureset_3"
+ },
+ {
+  "slug": "FurnitureSet_2",
+  "name": "Wooden Tavern Cabinet Furniture Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Barrel_Wood.webp",
+  "id": "furnitureset_2"
+ },
+ {
+  "slug": "Product_WorkBench_SkillUnlock",
+  "name": "Pal Gear Workbench",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_WorkBench_SkillUnlock.webp",
+  "id": "product_workbench_skillunlock"
+ },
+ {
+  "slug": "Arrow_Fire",
+  "name": "Fire Arrow",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_Arrow_Fire.webp",
+  "id": "arrow_fire"
+ },
+ {
+  "slug": "Torch",
+  "name": "Mounted Torch",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TorchStand.webp",
+  "id": "torch"
+ },
+ {
+  "slug": "Signboard",
+  "name": "Sign",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Signboard.webp",
+  "id": "signboard"
+ },
+ {
+  "slug": "WallSignboard",
+  "name": "Wall-Mounted Sign",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_WallSignboard.webp",
+  "id": "wallsignboard"
+ },
+ {
+  "slug": "SkillUnlock_Boar",
+  "name": "Rushoar Saddle",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Boar_icon_normal.webp",
+  "id": "skillunlock_boar"
+ },
+ {
+  "slug": "SkillUnlock_Kitsunebi",
+  "name": "Foxparks' Harness",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Kitsunebi_icon_normal.webp",
+  "id": "skillunlock_kitsunebi"
+ },
+ {
+  "slug": "FurnitureSet_9",
+  "name": "Houseplant Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Plant01_Plant.webp",
+  "id": "furnitureset_9"
+ },
+ {
+  "slug": "BaseCampWorkHard",
+  "name": "Monitoring Stand",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BaseCampWorkHard.webp",
+  "id": "basecampworkhard"
+ },
+ {
+  "slug": "Battle_MeleeWeapon_Bat2",
+  "name": "Bat",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Spear_Bat2.webp",
+  "id": "battle_meleeweapon_bat2"
+ },
+ {
+  "slug": "Product_StationDeforest",
+  "name": "Logging Site",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_StationDeforest2.webp",
+  "id": "product_stationdeforest"
+ },
+ {
+  "slug": "Product_StonePit",
+  "name": "Stone Pit",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_StonePit.webp",
+  "id": "product_stonepit"
+ },
+ {
+  "slug": "DefenseWait",
+  "name": "Sandbag",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DefenseWait.webp",
+  "id": "defensewait"
+ },
+ {
+  "slug": "BaseCampBattleDirector",
+  "name": "Alarm Bell",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BaseCampBattleDirector.webp",
+  "id": "basecampbattledirector"
+ },
+ {
+  "slug": "SkillUnlock_Alpaca",
+  "name": "Melpaca Saddle",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Alpaca_icon_normal.webp",
+  "id": "skillunlock_alpaca"
+ },
+ {
+  "slug": "FurnitureSet_4",
+  "name": "Wall-Mounted Houseplant Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Ivy01.webp",
+  "id": "furnitureset_4"
+ },
+ {
+  "slug": "Crusher",
+  "name": "Crusher",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Crusher.webp",
+  "description": "Facility for breaking down Stone and Wood to exchange them for other materials.\n\nRequires Pal with the Watering trait to spin the water turbine.",
+  "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Crusher.webp",
+  "materials": [
+   {
+    "name": "Wood",
+    "count": 50
+   },
+   {
+    "name": "Stone",
+    "count": 20
+   },
+   {
+    "name": "Paldium Fragment",
+    "count": 10
+   }
+  ],
+  "product": "Crusher",
+  "unlockLevel": 8,
+  "defense": 3,
+  "hp": 4000,
+  "id": "crusher"
+ },
+ {
+  "slug": "Arrow_Poison",
+  "name": "Poison Arrow",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_Arrow_Poison.webp",
+  "id": "arrow_poison"
+ },
+ {
+  "slug": "DefenseWall_Wood",
+  "name": "Wooden Defensive Wall",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DefenseWall_Wood.webp",
+  "id": "defensewall_wood"
+ },
+ {
+  "slug": "Wood_Gate",
+  "name": "Wooden Gate",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Wood_Gate.webp",
+  "id": "wood_gate"
+ },
+ {
+  "slug": "Trap_Noose",
+  "name": "Hanging Trap",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Trap_Noose.webp",
+  "id": "trap_noose"
+ },
+ {
+  "slug": "FurnitureSet_28",
+  "name": "Fireplace Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Light_FirePlace01.webp",
+  "id": "furnitureset_28"
+ },
+ {
+  "slug": "BuildableGoddessStatue",
+  "name": "Statue of Power",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BuildableGoddessStatue.webp",
+  "id": "buildablegoddessstatue"
+ },
+ {
+  "slug": "AutoMealPouch_Tier1",
+  "name": "Small Feed Bag",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_AutoMealPouch_Tier1.webp",
+  "id": "automealpouch_tier1"
+ },
+ {
+  "slug": "Battle_Armor_Grade_01_Cloth_Heat",
+  "name": "Tropical Outfit",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_ClothArmorHeat.webp",
+  "id": "battle_armor_grade_01_cloth_heat"
+ },
+ {
+  "slug": "Battle_Armor_Grade_01_Cloth_Cold",
+  "name": "Tundra Outfit",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_ClothArmorCold.webp",
+  "id": "battle_armor_grade_01_cloth_cold"
+ },
+ {
+  "slug": "Spa",
+  "name": "Hot Spring",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Spa.webp",
+  "id": "spa"
+ },
+ {
+  "slug": "SkillUnlock_Garm",
+  "name": "Direhowl's Saddled Harness",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Garm_icon_normal.webp",
+  "id": "skillunlock_garm"
+ },
+ {
+  "slug": "FurnitureSet_17",
+  "name": "Carpet Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Rug01_Stone.webp",
+  "id": "furnitureset_17"
+ },
+ {
+  "slug": "Product_Ingot_Grade_01_Copper",
+  "name": "Primitive Furnace",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BlastFurnace.webp",
+  "id": "product_ingot_grade_01_copper"
+ },
+ {
+  "slug": "Battle_RangeWeapon_Bow3",
+  "name": "Three Shot Bow",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Bow.webp",
+  "id": "battle_rangeweapon_bow3"
+ },
+ {
+  "slug": "Battle_Helm_Grade_02_Fur",
+  "name": "Feathered Hair Band",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_FurHelmet.webp",
+  "id": "battle_helm_grade_02_fur"
+ },
+ {
+  "slug": "Infra_MachineParts",
+  "name": "Nail",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_MachineParts.webp",
+  "id": "infra_machineparts"
+ },
+ {
+  "slug": "Wooden_ladder",
+  "name": "Ladder",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Wooden_Ladder.webp",
+  "id": "wooden_ladder"
+ },
+ {
+  "slug": "Trap_LegHold",
+  "name": "Bear Trap (Small)",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Trap_LegHold.webp",
+  "id": "trap_leghold"
+ },
+ {
+  "slug": "FurnitureSet_21",
+  "name": "Antique Storage Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Shelf01_Stone.webp",
+  "id": "furnitureset_21"
+ },
+ {
+  "slug": "Special_HatchingPalEgg",
+  "name": "Egg Incubator",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_HatchingPalEgg.webp",
+  "id": "special_hatchingpalegg"
+ },
+ {
+  "slug": "Product_Axe_Grade_02",
+  "name": "Metal Axe",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Axe_Tier_00.webp",
+  "id": "product_axe_grade_02"
+ },
+ {
+  "slug": "Product_Pickaxe_Grade_02",
+  "name": "Metal Pickaxe",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Pickaxe_Tier_00.webp",
+  "id": "product_pickaxe_grade_02"
+ },
+ {
+  "slug": "Product_Factory_Hard_Grade_01",
+  "name": "High Quality Workbench",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Factory_Hard_01.webp",
+  "id": "product_factory_hard_grade_01"
+ },
+ {
+  "slug": "HunterFlagSet",
+  "name": "Rayne Syndicate Flag Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Hunter_Flag.webp",
+  "id": "hunterflagset"
+ },
+ {
+  "slug": "SkillUnlock_WeaselDragon",
+  "name": "Chillet Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_WeaselDragon_icon_normal.webp",
+  "id": "skillunlock_weaseldragon"
+ },
+ {
+  "slug": "SkillUnlock_Carbunclo",
+  "name": "Lifmunk's Submachine Gun",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Carbunclo_icon_normal.webp",
+  "id": "skillunlock_carbunclo"
+ },
+ {
+  "slug": "FurnitureSet_19",
+  "name": "Antique Chair Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Chair01_Stone.webp",
+  "id": "furnitureset_19"
+ },
+ {
+  "slug": "Battle_Armor_Grade_02_Fur",
+  "name": "Pelt Armor",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_FurArmor.webp",
+  "id": "battle_armor_grade_02_fur"
+ },
+ {
+  "slug": "MeatCutterKnife",
+  "name": "Meat Cleaver",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_MeatCutterKnife.webp",
+  "id": "meatcutterknife"
+ },
+ {
+  "slug": "Product_Medicine_Grade_01",
+  "name": "Medieval Medicine Workbench",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MedicineFacility_01.webp",
+  "id": "product_medicine_grade_01"
+ },
+ {
+  "slug": "SkillUnlock_Monkey",
+  "name": "Tanzee's Assault Rifle",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Monkey_icon_normal.webp",
+  "id": "skillunlock_monkey"
+ },
+ {
+  "slug": "SkillUnlock_Deer",
+  "name": "Eikthyrdeer Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Deer_icon_normal.webp",
+  "id": "skillunlock_deer"
+ },
+ {
+  "slug": "FurnitureTree_Green",
+  "name": "Faux Greenery Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Green.webp",
+  "id": "furnituretree_green"
+ },
+ {
+  "slug": "TableCircular",
+  "name": "Tidy Table Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TableCircular_Wood_None.webp",
+  "id": "tablecircular"
+ },
+ {
+  "slug": "GrapplingGun",
+  "name": "Grappling Gun",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_GrapplingGun.webp",
+  "id": "grapplinggun"
+ },
+ {
+  "slug": "Battle_RangeWeapon_BowGun",
+  "name": "Crossbow",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_BowGun.webp",
+  "id": "battle_rangeweapon_bowgun"
+ },
+ {
+  "slug": "Spear_2",
+  "name": "Metal Spear",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Spear_Tier_00.webp",
+  "id": "spear_2"
+ },
+ {
+  "slug": "Infra_ItemChest_Grade_02",
+  "name": "Metal Chest",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ItemChest_02.webp",
+  "id": "infra_itemchest_grade_02"
+ },
+ {
+  "slug": "CoolerBox",
+  "name": "Cooler Box",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CoolerBox.webp",
+  "id": "coolerbox"
+ },
+ {
+  "slug": "DamagedScarecrow",
+  "name": "Training Dummy",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DamagedScarecrow.webp",
+  "id": "damagedscarecrow"
+ },
+ {
+  "slug": "SkillUnlock_Monkey_Fire",
+  "name": "Tanzee Ignis's Assault Rifle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Monkey_Fire_icon_normal.webp",
+  "id": "skillunlock_monkey_fire"
+ },
+ {
+  "slug": "FurnitureSet_22",
+  "name": "Antique Storage Cabinet Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Shelf05_Stone.webp",
+  "id": "furnitureset_22"
+ },
+ {
+  "slug": "Special_PalSphere_Grade_02",
+  "name": "Mega Sphere",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere_Mega.webp",
+  "id": "special_palsphere_grade_02"
+ },
+ {
+  "slug": "Special_SphereFactory_Black_Grade_01",
+  "name": "Sphere Workbench",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SphereFactory_Black_01.webp",
+  "id": "special_spherefactory_black_grade_01"
+ },
+ {
+  "slug": "AutoMealPouch_Tier2",
+  "name": "Average Feed Bag",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_AutoMealPouch_Tier2.webp",
+  "id": "automealpouch_tier2"
+ },
+ {
+  "slug": "WallTorch",
+  "name": "Wall Torch",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TorchHang.webp",
+  "id": "walltorch"
+ },
+ {
+  "slug": "SkillUnlock_Kirin",
+  "name": "Univolt Saddle",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Kirin_icon_normal.webp",
+  "id": "skillunlock_kirin"
+ },
+ {
+  "slug": "FurnitureTree_Red",
+  "name": "Faux Crimson Foliage Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Red.webp",
+  "id": "furnituretree_red"
+ },
+ {
+  "slug": "FurnitureSet_24",
+  "name": "Antique Desk Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Desk01_Stone.webp",
+  "id": "furnitureset_24"
+ },
+ {
+  "slug": "Special_PalRankUp",
+  "name": "Pal Essence Condenser",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CharacterRankUp.webp",
+  "id": "special_palrankup"
+ },
+ {
+  "slug": "FishingSet1",
+  "name": "Beginner Fishing Set",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FishingRod_1.webp",
+  "id": "fishingset1"
+ },
+ {
+  "slug": "Product_Farm_wheat",
+  "name": "Wheat Plantation",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FarmBlockV2_wheet.webp",
+  "id": "product_farm_wheat"
+ },
+ {
+  "slug": "FlourMill",
+  "name": "Mill",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FlourMill.webp",
+  "id": "flourmill"
+ },
+ {
+  "slug": "Processed_Wood",
+  "name": "Wooden Board",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Processed_Wood.webp",
+  "id": "processed_wood"
+ },
+ {
+  "slug": "DisplayCharacter",
+  "name": "Viewing Cage",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DisplayCharacter.webp",
+  "id": "displaycharacter"
+ },
+ {
+  "slug": "SkillUnlock_FlameBuffalo",
+  "name": "Arsox Saddle",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_FlameBuffalo_icon_normal.webp",
+  "id": "skillunlock_flamebuffalo"
+ },
+ {
+  "slug": "SkillUnlock_HawkBird",
+  "name": "Nitewing Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_HawkBird_icon_normal.webp",
+  "id": "skillunlock_hawkbird"
+ },
+ {
+  "slug": "Lantern",
+  "name": "Hip Lantern",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_Lantern.webp",
+  "id": "lantern"
+ },
+ {
+  "slug": "Shield_02",
+  "name": "Mega Shield",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_Shield_02.webp",
+  "id": "shield_02"
+ },
+ {
+  "slug": "Battle_Armor_Grade_02_Fur_Heat",
+  "name": "Heat Resistant Pelt Armor",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_FurArmorHeat.webp",
+  "id": "battle_armor_grade_02_fur_heat"
+ },
+ {
+  "slug": "SkillUnlock_Serpent",
+  "name": "Surfent Saddle",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Serpent_icon_normal.webp",
+  "id": "skillunlock_serpent"
+ },
+ {
+  "slug": "FurnitureTree_Yellow",
+  "name": "Faux Golden Foliage Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Yellow.webp",
+  "id": "furnituretree_yellow"
+ },
+ {
+  "slug": "FurnitureSet_20",
+  "name": "Antique Bath Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BathTub_Stone.webp",
+  "id": "furnitureset_20"
+ },
+ {
+  "slug": "FurnitureSet_16",
+  "name": "Antique Mirror Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Mirror01_Stone.webp",
+  "id": "furnitureset_16"
+ },
+ {
+  "slug": "Unlock_Picking_Tier1",
+  "name": "Lockpicking Tool v1",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_Unlock_Picking.webp",
+  "id": "unlock_picking_tier1"
+ },
+ {
+  "slug": "BronzeSword",
+  "name": "Primitive Sword",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_BronzeSword.webp",
+  "id": "bronzesword"
+ },
+ {
+  "slug": "Product_Cooking_Grade_02",
+  "name": "Cooking Pot",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CookingStove.webp",
+  "id": "product_cooking_grade_02"
+ },
+ {
+  "slug": "Heater",
+  "name": "Heater",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_HeaterMedieval.webp",
+  "description": "A device that blows warm air, raising the temperature of a base.\n\nIt doesn't provide much warmth, but helps one to endure somewhat cold environments.\n\nRequires a Fire Pal to light a flame.",
+  "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_HeaterMedieval.webp",
+  "materials": [
+   {
+    "name": "Ingot",
+    "count": 20
+   },
+   {
+    "name": "Charcoal",
+    "count": 10
+   },
+   {
+    "name": "Flame Organ",
+    "count": 5
+   }
+  ],
+  "product": "Heater",
+  "unlockLevel": 17,
+  "defense": 2,
+  "hp": 2000,
+  "id": "heater"
+ },
+ {
+  "slug": "Headstone",
+  "name": "Tombstone",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Headstone.webp",
+  "id": "headstone"
+ },
+ {
+  "slug": "SkillUnlock_Penguin",
+  "name": "Pengullet Rocket Launcher",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Penguin_icon_normal.webp",
+  "id": "skillunlock_penguin"
+ },
+ {
+  "slug": "FurnitureSet_15",
+  "name": "Piano Furniture Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Piano01_Stone.webp",
+  "id": "furnitureset_15"
+ },
+ {
+  "slug": "FurnitureSet_30",
+  "name": "Metal Shelf Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Shelf01_Iron.webp",
+  "id": "furnitureset_30"
+ },
+ {
+  "slug": "GrapplingGun2",
+  "name": "Mega Grappling Gun",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_GrapplingGun.webp",
+  "id": "grapplinggun2"
+ },
+ {
+  "slug": "Battle_Glider_Grade_02",
+  "name": "Mega Glider",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Glider_Glider_Good.webp",
+  "id": "battle_glider_grade_02"
+ },
+ {
+  "slug": "Battle_Armor_Grade_02_Fur_Cold",
+  "name": "Cold Resistant Pelt Armor",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_FurArmorCold.webp",
+  "id": "battle_armor_grade_02_fur_cold"
+ },
+ {
+  "slug": "Cooler",
+  "name": "Cooler",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CoolerMedieval.webp",
+  "description": "A device that blows cool air, lowering the temperature of a base.\n\nIt doesn't provide much relief from the heat, but helps one to endure somewhat hot environments.\n\nRequires an Ice Pal for cooling.",
+  "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CoolerMedieval.webp",
+  "materials": [
+   {
+    "name": "Ingot",
+    "count": 20
+   },
+   {
+    "name": "Stone",
+    "count": 20
+   },
+   {
+    "name": "Ice Organ",
+    "count": 5
+   }
+  ],
+  "product": "Cooler",
+  "unlockLevel": 18,
+  "defense": 3,
+  "hp": 5000,
+  "id": "cooler"
+ },
+ {
+  "slug": "SkillUnlock_ColorfulBird",
+  "name": "Tocotoco's Gloves",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_ColorfulBird_icon_normal.webp",
+  "id": "skillunlock_colorfulbird"
+ },
+ {
+  "slug": "SkillUnlock_Penguin_Electric",
+  "name": "Pengullet Lux's Rocket Launcher",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Penguin_Electric_icon_normal.webp",
+  "id": "skillunlock_penguin_electric"
+ },
+ {
+  "slug": "FurnitureSet_25",
+  "name": "Bathroom Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Toilet01_Stone.webp",
+  "id": "furnitureset_25"
+ },
+ {
+  "slug": "FurnitureSet_32",
+  "name": "Antique High Quality Furniture Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Curtain01_Wall_Stone.webp",
+  "id": "furnitureset_32"
+ },
+ {
+  "slug": "Accessory_Nonkilling",
+  "name": "Ring of Mercy",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_Nonkilling.webp",
+  "id": "accessory_nonkilling"
+ },
+ {
+  "slug": "Lab",
+  "name": "Pal Labor Research Lab",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Lab.webp",
+  "id": "lab"
+ },
+ {
+  "slug": "SphereModule_Heavy",
+  "name": "Heavy Weight Module",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_SphereModule_Heavy.webp",
+  "id": "spheremodule_heavy"
+ },
+ {
+  "slug": "Cement",
+  "name": "Cement",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Cement.webp",
+  "description": "Cement used for creating structures and more.\n\nCan be produced in a High Quality Workbench.",
+  "image": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Cement.webp",
+  "materials": [
+   {
+    "name": "Stone",
+    "count": 20
+   },
+   {
+    "name": "Bone",
+    "count": 1
+   },
+   {
+    "name": "Aquatic Pal Fluids",
+    "count": 1
+   },
+   {
+    "name": "Cement",
+    "count": 10
+   }
+  ],
+  "product": "Cement 10",
+  "unlockLevel": 19,
+  "id": "cement"
+ },
+ {
+  "slug": "Stone_houseset",
+  "name": "Stone Structure Set",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Stone_Foundation.webp",
+  "id": "stone_houseset"
+ },
+ {
+  "slug": "DefenseWall",
+  "name": "Defensive Wall",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DefenseWall.webp",
+  "id": "defensewall"
+ },
+ {
+  "slug": "Stone_Gate",
+  "name": "Stone Gate",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Stone_Gate.webp",
+  "description": "Gate large enough for big Pals to pass through.\n\nMade from stone, it is reasonably sturdy.",
+  "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Stone_Gate.webp",
+  "materials": [
+   {
+    "name": "Stone",
+    "count": 10
+   }
+  ],
+  "product": "Stone Gate",
+  "unlockLevel": 19,
+  "defense": 5,
+  "hp": 20000,
+  "id": "stone_gate"
+ },
+ {
+  "slug": "SkillUnlock_NaughtyCat",
+  "name": "Grintale Saddle",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_NaughtyCat_icon_normal.webp",
+  "id": "skillunlock_naughtycat"
+ },
+ {
+  "slug": "BreedFarm",
+  "name": "Breeding Farm",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BreedFarm.webp",
+  "id": "breedfarm"
+ },
+ {
+  "slug": "Special_PalSphere_Grade_03",
+  "name": "Giga Sphere",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere_Giga.webp",
+  "id": "special_palsphere_grade_03"
+ },
+ {
+  "slug": "Product_WeaponFactory_Dirty_Grade_01",
+  "name": "Weapon Workbench",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_WeaponFactory_Dirty_01.webp",
+  "id": "product_weaponfactory_dirty_grade_01"
+ },
+ {
+  "slug": "ToolBoxV1",
+  "name": "Large Toolbox",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ToolBoxV1.webp",
+  "id": "toolboxv1"
+ },
+ {
+  "slug": "BelieverFlagSet",
+  "name": "Free Pal Alliance Flag Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Believer_Flag.webp",
+  "id": "believerflagset"
+ },
+ {
+  "slug": "SkillUnlock_FairyDragon",
+  "name": "Elphidran Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_FairyDragon_icon_normal.webp",
+  "id": "skillunlock_fairydragon"
+ },
+ {
+  "slug": "SkillUnlock_PurpleSpider",
+  "name": "Tarantriss Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_PurpleSpider_icon_normal.webp",
+  "id": "skillunlock_purplespider"
+ },
+ {
+  "slug": "SkillUnlock_MopKing",
+  "name": "Sweepa Saddle",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_MopKing_icon_normal.webp",
+  "id": "skillunlock_mopking"
+ },
+ {
+  "slug": "FurnitureSet_18",
+  "name": "Antique Couch Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Sofa01_Stone.webp",
+  "id": "furnitureset_18"
+ },
+ {
+  "slug": "DimensionPalStorage",
+  "name": "Dimensional Pal Storage",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DimensionPalStorage.webp",
+  "id": "dimensionpalstorage"
+ },
+ {
+  "slug": "Musket",
+  "name": "Musket",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Musket.webp",
+  "description": "Simple, old fashioned gun. \n\nFires a single, powerful shot at the expense of a long reload time.",
+  "image": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Musket.webp",
+  "materials": [
+   {
+    "name": "Ingot",
+    "count": 25
+   },
+   {
+    "name": "High Quality Pal Oil",
+    "count": 5
+   },
+   {
+    "name": "Wooden Board",
+    "count": 3
+   },
+   {
+    "name": "Musket",
+    "count": 1
+   }
+  ],
+  "product": "Musket 1",
+  "unlockLevel": 21,
+  "id": "musket"
+ },
+ {
+  "slug": "Battle_GunPowder_Grade_02",
+  "name": "Gunpowder",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Gunpowder2.webp",
+  "id": "battle_gunpowder_grade_02"
+ },
+ {
+  "slug": "RoughBullet",
+  "name": "Coarse Ammo",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_RoughBullet.webp",
+  "id": "roughbullet"
+ },
+ {
+  "slug": "Product_Farm_tomato",
+  "name": "Tomato Plantation",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FarmBlockV2_tomato.webp",
+  "id": "product_farm_tomato"
+ },
+ {
+  "slug": "OlympicCauldron",
+  "name": "Flame Cauldron",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_OlympicCauldron.webp",
+  "id": "olympiccauldron"
+ },
+ {
+  "slug": "Trap_LegHold_Big",
+  "name": "Bear Trap (Large)",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Trap_LegHold.webp",
+  "id": "trap_leghold_big"
+ },
+ {
+  "slug": "SkillUnlock_BirdDragon",
+  "name": "Vanwyrm Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_BirdDragon_icon_normal.webp",
+  "id": "skillunlock_birddragon"
+ },
+ {
+  "slug": "SkillUnlock_Deer_Ground",
+  "name": "Eikthyrdeer Terra Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Deer_Ground_icon_normal.webp",
+  "id": "skillunlock_deer_ground"
+ },
+ {
+  "slug": "TableDresser01_Stone",
+  "name": "Antique Dresser",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TableDresser01_Stone.webp",
+  "id": "tabledresser01_stone"
+ },
+ {
+  "slug": "Expedition",
+  "name": "Pal Expedition Station",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Expedition.webp",
+  "id": "expedition"
+ },
+ {
+  "slug": "ElecBaton",
+  "name": "Stun Baton",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_ElecBaton.webp",
+  "id": "elecbaton"
+ },
+ {
+  "slug": "FishingBait_2",
+  "name": "High Quality Bait",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Consume_FishingBait_2.webp",
+  "id": "fishingbait_2"
+ },
+ {
+  "slug": "ItemBooth",
+  "name": "Flea Market (Items)",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ItemBooth.webp",
+  "id": "itembooth"
+ },
+ {
+  "slug": "PalBooth",
+  "name": "Flea Market (Pals)",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_PalBooth.webp",
+  "id": "palbooth"
+ },
+ {
+  "slug": "SkillUnlock_BirdDragon_Ice",
+  "name": "Vanwyrm Cryst Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_BirdDragon_Ice_icon_normal.webp",
+  "id": "skillunlock_birddragon_ice"
+ },
+ {
+  "slug": "FurnitureSet_23",
+  "name": "Clock Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Clock01_Wall_Iron.webp",
+  "id": "furnitureset_23"
+ },
+ {
+  "slug": "FurnitureSet_13",
+  "name": "Metal Chair and Desk Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Stool01_Iron.webp",
+  "id": "furnitureset_13"
+ },
+ {
+  "slug": "Homeward",
+  "name": "Homeward Thundercloud",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Consume_Homeward.webp",
+  "id": "homeward"
+ },
+ {
+  "slug": "Battle_Armor_Grade_03_Copper",
+  "name": "Metal Armor",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_CopperArmor.webp",
+  "id": "battle_armor_grade_03_copper"
+ },
+ {
+  "slug": "Battle_Helm_Grade_03_Copper",
+  "name": "Metal Helm",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_CopperHelmet.webp",
+  "id": "battle_helm_grade_03_copper"
+ },
+ {
+  "slug": "SphereModule_Curve",
+  "name": "Curve Module",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_SphereModule_Curve.webp",
+  "id": "spheremodule_curve"
+ },
+ {
+  "slug": "AutoMealPouch_Tier3",
+  "name": "Large Feed Bag",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_AutoMealPouch_Tier3.webp",
+  "id": "automealpouch_tier3"
+ },
+ {
+  "slug": "Fountain",
+  "name": "Water Fountain",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Fountain.webp",
+  "id": "fountain"
+ },
+ {
+  "slug": "SkillUnlock_KingAlpaca",
+  "name": "Kingpaca Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingAlpaca_icon_normal.webp",
+  "id": "skillunlock_kingalpaca"
+ },
+ {
+  "slug": "FurnitureTree_Bamboo",
+  "name": "Faux Bamboo Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Bamboo.webp",
+  "id": "furnituretree_bamboo"
+ },
+ {
+  "slug": "FurnitureSet_6",
+  "name": "Storage Container Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Container01_Iron.webp",
+  "id": "furnitureset_6"
+ },
+ {
+  "slug": "MakeshiftHandgun",
+  "name": "Makeshift Handgun",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_MakeshiftHandgun.webp",
+  "id": "makeshifthandgun"
+ },
+ {
+  "slug": "Infra_PalBed_Grade_02",
+  "name": "Fluffy Pal Bed",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MedicalPalBed_03.webp",
+  "id": "infra_palbed_grade_02"
+ },
+ {
+  "slug": "PalMedicineBox",
+  "name": "Medicine Rack",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_PalMedicineBox.webp",
+  "id": "palmedicinebox"
+ },
+ {
+  "slug": "Clinic",
+  "name": "Clinic",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Clinic.webp",
+  "description": "A basic medical facility for managing the health of Pals working at the base.\n\nAssigning a Pal with Medicine Production suitability helps reduce SAN depletion and prevent illness and injury.\n\nWhile sanitation has its limits, it plays a crucial role in early base development.",
+  "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Clinic.webp",
+  "materials": [
+   {
+    "name": "Wooden Board",
+    "count": 10
+   },
+   {
+    "name": "Cloth",
+    "count": 20
+   },
+   {
+    "name": "Nail",
+    "count": 15
+   }
+  ],
+  "product": "Clinic",
+  "unlockLevel": 24,
+  "defense": 2,
+  "hp": 4000,
+  "id": "clinic"
+ },
+ {
+  "slug": "FlowerBed",
+  "name": "Flower Bed",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FlowerBed.webp",
+  "id": "flowerbed"
+ },
+ {
+  "slug": "SkillUnlock_Kitsunebi_Ice",
+  "name": "Foxparks Cryst's Harness",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Kitsunebi_Ice_icon_normal.webp",
+  "id": "skillunlock_kitsunebi_ice"
+ },
+ {
+  "slug": "SkillUnlock_BlueDragon",
+  "name": "Azurobe Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_BlueDragon_icon_normal.webp",
+  "id": "skillunlock_bluedragon"
+ },
+ {
+  "slug": "SkillUnlock_FlowerDinosaur",
+  "name": "Dinossom Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_FlowerDinosaur_icon_normal.webp",
+  "id": "skillunlock_flowerdinosaur"
+ },
+ {
+  "slug": "Product_CopperPit",
+  "name": "Ore Mining Site",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CopperPit.webp",
+  "id": "product_copperpit"
+ },
+ {
+  "slug": "PalDopingShot",
+  "name": "Boost Gun",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_PalDopingShot.webp",
+  "id": "paldopingshot"
+ },
+ {
+  "slug": "PalDopingShotBullet",
+  "name": "Boost Gun Ammo",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_PalDopingShotBullet.webp",
+  "id": "paldopingshotbullet"
+ },
+ {
+  "slug": "Battle_Armor_Grade_03_Copper_Heat",
+  "name": "Heat Resistant Metal Armor",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_CopperArmorHeat.webp",
+  "id": "battle_armor_grade_03_copper_heat"
+ },
+ {
+  "slug": "Product_Farm_Lettuce",
+  "name": "Lettuce Plantation",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FarmBlockV2_Lettuce.webp",
+  "id": "product_farm_lettuce"
+ },
+ {
+  "slug": "Silo",
+  "name": "Silo",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Silo.webp",
+  "description": "Place in base to improve planting speed.\n\nPlacing more than one has no additional effect.",
+  "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Silo.webp",
+  "materials": [
+   {
+    "name": "Wood",
+    "count": 30
+   },
+   {
+    "name": "Stone",
+    "count": 20
+   },
+   {
+    "name": "Fiber",
+    "count": 30
+   },
+   {
+    "name": "Cement",
+    "count": 10
+   }
+  ],
+  "product": "Silo",
+  "unlockLevel": 25,
+  "defense": 3,
+  "hp": 5000,
+  "id": "silo"
+ },
+ {
+  "slug": "FragGrenade",
+  "name": "Frag Grenade",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FragGrenade.webp",
+  "id": "fraggrenade"
+ },
+ {
+  "slug": "SkillUnlock_Serpent_Ground",
+  "name": "Surfent Terra Saddle",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Serpent_Ground_icon_normal.webp",
+  "id": "skillunlock_serpent_ground"
+ },
+ {
+  "slug": "SkillUnlock_HadesBird",
+  "name": "Helzephyr Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_HadesBird_icon_normal.webp",
+  "id": "skillunlock_hadesbird"
+ },
+ {
+  "slug": "Unlock_Picking_Tier2",
+  "name": "Lockpicking Tool v2",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_Unlock_Picking_Tier2.webp",
+  "id": "unlock_picking_tier2"
+ },
+ {
+  "slug": "MakeshiftSubmachineGun",
+  "name": "Makeshift SMG",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_MakeshiftSubmachineGun.webp",
+  "id": "makeshiftsubmachinegun"
+ },
+ {
+  "slug": "Infra_ElectricGenerator_Grade_01",
+  "name": "Power Generator",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_EnergyGenerator_Electric.webp",
+  "id": "infra_electricgenerator_grade_01"
+ },
+ {
+  "slug": "Lamp",
+  "name": "Lamp",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_LampStand.webp",
+  "description": "A light source that provides illumination to a base even at night.\n\nRequires electricity, but lights up a larger area.",
+  "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_LampStand.webp",
+  "materials": [
+   {
+    "name": "Ingot",
+    "count": 10
+   },
+   {
+    "name": "Electric Organ",
+    "count": 3
+   },
+   {
+    "name": "Nail",
+    "count": 3
+   },
+   {
+    "name": "Wood",
+    "count": 20
+   }
+  ],
+  "product": "Lamp",
+  "unlockLevel": 26,
+  "defense": 2,
+  "hp": 2000,
+  "id": "lamp"
+ },
+ {
+  "slug": "ManualElectricGenerator",
+  "name": "Human-Powered Generator",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ManualElectricGenerator.webp",
+  "id": "manualelectricgenerator"
+ },
+ {
+  "slug": "Battle_Defense_BowGun",
+  "name": "Mounted Crossbow",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_efenseBulletLauncher_BowGun.webp",
+  "id": "battle_defense_bowgun"
+ },
+ {
+  "slug": "SkillUnlock_FengyunDeeper",
+  "name": "Fenglope Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_FengyunDeeper_icon_normal.webp",
+  "id": "skillunlock_fengyundeeper"
+ },
+ {
+  "slug": "SkillUnlock_IceSeal",
+  "name": "Polapup Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_IceSeal_icon_normal.webp",
+  "id": "skillunlock_iceseal"
+ },
+ {
+  "slug": "FurnitureSet_29",
+  "name": "Antique Lamp Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Light_FloorLamp01.webp",
+  "id": "furnitureset_29"
+ },
+ {
+  "slug": "Battle_RangeWeapon_SphereLauncher_Once",
+  "name": "Single-Shot Sphere Launcher",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SphereLauncher_Once.webp",
+  "id": "battle_rangeweapon_spherelauncher_once"
+ },
+ {
+  "slug": "Special_PalSphere_Grade_04",
+  "name": "Hyper Sphere",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere_Tera.webp",
+  "id": "special_palsphere_grade_04"
+ },
+ {
+  "slug": "Special_SphereFactory_Black_Grade_02",
+  "name": "Sphere Assembly Line",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SphereFactory_Black_02.webp",
+  "id": "special_spherefactory_black_grade_02"
+ },
+ {
+  "slug": "Battle_Armor_Grade_03_Copper_Cold",
+  "name": "Cold Resistant Metal Armor",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_CopperArmorCold.webp",
+  "id": "battle_armor_grade_03_copper_cold"
+ },
+ {
+  "slug": "AdditionalInventory_001",
+  "name": "Small Pouch",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_AdditionalInventory_001.webp",
+  "id": "additionalinventory_001"
+ },
+ {
+  "slug": "CeilingLamp",
+  "name": "Ceiling Lamp",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_LampTop.webp",
+  "id": "ceilinglamp"
+ },
+ {
+  "slug": "FragGrenade_Elec",
+  "name": "Shock Grenade",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FragGrenade_Elec.webp",
+  "id": "fraggrenade_elec"
+ },
+ {
+  "slug": "SkillUnlock_BlueDragon_Ice",
+  "name": "Azurobe Cryst Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_BlueDragon_Ice_icon_normal.webp",
+  "id": "skillunlock_bluedragon_ice"
+ },
+ {
+  "slug": "FurnitureTree_Tropical",
+  "name": "Faux Tropical Greenery Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Tropical.webp",
+  "id": "furnituretree_tropical"
+ },
+ {
+  "slug": "UnlockEquipmentSlot_Weapon_01",
+  "name": "Extra Weapon Holster",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_UnlockEquipmentSlot_Weapon_01.webp",
+  "id": "unlockequipmentslot_weapon_01"
+ },
+ {
+  "slug": "Battle_RangeWeapon_HandGun",
+  "name": "Handgun",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_HandGun_Default.webp",
+  "id": "battle_rangeweapon_handgun"
+ },
+ {
+  "slug": "HandgunBullet",
+  "name": "Handgun Ammo",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_HandgunBullet.webp",
+  "id": "handgunbullet"
+ },
+ {
+  "slug": "Infra_PlayerBed_Grade_02",
+  "name": "Fine Bed",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_PlayerBed_03.webp",
+  "id": "infra_playerbed_grade_02"
+ },
+ {
+  "slug": "BaseCampWorkHard02",
+  "name": "High Quality Monitoring Stand",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BaseCampWorkHard02.webp",
+  "id": "basecampworkhard02"
+ },
+ {
+  "slug": "Stump",
+  "name": "Stump and Axe",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Stump.webp",
+  "id": "stump"
+ },
+ {
+  "slug": "FireCultFlagSet",
+  "name": "Brothers of the Eternal Pyre Flag Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FireCult_Flag.webp",
+  "id": "firecultflagset"
+ },
+ {
+  "slug": "SkillUnlock_FeatherOstrich",
+  "name": "Dazemu Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_FeatherOstrich_icon_normal.webp",
+  "id": "skillunlock_featherostrich"
+ },
+ {
+  "slug": "SkillUnlock_GrassMammoth",
+  "name": "Mammorest Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GrassMammoth_icon_normal.webp",
+  "id": "skillunlock_grassmammoth"
+ },
+ {
+  "slug": "Accessory_JumpPower_Increase",
+  "name": "Anti-Gravity Belt",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_JumpPower_Increase.webp",
+  "id": "accessory_jumppower_increase"
+ },
+ {
+  "slug": "Shield_03",
+  "name": "Giga Shield",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_Shield_03.webp",
+  "id": "shield_03"
+ },
+ {
+  "slug": "Battle_MeleeWeapon_Sword",
+  "name": "Sword",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Sword.webp",
+  "id": "battle_meleeweapon_sword"
+ },
+ {
+  "slug": "FishingRod_02_1",
+  "name": "Intermediate Fishing Rod (Cattiva)",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FishingRod_3.webp",
+  "id": "fishingrod_02_1"
+ },
+ {
+  "slug": "Product_Factory_Hard_Grade_02",
+  "name": "Production Assembly Line",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Factory_Hard_02.webp",
+  "id": "product_factory_hard_grade_02"
+ },
+ {
+  "slug": "Product_Farm_Potato",
+  "name": "Potato Plantation",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FarmBlockV2_Potato.webp",
+  "id": "product_farm_potato"
+ },
+ {
+  "slug": "FragGrenade_Ice",
+  "name": "Ice Grenade",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FragGrenade_Ice.webp",
+  "id": "fraggrenade_ice"
+ },
+ {
+  "slug": "SkillUnlock_FireKirin",
+  "name": "Pyrin Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_FireKirin_icon_normal.webp",
+  "id": "skillunlock_firekirin"
+ },
+ {
+  "slug": "SkillUnlock_ThunderBird",
+  "name": "Beakon Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_ThunderBird_icon_normal.webp",
+  "id": "skillunlock_thunderbird"
+ },
+ {
+  "slug": "Lantern_High",
+  "name": "Enhanced Hip Lantern",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_Lantern.webp",
+  "id": "lantern_high"
+ },
+ {
+  "slug": "MakeshiftShotgun",
+  "name": "Makeshift Shotgun",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_MakeshiftShotgun.webp",
+  "id": "makeshiftshotgun"
+ },
+ {
+  "slug": "Trap_MineAttack",
+  "name": "Mine",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Trap_MineAttack.webp",
+  "id": "trap_mineattack"
+ },
+ {
+  "slug": "Metal_houseset",
+  "name": "Metal Structure Set",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Metal_Foundation.webp",
+  "id": "metal_houseset"
+ },
+ {
+  "slug": "DefenseWall_Metal",
+  "name": "Metal Defensive Wall",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DefenseWall_Metal.webp",
+  "id": "defensewall_metal"
+ },
+ {
+  "slug": "Metal_Gate",
+  "name": "Iron Gate",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Metal_Gate.webp",
+  "id": "metal_gate"
+ },
+ {
+  "slug": "MiningTool",
+  "name": "Pickaxe and Helmet",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MiningTool.webp",
+  "id": "miningtool"
+ },
+ {
+  "slug": "Cake02",
+  "name": "Mushroom Cake",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_food_Cake02.webp",
+  "id": "cake02"
+ },
+ {
+  "slug": "SkillUnlock_ThunderDog",
+  "name": "Rayhound Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_ThunderDog_icon_normal.webp",
+  "id": "skillunlock_thunderdog"
+ },
+ {
+  "slug": "YakushimaBlade",
+  "name": "Meowmere",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_YakushimaBlade.webp",
+  "id": "yakushimablade"
+ },
+ {
+  "slug": "MakeshiftAssaultRifle",
+  "name": "Makeshift Assault Rifle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_MakeshiftAssaultRifle.webp",
+  "id": "makeshiftassaultrifle"
+ },
+ {
+  "slug": "SphereModule_Sniper",
+  "name": "Sniper Module",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_SphereModule_Spiper.webp",
+  "id": "spheremodule_sniper"
+ },
+ {
+  "slug": "Bio_Coolant",
+  "name": "Cryogenic Coolant",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Bio_Coolant.webp",
+  "id": "bio_coolant"
+ },
+ {
+  "slug": "FishingPond1",
+  "name": "Fishing Pond",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FishingPond1.webp",
+  "id": "fishingpond1"
+ },
+ {
+  "slug": "Spa2",
+  "name": "High Quality Hot Spring",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Spa_2.webp",
+  "id": "spa2"
+ },
+ {
+  "slug": "FragGrenade_Fire",
+  "name": "Incendiary Grenade",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FragGrenade_Fire.webp",
+  "id": "fraggrenade_fire"
+ },
+ {
+  "slug": "SkillUnlock_GhostAnglerfish",
+  "name": "Ghangler Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GhostAnglerfish_icon_normal.webp",
+  "id": "skillunlock_ghostanglerfish"
+ },
+ {
+  "slug": "SkillUnlock_IceDeer",
+  "name": "Reindrix Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_IceDeer_icon_normal.webp",
+  "id": "skillunlock_icedeer"
+ },
+ {
+  "slug": "GrapplingGun3",
+  "name": "Giga Grappling Gun",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_GrapplingGun.webp",
+  "id": "grapplinggun3"
+ },
+ {
+  "slug": "Product_WeaponFactory_Dirty_Grade_02",
+  "name": "Weapon Assembly Line",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_WeaponFactory_Dirty_02.webp",
+  "id": "product_weaponfactory_dirty_grade_02"
+ },
+ {
+  "slug": "PalHealingGrenade",
+  "name": "Pal Recovery Grenade",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_PalHealingGrenade.webp",
+  "id": "palhealinggrenade"
+ },
+ {
+  "slug": "Product_Farm_Carrot",
+  "name": "Carrot Plantation",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FarmBlockV2_Carrot.webp",
+  "id": "product_farm_carrot"
+ },
+ {
+  "slug": "Cauldron",
+  "name": "Witch Cauldron",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Cauldron.webp",
+  "id": "cauldron"
+ },
+ {
+  "slug": "BaseCampWorkerExtraStation",
+  "name": "Palbox Control Device",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BaseCampWorkerExtraStation.webp",
+  "id": "basecampworkerextrastation"
+ },
+ {
+  "slug": "SkillUnlock_FairyDragon_Water",
+  "name": "Elphidran Aqua Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_FairyDragon_Water_icon_normal.webp",
+  "id": "skillunlock_fairydragon_water"
+ },
+ {
+  "slug": "SkillUnlock_GrassPanda",
+  "name": "Mossanda's Grenade Launcher",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GrassPanda_icon_normal.webp",
+  "id": "skillunlock_grasspanda"
+ },
+ {
+  "slug": "OctaviaSet01",
+  "name": "ULTRAKILL Collab Set 1",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_Octavia001_Armor.webp",
+  "id": "octaviaset01"
+ },
+ {
+  "slug": "Battle_RangeWeapon_OldRevolver",
+  "name": "Old Revolver",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_OldRevolver.webp",
+  "id": "battle_rangeweapon_oldrevolver"
+ },
+ {
+  "slug": "Polymer",
+  "name": "Polymer",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Polymer.webp",
+  "description": "Polymer made from refined oil. \n\nRequired for producing various advanced items such as firearms.\n\nCan be crafted at Production Assembly Line.",
+  "image": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Polymer.webp",
+  "materials": [
+   {
+    "name": "High Quality Pal Oil",
+    "count": 2
+   },
+   {
+    "name": "Sulfur",
+    "count": 1
+   },
+   {
+    "name": "Polymer",
+    "count": 1
+   }
+  ],
+  "product": "Polymer 1",
+  "unlockLevel": 33,
+  "id": "polymer"
+ },
+ {
+  "slug": "Trap_MineElecShock",
+  "name": "Electric Mine",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Trap_MineElecShock.webp",
+  "id": "trap_mineelecshock"
+ },
+ {
+  "slug": "FragGrenade_Water",
+  "name": "Water Grenade",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FragGrenade_Water.webp",
+  "id": "fraggrenade_water"
+ },
+ {
+  "slug": "Snowman",
+  "name": "Snowman",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Snowman.webp",
+  "description": "Place in base to improve cooling speed.\n\nPlacing more than one has no additional effect.",
+  "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Snowman.webp",
+  "materials": [
+   {
+    "name": "Ice Organ",
+    "count": 5
+   },
+   {
+    "name": "Wood",
+    "count": 10
+   },
+   {
+    "name": "Cloth",
+    "count": 5
+   }
+  ],
+  "product": "Snowman",
+  "unlockLevel": 33,
+  "defense": 3,
+  "hp": 5000,
+  "id": "snowman"
+ },
+ {
+  "slug": "SkillUnlock_Manticore",
+  "name": "Blazehowl Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Manticore_icon_normal.webp",
+  "id": "skillunlock_manticore"
+ },
+ {
+  "slug": "SkillUnlock_RedArmorBird",
+  "name": "Ragnahawk Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_RedArmorBird_icon_normal.webp",
+  "id": "skillunlock_redarmorbird"
+ },
+ {
+  "slug": "SkillUnlock_SakuraSaurus",
+  "name": "Broncherry Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_SakuraSaurus_icon_normal.webp",
+  "id": "skillunlock_sakurasaurus"
+ },
+ {
+  "slug": "Altar",
+  "name": "Summoning Altar",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Altar.webp",
+  "id": "altar"
+ },
+ {
+  "slug": "Product_Ingot_Grade_02_Iron",
+  "name": "Improved Furnace",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BlastFurnace_2.webp",
+  "id": "product_ingot_grade_02_iron"
+ },
+ {
+  "slug": "Product_Axe_Grade_03",
+  "name": "Refined Metal Axe",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Axe_Tier_00.webp",
+  "id": "product_axe_grade_03"
+ },
+ {
+  "slug": "Product_Pickaxe_Grade_03",
+  "name": "Refined Metal Pickaxe",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Pickaxe_Tier_00.webp",
+  "id": "product_pickaxe_grade_03"
+ },
+ {
+  "slug": "Spear_3",
+  "name": "Refined Metal Spear",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Spear_Tier_00.webp",
+  "id": "spear_3"
+ },
+ {
+  "slug": "SkillUnlock_FireKirin_Dark",
+  "name": "Pyrin Noct Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_FireKirin_Dark_icon_normal.webp",
+  "id": "skillunlock_firekirin_dark"
+ },
+ {
+  "slug": "SkillUnlock_GrassPanda_Electric",
+  "name": "Mossanda Lux's Grenade Launcher",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GrassPanda_Electric_icon_normal.webp",
+  "id": "skillunlock_grasspanda_electric"
+ },
+ {
+  "slug": "SkillUnlock_FlowerDinosaur_Electric",
+  "name": "Dinossom Lux Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_FlowerDinosaur_Electric_icon_normal.webp",
+  "id": "skillunlock_flowerdinosaur_electric"
+ },
+ {
+  "slug": "FurnitureSet_5",
+  "name": "Metal Barrel Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Barrel01_Iron.webp",
+  "id": "furnitureset_5"
+ },
+ {
+  "slug": "Accessory_TalentChecker",
+  "name": "Ability Glasses",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_TalentChecker.webp",
+  "id": "accessory_talentchecker"
+ },
+ {
+  "slug": "Special_PalSphere_Grade_05",
+  "name": "Ultra Sphere",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere_Master.webp",
+  "id": "special_palsphere_grade_05"
+ },
+ {
+  "slug": "Special_SphereFactory_Black_Grade_03",
+  "name": "Sphere Assembly Line II",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SphereFactory_Black_03.webp",
+  "id": "special_spherefactory_black_grade_03"
+ },
+ {
+  "slug": "Infra_ElectronicCircuit",
+  "name": "Circuit Board",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_ElectronicCircuit.webp",
+  "id": "infra_electroniccircuit"
+ },
+ {
+  "slug": "CarbonFiber",
+  "name": "Carbon Fiber",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_CarbonFiber.webp",
+  "id": "carbonfiber"
+ },
+ {
+  "slug": "FragGrenade_Leaf",
+  "name": "Grass Grenade",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FragGrenade_Leaf.webp",
+  "id": "fraggrenade_leaf"
+ },
+ {
+  "slug": "SkillUnlock_Manticore_Dark",
+  "name": "Blazehowl Noct Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Manticore_Dark_icon_normal.webp",
+  "id": "skillunlock_manticore_dark"
+ },
+ {
+  "slug": "SkillUnlock_TropicalOstrich",
+  "name": "Palumba Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_TropicalOstrich_icon_normal.webp",
+  "id": "skillunlock_tropicalostrich"
+ },
+ {
+  "slug": "FurnitureSet_14",
+  "name": "Ironwood Table Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TableSide01_Iron.webp",
+  "id": "furnitureset_14"
+ },
+ {
+  "slug": "Accessory_AirDash1",
+  "name": "Air Dash Boots",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_AirDash.webp",
+  "id": "accessory_airdash1"
+ },
+ {
+  "slug": "Battle_RangeWeapon_Rifle",
+  "name": "Single-Shot Rifle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SingleShotRifle.webp",
+  "id": "battle_rangeweapon_rifle"
+ },
+ {
+  "slug": "RifleBullet",
+  "name": "Rifle Ammo",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_RifleBullet.webp",
+  "id": "riflebullet"
+ },
+ {
+  "slug": "Product_Farm_Onion",
+  "name": "Onion Plantation",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FarmBlockV2_Onion.webp",
+  "id": "product_farm_onion"
+ },
+ {
+  "slug": "Cloth2",
+  "name": "High Quality Cloth",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Cloth.webp",
+  "id": "cloth2"
+ },
+ {
+  "slug": "MedicalPalBed_04",
+  "name": "Large Pal Bed",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MedicalPalBed_04.webp",
+  "id": "medicalpalbed_04"
+ },
+ {
+  "slug": "AutoMealPouch_Tier4",
+  "name": "Huge Feed Bag",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_AutoMealPouch_Tier4.webp",
+  "id": "automealpouch_tier4"
+ },
+ {
+  "slug": "SkillUnlock_Plesiosaur",
+  "name": "Braloha Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Plesiosaur_icon_normal.webp",
+  "id": "skillunlock_plesiosaur"
+ },
+ {
+  "slug": "SkillUnlock_VolcanoDragon",
+  "name": "Moldron Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_VolcanoDragon_icon_normal.webp",
+  "materials": [
+   {
+    "name": "Leather",
+    "count": 20
+   },
+   {
+    "name": "Cloth",
+    "count": 20
+   },
+   {
+    "name": "Refined Ingot",
+    "count": 15
+   },
+   {
+    "name": "Flame Organ",
+    "count": 5
+   },
+   {
+    "name": "Paldium Fragment",
+    "count": 30
+   },
+   {
+    "name": "Moldron Saddle",
+    "count": 1
+   }
+  ],
+  "product": "Moldron Saddle 1",
+  "unlockLevel": 36,
+  "id": "skillunlock_volcanodragon"
+ },
+ {
+  "slug": "Special_ElectricHatchingPalEgg",
+  "name": "Electric Egg Incubator",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ElectricHatchingPalEgg.webp",
+  "id": "special_electrichatchingpalegg"
+ },
+ {
+  "slug": "Battle_RangeWeapon_SubmachineGun",
+  "name": "SMG",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SubmachineGun.webp",
+  "id": "battle_rangeweapon_submachinegun"
+ },
+ {
+  "slug": "Battle_Armor_Grade_03_Iron",
+  "name": "Refined Metal Armor",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_IronArmor.webp",
+  "id": "battle_armor_grade_03_iron"
+ },
+ {
+  "slug": "Battle_Helm_Grade_04_Iron",
+  "name": "Refined Metal Helm",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_IronHelmet.webp",
+  "id": "battle_helm_grade_04_iron"
+ },
+ {
+  "slug": "Corrosive_Solvent",
+  "name": "Corrosive Solvent",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Corrosive_Solvent.webp",
+  "description": "A dangerous chemical solvent with strong decomposing properties.\n\nUsed for precision processing and special treatments.\n\nCan be crafted at Production Assembly Line.",
+  "image": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Corrosive_Solvent.webp",
+  "materials": [
+   {
+    "name": "Venom Gland",
+    "count": 1
+   },
+   {
+    "name": "Sulfur",
+    "count": 1
+   },
+   {
+    "name": "Corrosive Solvent",
+    "count": 1
+   }
+  ],
+  "product": "Corrosive Solvent 1",
+  "unlockLevel": 37,
+  "id": "corrosive_solvent"
+ },
+ {
+  "slug": "EnergyStorage_Electric",
+  "name": "Accumulator",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_EnergyStorage_Electric.webp",
+  "id": "energystorage_electric"
+ },
+ {
+  "slug": "SkillUnlock_GhostBeast",
+  "name": "Maraith Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GhostBeast_icon_normal.webp",
+  "id": "skillunlock_ghostbeast"
+ },
+ {
+  "slug": "FurnitureTree_Desert",
+  "name": "Faux Desert Greenery Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Desert.webp",
+  "id": "furnituretree_desert"
+ },
+ {
+  "slug": "FurnitureSet_31",
+  "name": "Outdoor Furniture Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CableCoil01_Iron.webp",
+  "id": "furnitureset_31"
+ },
+ {
+  "slug": "Product_CoalPit",
+  "name": "Coal Mine",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CoalPit.webp",
+  "id": "product_coalpit"
+ },
+ {
+  "slug": "OperatingTable",
+  "name": "Pal Surgery Table",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_OperatingTable.webp",
+  "id": "operatingtable"
+ },
+ {
+  "slug": "Launcher_Meteor",
+  "name": "Meteor Launcher",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Launcher_Meteor.webp",
+  "id": "launcher_meteor"
+ },
+ {
+  "slug": "FishingBait_3",
+  "name": "Deluxe Bait",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Consume_FishingBait_3.webp",
+  "id": "fishingbait_3"
+ },
+ {
+  "slug": "Refrigerator",
+  "name": "Refrigerator",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Refrigerator.webp",
+  "description": "Large food vault.\n\nAssign an Ice Pal to help prevent\n\nfood stored inside from spoiling.",
+  "image": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Refrigerator.webp",
+  "materials": [
+   {
+    "name": "Refined Ingot",
+    "count": 50
+   },
+   {
+    "name": "Polymer",
+    "count": 20
+   },
+   {
+    "name": "Cryogenic Coolant",
+    "count": 10
+   },
+   {
+    "name": "Circuit Board",
+    "count": 5
+   }
+  ],
+  "product": "Refrigerator",
+  "unlockLevel": 38,
+  "defense": 3,
+  "hp": 5000,
+  "id": "refrigerator"
+ },
+ {
+  "slug": "Trap_MineFreeze",
+  "name": "Ice Mine",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Trap_MineFreeze.webp",
+  "id": "trap_minefreeze"
+ },
+ {
+  "slug": "FragGrenade_Ground",
+  "name": "Ground Grenade",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FragGrenade_Ground.webp",
+  "id": "fraggrenade_ground"
+ },
+ {
+  "slug": "SkillUnlock_SkyDragon",
+  "name": "Quivern Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_SkyDragon_icon_normal.webp",
+  "id": "skillunlock_skydragon"
+ },
+ {
+  "slug": "FurnitureSet_7",
+  "name": "Leather Chair Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Sofa01_Iron.webp",
+  "id": "furnitureset_7"
+ },
+ {
+  "slug": "Battle_RangeWeapon_SphereLauncher",
+  "name": "Scatter Sphere Launcher",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SphereLauncher.webp",
+  "id": "battle_rangeweapon_spherelauncher"
+ },
+ {
+  "slug": "PoliceFlagSet",
+  "name": "PIDF Flag Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Police_Flag.webp",
+  "id": "policeflagset"
+ },
+ {
+  "slug": "Battle_RangeWeapon_ShotGun",
+  "name": "Double-Barreled Shotgun",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_DoubleBarrelShotgun.webp",
+  "id": "battle_rangeweapon_shotgun"
+ },
+ {
+  "slug": "ShotGunBullet",
+  "name": "Shotgun Shell",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_ShotgunBullet.webp",
+  "id": "shotgunbullet"
+ },
+ {
+  "slug": "SphereModule_Curve2",
+  "name": "Slider Module",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_SphereModule_Curve2.webp",
+  "id": "spheremodule_curve2"
+ },
+ {
+  "slug": "Infra_ItemChest_Grade_03",
+  "name": "Refined Metal Chest",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ItemChest_03.webp",
+  "id": "infra_itemchest_grade_03"
+ },
+ {
+  "slug": "SkillUnlock_BlackMetalDragon",
+  "name": "Astegon Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_BlackMetalDragon_icon_normal.webp",
+  "id": "skillunlock_blackmetaldragon"
+ },
+ {
+  "slug": "SkillUnlock_MushroomDragon",
+  "name": "Shroomer Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_MushroomDragon_icon_normal.webp",
+  "id": "skillunlock_mushroomdragon"
+ },
+ {
+  "slug": "SkillUnlock_MushroomDragon_Dark",
+  "name": "Shroomer Noct Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_MushroomDragon_Dark_icon_normal.webp",
+  "id": "skillunlock_mushroomdragon_dark"
+ },
+ {
+  "slug": "Product_CopperPit_2",
+  "name": "Ore Mining Site II",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CopperPit_2.webp",
+  "id": "product_copperpit_2"
+ },
+ {
+  "slug": "Bat3",
+  "name": "Metal Bat",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Bat3.webp",
+  "id": "bat3"
+ },
+ {
+  "slug": "Battle_Armor_Grade_03_Iron_Heat",
+  "name": "Heat Resistant Refined Metal Armor",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_IronArmorHeat.webp",
+  "id": "battle_armor_grade_03_iron_heat"
+ },
+ {
+  "slug": "Battle_Glider_Grade_03",
+  "name": "Giga Glider",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Glider_Glider_Super.webp",
+  "id": "battle_glider_grade_03"
+ },
+ {
+  "slug": "Battle_Defense_MachineGun",
+  "name": "Mounted Machine Gun",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DefenseMachinegun.webp",
+  "id": "battle_defense_machinegun"
+ },
+ {
+  "slug": "FragGrenade_Dark",
+  "name": "Dark Grenade",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FragGrenade_Dark.webp",
+  "id": "fraggrenade_dark"
+ },
+ {
+  "slug": "SkillUnlock_Umihebi",
+  "name": "Jormuntide Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Umihebi_icon_normal.webp",
+  "id": "skillunlock_umihebi"
+ },
+ {
+  "slug": "SkillUnlock_ElecPanda",
+  "name": "Grizzbolt's Minigun",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_ElecPanda_icon_normal.webp",
+  "id": "skillunlock_elecpanda"
+ },
+ {
+  "slug": "SkillUnlock_WeaselDragon_Fire",
+  "name": "Chillet Ignis Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_WeaselDragon_Fire_icon_normal.webp",
+  "id": "skillunlock_weaseldragon_fire"
+ },
+ {
+  "slug": "Accessory_JumpCount_Increase1",
+  "name": "Double Jump Boots",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_JumpCount_Increase.webp",
+  "id": "accessory_jumpcount_increase1"
+ },
+ {
+  "slug": "Battle_RangeWeapon_SemiAutoRifle",
+  "name": "Semi-Auto Rifle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SemiAutoRifle.webp",
+  "id": "battle_rangeweapon_semiautorifle"
+ },
+ {
+  "slug": "Battle_Armor_Grade_03_Iron_Cold",
+  "name": "Cold Resistant Refined Metal Armor",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_IronArmorCold.webp",
+  "id": "battle_armor_grade_03_iron_cold"
+ },
+ {
+  "slug": "Product_Cooking_Grade_03",
+  "name": "Electric Kitchen",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ElectricKitchen.webp",
+  "id": "product_cooking_grade_03"
+ },
+ {
+  "slug": "SanityDecrease1",
+  "name": "Alpha Wave Generator",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SanityDecrease1.webp",
+  "id": "sanitydecrease1"
+ },
+ {
+  "slug": "ElectricHeater",
+  "name": "Electric Heater",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_HeaterElectric.webp",
+  "id": "electricheater"
+ },
+ {
+  "slug": "SkillUnlock_WhiteAlienDragon",
+  "name": "Xenogard Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_WhiteAlienDragon_icon_normal.webp",
+  "id": "skillunlock_whitealiendragon"
+ },
+ {
+  "slug": "SkillUnlock_GuardianDog",
+  "name": "Yakumo Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GuardianDog_icon_normal.webp",
+  "id": "skillunlock_guardiandog"
+ },
+ {
+  "slug": "SkillUnlock_GrassMammoth_Ice",
+  "name": "Mammorest Cryst Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GrassMammoth_Ice_icon_normal.webp",
+  "id": "skillunlock_grassmammoth_ice"
+ },
+ {
+  "slug": "GuildChest",
+  "name": "Guild Chest",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_GuildChest.webp",
+  "id": "guildchest"
+ },
+ {
+  "slug": "Battle_RangeWeapon_CompoundBow",
+  "name": "Compound Bow",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_CompoundBow.webp",
+  "id": "battle_rangeweapon_compoundbow"
+ },
+ {
+  "slug": "ReinforcedArrow",
+  "name": "Reinforced Arrow",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_ReinforcedArrow.webp",
+  "id": "reinforcedarrow"
+ },
+ {
+  "slug": "Product_Factory_Hard_Grade_03",
+  "name": "Production Assembly Line II",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Factory_Hard_03.webp",
+  "id": "product_factory_hard_grade_03"
+ },
+ {
+  "slug": "ElectricCooler",
+  "name": "Electric Cooler",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CoolerElectric.webp",
+  "id": "electriccooler"
+ },
+ {
+  "slug": "FragGrenade_Dragon",
+  "name": "Dragon Grenade",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FragGrenade_Dragon.webp",
+  "id": "fraggrenade_dragon"
+ },
+ {
+  "slug": "SkillUnlock_IceNarwhal",
+  "name": "Whalaska Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_IceNarwhal_icon_normal.webp",
+  "id": "skillunlock_icenarwhal"
+ },
+ {
+  "slug": "SkillUnlock_GhostAnglerfish_Fire",
+  "name": "Ghangler Ignis Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GhostAnglerfish_Fire_icon_normal.webp",
+  "id": "skillunlock_ghostanglerfish_fire"
+ },
+ {
+  "slug": "SkillUnlock_VolcanicMonster",
+  "name": "Reptyro Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_VolcanicMonster_icon_normal.webp",
+  "id": "skillunlock_volcanicmonster"
+ },
+ {
+  "slug": "Battle_RangeWeapon_ShotGun_Multi",
+  "name": "Pump-Action Shotgun",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_PumpActionShotgun.webp",
+  "id": "battle_rangeweapon_shotgun_multi"
+ },
+ {
+  "slug": "Shield_04",
+  "name": "Hyper Shield",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_Shield_04.webp",
+  "id": "shield_04"
+ },
+ {
+  "slug": "AdditionalInventory_002",
+  "name": "Medium Pouch",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_AdditionalInventory_002.webp",
+  "id": "additionalinventory_002"
+ },
+ {
+  "slug": "HighGrade_Processed_Wood",
+  "name": "High Quality Wooden Board",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_HighGrade_Processed_Wood.webp",
+  "id": "highgrade_processed_wood"
+ },
+ {
+  "slug": "Product_Medicine_Grade_02",
+  "name": "Electric Medicine Workbench",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MedicineFacility_02.webp",
+  "id": "product_medicine_grade_02"
+ },
+ {
+  "slug": "SkillUnlock_Suzaku",
+  "name": "Suzaku Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Suzaku_icon_normal.webp",
+  "id": "skillunlock_suzaku"
+ },
+ {
+  "slug": "SkillUnlock_VolcanicMonster_Ice",
+  "name": "Reptyro Cryst Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_VolcanicMonster_Ice_icon_normal.webp",
+  "id": "skillunlock_volcanicmonster_ice"
+ },
+ {
+  "slug": "Product_StationDeforest2",
+  "name": "Logging Site II",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_StationDeforest3.webp",
+  "id": "product_stationdeforest2"
+ },
+ {
+  "slug": "Special_PalSphere_Grade_06",
+  "name": "Legendary Sphere",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere_Legend.webp",
+  "id": "special_palsphere_grade_06"
+ },
+ {
+  "slug": "Product_Ingot_Grade_03_Steal",
+  "name": "Electric Furnace",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BlastFurnace3.webp",
+  "id": "product_ingot_grade_03_steal"
+ },
+ {
+  "slug": "Bio_Battery",
+  "name": "Bio Battery",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Bio_Battery.webp",
+  "id": "bio_battery"
+ },
+ {
+  "slug": "Katana",
+  "name": "Katana",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Katana.webp",
+  "id": "katana"
+ },
+ {
+  "slug": "Battle_MeleeWeapon_Pickaxe_Steal",
+  "name": "Pal Metal Pickaxe",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Pickaxe_Tier_03.webp",
+  "id": "battle_meleeweapon_pickaxe_steal"
+ },
+ {
+  "slug": "Battle_MeleeWeapon_Axe_Steal",
+  "name": "Pal Metal Axe",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Axe_Tier_03.webp",
+  "id": "battle_meleeweapon_axe_steal"
+ },
+ {
+  "slug": "SkillUnlock_Suzaku_Water",
+  "name": "Suzaku Aqua Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Suzaku_Water_icon_normal.webp",
+  "id": "skillunlock_suzaku_water"
+ },
+ {
+  "slug": "SkillUnlock_SakuraSaurus_Water",
+  "name": "Broncherry Aqua Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_SakuraSaurus_Water_icon_normal.webp",
+  "id": "skillunlock_sakurasaurus_water"
+ },
+ {
+  "slug": "Glass_houseset",
+  "name": "Glass Structure Set",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Glass_foundation.webp",
+  "id": "glass_houseset"
+ },
+ {
+  "slug": "Battle_RangeWeapon_AssaultRifle",
+  "name": "Assault Rifle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_AssaultRifle_Default1.webp",
+  "id": "battle_rangeweapon_assaultrifle"
+ },
+ {
+  "slug": "AssaultRifleBullet",
+  "name": "Assault Rifle Ammo",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_AssaultRifleBullet.webp",
+  "id": "assaultriflebullet"
+ },
+ {
+  "slug": "FishingRod_03_1",
+  "name": "Advanced Fishing Rod (Pengullet)",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FishingRod_5.webp",
+  "id": "fishingrod_03_1"
+ },
+ {
+  "slug": "CompositeDesk",
+  "name": "Drafting Table",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CompositeDesk.webp",
+  "id": "compositedesk"
+ },
+ {
+  "slug": "SkillUnlock_SkyDragon_Grass",
+  "name": "Quivern Botan Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_SkyDragon_Grass_icon_normal.webp",
+  "id": "skillunlock_skydragon_grass"
+ },
+ {
+  "slug": "SkillUnlock_LazyDragon",
+  "name": "Relaxaurus' Missile Launcher",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_LazyDragon_icon_normal.webp",
+  "id": "skillunlock_lazydragon"
+ },
+ {
+  "slug": "SkillUnlock_Yeti",
+  "name": "Wumpo Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Yeti_icon_normal.webp",
+  "id": "skillunlock_yeti"
+ },
+ {
+  "slug": "DecalGunSet",
+  "name": "Decal Gun Set",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_InkBullet.webp",
+  "id": "decalgunset"
+ },
+ {
+  "slug": "Battle_Armor_Grade_04_Steal",
+  "name": "Pal Metal Armor",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_StealArmor.webp",
+  "id": "battle_armor_grade_04_steal"
+ },
+ {
+  "slug": "Battle_Helm_Grade_05_Steal",
+  "name": "Pal Metal Helm",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_StealHelmet.webp",
+  "id": "battle_helm_grade_05_steal"
+ },
+ {
+  "slug": "WorkSpeedIncrease1",
+  "name": "Beta Wave Generator",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_WorkSpeedIncrease1.webp",
+  "id": "workspeedincrease1"
+ },
+ {
+  "slug": "LargeLamp",
+  "name": "Large Mounted Lamp",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_LampStandLarge.webp",
+  "id": "largelamp"
+ },
+ {
+  "slug": "SkillUnlock_KingBahamut",
+  "name": "Blazamut Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingBahamut_icon_normal.webp",
+  "id": "skillunlock_kingbahamut"
+ },
+ {
+  "slug": "SkillUnlock_KingAlpaca_Ice",
+  "name": "Kingpaca Cryst Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingAlpaca_Ice_icon_normal.webp",
+  "id": "skillunlock_kingalpaca_ice"
+ },
+ {
+  "slug": "FurnitureSet_27",
+  "name": "Street Lamp Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Light_LightPole01.webp",
+  "id": "furnitureset_27"
+ },
+ {
+  "slug": "FurnitureSet_26",
+  "name": "Amusement Furniture Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_GoalSoccer_Iron.webp",
+  "id": "furnitureset_26"
+ },
+ {
+  "slug": "Product_SulfurPit",
+  "name": "Sulfur Mine",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SulfurPit.webp",
+  "id": "product_sulfurpit"
+ },
+ {
+  "slug": "Battle_RangeWeapon_SemiAutoShotgun",
+  "name": "Semi-Auto Shotgun",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SemiAutoShotgun.webp",
+  "id": "battle_rangeweapon_semiautoshotgun"
+ },
+ {
+  "slug": "Product_WeaponFactory_Dirty_Grade_03",
+  "name": "Weapon Assembly Line II",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_WeaponFactory_Dirty_03.webp",
+  "id": "product_weaponfactory_dirty_grade_03"
+ },
+ {
+  "slug": "Cake03",
+  "name": "Vegetable Cake",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_food_Cake03.webp",
+  "id": "cake03"
+ },
+ {
+  "slug": "AutoMealPouch_Tier5",
+  "name": "Giant Feed Bag",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_AutoMealPouch_Tier5.webp",
+  "id": "automealpouch_tier5"
+ },
+ {
+  "slug": "LargeCeilingLamp",
+  "name": "Large Ceiling Lamp",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_LampTopLarge.webp",
+  "id": "largeceilinglamp"
+ },
+ {
+  "slug": "SkillUnlock_HadesBird_Electric",
+  "name": "Helzephyr Lux Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_HadesBird_Electric_icon_normal.webp",
+  "id": "skillunlock_hadesbird_electric"
+ },
+ {
+  "slug": "SkillUnlock_BlackGriffon",
+  "name": "Shadowbeak Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_BlackGriffon_icon_normal.webp",
+  "id": "skillunlock_blackgriffon"
+ },
+ {
+  "slug": "FurnitureSet_8",
+  "name": "Emergency Exit Sign Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SignExit_Ceiling_Iron.webp",
+  "id": "furnitureset_8"
+ },
+ {
+  "slug": "Battle_Armor_Grade_04_Steal_Heat",
+  "name": "Heat Resistant Pal Metal Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_StealArmorHeat.webp",
+  "id": "battle_armor_grade_04_steal_heat"
+ },
+ {
+  "slug": "SphereModule_Sniper2",
+  "name": "Sniper Module II",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_SphereModule_Sniper2.webp",
+  "id": "spheremodule_sniper2"
+ },
+ {
+  "slug": "TransmissionTower",
+  "name": "Electric Pylon",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TransmissionTower.webp",
+  "id": "transmissiontower"
+ },
+ {
+  "slug": "SkillUnlock_LazyDragon_Electric",
+  "name": "Relaxaurus Lux's Missile Launcher",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_LazyDragon_Electric_icon_normal.webp",
+  "id": "skillunlock_lazydragon_electric"
+ },
+ {
+  "slug": "SkillUnlock_GrassGolem",
+  "name": "Dualith Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GrassGolem_icon_normal.webp",
+  "id": "skillunlock_grassgolem"
+ },
+ {
+  "slug": "SkillUnlock_CubeTurtle",
+  "name": "Tetroise Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_CubeTurtle_icon_normal.webp",
+  "id": "skillunlock_cubeturtle"
+ },
+ {
+  "slug": "FurnitureSet_11",
+  "name": "Traffic Control Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TrafficCone01_Iron.webp",
+  "id": "furnitureset_11"
+ },
+ {
+  "slug": "MultiHatchingPalEgg",
+  "name": "Large Incubator",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MultiHatchingPalEgg.webp",
+  "id": "multihatchingpalegg"
+ },
+ {
+  "slug": "BaseCampItemDispenser",
+  "name": "Item Retrieval Machine",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BaseCampItemDispenser.webp",
+  "id": "basecampitemdispenser"
+ },
+ {
+  "slug": "HugeKitchen",
+  "name": "Large-Scale Stone Oven",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_HugeKitchen.webp",
+  "id": "hugekitchen"
+ },
+ {
+  "slug": "JapaneseStyle_houseset",
+  "name": "Japanese-Style Structure Set",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_JapaneseStyle_foundation.webp",
+  "id": "japanesestyle_houseset"
+ },
+ {
+  "slug": "FurnitureTree_Snow",
+  "name": "Faux Snowy Greenery Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Snow.webp",
+  "id": "furnituretree_snow"
+ },
+ {
+  "slug": "FurnitureSet_12",
+  "name": "Road Sign Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TrafficSign01_Iron.webp",
+  "id": "furnitureset_12"
+ },
+ {
+  "slug": "FurnitureSet_10",
+  "name": "Barricade Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_TrafficBarricade01_Iron.webp",
+  "id": "furnitureset_10"
+ },
+ {
+  "slug": "GrapplingGun4",
+  "name": "Hyper Grappling Gun",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_GrapplingGun.webp",
+  "id": "grapplinggun4"
+ },
+ {
+  "slug": "Battle_Armor_Grade_04_Steal_Cold",
+  "name": "Cold Resistant Pal Metal Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_StealArmorCold.webp",
+  "id": "battle_armor_grade_04_steal_cold"
+ },
+ {
+  "slug": "OilPump",
+  "name": "Crude Oil Extractor",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_OilPump.webp",
+  "id": "oilpump"
+ },
+ {
+  "slug": "Plastic",
+  "name": "Plasteel",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Plastic.webp",
+  "id": "plastic"
+ },
+ {
+  "slug": "Computer",
+  "name": "Computer",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Computer.webp",
+  "id": "computer"
+ },
+ {
+  "slug": "Battle_Defense_Missile",
+  "name": "Mounted Missile Launcher",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_efenseBulletLauncher_Missile.webp",
+  "id": "battle_defense_missile"
+ },
+ {
+  "slug": "ScientistFlagSet",
+  "name": "PAL Genetic Research Unit Flag Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Scientist_Flag.webp",
+  "id": "scientistflagset"
+ },
+ {
+  "slug": "ElectricGenerator_Large",
+  "name": "Large Power Generator",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ElectricGenerator_Large.webp",
+  "id": "electricgenerator_large"
+ },
+ {
+  "slug": "Special_PalSphere_Grade_07",
+  "name": "Ultimate Sphere",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere_Ultimate.webp",
+  "id": "special_palsphere_grade_07"
+ },
+ {
+  "slug": "Battle_Armor_Grade_05_Plastic",
+  "name": "Plasteel Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_PlasticArmor.webp",
+  "id": "battle_armor_grade_05_plastic"
+ },
+ {
+  "slug": "Battle_Helm_Grade_06_Plastic",
+  "name": "Plasteel Helmet",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_PlasticHelmet.webp",
+  "id": "battle_helm_grade_06_plastic"
+ },
+ {
+  "slug": "Battle_RangeWeapon_LaserRifle",
+  "name": "Laser Rifle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_LaserRifle.webp",
+  "id": "battle_rangeweapon_laserrifle"
+ },
+ {
+  "slug": "LaserBullet",
+  "name": "Energy Cartridge",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_LaserBullet.webp",
+  "id": "laserbullet"
+ },
+ {
+  "slug": "CoolerPalFoodBox",
+  "name": "Cold Food Box",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CoolerPalFoodBox.webp",
+  "id": "coolerpalfoodbox"
+ },
+ {
+  "slug": "SkillUnlock_Yeti_Grass",
+  "name": "Wumpo Botan Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Yeti_Grass_icon_normal.webp",
+  "id": "skillunlock_yeti_grass"
+ },
+ {
+  "slug": "OilPump02",
+  "name": "High-Pressure Crude Oil Extractor",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_OilPump02.webp",
+  "id": "oilpump02"
+ },
+ {
+  "slug": "Battle_Glider_Grade_04",
+  "name": "Hyper Glider",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Glider_Glider_Legendary.webp",
+  "id": "battle_glider_grade_04"
+ },
+ {
+  "slug": "Battle_RangeWeapon_FlameThrower",
+  "name": "Flamethrower",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FlameThrower_Default.webp",
+  "id": "battle_rangeweapon_flamethrower"
+ },
+ {
+  "slug": "FlamethrowerBullet",
+  "name": "Flamethrower Fuel",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_FlamethrowerBullet.webp",
+  "id": "flamethrowerbullet"
+ },
+ {
+  "slug": "FishingBait_3_A",
+  "name": "Alluring Bait",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Consume_FishingBait_3_A.webp",
+  "id": "fishingbait_3_a"
+ },
+ {
+  "slug": "SkillUnlock_BadCatgirl",
+  "name": "Nyafia's Shotgun",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_BadCatgirl_icon_normal.webp",
+  "id": "skillunlock_badcatgirl"
+ },
+ {
+  "slug": "Product_QuartzPit",
+  "name": "Pure Quartz Quarry",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_QuartzPit.webp",
+  "id": "product_quartzpit"
+ },
+ {
+  "slug": "AdditionalInventory_003",
+  "name": "Large Pouch",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_AdditionalInventory_003.webp",
+  "id": "additionalinventory_003"
+ },
+ {
+  "slug": "Battle_Armor_Grade_05_Plastic_Heat",
+  "name": "Heat Resistant Plasteel Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_PlasticArmorHeat.webp",
+  "id": "battle_armor_grade_05_plastic_heat"
+ },
+ {
+  "slug": "Battle_RangeWeapon_GrenadeLauncher",
+  "name": "Grenade Launcher",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_GrenadeLauncher.webp",
+  "id": "battle_rangeweapon_grenadelauncher"
+ },
+ {
+  "slug": "GrenadeBullet",
+  "name": "Grenade Ammo",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_GrenadeBullet.webp",
+  "id": "grenadebullet"
+ },
+ {
+  "slug": "FragGrenade_Super",
+  "name": "Frag Grenade Mk2",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_FragGrenade_Super.webp",
+  "id": "fraggrenade_super"
+ },
+ {
+  "slug": "SkillUnlock_MoonQueen",
+  "name": "Selyne Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_MoonQueen_icon_normal.webp",
+  "id": "skillunlock_moonqueen"
+ },
+ {
+  "slug": "SkillUnlock_SumoDog",
+  "name": "Bulldosu Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_SumoDog_icon_normal.webp",
+  "id": "skillunlock_sumodog"
+ },
+ {
+  "slug": "Unlock_Picking_Tier3",
+  "name": "Lockpicking Tool v3",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_Unlock_Picking_Tier3.webp",
+  "id": "unlock_picking_tier3"
+ },
+ {
+  "slug": "LaserMiningTool",
+  "name": "Plasma Multicutter",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_LaserMiningTool.webp",
+  "id": "laserminingtool"
+ },
+ {
+  "slug": "Battle_Armor_Grade_05_Plastic_Cold",
+  "name": "Cold Resistant Plasteel Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_PlasticArmorCold.webp",
+  "id": "battle_armor_grade_05_plastic_cold"
+ },
+ {
+  "slug": "Battle_RangeWeapon_GatlingGun",
+  "name": "Gatling Gun",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_GatlingGun.webp",
+  "id": "battle_rangeweapon_gatlinggun"
+ },
+ {
+  "slug": "GatlingBullet",
+  "name": "Gatling Gun Ammo",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_GatlingBullet.webp",
+  "id": "gatlingbullet"
+ },
+ {
+  "slug": "IceCrusher",
+  "name": "Refrigerated Crusher",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_IceCrusher.webp",
+  "id": "icecrusher"
+ },
+ {
+  "slug": "SkillUnlock_GoldenHorse",
+  "name": "Gildane Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GoldenHorse_icon_normal.webp",
+  "id": "skillunlock_goldenhorse"
+ },
+ {
+  "slug": "SkillUnlock_WhiteDeer",
+  "name": "Celesdir Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_WhiteDeer_icon_normal.webp",
+  "id": "skillunlock_whitedeer"
+ },
+ {
+  "slug": "UnlockEquipmentSlot_Weapon_02",
+  "name": "Extra Weapon Holster 2",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_UnlockEquipmentSlot_Weapon_02.webp",
+  "id": "unlockequipmentslot_weapon_02"
+ },
+ {
+  "slug": "Spear_ForestBoss",
+  "name": "Lily's Spear",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Spear_ForestBoss.webp",
+  "id": "spear_forestboss"
+ },
+ {
+  "slug": "Shield_05",
+  "name": "Ultra Shield",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_Shield_05.webp",
+  "id": "shield_05"
+ },
+ {
+  "slug": "Battle_Armor_Grade_05_Plastic_Weight",
+  "name": "Lightweight Plasteel Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_PlasticArmorWeight.webp",
+  "id": "battle_armor_grade_05_plastic_weight"
+ },
+ {
+  "slug": "SkillUnlock_IceSeal_Ground",
+  "name": "Polapup Terra Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_IceSeal_Ground_icon_normal.webp",
+  "id": "skillunlock_iceseal_ground"
+ },
+ {
+  "slug": "SkillUnlock_KingBahamut_Dragon",
+  "name": "Blazamut Ryu Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingBahamut_Dragon_icon_normal.webp",
+  "id": "skillunlock_kingbahamut_dragon"
+ },
+ {
+  "slug": "FurnitureSet_Japanese",
+  "name": "Japanese-Style Furniture Set",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Byobu.webp",
+  "id": "furnitureset_japanese"
+ },
+ {
+  "slug": "NinjaFlagSet",
+  "name": "Moonflower Flag Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Ninja_Flag.webp",
+  "id": "ninjaflagset"
+ },
+ {
+  "slug": "Battle_RangeWeapon_HomingSphereLauncher",
+  "name": "Homing Sphere Launcher",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_HomingSphereLauncher.webp",
+  "id": "battle_rangeweapon_homingspherelauncher"
+ },
+ {
+  "slug": "Battle_RangeWeapon_GuidedMissileLauncher",
+  "name": "Guided Missile Launcher",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_GuidedMissileLauncher.webp",
+  "id": "battle_rangeweapon_guidedmissilelauncher"
+ },
+ {
+  "slug": "MissileBullet",
+  "name": "Missile Ammo",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_MissileBullet.webp",
+  "id": "missilebullet"
+ },
+ {
+  "slug": "DismantlingConveyor",
+  "name": "Pal Disassembly Conveyor",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DismantlingConveyor.webp",
+  "id": "dismantlingconveyor"
+ },
+ {
+  "slug": "MedicalPalBed_05",
+  "name": "Pal Pod",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MedicalPalBed_05.webp",
+  "id": "medicalpalbed_05"
+ },
+ {
+  "slug": "FurnitureTree_Cherry",
+  "name": "Faux Cherry Blossoms Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FurnitureTree01_Cherry.webp",
+  "id": "furnituretree_cherry"
+ },
+ {
+  "slug": "OctaviaSet02",
+  "name": "ULTRAKILL Collab Set 2",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_Octavia002_Armor.webp",
+  "id": "octaviaset02"
+ },
+ {
+  "slug": "SFBow",
+  "name": "Advanced Bow",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SFBow.webp",
+  "id": "sfbow"
+ },
+ {
+  "slug": "SFArrow",
+  "name": "Advanced Arrow",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_SFArrow.webp",
+  "id": "sfarrow"
+ },
+ {
+  "slug": "AdditionalInventory_004",
+  "name": "Giant Pouch",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_AdditionalInventory_004.webp",
+  "id": "additionalinventory_004"
+ },
+ {
+  "slug": "BeamSword",
+  "name": "Beam Sword",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_BeamSword.webp",
+  "id": "beamsword"
+ },
+ {
+  "slug": "SkillUnlock_NightBlueHorse",
+  "name": "Starryon Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_NightBlueHorse_icon_normal.webp",
+  "id": "skillunlock_nightbluehorse"
+ },
+ {
+  "slug": "SkillUnlock_FengyunDeeper_Electric",
+  "name": "Fenglope Lux Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_FengyunDeeper_Electric_icon_normal.webp",
+  "id": "skillunlock_fengyundeeper_electric"
+ },
+ {
+  "slug": "SkillUnlock_AmaterasuWolf",
+  "name": "Kitsun Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_AmaterasuWolf_icon_normal.webp",
+  "id": "skillunlock_amaterasuwolf"
+ },
+ {
+  "slug": "PalSphere_Exotic",
+  "name": "Exotic Sphere",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere_Exotic.webp",
+  "id": "palsphere_exotic"
+ },
+ {
+  "slug": "SphereFactory_Black_04",
+  "name": "Advanced Sphere Assembly Line",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SphereFactory_Black_04.webp",
+  "id": "spherefactory_black_04"
+ },
+ {
+  "slug": "StainlessSteel",
+  "name": "Hexolite",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_StainlessSteel.webp",
+  "id": "stainlesssteel"
+ },
+ {
+  "slug": "BlastFurnace4",
+  "name": "Gigantic Furnace",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BlastFurnace4.webp",
+  "id": "blastfurnace4"
+ },
+ {
+  "slug": "MetalDetector",
+  "name": "Metal Detector",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_MetalDetector.webp",
+  "id": "metaldetector"
+ },
+ {
+  "slug": "SkillUnlock_BlackPuppy",
+  "name": "Smokie's Harness",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_BlackPuppy_icon_normal.webp",
+  "id": "skillunlock_blackpuppy"
+ },
+ {
+  "slug": "SkillUnlock_BlueThunderHorse",
+  "name": "Azurmane Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_BlueThunderHorse_icon_normal.webp",
+  "id": "skillunlock_bluethunderhorse"
+ },
+ {
+  "slug": "MultiElectricHatchingPalEgg",
+  "name": "Large-Scale Electric Egg Incubator",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MultiElectricHatchingPalEgg.webp",
+  "id": "multielectrichatchingpalegg"
+ },
+ {
+  "slug": "ItemChest_04",
+  "name": "Advanced Chest",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_ItemChest_04.webp",
+  "id": "itemchest_04"
+ },
+ {
+  "slug": "LaserGatlingGun",
+  "name": "Laser Gatling Gun",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_LaserGatlingGun.webp",
+  "id": "lasergatlinggun"
+ },
+ {
+  "slug": "LaserGatlingBullet",
+  "name": "Laser Gatling Cartridge",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_LaserGatlingBullet.webp",
+  "id": "lasergatlingbullet"
+ },
+ {
+  "slug": "SFArmor",
+  "name": "Hexolite Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_SFArmor.webp",
+  "id": "sfarmor"
+ },
+ {
+  "slug": "Thermal_Core",
+  "name": "Thermal Core",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Thermal_Core.webp",
+  "id": "thermal_core"
+ },
+ {
+  "slug": "SkillUnlock_Umihebi_Fire",
+  "name": "Jormuntide Ignis Saddle",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Umihebi_Fire_icon_normal.webp",
+  "id": "skillunlock_umihebi_fire"
+ },
+ {
+  "slug": "SkillUnlock_AmaterasuWolf_Dark",
+  "name": "Kitsun Noct Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_AmaterasuWolf_Dark_icon_normal.webp",
+  "id": "skillunlock_amaterasuwolf_dark"
+ },
+ {
+  "slug": "Shield_SF",
+  "name": "Advanced Shield",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_Shield_06.webp",
+  "id": "shield_sf"
+ },
+ {
+  "slug": "SFHelmet",
+  "name": "Hexolite Helmet",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_SFHelmet.webp",
+  "id": "sfhelmet"
+ },
+ {
+  "slug": "Cake04",
+  "name": "Extravagant Vegetable Cake",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_food_Cake04.webp",
+  "id": "cake04"
+ },
+ {
+  "slug": "DarkIslandFlagSet",
+  "name": "Feybreak Flag Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_DarkIsland_Flag.webp",
+  "id": "darkislandflagset"
+ },
+ {
+  "slug": "SkillUnlock_Horus",
+  "name": "Faleris Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Horus_icon_normal.webp",
+  "id": "skillunlock_horus"
+ },
+ {
+  "slug": "SkillUnlock_Horus_Water",
+  "name": "Faleris Aqua Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Horus_Water_icon_normal.webp",
+  "id": "skillunlock_horus_water"
+ },
+ {
+  "slug": "SkillUnlock_WhiteShieldDragon",
+  "name": "Silvegis Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_WhiteShieldDragon_icon_normal.webp",
+  "id": "skillunlock_whiteshielddragon"
+ },
+ {
+  "slug": "EnergyRocketLauncher",
+  "name": "Plasma Cannon",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_EnergyRocketLauncher.webp",
+  "id": "energyrocketlauncher"
+ },
+ {
+  "slug": "EnergyLauncherBullet",
+  "name": "Plasma Cartridge",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_EnergyLauncherBullet.webp",
+  "id": "energylauncherbullet"
+ },
+ {
+  "slug": "Potion_Extreme",
+  "name": "Advanced Recovery Meds",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Food_Potion_Extreme.webp",
+  "id": "potion_extreme"
+ },
+ {
+  "slug": "PalRevive",
+  "name": "Revival Potion",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Consume_PalRevive.webp",
+  "id": "palrevive"
+ },
+ {
+  "slug": "MedicineFacility_03",
+  "name": "Advanced Medicine Workbench",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MedicineFacility_03.webp",
+  "id": "medicinefacility_03"
+ },
+ {
+  "slug": "SkillUnlock_SaintCentaur",
+  "name": "Paladius Saddle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_SaintCentaur_icon_normal.webp",
+  "id": "skillunlock_saintcentaur"
+ },
+ {
+  "slug": "SkillUnlock_BlackCentaur",
+  "name": "Necromus Saddle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_BlackCentaur_icon_normal.webp",
+  "id": "skillunlock_blackcentaur"
+ },
+ {
+  "slug": "Accessory_AirDash2",
+  "name": "Double Air Dash Boots",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_AirDash.webp",
+  "id": "accessory_airdash2"
+ },
+ {
+  "slug": "Salvage_TreasureBoxKey02",
+  "name": "Powerful Fishing Magnet",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Salvage_TreasureBoxKey02.webp",
+  "id": "salvage_treasureboxkey02"
+ },
+ {
+  "slug": "ManganeseIngot",
+  "name": "Coralum Ingot",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_ManganeseIngot.webp",
+  "id": "manganeseingot"
+ },
+ {
+  "slug": "Factory_Hard_04",
+  "name": "Advanced Workshop",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Factory_Hard_04.webp",
+  "id": "factory_hard_04"
+ },
+ {
+  "slug": "SF_houseset",
+  "name": "Futuristic Structure Set",
+  "category": "Structures",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SF_foundation.webp",
+  "id": "sf_houseset"
+ },
+ {
+  "slug": "SkillUnlock_IceHorse",
+  "name": "Frostallion Saddle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_IceHorse_icon_normal.webp",
+  "id": "skillunlock_icehorse"
+ },
+ {
+  "slug": "SkillUnlock_IceHorse_Dark",
+  "name": "Frostallion Noct Saddle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_IceHorse_Dark_icon_normal.webp",
+  "id": "skillunlock_icehorse_dark"
+ },
+ {
+  "slug": "CrystalPit",
+  "name": "Hexolite Quartz Mine",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_CrystalPit.webp",
+  "id": "crystalpit"
+ },
+ {
+  "slug": "EnergyShotgun",
+  "name": "Energy Shotgun",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_EnergyShotgun.webp",
+  "id": "energyshotgun"
+ },
+ {
+  "slug": "EnergyShotgunBullet",
+  "name": "Energy Shotgun Ammo",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_EnergyShotgunBullet.webp",
+  "id": "energyshotgunbullet"
+ },
+ {
+  "slug": "WeaponFactory_Dirty_04",
+  "name": "Advanced Weapon Assembly Line",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_WeaponFactory_Dirty_04.webp",
+  "id": "weaponfactory_dirty_04"
+ },
+ {
+  "slug": "SFArmorHeat",
+  "name": "Heat Resistant Hexolite Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_SFArmorHeat.webp",
+  "id": "sfarmorheat"
+ },
+ {
+  "slug": "PalDopingShot_2",
+  "name": "Megaboost Gun",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_PalDopingShot_2.webp",
+  "id": "paldopingshot_2"
+ },
+ {
+  "slug": "GrapplingGun5",
+  "name": "Ultra Grappling Gun",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_GrapplingGun.webp",
+  "id": "grapplinggun5"
+ },
+ {
+  "slug": "OverheatRifle",
+  "name": "Overheat Rifle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_OverheatRifle.webp",
+  "id": "overheatrifle"
+ },
+ {
+  "slug": "OverheatRifleBullet",
+  "name": "Overheat Rifle Ammo",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_OverheatRifleBullet.webp",
+  "id": "overheatriflebullet"
+ },
+ {
+  "slug": "SFArmorCold",
+  "name": "Cold Resistant Hexolite Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_SFArmorCold.webp",
+  "id": "sfarmorcold"
+ },
+ {
+  "slug": "Spa3",
+  "name": "Japanese-Style Hot Spring",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Spa3.webp",
+  "id": "spa3"
+ },
+ {
+  "slug": "SkillUnlock_Kirin_Ice",
+  "name": "Univolt Cryst Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_Kirin_Ice_icon_normal.webp",
+  "id": "skillunlock_kirin_ice"
+ },
+ {
+  "slug": "SkillUnlock_PoseidonOrca",
+  "name": "Neptilius Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_PoseidonOrca_icon_normal.webp",
+  "id": "skillunlock_poseidonorca"
+ },
+ {
+  "slug": "IceHorseStatue",
+  "name": "Frostallion Statue",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_IceHorseStatue.webp",
+  "id": "icehorsestatue"
+ },
+ {
+  "slug": "Battle_RangeWeapon_RocketLauncher",
+  "name": "Rocket Launcher",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Launcher_Default.webp",
+  "id": "battle_rangeweapon_rocketlauncher"
+ },
+ {
+  "slug": "LauncherBullet",
+  "name": "Rocket Ammo",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_ExplosiveBullet.webp",
+  "id": "launcherbullet"
+ },
+ {
+  "slug": "ChargeLaserRifle",
+  "name": "Charge Rifle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_ChargeLaserRifle.webp",
+  "id": "chargelaserrifle"
+ },
+ {
+  "slug": "ChargeLaserRifleBullet",
+  "name": "Charge Rifle Ammo",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_ChargeLaserRifleBullet.webp",
+  "id": "chargelaserriflebullet"
+ },
+ {
+  "slug": "SFArmorWeight",
+  "name": "Lightweight Hexolite Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_SFArmorWeight.webp",
+  "id": "sfarmorweight"
+ },
+ {
+  "slug": "SkillUnlock_KingSunfish",
+  "name": "Solmora Saddle",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingSunfish_icon_normal.webp",
+  "id": "skillunlock_kingsunfish"
+ },
+ {
+  "slug": "Accessory_AirDash3",
+  "name": "Triple Air Dash Boots",
+  "category": "Items",
+  "cost": 6,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_AirDash.webp",
+  "id": "accessory_airdash3"
+ },
+ {
+  "slug": "AncientBlastFurnace",
+  "name": "Ancient Furnace",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_AncientBlastFurnace.webp",
+  "id": "ancientblastfurnace"
+ },
+ {
+  "slug": "SkyislandIngot",
+  "name": "Soralite Ingot",
+  "category": "Items",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_SkyislandIngot.webp",
+  "id": "skyislandingot"
+ },
+ {
+  "slug": "SkillUnlock_KingSunfish_Thunder",
+  "name": "Solmora Lux Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingSunfish_Thunder_icon_normal.webp",
+  "id": "skillunlock_kingsunfish_thunder"
+ },
+ {
+  "slug": "SkillUnlock_ThunderFluffyBird",
+  "name": "Dynamoff Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_ThunderFluffyBird_icon_normal.webp",
+  "id": "skillunlock_thunderfluffybird"
+ },
+ {
+  "slug": "SkillUnlock_DarkMechaDragon",
+  "name": "Xenolord Saddle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_DarkMechaDragon_icon_normal.webp",
+  "id": "skillunlock_darkmechadragon"
+ },
+ {
+  "slug": "WaterBuildKit",
+  "name": "Aquatic Construction Kit",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Essential_WaterBuildKit.webp",
+  "id": "waterbuildkit"
+ },
+ {
+  "slug": "PalSphere_Ancient_1",
+  "name": "Sol Sphere",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere_Ancient_1.webp",
+  "id": "palsphere_ancient_1"
+ },
+ {
+  "slug": "SkyBow",
+  "name": "Mechanical Bow",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SkyBow.webp",
+  "id": "skybow"
+ },
+ {
+  "slug": "SkyBowArrow",
+  "name": "Mechanical Bow Ammo",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_SkyBowArrow.webp",
+  "id": "skybowarrow"
+ },
+ {
+  "slug": "AIcore",
+  "name": "AI Core",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_AIcore.webp",
+  "id": "aicore"
+ },
+ {
+  "slug": "AncientWorkBench",
+  "name": "Ancient Workbench",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_AncientWorkBench.webp",
+  "id": "ancientworkbench"
+ },
+ {
+  "slug": "Ancient_Houseset",
+  "name": "Ancient Structure Set",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Ancient_foundation.webp",
+  "id": "ancient_houseset"
+ },
+ {
+  "slug": "Spear_ForestBoss2",
+  "name": "Enhanced Lily's Spear",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_Spear_ForestBoss2.webp",
+  "id": "spear_forestboss2"
+ },
+ {
+  "slug": "SkySubmachineGun",
+  "name": "Combat SMG",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SkySubmachineGun.webp",
+  "id": "skysubmachinegun"
+ },
+ {
+  "slug": "SkySubmachineGunBullet",
+  "name": "Combat SMG Ammo",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_SkySubmachineGunBullet.webp",
+  "id": "skysubmachinegunbullet"
+ },
+ {
+  "slug": "AncientArmor",
+  "name": "Ancient Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_AncientArmor.webp",
+  "id": "ancientarmor"
+ },
+ {
+  "slug": "AncientHelmet",
+  "name": "Ancient Helm",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_AncientHelmet.webp",
+  "id": "ancienthelmet"
+ },
+ {
+  "slug": "SkillUnlock_GhostDragon",
+  "name": "Eidrolon Saddle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GhostDragon_icon_normal.webp",
+  "id": "skillunlock_ghostdragon"
+ },
+ {
+  "slug": "SkyShotgun",
+  "name": "Prototype Shotgun",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SkyShotgun.webp",
+  "id": "skyshotgun"
+ },
+ {
+  "slug": "SkyShotgunBullet",
+  "name": "Prototype Shotgun Ammo",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_SkyShotgunBullet.webp",
+  "id": "skyshotgunbullet"
+ },
+ {
+  "slug": "SphereModule_Homing",
+  "name": "Homing Module",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_SphereModule_Homing.webp",
+  "id": "spheremodule_homing"
+ },
+ {
+  "slug": "FishingPond2",
+  "name": "Large Fishing Pond",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_FishingPond2.webp",
+  "id": "fishingpond2"
+ },
+ {
+  "slug": "SkillUnlock_GrassGolem_Dark",
+  "name": "Dualith Noct Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GrassGolem_Dark_icon_normal.webp",
+  "id": "skillunlock_grassgolem_dark"
+ },
+ {
+  "slug": "SkyAssaultRifle",
+  "name": "Heavy Assault Rifle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SkyAssaultRifle.webp",
+  "id": "skyassaultrifle"
+ },
+ {
+  "slug": "SkyAssaultRifleBullet",
+  "name": "Heavy Assault Rifle Ammo",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_SkyAssaultRifleBullet.webp",
+  "id": "skyassaultriflebullet"
+ },
+ {
+  "slug": "AncientCookingStove",
+  "name": "Ancient Kitchen",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_AncientCookingStove.webp",
+  "id": "ancientcookingstove"
+ },
+ {
+  "slug": "SkillUnlock_LegendDeer",
+  "name": "Hartalis Saddle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_LegendDeer_icon_normal.webp",
+  "id": "skillunlock_legenddeer"
+ },
+ {
+  "slug": "SkillUnlock_VolcanoDragon_Ice",
+  "name": "Moldron Cryst Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_VolcanoDragon_Ice_icon_normal.webp",
+  "id": "skillunlock_volcanodragon_ice"
+ },
+ {
+  "slug": "Accessory_JumpCount_Increase2",
+  "name": "Triple Jump Boots",
+  "category": "Items",
+  "cost": 6,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_JumpCount_Increase.webp",
+  "id": "accessory_jumpcount_increase2"
+ },
+ {
+  "slug": "Shield_07",
+  "name": "Ancient Shield",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_Shield_07.webp",
+  "id": "shield_07"
+ },
+ {
+  "slug": "BaseCampWorkHard03",
+  "name": "Ancient Monitoring Stand",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_BaseCampWorkHard03.webp",
+  "id": "basecampworkhard03"
+ },
+ {
+  "slug": "Farm_SkillFruits",
+  "name": "Skillfruit Orchard",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Farm_SkillFruits.webp",
+  "id": "farm_skillfruits"
+ },
+ {
+  "slug": "SkyIslandFlagSet",
+  "name": "Azure Covenant Flag Set",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SkyIsland_Flag.webp",
+  "id": "skyislandflagset"
+ },
+ {
+  "slug": "SkillUnlock_ThunderBird_Ice",
+  "name": "Beakon Cryst Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_ThunderBird_Ice_icon_normal.webp",
+  "id": "skillunlock_thunderbird_ice"
+ },
+ {
+  "slug": "SkillUnlock_IceNarwhal_Fire",
+  "name": "Whalaska Ignis Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_IceNarwhal_Fire_icon_normal.webp",
+  "id": "skillunlock_icenarwhal_fire"
+ },
+ {
+  "slug": "SkyGrenadeLauncher",
+  "name": "Tactical Grenade Launcher",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SkyGrenadeLauncher.webp",
+  "id": "skygrenadelauncher"
+ },
+ {
+  "slug": "SkyGrenadeLauncherBullet",
+  "name": "Tactical Grenade Launcher Ammo",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_SkyGrenadeLauncherBullet.webp",
+  "id": "skygrenadelauncherbullet"
+ },
+ {
+  "slug": "SkillUnlock_ThiefBird",
+  "name": "Roujay Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_ThiefBird_icon_normal.webp",
+  "id": "skillunlock_thiefbird"
+ },
+ {
+  "slug": "SkillUnlock_LotusDragon",
+  "name": "Ophydia Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_LotusDragon_icon_normal.webp",
+  "id": "skillunlock_lotusdragon"
+ },
+ {
+  "slug": "SkyIslandOrePit",
+  "name": "Soralite Quarry",
+  "category": "Structures",
+  "cost": 7,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_SkyIslandOrePit.webp",
+  "id": "skyislandorepit"
+ },
+ {
+  "slug": "SkyBeamSword",
+  "name": "Laser Sword",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_SkyBeamSword.webp",
+  "id": "skybeamsword"
+ },
+ {
+  "slug": "Factory_Money",
+  "name": "Gold Coin Assembly Line",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Factory_Money.webp",
+  "id": "factory_money"
+ },
+ {
+  "slug": "Ancient_Clinic",
+  "name": "Ancient Clinic",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Ancient_Clinic.webp",
+  "id": "ancient_clinic"
+ },
+ {
+  "slug": "Ancient_MedicalPalBed",
+  "name": "Ancient Pal Bed",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Ancient_MedicalPalBed.webp",
+  "id": "ancient_medicalpalbed"
+ },
+ {
+  "slug": "SkillUnlock_SnowTigerBeastman",
+  "name": "Bastigor's Hammer",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_SnowTigerBeastman_icon_normal.webp",
+  "id": "skillunlock_snowtigerbeastman"
+ },
+ {
+  "slug": "WorldTreeIngot",
+  "name": "Paloxite Ingot",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_WorldTreeIngot.webp",
+  "id": "worldtreeingot"
+ },
+ {
+  "slug": "PalSphere_Ancient_2",
+  "name": "Ancient Sphere",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_PalSphere_Ancient_2.webp",
+  "id": "palsphere_ancient_2"
+ },
+ {
+  "slug": "AncientRelicRecycler",
+  "name": "Ancient Relic Recycler",
+  "category": "Structures",
+  "cost": 3,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_AncientRelicRecycler.webp",
+  "id": "ancientrelicrecycler"
+ },
+ {
+  "slug": "Cake05",
+  "name": "Special Cake",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_food_Cake05.webp",
+  "id": "cake05"
+ },
+ {
+  "slug": "WidePenetrateShotgun",
+  "name": "Beam Scatter",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_WidePenetrateShotgun.webp",
+  "id": "widepenetrateshotgun"
+ },
+ {
+  "slug": "WidePenetrateShotgunBullet",
+  "name": "Beam Scatter Ammo",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_WidePenetrateShotgunBullet.webp",
+  "id": "widepenetrateshotgunbullet"
+ },
+ {
+  "slug": "AncientArmorHeat",
+  "name": "Heat-Resistant Ancient Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_AncientArmorHeat.webp",
+  "id": "ancientarmorheat"
+ },
+ {
+  "slug": "AncientElectricGenerator",
+  "name": "Ancient Power Generator",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_AncientElectricGenerator.webp",
+  "id": "ancientelectricgenerator"
+ },
+ {
+  "slug": "SkillUnlock_CubeTurtle_Neutral",
+  "name": "Tetroise Primo Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_CubeTurtle_Neutral_icon_normal.webp",
+  "id": "skillunlock_cubeturtle_neutral"
+ },
+ {
+  "slug": "Ancient_Spa",
+  "name": "Ancient Hot Spring",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_Ancient_Spa.webp",
+  "id": "ancient_spa"
+ },
+ {
+  "slug": "GasMask",
+  "name": "Corrosive Mist Mask",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_GasMask.webp",
+  "id": "gasmask"
+ },
+ {
+  "slug": "Accessory_ExplosionResist",
+  "name": "Explosion-Resistant Undershirt",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Accessory_ExplosionResist.webp",
+  "id": "accessory_explosionresist"
+ },
+ {
+  "slug": "SkillUnlock_GhostDragon_Fire",
+  "name": "Eidrolon Ignis Saddle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_GhostDragon_Fire_icon_normal.webp",
+  "id": "skillunlock_ghostdragon_fire"
+ },
+ {
+  "slug": "MultiElectricHatchingPalEggWithBreed",
+  "name": "Ancient Hatchery",
+  "category": "Structures",
+  "cost": 8,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_MultiElectricHatchingPalEggWithBreed.webp",
+  "id": "multielectrichatchingpaleggwithbreed"
+ },
+ {
+  "slug": "DroneLauncher",
+  "name": "Drone Launcher",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_DroneLauncher.webp",
+  "id": "dronelauncher"
+ },
+ {
+  "slug": "AncientArmorCold",
+  "name": "Cold-Resistant Ancient Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_AncientArmorCold.webp",
+  "id": "ancientarmorcold"
+ },
+ {
+  "slug": "SkillUnlock_NightBlueHorse_Neutral",
+  "name": "Starryon Primo Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_NightBlueHorse_Neutral_icon_normal.webp",
+  "id": "skillunlock_nightbluehorse_neutral"
+ },
+ {
+  "slug": "SkillUnlock_BlueSkyDragon",
+  "name": "Shaolong Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_BlueSkyDragon_icon_normal.webp",
+  "id": "skillunlock_blueskydragon"
+ },
+ {
+  "slug": "ElectricArcAssaultRifle",
+  "name": "Plasma Rifle",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_ElectricArcAssaultRifle.webp",
+  "id": "electricarcassaultrifle"
+ },
+ {
+  "slug": "ElectricArcAssaultRifleBullet",
+  "name": "Plasma Rifle Ammo",
+  "category": "Items",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_ElectricArcAssaultRifleBullet.webp",
+  "id": "electricarcassaultriflebullet"
+ },
+ {
+  "slug": "AncientMultiProduct",
+  "name": "Ancient Material Synthesizer",
+  "category": "Structures",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_AncientMultiProduct.webp",
+  "id": "ancientmultiproduct"
+ },
+ {
+  "slug": "AncientFarmBlock",
+  "name": "Ancient Farm",
+  "category": "Structures",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_AncientFarmBlock.webp",
+  "id": "ancientfarmblock"
+ },
+ {
+  "slug": "SkillUnlock_WhiteDeer_Dark",
+  "name": "Celesdir Noct Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_WhiteDeer_Dark_icon_normal.webp",
+  "id": "skillunlock_whitedeer_dark"
+ },
+ {
+  "slug": "AncientArmorWeight",
+  "name": "Lightweight Ancient Armor",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Armor_AncientArmorWeight.webp",
+  "id": "ancientarmorweight"
+ },
+ {
+  "slug": "Supplement",
+  "name": "Nutrient Tonic",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_food_Supplement.webp",
+  "id": "supplement"
+ },
+ {
+  "slug": "SkillUnlock_DomeArmorDragon",
+  "name": "Aegidron Saddle",
+  "category": "Items",
+  "cost": 4,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_DomeArmorDragon_icon_normal.webp",
+  "id": "skillunlock_domearmordragon"
+ },
+ {
+  "slug": "SkillUnlock_JetDragon",
+  "name": "Jetragon's Missile Launcher",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_JetDragon_icon_normal.webp",
+  "id": "skillunlock_jetdragon"
+ },
+ {
+  "slug": "JetDragonStatue",
+  "name": "Jetragon Statue",
+  "category": "Structures",
+  "cost": 1,
+  "icon": "https://cdn.paldb.cc/image/Pal/Texture/BuildObject/PNG/T_icon_buildObject_JetDragonStatue.webp",
+  "id": "jetdragonstatue"
+ },
+ {
+  "slug": "BeamLauncher",
+  "name": "Beam Launcher",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Weapon_BeamLauncher.webp",
+  "id": "beamlauncher"
+ },
+ {
+  "slug": "BeamLauncherBullet",
+  "name": "Beam Launcher Ammo",
+  "category": "Items",
+  "cost": 2,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Ammo_BeamLauncherBullet.webp",
+  "id": "beamlauncherbullet"
+ },
+ {
+  "slug": "WingGlider_Fuel",
+  "name": "Wing Cell",
+  "category": "Items",
+  "cost": 5,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_WingGlider_Fuel.webp",
+  "id": "wingglider_fuel"
+ },
+ {
+  "slug": "WingGlider",
+  "name": "Wing Pack",
+  "category": "Items",
+  "cost": 9,
+  "icon": "https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Glider_WingGlider.webp",
+  "id": "wingglider"
+ }
+]
