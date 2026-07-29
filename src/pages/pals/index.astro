@@ -342,6 +342,57 @@ const config = {
     gap: 0.75rem;
   }
 
+  /* 分组视图：每行 6 个，体积更紧凑 */
+  .pal-grid.view-grouped {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 0.5rem;
+  }
+  .pal-grid.view-grouped .pal-tile {
+    /* 紧凑模式：只显示图片+名字 */
+  }
+  .pal-grid.view-grouped .pal-tile-name-en,
+  .pal-grid.view-grouped .pal-tile-types {
+    display: none;
+  }
+  .pal-grid.view-grouped .pal-tile-no {
+    font-size: 0.625rem;
+    padding: 0.05rem 0.25rem;
+  }
+
+  /* 分组分隔头 */
+  .group-header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-left: 3px solid;
+    border-radius: var(--radius);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-top: 0.5rem;
+  }
+  .group-header.type-neutral { border-left-color: #a0a8b0; }
+  .group-header.type-fire { border-left-color: #f87171; }
+  .group-header.type-water { border-left-color: #5eb3f5; }
+  .group-header.type-grass { border-left-color: #4ade80; }
+  .group-header.type-electric { border-left-color: #fbbf24; }
+  .group-header.type-ice { border-left-color: #93c5fd; }
+  .group-header.type-ground { border-left-color: #d97706; }
+  .group-header.type-dark { border-left-color: #6b7280; }
+  .group-header.type-dragon { border-left-color: #c084fc; }
+  .group-count {
+    background: var(--bg-tertiary);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+
   .pal-tile {
     background: var(--bg-secondary);
     border: 1px solid var(--border);
@@ -588,12 +639,51 @@ const config = {
 
   function renderView() {
     if (state.view === 'grouped') {
-      // 简单实现：保持 grid 模式但通过 CSS class 提示
       grid.classList.add('view-grouped');
-      // TODO: 完整分组视图需要重排 DOM
+      groupTilesByType();
     } else {
       grid.classList.remove('view-grouped');
+      // 移除所有 group header
+      grid.querySelectorAll('.group-header').forEach((h) => h.remove());
     }
+  }
+
+  // 分组视图：按第一属性排序 + 在每组前插入分隔头
+  function groupTilesByType() {
+    // 移除已有的分隔头
+    grid.querySelectorAll('.group-header').forEach((h) => h.remove());
+    // 按第一属性分组（隐藏的不参与）
+    const visibleTiles = tiles.filter((t) => !t.classList.contains('hidden'));
+    const groups = {};
+    visibleTiles.forEach((t) => {
+      const type = (t.dataset.type || 'neutral').split(' ')[0];
+      if (!groups[type]) groups[type] = [];
+      groups[type].push(t);
+    });
+    // 类型的固定顺序
+    const TYPE_ORDER = ['neutral', 'fire', 'water', 'grass', 'electric', 'ice', 'ground', 'dark', 'dragon'];
+    const TYPE_NAMES = {
+      neutral: '普通 Neutral', fire: '火 Fire', water: '水 Water', grass: '草 Grass',
+      electric: '电 Electric', ice: '冰 Ice', ground: '地 Ground', dark: '暗 Dark', dragon: '龙 Dragon',
+    };
+    // 按固定顺序重新插入
+    let firstInserted = false;
+    TYPE_ORDER.forEach((t) => {
+      if (!groups[t] || groups[t].length === 0) return;
+      // 找到当前 grid 的第一个可见 tile 作为锚点
+      const anchor = grid.querySelector('.pal-tile:not(.hidden)');
+      // 创建分隔头
+      const header = document.createElement('div');
+      header.className = `group-header type-${t}`;
+      header.innerHTML = `<span>${TYPE_NAMES[t] || t}</span><span class="group-count">${groups[t].length}</span>`;
+      // 插入：先把 group 的 tiles 从当前位置移动到 grid 末尾（按类型顺序）
+      groups[t].forEach((tile) => {
+        grid.appendChild(tile);
+      });
+      // 然后把 header 插到这个 group 的第一个 tile 之前
+      const firstTile = groups[t][0];
+      grid.insertBefore(header, firstTile);
+    });
   }
 
   function updateActiveChips() {
