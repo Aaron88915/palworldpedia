@@ -1,17 +1,15 @@
-feat: 每页 2-3 个广告位 (含 inline)
+fix: rename AdSlot `slot` prop to `position` to fix inline ad rendering
 
-每页通过 Layout 提供 top+bottom（默认），再添加 1 个 inline，
-得到 2-3 个广告位的稳定分布。404 页面（showTopAd=false）保持 2 个。
+Bug: AdSlot 用 `slot` 作 prop 名跟 Astro 内部 slot 机制冲突，
+导致 `<AdSlot slot="inline" />` 在页面顶层被 Astro 静默丢弃
+（top/bottom 恰好能渲染，但 591 页的 inline 全部消失）。
+
+Fix: 把 prop 改名为 `position`，所有调用点同步更新。
 
 变更：
-- index.astro: 加 1 inline（战力榜后）
-- pals/index.astro: 加 1 inline（筛选与网格之间）
-- pals/[slug].astro: 移除多余的 inline（保留 1 个）
-- breeding/index.astro: 移除显式 slot="top"（与 Layout 重复）
-- tech-tree/index.astro: 加 1 inline
-- tech-tree/[slug].astro: 加 1 inline
-- about.astro / contact.astro / privacy.astro / terms.astro: 各加 1 inline
-- guides/index.astro / calculator/power/index.astro / 404.astro: 各加 1 inline
-- 新增 scripts/check-ads.py 验证每页广告数
+- src/components/AdSlot.astro: prop slot → position
+- src/layouts/Layout.astro: 2 处
+- src/pages/*.astro: 14 处
 
-Build 通过：886 页 / 11.7s
+验证：885 页 = top+inline+bottom=3，1 页（404 showTopAd=false）= 2
+Build 通过：886 页 / 9.7s

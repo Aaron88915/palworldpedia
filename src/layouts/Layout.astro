@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * 基础布局 - 所有页面继承这个
  * @prop {string} title - 页面标题
@@ -100,7 +100,7 @@ const rssUrl = new URL('rss.xml', Astro.site).href;
   <body>
     <Header lang={lang} />
 
-    {showTopAd && <AdSlot slot="top" />}
+    {showTopAd && <AdSlot position="top" />}
 
     <main>
       <div class="container">
@@ -108,7 +108,7 @@ const rssUrl = new URL('rss.xml', Astro.site).href;
       </div>
     </main>
 
-    <AdSlot slot="bottom" />
+    <AdSlot position="bottom" />
 
     <Footer lang={lang} />
 

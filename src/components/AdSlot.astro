@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * 广告位组件
  * AdSense 已启用时显示 ins 标签（auto ads 会自动填充）；
@@ -7,15 +7,15 @@
 import { SITE } from '@/config';
 
 export interface Props {
-  slot: 'top' | 'bottom' | 'inline' | 'sidebar';
+  position: 'top' | 'bottom' | 'inline' | 'sidebar';
   className?: string;
 }
 
-const { slot, className = '' } = Astro.props;
+const { position, className = '' } = Astro.props;
 const isAdSenseEnabled = SITE.adsense.enabled;
 ---
 
-<div class={`ad-slot ad-slot-${slot} ${className}`}>
+<div class={`ad-slot ad-slot-${position} ${className}`}>
   {isAdSenseEnabled ? (
     <ins
       class="adsbygoogle"
