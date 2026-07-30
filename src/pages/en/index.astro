@@ -238,7 +238,7 @@ const schema = {
         <h2>{t('home.rankingTitle', lang)}</h2>
         <p class="text-secondary">{t('home.rankingDesc', lang)}</p>
       </div>
-      <a href="/en/pals/?sort=rarity" class="section-link">{t('home.rankingDesc', lang).includes('Top 10') ? 'Full ranking →' : t('home.fullRanking', lang)}</a>
+      <a href="/en/pals/?sort=rarity" class="section-link">{t('common.fullRanking', lang)}</a>
     </div>
     <div class="power-ranking">
       {top10Power.map(({ pal, score }, i) => (
