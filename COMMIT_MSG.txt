@@ -1,15 +1,14 @@
-fix: rename AdSlot `slot` prop to `position` to fix inline ad rendering
+feat: add multi-format favicon for Google search results
 
-Bug: AdSlot 用 `slot` 作 prop 名跟 Astro 内部 slot 机制冲突，
-导致 `<AdSlot slot="inline" />` 在页面顶层被 Astro 静默丢弃
-（top/bottom 恰好能渲染，但 591 页的 inline 全部消失）。
+Google 搜索结果里 palworldpedia.cc 没有显示图标，因为
+favicon.ico 缺失，Google 只认 .ico 不认 .svg。
 
-Fix: 把 prop 改名为 `position`，所有调用点同步更新。
+新增：
+- public/favicon.ico (8.5KB, 16/32/48/64/128/256 多分辨率)
+- public/favicon-{16,32,48,64,128,256}.png
+- public/apple-touch-icon.png (180x180, iOS)
+- public/icon-512.png (备用)
 
-变更：
-- src/components/AdSlot.astro: prop slot → position
-- src/layouts/Layout.astro: 2 处
-- src/pages/*.astro: 14 处
+设计：黑底 + 橙色山峰 + 中心点，跟 favicon.svg 一致。
 
-验证：885 页 = top+inline+bottom=3，1 页（404 showTopAd=false）= 2
-Build 通过：886 页 / 9.7s
+Layout.astro 加全套 link rel="icon" + apple-touch-icon。
