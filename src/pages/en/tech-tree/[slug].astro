@@ -32,7 +32,7 @@ const hasDetail = !!(tech.description || tech.materials);
 <Layout
   lang={lang}
   title={`${tech.name} - Unlock Lv ${tech.cost} · ${categoryLabel} | Palworld Tech Tree`}
-  description={tech.description || `Palworld ${tech.name} (${categoryLabel}) details: unlock level Lv ${tech.cost}, required materials, stats.`}
+  description={(tech.description ? tech.description.slice(0, 155).replace(/\s+\S*$/, '').trimEnd() + '…' : `Palworld ${tech.name} (${categoryLabel}) details: unlock level Lv ${tech.cost}, required materials, stats.`)}
 >
   <nav class="breadcrumb">
     <a href="/en/tech-tree/">{t('tech.backToTree', lang)}</a>

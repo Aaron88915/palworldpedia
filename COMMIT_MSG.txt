@@ -1,14 +1,9 @@
-feat: add multi-format favicon for Google search results
+fix: shorten EN meta descriptions to <=160 chars
 
-Google 搜索结果里 palworldpedia.cc 没有显示图标，因为
-favicon.ico 缺失，Google 只认 .ico 不认 .svg。
+Bing Webmaster Tools 报告英文首页和 407 个 EN tech-tree 详情页
+meta description 过长（最长的 508 字符）。
 
-新增：
-- public/favicon.ico (8.5KB, 16/32/48/64/128/256 多分辨率)
-- public/favicon-{16,32,48,64,128,256}.png
-- public/apple-touch-icon.png (180x180, iOS)
-- public/icon-512.png (备用)
+修法：EN tech-tree/[slug].astro 把 tech.description 截断到 155 字符
++ 省略号。
 
-设计：黑底 + 橙色山峰 + 中心点，跟 favicon.svg 一致。
-
-Layout.astro 加全套 link rel="icon" + apple-touch-icon。
+验证：0 个超长。
