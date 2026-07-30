@@ -6,7 +6,6 @@
 
 - **域名**：palworldpedia.cc
 - **目标**：Palworld 玩家的核心攻略站，吃搜索流量 + 工具型停留
-- **变现**：Google AdSense + 国内广告联盟（备案后）
 
 ## 技术栈
 
