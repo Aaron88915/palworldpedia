@@ -1,0 +1,1184 @@
+---
+import Layout from '@layouts/Layout.astro';
+import PalImage from '@components/PalImage.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { SITE, PAL_TYPES } from '@/config';
+import { t } from '@i18n/utils';
+import palsData from '@data/pals.json';
+import type { Pal } from '@data/types';
+
+const lang = 'en';
+const pals = palsData as Pal[];
+
+// === Power score (same algorithm as zh) ===
+const TIER_WEIGHT: Record<string, number> = { Common: 1, Rare: 2, Epic: 3, Legendary: 4 };
+function powerScore(pal: Pal): number {
+  const s = pal.stats;
+  const tierWeight = TIER_WEIGHT[pal.rarityTier || 'Common'] || 1;
+  return Math.round(
+    s.hp * 1 +
+    s.attack.melee * 2 +
+    s.defense * 1.5 +
+    s.speed * 0.3 +
+    tierWeight * 50 +
+    Object.values(pal.workSuitability || {}).reduce((a, b) => a + (b as number), 0) * 5
+  );
+}
+
+const palsWithScore = pals
+  .filter((p) => p.paldeckNo > 0 && p.paldeckNo < 200)
+  .map((p) => ({ pal: p, score: powerScore(p) }))
+  .sort((a, b) => b.score - a.score);
+
+const top10Power = palsWithScore.slice(0, 10);
+
+function mulberry32(seed) {
+  return function () {
+    seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const daySeed = Math.floor(Date.now() / 86400000);
+const featuredPal = pals[Math.floor(mulberry32(daySeed)() * pals.length)];
+
+const totalPals = pals.length;
+const breedingEdges = 40972;
+const activeSkills = 320;
+const passiveSkills = 1905;
+
+const newPals = pals.filter((p) => p.paldeckNo === 0 || p.paldeckNo > 200).slice(0, 12);
+
+const popularCombos = [
+  { a: 'lamball', b: 'cattiva', c: 'mau' },
+  { a: 'anubis', b: 'cattiva', c: 'wixen' },
+  { a: 'grizzbolt', b: 'relaxaurus', c: 'orserk' },
+  { a: 'mau', b: 'pengullet', c: 'mau-cryst' },
+  { a: 'foxparks', b: 'cattiva', c: 'foxparks-cryst' },
+];
+
+const rarityDist: Record<string, number> = { Common: 0, Rare: 0, Epic: 0, Legendary: 0 };
+pals.forEach((p) => {
+  const t = p.rarityTier || 'Common';
+  rarityDist[t] = (rarityDist[t] || 0) + 1;
+});
+
+const typeDist: Record<string, number> = {};
+pals.forEach((p) => {
+  (p.types || []).forEach((t) => {
+    typeDist[t] = (typeDist[t] || 0) + 1;
+  });
+});
+
+const updates = [
+  { ver: 'v1.0', name: 'Sakurajima', date: '2025', newPals: 17, color: '#c084fc' },
+  { ver: 'v0.5', name: 'Tides of Terraria', date: '2024-06', newPals: 0, color: '#5eb3f5' },
+  { ver: 'v0.3', name: 'Sakurajima Update', date: '2024-03', newPals: 6, color: '#f87171' },
+  { ver: 'v0.2', name: 'Area Expansion', date: '2024-01', newPals: 8, color: '#4ade80' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE.name,
+  description: SITE.description,
+  url: SITE.url,
+  inLanguage: 'en',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE.url}/en/search?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+
+<Layout
+  lang={lang}
+  title={`Palworld Complete Guide & Tools - ${SITE.name}`}
+  description={`The must-have companion for Palworld players. ${totalPals} Pals in the Paldex, ${breedingEdges.toLocaleString()} breeding recipes, ${activeSkills} active skills, ${passiveSkills} passive skills. Original power-score ranking, shortest breeding-path BFS, daily featured Pal.`}
+  schema={schema}
+>
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">{t('home.badge', lang)}</div>
+      <h1 class="hero-title">
+        <span class="hero-title-zh">Palworld</span>
+        <span class="hero-title-accent">{t('home.titleAccent', lang)}</span>
+      </h1>
+      <p class="hero-subtitle">
+        {totalPals} {t('home.statPals', lang)} · {breedingEdges.toLocaleString()} {t('home.statRecipes', lang)} · {activeSkills} {t('home.statActiveSkills', lang)} · {passiveSkills} {t('home.statPassives', lang)}
+      </p>
+      <div class="hero-cta">
+        <a href="/en/pals/" class="btn btn-primary">{t('home.ctaBrowse', lang)}</a>
+        <a href="/en/breeding/" class="btn btn-secondary">{t('home.ctaBreeding', lang)}</a>
+        <a href="/en/pals/?sort=rarity" class="btn btn-secondary">{t('home.ctaRarity', lang)}</a>
+      </div>
+    </div>
+    <div class="hero-orbit" aria-hidden="true">
+      <div class="orbit-pal" style="--rot: 0deg;"><span>🔥</span></div>
+      <div class="orbit-pal" style="--rot: 60deg;"><span>💧</span></div>
+      <div class="orbit-pal" style="--rot: 120deg;"><span>🌿</span></div>
+      <div class="orbit-pal" style="--rot: 180deg;"><span>⚡</span></div>
+      <div class="orbit-pal" style="--rot: 240deg;"><span>❄️</span></div>
+      <div class="orbit-pal" style="--rot: 300deg;"><span>🌑</span></div>
+    </div>
+  </section>
+
+  <!-- ===== Stat strip ===== -->
+  <section class="stat-strip">
+    <div class="stat-strip-inner">
+      <a href="/en/pals/" class="stat-cell">
+        <div class="stat-num">{totalPals}</div>
+        <div class="stat-label">{t('home.statPals', lang)}</div>
+      </a>
+      <div class="stat-divider"></div>
+      <a href="/en/breeding/" class="stat-cell">
+        <div class="stat-num">{breedingEdges.toLocaleString()}</div>
+        <div class="stat-label">{t('home.statRecipes', lang)}</div>
+      </a>
+      <div class="stat-divider"></div>
+      <div class="stat-cell">
+        <div class="stat-num">{activeSkills}</div>
+        <div class="stat-label">{t('home.statActiveSkills', lang)}</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-cell">
+        <div class="stat-num">{passiveSkills}</div>
+        <div class="stat-label">{t('home.statPassives', lang)}</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-cell">
+        <div class="stat-num">9</div>
+        <div class="stat-label">{t('home.statTypes', lang)}</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-cell">
+        <div class="stat-num">12</div>
+        <div class="stat-label">{t('home.statWork', lang)}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Featured Pal of the Day ===== -->
+  <section class="section featured-pal">
+    <div class="section-head">
+      <div>
+        <div class="featured-label">{t('home.featuredLabel', lang)}</div>
+        <h2>{featuredPal.name.en}</h2>
+        <p class="text-secondary">{featuredPal.name.zh} · #{featuredPal.paldeckNo.toString().padStart(3, '0')}</p>
+      </div>
+      <a href={`/en/pals/${featuredPal.id}/`} class="section-link">{t('home.featuredLink', lang)}</a>
+    </div>
+    <div class="featured-pal-content">
+      <div class="featured-pal-img">
+        <PalImage pal={featuredPal} size="large" rounded />
+      </div>
+      <div class="featured-pal-stats">
+        <div class="featured-types">
+          {featuredPal.types.map((type) => (
+            <span class={`type-tag type-${type}`}>{PAL_TYPES.find((tt) => tt.id === type)?.en}</span>
+          ))}
+          <span class={`rarity-tag rarity-${(featuredPal.rarityTier || 'common').toLowerCase()}`}>{featuredPal.rarityTier || 'Common'}</span>
+        </div>
+        <div class="stat-row">
+          <div class="stat-cell-big">
+            <div class="stat-num-big">{featuredPal.stats.hp}</div>
+            <div class="stat-label-big">{t('palDetail.hp', lang)}</div>
+          </div>
+          <div class="stat-cell-big">
+            <div class="stat-num-big">{featuredPal.stats.attack.melee}</div>
+            <div class="stat-label-big">{t('palDetail.meleeAtk', lang)}</div>
+          </div>
+          <div class="stat-cell-big">
+            <div class="stat-num-big">{featuredPal.stats.defense}</div>
+            <div class="stat-label-big">{t('palDetail.defense', lang)}</div>
+          </div>
+          <div class="stat-cell-big">
+            <div class="stat-num-big">{featuredPal.stats.speed}</div>
+            <div class="stat-label-big">{t('palDetail.speed', lang)}</div>
+          </div>
+        </div>
+        <div class="featured-pal-work">
+          <div class="work-label">{t('home.workLabel', lang)}</div>
+          <div class="work-list">
+            {Object.entries(featuredPal.workSuitability || {}).map(([w, lvl]) => {
+              const ws = PAL_TYPES.find((tt) => tt.id === w);
+              return (
+                <div class="work-pill">
+                  <span class="work-pill-name">{ws?.en || w}</span>
+                  <span class="work-pill-lvl">Lv {lvl as number}</span>
+                </div>
+              );
+            })}
+            {Object.keys(featuredPal.workSuitability || {}).length === 0 && (
+              <span class="text-muted">{t('palDetail.none', lang)}</span>
+            )}
+          </div>
+        </div>
+        {featuredPal.drops.length > 0 && (
+          <div class="featured-pal-drops">
+            <div class="work-label">{t('home.dropsLabel', lang)}</div>
+            <div class="drop-list">
+              {featuredPal.drops.map((d) => (
+                <span class="drop-chip">{d}</span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Power Ranking Top 10 ===== -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>{t('home.rankingTitle', lang)}</h2>
+        <p class="text-secondary">{t('home.rankingDesc', lang)}</p>
+      </div>
+      <a href="/en/pals/?sort=rarity" class="section-link">{t('home.rankingDesc', lang).includes('Top 10') ? 'Full ranking →' : t('home.fullRanking', lang)}</a>
+    </div>
+    <div class="power-ranking">
+      {top10Power.map(({ pal, score }, i) => (
+        <a href={`/en/pals/${pal.id}/`} class="power-row">
+          <div class={`power-rank rank-${i + 1}`}>#{i + 1}</div>
+          <div class="power-img">
+            <PalImage pal={pal} size="small" rounded />
+          </div>
+          <div class="power-info">
+            <div class="power-name">{pal.name.en}</div>
+            <div class="power-name-en">{pal.name.zh}</div>
+          </div>
+          <div class="power-types">
+            {pal.types.map((type) => (
+              <span class={`type-dot type-${type}`}></span>
+            ))}
+          </div>
+          <div class="power-stats">
+            <span title="HP">❤ {pal.stats.hp}</span>
+            <span title="ATK">⚔ {pal.stats.attack.melee}</span>
+            <span title="DEF">🛡 {pal.stats.defense}</span>
+          </div>
+          <div class="power-score">
+            <div class="power-score-num">{score}</div>
+            <div class="power-score-label">Score</div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <AdSlot position="inline" />
+
+  <!-- ===== 9 Type Wheel ===== -->
+  <section class="section">
+    <div class="section-head">
+      <h2>{t('home.typeChartTitle', lang)}</h2>
+      <p class="text-secondary">{t('home.typeChartDesc', lang)}</p>
+    </div>
+    <div class="type-grid">
+      {PAL_TYPES.map((tt) => {
+        const count = typeDist[tt.id] || 0;
+        return (
+          <a href={`/en/pals/?type=${tt.id}`} class={`type-card type-${tt.id}`}>
+            <div class="type-card-name">{tt.en}</div>
+            <div class="type-card-en">{tt.zh}</div>
+            <div class="type-card-count">{count}{count > 0 ? ` ${t('pals.totalCount', lang)}` : ''}</div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- ===== Base Pals ===== -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>{t('home.basicPalsTitle', lang)}</h2>
+        <p class="text-secondary">{t('home.basicPalsDesc', lang)}</p>
+      </div>
+      <a href="/en/pals/?variants=base" class="section-link">{t('home.basicPalsLink', lang)}</a>
+    </div>
+    <div class="featured-grid">
+      {pals.filter((p) => p.paldeckNo > 0 && p.paldeckNo < 200).slice(0, 12).map((pal) => (
+        <a href={`/en/pals/${pal.id}/`} class="featured-card">
+          <div class="featured-img">
+            <PalImage pal={pal} size="medium" rounded />
+            <div class={`featured-rarity rarity-${(pal.rarityTier || 'common').toLowerCase()}`}>{pal.rarityTier || 'Common'}</div>
+          </div>
+          <div class="featured-info">
+            <div class="featured-name">{pal.name.en}</div>
+            <div class="featured-name-en">{pal.name.zh}</div>
+            <div class="featured-types">
+              {pal.types.map((type) => (
+                <span class={`type-dot type-${type}`}></span>
+              ))}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ===== 1.0 New Pals ===== -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>{t('home.newPalsTitle', lang)}</h2>
+        <p class="text-secondary">{t('home.newPalsDesc', lang)}</p>
+      </div>
+      <a href="/en/pals/?variants=only" class="section-link">{t('home.newPalsLink', lang)}</a>
+    </div>
+    <div class="new-pals-strip">
+      {newPals.map((pal) => (
+        <a href={`/en/pals/${pal.id}/`} class="new-pal-tile">
+          <PalImage pal={pal} size="small" rounded />
+          <div class="new-pal-name">{pal.name.en}</div>
+          <div class={`new-pal-rarity rarity-${(pal.rarityTier || 'common').toLowerCase()}`}>{pal.rarityTier || 'Common'}</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ===== Popular Combos ===== -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>{t('home.combosTitle', lang)}</h2>
+        <p class="text-secondary">{t('home.combosDesc', lang)}</p>
+      </div>
+      <a href="/en/breeding/" class="section-link">{t('home.combosLink', lang)}</a>
+    </div>
+    <div class="combo-list">
+      {popularCombos.map((combo) => {
+        const a = pals.find((p) => p.id === combo.a);
+        const b = pals.find((p) => p.id === combo.b);
+        const c = pals.find((p) => p.id === combo.c);
+        if (!a || !b || !c) return null;
+        return (
+          <a href={`/en/pals/${c.id}/`} class="combo-row">
+            <div class="combo-icons">
+              <div class="combo-icon"><PalImage pal={a} rounded /></div>
+              <span class="combo-op">+</span>
+              <div class="combo-icon"><PalImage pal={b} rounded /></div>
+              <span class="combo-op">=</span>
+              <div class="combo-icon combo-icon-child"><PalImage pal={c} rounded /></div>
+            </div>
+            <span class="combo-tooltip">{a.name.en} + {b.name.en} = {c.name.en}</span>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- ===== Work Quick Links ===== -->
+  <section class="section">
+    <div class="section-head">
+      <h2>{t('home.toolsTitle', lang)}</h2>
+    </div>
+    <div class="tools-grid">
+      <a href="/en/pals/?work=mining" class="tool-card">
+        <div class="tool-icon">⛏️</div>
+        <div class="tool-name">{t('home.toolMining', lang)}</div>
+        <div class="tool-meta">{t('home.toolMiningDesc', lang)}</div>
+      </a>
+      <a href="/en/pals/?work=planting" class="tool-card">
+        <div class="tool-icon">🌱</div>
+        <div class="tool-name">{t('home.toolPlanting', lang)}</div>
+        <div class="tool-meta">{t('home.toolPlantingDesc', lang)}</div>
+      </a>
+      <a href="/en/pals/?work=kindling" class="tool-card">
+        <div class="tool-icon">🔥</div>
+        <div class="tool-name">{t('home.toolKindling', lang)}</div>
+        <div class="tool-meta">{t('home.toolKindlingDesc', lang)}</div>
+      </a>
+      <a href="/en/pals/?work=cooling" class="tool-card">
+        <div class="tool-icon">❄️</div>
+        <div class="tool-name">{t('home.toolCooling', lang)}</div>
+        <div class="tool-meta">{t('home.toolCoolingDesc', lang)}</div>
+      </a>
+      <a href="/en/pals/?work=lumbering" class="tool-card">
+        <div class="tool-icon">🪓</div>
+        <div class="tool-name">{t('home.toolLumbering', lang)}</div>
+        <div class="tool-meta">{t('home.toolLumberingDesc', lang)}</div>
+      </a>
+      <a href="/en/pals/?work=handiwork" class="tool-card">
+        <div class="tool-icon">🔨</div>
+        <div class="tool-name">{t('home.toolHandiwork', lang)}</div>
+        <div class="tool-meta">{t('home.toolHandiworkDesc', lang)}</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Timeline ===== -->
+  <section class="section">
+    <div class="section-head">
+      <h2>{t('home.timelineTitle', lang)}</h2>
+    </div>
+    <div class="timeline">
+      {updates.map((u) => (
+        <div class="timeline-item" style={`--c: ${u.color}`}>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-ver">{u.ver}</div>
+            <div class="timeline-name">{u.name}</div>
+            <div class="timeline-meta">{u.date} · +{u.newPals} {t('home.timelineSuffix', lang)}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ===== Rarity Distribution ===== -->
+  <section class="section">
+    <div class="section-head">
+      <h2>{t('home.rarityTitle', lang)}</h2>
+      <p class="text-secondary">{t('home.rarityDesc', lang)}</p>
+    </div>
+    <div class="rarity-bar">
+      {['Common', 'Rare', 'Epic', 'Legendary'].map((rt) => {
+        const c = rarityDist[rt] || 0;
+        if (c === 0) return null;
+        const pct = (c / totalPals) * 100;
+        const tierKey = rt.toLowerCase();
+        return (
+          <a href={`/en/pals/?rarity=${rt}`} class={`rarity-bar-cell rarity-${tierKey}`} title={`${rt} × ${c} (${pct.toFixed(1)}%)`}>
+            <div class={`rarity-bar-num rarity-${tierKey}`}>{rt}</div>
+            <div class="rarity-bar-fill" style={`--pct: ${pct}%`}></div>
+            <div class="rarity-bar-count">{c} ({pct.toFixed(0)}%)</div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- ===== SEO Text ===== -->
+  <section class="seo-content">
+    <h2>{t('home.seoTitle', lang)}</h2>
+    <p>
+      <strong>Palworldpedia</strong> is a companion site for <strong>Palworld</strong> players, with complete data on <strong>{totalPals} Pals</strong>, <strong>{breedingEdges.toLocaleString()} breeding recipes</strong>, <strong>{activeSkills} active skills</strong>, and <strong>{passiveSkills} passives</strong>. {t('home.seoP1', lang)}
+    </p>
+    <p>{t('home.seoP2', lang)}</p>
+  </section>
+</Layout>
+
+<style>
+  /* === Hero === */
+  .hero {
+    position: relative;
+    padding: 3rem 1rem 2.5rem;
+    text-align: center;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 0.375rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .hero-title-zh { color: var(--text-primary); }
+  .hero-title-accent {
+    background: linear-gradient(135deg, #fbbf24, #f87171, #c084fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-orbit {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .orbit-pal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotate(var(--rot)) translateX(min(45vw, 350px)) rotate(calc(-1 * var(--rot)));
+    font-size: 1.75rem;
+    opacity: 0.25;
+    animation: orbit-float 8s ease-in-out infinite;
+  }
+
+  @keyframes orbit-float {
+    0%, 100% { transform: rotate(var(--rot)) translateX(min(45vw, 350px)) rotate(calc(-1 * var(--rot))) translateY(0); }
+    50% { transform: rotate(var(--rot)) translateX(min(45vw, 350px)) rotate(calc(-1 * var(--rot))) translateY(-15px); }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title { font-size: 2.25rem; }
+    .orbit-pal { display: none; }
+  }
+
+  /* === Stat strip === */
+  .stat-strip {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin: 0 -1rem 2rem;
+  }
+
+  .stat-strip-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    padding: 1rem;
+  }
+
+  .stat-cell {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    color: inherit;
+    transition: all 0.15s ease;
+  }
+
+  a.stat-cell:hover { background: var(--bg-tertiary); }
+
+  .stat-num {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .stat-divider {
+    width: 1px;
+    background: var(--border);
+    margin: 0.5rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .stat-strip-inner { flex-wrap: wrap; }
+    .stat-cell { flex-basis: 30%; }
+    .stat-divider { display: none; }
+  }
+
+  /* === Section === */
+  .section { margin-bottom: 2.5rem; }
+
+  .section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+
+  .section-head h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .section-link {
+    color: var(--accent);
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
+  .section-link:hover { text-decoration: underline; }
+
+  /* === Featured Pal === */
+  .featured-pal {
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+  }
+
+  .featured-label {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    background: var(--accent);
+    color: #000;
+    border-radius: 999px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .featured-pal-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin-top: 1rem;
+  }
+
+  .featured-pal-img {
+    aspect-ratio: 1;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .featured-types {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .type-tag {
+    padding: 0.25rem 0.625rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .rarity-tag {
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .rarity-tag.rarity-common { background: rgba(150,150,150,0.2); color: #c0c0c0; }
+  .rarity-tag.rarity-rare { background: rgba(80,170,255,0.2); color: #5cb0ff; }
+  .rarity-tag.rarity-epic { background: rgba(180,90,255,0.2); color: #c878ff; }
+  .rarity-tag.rarity-legendary { background: rgba(255,184,48,0.2); color: #ffb830; }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .stat-cell-big {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+  }
+
+  .stat-num-big {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .stat-label-big {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+  }
+
+  .work-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .work-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .work-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.75rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.8125rem;
+  }
+
+  .work-pill-name { color: var(--text-primary); }
+  .work-pill-lvl { color: var(--accent); font-weight: 700; }
+
+  .drop-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .drop-chip {
+    padding: 0.375rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  /* === Power ranking === */
+  .power-ranking {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .power-row {
+    display: grid;
+    grid-template-columns: 40px 60px 1fr auto auto auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: inherit;
+    transition: all 0.15s ease;
+  }
+
+  .power-row:hover {
+    border-color: var(--accent);
+    transform: translateX(2px);
+  }
+
+  .power-rank {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  .rank-1 { color: #fbbf24; }
+  .rank-2 { color: #d1d5db; }
+  .rank-3 { color: #d97706; }
+
+  .power-img {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .power-name { font-weight: 600; }
+  .power-name-en { font-size: 0.75rem; color: var(--text-muted); }
+
+  .power-types { display: flex; gap: 0.25rem; }
+  .type-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .type-neutral { background: #a0a8b0; }
+  .type-fire { background: #f87171; }
+  .type-water { background: #5eb3f5; }
+  .type-grass { background: #4ade80; }
+  .type-electric { background: #fbbf24; }
+  .type-ice { background: #93c5fd; }
+  .type-ground { background: #d97706; }
+  .type-dark { background: #6b7280; }
+  .type-dragon { background: #c084fc; }
+
+  .power-stats {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+
+  .power-score { text-align: center; min-width: 60px; }
+  .power-score-num {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .power-score-label {
+    font-size: 0.625rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  /* === Type grid === */
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .type-card {
+    padding: 1rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-left: 4px solid;
+    border-radius: var(--radius);
+    text-align: center;
+    color: inherit;
+    transition: all 0.15s ease;
+  }
+
+  .type-card:hover {
+    background: var(--bg-tertiary);
+    transform: translateY(-2px);
+  }
+
+  .type-card.type-neutral { border-left-color: #a0a8b0; }
+  .type-card.type-fire { border-left-color: #f87171; }
+  .type-card.type-water { border-left-color: #5eb3f5; }
+  .type-card.type-grass { border-left-color: #4ade80; }
+  .type-card.type-electric { border-left-color: #fbbf24; }
+  .type-card.type-ice { border-left-color: #93c5fd; }
+  .type-card.type-ground { border-left-color: #d97706; }
+  .type-card.type-dark { border-left-color: #6b7280; }
+  .type-card.type-dragon { border-left-color: #c084fc; }
+
+  .type-card-name {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  .type-card-en {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.125rem;
+  }
+
+  .type-card-count {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+  }
+
+  /* === Featured grid === */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .featured-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    color: inherit;
+    transition: all 0.15s ease;
+  }
+
+  .featured-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .featured-img {
+    aspect-ratio: 1;
+    background: var(--bg-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .featured-rarity {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 0.125rem 0.4rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+  }
+
+  .featured-rarity.rarity-common { background: rgba(150,150,150,0.2); color: #c0c0c0; }
+  .featured-rarity.rarity-rare { background: rgba(80,170,255,0.2); color: #5cb0ff; }
+  .featured-rarity.rarity-epic { background: rgba(180,90,255,0.2); color: #c878ff; }
+  .featured-rarity.rarity-legendary { background: rgba(255,180,40,0.2); color: #ffb830; }
+
+  .featured-info {
+    padding: 0.5rem 0.75rem 0.75rem;
+  }
+
+  .featured-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .featured-name-en {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .featured-types {
+    display: flex;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+  }
+
+  /* === New pals strip === */
+  .new-pals-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .new-pal-tile {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    text-align: center;
+    color: inherit;
+  }
+
+  .new-pal-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+  }
+
+  .new-pal-rarity {
+    font-size: 0.625rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+
+  /* === Combo list === */
+  .combo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .combo-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: inherit;
+    position: relative;
+  }
+
+  .combo-row:hover { border-color: var(--accent); }
+
+  .combo-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .combo-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--bg-tertiary);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .combo-icon.combo-icon-child {
+    border: 2px solid var(--accent);
+  }
+
+  .combo-op {
+    color: var(--text-muted);
+    font-weight: 700;
+  }
+
+  .combo-tooltip {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  /* === Tools === */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .tool-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 0.75rem;
+    text-align: center;
+    color: inherit;
+  }
+
+  .tool-card:hover {
+    border-color: var(--accent);
+  }
+
+  .tool-icon {
+    font-size: 1.5rem;
+  }
+
+  .tool-name {
+    font-weight: 600;
+    margin-top: 0.25rem;
+  }
+
+  .tool-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  /* === Timeline === */
+  .timeline {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 1.25rem;
+    border-left: 2px solid var(--border);
+    padding-left: 1.25rem;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -7px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--c, var(--accent));
+  }
+
+  .timeline-ver {
+    font-weight: 700;
+    color: var(--c, var(--accent));
+  }
+
+  .timeline-name {
+    font-weight: 600;
+  }
+
+  .timeline-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  /* === Rarity bar === */
+  .rarity-bar {
+    display: flex;
+    height: 80px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .rarity-bar-cell {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    color: inherit;
+    position: relative;
+    transition: all 0.15s ease;
+  }
+
+  .rarity-bar-cell:hover { background: var(--bg-tertiary); }
+
+  .rarity-bar-num {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .rarity-bar-num.rarity-common { color: #c0c0c0; }
+  .rarity-bar-num.rarity-rare { color: #5cb0ff; }
+  .rarity-bar-num.rarity-epic { color: #c878ff; }
+  .rarity-bar-num.rarity-legendary { color: #ffb830; }
+
+  .rarity-bar-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--pct, 0%);
+    opacity: 0.15;
+  }
+
+  .rarity-bar-cell.rarity-common .rarity-bar-fill { background: #c0c0c0; }
+  .rarity-bar-cell.rarity-rare .rarity-bar-fill { background: #5cb0ff; }
+  .rarity-bar-cell.rarity-epic .rarity-bar-fill { background: #c878ff; }
+  .rarity-bar-cell.rarity-legendary .rarity-bar-fill { background: #ffb830; }
+
+  .rarity-bar-count {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+  }
+
+  /* === SEO === */
+  .seo-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .seo-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 640px) {
+    .featured-pal-content { grid-template-columns: 1fr; }
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+    .power-row { grid-template-columns: 30px 50px 1fr auto; }
+    .power-stats { display: none; }
+  }
+</style>

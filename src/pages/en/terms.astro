@@ -1,0 +1,136 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { SITE } from '@/config';
+import { t } from '@i18n/utils';
+const lang = 'en';
+---
+
+<Layout
+  lang={lang}
+  title={t('terms.title', lang)}
+  description={`${SITE.name} Terms of Service - the rules, limitations, and disclaimers for using this Site`}
+>
+  <article class="content">
+    <h1>{t('terms.title', lang)}</h1>
+    <p class="text-muted">{t('terms.lastUpdated', lang)}</p>
+
+    <AdSlot position="inline" />
+
+    <h2>{t('terms.h21', lang)}</h2>
+    <p><strong>{SITE.name}</strong>{t('terms.p1', lang)}</p>
+
+    <h2>{t('terms.h22', lang)}</h2>
+    <p>{t('terms.p2', lang)}</p>
+    <ul>
+      <li>{t('terms.p2li1', lang)}</li>
+      <li>{t('terms.p2li2', lang)}</li>
+      <li>{t('terms.p2li3', lang)}</li>
+      <li>{t('terms.p2li4', lang)}</li>
+      <li>{t('terms.p2li5', lang)}</li>
+    </ul>
+
+    <h2>{t('terms.h23', lang)}</h2>
+    <p set:html={t('terms.p3a', lang)} />
+    <p>{t('terms.p3b', lang)}</p>
+
+    <h2>{t('terms.h24', lang)}</h2>
+    <p>{t('terms.p4a', lang)}</p>
+    <ul>
+      <li>{t('terms.p4li1', lang)}</li>
+      <li>{t('terms.p4li2', lang)}</li>
+      <li>{t('terms.p4li3', lang)}</li>
+      <li>{t('terms.p4li4', lang)}</li>
+    </ul>
+    <p set:html={t('terms.p4b', lang)} />
+
+    <h2>{t('terms.h25', lang)}</h2>
+    <p>{t('terms.p5a', lang)}</p>
+    <ul>
+      <li>{t('terms.p5li1', lang)}</li>
+      <li>{t('terms.p5li2', lang)}</li>
+      <li>{t('terms.p5li3', lang)}</li>
+      <li>{t('terms.p5li4', lang)}</li>
+      <li>{t('terms.p5li5', lang)}</li>
+    </ul>
+
+    <h2>{t('terms.h26', lang)}</h2>
+    <p set:html={t('terms.p6a', lang).replace('所有', `all rights held by ${SITE.name}`)} />
+    <p>{t('terms.p6b', lang)}</p>
+    <p>{t('terms.p6c', lang).replace('请联系联系我们：', `For copyright concerns, contact us at `)}<a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+
+    <h2>{t('terms.h27', lang)}</h2>
+    <p>{t('terms.p7a', lang)}</p>
+    <ul>
+      <li>{t('terms.p7li1', lang)}</li>
+      <li>{t('terms.p7li2', lang)}</li>
+      <li>{t('terms.p7li3', lang)}</li>
+    </ul>
+
+    <h2>{t('terms.h28', lang)}</h2>
+    <p set:html={t('terms.p8a', lang)} />
+    <p>{t('terms.p8b', lang)}</p>
+
+    <h2>{t('terms.h29', lang)}</h2>
+    <p>{t('terms.p9a', lang)}</p>
+
+    <h2>{t('terms.h210', lang)}</h2>
+    <p>{t('terms.p10a', lang)}</p>
+
+    <h2>{t('terms.h211', lang)}</h2>
+    <p>{t('terms.p11a', lang)}</p>
+
+    <h2>{t('terms.h212', lang)}</h2>
+    <p>{t('terms.p12a', lang)}</p>
+
+    <h2>{t('terms.h213', lang)}</h2>
+    <p>{t('terms.p13a', lang)}</p>
+    <ul>
+      <li>{t('terms.p13li1', lang)} <a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+    </ul>
+
+    <p class="text-muted" style="margin-top: 2rem;">
+      © {new Date().getFullYear()} {SITE.name}. {t('terms.copyright', lang)}
+    </p>
+  </article>
+</Layout>
+
+<style>
+  .content {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .content h2 {
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+
+  .content h3 {
+    margin-top: 1.5rem;
+    color: var(--text-primary);
+  }
+
+  .content p, .content li {
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .content ul {
+    padding-left: 1.5rem;
+  }
+
+  .content ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .content a {
+    color: var(--accent);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+  }
+</style>

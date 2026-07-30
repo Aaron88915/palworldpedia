@@ -1,0 +1,86 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { SITE } from '@/config';
+import { t } from '@i18n/utils';
+const lang = 'en';
+---
+
+<Layout
+  lang={lang}
+  title={t('about.title', lang)}
+  description={`About ${SITE.name} - who we are, why we built it, and how`}
+>
+  <article class="content">
+    <h1>{t('about.title', lang)} {SITE.name}</h1>
+
+    <p class="lead">
+      <strong>{SITE.name}</strong>{t('about.lead', lang)}
+    </p>
+
+    <AdSlot position="inline" />
+
+    <h2>{t('about.h2Offer', lang)}</h2>
+    <ul>
+      <li set:html={t('about.li1', lang)} />
+      <li set:html={t('about.li2', lang)} />
+      <li set:html={t('about.li3', lang)} />
+      <li set:html={t('about.li4', lang)} />
+      <li set:html={t('about.li5', lang)} />
+      <li set:html={t('about.li6', lang)} />
+    </ul>
+
+    <h2>{t('about.h2Source', lang)}</h2>
+    <p>{t('about.sourceIntro', lang)}</p>
+    <ul>
+      <li>{t('about.source1', lang)}</li>
+      <li>{t('about.source2', lang)}</li>
+      <li>{t('about.source3', lang)}</li>
+    </ul>
+
+    <h2>{t('about.h2Update', lang)}</h2>
+    <p set:html={t('about.updateP', lang)} />
+
+    <h2>{t('about.h2Disclaimer', lang)}</h2>
+    <p set:html={t('about.disclaimerP', lang)} />
+
+    <h2>{t('about.h2Contact', lang)}</h2>
+    <p>{t('about.contactP', lang)}</p>
+    <ul>
+      <li>{t('about.contactEmail', lang)}: <a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+      <li>{t('about.contactGithub', lang)}: <a href="https://github.com/Aaron88915/palworldpedia">@palworldpedia</a></li>
+    </ul>
+  </article>
+</Layout>
+
+<style>
+  .content {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .lead {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .content h2 {
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+
+  .content ul {
+    padding-left: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .content p, .content li {
+    color: var(--text-secondary);
+  }
+
+  .content strong {
+    color: var(--text-primary);
+  }
+</style>

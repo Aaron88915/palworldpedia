@@ -1,0 +1,784 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { t } from '@i18n/utils';
+import { SITE } from '@/config';
+
+const lang = 'en';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Palworld Breeding Calculator',
+  description: 'Palworld breeding calculator - pick two Pals, get the child instantly. Supports reverse lookup (target → parents) and shortest breeding path.',
+  applicationCategory: 'GameApplication',
+  operatingSystem: 'Web',
+  inLanguage: 'en',
+};
+---
+
+<Layout
+  lang={lang}
+  title={`${t('breeding.title', lang)} - Palworld Breeding Recipes`}
+  description="Palworld breeding calculator. Pick two Pals, see the child. Full breeding table, reverse lookup, and shortest breeding-path finder."
+  schema={schema}
+>
+  <header class="page-header">
+    <h1>{t('breeding.title', lang)}</h1>
+    <p class="text-secondary">Pick two parents → child · Pick a target → parents · Multi-step path finder</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="forward">{t('breeding.tabForward', lang)}</button>
+    <button class="tab-btn" data-tab="reverse">{t('breeding.tabReverse', lang)}</button>
+    <button class="tab-btn" data-tab="path">{t('breeding.tabPath', lang)}</button>
+    <button class="tab-btn" data-tab="finder">{t('breeding.tabFinder', lang)}</button>
+  </nav>
+
+  <section class="tab-panel active" id="tab-forward">
+    <div class="breeder-grid">
+      <div class="parent-slot">
+        <label class="parent-label">{t('breeding.parentA', lang)}</label>
+        <select id="parent-a" class="parent-select">
+          <option value="">{t('breeding.selectA', lang)}</option>
+        </select>
+        <div id="parent-a-preview" class="parent-preview"></div>
+      </div>
+      <div class="plus-icon">+</div>
+      <div class="parent-slot">
+        <label class="parent-label">{t('breeding.parentB', lang)}</label>
+        <select id="parent-b" class="parent-select">
+          <option value="">{t('breeding.selectB', lang)}</option>
+        </select>
+        <div id="parent-b-preview" class="parent-preview"></div>
+      </div>
+    </div>
+    <div class="result-area">
+      <div class="result-arrow">↓</div>
+      <div id="forward-result" class="result-box">
+        <p class="text-muted">{t('breeding.promptForward', lang)}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab-panel" id="tab-reverse">
+    <div class="single-slot">
+      <label class="parent-label">{t('breeding.target', lang)}</label>
+      <select id="target-pal" class="parent-select">
+        <option value="">{t('breeding.selectTarget', lang)}</option>
+      </select>
+      <div id="target-preview" class="parent-preview"></div>
+    </div>
+    <div class="result-area">
+      <div class="result-arrow">↑</div>
+      <div id="reverse-result" class="result-box">
+        <p class="text-muted">{t('breeding.promptReverse', lang)}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab-panel" id="tab-path">
+    <p class="text-secondary mb-2">{t('breeding.promptPath', lang)}</p>
+    <div class="breeder-grid">
+      <div class="parent-slot">
+        <label class="parent-label">{t('breeding.start', lang)}</label>
+        <select id="start-pal" class="parent-select">
+          <option value="">{t('breeding.selectStart', lang)}</option>
+        </select>
+      </div>
+      <div class="plus-icon">→</div>
+      <div class="parent-slot">
+        <label class="parent-label">{t('breeding.end', lang)}</label>
+        <select id="end-pal" class="parent-select">
+          <option value="">{t('breeding.selectEnd', lang)}</option>
+        </select>
+      </div>
+    </div>
+    <div class="result-area">
+      <div class="result-arrow">→</div>
+      <div id="path-result" class="result-box">
+        <p class="text-muted">{t('breeding.promptPath', lang)}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab-panel" id="tab-finder">
+    <p class="text-secondary mb-2" set:html={t('breeding.finderDesc', lang)} />
+
+    <div class="finder-target-row">
+      <label class="parent-label">{t('breeding.finderTarget', lang)}</label>
+      <select id="finder-target" class="parent-select finder-target-select">
+        <option value="">{t('breeding.finderTargetPlaceholder', lang)}</option>
+      </select>
+    </div>
+
+    <div class="finder-owned-section">
+      <div class="finder-owned-head">
+        <label class="parent-label">{t('breeding.finderOwnedLabel', lang)}（<span id="owned-count">0</span>）</label>
+        <div class="finder-owned-tools">
+          <button type="button" class="btn-chip" id="btn-clear-owned">{t('common.clear', lang)}</button>
+          <button type="button" class="btn-chip" id="btn-preset-starters">{t('breeding.finderStarter', lang)}</button>
+        </div>
+      </div>
+      <div class="finder-search-row">
+        <input type="search" id="finder-search" class="finder-search" placeholder={t('breeding.finderSearchPlaceholder', lang)} autocomplete="off" />
+      </div>
+      <div class="finder-pal-grid" id="finder-pal-grid"></div>
+      <div class="finder-selected-chips" id="finder-selected-chips"></div>
+    </div>
+
+    <div class="result-area">
+      <div class="result-arrow">→</div>
+      <div id="finder-result" class="result-box">
+        <p class="text-muted">{t('breeding.promptFinder', lang)}</p>
+      </div>
+    </div>
+  </section>
+
+  <AdSlot position="inline" />
+
+  <section class="mt-4">
+    <div class="flex items-center justify-between mb-2">
+      <h2>{t('breeding.tableTitle', lang)}</h2>
+      <span class="text-secondary" id="edge-count">{t('common.loading', lang)}</span>
+    </div>
+    <input
+      type="search"
+      id="edge-search"
+      class="edge-search"
+      placeholder={t('breeding.tableSearchPlaceholder', lang)}
+      autocomplete="off"
+    />
+    <div class="table-wrapper">
+      <table id="edge-table">
+        <thead>
+          <tr>
+            <th>{t('breeding.tableParentA', lang)}</th>
+            <th></th>
+            <th>{t('breeding.tableParentB', lang)}</th>
+            <th>→</th>
+            <th>{t('breeding.tableChild', lang)}</th>
+          </tr>
+        </thead>
+        <tbody id="edge-tbody">
+          <tr><td colspan="5" class="text-center text-muted">{t('breeding.tableLoading', lang)}</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="seo-text mt-4">
+    <h2>{t('breeding.seoTitle', lang)}</h2>
+    <p>
+      {t('breeding.seoP1', lang)}
+    </p>
+    <p>{t('breeding.seoP2', lang)}</p>
+    <ul>
+      <li set:html={t('breeding.seoLi1', lang)} />
+      <li set:html={t('breeding.seoLi2', lang)} />
+      <li set:html={t('breeding.seoLi3', lang)} />
+      <li set:html={t('breeding.seoLi4', lang)} />
+    </ul>
+  </section>
+</Layout>
+
+<script>
+  let pals = null;
+  let edges = null;
+  let idxToId = null;
+  let idToIdx = null;
+  let forwardMap = null;
+  let reverseMap = null;
+  let adjMap = null;
+  let edgeList = null;
+  const palMap = new Map();
+
+  const I18N = {
+    selectA: 'Select Parent A...',
+    selectB: 'Select Parent B...',
+    selectTarget: 'Select a target pal...',
+    selectStart: 'Select a start pal...',
+    selectEnd: 'Select a target pal...',
+    promptForward: 'Pick two Pals to see the result',
+    promptReverse: 'Pick a target to see all parent combinations',
+    promptPath: 'Pick start and target Pals to find the shortest breeding chain',
+    promptFinder: 'Tick Pals you own + pick a target to find the best breeding chain',
+    sameParent: 'Same-species pairs usually hatch the same species — pick two different Pals',
+    notFound: 'No known combination for',
+    noRecord: 'has no known breeding record',
+    noData: 'No data for',
+    reverseCount: 'parent combinations:',
+    directBreed: 'Direct breed',
+    stepsNeed: 'Needs',
+    stepsSuffix: 'breeding steps',
+    sameStartEnd: 'Start and target are the same',
+    noPath: 'No breeding chain connects these two Pals',
+    edgeCount: 'edges',
+    tableLoading: 'Loading breeding data...',
+  };
+
+  async function getPals() {
+    if (!pals) {
+      const res = await fetch('/pals-data.json');
+      pals = await res.json();
+    }
+    return pals;
+  }
+
+  async function getData() {
+    if (edges) return { pals, edges, idxToId, idToIdx, forwardMap, reverseMap, adjMap, edgeList };
+    pals = await getPals();
+    const res = await fetch('/breeding-data.json');
+    edges = await res.json();
+
+    idxToId = pals.map((p) => p.id);
+    idToIdx = new Map(pals.map((p, i) => [p.id, i]));
+
+    forwardMap = new Map();
+    reverseMap = new Map();
+    adjMap = new Map();
+    edgeList = [];
+
+    for (const [i1, i2, c] of edges) {
+      const a = i1 < i2 ? i1 : i2;
+      const b = i1 < i2 ? i2 : i1;
+      const key = a + '|' + b;
+      if (!forwardMap.has(key)) forwardMap.set(key, c);
+      if (!reverseMap.has(c)) reverseMap.set(c, []);
+      reverseMap.get(c).push([a, b]);
+      if (!adjMap.has(a)) adjMap.set(a, new Set());
+      if (!adjMap.has(b)) adjMap.set(b, new Set());
+      adjMap.get(a).add(c);
+      adjMap.get(b).add(c);
+      edgeList.push({ p1: idxToId[a], p2: idxToId[b], c: idxToId[c], p1Id: a, p2Id: b, cId: c });
+    }
+
+    return { pals, edges, idxToId, idToIdx, forwardMap, reverseMap, adjMap, edgeList };
+  }
+
+  function palName(p) { return p ? p.en : ''; }
+  function palLink(p) {
+    if (!p) return '';
+    return `<a href="/en/pals/${p.id}/" class="result-pal-link">
+      <div class="result-pal-name">${palName(p)}</div>
+    </a>`;
+  }
+
+  async function init() {
+    const data = await getData();
+    data.pals.forEach((p) => palMap.set(p.id, p));
+    const sortedPals = [...data.pals].sort((a, b) => (a.en || '').localeCompare(b.en || ''));
+    const opts = sortedPals.map((p) => {
+      const stars = p.breedRank ? '★'.repeat(p.breedRank) : '';
+      return `<option value="${p.id}">${palName(p)} ${stars}</option>`;
+    }).join('');
+    document.getElementById('parent-a').innerHTML = `<option value="">${I18N.selectA}</option>` + opts;
+    document.getElementById('parent-b').innerHTML = `<option value="">${I18N.selectB}</option>` + opts;
+    document.getElementById('target-pal').innerHTML = `<option value="">${I18N.selectTarget}</option>` + opts;
+    document.getElementById('start-pal').innerHTML = `<option value="">${I18N.selectStart}</option>` + opts;
+    document.getElementById('end-pal').innerHTML = `<option value="">${I18N.selectEnd}</option>` + opts;
+    document.getElementById('edge-count').textContent = `${data.edgeList.length} ${I18N.edgeCount}`;
+    loadEdgeTable();
+  }
+
+  document.querySelectorAll('.tab-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach((b) => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach((p) => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  async function findChildren(a, b) {
+    const data = await getData();
+    const ia = data.idToIdx.get(a);
+    const ib = data.idToIdx.get(b);
+    if (ia === undefined || ib === undefined) return [];
+    const key = (ia < ib ? ia : ib) + '|' + (ia < ib ? ib : ia);
+    const c = data.forwardMap.get(key);
+    return c !== undefined ? [data.idxToId[c]] : [];
+  }
+
+  async function showForward() {
+    const a = document.getElementById('parent-a').value;
+    const b = document.getElementById('parent-b').value;
+    const palA = palMap.get(a);
+    const palB = palMap.get(b);
+    document.getElementById('parent-a-preview').innerHTML = palLink(palA);
+    document.getElementById('parent-b-preview').innerHTML = palLink(palB);
+
+    const out = document.getElementById('forward-result');
+    if (!a || !b) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">${I18N.promptForward}</p>`;
+      return;
+    }
+    if (a === b) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">${I18N.sameParent}</p>`;
+      return;
+    }
+    const childIds = await findChildren(a, b);
+    if (childIds.length === 0) {
+      out.className = 'result-box';
+      out.innerHTML = `
+        <p class="text-muted">${I18N.notFound} ${palName(palA) || a} + ${palName(palB) || b}.</p>
+        <p class="text-secondary mt-2">Tip: switch to the <strong>Target → Parents</strong> tab and pick the Pal you want to hatch.</p>
+      `;
+      return;
+    }
+    out.className = 'result-box has-result';
+    const childrenHtml = childIds.map((id) => palLink(palMap.get(id))).filter(Boolean).join('');
+    out.innerHTML = `
+      <p class="mb-2">Possible child:</p>
+      <div class="result-pal-grid">${childrenHtml}</div>
+    `;
+  }
+
+  document.getElementById('parent-a').addEventListener('change', showForward);
+  document.getElementById('parent-b').addEventListener('change', showForward);
+
+  async function showReverse() {
+    const c = document.getElementById('target-pal').value;
+    const palC = palMap.get(c);
+    document.getElementById('target-preview').innerHTML = palLink(palC);
+
+    const out = document.getElementById('reverse-result');
+    if (!c) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">${I18N.promptReverse}</p>`;
+      return;
+    }
+    const data = await getData();
+    const idx = data.idToIdx.get(c);
+    if (idx === undefined) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">${I18N.noData} ${palName(palC) || c}</p>`;
+      return;
+    }
+    const pairs = data.reverseMap.get(idx) || [];
+    if (pairs.length === 0) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">${palName(palC) || c} ${I18N.noRecord}</p>`;
+      return;
+    }
+    out.className = 'result-box has-result';
+    const uniquePairs = new Map();
+    for (const [p1i, p2i] of pairs) {
+      const key = p1i < p2i ? `${p1i}|${p2i}` : `${p2i}|${p1i}`;
+      if (!uniquePairs.has(key)) uniquePairs.set(key, [p1i, p2i]);
+    }
+    const rows = Array.from(uniquePairs.values())
+      .map(([i1, i2]) => {
+        const p1 = data.pals[i1];
+        const p2 = data.pals[i2];
+        if (!p1 || !p2) return '';
+        return `<tr>
+          <td>${palLink(p1)}</td>
+          <td class="text-center">+</td>
+          <td>${palLink(p2)}</td>
+        </tr>`;
+      })
+      .filter(Boolean)
+      .join('');
+    out.innerHTML = `
+      <p class="mb-2"><strong>${palName(palC) || c}</strong> can be hatched from <strong>${uniquePairs.size}</strong> ${I18N.reverseCount}</p>
+      <div class="table-wrapper">
+        <table><tbody>${rows}</tbody></table>
+      </div>
+    `;
+  }
+  document.getElementById('target-pal').addEventListener('change', showReverse);
+
+  async function findShortestPath(startId, endId) {
+    const data = await getData();
+    const start = data.idToIdx.get(startId);
+    const end = data.idToIdx.get(endId);
+    if (start === undefined || end === undefined) return null;
+    if (start === end) return [start];
+    const queue = [{ node: start, path: [start] }];
+    const visited = new Set([start]);
+    while (queue.length > 0) {
+      const { node, path } = queue.shift();
+      const neighbors = data.adjMap.get(node);
+      if (!neighbors) continue;
+      for (const next of neighbors) {
+        if (visited.has(next)) continue;
+        visited.add(next);
+        const newPath = [...path, next];
+        if (next === end) return newPath;
+        queue.push({ node: next, path: newPath });
+      }
+    }
+    return null;
+  }
+
+  async function showPath() {
+    const start = document.getElementById('start-pal').value;
+    const end = document.getElementById('end-pal').value;
+    const out = document.getElementById('path-result');
+    if (!start || !end) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">${I18N.promptPath}</p>`;
+      return;
+    }
+    if (start === end) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">${I18N.sameStartEnd}</p>`;
+      return;
+    }
+    const data = await getData();
+    const path = await findShortestPath(start, end);
+    if (!path) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">${I18N.noPath}</p>`;
+      return;
+    }
+    out.className = 'result-box has-result';
+    const steps = path
+      .map((idx, i) => {
+        const p = data.pals[idx];
+        if (!p) return '';
+        const arrow = i < path.length - 1 ? '<span class="path-arrow">↓</span>' : '';
+        return `<div class="path-step">${palLink(p)}${arrow}</div>`;
+      })
+      .filter(Boolean)
+      .join('');
+    const palStart = palMap.get(start);
+    const palEnd = palMap.get(end);
+    const stepsDesc =
+      path.length === 2
+        ? `${I18N.directBreed} ${palName(palStart)} × ${palName(palEnd)}`
+        : `${I18N.stepsNeed} <strong>${path.length - 1}</strong> ${I18N.stepsSuffix}`;
+    out.innerHTML = `
+      <p class="mb-2">${stepsDesc}</p>
+      <div class="path-flow">${steps}</div>
+    `;
+  }
+  document.getElementById('start-pal').addEventListener('change', showPath);
+  document.getElementById('end-pal').addEventListener('change', showPath);
+
+  const STARTER_PRESET = [
+    'lamball', 'cattiva', 'lifmunk', 'foxparks', 'hoocrates', 'teafant',
+    'pengullet', 'jormuntide', 'anubis', 'mau', 'faleris',
+    'grizzbolt', 'relaxaurus', 'chillet', 'flopie', 'gumoss', 'daedream',
+    'killamari', 'flambelle', 'pengullet', 'mozzarina',
+  ];
+
+  const ownedSet = new Set();
+  let finderGridRendered = false;
+
+  async function initFinder() {
+    const data = await getData();
+    const sortedPals = [...data.pals].sort((a, b) => (a.en || '').localeCompare(b.en || ''));
+    const targetOpts = sortedPals.map((p) => {
+      const stars = p.breedRank ? '★'.repeat(p.breedRank) : '';
+      return `<option value="${p.id}">${palName(p)} ${stars}</option>`;
+    }).join('');
+    document.getElementById('finder-target').innerHTML = `<option value="">${I18N.selectTarget}</option>` + targetOpts;
+
+    const grid = document.getElementById('finder-pal-grid');
+    if (!finderGridRendered) {
+      const cellHtml = data.pals.map((p) => {
+        const stars = p.breedRank ? '★'.repeat(p.breedRank) : '';
+        return `<button type="button" class="finder-pal-cell${ownedSet.has(p.id) ? ' selected' : ''}" data-pal-id="${p.id}" title="${palName(p)}">
+          <div class="finder-pal-cell-name">${palName(p)}</div>
+          <div class="finder-pal-cell-meta">${stars}</div>
+        </button>`;
+      }).join('');
+      grid.innerHTML = cellHtml;
+      finderGridRendered = true;
+    }
+  }
+
+  function updateFinderSelection() {
+    document.querySelectorAll('.finder-pal-cell').forEach((cell) => {
+      cell.classList.toggle('selected', ownedSet.has(cell.dataset.palId));
+    });
+    const ownedCount = document.getElementById('owned-count');
+    if (ownedCount) ownedCount.textContent = String(ownedSet.size);
+    const chips = document.getElementById('finder-selected-chips');
+    if (chips) {
+      const arr = Array.from(ownedSet);
+      if (arr.length === 0) {
+        chips.innerHTML = '';
+      } else {
+        chips.innerHTML = arr.map((id) => {
+          const p = palMap.get(id);
+          if (!p) return '';
+          return `<span class="finder-chip">${palName(p)} <button type="button" data-remove-pal="${id}" aria-label="remove">×</button></span>`;
+        }).join('');
+      }
+    }
+  }
+
+  async function findMultiSourcePath(targetId, ownedIds) {
+    const data = await getData();
+    const target = data.idToIdx.get(targetId);
+    if (target === undefined) return null;
+    const sources = ownedIds
+      .map((id) => data.idToIdx.get(id))
+      .filter((idx) => idx !== undefined);
+    if (sources.length === 0) return null;
+    if (sources.includes(target)) return [target];
+
+    const parentOf = new Map();
+    const visited = new Set();
+    const queue = [];
+    for (const s of sources) {
+      visited.add(s);
+      parentOf.set(s, null);
+      queue.push(s);
+    }
+    while (queue.length > 0) {
+      const node = queue.shift();
+      if (node === target) {
+        const path = [node];
+        let cur = node;
+        while (parentOf.get(cur) !== null) {
+          cur = parentOf.get(cur);
+          path.unshift(cur);
+        }
+        return path;
+      }
+      const neighbors = data.adjMap.get(node);
+      if (!neighbors) continue;
+      for (const next of neighbors) {
+        if (visited.has(next)) continue;
+        visited.add(next);
+        parentOf.set(next, node);
+        queue.push(next);
+      }
+    }
+    return null;
+  }
+
+  async function showFinder() {
+    const target = document.getElementById('finder-target').value;
+    const out = document.getElementById('finder-result');
+    if (!target || ownedSet.size === 0) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">${I18N.promptFinder}</p>`;
+      return;
+    }
+    const data = await getData();
+    const path = await findMultiSourcePath(target, Array.from(ownedSet));
+    if (!path) {
+      out.className = 'result-box';
+      out.innerHTML = `<p class="text-muted">${I18N.noPath}</p>`;
+      return;
+    }
+    out.className = 'result-box has-result';
+    const steps = path
+      .map((idx, i) => {
+        const p = data.pals[idx];
+        if (!p) return '';
+        const arrow = i < path.length - 1 ? '<span class="path-arrow">↓</span>' : '';
+        return `<div class="path-step">${palLink(p)}${arrow}</div>`;
+      })
+      .filter(Boolean)
+      .join('');
+    const palEnd = palMap.get(target);
+    const stepsDesc =
+      path.length === 1
+        ? `You already own <strong>${palName(palEnd)}</strong>`
+        : `${I18N.stepsNeed} <strong>${path.length - 1}</strong> ${I18N.stepsSuffix}`;
+    out.innerHTML = `
+      <p class="mb-2">${stepsDesc}</p>
+      <div class="path-flow">${steps}</div>
+    `;
+  }
+  document.getElementById('finder-target').addEventListener('change', showFinder);
+
+  document.addEventListener('click', (e) => {
+    const cell = e.target.closest('.finder-pal-cell');
+    if (cell) {
+      const id = cell.dataset.palId;
+      if (ownedSet.has(id)) ownedSet.delete(id); else ownedSet.add(id);
+      updateFinderSelection();
+      showFinder();
+      return;
+    }
+    const rm = e.target.closest('[data-remove-pal]');
+    if (rm) {
+      ownedSet.delete(rm.dataset.removePal);
+      updateFinderSelection();
+      showFinder();
+      return;
+    }
+  });
+
+  document.getElementById('btn-clear-owned').addEventListener('click', () => {
+    ownedSet.clear();
+    updateFinderSelection();
+    showFinder();
+  });
+  document.getElementById('btn-preset-starters').addEventListener('click', () => {
+    STARTER_PRESET.forEach((id) => ownedSet.add(id));
+    updateFinderSelection();
+    showFinder();
+  });
+
+  document.getElementById('finder-search').addEventListener('input', (e) => {
+    const q = e.target.value.toLowerCase().trim();
+    document.querySelectorAll('.finder-pal-cell').forEach((cell) => {
+      const name = (cell.querySelector('.finder-pal-cell-name')?.textContent || '').toLowerCase();
+      cell.style.display = (q === '' || name.includes(q)) ? '' : 'none';
+    });
+  });
+
+  async function loadEdgeTable() {
+    const data = await getData();
+    const tbody = document.getElementById('edge-tbody');
+    if (!data.edgeList || data.edgeList.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="5" class="text-center text-muted">${I18N.tableLoading}</td></tr>`;
+      return;
+    }
+    const rows = data.edgeList.map(({ p1, p2, c }) => {
+      const pa = palMap.get(p1);
+      const pb = palMap.get(p2);
+      const ch = palMap.get(c);
+      if (!pa || !pb || !ch) return '';
+      return `<tr data-name="${(palName(pa) + ' ' + palName(pb) + ' ' + palName(ch)).toLowerCase()}">
+        <td>${palLink(pa)}</td>
+        <td class="text-center">+</td>
+        <td>${palLink(pb)}</td>
+        <td class="text-center">→</td>
+        <td>${palLink(ch)}</td>
+      </tr>`;
+    }).filter(Boolean).join('');
+    tbody.innerHTML = rows;
+
+    const search = document.getElementById('edge-search');
+    if (search) {
+      search.addEventListener('input', () => {
+        const q = search.value.toLowerCase().trim();
+        tbody.querySelectorAll('tr').forEach((row) => {
+          const name = row.dataset.name || '';
+          row.style.display = (q === '' || name.includes(q)) ? '' : 'none';
+        });
+      });
+    }
+  }
+
+  init().then(initFinder);
+</script>
+
+<style>
+  .page-header { margin-bottom: 1.5rem; }
+  .tabs {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+  }
+  .tab-btn {
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+  }
+  .tab-btn:hover { color: var(--text-primary); }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .breeder-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 640px) {
+    .breeder-grid { grid-template-columns: 1fr; }
+    .plus-icon { transform: rotate(90deg); text-align: center; }
+  }
+  .plus-icon { font-size: 1.5rem; color: var(--text-muted); text-align: center; padding-top: 2.5rem; }
+
+  .parent-slot, .single-slot {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+  .parent-label { display: block; font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; font-weight: 600; }
+  .parent-select {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-size: 0.9375rem;
+    font-family: inherit;
+  }
+  .parent-preview { margin-top: 0.5rem; min-height: 36px; }
+
+  .result-area { margin-top: 1rem; }
+  .result-arrow { text-align: center; color: var(--text-muted); font-size: 1.25rem; margin-bottom: 0.5rem; }
+  .result-box {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .result-box.has-result { border-color: var(--accent); }
+
+  .result-pal-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+  .result-pal-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: inherit;
+    transition: all 0.15s ease;
+  }
+  .result-pal-link:hover { border-color: var(--accent); }
+  .result-pal-name { font-weight: 600; }
+
+  /* Path */
+  .path-flow { display: flex; flex-direction: column; gap: 0.5rem; align-items: center; }
+  .path-step { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+  .path-arrow { color: var(--text-muted); }
+
+  /* Finder */
+  .finder-target-row { margin-bottom: 1rem; }
+  .finder-owned-section { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; margin-bottom: 1rem; }
+  .finder-owned-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
+  .finder-owned-tools { display: flex; gap: 0.5rem; }
+  .btn-chip { padding: 0.375rem 0.75rem; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 999px; color: var(--text-secondary); font-size: 0.8125rem; cursor: pointer; font-family: inherit; }
+  .btn-chip:hover { border-color: var(--accent); color: var(--text-primary); }
+  .finder-search-row { margin-bottom: 0.75rem; }
+  .finder-search { width: 100%; padding: 0.5rem 0.75rem; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-primary); font-size: 0.875rem; font-family: inherit; }
+  .finder-pal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.375rem; max-height: 320px; overflow-y: auto; padding: 0.25rem; }
+  .finder-pal-cell { padding: 0.5rem; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-primary); font-family: inherit; cursor: pointer; text-align: center; transition: all 0.15s ease; }
+  .finder-pal-cell:hover { border-color: var(--accent); }
+  .finder-pal-cell.selected { background: var(--accent); color: #000; border-color: var(--accent); }
+  .finder-pal-cell-name { font-size: 0.8125rem; font-weight: 600; }
+  .finder-pal-cell-meta { font-size: 0.6875rem; color: var(--text-muted); }
+  .finder-pal-cell.selected .finder-pal-cell-meta { color: rgba(0,0,0,0.7); }
+  .finder-selected-chips { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-top: 0.75rem; }
+  .finder-chip { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.25rem 0.625rem; background: var(--bg-tertiary); border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); font-size: 0.75rem; }
+  .finder-chip button { background: none; border: none; color: inherit; cursor: pointer; font-size: 1rem; padding: 0; line-height: 1; }
+
+  /* Table */
+  .edge-search { width: 100%; padding: 0.5rem 0.75rem; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-primary); font-size: 0.875rem; font-family: inherit; margin-bottom: 0.75rem; }
+  .table-wrapper { overflow-x: auto; }
+
+  .seo-text { background: var(--bg-secondary); border-radius: var(--radius); padding: 1.5rem; border: 1px solid var(--border); }
+  .seo-text p, .seo-text li { color: var(--text-secondary); line-height: 1.7; }
+  .seo-text ul { padding-left: 1.5rem; }
+</style>

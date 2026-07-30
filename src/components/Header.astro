@@ -1,13 +1,18 @@
 ﻿---
 import { NAV } from '@/config';
+import { useTranslations, switchLangPath } from '@i18n/utils';
 
 export interface Props {
   lang?: 'zh' | 'en';
 }
 
 const { lang = 'zh' } = Astro.props;
+const t = useTranslations(lang);
 const nav = lang === 'zh' ? NAV.zh : NAV.en;
 const homeHref = lang === 'zh' ? '/' : '/en/';
+const currentPath = Astro.url.pathname;
+const switchHref = switchLangPath(currentPath);
+const switchLabel = lang === 'zh' ? 'EN' : '中文';
 ---
 
 <header class="site-header">
@@ -27,13 +32,16 @@ const homeHref = lang === 'zh' ? '/' : '/en/';
         {nav.map((item) => (
           <li><a href={item.href}>{item.label}</a></li>
         ))}
-        {/* 英文版翻译就绪后启用：locales.includes('en') && (
-          <li class="lang-switch">
-            <a href={lang === 'zh' ? '/en' + (Astro.url.pathname === '/' ? '/' : Astro.url.pathname) : (Astro.url.pathname.replace(/^\/en/, '') || '/')}>
-              {lang === 'zh' ? 'EN' : '中文'}
-            </a>
-          </li>
-        ) */}
+        <li class="lang-switch">
+          <a
+            href={switchHref}
+            id="lang-switch"
+            aria-label={`Switch language: ${lang === 'zh' ? 'English' : '中文'}`}
+            data-target-lang={lang === 'zh' ? 'en' : 'zh'}
+          >
+            {switchLabel}
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -103,6 +111,13 @@ const homeHref = lang === 'zh' ? '/' : '/en/';
   .lang-switch a {
     border: 1px solid var(--border);
     margin-left: 0.5rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .lang-switch a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
   }
 
   .nav-toggle {
@@ -156,11 +171,23 @@ const homeHref = lang === 'zh' ? '/' : '/en/';
 </style>
 
 <script>
+  // 移动端菜单切换
   const toggle = document.getElementById('nav-toggle');
   const list = document.getElementById('nav-list');
   if (toggle && list) {
     toggle.addEventListener('click', () => {
       list.classList.toggle('open');
+    });
+  }
+
+  // 切换语言时把选择持久化到 localStorage（自动检测脚本会读这个）
+  const langSwitch = document.getElementById('lang-switch') as HTMLAnchorElement | null;
+  if (langSwitch) {
+    langSwitch.addEventListener('click', () => {
+      const target = langSwitch.dataset.targetLang;
+      if (target) {
+        try { localStorage.setItem('pal_lang', target); } catch (e) {}
+      }
     });
   }
 </script>

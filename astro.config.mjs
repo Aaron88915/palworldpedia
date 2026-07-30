@@ -19,10 +19,10 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'ignore',
 
-  // i18n 配置 - MVP 阶段只做中文，英文翻译就绪后加回 en
+  // i18n 配置
   i18n: {
     defaultLocale: 'zh',
-    locales: ['zh'],
+    locales: ['zh', 'en'],
     routing: {
       prefixDefaultLocale: false,
     },
@@ -34,6 +34,7 @@ export default defineConfig({
         defaultLocale: 'zh',
         locales: {
           zh: 'zh-CN',
+          en: 'en-US',
         },
       },
     }),

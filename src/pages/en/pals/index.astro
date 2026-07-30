@@ -1,0 +1,514 @@
+---
+import Layout from '@layouts/Layout.astro';
+import PalImage from '@components/PalImage.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { PAL_TYPES, WORK_SUITABILITIES } from '@/config';
+import { t, useTranslations } from '@i18n/utils';
+import palsData from '@data/pals.json';
+import type { Pal } from '@data/types';
+
+const lang = 'en';
+const tt = useTranslations(lang);
+const pals = palsData as Pal[];
+
+const palsWithData = pals.map((p) => {
+  const workEntries = Object.entries(p.workSuitability || {})
+    .filter(([_, lvl]) => typeof lvl === 'number' && lvl > 0)
+    .map(([k, lvl]) => `${k}:${lvl}`)
+    .join(' ');
+  const isVariant = p.paldeckNo === 0 || p.paldeckNo > 200;
+  return { pal: p, workEntries, isVariant };
+});
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Palworld Paldex',
+  description: 'Complete Palworld Paldex with all Pals, types, skills, passives, and habitats.',
+  numberOfItems: pals.length,
+  itemListElement: pals.slice(0, 20).map((pal, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    item: {
+      '@type': 'Thing',
+      name: `${pal.name.en} (${pal.name.zh})`,
+      url: new URL(`/en/pals/${pal.id}/`, Astro.site).href,
+    },
+  })),
+};
+
+const config = {
+  types: PAL_TYPES,
+  works: WORK_SUITABILITIES,
+  i18n: {
+    all: tt('common.all'),
+    show: tt('common.show'),
+    reset: tt('common.clear'),
+    base: tt('common.base'),
+    variantsOnly: tt('common.variantsOnly'),
+    typeLabel: tt('pals.type'),
+    workLabel: tt('pals.work'),
+    rarityLabel: tt('pals.rarity'),
+    sortLabel: tt('pals.sort'),
+    viewLabel: tt('common.view'),
+    gridView: tt('common.grid'),
+    sortNo: tt('pals.paldeckNo'),
+    sortRarity: tt('pals.byRarity'),
+    sortNameZh: tt('pals.byNameZh'),
+    sortNameEn: tt('pals.byNameEn'),
+    activeLabel: tt('common.active'),
+  },
+};
+---
+
+<Layout
+  lang={lang}
+  title={`${t('pals.title', lang)} - All ${pals.length} Palworld Pals`}
+  description="Complete Palworld Paldex. Stats, skills, passives, habitats, and drops for every Pal. Filter by type, work, and rarity."
+  schema={schema}
+>
+  <header class="page-header">
+    <h1>{t('pals.title', lang)}</h1>
+    <p class="text-secondary">{pals.length} {t('pals.totalCount', lang)} · <span id="visible-count">{t('common.show', lang)} {pals.length}</span></p>
+  </header>
+
+  <!-- Search -->
+  <div class="filter-bar">
+    <input
+      type="search"
+      id="pal-search"
+      class="search-input"
+      placeholder={t('pals.searchPlaceholder', lang)}
+      autocomplete="off"
+    />
+
+    <!-- Type filter -->
+    <div class="filter-row">
+      <span class="filter-label">{t('pals.type', lang)}</span>
+      <div class="filter-chips" data-filter-group="type">
+        <button type="button" data-filter-value="" class="chip type-chip active">{t('common.all', lang)}</button>
+        {PAL_TYPES.map((tp) => (
+          <button
+            type="button"
+            data-filter-value={tp.id}
+            class={`chip type-chip type-${tp.id}`}
+          >
+            {tp.en}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Work filter -->
+    <div class="filter-row">
+      <span class="filter-label">{t('pals.work', lang)}</span>
+      <div class="filter-chips" data-filter-group="work">
+        <button type="button" data-filter-value="" class="chip active">{t('common.all', lang)}</button>
+        {WORK_SUITABILITIES.map((w) => (
+          <button
+            type="button"
+            data-filter-value={w.id}
+            class="chip"
+            title={w.en}
+          >
+            <span class="chip-icon">{w.icon}</span>
+            <span class="chip-text">{w.en}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Rarity + variants + sort + view -->
+    <div class="filter-row meta-row">
+      <div class="meta-group">
+        <span class="filter-label">{t('pals.rarity', lang)}</span>
+        <div class="filter-chips small" data-filter-group="rarity">
+          <button type="button" data-filter-value="" class="chip active">{t('common.all', lang)}</button>
+          <button type="button" data-filter-value="Common" class="chip rarity-chip rarity-common">Common</button>
+          <button type="button" data-filter-value="Rare" class="chip rarity-chip rarity-rare">Rare</button>
+          <button type="button" data-filter-value="Epic" class="chip rarity-chip rarity-epic">Epic</button>
+          <button type="button" data-filter-value="Legendary" class="chip rarity-chip rarity-legendary">Legendary</button>
+        </div>
+      </div>
+
+      <div class="meta-group">
+        <span class="filter-label">{t('common.variants', lang)}</span>
+        <div class="filter-chips small" data-filter-group="variants">
+          <button type="button" data-filter-value="all" class="chip active">{t('common.all', lang)}</button>
+          <button type="button" data-filter-value="base" class="chip">{t('common.base', lang)}</button>
+          <button type="button" data-filter-value="only" class="chip">{t('common.variantsOnly', lang)}</button>
+        </div>
+      </div>
+
+      <div class="meta-group">
+        <span class="filter-label">{t('pals.sort', lang)}</span>
+        <div class="filter-chips small" data-filter-group="sort">
+          <button type="button" data-filter-value="no" class="chip active">{t('pals.byNo', lang)}</button>
+          <button type="button" data-filter-value="rarity" class="chip">{t('pals.byRarity', lang)}</button>
+          <button type="button" data-filter-value="name-zh" class="chip">{t('pals.byNameZh', lang)}</button>
+          <button type="button" data-filter-value="name-en" class="chip">{t('pals.byNameEn', lang)}</button>
+        </div>
+      </div>
+
+      <div class="meta-group">
+        <span class="filter-label">{t('common.view', lang)}</span>
+        <div class="filter-chips small" data-filter-group="view">
+          <button type="button" data-filter-value="grid" class="chip active">{t('common.grid', lang)}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="active-filters" id="active-filters" style="display: none;">
+      <span class="filter-label">{t('common.active', lang)}</span>
+      <div id="active-chips"></div>
+      <button type="button" id="reset-btn" class="reset-link">{t('common.clear', lang)}</button>
+    </div>
+  </div>
+
+  <AdSlot position="inline" />
+
+  <div class="pal-grid" id="pal-grid">
+    {palsWithData.map(({ pal, workEntries, isVariant }) => (
+      <a
+        href={`/en/pals/${pal.id}/`}
+        class="pal-tile"
+        data-id={pal.id}
+        data-name-zh={pal.name.zh.toLowerCase()}
+        data-name-en={pal.name.en.toLowerCase()}
+        data-type={pal.types.join(' ')}
+        data-work={workEntries}
+        data-rarity={pal.rarityTier || 'Common'}
+        data-rarity-num={pal.rarity}
+        data-variant={isVariant ? 'only' : 'base'}
+        data-paldeck={pal.paldeckNo}
+      >
+        <div class="pal-tile-img">
+          <PalImage pal={pal} size="medium" rounded />
+          <div class="pal-tile-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
+          <div class={`pal-tile-rarity rarity-${(pal.rarityTier || 'common').toLowerCase()}`}>{pal.rarityTier || 'Common'}</div>
+        </div>
+        <div class="pal-tile-info">
+          <div class="pal-tile-name">{pal.name.en}</div>
+          <div class="pal-tile-name-en">{pal.name.zh}</div>
+          <div class="pal-tile-types">
+            {pal.types.map((type) => (
+              <span class={`type-dot type-${type}`}></span>
+            ))}
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  {pals.length === 0 && (
+    <div class="empty-state">
+      <p>{t('common.noResult', lang)}</p>
+    </div>
+  )}
+</Layout>
+
+<style>
+  .page-header { margin-bottom: 1.5rem; }
+  .filter-bar { margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-primary);
+    font-size: 1rem;
+  }
+  .search-input:focus { outline: none; border-color: var(--accent); }
+
+  .filter-row { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+  .filter-label {
+    color: var(--text-muted);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    min-width: 48px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .filter-chips { display: flex; gap: 0.375rem; flex-wrap: wrap; }
+  .filter-chips.small .chip { padding: 0.25rem 0.625rem; font-size: 0.8125rem; }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .chip:hover { border-color: var(--accent); color: var(--text-primary); }
+  .chip.active { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
+  .chip-icon { font-size: 1em; }
+  .rarity-chip:not(.active) { color: var(--text-muted); font-size: 0.75rem; }
+
+  .meta-row { gap: 1rem; }
+  .meta-group { display: flex; align-items: center; gap: 0.5rem; }
+  .meta-group .filter-label { min-width: auto; }
+
+  .active-filters {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0.625rem 0.875rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius);
+  }
+
+  .pal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .pal-tile {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: all 0.15s ease;
+    color: inherit;
+  }
+  .pal-tile:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .pal-tile.hidden { display: none; }
+
+  .pal-tile-img {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .pal-tile-no {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    font-size: 0.625rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .pal-tile-rarity {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 0.125rem 0.4rem;
+    border-radius: 0.25rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .pal-tile-rarity.rarity-common { background: rgba(150,150,150,0.2); color: #c0c0c0; }
+  .pal-tile-rarity.rarity-rare { background: rgba(80,170,255,0.2); color: #5cb0ff; }
+  .pal-tile-rarity.rarity-epic { background: rgba(180,90,255,0.2); color: #c878ff; }
+  .pal-tile-rarity.rarity-legendary { background: rgba(255,180,40,0.2); color: #ffb830; }
+
+  .rarity-chip.rarity-common.active { border-color: #c0c0c0; color: #c0c0c0; }
+  .rarity-chip.rarity-rare.active { border-color: #5cb0ff; color: #5cb0ff; }
+  .rarity-chip.rarity-epic.active { border-color: #c878ff; color: #c878ff; }
+  .rarity-chip.rarity-legendary.active { border-color: #ffb830; color: #ffb830; }
+
+  .pal-tile-info { padding: 0.5rem 0.75rem 0.75rem; }
+  .pal-tile-name { font-size: 0.875rem; font-weight: 600; }
+  .pal-tile-name-en { font-size: 0.75rem; color: var(--text-muted); }
+  .pal-tile-types { display: flex; gap: 0.25rem; margin-top: 0.25rem; }
+  .type-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+  .type-neutral { background: #a0a8b0; }
+  .type-fire { background: #f87171; }
+  .type-water { background: #5eb3f5; }
+  .type-grass { background: #4ade80; }
+  .type-electric { background: #fbbf24; }
+  .type-ice { background: #93c5fd; }
+  .type-ground { background: #d97706; }
+  .type-dark { background: #6b7280; }
+  .type-dragon { background: #c084fc; }
+  .type-chip:not(.active) { color: #000; font-weight: 600; }
+  .type-ground.type-chip:not(.active), .type-dark.type-chip:not(.active) { color: #fff; }
+
+  .empty-state { text-align: center; padding: 3rem 1rem; color: var(--text-muted); }
+</style>
+
+<script define:vars={{ config }}>
+  const state = { type: '', work: '', rarity: '', sort: 'no', variants: 'all', view: 'grid', q: '' };
+
+  const grid = document.getElementById('pal-grid');
+  const tiles = Array.from(document.querySelectorAll('.pal-tile'));
+  const search = document.getElementById('pal-search');
+  const visibleCount = document.getElementById('visible-count');
+  const activeBox = document.getElementById('active-filters');
+  const activeChips = document.getElementById('active-chips');
+  const resetBtn = document.getElementById('reset-btn');
+
+  function initFromURL() {
+    const sp = new URLSearchParams(window.location.search);
+    if (sp.get('type')) state.type = sp.get('type');
+    if (sp.get('work')) state.work = sp.get('work');
+    if (sp.get('rarity')) state.rarity = sp.get('rarity');
+    if (sp.get('sort')) state.sort = sp.get('sort');
+    if (sp.get('variants')) state.variants = sp.get('variants');
+    if (sp.get('view')) state.view = sp.get('view');
+    if (sp.get('q')) {
+      state.q = sp.get('q');
+      if (search) search.value = state.q;
+    }
+  }
+
+  function applyFilter() {
+    let visible = 0;
+    tiles.forEach((tile) => {
+      const el = tile;
+      const types = (el.dataset.type || '').split(' ');
+      const workData = el.dataset.work || '';
+      const rarity = el.dataset.rarity;
+      const variant = el.dataset.variant;
+      const nameZh = el.dataset.nameZh || '';
+      const nameEn = el.dataset.nameEn || '';
+      let match = true;
+      if (state.type && !types.includes(state.type)) match = false;
+      if (match && state.work) {
+        const workMatch = workData.split(' ').some((entry) => entry.startsWith(state.work + ':'));
+        if (!workMatch) match = false;
+      }
+      if (match && state.rarity && rarity !== state.rarity) match = false;
+      if (match && state.variants === 'base' && variant !== 'base') match = false;
+      if (match && state.variants === 'only' && variant !== 'only') match = false;
+      if (match && state.q) {
+        const q = state.q.toLowerCase();
+        if (!nameZh.includes(q) && !nameEn.includes(q) && !el.dataset.id.includes(q)) match = false;
+      }
+      el.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+    if (visibleCount) visibleCount.textContent = config.i18n.show + ' ' + visible;
+    sortTiles();
+    updateActiveChips();
+    syncChipState();
+  }
+
+  function sortTiles() {
+    const sorted = [...tiles].sort((a, b) => {
+      switch (state.sort) {
+        case 'rarity':
+          if (Number(b.dataset.rarityNum) !== Number(a.dataset.rarityNum)) return Number(b.dataset.rarityNum) - Number(a.dataset.rarityNum);
+          return Number(a.dataset.paldeck) - Number(b.dataset.paldeck);
+        case 'name-zh':
+          return (a.dataset.nameZh || '').localeCompare(b.dataset.nameZh || '', 'zh');
+        case 'name-en':
+          return (a.dataset.nameEn || '').localeCompare(b.dataset.nameEn || '');
+        case 'no':
+        default:
+          return Number(a.dataset.paldeck) - Number(b.dataset.paldeck);
+      }
+    });
+    sorted.forEach((t) => grid.appendChild(t));
+  }
+
+  function updateActiveChips() {
+    const labels = {
+      type: state.type ? config.types.find((tt) => tt.id === state.type)?.en : null,
+      work: state.work ? config.works.find((w) => w.id === state.work)?.en : null,
+      rarity: state.rarity || null,
+      variants: state.variants === 'base' ? config.i18n.base : state.variants === 'only' ? config.i18n.variantsOnly : null,
+    };
+    const entries = Object.entries(labels).filter(([_, v]) => v);
+    if (entries.length === 0) {
+      activeBox.style.display = 'none';
+      return;
+    }
+    activeBox.style.display = 'flex';
+    activeChips.innerHTML = entries.map(([k, v]) => {
+      const removeAttr = `data-remove-key="${k}"`;
+      return `<button type="button" class="active-chip" ${removeAttr}>× ${v}</button>`;
+    }).join('');
+  }
+
+  function syncChipState() {
+    document.querySelectorAll('[data-filter-group]').forEach((group) => {
+      const key = group.dataset.filterGroup;
+      const val = state[key] || '';
+      group.querySelectorAll('.chip').forEach((chip) => {
+        const cv = chip.dataset.filterValue || '';
+        chip.classList.toggle('active', cv === val || (key === 'variants' && cv === state.variants));
+      });
+    });
+  }
+
+  function updateURL() {
+    const sp = new URLSearchParams();
+    if (state.type) sp.set('type', state.type);
+    if (state.work) sp.set('work', state.work);
+    if (state.rarity) sp.set('rarity', state.rarity);
+    if (state.sort && state.sort !== 'no') sp.set('sort', state.sort);
+    if (state.variants && state.variants !== 'all') sp.set('variants', state.variants);
+    if (state.q) sp.set('q', state.q);
+    const qs = sp.toString();
+    const newPath = window.location.pathname + (qs ? '?' + qs : '');
+    window.history.replaceState({}, '', newPath);
+  }
+
+  document.querySelectorAll('[data-filter-group]').forEach((group) => {
+    group.addEventListener('click', (e) => {
+      const chip = e.target.closest('.chip');
+      if (!chip) return;
+      const key = group.dataset.filterGroup;
+      const val = chip.dataset.filterValue || '';
+      state[key] = val;
+      applyFilter();
+      updateURL();
+    });
+  });
+
+  if (search) {
+    search.addEventListener('input', () => {
+      state.q = search.value.trim();
+      applyFilter();
+      updateURL();
+    });
+  }
+
+  if (activeChips) {
+    activeChips.addEventListener('click', (e) => {
+      const chip = e.target.closest('.active-chip');
+      if (!chip) return;
+      const key = chip.dataset.removeKey;
+      state[key] = (key === 'variants') ? 'all' : '';
+      if (key === 'q' && search) search.value = '';
+      applyFilter();
+      updateURL();
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      state.type = '';
+      state.work = '';
+      state.rarity = '';
+      state.sort = 'no';
+      state.variants = 'all';
+      state.view = 'grid';
+      state.q = '';
+      if (search) search.value = '';
+      applyFilter();
+      updateURL();
+    });
+  }
+
+  initFromURL();
+  applyFilter();
+</script>

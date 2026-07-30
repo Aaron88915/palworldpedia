@@ -1,0 +1,44 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { t } from '@i18n/utils';
+const lang = 'en';
+---
+
+<Layout
+  lang={lang}
+  title={`${t('calculator.title', lang)} - Palworld Power Management`}
+  description="Palworld base power calculator. Auto-calculate your base's power consumption and production to find any shortfall."
+>
+  <header class="page-header">
+    <h1>{t('calculator.title', lang)}</h1>
+    <p class="text-secondary">{t('calculator.subtitle', lang)}</p>
+  </header>
+
+  <AdSlot position="inline" />
+
+  <div class="coming-soon">
+    <div class="coming-soon-icon">🔌</div>
+    <h2>{t('calculator.comingTitle', lang)}</h2>
+    <p class="text-secondary mt-1">{t('calculator.comingDesc', lang)}</p>
+  </div>
+</Layout>
+
+<style>
+  .page-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .coming-soon {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .coming-soon-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+</style>

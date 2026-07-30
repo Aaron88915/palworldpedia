@@ -1,0 +1,85 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { SITE } from '@/config';
+import { t } from '@i18n/utils';
+const lang = 'en';
+---
+
+<Layout
+  lang={lang}
+  title={t('privacy.title', lang)}
+  description={`${SITE.name} Privacy Policy - how we collect, use, and protect your personal information`}
+>
+  <article class="content">
+    <h1>{t('privacy.title', lang)}</h1>
+    <p class="text-muted">{t('privacy.lastUpdated', lang)}</p>
+
+    <AdSlot position="inline" />
+
+    <h2>{t('privacy.h2Overview', lang)}</h2>
+    <p><strong>{SITE.name}</strong>{t('privacy.overviewP', lang)}</p>
+
+    <h2>{t('privacy.h2Collect', lang)}</h2>
+    <p>{t('privacy.collectP', lang)}</p>
+    <ul>
+      <li set:html={t('privacy.collect1', lang)} />
+      <li set:html={t('privacy.collect2', lang)} />
+      <li set:html={t('privacy.collect3', lang)} />
+    </ul>
+
+    <h2>{t('privacy.h2Ads', lang)}</h2>
+    <p set:html={t('privacy.adsP', lang)} />
+
+    <h2>{t('privacy.h2Cookies', lang)}</h2>
+    <p>{t('privacy.cookiesP', lang)}</p>
+    <ul>
+      <li set:html={t('privacy.cookies1', lang)} />
+      <li set:html={t('privacy.cookies2', lang)} />
+      <li set:html={t('privacy.cookies3', lang)} />
+    </ul>
+
+    <h2>{t('privacy.h2Protect', lang)}</h2>
+    <p>{t('privacy.protectP', lang)}</p>
+
+    <h2>{t('privacy.h2ThirdParty', lang)}</h2>
+    <p>{t('privacy.thirdPartyP', lang)}</p>
+
+    <h2>{t('privacy.h2Children', lang)}</h2>
+    <p>{t('privacy.childrenP', lang)}</p>
+
+    <h2>{t('privacy.h2Update', lang)}</h2>
+    <p>{t('privacy.updatePolicyP', lang)}</p>
+
+    <h2>{t('privacy.h2Contact', lang)}</h2>
+    <p>{t('privacy.contactPrivacyP', lang)}
+      <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+    </p>
+  </article>
+</Layout>
+
+<style>
+  .content {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .content h2 {
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+
+  .content ul {
+    padding-left: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .content p, .content li {
+    color: var(--text-secondary);
+  }
+
+  .content strong {
+    color: var(--text-primary);
+  }
+</style>

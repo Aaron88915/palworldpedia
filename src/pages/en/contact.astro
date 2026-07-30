@@ -1,0 +1,75 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
+import { SITE } from '@/config';
+import { t } from '@i18n/utils';
+const lang = 'en';
+---
+
+<Layout
+  lang={lang}
+  title={t('contact.title', lang)}
+  description={`Contact ${SITE.name} - report data errors, submit suggestions, or propose collaboration`}
+>
+  <article class="content">
+    <h1>{t('contact.title', lang)}</h1>
+
+    <AdSlot position="inline" />
+
+    <h2>{t('contact.h2Email', lang)}</h2>
+    <p>
+      <a href={`mailto:${SITE.email}`} class="contact-link">{SITE.email}</a>
+    </p>
+
+    <h2>{t('contact.h2Report', lang)}</h2>
+    <p>{t('contact.reportP', lang)}</p>
+    <ul>
+      <li>{t('contact.report1', lang)}</li>
+      <li>{t('contact.report2', lang)}</li>
+      <li>{t('contact.report3', lang)}</li>
+    </ul>
+    <p>{t('contact.reportSla', lang)}</p>
+
+    <h2>{t('contact.h2Collab', lang)}</h2>
+    <p>{t('contact.collabP', lang)}</p>
+    <ul>
+      <li>{t('contact.collab1', lang)}</li>
+      <li>{t('contact.collab2', lang)}</li>
+      <li>{t('contact.collab3', lang)}</li>
+    </ul>
+    <p>{t('contact.collabCta', lang)}</p>
+
+    <h2>{t('contact.h2Decline', lang)}</h2>
+    <ul>
+      <li>{t('contact.decline1', lang)}</li>
+      <li>{t('contact.decline2', lang)}</li>
+      <li>{t('contact.decline3', lang)}</li>
+    </ul>
+  </article>
+</Layout>
+
+<style>
+  .content {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .content h2 {
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+
+  .content ul {
+    padding-left: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .content p, .content li {
+    color: var(--text-secondary);
+  }
+
+  .contact-link {
+    font-size: 1.125rem;
+  }
+</style>

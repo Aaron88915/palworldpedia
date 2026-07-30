@@ -11,6 +11,7 @@ import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import AdSlot from '@components/AdSlot.astro';
 import { SITE } from '@/config';
+import { getLangFromUrl, hreflangsFor } from '@i18n/utils';
 import faviconUrl from '/favicon.svg?url';
 import '../styles/global.css';
 
@@ -28,20 +29,26 @@ const {
   title,
   description = SITE.description,
   image = SITE.defaultImage,
-  lang = 'zh',
+  lang,
   canonical,
   schema,
   showTopAd = true,
 } = Astro.props;
 
+// 推断 lang：如果 prop 没传，从 URL 推断
+const finalLang: 'zh' | 'en' = lang || getLangFromUrl(Astro.url);
+const ogLocale = finalLang === 'zh' ? 'zh_CN' : 'en_US';
+const htmlLang = finalLang === 'zh' ? 'zh-CN' : 'en';
+
 const fullTitle = title ? `${title} | ${SITE.name}` : SITE.name;
 const canonicalUrl = canonical || new URL(Astro.url.pathname, Astro.site).href;
 const ogImageUrl = new URL(image, Astro.site).href;
 const rssUrl = new URL('rss.xml', Astro.site).href;
+const hreflangs = hreflangsFor(Astro.url.pathname);
 ---
 
 <!doctype html>
-<html lang={lang === 'zh' ? 'zh-CN' : 'en'}>
+<html lang={htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -61,10 +68,11 @@ const rssUrl = new URL('rss.xml', Astro.site).href;
       />
     )}
 
-    {/* hreflang - 英文版就绪后启用 */}
-    {/* {hreflangs.map(({ lang: hl, url }) => (
-      <link rel="alternate" hreflang={hl} href={url} />
-    ))} */}
+    {/* hreflang - 中英双语 */}
+    {hreflangs.map(({ lang: hl, href }) => (
+      <link rel="alternate" hreflang={hl} href={href.startsWith('http') ? href : new URL(href, Astro.site).href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL(Astro.url.pathname.replace(/^\/en(\/|$)/, '/') || '/', Astro.site).href} />
 
     {/* Open Graph */}
     <meta property="og:type" content="website" />
@@ -73,7 +81,7 @@ const rssUrl = new URL('rss.xml', Astro.site).href;
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content={SITE.name} />
-    <meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : 'en_US'} />
+    <meta property="og:locale" content={ogLocale} />
 
     {/* Twitter */}
     <meta name="twitter:card" content="summary_large_image" />
@@ -95,10 +103,56 @@ const rssUrl = new URL('rss.xml', Astro.site).href;
 
     {/* RSS */}
     <link rel="alternate" type="application/rss+xml" title={SITE.name} href={rssUrl} />
+
+    {/* === 浏览器语言自动检测 + 用户偏好持久化 ===
+        1) 读 localStorage.pal_lang（用户在 Header 切换过）
+        2) 没存过 → 用 navigator.language 判断
+        3) 当前路径不匹配 → 跳转到正确语言版本
+        注：每次页面加载都跑（不是 sessionStorage 标记），
+           因为同会话内切换语言需要重新生效；
+           不会死循环——重定向到正确页后 currentLang === target 即返回。
+    */}
+    <script is:inline>
+      (function () {
+        try {
+          var path = window.location.pathname;
+          var isEnPath = path === '/en' || path.indexOf('/en/') === 0;
+          var currentLang = isEnPath ? 'en' : 'zh';
+
+          // 1) 用户偏好
+          var saved = null;
+          try { saved = localStorage.getItem('pal_lang'); } catch (e) {}
+          if (saved !== 'zh' && saved !== 'en') saved = null;
+
+          // 2) 浏览器语言
+          var target = saved;
+          if (!target) {
+            var navLang = (navigator.language || (navigator.languages && navigator.languages[0]) || 'en').toLowerCase();
+            target = navLang.indexOf('zh') === 0 ? 'zh' : 'en';
+          }
+
+          if (currentLang === target) return;
+
+          // 3) 计算目标路径
+          var newPath;
+          if (target === 'en') {
+            newPath = '/en' + (path === '/' ? '/' : path);
+          } else {
+            newPath = path.replace(/^\/en(\/|$)/, '/');
+            if (!newPath) newPath = '/';
+          }
+
+          // 4) 跳转（用 replace 不留 history）
+          window.location.replace(newPath + window.location.search + window.location.hash);
+        } catch (err) {
+          // 静默失败，不影响正常访问
+        }
+      })();
+    </script>
   </head>
 
   <body>
-    <Header lang={lang} />
+    <Header lang={finalLang} />
 
     {showTopAd && <AdSlot position="top" />}
 
@@ -110,7 +164,7 @@ const rssUrl = new URL('rss.xml', Astro.site).href;
 
     <AdSlot position="bottom" />
 
-    <Footer lang={lang} />
+    <Footer lang={finalLang} />
 
     {/* AdSense 接入位 - 申请通过后开启 */}
     {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXX" crossorigin="anonymous"></script> */}
