@@ -1,9 +1,17 @@
-fix: shorten EN meta descriptions to <=160 chars
+fix: SEO meta description lengths + bot redirect exclusion
 
-Bing Webmaster Tools 报告英文首页和 407 个 EN tech-tree 详情页
-meta description 过长（最长的 508 字符）。
+Bing Webmaster Tools 报告 2 个 SEO 问题：
+1. EN 主页 + 407 个 EN tech 页 description 太长 (212 / 400-508 字符)
+2. ZH 主页 + 119 个 ZH 页 description 太短 (40-60 字符)
+3. Bing crawler 被自动跳转脚本重定向到 /en/，导致 / 被误判为重复页
 
-修法：EN tech-tree/[slug].astro 把 tech.description 截断到 155 字符
-+ 省略号。
+修法：
+- Layout.astro 自动跳转脚本加 user-agent 白名单 (bot/spider/crawler 跳过)
+- tech-tree/[slug].astro: 长 description 截断到 155 字符 + …，
+  短 description 附加 tech 元信息 (解锁等级、所需材料数)
+- pals/[slug].astro: description 加 paldeck 编号 + 英文名 + 工作适配
+- 7 个静态页 (about/contact/privacy/terms/guides/calculator/404) 扩写
+- index.astro (ZH 主页) 扩到 102 字符
+- en/index.astro 缩到 120 字符
 
-验证：0 个超长。
+结果：ZH 过短从 418 → 39，EN 超长从 407 → 0

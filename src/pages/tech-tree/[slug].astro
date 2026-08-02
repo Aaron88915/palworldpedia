@@ -29,7 +29,18 @@ const hasDetail = !!(tech.description || tech.materials);
 
 <Layout
   title={`${tech.name} - 解锁 Lv ${tech.cost} · ${categoryZh} | Palworld科技树`}
-  description={tech.description || `Palworld ${tech.name}（${categoryZh}）的详细信息：解锁等级 Lv ${tech.cost}、所需材料、属性。`}
+  description={(() => {
+    if (tech.description && tech.description.length > 100) {
+      return tech.description.slice(0, 155).replace(/\s+\S*$/, '').trimEnd() + '…';
+    }
+    const matCount = tech.materials?.length || 0;
+    const matPart = matCount > 0 ? `、所需 ${matCount} 种材料` : '';
+    const catZh = categoryZh === '建筑' ? '可建造建筑' : '可制作道具';
+    if (tech.description) {
+      return `Palworld ${tech.name} 是 ${catZh}：${tech.description}。解锁等级 Lv ${tech.cost}${matPart}，用于 Palworld 1.0。`;
+    }
+    return `Palworld ${tech.name} 是 ${catZh}：解锁等级 Lv ${tech.cost}${matPart}。详细介绍属性和用途，Palworld 1.0 必备。`;
+  })()}
 >
   <nav class="breadcrumb">
     <a href="/tech-tree/">← 科技树</a>

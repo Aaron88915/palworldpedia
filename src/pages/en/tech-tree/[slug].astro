@@ -32,7 +32,18 @@ const hasDetail = !!(tech.description || tech.materials);
 <Layout
   lang={lang}
   title={`${tech.name} - Unlock Lv ${tech.cost} · ${categoryLabel} | Palworld Tech Tree`}
-  description={(tech.description ? tech.description.slice(0, 155).replace(/\s+\S*$/, '').trimEnd() + '…' : `Palworld ${tech.name} (${categoryLabel}) details: unlock level Lv ${tech.cost}, required materials, stats.`)}
+  description={(() => {
+    if (tech.description && tech.description.length > 100) {
+      return tech.description.slice(0, 155).replace(/\s+\S*$/, '').trimEnd() + '…';
+    }
+    const matCount = tech.materials?.length || 0;
+    const matPart = matCount > 0 ? `, requires ${matCount} materials` : '';
+    const catEn = categoryLabel === 'Structures' ? 'buildable structure' : 'craftable item';
+    if (tech.description) {
+      return `Palworld ${tech.name} is a ${catEn}: ${tech.description} Unlocks at Lv ${tech.cost}${matPart}, used in Palworld 1.0.`;
+    }
+    return `Palworld ${tech.name} is a ${catEn}: unlocks at Lv ${tech.cost}${matPart}. Full details on stats and usage for Palworld 1.0.`;
+  })()}
 >
   <nav class="breadcrumb">
     <a href="/en/tech-tree/">{t('tech.backToTree', lang)}</a>

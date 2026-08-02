@@ -118,6 +118,13 @@ const hreflangs = hreflangsFor(Astro.url.pathname);
     <script is:inline>
       (function () {
         try {
+          // 0) 跳过爬虫/机器人 — 否则 Bingbot (英文环境) 会被重定向到 /en/，
+          //    然后把 / 误判为 /en/ 的重复页，SEO 受损
+          var ua = (navigator.userAgent || '').toLowerCase();
+          if (/bot|spider|crawl|bingbot|googlebot|baiduspider|yandex|duckduck|slurp|facebookexternalhit|twitterbot|linkedinbot|embedly|quora|whatsapp|telegrambot|applebot|petalbot|sogou|360spider|bytespider/.test(ua)) {
+            return;
+          }
+
           var path = window.location.pathname;
           var isEnPath = path === '/en' || path.indexOf('/en/') === 0;
           var currentLang = isEnPath ? 'en' : 'zh';
