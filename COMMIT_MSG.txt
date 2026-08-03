@@ -1,19 +1,15 @@
-feat: add 5 long-form SEO guides (beginner/breeding/tech/boss/base)
+feat: add 5 English SEO guides (beginner/breeding/tech/boss/base)
 
-Each ~1500-2000 Chinese chars with:
-- Target keyword in title, h1, h2
-- 48+ internal links to /pals/, /tech-tree/, /breeding/, /calculator/power/
-- 5-7 H2 subheadings per article
-- Meta description 50-120 chars
-- AdSlot inline x2
-- Related-links section at bottom
+Mirror of the ZH guides for international traffic (AdSense global).
+Internal links use /en/... prefix to keep users in EN locale.
 
 5 articles:
-1. /guides/beginner-guide/ - 0-10级全流程
-2. /guides/breeding-guide/ - 287x287 配方图鉴
-3. /guides/tech-tree-guide/ - 587 科技优先级
-4. /guides/boss-guide/ - 5 塔主 + 野外 + DLC
-5. /guides/base-building-guide/ - 电力+产线+多基地
+1. /en/guides/beginner-guide/ - Level 1-10 walkthrough
+2. /en/guides/breeding-guide/ - 287x287 breeding matrix
+3. /en/guides/tech-tree-guide/ - 587 tech priority
+4. /en/guides/boss-guide/ - 5 towers + DLC bosses
+5. /en/guides/base-building-guide/ - power + layout + production
 
-Updated /guides/ index with grid layout + tools list.
-Build: 1777 pages (+5).
+Updated /en/guides/ index with grid layout + tools list.
+EN descs trimmed to <=160 chars (Bing recommendation).
+Build: 1782 pages (+5).

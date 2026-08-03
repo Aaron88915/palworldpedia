@@ -1,0 +1,132 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
+---
+
+<Layout
+  lang="en"
+  title="Palworld Beginner's Guide - Level 1-10 Full Walkthrough"
+  description="Palworld beginner guide. From picking your first Pal, building your first base, to your first boss fight. Complete walkthrough for new players in 1 hour."
+>
+  <article class="guide-content">
+    <header class="page-header">
+      <p class="breadcrumb"><a href="/en/guides/">Guides</a> › Beginner Guide</p>
+      <h1>🎮 Palworld Beginner's Guide: 0 to First Boss in 3 Hours</h1>
+      <p class="text-secondary">Updated 2026 · Covers Palworld 1.0 / Sakurajima DLC / Feybreak DLC</p>
+    </header>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>First 5 Minutes: Pick a Starter + Catch Your First Pal</h2>
+      <p>
+        When you spawn, you will see 3 level-1 Pals: <a href="/en/pals/lifmunk">Lifmunk</a>,
+        <a href="/en/pals/foxparks">Foxparks</a>, and <a href="/en/pals/cattiva">Cattiva</a>.
+        Any of them is a good pick, but we recommend <strong>Foxparks</strong> because it can
+        light campfires and Kindling is the most-needed work type in early game.
+      </p>
+      <p>
+        Catching is simple: throw a <strong>Pal Sphere</strong> at any wild Pal. Low-rarity Pals
+        (1-3) are caught in 1-2 throws. You can craft your first Sphere from 2 wood at the
+        Primitive Workbench as soon as you unlock it.
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>First Hour: Build a Base + Unlock Core Tech</h2>
+      <p>
+        As soon as you reach level 3 and unlock the <a href="/en/tech-tree/palbox">Palbox</a>,
+        drop a base near the spawn point. Proximity matters: you will run back to drop items,
+        repair gear, and rest. Build these three structures first:
+      </p>
+      <ul>
+        <li><a href="/en/tech-tree/workbench">Primitive Workbench</a> (Lv 1) - craft tools and Spheres</li>
+        <li><a href="/en/tech-tree/product_cooking_grade_01">Campfire</a> (Lv 1) - cook food, restore HP</li>
+        <li><a href="/en/tech-tree/infra_itemchest_grade_01">Wooden Chest</a> (Lv 1) - store materials</li>
+      </ul>
+      <p>
+        Place your base near a <strong>resource cluster</strong>: wood trees (orange), stone deposits (grey),
+        berry bushes (red). Assign <a href="/en/pals/lifmunk">Lifmunk</a> to Lumbering,
+        <a href="/en/pals/cattiva">Cattiva</a> to Transporting. These two Pals carry your early game.
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>Second Hour: First Breeding Combos</h2>
+      <p>
+        The breeding system unlocks at level 5 with the <a href="/en/tech-tree/monsterfarm">Ranch</a>.
+        These two combos give you the best value in the first hour:
+      </p>
+      <ul>
+        <li><strong>Cattiva + Lifmunk</strong> = <a href="/en/pals/mozzarina">Mozzarina</a> - milk production, essential for cooking</li>
+        <li><strong>Pengullet + Foxparks</strong> = early water-type Pal, useful for fishing</li>
+      </ul>
+      <p>
+        For more complex combos use our <a href="/en/breeding/">Breeding Calculator</a> with
+        4 query modes (forward, reverse, shortest path, path finder) covering all 40,972 breeding edges.
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>Third Hour: Your First Boss</h2>
+      <p>
+        The first Tower Boss spawns after you reach level 5. The first boss is
+        <a href="/en/pals/chillet">Chillet</a>, a fire-grass hybrid. Tactics:
+      </p>
+      <ol>
+        <li>Bring 3 Pals at level 20+ with fire or grass typing (Foxparks evolution works well)</li>
+        <li>Heal to full before entering the tower, bring 20 Mega Spheres</li>
+        <li>Boss summons 2 small adds - clear them first, then focus the boss</li>
+      </ol>
+      <p>
+        Victory unlocks <a href="/en/tech-tree/cloth">Cloth</a> recipes and the next tier of tech.
+        From here you can start crafting metal-tier gear.
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>5 Common Beginner Mistakes</h2>
+      <ol>
+        <li><strong>Don't catch too many Pals at once</strong> - the first 10 are enough, the Palbox fills fast</li>
+        <li><strong>Don't build a second base before level 15</strong> - concentrate resources in one spot</li>
+        <li><strong>Build torches around your base</strong> - night raids will wipe you, <a href="/en/tech-tree/torch">Torch</a> stops them</li>
+        <li><strong>Don't skip food</strong> - hungry Pals get sick, <a href="/en/pals/mozzarina">Mozzarina</a> is mandatory</li>
+        <li><strong>Prioritize Palbox upgrades</strong> - storage is the bottleneck, not attack power</li>
+      </ol>
+    </section>
+
+    <section class="related-links">
+      <h2>Related Guides</h2>
+      <ul>
+        <li><a href="/en/guides/breeding-guide/">🧬 Complete Breeding Guide</a></li>
+        <li><a href="/en/guides/boss-guide/">⚔️ All Boss Strategies</a></li>
+        <li><a href="/en/guides/base-building-guide/">🏠 Base Building Guide</a></li>
+        <li><a href="/en/guides/tech-tree-guide/">🔬 Tech Tree Priority</a></li>
+      </ul>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .guide-content { max-width: 820px; margin: 0 auto; line-height: 1.8; }
+  .page-header { margin-bottom: 2rem; }
+  .breadcrumb { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem; }
+  .breadcrumb a { color: var(--accent); text-decoration: none; }
+  h1 { font-size: 2rem; margin: 0.5rem 0; line-height: 1.3; }
+  h2 { font-size: 1.5rem; margin: 2.5rem 0 1rem; color: var(--accent); border-left: 4px solid var(--accent); padding-left: 0.8rem; }
+  p { margin: 0.8rem 0; }
+  ul, ol { margin: 0.8rem 0; padding-left: 1.5rem; }
+  li { margin: 0.5rem 0; }
+  a { color: var(--accent); text-decoration: underline; }
+  .related-links { margin-top: 3rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: var(--radius-lg); }
+  .related-links ul { list-style: none; padding: 0; }
+  .related-links li { padding: 0.3rem 0; }
+</style>

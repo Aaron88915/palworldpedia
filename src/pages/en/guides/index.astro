@@ -3,42 +3,108 @@ import Layout from '@layouts/Layout.astro';
 import AdSlot from '@components/AdSlot.astro';
 import { t } from '@i18n/utils';
 const lang = 'en';
+
+const guides = [
+  {
+    slug: 'beginner-guide',
+    icon: '🎮',
+    title: "Beginner's Guide",
+    desc: 'Level 1-10 walkthrough: pick a starter, build a base, breed, first boss fight',
+    keywords: 'Palworld beginner guide walkthrough tutorial',
+  },
+  {
+    slug: 'breeding-guide',
+    icon: '🧬',
+    title: 'Breeding Combos Guide',
+    desc: 'Full 287×287 breeding matrix + exclusive recipes + shortest path algorithm',
+    keywords: 'Palworld breeding combos calculator recipes',
+  },
+  {
+    slug: 'tech-tree-guide',
+    icon: '🔬',
+    title: 'Tech Tree Priority',
+    desc: '587 techs grouped must-get / recommended / skip. First 50 levels optimal route',
+    keywords: 'Palworld tech tree priority unlock',
+  },
+  {
+    slug: 'boss-guide',
+    icon: '⚔️',
+    title: 'All Boss Strategies',
+    desc: 'All 5 Tower Bosses + Field Bosses + Sakurajima + Feybreak strategies',
+    keywords: 'Palworld boss strategy tower fight',
+  },
+  {
+    slug: 'base-building-guide',
+    icon: '🏠',
+    title: 'Base Building Guide',
+    desc: 'Power calculation, 3-zone layout, production lines, multi-base strategy',
+    keywords: 'Palworld base building power production',
+  },
+];
 ---
 
 <Layout
   lang={lang}
   title={`${t('guides.title', lang)} - Palworld Guide Hub`}
-  description="Palworld English guides hub. Beginner tips, boss strategies, base building, and how to get rare Pals."
+  description="Palworld English guides hub - beginner walkthrough, breeding combos, tech tree priority, boss strategies, base building. 5 long-form guides for Palworld players."
 >
   <header class="page-header">
     <h1>{t('guides.title', lang)}</h1>
-    <p class="text-secondary">{t('guides.subtitle', lang)}</p>
+    <p class="text-secondary">Beginner · Breeding · Tech Tree · Bosses · Base Building</p>
   </header>
 
   <AdSlot position="inline" />
 
-  <div class="coming-soon">
-    <div class="coming-soon-icon">📝</div>
-    <h2>{t('guides.comingTitle', lang)}</h2>
-    <p class="text-secondary mt-1">{t('guides.comingDesc', lang)}</p>
+  <div class="guides-grid">
+    {guides.map(g => (
+      <a href={`/en/guides/${g.slug}/`} class="guide-card">
+        <div class="guide-icon">{g.icon}</div>
+        <h2>{g.title}</h2>
+        <p class="guide-desc">{g.desc}</p>
+        <span class="guide-keywords">Keywords: {g.keywords}</span>
+      </a>
+    ))}
   </div>
+
+  <AdSlot position="inline" />
+
+  <section class="tools-section">
+    <h2>🔧 Companion Tools</h2>
+    <ul class="tools-list">
+      <li><a href="/en/pals/">Paldex</a> - detailed stats, habitats, and uses for all 288 Pals</li>
+      <li><a href="/en/breeding/">Breeding Calculator</a> - 4 query modes, 40,972 breeding edges</li>
+      <li><a href="/en/tech-tree/">Tech Tree</a> - all 587 techs with descriptions and materials</li>
+      <li><a href="/en/calculator/power/">Power Calculator</a> - select buildings, get power demand</li>
+    </ul>
+  </section>
 </Layout>
 
 <style>
-  .page-header {
-    margin-bottom: 1.5rem;
+  .page-header { margin-bottom: 1.5rem; }
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
   }
-
-  .coming-soon {
+  .guide-card {
+    display: block;
     background: var(--bg-secondary);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 3rem 1.5rem;
-    text-align: center;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, border-color 0.2s;
   }
-
-  .coming-soon-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
+  .guide-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .guide-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+  .guide-card h2 { font-size: 1.2rem; margin: 0.3rem 0; color: var(--text-primary); }
+  .guide-desc { color: var(--text-secondary); font-size: 0.95rem; margin: 0.5rem 0; }
+  .guide-keywords { display: block; font-size: 0.8rem; color: var(--text-tertiary, #888); margin-top: 0.5rem; }
+  .tools-section { margin-top: 2rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: var(--radius-lg); }
+  .tools-section h2 { margin: 0 0 0.8rem; }
+  .tools-list { list-style: none; padding: 0; }
+  .tools-list li { padding: 0.4rem 0; }
+  .tools-list a { color: var(--accent); text-decoration: underline; }
 </style>

@@ -1,0 +1,161 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
+---
+
+<Layout
+  lang="en"
+  title="Palworld Base Building - Power + Layout + Production"
+  description="Palworld base building complete guide. Power calculation, Pal work assignment, production line design. One guide from base placement to max efficiency."
+>
+  <article class="guide-content">
+    <header class="page-header">
+      <p class="breadcrumb"><a href="/en/guides/">Guides</a> › Base Building</p>
+      <h1>🏠 Palworld Base Building: Power + Production + Defense</h1>
+      <p class="text-secondary">Main Base + Sakurajima Base + Feybreak Base Setup</p>
+    </header>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>Base Mechanics: Power + Pals + Production Lines</h2>
+      <p>
+        Palworld base gameplay has three pillars: <strong>Power</strong>, <strong>Pal assignment</strong>, and
+        <strong>production line planning</strong>. Weakness in any one halves your efficiency.
+      </p>
+      <p>
+        Power determines whether you can run advanced structures (like the <a href="/en/tech-tree/electric_assembly_line">Electric Assembly Line</a>).
+        Pal assignment determines whether you can max out production (each work type needs Pals with the right <a href="/en/pals/">Work Suitability</a>).
+        Production line planning determines whether input and output close the loop (raw → processed → finished).
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>Power Calculation: Figure It Out in 1 Minute</h2>
+      <p>
+        Power is the most common beginner trap. A base needs <strong>Power generation (+)</strong> ≥
+        <strong>Power consumption (-)</strong> for structures to operate. There are 4 power sources:
+      </p>
+      <ul>
+        <li><strong>Electrical Generator</strong> (Lv 18): 20 power, needs fuel</li>
+        <li><strong>Advanced Generator</strong> (Lv 30): 40 power</li>
+        <li><strong>Large Solar Panel</strong> (Lv 40): 150 power, daytime only</li>
+        <li><strong>Nuclear Reactor</strong> (Lv 50): 1000 power, needs Uranium</li>
+      </ul>
+      <p>
+        Want to know exactly how much power you need? Use our <a href="/en/calculator/power/">Power Calculator</a>.
+        Select your building list, get total power demand and a recommended power setup.
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>Core Base Layout: 3-Zone Separation</h2>
+      <p>Split your base into 3 independent zones:</p>
+
+      <h3>1. Industrial Production Zone</h3>
+      <p>
+        Group the <a href="/en/tech-tree/electric_assembly_line">Electric Assembly Line</a>,
+        <a href="/en/tech-tree/product_workbench_skillunlock">Pal Gear Workbench</a>, and
+        <a href="/en/tech-tree/refiningforge">Refining Forge</a> together.
+        This zone needs <strong>full power + 3 Industrial Pals</strong> (we recommend <a href="/en/pals/caprity">Caprity</a>
+        line at Industrial 3).
+      </p>
+
+      <h3>2. Agriculture Zone</h3>
+      <p>
+        <a href="/en/tech-tree/product_farm_berries">Berry Plantation</a> +
+        <a href="/en/tech-tree/monsterfarm">Ranch</a> +
+        Planting area. This zone needs <strong>Planting / Watering / Gathering Pals</strong>
+        (recommend <a href="/en/pals/petallia">Petallia</a> + <a href="/en/pals/lifmunk">Lifmunk</a>).
+      </p>
+
+      <h3>3. Housing and Defense Zone</h3>
+      <p>
+        <a href="/en/tech-tree/infra_playerbed_grade_01">Player Bed</a> +
+        <a href="/en/tech-tree/infra_palbed_grade_01">Pal Bed</a> +
+        <a href="/en/tech-tree/torch">Torch</a> / <a href="/en/tech-tree/electric_fence">Electric Fence</a>.
+        This zone uses <strong>Handiwork Pals</strong> (transporting types like <a href="/en/pals/cattiva">Cattiva</a>).
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>Pal Assignment: 1 Pal per Work Type Is Enough</h2>
+      <p>A common beginner mistake: assigning 1 Pal to 3 work types, which makes every task slow.</p>
+      <p>
+        The right way: <strong>1 dedicated Pal per work type</strong>. <a href="/en/pals/lifmunk">Lifmunk</a> only chops wood,
+        <a href="/en/pals/cattiva">Cattiva</a> only transports, <a href="/en/pals/foxparks">Foxparks</a> only lights fires.
+        Switching a Pal between work types resets its efficiency - not worth it.
+      </p>
+      <p>
+        Want to know which Pal suits which work type? Check the <strong>Work Suitability</strong> field on every
+        <a href="/en/pals/">Paldex</a> page.
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>Production Lines: Raw to Processed to Finished</h2>
+      <p>The classic 3-stage production line:</p>
+      <ol>
+        <li><strong>Raw gathering</strong>: Berry bushes → Berry Plantation (auto)</li>
+        <li><strong>Processing</strong>: Berry → Berry Jam (Cooking Pot) → food</li>
+        <li><strong>Output</strong>: food → feeds Pals → Pals have high SAN → max work efficiency</li>
+      </ol>
+      <p>
+        Recommended priority production lines: <strong>Wood → Lumber → Building materials</strong> (essential for building),
+        <strong>Iron Ore → Ingot → Weapons</strong> (essential for combat),
+        <strong>Berry → Food</strong> (keeps Pal SAN high).
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>Multi-Base Strategy: 3 Locations for Full Coverage</h2>
+      <p>Main base + Sakurajima base + Feybreak base - each with its own role:</p>
+      <ul>
+        <li><strong>Main Base</strong> (starter island center): production + storage, <a href="/en/pals/caprity">Caprity</a> line concentrated here</li>
+        <li><strong>Sakurajima Base</strong>: mining + metal ingot, focused on <a href="/en/pals/astral-mountain-boss">Sakurajima bosses</a></li>
+        <li><strong>Feybreak Base</strong>: advanced materials, prep for <a href="/en/pals/xenolord">Xenolord</a></li>
+      </ul>
+      <p>
+        Bases are connected by <a href="/en/tech-tree/globalpalstorage">Global Palbox</a> fast travel.
+        Items and Pals teleport between bases instantly.
+      </p>
+    </section>
+
+    <section class="related-links">
+      <h2>Use Right Now</h2>
+      <ul>
+        <li><a href="/en/calculator/power/">⚡ Power Calculator</a></li>
+        <li><a href="/en/tech-tree/">🔬 Tech Tree (structure techs)</a></li>
+        <li><a href="/en/pals/">📖 Paldex (check Work Suitability)</a></li>
+        <li><a href="/en/guides/beginner-guide/">🎮 Beginner Guide</a></li>
+      </ul>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .guide-content { max-width: 820px; margin: 0 auto; line-height: 1.8; }
+  .page-header { margin-bottom: 2rem; }
+  .breadcrumb { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem; }
+  .breadcrumb a { color: var(--accent); text-decoration: none; }
+  h1 { font-size: 2rem; margin: 0.5rem 0; line-height: 1.3; }
+  h2 { font-size: 1.5rem; margin: 2.5rem 0 1rem; color: var(--accent); border-left: 4px solid var(--accent); padding-left: 0.8rem; }
+  h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; color: var(--text-primary); }
+  p { margin: 0.8rem 0; }
+  ul, ol { margin: 0.8rem 0; padding-left: 1.5rem; }
+  li { margin: 0.5rem 0; }
+  a { color: var(--accent); text-decoration: underline; }
+  .related-links { margin-top: 3rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: var(--radius-lg); }
+  .related-links ul { list-style: none; padding: 0; }
+  .related-links li { padding: 0.3rem 0; }
+</style>
