@@ -1,18 +1,29 @@
-fix: repair 'None' prefix bug in 22 guide page hrefs
+fix: correct tech-tree URLs to use CamelCase slug field
 
-v1 fix script bug: regex group (start) returned Python None
-when the (en) optional group did not match, which got stringified
-to 'None' prefix in the href.
+Astro page uses tech.slug (CamelCase like 'MonsterFarm', 'Battle_Cloth')
+not tech.id (lowercase like 'monsterfarm', 'battle_cloth').
 
-Example broken output: <a href="Noneproduct_factory_hard_grade_02/">
-Should be: <a href="/tech-tree/product_factory_hard_grade_02/">
+Earlier fix used the wrong field, so all guide links to /tech-tree/X/
+were lowercase and 404'd on the live site (GitHub Pages is case-sensitive).
 
-Fixed 22 broken hrefs across 5 ZH guide files:
-- beginner-guide (4)
-- breeding-guide (3)
-- tech-tree-guide (6)
-- boss-guide (5)
-- base-building-guide (4)
+Fixed 31 lowercase tech hrefs across 5 ZH + 5 EN guides:
+- /tech-tree/monsterfarm/ -> /tech-tree/MonsterFarm/
+- /tech-tree/battle_cloth/ -> /tech-tree/Battle_Cloth/
+- /tech-tree/palbox/ -> /tech-tree/PALBOX/
+- /tech-tree/product_factory_hard_grade_01/ -> /tech-tree/Product_Factory_Hard_Grade_01/
+- /tech-tree/product_factory_hard_grade_02/ -> /tech-tree/Product_Factory_Hard_Grade_02/
+- /tech-tree/product_weaponfactory_dirty_grade_01/ -> /tech-tree/Product_WeaponFactory_Dirty_Grade_01/
+- /tech-tree/special_palsphere_grade_01/ -> /tech-tree/Special_PalSphere_Grade_01/
+- /tech-tree/special_spherefactory_black_grade_02/ -> /tech-tree/Special_SphereFactory_Black_Grade_02/
+- /tech-tree/battle_rangeweapon_assaultrifle/ -> /tech-tree/Battle_RangeWeapon_AssaultRifle/
+- /tech-tree/battle_rangeweapon_rocketlauncher/ -> /tech-tree/Battle_RangeWeapon_RocketLauncher/
+- /tech-tree/battle_armor_grade_01_cloth_cold/ -> /tech-tree/Battle_Armor_Grade_01_Cloth_Cold/
+- /tech-tree/battle_armor_grade_04_steal_cold/ -> /tech-tree/Battle_Armor_Grade_04_Steal_Cold/
+- /tech-tree/product_ingot_grade_03_steal/ -> /tech-tree/Product_Ingot_Grade_03_Steal/
+- /tech-tree/product_farm_berries/ -> /tech-tree/Product_Farm_Berries/
 
-New tool: scripts/fix-none-prefix.py to detect+fix this pattern.
-Verify: dist/ scan-all-404.py returns 0 broken links.
+Tools added:
+- scripts/show-slug-vs-id.py
+- scripts/fix-slug-case.py
+
+Build: 1784 pages, scan-all-404 reports 0 broken links locally.
