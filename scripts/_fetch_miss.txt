@@ -1,0 +1,14 @@
+﻿pengullet-lux             ERR HTTP Error 404: Not Found
+kingpaca-cryst            ERR HTTP Error 404: Not Found
+mau-cryst                 ERR HTTP Error 404: Not Found
+foxparks-cryst            ERR HTTP Error 404: Not Found
+fenglope-lux              ERR HTTP Error 404: Not Found
+finsider-ignis            ERR HTTP Error 404: Not Found
+beakon-cryst              ERR HTTP Error 404: Not Found
+needoll-noct              ERR HTTP Error 404: Not Found
+pierdon-cryst             ERR HTTP Error 404: Not Found
+whalaska-ignis            ERR HTTP Error 404: Not Found
+solmora-lux               ERR HTTP Error 404: Not Found
+eidrolon-ignis            ERR HTTP Error 404: Not Found
+bellanoir-libero          ERR HTTP Error 404: Not Found
+frostallion-noct          ERR HTTP Error 404: Not Found

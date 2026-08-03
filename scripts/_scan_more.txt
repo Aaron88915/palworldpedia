@@ -1,0 +1,134 @@
+﻿Cached files (36):
+  Aegidron.html
+  Bastigor.html
+  Bellanoir.html
+  Dandilord.html
+  Dupin.html
+  Eidrolon.html
+  Fenglope.html
+  Finsider.html
+  Flopie.html
+  Frostallion.html
+  Grizzbolt.html
+  Hartalis.html
+  Icelyn.html
+  Kingpaca.html
+  Loomen.html
+  Majex.html
+  Mycora.html
+  Necromus.html
+  Needoll.html
+  Ophydia.html
+  Orserk.html
+  Paladius.html
+  Pierdon.html
+  Renjishi.html
+  Roujay.html
+  Selyne.html
+  Shaolong.html
+  Silvance.html
+  Solenne.html
+  Solmora.html
+
+Frostallion               8 hrefs
+   /en/Palpagos_Islands
+   /en/The_World_Tree
+   Palpagos_Islands?pal=IceHorse&t=dayTimeLocations
+   Palpagos_Islands?pal=IceHorse&t=nightTimeLocations
+   The_World_Tree?pal=IceHorse&t=dayTimeLocations
+   The_World_Tree?pal=IceHorse&t=nightTimeLocations
+   Palpagos_Islands?spawner=81_3_snow_FBOSS_1
+   Palpagos_Islands?pos=-357%2C509
+
+Paladius                  8 hrefs
+   /en/Palpagos_Islands
+   /en/The_World_Tree
+   Palpagos_Islands?pal=SaintCentaur&t=dayTimeLocations
+   Palpagos_Islands?pal=SaintCentaur&t=nightTimeLocations
+   The_World_Tree?pal=SaintCentaur&t=dayTimeLocations
+   The_World_Tree?pal=SaintCentaur&t=nightTimeLocations
+   Palpagos_Islands?spawner=81_2_dessert_FBOSS_2
+   Palpagos_Islands?pos=440%2C679
+
+Necromus                  8 hrefs
+   /en/Palpagos_Islands
+   /en/The_World_Tree
+   Palpagos_Islands?pal=BlackCentaur&t=dayTimeLocations
+   Palpagos_Islands?pal=BlackCentaur&t=nightTimeLocations
+   The_World_Tree?pal=BlackCentaur&t=dayTimeLocations
+   The_World_Tree?pal=BlackCentaur&t=nightTimeLocations
+   Palpagos_Islands?spawner=81_2_dessert_FBOSS_2
+   Palpagos_Islands?pos=440%2C679
+
+Bellanoir                 6 hrefs
+   /en/Palpagos_Islands
+   /en/The_World_Tree
+   Palpagos_Islands?pal=NightLady&t=dayTimeLocations
+   Palpagos_Islands?pal=NightLady&t=nightTimeLocations
+   The_World_Tree?pal=NightLady&t=dayTimeLocations
+   The_World_Tree?pal=NightLady&t=nightTimeLocations
+
+Jetragon                  NOT CACHED
+Grizzbolt                 13 hrefs
+   /en/Palpagos_Islands
+   /en/The_World_Tree
+   Palpagos_Islands?pal=ElecPanda&t=dayTimeLocations
+   Palpagos_Islands?pal=ElecPanda&t=nightTimeLocations
+   The_World_Tree?pal=ElecPanda&t=dayTimeLocations
+   The_World_Tree?pal=ElecPanda&t=nightTimeLocations
+   World_Tree_Holy_Water
+   Palpagos_Islands?spawner=sanctuary_1_forest_FBOSS
+
+Orserk                    11 hrefs
+   /en/Palpagos_Islands
+   /en/The_World_Tree
+   Palpagos_Islands?pal=ThunderDragonMan&t=dayTimeLocations
+   Palpagos_Islands?pal=ThunderDragonMan&t=nightTimeLocations
+   The_World_Tree?pal=ThunderDragonMan&t=dayTimeLocations
+   The_World_Tree?pal=ThunderDragonMan&t=nightTimeLocations
+   World_Tree_Holy_Water
+   The_World_Tree?spawner=worldtree_9_03_C
+
+Faleris                   NOT CACHED
+Kingpaca                  10 hrefs
+   /en/Palpagos_Islands
+   /en/The_World_Tree
+   Palpagos_Islands?pal=KingAlpaca&t=dayTimeLocations
+   Palpagos_Islands?pal=KingAlpaca&t=nightTimeLocations
+   The_World_Tree?pal=KingAlpaca&t=dayTimeLocations
+   The_World_Tree?pal=KingAlpaca&t=nightTimeLocations
+   Palpagos_Islands?spawner=81_1_grass_FBOSS_2
+   Palpagos_Islands?pos=50%2C-460
+
+Flopie                    21 hrefs
+   /en/Palpagos_Islands
+   /en/The_World_Tree
+   Palpagos_Islands?pal=FlowerRabbit&t=dayTimeLocations
+   Palpagos_Islands?pal=FlowerRabbit&t=nightTimeLocations
+   The_World_Tree?pal=FlowerRabbit&t=dayTimeLocations
+   The_World_Tree?pal=FlowerRabbit&t=nightTimeLocations
+   Grass_Skill_Fruit%3A_Wind_Cutter
+   Grass_Skill_Fruit%3A_Seed_Machine_Gun
+
+Icelyn                    12 hrefs
+   /en/Palpagos_Islands
+   /en/The_World_Tree
+   Palpagos_Islands?pal=IceWitch&t=dayTimeLocations
+   Palpagos_Islands?pal=IceWitch&t=nightTimeLocations
+   The_World_Tree?pal=IceWitch&t=dayTimeLocations
+   The_World_Tree?pal=IceWitch&t=nightTimeLocations
+   Astral_Mountains_Cavern
+   Astral_Mountains_Cavern
+
+Whalaska                  26 hrefs
+   /en/Palpagos_Islands
+   /en/The_World_Tree
+   Palpagos_Islands?pal=IceNarwhal&t=dayTimeLocations
+   Palpagos_Islands?pal=IceNarwhal&t=nightTimeLocations
+   The_World_Tree?pal=IceNarwhal&t=dayTimeLocations
+   The_World_Tree?pal=IceNarwhal&t=nightTimeLocations
+   Palpagos_Islands?zone=Spot_01
+   Astral_Mountains_Cavern
+
+Faleris_Aqua              NOT CACHED
+Nitemary_Botan            NOT CACHED

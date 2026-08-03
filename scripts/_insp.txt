@@ -1,0 +1,121 @@
+﻿--- pengullet-lux (89754 bytes) ---
+  data-pal-ids: ['Penguin_Electric', 'Penguin_Electric', 'Penguin', 'ElecCat', 'Penguin_Electric']
+  spawners: []
+  zones: []
+  recruiters: []
+  found Incident: 2
+  found Alpha: 3
+  near Tower: data-i18n="predator_name">Rampaging Tower Raid <a class="
+  near Rampaging: _box_sorttype_boss_flag">Alpha Pals Rampaging Tower <a class="drop
+  near Boss: al" class="size32 rounded-circle border border-danger"/>Had One Too Many Pengullet Lux Tribe Boss <img loading
+  near Alpha: data-i18n="category_type_a_pal">Pal Alpha Pals Rampaging <l
+
+--- flopie (84295 bytes) ---
+  data-pal-ids: ['FlowerRabbit', 'FlowerRabbit', 'FlowerRabbit', 'FlowerRabbit', 'FlowerRabbit']
+  spawners: ['spawner=yellow_D', 'spawner=yellow_D']
+  zones: []
+  recruiters: []
+  found Incident: 12
+  found Alpha: 4
+  near Tower: data-i18n="predator_name">Rampaging Tower Raid <a class="
+  near Rampaging: _box_sorttype_boss_flag">Alpha Pals Rampaging Tower <a class="drop
+  near Boss: al" class="size32 rounded-circle border border-danger"/>Star of the Flower Beds Flopie Tribe Boss <img loading="lazy" src
+  near Alpha: data-i18n="category_type_a_pal">Pal Alpha Pals Rampaging <l
+
+--- finsider (83576 bytes) ---
+  data-pal-ids: ['StuffedShark', 'StuffedShark', 'StuffedShark', 'StuffedShark', 'StuffedShark']
+  spawners: ['spawner=5_1_island_tropical', 'spawner=5_1_island_tropical', 'spawner=5_3_island_tropical', 'spawner=5_3_island_tropical']
+  zones: []
+  recruiters: []
+  found Incident: 2
+  found Alpha: 4
+  near Tower: data-i18n="predator_name">Rampaging Tower Raid <a class="
+  near Rampaging: _box_sorttype_boss_flag">Alpha Pals Rampaging Tower <a class="drop
+  near Boss: rmal" class="size32 rounded-circle border border-danger"/>Eyes from the Abyss Finsider Tribe Boss <img loading="lazy" s
+  near Alpha: data-i18n="category_type_a_pal">Pal Alpha Pals Rampaging <l
+
+--- finsider-ignis (89042 bytes) ---
+  data-pal-ids: ['StuffedShark_Fire', 'StuffedShark_Fire', 'StuffedShark', 'SharkKid_Fire', 'StuffedShark_Fire']
+  spawners: []
+  zones: []
+  recruiters: []
+  found Incident: 2
+  found Alpha: 3
+  near Tower: data-i18n="predator_name">Rampaging Tower Raid <a class="
+  near Rampaging: _box_sorttype_boss_flag">Alpha Pals Rampaging Tower <a class="drop
+  near Boss: lass="size32 rounded-circle border border-danger"/>Eyes from the Flames Finsider Ignis Tribe Boss <img loadi
+  near Alpha: data-i18n="category_type_a_pal">Pal Alpha Pals Rampaging <l
+
+--- xenovader (213544 bytes) ---
+  data-pal-ids: ['DarkAlien', 'DarkAlien', 'DarkAlien', 'DarkAlien', 'DarkAlien']
+  spawners: []
+  zones: []
+  recruiters: []
+  found Palpagos_Islands?pos=: 26
+  found Incident: 2
+  found Alpha: 6
+  near Tower: data-i18n="predator_name">Rampaging Tower Raid <a class="
+  near Rampaging: _box_sorttype_boss_flag">Alpha Pals Rampaging Tower <a class="drop
+  near Boss: ss="size32 rounded-circle border border-danger"/>Interloper from Outer Space Xenovader Tribe Boss <img loading="lazy" src
+  near Alpha: data-i18n="category_type_a_pal">Pal Alpha Pals Rampaging <l
+
+--- xenogard (153778 bytes) ---
+  data-pal-ids: ['WhiteAlienDragon', 'WhiteAlienDragon', 'WhiteAlienDragon', 'WhiteAlienDragon', 'WhiteAlienDragon']
+  spawners: []
+  zones: []
+  recruiters: []
+  found Incident: 2
+  found Alpha: 9
+  near Tower: data-i18n="predator_name">Rampaging Tower Raid <a class="
+  near Rampaging: _box_sorttype_boss_flag">Alpha Pals Rampaging Tower <a class="drop
+  near Boss: " class="size32 rounded-circle border border-danger"/>Planet-Devouring Dragon Xenogard Tribe Boss <img loading="laz
+  near Alpha: data-i18n="category_type_a_pal">Pal Alpha Pals Rampaging <l
+
+--- bellanoir (76920 bytes) ---
+  data-pal-ids: ['NightLady', 'NightLady', 'NightLady', 'NightLady_Dark', 'NightLady']
+  spawners: []
+  zones: []
+  recruiters: []
+  found Incident: 2
+  found Alpha: 3
+  near Tower: data-i18n="predator_name">Rampaging Tower Raid <a class="
+  near Rampaging: _box_sorttype_boss_flag">Alpha Pals Rampaging Tower <a class="drop
+  near Boss: normal" class="size32 rounded-circle border border-info"/>Eclipsed Siren Bellanoir Tribe RaidBoss <sp
+  near Alpha: data-i18n="category_type_a_pal">Pal Alpha Pals Rampaging <l
+
+--- bellanoir-libero (82371 bytes) ---
+  data-pal-ids: ['NightLady_Dark', 'NightLady_Dark', 'NightLady_Dark', 'NightLady_Dark', 'NightLady_Dark']
+  spawners: []
+  zones: []
+  recruiters: []
+  found Incident: 2
+  found Alpha: 3
+  near Tower: data-i18n="predator_name">Rampaging Tower Raid <a class="
+  near Rampaging: _box_sorttype_boss_flag">Alpha Pals Rampaging Tower <a class="drop
+  near Boss:  class="size32 rounded-circle border border-info"/>Twilight Siren Bellanoir Libero Tribe RaidBoss <a data-pal-id="RAID_NightLady_Dark_2" class="itemname" data-hover="/cache/en/Game_Pals_hover/1a146e1e
+  near Alpha: data-i18n="category_type_a_pal">Pal Alpha Pals Rampaging <l
+
+--- xenolord (83673 bytes) ---
+  data-pal-ids: ['DarkMechaDragon', 'DarkMechaDragon', 'DarkMechaDragon', 'DarkMechaDragon', 'DarkMechaDragon']
+  spawners: []
+  zones: []
+  recruiters: []
+  found Incident: 2
+  found Alpha: 3
+  near Tower: data-i18n="predator_name">Rampaging Tower Raid <a class="
+  near Rampaging: _box_sorttype_boss_flag">Alpha Pals Rampaging Tower <a class="drop
+  near Boss: ormal" class="size32 rounded-circle border border-danger"/>Invader from Space Xenolord Tribe Boss <img loading="lazy
+  near Alpha: data-i18n="category_type_a_pal">Pal Alpha Pals Rampaging <l
+
+--- hartalis (80677 bytes) ---
+  data-pal-ids: ['LegendDeer', 'LegendDeer', 'LegendDeer', 'LegendDeer', 'LegendDeer']
+  spawners: []
+  zones: []
+  recruiters: []
+  found Incident: 2
+  found Alpha: 3
+  near Tower: data-i18n="predator_name">Rampaging Tower Raid <a class="
+  near Rampaging: _box_sorttype_boss_flag">Alpha Pals Rampaging Tower <a class="drop
+  near Boss: normal" class="size32 rounded-circle border border-danger"/>King of Salvation Hartalis Tribe Boss <img loading="lazy" src
+  near Alpha: data-i18n="category_type_a_pal">Pal Alpha Pals Rampaging <l
+

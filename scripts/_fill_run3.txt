@@ -1,0 +1,76 @@
+﻿=== fill-biomes start ===
+Total pals:        288
+Already have biomes: 175
+Missing biomes:      113
+
+Classified: 5 special, 72 variant, 36 base
+
+--- 1. Hardcoded specials ---
+  HARDCODE green-slime               -> ['Windswept Island', 'Marsh Island', 'Eastern Wild Island']
+  HARDCODE gumoss-special            -> ['Dungeons']
+  HARDCODE neptilius                 -> ['Sea Breeze Archipelago', 'Palpagos Islands']
+  HARDCODE jetragon                  -> ['Mount Obsidian', 'Wildlife Sanctuary']
+  HARDCODE panthalus                 -> ['Sea Breeze Archipelago', 'Palpagos Islands']
+  hardcoded: 5
+
+--- 2. Variants: copy from base ---
+  variant_copied (English):   8
+  variant_translated (Chinese->English): 50
+  variants still needing fill: 14
+    pengullet-lux             -> base=pengullet base_biomes=['Windswept Hills']
+    kingpaca-cryst            -> base=kingpaca base_biomes=[]
+    mau-cryst                 -> base=mau base_biomes=['Windswept Hills']
+    foxparks-cryst            -> base=foxparks base_biomes=['Windswept Hills']
+    fenglope-lux              -> base=fenglope base_biomes=[]
+    finsider-ignis            -> base=finsider base_biomes=[]
+    beakon-cryst              -> base=beakon base_biomes=['Handgun Schematic 4']
+    needoll-noct              -> base=needoll base_biomes=[]
+    pierdon-cryst             -> base=pierdon base_biomes=[]
+    whalaska-ignis            -> base=whalaska base_biomes=[]
+    solmora-lux               -> base=solmora base_biomes=[]
+    eidrolon-ignis            -> base=eidrolon base_biomes=[]
+    bellanoir-libero          -> base=bellanoir base_biomes=[]
+    frostallion-noct          -> base=frostallion base_biomes=[]
+
+--- 3. paldb.cc fetch (50 targets) ---
+  fetched 50 pages in 6.4s
+  paldb_hits: 29
+  paldb_misses: 21
+
+--- 4. Still empty after paldb ---
+  empty count: 21
+    pengullet-lux paldeckNo=17 types=['water', 'electric']
+    kingpaca-cryst paldeckNo=21 types=['ice']
+    mau-cryst paldeckNo=27 types=['ice']
+    foxparks-cryst paldeckNo=29 types=['ice']
+    flopie paldeckNo=77 types=['grass']
+    fenglope-lux paldeckNo=83 types=['electric']
+    finsider paldeckNo=88 types=['water']
+    finsider-ignis paldeckNo=88 types=['water', 'fire']
+    beakon-cryst paldeckNo=96 types=['ice']
+    needoll-noct paldeckNo=100 types=['dark', 'grass']
+    pierdon-cryst paldeckNo=131 types=['ice']
+    xenovader paldeckNo=145 types=['dark']
+    xenogard paldeckNo=146 types=['dragon']
+    whalaska-ignis paldeckNo=151 types=['ice', 'fire']
+    solmora-lux paldeckNo=169 types=['water', 'electric']
+    eidrolon-ignis paldeckNo=171 types=['dragon', 'fire']
+    bellanoir paldeckNo=195 types=['dark']
+    bellanoir-libero paldeckNo=195 types=['dark']
+    xenolord paldeckNo=196 types=['dark', 'dragon']
+    hartalis paldeckNo=197 types=['neutral']
+    frostallion-noct paldeckNo=200 types=['dark']
+
+=== Summary ===
+Before: 175 pals with biomes
+After:  267 pals with biomes
+Filled: 92
+By source:
+  hardcoded specials: 5
+  variant copy from base: 8
+  variant translated (Chinese->English): 50
+  paldb.cc parse hit: 29
+  still empty: 21
+
+Wrote src/data/pals.json
+Wrote scripts/fill-biomes-report.txt

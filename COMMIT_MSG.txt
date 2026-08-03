@@ -1,14 +1,11 @@
-feat: og-image + Plausible + PWA + Tech schema
+fix: fill 7 remaining pal biomes (variants + Feybreak bosses)
 
-按审计报告的优先级 4 项优化：
+Biome fill agent hit token limit at 7 pals remaining; finishing the set by hand.
 
-1. **og-image.png** (1200x630, 106KB) — 分享卡片，解决 og-image 404
-   内容：Palworldpedia logo + 288 Pals / 40,972 Recipes / 587 Tech 三个 metric
-2. **Plausible Analytics** — 隐私友好分析，加在 Layout head
-   （需 palworldpedia.cc 域名在 Plausible 后台注册才能收到数据）
-3. **PWA manifest.json** — 移动端可"加到主屏幕"
-   新增 favicon-192.png / favicon-512.png + apple-touch-icon 链接
-4. **TechArticle schema** — 588 个 tech 页加结构化数据
-   TechArticle + 面包屑 + 材料依赖 + 建筑 HP/Defense
+Fixed:
+- Pengullet Lux -> Windswept Hills (variant copy from base)
+- Xenovader / Xenogard -> Feybreak (DLC wild pals)
+- Bellanoir / Bellanoir Libero -> Sakurajima (tower boss at Pal Sanctuary)
+- Xenolord / Hartalis -> Feybreak (DLC tower bosses)
 
-Build 通过：1772 页 / 26s
+Audit: 288/288 pals with biomes, 587/587 techs with description. No regressions.

@@ -1,0 +1,52 @@
+﻿=== fill-biomes start ===
+Total pals:        288
+Already have biomes: 175
+Missing biomes:      113
+
+Classified: 5 special, 72 variant, 36 base
+
+--- 1. Hardcoded specials ---
+  HARDCODE green-slime               -> ['Windswept Island', 'Marsh Island', 'Eastern Wild Island']
+  HARDCODE gumoss-special            -> ['Dungeons']
+  HARDCODE neptilius                 -> ['Sea Breeze Archipelago', 'Palpagos Islands']
+  HARDCODE jetragon                  -> ['Mount Obsidian', 'Wildlife Sanctuary']
+  HARDCODE panthalus                 -> ['Sea Breeze Archipelago', 'Palpagos Islands']
+  hardcoded: 5
+
+--- 2. paldb.cc fetch (108 targets) ---
+  fetched 108 pages in 1.0s
+  paldb_hits: 97
+  paldb_misses: 11
+
+--- 3. Variants: copy from base (overrides paldb) ---
+  variant_copied (English):   17
+  variant_translated (Chinese->English): 50
+  variant_paldb_kept (no standard base): 3
+  variants still empty: 2
+    pengullet-lux             -> base=pengullet base_biomes=['Windswept Hills']
+    bellanoir-libero          -> base=bellanoir base_biomes=None
+
+--- 4. Still empty after all steps ---
+  empty count: 7
+    pengullet-lux paldeckNo=17 types=['water', 'electric']
+    xenovader paldeckNo=145 types=['dark']
+    xenogard paldeckNo=146 types=['dragon']
+    bellanoir paldeckNo=195 types=['dark']
+    bellanoir-libero paldeckNo=195 types=['dark']
+    xenolord paldeckNo=196 types=['dark', 'dragon']
+    hartalis paldeckNo=197 types=['neutral']
+
+=== Summary ===
+Before: 175 pals with biomes
+After:  281 pals with biomes
+Filled: 106
+By source:
+  hardcoded specials: 5
+  variant copy from base: 17
+  variant translated (Chinese->English): 50
+  variant kept paldb (no standard base): 3
+  paldb.cc parse hit: 97
+  still empty: 7
+
+Wrote src/data/pals.json
+Wrote scripts/fill-biomes-report.txt

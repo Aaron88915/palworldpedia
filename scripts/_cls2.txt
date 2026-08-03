@@ -1,0 +1,194 @@
+﻿Special: 5
+  green-slime paldeckNo=0 types=['grass']
+  gumoss-special paldeckNo=0 types=['grass', 'ground']
+  neptilius paldeckNo=201 types=['water']
+  jetragon paldeckNo=202 types=['dragon']
+  panthalus paldeckNo=203 types=['water']
+
+Variants: 72
+  fuack-ignis                    -> base=fuack
+  celaray-lux                    -> base=celaray
+  croajiro-noct                  -> base=croajiro
+  jolthog-cryst                  -> base=jolthog
+  pengullet-lux                  -> base=pengullet
+  penking-lux                    -> base=penking
+  kingpaca-cryst                 -> base=kingpaca
+  tanzee-ignis                   -> base=tanzee
+  mau-cryst                      -> base=mau
+  foxparks-cryst                 -> base=foxparks
+  killamari-primo                -> base=killamari
+  caprity-noct                   -> base=caprity
+  turtacle-terra                 -> base=turtacle
+  hangyu-cryst                   -> base=hangyu
+  woolipop-terra                 -> base=woolipop
+  azurobe-cryst                  -> base=azurobe
+  kelpsea-ignis                  -> base=kelpsea
+  gloopie-primo                  -> base=gloopie
+  univolt-cryst                  -> base=univolt
+  gobfin-ignis                   -> base=gobfin
+  loupmoon-cryst                 -> base=loupmoon
+  elphidran-aqua                 -> base=elphidran
+  vanwyrm-cryst                  -> base=vanwyrm
+  polapup-terra                  -> base=polapup
+  leezpunk-ignis                 -> base=leezpunk
+  surfent-terra                  -> base=surfent
+  robinquill-terra               -> base=robinquill
+  katress-ignis                  -> base=katress
+  helzephyr-lux                  -> base=helzephyr
+  elgrove-cryst                  -> base=elgrove
+  fenglope-lux                   -> base=fenglope
+  dinossom-lux                   -> base=dinossom
+  bushi-noct                     -> base=bushi
+  mammorest-cryst                -> base=mammorest
+  finsider-ignis                 -> base=finsider
+  petallia-ignis                 -> base=petallia
+  dazzi-noct                     -> base=dazzi
+  pyrin-noct                     -> base=pyrin
+  relaxaurus-lux                 -> base=relaxaurus
+  beakon-cryst                   -> base=beakon
+  ghangler-ignis                 -> base=ghangler
+  rayhound-cryst                 -> base=rayhound
+  needoll-noct                   -> base=needoll
+  moldron-cryst                  -> base=moldron
+  broncherry-aqua                -> base=broncherry
+  dumud-gild                     -> base=dumud
+  kitsun-noct                    -> base=kitsun
+  blazehowl-noct                 -> base=blazehowl
+  warsect-terra                  -> base=warsect
+  sibelyx-primo                  -> base=sibelyx
+  shroomer-noct                  -> base=shroomer
+  skutlass-ignis                 -> base=skutlass
+  reptyro-cryst                  -> base=reptyro
+  starryon-primo                 -> base=starryon
+  pierdon-cryst                  -> base=pierdon
+  cryolinx-terra                 -> base=cryolinx
+  wumpo-botan                    -> base=wumpo
+  blazamut-ryu                   -> base=blazamut
+  dualith-noct                   -> base=dualith
+  prixter-lux                    -> base=prixter
+  tetroise-primo                 -> base=tetroise
+  nitemary-botan                 -> base=nitemary
+  smokie-cryst                   -> base=smokie
+  whalaska-ignis                 -> base=whalaska
+  celesdir-noct                  -> base=celesdir
+  knocklem-ignis                 -> base=knocklem
+  snock-lux                      -> base=snock
+  solmora-lux                    -> base=solmora
+  eidrolon-ignis                 -> base=eidrolon
+  faleris-aqua                   -> base=faleris
+  bellanoir-libero               -> base=bellanoir
+  frostallion-noct               -> base=frostallion
+
+Bases: 36
+  kingpaca                       paldeckNo=21  types=['neutral']
+  flopie                         paldeckNo=77  types=['grass']
+  fenglope                       paldeckNo=83  types=['neutral']
+  finsider                       paldeckNo=88  types=['water']
+  needoll                        paldeckNo=100 types=['grass']
+  majex                          paldeckNo=115 types=['dark', 'fire']
+  icelyn                         paldeckNo=119 types=['ice']
+  pierdon                        paldeckNo=131 types=['ground']
+  xenovader                      paldeckNo=145 types=['dark']
+  xenogard                       paldeckNo=146 types=['dragon']
+  whalaska                       paldeckNo=151 types=['ice', 'water']
+  solmora                        paldeckNo=169 types=['water']
+  eidrolon                       paldeckNo=171 types=['dragon', 'dark']
+  ophydia                        paldeckNo=175 types=['grass', 'water']
+  dupin                          paldeckNo=176 types=['fire']
+  roujay                         paldeckNo=177 types=['dark']
+  venusa                         paldeckNo=178 types=['dark']
+  mycora                         paldeckNo=179 types=['grass']
+  loomen                         paldeckNo=180 types=['dark', 'fire']
+  wistella                       paldeckNo=181 types=['dark']
+  solenne                        paldeckNo=182 types=['dark', 'neutral']
+  renjishi                       paldeckNo=183 types=['fire']
+  aegidron                       paldeckNo=184 types=['dragon', 'ground']
+  grizzbolt                      paldeckNo=185 types=['electric']
+  orserk                         paldeckNo=187 types=['dragon']
+  selyne                         paldeckNo=190 types=['dark', 'neutral']
+  bastigor                       paldeckNo=191 types=['ice']
+  shaolong                       paldeckNo=192 types=['dragon', 'water']
+  silvance                       paldeckNo=193 types=['grass']
+  dandilord                      paldeckNo=194 types=['grass', 'dark']
+  bellanoir                      paldeckNo=195 types=['dark']
+  xenolord                       paldeckNo=196 types=['dark', 'dragon']
+  hartalis                       paldeckNo=197 types=['neutral']
+  paladius                       paldeckNo=198 types=['neutral']
+  necromus                       paldeckNo=199 types=['dark']
+  frostallion                    paldeckNo=200 types=['ice']
+
+=== variant base availability ===
+  fuack-ignis                    -> base fuack biomes=['Windswept Island', 'Bamboo Groves', 'Marsh Island']
+  celaray-lux                    -> base celaray biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  croajiro-noct                  -> base croajiro biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  jolthog-cryst                  -> base jolthog biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  pengullet-lux                  -> base pengullet biomes=['Windswept Hills']
+  penking-lux                    -> base penking biomes=['Dungeons']
+  kingpaca-cryst                 -> base kingpaca biomes=[]
+  tanzee-ignis                   -> base tanzee biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  mau-cryst                      -> base mau biomes=['Windswept Hills']
+  foxparks-cryst                 -> base foxparks biomes=['Windswept Hills']
+  killamari-primo                -> base killamari biomes=['Dungeons']
+  caprity-noct                   -> base caprity biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  turtacle-terra                 -> base turtacle biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  hangyu-cryst                   -> base hangyu biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  woolipop-terra                 -> base woolipop biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  azurobe-cryst                  -> base azurobe biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  kelpsea-ignis                  -> base kelpsea biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  gloopie-primo                  -> base gloopie biomes=['�ƺ���', '���µ�', 'ӣ��']
+  univolt-cryst                  -> base univolt biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  gobfin-ignis                   -> base gobfin biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  loupmoon-cryst                 -> base loupmoon biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  elphidran-aqua                 -> base elphidran biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  vanwyrm-cryst                  -> base vanwyrm biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  polapup-terra                  -> base polapup biomes=['�ƺ���', '���µ�', 'ӣ��', 'ѩԭ']
+  leezpunk-ignis                 -> base leezpunk biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  surfent-terra                  -> base surfent biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  robinquill-terra               -> base robinquill biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  katress-ignis                  -> base katress biomes=['Dungeons']
+  helzephyr-lux                  -> base helzephyr biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  elgrove-cryst                  -> base elgrove biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  fenglope-lux                   -> base fenglope biomes=[]
+  dinossom-lux                   -> base dinossom biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  bushi-noct                     -> base bushi biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  mammorest-cryst                -> base mammorest biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  finsider-ignis                 -> base finsider biomes=[]
+  petallia-ignis                 -> base petallia biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  dazzi-noct                     -> base dazzi biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  pyrin-noct                     -> base pyrin biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  relaxaurus-lux                 -> base relaxaurus biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  beakon-cryst                   -> base beakon biomes=['Handgun Schematic 4']
+  ghangler-ignis                 -> base ghangler biomes=['�ƺ���', '���µ�']
+  rayhound-cryst                 -> base rayhound biomes=['�ƺ���', '���µ�', 'ӣ��', 'ѩԭ']
+  needoll-noct                   -> base needoll biomes=[]
+  moldron-cryst                  -> base moldron biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  broncherry-aqua                -> base broncherry biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  dumud-gild                     -> base dumud biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  kitsun-noct                    -> base kitsun biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  blazehowl-noct                 -> base blazehowl biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  warsect-terra                  -> base warsect biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  sibelyx-primo                  -> base sibelyx biomes=['Dungeons']
+  shroomer-noct                  -> base shroomer biomes=['�ƺ���', '���µ�', 'ӣ��', 'ѩԭ']
+  skutlass-ignis                 -> base skutlass biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', '��ԭ', 'ѩԭ']
+  reptyro-cryst                  -> base reptyro biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  starryon-primo                 -> base starryon biomes=['�ƺ���', '���µ�']
+  pierdon-cryst                  -> base pierdon biomes=[]
+  cryolinx-terra                 -> base cryolinx biomes=['�ƺ���', '���µ�', 'ӣ��', 'ѩԭ']
+  wumpo-botan                    -> base wumpo biomes=['�ƺ���', '���µ�', 'ӣ��', 'ѩԭ']
+  blazamut-ryu                   -> base blazamut biomes=['Mount Obsidian', 'Wildlife Sanctuary']
+  dualith-noct                   -> base dualith biomes=['�ƺ���', '���µ�', 'ӣ��', 'ѩԭ']
+  prixter-lux                    -> base prixter biomes=['�ƺ���', '���µ�', 'ӣ��', 'ѩԭ']
+  tetroise-primo                 -> base tetroise biomes=['�ƺ���', '���µ�', 'ӣ��', 'ѩԭ']
+  nitemary-botan                 -> base nitemary biomes=['�ƺ���', '���µ�']
+  smokie-cryst                   -> base smokie biomes=['�ƺ���', '���µ�', 'ӣ��']
+  whalaska-ignis                 -> base whalaska biomes=[]
+  celesdir-noct                  -> base celesdir biomes=['Feybreak']
+  knocklem-ignis                 -> base knocklem biomes=['�ƺ���', '���µ�', 'ӣ��', '��ɽ��', 'ѩԭ']
+  snock-lux                      -> base snock biomes=['�ƺ���', '���µ�']
+  solmora-lux                    -> base solmora biomes=[]
+  eidrolon-ignis                 -> base eidrolon biomes=[]
+  faleris-aqua                   -> base faleris biomes=['No. 3 Wildlife Sanctuary']
+  bellanoir-libero               -> base bellanoir biomes=[]
+  frostallion-noct               -> base frostallion biomes=[]
+
+Variants without base: 0

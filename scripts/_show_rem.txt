@@ -1,0 +1,22 @@
+﻿Still empty: 21
+  NO CACHE: pengullet-lux
+  NO CACHE: kingpaca-cryst
+  NO CACHE: mau-cryst
+  NO CACHE: foxparks-cryst
+  flopie                    hints: [('rampaging', ''), ('tower', ''), ('dungeons', '')]
+  NO CACHE: fenglope-lux
+  finsider                  hints: [('rampaging', ''), ('tower', ''), ('dungeons', '')]
+  NO CACHE: finsider-ignis
+  NO CACHE: beakon-cryst
+  NO CACHE: needoll-noct
+  NO CACHE: pierdon-cryst
+  xenovader                 hints: [('rampaging', ''), ('tower', ''), ('dungeons', '')]
+  xenogard                  hints: [('rampaging', ''), ('tower', ''), ('dungeons', '')]
+  NO CACHE: whalaska-ignis
+  NO CACHE: solmora-lux
+  NO CACHE: eidrolon-ignis
+  bellanoir                 hints: [('rampaging', ''), ('tower', ''), ('dungeons', '')]
+  NO CACHE: bellanoir-libero
+  xenolord                  hints: [('rampaging', ''), ('tower', ''), ('dungeons', '')]
+  hartalis                  hints: [('rampaging', ''), ('tower', ''), ('dungeons', '')]
+  NO CACHE: frostallion-noct

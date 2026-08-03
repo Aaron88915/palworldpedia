@@ -1,0 +1,188 @@
+﻿Total length: 87696
+is"><img loading="lazy" src="https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_WingGolem_Fire_icon_normal.webp" alt="TWingGolemFireiconnormal" class="size32 rounded-circle border"/></a><a data-pal-id="WhiteShieldDragon" class="" data-hover="/cache/en/Game_Pals_hover/756d762dba9cfd02551863962cbe586b2a98acff14dafccdd225bbdc6da6e2d7" href="Silvegis"><img loading="lazy" src="https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_WhiteShieldDragon_icon_normal.webp" alt="TWhiteShieldDragoniconnormal" class="size32 rounded-circle border"/></a><a data-pal-id="DomeArmorDragon" class="" data-hover="/cache/en/Game_Pals_hover/c094f87db97f07f4c32d45342e21196c18b36bffac3310c005b94934fc4f42c5" href="Aegidron"><img loading="lazy" src="https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_DomeArmorDragon_icon_normal.webp" alt="TDomeArmorDragoniconnormal" class="size32 rounded-circle border"/></a></div>
+
+    </div>
+</div>
+</div></div>
+        </div>
+    </div>
+
+    
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title text-info" data-i18n="paldex_drop_item_title">Possible Drops</h5>
+            <table class="table table-sm mb-0">
+                <thead>
+                    <tr>
+                        <th data-i18n-tw="��Ʒ">Item
+                        <th>Qty
+                        <th>
+                        <th data-i18n-tw="�C��">Probability
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td><a class="itemname" data-hover="?s=Items%2FWool" href="Wool"><img loading="lazy" src="https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Wool.webp" alt="TitemiconMaterialWool" class="size32 border bg_rarity0"/>Wool</a>
+                        <td><small class="itemQuantity">5</small>
+                        <td> 
+                            
+                        <td>100%
+                    </tr>
+                    <tr>
+                        <td><a class="itemname" data-hover="?s=Items%2FPalAwakening_Material_Neutral" href="Neutral_Radiant_Gem"><img loading="lazy" src="https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_PalAwakening_Material_Neutral.webp" alt="TitemiconMaterialPalAwakeningMaterialNeutral" class="size32 border bg_rarity2"/>Neutral Radiant Gem</a>
+                        <td><small class="itemQuantity">10&ndash;20</small>
+                        <td><span class="level">80</span> 
+                            <a href="Awakening"><img src="https://cdn.paldb.cc/image/ui/T_icon_enemy_awakening.webp" height="24"/></a>
+                        <td>100%
+                    </tr>
+                    <tr>
+                        <td><a class="itemname" data-hover="?s=Items%2FWorldTreeRelic_01" href="Decayed_Ancient_Relic"><img loading="lazy" src="https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_WorldTreeRelic_1.webp" alt="TitemiconMaterialWorldTreeRelic1" class="size32 border bg_rarity0"/>Decayed Ancient Relic</a>
+                        <td><small class="itemQuantity">30&ndash;50</small>
+                        <td><span class="level">80</span> 
+                            <a href="Awakening"><img src="https://cdn.paldb.cc/image/ui/T_icon_enemy_awakening.webp" height="24"/></a>
+                        <td>100%
+                    </tr>
+                    <tr>
+                        <td><a class="itemname" data-hover="?s=Items%2FWorldTreeRelic_02" href="Dormant_Ancient_Relic"><img loading="lazy" src="https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_WorldTreeRelic_2.webp" alt="TitemiconMaterialWorldTreeRelic2" class="size32 border bg_rarity1"/>Dormant Ancient Relic</a>
+                        <td><small class="itemQuantity">10&ndash;20</small>
+                        <td><span class="level">80</span> 
+                            <a href="Awakening"><img src="https://cdn.paldb.cc/image/ui/T_icon_enemy_awakening.webp" height="24"/></a>
+                        <td>100%
+                    </tr>
+                    <tr>
+                        <td><a class="itemname" data-hover="?s=Items%2FWorldTreeRelic_03" href="Gorgeous_Ancient_Relic"><img loading="lazy" src="https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_WorldTreeRelic_3.webp" alt="TitemiconMaterialWorldTreeRelic3" class="size32 border bg_rarity2"/>Gorgeous Ancient Relic</a>
+                        <td><small class="itemQuantity">4&ndash;8</small>
+                        <td><span class="level">80</span> 
+                            <a href="Awakening"><img src="https://cdn.paldb.cc/image/ui/T_icon_enemy_awakening.webp" height="24"/></a>
+                        <td>100%
+                    </tr>
+                    <tr>
+                        <td><a class="itemname" data-hover="?s=Items%2FWorldTreeRelic_04" href="Glowing_Ancient_Relic"><img loading="lazy" src="https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_WorldTreeRelic_4.webp" alt="TitemiconMaterialWorldTreeRelic4" class="size32 border bg_rarity3"/>Glowing Ancient Relic</a>
+                        <td><small class="itemQuantity">2&ndash;3</small>
+                        <td><span class="level">80</span> 
+                            <a href="Awakening"><img src="https://cdn.paldb.cc/image/ui/T_icon_enemy_awakening.webp" height="24"/></a>
+                        <td>50%
+                    </tr>
+                    <tr>
+                        <td><a class="itemname" data-hover="?s=Items%2FWorldTreeRelic_05" href="Glistening_Ancient_Relic"><img loading="lazy" src="https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_WorldTreeRelic_5.webp" alt="TitemiconMaterialWorldTreeRelic5" class="size32 border bg_rarity4"/>Glistening Ancient Relic</a>
+                        <td><small class="itemQuantity">1</small>
+                        <td><span class="level">80</span> 
+                            <a href="Awakening"><img src="https://cdn.paldb.cc/image/ui/T_icon_enemy_awakening.webp" height="24"/></a>
+                        <td>25%
+                    </tr>
+                    <tr>
+                        <td><a class="itemname" data-hover="?s=Items%2FWool" href="Wool"><img loading="lazy" src="https://cdn.paldb.cc/image/Others/InventoryItemIcon/Texture/T_itemicon_Material_Wool.webp" alt="TitemiconMaterialWool" class="size32 border bg_rarity0"/>Wool</a>
+                        <td><small class="itemQuantity">5</small>
+                        <td><span class="level">80</span> 
+                            <a href="Awakening"><img src="https://cdn.paldb.cc/image/ui/T_icon_enemy_awakening.webp" height="24"/></a>
+                        <td>100%
+                    </tr>
+            </table>
+        </div>
+    </div>
+
+
+     <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title text-info">Spawner</h5>
+            <table class="table mb-0">
+                <thead>
+                <tr>
+                    <td>
+                    <td>Level
+                    <td>Map
+                    <td>
+                    <td>
+                <tbody>
+                <tr>
+                    <td><a data-pal-id="BOSS_KingAlpaca" class="" data-hover="/cache/en/Game_Pals_hover/7132e3a408b3001090e4be7caff2310f26b49067c00a94490239e193d3c2b33b" href="Supreme_Fluff_Commander_Kingpaca"><span class="size32 palAlpha"></span><img loading="lazy" src="https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingAlpaca_icon_normal.webp" alt="TKingAlpacaiconnormal" class="size32 rounded-circle border border-danger"/></a>
+                    <td><span class="level">23</span>
+                    <td><a href="Palpagos_Islands?spawner=81_1_grass_FBOSS_2">Map</a>
+                    <td><i class="fa-solid fa-map-location-dot size32"></i><a href="Palpagos_Islands?pos=50%2C-460"><i class="fa-solid fa-map-location-dot"></i>Small Settlement 50,-460</a>
+                    <td>
+                <tr>
+                    <td><a data-pal-id="KingAlpaca" class="" data-hover="/cache/en/Game_Pals_hover/12599ac7d099b122cebff727621d864b834f5bcf3c1b34bfe1d5647b5ff82f2e" href="Kingpaca"><img loading="lazy" src="https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingAlpaca_icon_normal.webp" alt="TKingAlpacaiconnormal" class="size32 rounded-circle border"/></a>
+                    <td><span class="level">80</span>
+                    <td><a href="The_World_Tree?spawner=worldtree_9_55_WorldTreeAura">Map</a>
+                    <td><i class="fa-solid fa-map-location-dot size32"></i><a href="The_World_Tree?spawner=worldtree_9_55_WorldTreeAura">worldtree_9_55_WorldTreeAura</a>
+                    <td>
+            </table>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title text-info">Tribes</h5>
+            <table class="table mb-0">
+            <tr><td><a data-pal-id="BOSS_KingAlpaca" class="itemname" data-hover="/cache/en/Game_Pals_hover/7132e3a408b3001090e4be7caff2310f26b49067c00a94490239e193d3c2b33b" href="Supreme_Fluff_Commander_Kingpaca"><span class="size32 palAlpha"></span><img loading="lazy" src="https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingAlpaca_icon_normal.webp" alt="TKingAlpacaiconnormal" class="size32 rounded-circle border border-danger"/>Supreme Fluff Commander Kingpaca</a><td>Tribe Boss<tr><td><a data-pal-id="KingAlpaca" class="itemname" data-hover="/cache/en/Game_Pals_hover/12599ac7d099b122cebff727621d864b834f5bcf3c1b34bfe1d5647b5ff82f2e" href="Kingpaca"><img loading="lazy" src="https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingAlpaca_icon_normal.webp" alt="TKingAlpacaiconnormal" class="size32 rounded-circle border"/>Kingpaca</a><td>Tribe Normal<tr><td><a data-pal-id="KingAlpaca_Ice" class="itemname" data-hover="/cache/en/Game_Pals_hover/cf1f437090c54539a216094524a2a8c82d0eb9ae1aa2848b4cfaab519dbdde60" href="Kingpaca_Cryst"><img loading="lazy" src="https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingAlpaca_Ice_icon_normal.webp" alt="TKingAlpacaIceiconnormal" class="size32 rounded-circle border"/>Kingpaca Cryst</a><td>Variant
+            </table>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+    </div>
+    </div>
+
+    <footer class="text-center text-lg-left container mt-2">
+      <div class="card p-4">
+        <div class="row">
+
+          <div class="col-lg-3 col-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Sites</h5>
+            <ul class="list-unstyled mb-0">
+              <li> <a target="_blank" href="https://poedb.tw/">poedb.tw</a> </li>
+              <li> <a target="_blank" href="https://tlidb.com/">tlidb.com</a> </li>
+              <!--<li> <a target="_blank" href="https://diablo4.cc/">diablo4.cc</a> </li>-->
+              <li> <a target="_blank" href="https://poe2db.tw/">poe2db.tw</a> </li>
+              <li> <a target="_blank" href="https://paldb.cc/">paldb.cc</a> </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">About Site</h5>
+            <ul class="list-unstyled mb-0">
+              <li> <a href="privacy">Privacy</a> </li>
+              <li> <a target="_blank" href="https://www.reddit.com/user/chuanhsing">About US</a> </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Version</h5>
+            <ul class="list-unstyled mb-0">
+              <li> <a href="version">v1.0.2</a> 2026/7/29</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Community</h5>
+            <ul class="list-unstyled mb-0">
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div class="p-3">
+        <span>This site is fan-made and not affiliated with <a href="https://www.pocketpair.jp/" target="_blank">Pocketpair</a> in any way.</span>
+      </div>
+    </footer>
+
+    <a href="#top" id="toTop"><span class="fas fa-arrow-circle-up fa-3x"></span></a>
+
+    <script src="/js/footer.js?1785561045
+"></script>
+<script>
+$(document).ready(function()
+ {
+    if (window.location.hostname != "paldb.cc") {
+        window.location.href="https://paldb.cc/";
+    }
+ });
+</script>
+
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"ad52ef62a25e4a188cfdb0e6f473e83b","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
+

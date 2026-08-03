@@ -1,0 +1,11 @@
+﻿Pals without biomes: 10
+pengullet-lux             -> []
+flopie                    -> ['Marsh Island']
+finsider                  -> ['Windswept Island']
+finsider-ignis            -> []
+xenovader                 -> []
+xenogard                  -> []
+bellanoir                 -> []
+bellanoir-libero          -> []
+xenolord                  -> []
+hartalis                  -> []

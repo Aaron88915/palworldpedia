@@ -1,0 +1,52 @@
+﻿At 28162: mt-1" style="border-left: solid #6be7ff;"> Kingpaca #21
+---
+At 28687: > Kingpaca #21 Neutral </div
+---
+At 69314: "p-2" style="position: relative"> Defense +20% Immune to Knockback <a data-pal-id="GrassMammoth" class="" data-hover="/cache/en/Game_Pals_hover/855ee71b17aeffcd08bcff4e99da87d324e
+---
+At 69651: ngAlpaca_icon_normal.webp" alt="TKingAlpacaiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="GrassMammoth_Ice" class="" data-hover="/cache/en/Game_Pals_hover/754c619e3a5ff3ca4747c82c
+---
+At 70005: a_Ice_icon_normal.webp" alt="TKingAlpacaIceiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="SakuraSaurus" class="" data-hover="/cache/en/Game_Pals_hover/d0cfe2ab6d18800e5c5aa
+---
+At 70349: ammoth_icon_normal.webp" alt="TGrassMammothiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="SakuraSaurus_Water" class="" data-hover="/cache/en/Game_Pals_hover/934bd817db1371
+---
+At 70710: Ice_icon_normal.webp" alt="TGrassMammothIceiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="Plesiosaur" class="" data-hover="/cache/en/Game_Pals_hover/608a0babb5619793
+---
+At 71055: Saurus_icon_normal.webp" alt="TSakuraSaurusiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="VolcanicMonster" class="" data-hover="/cache/en/Game_Pals_hover/9905e880822478e506c4
+---
+At 71422: r_icon_normal.webp" alt="TSakuraSaurusWatericonnormal" class="size32 rounded-circle border"/> <a data-pal-id="VolcanicMonster_Ice" class="" data-hover="/cache/en/Game_Pals_hover/2c10905d4813d98bb8ea910eb274592e
+---
+At 71758: esiosaur_icon_normal.webp" alt="TPlesiosauriconnormal" class="size32 rounded-circle border"/> <a data-pal-id="RockBeast" class="" data-hover="/cache/en/Game_Pals_hover/6fb1ca1073
+---
+At 72109: ter_icon_normal.webp" alt="TVolcanicMonstericonnormal" class="size32 rounded-circle border"/> <a data-pal-id="RockBeast_Ice" class="" data-hover="/cache/en/Game_Pals_hover/e3c91d0153f7cc27ed2d35b6
+---
+At 72477: _icon_normal.webp" alt="TVolcanicMonsterIceiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="Yeti" class="" data-hover="/cache/en/Game_Pals_hover/ac9f586745a1cc214e2cb59bae23ef1b4bd35f2fdf9f1dbf21f
+---
+At 72810: RockBeast_icon_normal.webp" alt="TRockBeasticonnormal" class="size32 rounded-circle border"/> <a data-pal-id="Yeti_Grass" class="" data-hover="/cache/en/Game_Pals_hover/8dce49dc8118e1f7546d538c32c2abf7b5514ca28615f1caa03b2457d5e612
+---
+At 73160: st_Ice_icon_normal.webp" alt="TRockBeastIceiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="GrassGolem" class="" data-hover="/cache/en/Game_Pals_hover/53ac606f89b793263b1f05db5336537a683b95d1a57c93936064e9f7cbb7c151" href="D
+---
+At 73476: /Normal/T_Yeti_icon_normal.webp" alt="TYetiiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="GrassGolem_Dark" class="" data-hover="/cache/en/Game_Pals_hover/33ee0c6ca4c4754fdd1ade1d843cd36b8c538e8dffad0069
+---
+At 73815: eti_Grass_icon_normal.webp" alt="TYetiGrassiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="WingGolem" class="" data-hover="/cache/en/Game_Pals_hover/db46a29ccfab67e95826fa995fb2c54842a856
+---
+At 74151: assGolem_icon_normal.webp" alt="TGrassGolemiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="WingGolem_Fire" class="" data-hover="/cache/en/Game_Pals_hover/9757b05d48043ee58377c99ef61a330baed
+---
+At 74506: Dark_icon_normal.webp" alt="TGrassGolemDarkiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="WhiteShieldDragon" class="" data-hover="/cache/en/Game_Pals_hover/756d762dba9cfd02551863962cbe586b2
+---
+At 74840: WingGolem_icon_normal.webp" alt="TWingGolemiconnormal" class="size32 rounded-circle border"/> <a data-pal-id="DomeArmorDragon" class="" data-hover="/cache/en/Game_Pals_hover/c094f87db97
+---
+At 75194: _Fire_icon_normal.webp" alt="TWingGolemFireiconnormal" class="size32 rounded-circle border"/> <div class="card
+---
+At 75552: n_icon_normal.webp" alt="TWhiteShieldDragoniconnormal" class="size32 rounded-circle border"/> Possible Drops Item Qty
+---
+At 82237: d> 23 Map Small Settlement 50,-460
+---
+At 83054: all Settlement 50,-460 80 Map worldtree_9_55_WorldTreeAura <h
+---
+At 83959: ss="card-title text-info">Tribes Supreme Fluff Commander Kingpaca Tribe Boss <img loading="lazy" src="https://cdn.paldb.cc/image/Pal/Texture/PalIcon/Normal/T_KingAlpaca_icon_normal.webp" alt="TKingAlpacaiconnormal" class="size32 rounded
+---
+At 84438: rounded-circle border border-danger"/>Supreme Fluff Commander Kingpaca Tribe Boss Kingpaca Tribe Normal Kingpaca Cryst Variant
+---
+At 84815: TKingAlpacaiconnormal" class="size32 rounded-circle border"/>Kingpaca Tribe Normal Kingpaca Cryst Variant Sites po
+---

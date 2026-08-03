@@ -1,0 +1,65 @@
+﻿=== fill-biomes start ===
+Total pals:        288
+Already have biomes: 175
+Missing biomes:      113
+
+Classified: 5 special, 72 variant, 36 base
+
+--- 1. Hardcoded specials ---
+  HARDCODE green-slime               -> ['Windswept Island', 'Marsh Island', 'Eastern Wild Island']
+  HARDCODE gumoss-special            -> ['Dungeons']
+  HARDCODE neptilius                 -> ['Sea Breeze Archipelago', 'Palpagos Islands']
+  HARDCODE jetragon                  -> ['Mount Obsidian', 'Wildlife Sanctuary']
+  HARDCODE panthalus                 -> ['Sea Breeze Archipelago', 'Palpagos Islands']
+  hardcoded: 5
+
+--- 2. Variants: copy from base ---
+  variant_copied (English):   8
+  variant_translated (Chinese->English): 50
+  variants still needing fill: 14
+    pengullet-lux             -> base=pengullet base_biomes=['Windswept Hills']
+    kingpaca-cryst            -> base=kingpaca base_biomes=[]
+    mau-cryst                 -> base=mau base_biomes=['Windswept Hills']
+    foxparks-cryst            -> base=foxparks base_biomes=['Windswept Hills']
+    fenglope-lux              -> base=fenglope base_biomes=[]
+    finsider-ignis            -> base=finsider base_biomes=[]
+    beakon-cryst              -> base=beakon base_biomes=['Handgun Schematic 4']
+    needoll-noct              -> base=needoll base_biomes=[]
+    pierdon-cryst             -> base=pierdon base_biomes=[]
+    whalaska-ignis            -> base=whalaska base_biomes=[]
+    solmora-lux               -> base=solmora base_biomes=[]
+    eidrolon-ignis            -> base=eidrolon base_biomes=[]
+    bellanoir-libero          -> base=bellanoir base_biomes=[]
+    frostallion-noct          -> base=frostallion base_biomes=[]
+
+--- 3. paldb.cc fetch (50 targets) ---
+  fetched 50 pages in 7.4s
+  paldb_hits: 40
+  paldb_misses: 10
+
+--- 4. Still empty after paldb ---
+  empty count: 10
+    pengullet-lux paldeckNo=17 types=['water', 'electric']
+    flopie paldeckNo=77 types=['grass']
+    finsider paldeckNo=88 types=['water']
+    finsider-ignis paldeckNo=88 types=['water', 'fire']
+    xenovader paldeckNo=145 types=['dark']
+    xenogard paldeckNo=146 types=['dragon']
+    bellanoir paldeckNo=195 types=['dark']
+    bellanoir-libero paldeckNo=195 types=['dark']
+    xenolord paldeckNo=196 types=['dark', 'dragon']
+    hartalis paldeckNo=197 types=['neutral']
+
+=== Summary ===
+Before: 175 pals with biomes
+After:  278 pals with biomes
+Filled: 103
+By source:
+  hardcoded specials: 5
+  variant copy from base: 8
+  variant translated (Chinese->English): 50
+  paldb.cc parse hit: 40
+  still empty: 10
+
+Wrote src/data/pals.json
+Wrote scripts/fill-biomes-report.txt

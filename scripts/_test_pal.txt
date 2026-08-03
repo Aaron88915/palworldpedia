@@ -1,0 +1,13 @@
+﻿Paladius                  -> ['Twilight Dunes']
+Necromus                  -> ['Twilight Dunes']
+Frostallion               -> ['Astral Mountains']
+Bellanoir                 -> []
+Bellanoir_Libero          -> []
+Jormuntide                NO CACHE
+Jormuntide_Ignis          -> ['Isle of Silence', 'Sea Breeze Archipelago']
+Faleris                   NO CACHE
+Faleris_Aqua              -> ['Isle of Silence', 'Sea Breeze Archipelago', 'Sealed Realms']
+Suzaku_Aqua               -> ['Astral Mountains', 'Sea Breeze Archipelago']
+Suzaku                    NO CACHE
+Grizzbolt                 -> ['Sealed Realms', 'Wildlife Sanctuary']
+Orserk                    -> ['Sealed Realms']
