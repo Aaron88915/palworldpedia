@@ -1,36 +1,18 @@
-fix: repair 45 broken internal links in guide pages
+fix: repair 'None' prefix bug in 22 guide page hrefs
 
-Found via full link audit on 5 ZH + 5 EN guides.
-Each broken /pals/ or /tech-tree/ link was 404ing.
+v1 fix script bug: regex group (start) returned Python None
+when the (en) optional group did not match, which got stringified
+to 'None' prefix in the href.
 
-Broken -> fixed:
-  ZH:
-  /tech-tree/ranch                  -> /tech-tree/monsterfarm
-  /tech-tree/cloth                  -> /tech-tree/battle_cloth
-  /tech-tree/pal_sphere             -> /tech-tree/special_palsphere_grade_01
-  /tech-tree/metalworkbench         -> /tech-tree/product_factory_hard_grade_01
-  /tech-tree/weaponworkbench_grade_02 -> /tech-tree/product_weaponfactory_dirty_grade_01
-  /tech-tree/palbox_grade_02        -> /tech-tree/palbox
-  /tech-tree/coldoutfit             -> /tech-tree/battle_armor_grade_01_cloth_cold
-  /tech-tree/assaultrifle_grade_03  -> /tech-tree/battle_rangeweapon_assaultrifle
-  /tech-tree/rocketlauncher         -> /tech-tree/battle_rangeweapon_rocketlauncher
-  /tech-tree/pal-metal-armor        -> /tech-tree/battle_armor_grade_04_steal_cold
-  /tech-tree/megalasphereline       -> /tech-tree/special_spherefactory_black_grade_02
-  /tech-tree/electric_assembly_line -> /tech-tree/product_factory_hard_grade_02
-  /tech-tree/refiningforge          -> /tech-tree/product_ingot_grade_03_steal
-  /tech-tree/planting               -> /tech-tree/product_farm_berries
-  /tech-tree/electric_fence         -> removed (no such tech)
-  /pals/zoe-and-chillet             -> /pals/chillet
-  /pals/orpalka                     -> /pals/jormuntide (closest water-dragon boss)
-  /pals/silveon                     -> /pals/silvance (closest silver Pal)
-  /pals/astral-mountain-boss        -> removed
-  /pals/feybreak-boss               -> removed
+Example broken output: <a href="Noneproduct_factory_hard_grade_02/">
+Should be: <a href="/tech-tree/product_factory_hard_grade_02/">
 
-  EN: same 19 broken links (mirror fixes with /en/ prefix)
+Fixed 22 broken hrefs across 5 ZH guide files:
+- beginner-guide (4)
+- breeding-guide (3)
+- tech-tree-guide (6)
+- boss-guide (5)
+- base-building-guide (4)
 
-Tools added:
-- scripts/check-guide-links-v2.py (link audit, run after edits)
-- scripts/find-actual-slugs.py (find correct slugs from data)
-- scripts/fix-guide-links-v2.py (apply fixes)
-
-Build: 1784 pages, 0 errors, 0 broken links.
+New tool: scripts/fix-none-prefix.py to detect+fix this pattern.
+Verify: dist/ scan-all-404.py returns 0 broken links.
