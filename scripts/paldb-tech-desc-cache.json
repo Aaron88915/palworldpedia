@@ -1,0 +1,464 @@
+{
+  "FurnitureSet_1": {
+    "failed": true
+  },
+  "FurnitureSet_3": {
+    "failed": true
+  },
+  "SkillUnlock_Kitsunebi": {
+    "desc": "Harness for holding Foxparks.\r\nActivate its Partner Skill to hold Foxparks\r\nand attack using it as a flamethrower.",
+    "url": "https://paldb.cc/en/Foxparks_Harness",
+    "cand": "Foxparks_Harness"
+  },
+  "FurnitureSet_9": {
+    "failed": true
+  },
+  "Arrow_Poison": {
+    "desc": "Poison Arrows for use with bows. \r\nAfflicts target with Poison on contact.\r\nCan be crafted at Primitive Workbench.",
+    "url": "https://paldb.cc/en/Poison_Arrow",
+    "cand": "Poison_Arrow"
+  },
+  "FurnitureSet_28": {
+    "failed": true
+  },
+  "FurnitureSet_17": {
+    "failed": true
+  },
+  "FurnitureSet_19": {
+    "failed": true
+  },
+  "SkillUnlock_Monkey_Fire": {
+    "desc": "Assault rifle made specifically for Tanzee Ignis.\r\nActivate its Partner Skill, and Tanzee Ignis will enter gunner mode\r\nand begin shooting at nearby enemies.",
+    "url": "https://paldb.cc/en/Tanzee_Igniss_Assault_Rifle",
+    "cand": "Tanzee_Igniss_Assault_Rifle"
+  },
+  "FurnitureSet_24": {
+    "failed": true
+  },
+  "Processed_Wood": {
+    "desc": "Planks made from processed wood for easier use.\r\nMore versatile than raw logs, with a wide variety of uses.\r\nCan be crafted at Primitive Workbench.",
+    "url": "https://paldb.cc/en/Wooden_Board",
+    "cand": "Wooden_Board"
+  },
+  "FurnitureSet_20": {
+    "failed": true
+  },
+  "FurnitureSet_16": {
+    "failed": true
+  },
+  "FurnitureSet_15": {
+    "failed": true
+  },
+  "FurnitureSet_25": {
+    "failed": true
+  },
+  "FurnitureSet_32": {
+    "failed": true
+  },
+  "Lab": {
+    "desc": "A facility for conducting research on the various tasks of Pals. \r\nBy assigning tasks to Pals in this facility, research progresses, granting various benefits.",
+    "url": "https://paldb.cc/en/Pal_Labor_Research_Lab",
+    "cand": "Pal_Labor_Research_Lab"
+  },
+  "FurnitureSet_18": {
+    "failed": true
+  },
+  "DimensionPalStorage": {
+    "desc": "A facility for storing a large number of captured Pals. \r\nAny guild member can deposit or withdraw Pals.\r\nIf you set it to private, it can serve as your personal Pal storage.",
+    "url": "https://paldb.cc/en/Dimensional_Pal_Storage",
+    "cand": "Dimensional_Pal_Storage"
+  },
+  "FurnitureSet_23": {
+    "failed": true
+  },
+  "FurnitureSet_13": {
+    "failed": true
+  },
+  "FurnitureSet_29": {
+    "failed": true
+  },
+  "Battle_RangeWeapon_SphereLauncher_Once": {
+    "desc": "A launcher that fires spheres.\r\nIt can capture Pals from a greater distance.",
+    "url": "https://paldb.cc/en/Single-Shot_Sphere_Launcher",
+    "cand": "Single-Shot_Sphere_Launcher"
+  },
+  "UnlockEquipmentSlot_Weapon_01": {
+    "desc": "A holster that allows an additional weapon to be equipped.\r\nWhile in possession, it increases weapon equip slots by 1.\r\nCarrying one is enough.",
+    "url": "https://paldb.cc/en/Extra_Weapon_Holster",
+    "cand": "Extra_Weapon_Holster"
+  },
+  "BaseCampWorkHard02": {
+    "desc": "A refined monitoring station with improved materials and structure.\r\nIn addition to being able to issue work orders, the system also lowers the SAN cost for Pals working at the base. \r\nWorking conditions are slightly improved, making Pals less likely to become dissatisfied.",
+    "url": "https://paldb.cc/en/High_Quality_Monitoring_Stand",
+    "cand": "High_Quality_Monitoring_Stand"
+  },
+  "OctaviaSet01": {
+    "failed": true
+  },
+  "FurnitureSet_5": {
+    "failed": true
+  },
+  "Infra_ElectronicCircuit": {
+    "desc": "Required to create precision equipment.\r\nCan be made with a Production Assembly Line.",
+    "url": "https://paldb.cc/en/Circuit_Board",
+    "cand": "Circuit_Board"
+  },
+  "FurnitureSet_14": {
+    "failed": true
+  },
+  "SkillUnlock_VolcanoDragon": {
+    "desc": "Saddle for safely riding Moldron.",
+    "url": "https://paldb.cc/en/Moldron_Saddle",
+    "cand": "Moldron_Saddle"
+  },
+  "FurnitureSet_31": {
+    "failed": true
+  },
+  "FurnitureSet_7": {
+    "failed": true
+  },
+  "GuildChest": {
+    "desc": "A chest that can instantly send and receive items through subspace. \r\nThe items inside are shared across all bases where it is placed.",
+    "url": "https://paldb.cc/en/Guild_Chest",
+    "cand": "Guild_Chest"
+  },
+  "Bio_Battery": {
+    "desc": "A device that stores bio-energy as electrical power.\r\nUsed for equipment requiring high energy density.\r\nCan be crafted at Production Assembly Line II.",
+    "url": "https://paldb.cc/en/Bio_Battery",
+    "cand": "Bio_Battery"
+  },
+  "SkillUnlock_LazyDragon": {
+    "desc": "Makes Relaxaurus fire a missile launcher\r\nwhen ridden.",
+    "url": "https://paldb.cc/en/Relaxaurus_Missile_Launcher",
+    "cand": "Relaxaurus_Missile_Launcher"
+  },
+  "FurnitureSet_27": {
+    "failed": true
+  },
+  "FurnitureSet_26": {
+    "failed": true
+  },
+  "FurnitureSet_8": {
+    "failed": true
+  },
+  "SkillUnlock_LazyDragon_Electric": {
+    "desc": "Makes Relaxaurus Lux fire a missile launcher\r\nwhen ridden.",
+    "url": "https://paldb.cc/en/Relaxaurus_Luxs_Missile_Launcher",
+    "cand": "Relaxaurus_Luxs_Missile_Launcher"
+  },
+  "SkillUnlock_GrassGolem": {
+    "desc": "Saddle for safely riding Dualith. \r\nGrants the ability to fire a powerful Grass-element laser while mounted.",
+    "url": "https://paldb.cc/en/Dualith_Saddle",
+    "cand": "Dualith_Saddle"
+  },
+  "SkillUnlock_CubeTurtle": {
+    "desc": "Saddle for safely riding Tetroise.",
+    "url": "https://paldb.cc/en/Tetroise_Saddle",
+    "cand": "Tetroise_Saddle"
+  },
+  "FurnitureSet_11": {
+    "failed": true
+  },
+  "BaseCampItemDispenser": {
+    "desc": "A device that lets you freely access items from all chests in the base.",
+    "url": "https://paldb.cc/en/Item_Retrieval_Machine",
+    "cand": "Item_Retrieval_Machine"
+  },
+  "FurnitureSet_12": {
+    "failed": true
+  },
+  "FurnitureSet_10": {
+    "failed": true
+  },
+  "Computer": {
+    "desc": "A component used in the control of automated equipment and precision machinery.\r\nIt",
+    "url": "https://paldb.cc/en/Computer",
+    "cand": "Computer"
+  },
+  "SkillUnlock_BadCatgirl": {
+    "desc": "A shotgun for Nyafia to hold.\r\nActivate its Partner Skill, and Nyafia will unleash a barrage of shotgun blasts at nearby enemies.",
+    "url": "https://paldb.cc/en/Nyafias_Shotgun",
+    "cand": "Nyafias_Shotgun"
+  },
+  "SkillUnlock_SumoDog": {
+    "desc": "Saddle for safely riding Bulldosu.",
+    "url": "https://paldb.cc/en/Bulldosu_Saddle",
+    "cand": "Bulldosu_Saddle"
+  },
+  "LaserMiningTool": {
+    "desc": "A portable plasma cutter that concentrates and emits plasma energy.\r\nIt supports a wide range of uses, from ore excavation to tree cutting.\r\nIts high-output energy also allows for the mining of special ores.Logging/Mining Yield Up",
+    "url": "https://paldb.cc/en/Plasma_Multicutter",
+    "cand": "Plasma_Multicutter"
+  },
+  "UnlockEquipmentSlot_Weapon_02": {
+    "desc": "A holster that lets you equip additional weapons.\r\nWhen in inventory, adds an extra weapon slot.\r\nCarrying one is enough.",
+    "url": "https://paldb.cc/en/Extra_Weapon_Holster_2",
+    "cand": "Extra_Weapon_Holster_2"
+  },
+  "SkillUnlock_IceSeal_Ground": {
+    "desc": "Saddle for safely riding Polapup Terra.",
+    "url": "https://paldb.cc/en/Polapup_Terra_Saddle",
+    "cand": "Polapup_Terra_Saddle"
+  },
+  "MedicalPalBed_05": {
+    "desc": "A healing pod for Pals.\r\nUsed when Pals are injured or to rest at night.\r\nThanks to technological advancements, the healing amount has increased.",
+    "url": "https://paldb.cc/en/Pal_Pod",
+    "cand": "Pal_Pod"
+  },
+  "FurnitureTree_Cherry": {
+    "failed": true
+  },
+  "OctaviaSet02": {
+    "failed": true
+  },
+  "MultiElectricHatchingPalEgg": {
+    "desc": "Device for incubating Pal eggs.\r\nWhile power supply is required, it allows multiple eggs to be incubated simultaneously at the optimal temperature.",
+    "url": "https://paldb.cc/en/Large-Scale_Electric_Egg_Incubator",
+    "cand": "Large-Scale_Electric_Egg_Incubator"
+  },
+  "SFArmor": {
+    "desc": "Armor made of Hexolite.\r\nPossesses overwhelming durability and defense.Cold Resistance Lv. 2 Heat Resistance Lv. 2 Attack Up (S) Lv. 4",
+    "url": "https://paldb.cc/en/Hexolite_Armor",
+    "cand": "Hexolite_Armor"
+  },
+  "Thermal_Core": {
+    "desc": "A high-temperature reaction core containing vast thermal energy.\r\nUsed as a power component in advanced devices.\r\nCan be crafted at Production Assembly Line II.",
+    "url": "https://paldb.cc/en/Thermal_Core",
+    "cand": "Thermal_Core"
+  },
+  "Spa3": {
+    "desc": "Facility where Pals on base can rest. \r\nIts calming, traditional Japanese design offers an extra boost to SAN recovery.",
+    "url": "https://paldb.cc/en/Japanese-Style_Hot_Spring",
+    "cand": "Japanese-Style_Hot_Spring"
+  },
+  "SkillUnlock_Kirin_Ice": {
+    "desc": "Saddle for safely riding Univolt Cryst.",
+    "url": "https://paldb.cc/en/Univolt_Cryst_Saddle",
+    "cand": "Univolt_Cryst_Saddle"
+  },
+  "IceHorseStatue": {
+    "desc": "Decorative Frostallion statue.",
+    "url": "https://paldb.cc/en/Frostallion_Statue",
+    "cand": "Frostallion_Statue"
+  },
+  "SkillUnlock_KingSunfish": {
+    "desc": "Saddle for safely riding Solmora.",
+    "url": "https://paldb.cc/en/Solmora_Saddle",
+    "cand": "Solmora_Saddle"
+  },
+  "SkyislandIngot": {
+    "desc": "An ancient metal refined from ore that slumbers in Sunreach. \r\nA rare processed material, forming the foundation of high-grade equipment and structures.\r\nCan be refined at Ancient Furnace.",
+    "url": "https://paldb.cc/en/Soralite_Ingot",
+    "cand": "Soralite_Ingot"
+  },
+  "SkillUnlock_KingSunfish_Thunder": {
+    "desc": "Saddle for safely riding Solmora Lux.",
+    "url": "https://paldb.cc/en/Solmora_Lux_Saddle",
+    "cand": "Solmora_Lux_Saddle"
+  },
+  "SkillUnlock_ThunderFluffyBird": {
+    "desc": "Saddle for safely riding Dynamoff.",
+    "url": "https://paldb.cc/en/Dynamoff_Saddle",
+    "cand": "Dynamoff_Saddle"
+  },
+  "WaterBuildKit": {
+    "desc": "Construction kit that allows foundations\r\nto be placed on water.",
+    "url": "https://paldb.cc/en/Aquatic_Construction_Kit",
+    "cand": "Aquatic_Construction_Kit"
+  },
+  "SkyBowArrow": {
+    "desc": "Enhanced arrows for shooting with Mechanical Bow.\r\nCan be crafted at Ancient Workbench.",
+    "url": "https://paldb.cc/en/Mechanical_Bow_Ammo",
+    "cand": "Mechanical_Bow_Ammo"
+  },
+  "AIcore": {
+    "desc": "A core component essential to cutting-edge devices, enabling complex decision-making and autonomous control.\r\nCan be crafted at Advanced Workshop.",
+    "url": "https://paldb.cc/en/AI_Core",
+    "cand": "AI_Core"
+  },
+  "SkySubmachineGunBullet": {
+    "desc": "Ammo for the Combat SMG.\r\nCan be crafted at Ancient Workbench.",
+    "url": "https://paldb.cc/en/Combat_SMG_Ammo",
+    "cand": "Combat_SMG_Ammo"
+  },
+  "AncientArmor": {
+    "desc": "Ancient armor forged from Soralite Ingot.\r\nCrafted with the essence of a lost civilization, it boasts overwhelming defensive power and is capable of withstanding cataclysmic threats.Cold Resistance Lv. 2 Heat Resistance Lv. 2 Attack Up (S) Lv. 4",
+    "url": "https://paldb.cc/en/Ancient_Armor",
+    "cand": "Ancient_Armor"
+  },
+  "AncientHelmet": {
+    "desc": "An ancient helmet forged from Soralite Ingot.\r\nIt is imbued with wisdom passed down through the ages, protecting its wearer with unwavering strength.\r\nIts defensive capabilities far surpass those of modern equipment.Neutral Damage Reduction Lv. 1 Dragon Damage Reduction Lv. 1",
+    "url": "https://paldb.cc/en/Ancient_Helm",
+    "cand": "Ancient_Helm"
+  },
+  "SkyShotgunBullet": {
+    "desc": "Ammo for the Prototype Shotgun.\r\nCan be crafted at Ancient Workbench.",
+    "url": "https://paldb.cc/en/Prototype_Shotgun_Ammo",
+    "cand": "Prototype_Shotgun_Ammo"
+  },
+  "SkillUnlock_GrassGolem_Dark": {
+    "desc": "Saddle for safely riding Dualith Noct. \r\nGrants the ability to fire a powerful Dark-element laser while mounted.",
+    "url": "https://paldb.cc/en/Dualith_Noct_Saddle",
+    "cand": "Dualith_Noct_Saddle"
+  },
+  "SkyAssaultRifleBullet": {
+    "desc": "Ammo for the Heavy Assault Rifle.\r\nCan be crafted at Ancient Workbench.",
+    "url": "https://paldb.cc/en/Heavy_Assault_Rifle_Ammo",
+    "cand": "Heavy_Assault_Rifle_Ammo"
+  },
+  "AncientCookingStove": {
+    "desc": "A special kitchen based on ancient technology that can create everything from existing dishes to entirely new recipes.\r\nIt retains heat through fire and completes cooking with manual preparation, allowing it to prepare any kind of cuisine.\r\nIt requires Pals with high-level Kindling and Handiwork suitability.",
+    "url": "https://paldb.cc/en/Ancient_Kitchen",
+    "cand": "Ancient_Kitchen"
+  },
+  "SkillUnlock_VolcanoDragon_Ice": {
+    "desc": "Saddle for safely riding Moldron Cryst.",
+    "url": "https://paldb.cc/en/Moldron_Cryst_Saddle",
+    "cand": "Moldron_Cryst_Saddle"
+  },
+  "Shield_07": {
+    "desc": "A shield created using lost ancient technology.\r\nIt automatically repairs itself after not taking damage for a while. \r\nIts performance is said to be impossible to reproduce in the modern era.",
+    "url": "https://paldb.cc/en/Ancient_Shield",
+    "cand": "Ancient_Shield"
+  },
+  "BaseCampWorkHard03": {
+    "desc": "A monitoring station based on ancient technology, embedded with Red Paldium.\r\nIt issues commands across the entire base through a holographic interface, reducing SAN depletion in Pals.\r\nA special wavelength surrounds the base, keeping Pals calm even in harsh working environments.",
+    "url": "https://paldb.cc/en/Ancient_Monitoring_Stand",
+    "cand": "Ancient_Monitoring_Stand"
+  },
+  "SkillUnlock_ThunderBird_Ice": {
+    "desc": "Saddle for safely riding Beakon Cryst.",
+    "url": "https://paldb.cc/en/Beakon_Cryst_Saddle",
+    "cand": "Beakon_Cryst_Saddle"
+  },
+  "SkyGrenadeLauncherBullet": {
+    "desc": "Ammo for the Tactical Grenade Launcher.\r\nCan be crafted at Ancient Workbench.",
+    "url": "https://paldb.cc/en/Tactical_Grenade_Launcher_Ammo",
+    "cand": "Tactical_Grenade_Launcher_Ammo"
+  },
+  "SkillUnlock_ThiefBird": {
+    "desc": "Saddle for safely riding Roujay.",
+    "url": "https://paldb.cc/en/Roujay_Saddle",
+    "cand": "Roujay_Saddle"
+  },
+  "SkillUnlock_LotusDragon": {
+    "desc": "Saddle for safely riding Ophydia.",
+    "url": "https://paldb.cc/en/Ophydia_Saddle",
+    "cand": "Ophydia_Saddle"
+  },
+  "Ancient_Clinic": {
+    "desc": "A top-tier medical facility that reproduces advanced ancient medical technology.\r\nIt offers significantly greater protective capability than a standard clinic.\r\nBy assigning a Pal with Medicine Production suitability, even bases with harsh working conditions can maintain the highest level of hygiene.",
+    "url": "https://paldb.cc/en/Ancient_Clinic",
+    "cand": "Ancient_Clinic"
+  },
+  "Ancient_MedicalPalBed": {
+    "desc": "A ulitmate Pal Bed made from ancient recovery pod with soft matress.\r\nIt offers one of the highest SAN recovery rates of all Pal beds, quickly relieving fatigue.\r\nIt is the same size as a Large Pal Bed, allowing large Pals to rest comfortably.",
+    "url": "https://paldb.cc/en/Ancient_Pal_Bed",
+    "cand": "Ancient_Pal_Bed"
+  },
+  "PalSphere_Ancient_2": {
+    "desc": "A tool that captures Pals when thrown.\r\nAn ultimate Sphere created as the pinnacle of an ancient civilization, imbued with the power of the World Tree.",
+    "url": "https://paldb.cc/en/Ancient_Sphere",
+    "cand": "Ancient_Sphere"
+  },
+  "WidePenetrateShotgunBullet": {
+    "desc": "Ammo for the Beam Scatter.\r\nCan be crafted at Ancient Workbench.",
+    "url": "https://paldb.cc/en/Beam_Scatter_Ammo",
+    "cand": "Beam_Scatter_Ammo"
+  },
+  "AncientArmorHeat": {
+    "desc": "Refined Ancient Armor.\r\nIts heat resistance has been further enhanced using ancient technology, allowing it to endure scorching environmentsCold Resistance Lv. 2 Heat Resistance Lv. 3 Fire Damage Reduction Lv. 1 Attack Up (S) Lv. 4",
+    "url": "https://paldb.cc/en/Heat-Resistant_Ancient_Armor",
+    "cand": "Heat-Resistant_Ancient_Armor"
+  },
+  "AncientElectricGenerator": {
+    "desc": "A highly efficient power generator restored from lost ancient technology.\r\nIt produces massive amounts of electricity, but is prone to overheating while in operation.\r\nIt requires Pals with high-level Generating Electricity and any level of Watering suitability.",
+    "url": "https://paldb.cc/en/Ancient_Power_Generator",
+    "cand": "Ancient_Power_Generator"
+  },
+  "SkillUnlock_CubeTurtle_Neutral": {
+    "desc": "Saddle for safely riding Tetroise Primo.",
+    "url": "https://paldb.cc/en/Tetroise_Primo_Saddle",
+    "cand": "Tetroise_Primo_Saddle"
+  },
+  "Ancient_Spa": {
+    "desc": "A hot spring built with ancient technology, filled with special water infused with Paldium.\r\nIt offers the highest SAN recovery of all hot springs and also restores Health.\r\nIt is the same size as a standard hot spring, and can fully heal injured Pals.",
+    "url": "https://paldb.cc/en/Ancient_Hot_Spring",
+    "cand": "Ancient_Hot_Spring"
+  },
+  "GasMask": {
+    "desc": "A mask with a special filtration system. \r\nNegates damage taken from corrosive mist.Toxic Gas Immunity",
+    "url": "https://paldb.cc/en/Corrosive_Mist_Mask",
+    "cand": "Corrosive_Mist_Mask"
+  },
+  "Accessory_ExplosionResist": {
+    "desc": "A lightweight yet durable undergarment made from special fibers.\r\nIt nullifies damage from explosions.Explosion Immunity",
+    "url": "https://paldb.cc/en/Explosion-Resistant_Undershirt",
+    "cand": "Explosion-Resistant_Undershirt"
+  },
+  "SkillUnlock_GhostDragon_Fire": {
+    "desc": "Saddle for safely riding Eidrolon Ignis.",
+    "url": "https://paldb.cc/en/Eidrolon_Ignis_Saddle",
+    "cand": "Eidrolon_Ignis_Saddle"
+  },
+  "MultiElectricHatchingPalEggWithBreed": {
+    "desc": "An advanced breeding facility of ancient civilization technology, enclosed in electronic glass.\r\nIt fully automates everything from egg production to incubation at high speed, and increases the inheritance rate of rare skills.\r\nPals are managed through holograms, it requires minimal pasture space.",
+    "url": "https://paldb.cc/en/Ancient_Hatchery",
+    "cand": "Ancient_Hatchery"
+  },
+  "AncientArmorCold": {
+    "desc": "Refined Ancient Armor.\r\nIts cold resistance has been further enhanced using ancient technology, allowing the wearer to maintain their strength even in extreme cold regions.Cold Resistance Lv. 3 Heat Resistance Lv. 2 Ice Damage Reduction Lv. 1 Attack Up (S) Lv. 4",
+    "url": "https://paldb.cc/en/Cold-Resistant_Ancient_Armor",
+    "cand": "Cold-Resistant_Ancient_Armor"
+  },
+  "SkillUnlock_NightBlueHorse_Neutral": {
+    "desc": "Saddle for safely riding Starryon Primo.",
+    "url": "https://paldb.cc/en/Starryon_Primo_Saddle",
+    "cand": "Starryon_Primo_Saddle"
+  },
+  "SkillUnlock_BlueSkyDragon": {
+    "desc": "Saddle for safely riding Shaolong.",
+    "url": "https://paldb.cc/en/Shaolong_Saddle",
+    "cand": "Shaolong_Saddle"
+  },
+  "ElectricArcAssaultRifleBullet": {
+    "desc": "Ammo for the Plasma Rifle.\r\nCan be crafted at Ancient Workbench.",
+    "url": "https://paldb.cc/en/Plasma_Rifle_Ammo",
+    "cand": "Plasma_Rifle_Ammo"
+  },
+  "SkillUnlock_WhiteDeer_Dark": {
+    "desc": "Saddle for safely riding Celesdir Noct.",
+    "url": "https://paldb.cc/en/Celesdir_Noct_Saddle",
+    "cand": "Celesdir_Noct_Saddle"
+  },
+  "AncientArmorWeight": {
+    "desc": "Refined Ancient Armor.\r\nIt is equipped with ancient auxiliary mechanisms, allowing the wearer to carry more supplies.Cold Resistance Lv. 2 Heat Resistance Lv. 2 Max Carrying Capacity Lv. 4 Attack Up (S) Lv. 4",
+    "url": "https://paldb.cc/en/Lightweight_Ancient_Armor",
+    "cand": "Lightweight_Ancient_Armor"
+  },
+  "Supplement": {
+    "desc": "A nutrient-rich Nutrient Tonic that prevents hunger for a period of time. \r\nA concentrated, flavorful blend of nutrients ideal for long journeys.",
+    "url": "https://paldb.cc/en/Nutrient_Tonic",
+    "cand": "Nutrient_Tonic"
+  },
+  "SkillUnlock_DomeArmorDragon": {
+    "desc": "Saddle for safely riding Aegidron.",
+    "url": "https://paldb.cc/en/Aegidron_Saddle",
+    "cand": "Aegidron_Saddle"
+  },
+  "JetDragonStatue": {
+    "desc": "Decorative Jetragon statue.",
+    "url": "https://paldb.cc/en/Jetragon_Statue",
+    "cand": "Jetragon_Statue"
+  },
+  "BeamLauncherBullet": {
+    "desc": "Ammo for the Beam Launcher.\r\nCan be crafted at Ancient Workbench.",
+    "url": "https://paldb.cc/en/Beam_Launcher_Ammo",
+    "cand": "Beam_Launcher_Ammo"
+  },
+  "WingGlider_Fuel": {
+    "desc": "The fuel required to power the Wing Pack.",
+    "url": "https://paldb.cc/en/Wing_Cell",
+    "cand": "Wing_Cell"
+  }
+}

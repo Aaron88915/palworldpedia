@@ -266,7 +266,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_TableSquare_Wood.webp",
-  "id": "furnitureset_1"
+  "id": "furnitureset_1",
+  "description": "Wooden Living Room Furniture Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "FurnitureSet_3",
@@ -274,7 +275,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Counter_Wood.webp",
-  "id": "furnitureset_3"
+  "id": "furnitureset_3",
+  "description": "Wooden Tavern Furniture Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "FurnitureSet_2",
@@ -351,7 +353,8 @@
   "category": "Items",
   "cost": 1,
   "icon": "/images/tech/T_Kitsunebi_icon_normal.webp",
-  "id": "skillunlock_kitsunebi"
+  "id": "skillunlock_kitsunebi",
+  "description": "Harness for holding Foxparks. Activate its Partner Skill to hold Foxparks and attack using it as a flamethrower."
  },
  {
   "slug": "FurnitureSet_9",
@@ -359,7 +362,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Plant01_Plant.webp",
-  "id": "furnitureset_9"
+  "id": "furnitureset_9",
+  "description": "Houseplant Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "BaseCampWorkHard",
@@ -467,7 +471,8 @@
   "category": "Items",
   "cost": 1,
   "icon": "/images/tech/T_itemicon_Ammo_Arrow_Poison.webp",
-  "id": "arrow_poison"
+  "id": "arrow_poison",
+  "description": "Poison Arrows for use with bows. Afflicts target with Poison on contact. Can be crafted at Primitive Workbench."
  },
  {
   "slug": "DefenseWall_Wood",
@@ -502,7 +507,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Light_FirePlace01.webp",
-  "id": "furnitureset_28"
+  "id": "furnitureset_28",
+  "description": "Fireplace Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "BuildableGoddessStatue",
@@ -584,7 +590,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Rug01_Stone.webp",
-  "id": "furnitureset_17"
+  "id": "furnitureset_17",
+  "description": "Carpet Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Product_Ingot_Grade_01_Copper",
@@ -725,7 +732,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Chair01_Stone.webp",
-  "id": "furnitureset_19"
+  "id": "furnitureset_19",
+  "description": "Antique Chair Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Battle_Armor_Grade_02_Fur",
@@ -857,7 +865,8 @@
   "category": "Items",
   "cost": 2,
   "icon": "/images/tech/T_Monkey_Fire_icon_normal.webp",
-  "id": "skillunlock_monkey_fire"
+  "id": "skillunlock_monkey_fire",
+  "description": "Assault rifle made specifically for Tanzee Ignis. Activate its Partner Skill, and Tanzee Ignis will enter gunner mode and begin shooting at nearby enemies."
  },
  {
   "slug": "FurnitureSet_22",
@@ -934,7 +943,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Desk01_Stone.png",
-  "id": "furnitureset_24"
+  "id": "furnitureset_24",
+  "description": "Antique Desk Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Special_PalRankUp",
@@ -985,7 +995,7 @@
   "cost": 1,
   "icon": "/images/tech/T_itemicon_Material_Processed_Wood.png",
   "id": "processed_wood",
-  "description": "Wooden Board is a material."
+  "description": "Planks made from processed wood for easier use. More versatile than raw logs, with a wide variety of uses. Can be crafted at Primitive Workbench."
  },
  {
   "slug": "DisplayCharacter",
@@ -1072,7 +1082,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_BathTub_Stone.webp",
-  "id": "furnitureset_20"
+  "id": "furnitureset_20",
+  "description": "Antique Bath Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "FurnitureSet_16",
@@ -1080,7 +1091,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Mirror01_Stone.png",
-  "id": "furnitureset_16"
+  "id": "furnitureset_16",
+  "description": "Antique Mirror Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Unlock_Picking_Tier1",
@@ -1161,7 +1173,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Piano01_Stone.webp",
-  "id": "furnitureset_15"
+  "id": "furnitureset_15",
+  "description": "Piano Furniture Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "FurnitureSet_30",
@@ -1258,7 +1271,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Toilet01_Stone.png",
-  "id": "furnitureset_25"
+  "id": "furnitureset_25",
+  "description": "Bathroom Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "FurnitureSet_32",
@@ -1266,7 +1280,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Curtain01_Wall_Stone.webp",
-  "id": "furnitureset_32"
+  "id": "furnitureset_32",
+  "description": "Antique High Quality Furniture Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Accessory_Nonkilling",
@@ -1283,7 +1298,8 @@
   "category": "Structures",
   "cost": 2,
   "icon": "/images/tech/T_icon_buildObject_Lab.webp",
-  "id": "lab"
+  "id": "lab",
+  "description": "A facility for conducting research on the various tasks of Pals. By assigning tasks to Pals in this facility, research progresses, granting various benefi…"
  },
  {
   "slug": "SphereModule_Heavy",
@@ -1449,7 +1465,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Sofa01_Stone.webp",
-  "id": "furnitureset_18"
+  "id": "furnitureset_18",
+  "description": "Antique Couch Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "DimensionPalStorage",
@@ -1457,7 +1474,8 @@
   "category": "Structures",
   "cost": 2,
   "icon": "/images/tech/T_icon_buildObject_DimensionPalStorage.webp",
-  "id": "dimensionpalstorage"
+  "id": "dimensionpalstorage",
+  "description": "A facility for storing a large number of captured Pals. Any guild member can deposit or withdraw Pals. If you set it to private, it can serve as your pers…"
  },
  {
   "slug": "Musket",
@@ -1621,7 +1639,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Clock01_Wall_Iron.webp",
-  "id": "furnitureset_23"
+  "id": "furnitureset_23",
+  "description": "Clock Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "FurnitureSet_13",
@@ -1629,7 +1648,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Stool01_Iron.webp",
-  "id": "furnitureset_13"
+  "id": "furnitureset_13",
+  "description": "Metal Chair and Desk Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Homeward",
@@ -2031,7 +2051,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Light_FloorLamp01.png",
-  "id": "furnitureset_29"
+  "id": "furnitureset_29",
+  "description": "Antique Lamp Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Battle_RangeWeapon_SphereLauncher_Once",
@@ -2039,7 +2060,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_itemicon_Weapon_SphereLauncher_Once.webp",
-  "id": "battle_rangeweapon_spherelauncher_once"
+  "id": "battle_rangeweapon_spherelauncher_once",
+  "description": "A launcher that fires spheres. It can capture Pals from a greater distance."
  },
  {
   "slug": "Special_PalSphere_Grade_04",
@@ -2128,7 +2150,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Accessory_UnlockEquipmentSlot_Weapon_01.webp",
-  "id": "unlockequipmentslot_weapon_01"
+  "id": "unlockequipmentslot_weapon_01",
+  "description": "A holster that allows an additional weapon to be equipped. While in possession, it increases weapon equip slots by 1. Carrying one is enough."
  },
  {
   "slug": "Battle_RangeWeapon_HandGun",
@@ -2163,7 +2186,8 @@
   "category": "Structures",
   "cost": 3,
   "icon": "/images/tech/T_icon_buildObject_BaseCampWorkHard02.png",
-  "id": "basecampworkhard02"
+  "id": "basecampworkhard02",
+  "description": "A refined monitoring station with improved materials and structure. In addition to being able to issue work orders, the system also lowers the SAN cost fo…"
  },
  {
   "slug": "Stump",
@@ -2523,7 +2547,8 @@
   "category": "Items",
   "cost": 3,
   "icon": "/images/tech/T_itemicon_Armor_Octavia001_Armor.webp",
-  "id": "octaviaset01"
+  "id": "octaviaset01",
+  "description": "ULTRAKILL Collab Set 1 is a special collaboration cosmetic set. Unlocks at level 3. Unlock and equip to customize your Palworld look."
  },
  {
   "slug": "Battle_RangeWeapon_OldRevolver",
@@ -2711,7 +2736,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Barrel01_Iron.webp",
-  "id": "furnitureset_5"
+  "id": "furnitureset_5",
+  "description": "Metal Barrel Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Accessory_TalentChecker",
@@ -2748,7 +2774,7 @@
   "cost": 2,
   "icon": "/images/tech/T_itemicon_Material_ElectronicCircuit.webp",
   "id": "infra_electroniccircuit",
-  "description": "Circuit Board is a material."
+  "description": "Required to create precision equipment. Can be made with a Production Assembly Line."
  },
  {
   "slug": "CarbonFiber",
@@ -2792,7 +2818,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_TableSide01_Iron.webp",
-  "id": "furnitureset_14"
+  "id": "furnitureset_14",
+  "description": "Ironwood Table Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Accessory_AirDash1",
@@ -2907,7 +2934,8 @@
   ],
   "product": "Moldron Saddle 1",
   "unlockLevel": 36,
-  "id": "skillunlock_volcanodragon"
+  "id": "skillunlock_volcanodragon",
+  "description": "Saddle for safely riding Moldron. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 2."
  },
  {
   "slug": "Special_ElectricHatchingPalEgg",
@@ -3019,7 +3047,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_CableCoil01_Iron.webp",
-  "id": "furnitureset_31"
+  "id": "furnitureset_31",
+  "description": "Outdoor Furniture Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Product_CoalPit",
@@ -3122,7 +3151,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Sofa01_Iron.png",
-  "id": "furnitureset_7"
+  "id": "furnitureset_7",
+  "description": "Leather Chair Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Battle_RangeWeapon_SphereLauncher",
@@ -3389,7 +3419,8 @@
   "category": "Structures",
   "cost": 4,
   "icon": "/images/tech/T_icon_buildObject_GuildChest.webp",
-  "id": "guildchest"
+  "id": "guildchest",
+  "description": "A chest that can instantly send and receive items through subspace. The items inside are shared across all bases where it is placed."
  },
  {
   "slug": "Battle_RangeWeapon_CompoundBow",
@@ -3567,7 +3598,8 @@
   "category": "Items",
   "cost": 2,
   "icon": "/images/tech/T_itemicon_Material_Bio_Battery.webp",
-  "id": "bio_battery"
+  "id": "bio_battery",
+  "description": "A device that stores bio-energy as electrical power. Used for equipment requiring high energy density. Can be crafted at Production Assembly Line II."
  },
  {
   "slug": "Katana",
@@ -3681,7 +3713,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_LazyDragon_icon_normal.webp",
-  "id": "skillunlock_lazydragon"
+  "id": "skillunlock_lazydragon",
+  "description": "Makes Relaxaurus fire a missile launcher when ridden. Unlocks at level 4."
  },
  {
   "slug": "SkillUnlock_Yeti",
@@ -3770,7 +3803,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_Light_LightPole01.png",
-  "id": "furnitureset_27"
+  "id": "furnitureset_27",
+  "description": "Street Lamp Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "FurnitureSet_26",
@@ -3778,7 +3812,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_GoalSoccer_Iron.webp",
-  "id": "furnitureset_26"
+  "id": "furnitureset_26",
+  "description": "Amusement Furniture Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Product_SulfurPit",
@@ -3858,7 +3893,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_SignExit_Ceiling_Iron.png",
-  "id": "furnitureset_8"
+  "id": "furnitureset_8",
+  "description": "Emergency Exit Sign Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "Battle_Armor_Grade_04_Steal_Heat",
@@ -3901,7 +3937,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_LazyDragon_Electric_icon_normal.webp",
-  "id": "skillunlock_lazydragon_electric"
+  "id": "skillunlock_lazydragon_electric",
+  "description": "Makes Relaxaurus Lux fire a missile launcher when ridden. Unlocks at level 4."
  },
  {
   "slug": "SkillUnlock_GrassGolem",
@@ -3909,7 +3946,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_GrassGolem_icon_normal.webp",
-  "id": "skillunlock_grassgolem"
+  "id": "skillunlock_grassgolem",
+  "description": "Saddle for safely riding Dualith. Grants the ability to fire a powerful Grass-element laser while mounted."
  },
  {
   "slug": "SkillUnlock_CubeTurtle",
@@ -3917,7 +3955,8 @@
   "category": "Items",
   "cost": 3,
   "icon": "/images/tech/T_CubeTurtle_icon_normal.webp",
-  "id": "skillunlock_cubeturtle"
+  "id": "skillunlock_cubeturtle",
+  "description": "Saddle for safely riding Tetroise. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 3."
  },
  {
   "slug": "FurnitureSet_11",
@@ -3925,7 +3964,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_TrafficCone01_Iron.webp",
-  "id": "furnitureset_11"
+  "id": "furnitureset_11",
+  "description": "Traffic Control Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "MultiHatchingPalEgg",
@@ -3942,7 +3982,8 @@
   "category": "Structures",
   "cost": 5,
   "icon": "/images/tech/T_icon_buildObject_BaseCampItemDispenser.webp",
-  "id": "basecampitemdispenser"
+  "id": "basecampitemdispenser",
+  "description": "A device that lets you freely access items from all chests in the base."
  },
  {
   "slug": "HugeKitchen",
@@ -3977,7 +4018,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_TrafficSign01_Iron.png",
-  "id": "furnitureset_12"
+  "id": "furnitureset_12",
+  "description": "Road Sign Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "FurnitureSet_10",
@@ -3985,7 +4027,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_TrafficBarricade01_Iron.webp",
-  "id": "furnitureset_10"
+  "id": "furnitureset_10",
+  "description": "Barricade Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "GrapplingGun4",
@@ -4038,7 +4081,7 @@
   "cost": 2,
   "icon": "/images/tech/T_itemicon_Material_Computer.webp",
   "id": "computer",
-  "description": "Computer is a Material."
+  "description": "A component used in the control of automated equipment and precision machinery. It."
  },
  {
   "slug": "Battle_Defense_Missile",
@@ -4196,7 +4239,8 @@
   "category": "Items",
   "cost": 3,
   "icon": "/images/tech/T_BadCatgirl_icon_normal.webp",
-  "id": "skillunlock_badcatgirl"
+  "id": "skillunlock_badcatgirl",
+  "description": "A shotgun for Nyafia to hold. Activate its Partner Skill, and Nyafia will unleash a barrage of shotgun blasts at nearby enemies."
  },
  {
   "slug": "Product_QuartzPit",
@@ -4274,7 +4318,8 @@
   "category": "Items",
   "cost": 3,
   "icon": "/images/tech/T_SumoDog_icon_normal.webp",
-  "id": "skillunlock_sumodog"
+  "id": "skillunlock_sumodog",
+  "description": "Saddle for safely riding Bulldosu. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 3."
  },
  {
   "slug": "Unlock_Picking_Tier3",
@@ -4291,7 +4336,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_itemicon_Weapon_LaserMiningTool.webp",
-  "id": "laserminingtool"
+  "id": "laserminingtool",
+  "description": "A portable plasma cutter that concentrates and emits plasma energy. It supports a wide range of uses, from ore excavation to tree cutting. Its high-output…"
  },
  {
   "slug": "Battle_Armor_Grade_05_Plastic_Cold",
@@ -4360,7 +4406,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Accessory_UnlockEquipmentSlot_Weapon_02.webp",
-  "id": "unlockequipmentslot_weapon_02"
+  "id": "unlockequipmentslot_weapon_02",
+  "description": "A holster that lets you equip additional weapons. When in inventory, adds an extra weapon slot. Carrying one is enough."
  },
  {
   "slug": "Spear_ForestBoss",
@@ -4397,7 +4444,8 @@
   "category": "Items",
   "cost": 3,
   "icon": "/images/tech/T_IceSeal_Ground_icon_normal.webp",
-  "id": "skillunlock_iceseal_ground"
+  "id": "skillunlock_iceseal_ground",
+  "description": "Saddle for safely riding Polapup Terra. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 3."
  },
  {
   "slug": "SkillUnlock_KingBahamut_Dragon",
@@ -4474,7 +4522,8 @@
   "category": "Structures",
   "cost": 5,
   "icon": "/images/tech/T_icon_buildObject_MedicalPalBed_05.png",
-  "id": "medicalpalbed_05"
+  "id": "medicalpalbed_05",
+  "description": "A healing pod for Pals. Used when Pals are injured or to rest at night. Thanks to technological advancements, the healing amount has increased."
  },
  {
   "slug": "FurnitureTree_Cherry",
@@ -4482,7 +4531,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_FurnitureTree01_Cherry.webp",
-  "id": "furnituretree_cherry"
+  "id": "furnituretree_cherry",
+  "description": "Faux Cherry Blossoms Set is a decorative furniture set for base building. Unlocks at level 1. Place to customize your Palworld base interior."
  },
  {
   "slug": "OctaviaSet02",
@@ -4490,7 +4540,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Armor_Octavia002_Armor.webp",
-  "id": "octaviaset02"
+  "id": "octaviaset02",
+  "description": "ULTRAKILL Collab Set 2 is a special collaboration cosmetic set. Unlocks at level 5. Unlock and equip to customize your Palworld look."
  },
  {
   "slug": "SFBow",
@@ -4624,7 +4675,8 @@
   "category": "Structures",
   "cost": 5,
   "icon": "/images/tech/T_icon_buildObject_MultiElectricHatchingPalEgg.png",
-  "id": "multielectrichatchingpalegg"
+  "id": "multielectrichatchingpalegg",
+  "description": "Device for incubating Pal eggs. While power supply is required, it allows multiple eggs to be incubated simultaneously at the optimal temperature."
  },
  {
   "slug": "ItemChest_04",
@@ -4659,7 +4711,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Armor_SFArmor.webp",
-  "id": "sfarmor"
+  "id": "sfarmor",
+  "description": "Armor made of Hexolite. Possesses overwhelming durability and defense.Cold Resistance Lv. 2 Heat Resistance Lv. 2 Attack Up (S) Lv. 4."
  },
  {
   "slug": "Thermal_Core",
@@ -4667,7 +4720,8 @@
   "category": "Items",
   "cost": 3,
   "icon": "/images/tech/T_itemicon_Material_Thermal_Core.webp",
-  "id": "thermal_core"
+  "id": "thermal_core",
+  "description": "A high-temperature reaction core containing vast thermal energy. Used as a power component in advanced devices. Can be crafted at Production Assembly Line…"
  },
  {
   "slug": "SkillUnlock_Umihebi_Fire",
@@ -4975,7 +5029,8 @@
   "category": "Structures",
   "cost": 3,
   "icon": "/images/tech/T_icon_buildObject_Spa3.webp",
-  "id": "spa3"
+  "id": "spa3",
+  "description": "Facility where Pals on base can rest. Its calming, traditional Japanese design offers an extra boost to SAN recovery."
  },
  {
   "slug": "SkillUnlock_Kirin_Ice",
@@ -4983,7 +5038,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_Kirin_Ice_icon_normal.webp",
-  "id": "skillunlock_kirin_ice"
+  "id": "skillunlock_kirin_ice",
+  "description": "Saddle for safely riding Univolt Cryst. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "SkillUnlock_PoseidonOrca",
@@ -5000,7 +5056,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_IceHorseStatue.webp",
-  "id": "icehorsestatue"
+  "id": "icehorsestatue",
+  "description": "Decorative Frostallion statue. Place it in your base to add visual flair to your Palworld home. Unlocks at level 1."
  },
  {
   "slug": "Battle_RangeWeapon_RocketLauncher",
@@ -5061,7 +5118,8 @@
   "category": "Items",
   "cost": 3,
   "icon": "/images/tech/T_KingSunfish_icon_normal.webp",
-  "id": "skillunlock_kingsunfish"
+  "id": "skillunlock_kingsunfish",
+  "description": "Saddle for safely riding Solmora. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 3."
  },
  {
   "slug": "Accessory_AirDash3",
@@ -5087,7 +5145,8 @@
   "category": "Items",
   "cost": 3,
   "icon": "/images/tech/T_itemicon_Material_SkyislandIngot.webp",
-  "id": "skyislandingot"
+  "id": "skyislandingot",
+  "description": "An ancient metal refined from ore that slumbers in Sunreach. A rare processed material, forming the foundation of high-grade equipment and structures. Can…"
  },
  {
   "slug": "SkillUnlock_KingSunfish_Thunder",
@@ -5095,7 +5154,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_KingSunfish_Thunder_icon_normal.webp",
-  "id": "skillunlock_kingsunfish_thunder"
+  "id": "skillunlock_kingsunfish_thunder",
+  "description": "Saddle for safely riding Solmora Lux. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "SkillUnlock_ThunderFluffyBird",
@@ -5103,7 +5163,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_ThunderFluffyBird_icon_normal.webp",
-  "id": "skillunlock_thunderfluffybird"
+  "id": "skillunlock_thunderfluffybird",
+  "description": "Saddle for safely riding Dynamoff. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "SkillUnlock_DarkMechaDragon",
@@ -5120,7 +5181,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_itemicon_Essential_WaterBuildKit.webp",
-  "id": "waterbuildkit"
+  "id": "waterbuildkit",
+  "description": "Construction kit that allows foundations to be placed on water. Unlocks at level 4."
  },
  {
   "slug": "PalSphere_Ancient_1",
@@ -5146,7 +5208,8 @@
   "category": "Items",
   "cost": 2,
   "icon": "/images/tech/T_itemicon_Ammo_SkyBowArrow.webp",
-  "id": "skybowarrow"
+  "id": "skybowarrow",
+  "description": "Enhanced arrows for shooting with Mechanical Bow. Can be crafted at Ancient Workbench."
  },
  {
   "slug": "AIcore",
@@ -5154,7 +5217,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_itemicon_Material_AIcore.webp",
-  "id": "aicore"
+  "id": "aicore",
+  "description": "A core component essential to cutting-edge devices, enabling complex decision-making and autonomous control. Can be crafted at Advanced Workshop."
  },
  {
   "slug": "AncientWorkBench",
@@ -5199,7 +5263,8 @@
   "category": "Items",
   "cost": 2,
   "icon": "/images/tech/T_itemicon_Ammo_SkySubmachineGunBullet.webp",
-  "id": "skysubmachinegunbullet"
+  "id": "skysubmachinegunbullet",
+  "description": "Ammo for the Combat SMG. Can be crafted at Ancient Workbench. Unlocks at level 2."
  },
  {
   "slug": "AncientArmor",
@@ -5207,7 +5272,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Armor_AncientArmor.webp",
-  "id": "ancientarmor"
+  "id": "ancientarmor",
+  "description": "Ancient armor forged from Soralite Ingot. Crafted with the essence of a lost civilization, it boasts overwhelming defensive power and is capable of withst…"
  },
  {
   "slug": "AncientHelmet",
@@ -5215,7 +5281,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Armor_AncientHelmet.webp",
-  "id": "ancienthelmet"
+  "id": "ancienthelmet",
+  "description": "An ancient helmet forged from Soralite Ingot. It is imbued with wisdom passed down through the ages, protecting its wearer with unwavering strength. Its d…"
  },
  {
   "slug": "SkillUnlock_GhostDragon",
@@ -5241,7 +5308,8 @@
   "category": "Items",
   "cost": 2,
   "icon": "/images/tech/T_itemicon_Ammo_SkyShotgunBullet.webp",
-  "id": "skyshotgunbullet"
+  "id": "skyshotgunbullet",
+  "description": "Ammo for the Prototype Shotgun. Can be crafted at Ancient Workbench. Unlocks at level 2."
  },
  {
   "slug": "SphereModule_Homing",
@@ -5267,7 +5335,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_GrassGolem_Dark_icon_normal.webp",
-  "id": "skillunlock_grassgolem_dark"
+  "id": "skillunlock_grassgolem_dark",
+  "description": "Saddle for safely riding Dualith Noct. Grants the ability to fire a powerful Dark-element laser while mounted."
  },
  {
   "slug": "SkyAssaultRifle",
@@ -5284,7 +5353,8 @@
   "category": "Items",
   "cost": 2,
   "icon": "/images/tech/T_itemicon_Ammo_SkyAssaultRifleBullet.webp",
-  "id": "skyassaultriflebullet"
+  "id": "skyassaultriflebullet",
+  "description": "Ammo for the Heavy Assault Rifle. Can be crafted at Ancient Workbench."
  },
  {
   "slug": "AncientCookingStove",
@@ -5292,7 +5362,8 @@
   "category": "Structures",
   "cost": 4,
   "icon": "/images/tech/T_icon_buildObject_AncientCookingStove.webp",
-  "id": "ancientcookingstove"
+  "id": "ancientcookingstove",
+  "description": "A special kitchen based on ancient technology that can create everything from existing dishes to entirely new recipes. It retains heat through fire and co…"
  },
  {
   "slug": "SkillUnlock_LegendDeer",
@@ -5309,7 +5380,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_VolcanoDragon_Ice_icon_normal.webp",
-  "id": "skillunlock_volcanodragon_ice"
+  "id": "skillunlock_volcanodragon_ice",
+  "description": "Saddle for safely riding Moldron Cryst. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "Accessory_JumpCount_Increase2",
@@ -5326,7 +5398,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Armor_Shield_07.webp",
-  "id": "shield_07"
+  "id": "shield_07",
+  "description": "A shield created using lost ancient technology. It automatically repairs itself after not taking damage for a while. Its performance is said to be impossi…"
  },
  {
   "slug": "BaseCampWorkHard03",
@@ -5334,7 +5407,8 @@
   "category": "Structures",
   "cost": 5,
   "icon": "/images/tech/T_icon_buildObject_BaseCampWorkHard03.png",
-  "id": "basecampworkhard03"
+  "id": "basecampworkhard03",
+  "description": "A monitoring station based on ancient technology, embedded with Red Paldium. It issues commands across the entire base through a holographic interface, re…"
  },
  {
   "slug": "Farm_SkillFruits",
@@ -5360,7 +5434,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_ThunderBird_Ice_icon_normal.webp",
-  "id": "skillunlock_thunderbird_ice"
+  "id": "skillunlock_thunderbird_ice",
+  "description": "Saddle for safely riding Beakon Cryst. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "SkillUnlock_IceNarwhal_Fire",
@@ -5386,7 +5461,8 @@
   "category": "Items",
   "cost": 2,
   "icon": "/images/tech/T_itemicon_Ammo_SkyGrenadeLauncherBullet.webp",
-  "id": "skygrenadelauncherbullet"
+  "id": "skygrenadelauncherbullet",
+  "description": "Ammo for the Tactical Grenade Launcher. Can be crafted at Ancient Workbench."
  },
  {
   "slug": "SkillUnlock_ThiefBird",
@@ -5394,7 +5470,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_ThiefBird_icon_normal.webp",
-  "id": "skillunlock_thiefbird"
+  "id": "skillunlock_thiefbird",
+  "description": "Saddle for safely riding Roujay. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "SkillUnlock_LotusDragon",
@@ -5402,7 +5479,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_LotusDragon_icon_normal.webp",
-  "id": "skillunlock_lotusdragon"
+  "id": "skillunlock_lotusdragon",
+  "description": "Saddle for safely riding Ophydia. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "SkyIslandOrePit",
@@ -5437,7 +5515,8 @@
   "category": "Structures",
   "cost": 4,
   "icon": "/images/tech/T_icon_buildObject_Ancient_Clinic.webp",
-  "id": "ancient_clinic"
+  "id": "ancient_clinic",
+  "description": "A top-tier medical facility that reproduces advanced ancient medical technology. It offers significantly greater protective capability than a standard cli…"
  },
  {
   "slug": "Ancient_MedicalPalBed",
@@ -5445,7 +5524,8 @@
   "category": "Structures",
   "cost": 3,
   "icon": "/images/tech/T_icon_buildObject_Ancient_MedicalPalBed.webp",
-  "id": "ancient_medicalpalbed"
+  "id": "ancient_medicalpalbed",
+  "description": "A ulitmate Pal Bed made from ancient recovery pod with soft matress. It offers one of the highest SAN recovery rates of all Pal beds, quickly relieving fa…"
  },
  {
   "slug": "SkillUnlock_SnowTigerBeastman",
@@ -5471,7 +5551,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_PalSphere_Ancient_2.webp",
-  "id": "palsphere_ancient_2"
+  "id": "palsphere_ancient_2",
+  "description": "A tool that captures Pals when thrown. An ultimate Sphere created as the pinnacle of an ancient civilization, imbued with the power of the World Tree."
  },
  {
   "slug": "AncientRelicRecycler",
@@ -5506,7 +5587,8 @@
   "category": "Items",
   "cost": 2,
   "icon": "/images/tech/T_itemicon_Ammo_WidePenetrateShotgunBullet.png",
-  "id": "widepenetrateshotgunbullet"
+  "id": "widepenetrateshotgunbullet",
+  "description": "Ammo for the Beam Scatter. Can be crafted at Ancient Workbench. Unlocks at level 2."
  },
  {
   "slug": "AncientArmorHeat",
@@ -5514,7 +5596,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Armor_AncientArmorHeat.webp",
-  "id": "ancientarmorheat"
+  "id": "ancientarmorheat",
+  "description": "Refined Ancient Armor. Its heat resistance has been further enhanced using ancient technology, allowing it to endure scorching environmentsCold Resistance…"
  },
  {
   "slug": "AncientElectricGenerator",
@@ -5522,7 +5605,8 @@
   "category": "Structures",
   "cost": 5,
   "icon": "/images/tech/T_icon_buildObject_AncientElectricGenerator.png",
-  "id": "ancientelectricgenerator"
+  "id": "ancientelectricgenerator",
+  "description": "A highly efficient power generator restored from lost ancient technology. It produces massive amounts of electricity, but is prone to overheating while in…"
  },
  {
   "slug": "SkillUnlock_CubeTurtle_Neutral",
@@ -5530,7 +5614,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_CubeTurtle_Neutral_icon_normal.webp",
-  "id": "skillunlock_cubeturtle_neutral"
+  "id": "skillunlock_cubeturtle_neutral",
+  "description": "Saddle for safely riding Tetroise Primo. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "Ancient_Spa",
@@ -5538,7 +5623,8 @@
   "category": "Structures",
   "cost": 5,
   "icon": "/images/tech/T_icon_buildObject_Ancient_Spa.webp",
-  "id": "ancient_spa"
+  "id": "ancient_spa",
+  "description": "A hot spring built with ancient technology, filled with special water infused with Paldium. It offers the highest SAN recovery of all hot springs and also…"
  },
  {
   "slug": "GasMask",
@@ -5546,7 +5632,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Accessory_GasMask.webp",
-  "id": "gasmask"
+  "id": "gasmask",
+  "description": "A mask with a special filtration system. Negates damage taken from corrosive mist.Toxic Gas Immunity."
  },
  {
   "slug": "Accessory_ExplosionResist",
@@ -5554,7 +5641,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Accessory_ExplosionResist.png",
-  "id": "accessory_explosionresist"
+  "id": "accessory_explosionresist",
+  "description": "A lightweight yet durable undergarment made from special fibers. It nullifies damage from explosions.Explosion Immunity."
  },
  {
   "slug": "SkillUnlock_GhostDragon_Fire",
@@ -5562,7 +5650,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_GhostDragon_Fire_icon_normal.webp",
-  "id": "skillunlock_ghostdragon_fire"
+  "id": "skillunlock_ghostdragon_fire",
+  "description": "Saddle for safely riding Eidrolon Ignis. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 5."
  },
  {
   "slug": "MultiElectricHatchingPalEggWithBreed",
@@ -5570,7 +5659,8 @@
   "category": "Structures",
   "cost": 8,
   "icon": "/images/tech/T_icon_buildObject_MultiElectricHatchingPalEggWithBreed.png",
-  "id": "multielectrichatchingpaleggwithbreed"
+  "id": "multielectrichatchingpaleggwithbreed",
+  "description": "An advanced breeding facility of ancient civilization technology, enclosed in electronic glass. It fully automates everything from egg production to incub…"
  },
  {
   "slug": "DroneLauncher",
@@ -5587,7 +5677,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Armor_AncientArmorCold.webp",
-  "id": "ancientarmorcold"
+  "id": "ancientarmorcold",
+  "description": "Refined Ancient Armor. Its cold resistance has been further enhanced using ancient technology, allowing the wearer to maintain their strength even in extr…"
  },
  {
   "slug": "SkillUnlock_NightBlueHorse_Neutral",
@@ -5595,7 +5686,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_NightBlueHorse_Neutral_icon_normal.webp",
-  "id": "skillunlock_nightbluehorse_neutral"
+  "id": "skillunlock_nightbluehorse_neutral",
+  "description": "Saddle for safely riding Starryon Primo. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "SkillUnlock_BlueSkyDragon",
@@ -5603,7 +5695,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_BlueSkyDragon_icon_normal.webp",
-  "id": "skillunlock_blueskydragon"
+  "id": "skillunlock_blueskydragon",
+  "description": "Saddle for safely riding Shaolong. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "ElectricArcAssaultRifle",
@@ -5620,7 +5713,8 @@
   "category": "Items",
   "cost": 1,
   "icon": "/images/tech/T_itemicon_Ammo_ElectricArcAssaultRifleBullet.png",
-  "id": "electricarcassaultriflebullet"
+  "id": "electricarcassaultriflebullet",
+  "description": "Ammo for the Plasma Rifle. Can be crafted at Ancient Workbench. Unlocks at level 1."
  },
  {
   "slug": "AncientMultiProduct",
@@ -5646,7 +5740,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_WhiteDeer_Dark_icon_normal.webp",
-  "id": "skillunlock_whitedeer_dark"
+  "id": "skillunlock_whitedeer_dark",
+  "description": "Saddle for safely riding Celesdir Noct. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "AncientArmorWeight",
@@ -5654,7 +5749,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Armor_AncientArmorWeight.webp",
-  "id": "ancientarmorweight"
+  "id": "ancientarmorweight",
+  "description": "Refined Ancient Armor. It is equipped with ancient auxiliary mechanisms, allowing the wearer to carry more supplies.Cold Resistance Lv. 2 Heat Resistance…"
  },
  {
   "slug": "Supplement",
@@ -5662,7 +5758,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_itemicon_food_Supplement.webp",
-  "id": "supplement"
+  "id": "supplement",
+  "description": "A nutrient-rich Nutrient Tonic that prevents hunger for a period of time. A concentrated, flavorful blend of nutrients ideal for long journeys."
  },
  {
   "slug": "SkillUnlock_DomeArmorDragon",
@@ -5670,7 +5767,8 @@
   "category": "Items",
   "cost": 4,
   "icon": "/images/tech/T_DomeArmorDragon_icon_normal.webp",
-  "id": "skillunlock_domearmordragon"
+  "id": "skillunlock_domearmordragon",
+  "description": "Saddle for safely riding Aegidron. Equip on the Pal to ride it and activate its Partner Skill in combat and travel. Unlocks at level 4."
  },
  {
   "slug": "SkillUnlock_JetDragon",
@@ -5687,7 +5785,8 @@
   "category": "Structures",
   "cost": 1,
   "icon": "/images/tech/T_icon_buildObject_JetDragonStatue.webp",
-  "id": "jetdragonstatue"
+  "id": "jetdragonstatue",
+  "description": "Decorative Jetragon statue. Craftable Palworld tech with full stats and required materials."
  },
  {
   "slug": "BeamLauncher",
@@ -5704,7 +5803,8 @@
   "category": "Items",
   "cost": 2,
   "icon": "/images/tech/T_itemicon_Ammo_BeamLauncherBullet.png",
-  "id": "beamlauncherbullet"
+  "id": "beamlauncherbullet",
+  "description": "Ammo for the Beam Launcher. Can be crafted at Ancient Workbench. Unlocks at level 2."
  },
  {
   "slug": "WingGlider_Fuel",
@@ -5712,7 +5812,8 @@
   "category": "Items",
   "cost": 5,
   "icon": "/images/tech/T_itemicon_Material_WingGlider_Fuel.webp",
-  "id": "wingglider_fuel"
+  "id": "wingglider_fuel",
+  "description": "The fuel required to power the Wing Pack. Craft to refill your glider's fuel reserves for extended aerial travel. Unlocks at level 5."
  },
  {
   "slug": "WingGlider",
