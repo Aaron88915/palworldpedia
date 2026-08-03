@@ -1,41 +1,145 @@
 ﻿---
 import Layout from '@layouts/Layout.astro';
 import AdSlot from '@components/AdSlot.astro';
+import { t } from '@i18n/utils';
+const lang = 'zh';
+
+const guides = [
+  {
+    slug: 'beginner-guide',
+    icon: '🎮',
+    title: '新手入门攻略',
+    desc: '0-10 级全流程：开局选帕、建基地、配种、第一次 BOSS 战',
+    keywords: 'Palworld 新手 入门 攻略 教程',
+  },
+  {
+    slug: 'breeding-guide',
+    icon: '🧬',
+    title: '配种图鉴全攻略',
+    desc: '287×287 完整配种矩阵 + 独家配方 + 最短路径算法',
+    keywords: 'Palworld 配种 繁殖 计算器 配方',
+  },
+  {
+    slug: 'tech-tree-guide',
+    icon: '🔬',
+    title: '科技树升级路线',
+    desc: '587 个科技按必点 / 推荐 / 跳过分组，前 50 级最优顺序',
+    keywords: 'Palworld 科技 升级 优先级 路线',
+  },
+  {
+    slug: 'boss-guide',
+    icon: '⚔️',
+    title: '全 BOSS 打法攻略',
+    desc: '5 座塔主 + 野外 BOSS + Sakurajima + Feybreak 全打法',
+    keywords: 'Palworld BOSS 塔主 打法 配队',
+  },
+  {
+    slug: 'base-building-guide',
+    icon: '🏠',
+    title: '基地布局指南',
+    desc: '电力计算、3 区分离、产线规划、多基地策略',
+    keywords: 'Palworld 基地 布局 电力 计算',
+  },
+];
 ---
 
 <Layout
-  title="攻略合集 - Palworld 中文攻略"
-  description="Palworld 中文攻略合集 - 新手入门、BOSS 打法、基地建设、电力计算、稀有帕鲁获取、配种技巧等玩家必备实用攻略合集"
+  title={t('guides.title', lang)}
+  description="Palworld 中文攻略合集 - 新手入门、配种图鉴、科技树、BOSS 攻略、基地布局。玩家必备的 5 篇核心长文攻略。"
 >
   <header class="page-header">
-    <h1>📚 攻略合集</h1>
-    <p class="text-secondary">新手入门 · BOSS 攻略 · 基地建设 · 稀有帕鲁</p>
+    <h1>📚 Palworld 攻略合集</h1>
+    <p class="text-secondary">新手入门 · 配种图鉴 · 科技树 · BOSS 攻略 · 基地布局</p>
   </header>
 
   <AdSlot position="inline" />
 
-  <div class="coming-soon">
-    <div class="coming-soon-icon">📝</div>
-    <h2>攻略内容准备中</h2>
-    <p class="text-secondary mt-1">我们正在撰写高质量的 Palworld 中文攻略，涵盖所有玩家关心的主题。</p>
+  <div class="guides-grid">
+    {guides.map(g => (
+      <a href={`/guides/${g.slug}/`} class="guide-card">
+        <div class="guide-icon">{g.icon}</div>
+        <h2>{g.title}</h2>
+        <p class="guide-desc">{g.desc}</p>
+        <span class="guide-keywords">关键词：{g.keywords}</span>
+      </a>
+    ))}
   </div>
+
+  <AdSlot position="inline" />
+
+  <section class="tools-section">
+    <h2>🔧 配套工具</h2>
+    <ul class="tools-list">
+      <li><a href="/pals/">帕鲁图鉴</a> - 288 只帕鲁的详细属性、获取、用途</li>
+      <li><a href="/breeding/">配种计算器</a> - 4 种查询模式，40972 条配种边</li>
+      <li><a href="/tech-tree/">科技树全图</a> - 587 个科技 + 描述 + 材料</li>
+      <li><a href="/calculator/power/">电力计算器</a> - 选建筑秒出电力需求</li>
+    </ul>
+  </section>
 </Layout>
 
 <style>
   .page-header {
     margin-bottom: 1.5rem;
   }
-
-  .coming-soon {
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  .guide-card {
+    display: block;
     background: var(--bg-secondary);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
-    padding: 3rem 1.5rem;
-    text-align: center;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, border-color 0.2s;
   }
-
-  .coming-soon-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  .guide-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+  }
+  .guide-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .guide-card h2 {
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
+    color: var(--text-primary);
+  }
+  .guide-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+  }
+  .guide-keywords {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-tertiary, #888);
+    margin-top: 0.5rem;
+  }
+  .tools-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+  }
+  .tools-section h2 {
+    margin: 0 0 0.8rem;
+  }
+  .tools-list {
+    list-style: none;
+    padding: 0;
+  }
+  .tools-list li {
+    padding: 0.4rem 0;
+  }
+  .tools-list a {
+    color: var(--accent);
+    text-decoration: underline;
   }
 </style>
