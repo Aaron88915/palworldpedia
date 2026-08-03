@@ -1,17 +1,36 @@
-feat: tier list page + cross-linking (pal<->tech, pal<->breeding)
+fix: repair 45 broken internal links in guide pages
 
-Tier List:
-- /tier-list/ (zh) and /en/tier-list/ (en)
-- 287 pals scored on 4 axes: rarity 40% + combat 30% + work 15% + breed 15%
-- 5 tiers: S (6) / A (38) / B (178) / C (63) / D (1)
-- Type filter, color-coded tier badges, click-through to pal detail
-- Added to nav: '强度排行' / 'Tier List'
-- Data: src/data/pal-tiers.json (66KB)
+Found via full link audit on 5 ZH + 5 EN guides.
+Each broken /pals/ or /tech-tree/ link was 404ing.
 
-Cross-linking:
-- Pal detail pages: 'Breeding combo' CTA with /breeding/?p1=ID and ?p2=ID
-- Tech detail pages: 'Companion Tools' CTA linking to /pals/, /tier-list/, /guides/tech-tree-guide/
-- Both ZH and EN versions updated
-- Added 2-3 internal links per detail page to 290 pal pages + 587 tech pages
+Broken -> fixed:
+  ZH:
+  /tech-tree/ranch                  -> /tech-tree/monsterfarm
+  /tech-tree/cloth                  -> /tech-tree/battle_cloth
+  /tech-tree/pal_sphere             -> /tech-tree/special_palsphere_grade_01
+  /tech-tree/metalworkbench         -> /tech-tree/product_factory_hard_grade_01
+  /tech-tree/weaponworkbench_grade_02 -> /tech-tree/product_weaponfactory_dirty_grade_01
+  /tech-tree/palbox_grade_02        -> /tech-tree/palbox
+  /tech-tree/coldoutfit             -> /tech-tree/battle_armor_grade_01_cloth_cold
+  /tech-tree/assaultrifle_grade_03  -> /tech-tree/battle_rangeweapon_assaultrifle
+  /tech-tree/rocketlauncher         -> /tech-tree/battle_rangeweapon_rocketlauncher
+  /tech-tree/pal-metal-armor        -> /tech-tree/battle_armor_grade_04_steal_cold
+  /tech-tree/megalasphereline       -> /tech-tree/special_spherefactory_black_grade_02
+  /tech-tree/electric_assembly_line -> /tech-tree/product_factory_hard_grade_02
+  /tech-tree/refiningforge          -> /tech-tree/product_ingot_grade_03_steal
+  /tech-tree/planting               -> /tech-tree/product_farm_berries
+  /tech-tree/electric_fence         -> removed (no such tech)
+  /pals/zoe-and-chillet             -> /pals/chillet
+  /pals/orpalka                     -> /pals/jormuntide (closest water-dragon boss)
+  /pals/silveon                     -> /pals/silvance (closest silver Pal)
+  /pals/astral-mountain-boss        -> removed
+  /pals/feybreak-boss               -> removed
 
-Build: 1784 pages (+2), 29s, 0 errors.
+  EN: same 19 broken links (mirror fixes with /en/ prefix)
+
+Tools added:
+- scripts/check-guide-links-v2.py (link audit, run after edits)
+- scripts/find-actual-slugs.py (find correct slugs from data)
+- scripts/fix-guide-links-v2.py (apply fixes)
+
+Build: 1784 pages, 0 errors, 0 broken links.
