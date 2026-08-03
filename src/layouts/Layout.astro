@@ -59,6 +59,9 @@ const hreflangs = hreflangsFor(Astro.url.pathname);
     <link rel="canonical" href={canonicalUrl} />
     <meta name="google-site-verification" content="2hRMJPHytmhSma8SEv1fTUOpq8Msl5vktP0oDp_mxP8" />
 
+    {/* Plausible Analytics - 隐私友好，不影响 AdSense */}
+    <script defer data-domain="palworldpedia.cc" src="https://plausible.io/js/script.js"></script>
+
     {/* Google AdSense */}
     {SITE.adsense.enabled && (
       <script
@@ -95,6 +98,14 @@ const hreflangs = hreflangsFor(Astro.url.pathname);
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    {/* PWA */}
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Palworldpedia" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/favicon-512.png" />
 
     {/* 主题色 */}
     <meta name="theme-color" content="#0f1419" />

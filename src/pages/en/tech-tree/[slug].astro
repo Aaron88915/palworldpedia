@@ -27,11 +27,31 @@ const related = allTechs
 
 const categoryLabel = tech.category === 'Structures' ? t('tech.categoryStructures', lang) : t('tech.categoryItems', lang);
 const hasDetail = !!(tech.description || tech.materials);
+
+const techSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: `${tech.name} - Palworld Tech`,
+  description: tech.description || `Palworld ${tech.name} (${categoryLabel}) - Unlocks at Lv ${tech.cost}`,
+  articleSection: 'Palworld Tech Tree',
+  inLanguage: 'en-US',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Palworldpedia',
+    url: 'https://palworldpedia.cc/en/',
+  },
+  ...(tech.materials && tech.materials.length > 0 ? {
+    dependencies: tech.materials.map((m) => m.name),
+  } : {}),
+  ...(tech.hp ? { structuralStrength: { '@type': 'QuantitativeValue', value: tech.hp, unitCode: 'HP' } } : {}),
+  ...(tech.defense ? { defensiveStrength: { '@type': 'QuantitativeValue', value: tech.defense, unitText: 'Defense' } } : {}),
+};
 ---
 
 <Layout
   lang={lang}
   title={`${tech.name} - Unlock Lv ${tech.cost} · ${categoryLabel} | Palworld Tech Tree`}
+  schema={techSchema}
   description={(() => {
     if (tech.description && tech.description.length > 100) {
       return tech.description.slice(0, 155).replace(/\s+\S*$/, '').trimEnd() + '…';

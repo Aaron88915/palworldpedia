@@ -1,17 +1,14 @@
-fix: SEO meta description lengths + bot redirect exclusion
+feat: og-image + Plausible + PWA + Tech schema
 
-Bing Webmaster Tools 报告 2 个 SEO 问题：
-1. EN 主页 + 407 个 EN tech 页 description 太长 (212 / 400-508 字符)
-2. ZH 主页 + 119 个 ZH 页 description 太短 (40-60 字符)
-3. Bing crawler 被自动跳转脚本重定向到 /en/，导致 / 被误判为重复页
+按审计报告的优先级 4 项优化：
 
-修法：
-- Layout.astro 自动跳转脚本加 user-agent 白名单 (bot/spider/crawler 跳过)
-- tech-tree/[slug].astro: 长 description 截断到 155 字符 + …，
-  短 description 附加 tech 元信息 (解锁等级、所需材料数)
-- pals/[slug].astro: description 加 paldeck 编号 + 英文名 + 工作适配
-- 7 个静态页 (about/contact/privacy/terms/guides/calculator/404) 扩写
-- index.astro (ZH 主页) 扩到 102 字符
-- en/index.astro 缩到 120 字符
+1. **og-image.png** (1200x630, 106KB) — 分享卡片，解决 og-image 404
+   内容：Palworldpedia logo + 288 Pals / 40,972 Recipes / 587 Tech 三个 metric
+2. **Plausible Analytics** — 隐私友好分析，加在 Layout head
+   （需 palworldpedia.cc 域名在 Plausible 后台注册才能收到数据）
+3. **PWA manifest.json** — 移动端可"加到主屏幕"
+   新增 favicon-192.png / favicon-512.png + apple-touch-icon 链接
+4. **TechArticle schema** — 588 个 tech 页加结构化数据
+   TechArticle + 面包屑 + 材料依赖 + 建筑 HP/Defense
 
-结果：ZH 过短从 418 → 39，EN 超长从 407 → 0
+Build 通过：1772 页 / 26s

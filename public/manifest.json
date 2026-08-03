@@ -1,0 +1,28 @@
+{
+  "name": "Palworldpedia - 幻兽帕鲁最全攻略",
+  "short_name": "Palworldpedia",
+  "description": "幻兽帕鲁非官方中文攻略站，提供 288 只帕鲁图鉴、配种计算器、科技树查询",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f1419",
+  "theme_color": "#0f1419",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["games", "lifestyle"],
+  "lang": "zh-CN",
+  "dir": "ltr"
+}

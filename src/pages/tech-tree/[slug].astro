@@ -25,10 +25,31 @@ const related = allTechs
 
 const categoryZh = tech.category === 'Structures' ? '建筑' : '道具';
 const hasDetail = !!(tech.description || tech.materials);
+
+// 面包屑 + TechArticle schema
+const techSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: `${tech.name} - Palworld 科技`,
+  description: tech.description || `Palworld ${tech.name} (${categoryZh}) - 解锁等级 Lv ${tech.cost}`,
+  articleSection: 'Palworld Tech Tree',
+  inLanguage: 'zh-CN',
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Palworldpedia',
+    url: 'https://palworldpedia.cc',
+  },
+  ...(tech.materials && tech.materials.length > 0 ? {
+    dependencies: tech.materials.map((m) => m.name),
+  } : {}),
+  ...(tech.hp ? { structuralStrength: { '@type': 'QuantitativeValue', value: tech.hp, unitCode: 'HP' } } : {}),
+  ...(tech.defense ? { defensiveStrength: { '@type': 'QuantitativeValue', value: tech.defense, unitText: 'Defense' } } : {}),
+};
 ---
 
 <Layout
   title={`${tech.name} - 解锁 Lv ${tech.cost} · ${categoryZh} | Palworld科技树`}
+  schema={techSchema}
   description={(() => {
     if (tech.description && tech.description.length > 100) {
       return tech.description.slice(0, 155).replace(/\s+\S*$/, '').trimEnd() + '…';
