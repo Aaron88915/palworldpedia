@@ -33,6 +33,7 @@ export const NAV = {
   zh: [
     { label: '首页', href: '/' },
     { label: '帕鲁图鉴', href: '/pals/' },
+    { label: '强度排行', href: '/tier-list/' },
     { label: '配种计算器', href: '/breeding/' },
     { label: '科技树', href: '/tech-tree/' },
     { label: '基地计算', href: '/calculator/power/' },
@@ -41,6 +42,7 @@ export const NAV = {
   en: [
     { label: 'Home', href: '/en/' },
     { label: 'Paldex', href: '/en/pals/' },
+    { label: 'Tier List', href: '/en/tier-list/' },
     { label: 'Breeding', href: '/en/breeding/' },
     { label: 'Tech Tree', href: '/en/tech-tree/' },
     { label: 'Power Calc', href: '/en/calculator/power/' },

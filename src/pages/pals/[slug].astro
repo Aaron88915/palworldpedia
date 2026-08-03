@@ -251,6 +251,17 @@ const relatedPals = (palsData as Pal[])
         </div>
       </section>
     )}
+
+    <!-- 配种组合推荐 -->
+    <section class="breeding-cta">
+      <h2>🧬 {pal.name.zh} 配种</h2>
+      <p class="text-secondary">想知道 {pal.name.zh} 能配出什么帕鲁？或怎么用 {pal.name.zh} 配出目标帕鲁？</p>
+      <div class="cta-buttons">
+        <a href={`/breeding/?p1=${pal.id}`} class="cta-btn">以 {pal.name.zh} 为父本查询</a>
+        <a href={`/breeding/?p2=${pal.id}`} class="cta-btn">以 {pal.name.zh} 为母本查询</a>
+        <a href="/guides/breeding-guide/" class="cta-btn cta-btn-secondary">查看配种攻略 →</a>
+      </div>
+    </section>
   </article>
 </Layout>
 
@@ -559,6 +570,40 @@ const relatedPals = (palsData as Pal[])
 
   .related-card:hover {
     border-color: var(--accent);
+  }
+
+  .breeding-cta {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary, #2a2a2a));
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-lg);
+  }
+  .breeding-cta h2 {
+    margin: 0 0 0.5rem;
+    color: var(--accent);
+  }
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+  }
+  .cta-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.15s;
+  }
+  .cta-btn:hover { opacity: 0.85; }
+  .cta-btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
   }
 
   .related-no {

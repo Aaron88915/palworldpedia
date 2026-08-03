@@ -1,0 +1,233 @@
+---
+import Layout from '@layouts/Layout.astro';
+import AdSlot from '@components/AdSlot.astro';
+import tiersData from '@data/pal-tiers.json';
+
+type TierEntry = {
+  id: string;
+  name: { zh: string; en: string };
+  paldeckNo: number;
+  types: string[];
+  rarity: number;
+  score: number;
+  tier: string;
+};
+
+const tiers = tiersData as TierEntry[];
+const allTypes = Array.from(new Set(tiers.flatMap(t => t.types))).sort();
+
+const TIER_INFO: Record<string, { label: string; color: string; bg: string; desc: string }> = {
+  S: { label: 'S', color: '#ff4d4d', bg: '#3a1a1a', desc: 'Top-tier Pals. Tower bosses, must-catch.' },
+  A: { label: 'A', color: '#ff944d', bg: '#3a2519', desc: 'Main team. Work in early, mid, and late game.' },
+  B: { label: 'B', color: '#ffd24d', bg: '#3a3319', desc: 'Strong Pals. Viable with good builds.' },
+  C: { label: 'C', color: '#7acc4d', bg: '#1f3319', desc: 'Support / breeding / early-game filler.' },
+  D: { label: 'D', color: '#888888', bg: '#222222', desc: 'Collection / breeding material only.' },
+};
+
+const tierOrder = ['S', 'A', 'B', 'C', 'D'];
+const grouped: Record<string, TierEntry[]> = { S: [], A: [], B: [], C: [], D: [] };
+for (const t of tiers) grouped[t.tier].push(t);
+
+const tierCounts: Record<string, number> = {};
+for (const t of tiers) tierCounts[t.tier] = (tierCounts[t.tier] || 0) + 1;
+---
+
+<Layout
+  lang="en"
+  title="Palworld Pal Tier List - S/A/B/C/D Full Ranking"
+  description="Palworld 2026 Pal tier list. Scored on 4 dimensions (rarity 40% + combat 30% + work 15% + breed 15%), all 287 Pals ranked S to D, covers 1.0 + Sakurajima + Feybreak."
+>
+  <header class="page-header">
+    <h1>🏆 Palworld Pal Tier List</h1>
+    <p class="text-secondary">4-axis score: Rarity 40% + Combat 30% + Work 15% + Breed 15%</p>
+  </header>
+
+  <AdSlot position="inline" />
+
+  <div class="tier-summary">
+    {tierOrder.map(t => TIER_INFO[t] && (
+      <div class="tier-card" style={`--tier-color: ${TIER_INFO[t].color}; --tier-bg: ${TIER_INFO[t].bg};`}>
+        <div class="tier-badge" style={`background: ${TIER_INFO[t].color};`}>{TIER_INFO[t].label}</div>
+        <div class="tier-count">{tierCounts[t] || 0} Pals</div>
+        <div class="tier-desc">{TIER_INFO[t].desc}</div>
+      </div>
+    ))}
+  </div>
+
+  <AdSlot position="inline" />
+
+  <div class="filter-section">
+    <span class="filter-label">Filter by type:</span>
+    <button class="filter-btn active" data-type="all">All</button>
+    {allTypes.map(type => (
+      <button class="filter-btn" data-type={type}>{type}</button>
+    ))}
+  </div>
+
+  {tierOrder.map(t => grouped[t] && grouped[t].length > 0 && (
+    <section class="tier-section" data-tier={t}>
+      <h2 style={`--tier-color: ${TIER_INFO[t].color};`}>
+        <span class="tier-label-big" style={`background: ${TIER_INFO[t].color};`}>{TIER_INFO[t].label}</span>
+        {TIER_INFO[t].desc}
+        <span class="tier-count-tag">{grouped[t].length} Pals</span>
+      </h2>
+      <div class="pal-grid">
+        {grouped[t].map(pal => (
+          <a href={`/en/pals/${pal.id}/`} class="pal-card" data-types={pal.types.join(',')}>
+            <div class="pal-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
+            <div class="pal-name-zh">{pal.name.en}</div>
+            <div class="pal-name-en">{pal.name.zh}</div>
+            <div class="pal-types">
+              {pal.types.map(ty => <span class="type-tag">{ty}</span>)}
+            </div>
+            <div class="pal-score">Score {pal.score.toFixed(2)}</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <AdSlot position="inline" />
+
+  <section class="related-links">
+    <h2>📊 Companion Tools</h2>
+    <ul>
+      <li><a href="/en/pals/">Paldex - all 287 Pals detailed stats</a></li>
+      <li><a href="/en/breeding/">Breeding Calculator - 40k breeding edges</a></li>
+      <li><a href="/en/guides/boss-guide/">Boss Guide - tower strategies</a></li>
+      <li><a href="/en/guides/beginner-guide/">Beginner Guide</a></li>
+    </ul>
+  </section>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+    const sections = document.querySelectorAll<HTMLElement>('.tier-section');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const type = btn.getAttribute('data-type') || 'all';
+        sections.forEach(sec => {
+          let visible = 0;
+          sec.querySelectorAll<HTMLElement>('.pal-card').forEach(card => {
+            const types = (card.getAttribute('data-types') || '').split(',');
+            const show = type === 'all' || types.includes(type);
+            card.style.display = show ? '' : 'none';
+            if (show) visible++;
+          });
+          sec.style.display = visible > 0 ? '' : 'none';
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .page-header { margin-bottom: 1.5rem; }
+  .tier-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+  .tier-card {
+    background: var(--tier-bg, var(--bg-secondary));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    text-align: center;
+  }
+  .tier-badge {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  .tier-count { font-size: 1.1rem; font-weight: 700; margin: 0.3rem 0; }
+  .tier-desc { font-size: 0.85rem; color: var(--text-secondary); }
+  .filter-section { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0; align-items: center; }
+  .filter-label { font-weight: 600; margin-right: 0.5rem; }
+  .filter-btn {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  .tier-section { margin: 2.5rem 0; }
+  .tier-section h2 {
+    font-size: 1.4rem;
+    margin: 0 0 1rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .tier-label-big {
+    display: inline-block;
+    width: 2.2rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #fff;
+  }
+  .tier-count-tag {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+  }
+  .pal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.6rem;
+  }
+  .pal-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.6rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s, border-color 0.15s;
+    text-align: center;
+  }
+  .pal-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .pal-no { font-size: 0.7rem; color: var(--text-muted); font-family: var(--font-mono); }
+  .pal-name-zh { font-weight: 700; font-size: 0.9rem; margin: 0.2rem 0; }
+  .pal-name-en { font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 0.3rem; }
+  .pal-types { display: flex; gap: 0.2rem; justify-content: center; flex-wrap: wrap; margin: 0.3rem 0; }
+  .type-tag {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
+    background: var(--bg-tertiary, #333);
+    border-radius: 0.6rem;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+  }
+  .pal-score { font-size: 0.7rem; color: var(--accent); margin-top: 0.2rem; }
+  .related-links { margin-top: 3rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: var(--radius-lg); }
+  .related-links ul { list-style: none; padding: 0; }
+  .related-links li { padding: 0.3rem 0; }
+  .related-links a { color: var(--accent); text-decoration: underline; }
+</style>

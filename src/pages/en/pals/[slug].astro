@@ -242,6 +242,17 @@ const relatedPals = (palsData as Pal[])
         </div>
       </section>
     )}
+
+    <!-- Breeding combo CTA -->
+    <section class="breeding-cta">
+      <h2>🧬 Breed with {pal.name.en}</h2>
+      <p class="text-secondary">Want to know what {pal.name.en} can breed, or which Pals can breed into {pal.name.en}?</p>
+      <div class="cta-buttons">
+        <a href={`/en/breeding/?p1=${pal.id}`} class="cta-btn">Use {pal.name.en} as Parent 1</a>
+        <a href={`/en/breeding/?p2=${pal.id}`} class="cta-btn">Use {pal.name.en} as Parent 2</a>
+        <a href="/en/guides/breeding-guide/" class="cta-btn cta-btn-secondary">Breeding Guide →</a>
+      </div>
+    </section>
   </article>
 </Layout>
 
@@ -407,4 +418,30 @@ const relatedPals = (palsData as Pal[])
   .related-card:hover { border-color: var(--accent); }
   .related-no { font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); }
   .related-name { font-weight: 600; margin-top: 0.25rem; }
+
+  .breeding-cta {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary, #2a2a2a));
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-lg);
+  }
+  .breeding-cta h2 { margin: 0 0 0.5rem; color: var(--accent); }
+  .cta-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.8rem; }
+  .cta-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.15s;
+  }
+  .cta-btn:hover { opacity: 0.85; }
+  .cta-btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
 </style>

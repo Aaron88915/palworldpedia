@@ -154,6 +154,17 @@ const techSchema = {
       </div>
     </section>
   )}
+  )}
+
+  <section class="tech-cta">
+    <h2>🚀 配套使用</h2>
+    <p class="text-secondary">想用 {tech.name}？先看看哪些帕鲁和它搭配最合适。</p>
+    <div class="cta-buttons">
+      <a href="/pals/" class="cta-btn">查看帕鲁图鉴</a>
+      <a href="/tier-list/" class="cta-btn">帕鲁强度排行</a>
+      <a href="/guides/tech-tree-guide/" class="cta-btn cta-btn-secondary">科技树攻略 →</a>
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -352,5 +363,31 @@ const techSchema = {
     }
     .tech-detail-titles h1 { font-size: 1.375rem; }
     .tech-detail-body { padding: 1.25rem; }
+  }
+
+  .tech-cta {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary, #2a2a2a));
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-lg);
+  }
+  .tech-cta h2 { margin: 0 0 0.5rem; color: var(--accent); }
+  .cta-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.8rem; }
+  .cta-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.15s;
+  }
+  .cta-btn:hover { opacity: 0.85; }
+  .cta-btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
   }
 </style>

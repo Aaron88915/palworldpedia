@@ -155,6 +155,17 @@ const techSchema = {
       </div>
     </section>
   )}
+  )}
+
+  <section class="tech-cta">
+    <h2>🚀 Companion Tools</h2>
+    <p class="text-secondary">Want to use {tech.name}? Find the best Pals to pair with it.</p>
+    <div class="cta-buttons">
+      <a href="/en/pals/" class="cta-btn">Browse Paldex</a>
+      <a href="/en/tier-list/" class="cta-btn">Pal Tier List</a>
+      <a href="/en/guides/tech-tree-guide/" class="cta-btn cta-btn-secondary">Tech Tree Guide →</a>
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -311,5 +322,31 @@ const techSchema = {
     .tech-detail-header { flex-direction: column; text-align: center; gap: 1rem; }
     .tech-detail-titles h1 { font-size: 1.375rem; }
     .tech-detail-body { padding: 1.25rem; }
+  }
+
+  .tech-cta {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary, #2a2a2a));
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-lg);
+  }
+  .tech-cta h2 { margin: 0 0 0.5rem; color: var(--accent); }
+  .cta-buttons { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.8rem; }
+  .cta-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.15s;
+  }
+  .cta-btn:hover { opacity: 0.85; }
+  .cta-btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
   }
 </style>

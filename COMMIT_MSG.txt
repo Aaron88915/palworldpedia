@@ -1,15 +1,17 @@
-feat: add 5 English SEO guides (beginner/breeding/tech/boss/base)
+feat: tier list page + cross-linking (pal<->tech, pal<->breeding)
 
-Mirror of the ZH guides for international traffic (AdSense global).
-Internal links use /en/... prefix to keep users in EN locale.
+Tier List:
+- /tier-list/ (zh) and /en/tier-list/ (en)
+- 287 pals scored on 4 axes: rarity 40% + combat 30% + work 15% + breed 15%
+- 5 tiers: S (6) / A (38) / B (178) / C (63) / D (1)
+- Type filter, color-coded tier badges, click-through to pal detail
+- Added to nav: '强度排行' / 'Tier List'
+- Data: src/data/pal-tiers.json (66KB)
 
-5 articles:
-1. /en/guides/beginner-guide/ - Level 1-10 walkthrough
-2. /en/guides/breeding-guide/ - 287x287 breeding matrix
-3. /en/guides/tech-tree-guide/ - 587 tech priority
-4. /en/guides/boss-guide/ - 5 towers + DLC bosses
-5. /en/guides/base-building-guide/ - power + layout + production
+Cross-linking:
+- Pal detail pages: 'Breeding combo' CTA with /breeding/?p1=ID and ?p2=ID
+- Tech detail pages: 'Companion Tools' CTA linking to /pals/, /tier-list/, /guides/tech-tree-guide/
+- Both ZH and EN versions updated
+- Added 2-3 internal links per detail page to 290 pal pages + 587 tech pages
 
-Updated /en/guides/ index with grid layout + tools list.
-EN descs trimmed to <=160 chars (Bing recommendation).
-Build: 1782 pages (+5).
+Build: 1784 pages (+2), 29s, 0 errors.
