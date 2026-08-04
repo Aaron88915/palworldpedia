@@ -1,29 +1,25 @@
-fix: correct tech-tree URLs to use CamelCase slug field
+fix: remove 153 empty <a> tags in guide pages (no href)
 
-Astro page uses tech.slug (CamelCase like 'MonsterFarm', 'Battle_Cloth')
-not tech.id (lowercase like 'monsterfarm', 'battle_cloth').
+Earlier fix scripts replaced href="X" with empty string when the
+target pal/tech was unknown, but left the <a> tag wrapper intact.
+This created <a>text</a> shells with no href, which still got
+the accent color + underline styling but were not clickable.
 
-Earlier fix used the wrong field, so all guide links to /tech-tree/X/
-were lowercase and 404'd on the live site (GitHub Pages is case-sensitive).
+User report: "some underline links can't be clicked, cursor doesn't
+change to pointer hand on hover".
 
-Fixed 31 lowercase tech hrefs across 5 ZH + 5 EN guides:
-- /tech-tree/monsterfarm/ -> /tech-tree/MonsterFarm/
-- /tech-tree/battle_cloth/ -> /tech-tree/Battle_Cloth/
-- /tech-tree/palbox/ -> /tech-tree/PALBOX/
-- /tech-tree/product_factory_hard_grade_01/ -> /tech-tree/Product_Factory_Hard_Grade_01/
-- /tech-tree/product_factory_hard_grade_02/ -> /tech-tree/Product_Factory_Hard_Grade_02/
-- /tech-tree/product_weaponfactory_dirty_grade_01/ -> /tech-tree/Product_WeaponFactory_Dirty_Grade_01/
-- /tech-tree/special_palsphere_grade_01/ -> /tech-tree/Special_PalSphere_Grade_01/
-- /tech-tree/special_spherefactory_black_grade_02/ -> /tech-tree/Special_SphereFactory_Black_Grade_02/
-- /tech-tree/battle_rangeweapon_assaultrifle/ -> /tech-tree/Battle_RangeWeapon_AssaultRifle/
-- /tech-tree/battle_rangeweapon_rocketlauncher/ -> /tech-tree/Battle_RangeWeapon_RocketLauncher/
-- /tech-tree/battle_armor_grade_01_cloth_cold/ -> /tech-tree/Battle_Armor_Grade_01_Cloth_Cold/
-- /tech-tree/battle_armor_grade_04_steal_cold/ -> /tech-tree/Battle_Armor_Grade_04_Steal_Cold/
-- /tech-tree/product_ingot_grade_03_steal/ -> /tech-tree/Product_Ingot_Grade_03_Steal/
-- /tech-tree/product_farm_berries/ -> /tech-tree/Product_Farm_Berries/
+Fixed:
+- 77 empty <a> in 5 ZH guides
+- 76 empty <a> in 5 EN guides
 
-Tools added:
-- scripts/show-slug-vs-id.py
-- scripts/fix-slug-case.py
+Affected text (now plain text, was fake links):
+- Berry Plantation, Ranch, Pal Gear Workbench, Electric Fence
+- 玩家床, 帕鲁床, 火把
+- Caprity, Petallia, Cattiva, Lifmunk, Foxparks (these names
+  appear multiple times in different contexts)
 
-Build: 1784 pages, scan-all-404 reports 0 broken links locally.
+New tool: scripts/fix-empty-a-tags.py removes all <a> tags
+without href across the site.
+Verify: scripts/verify-no-empty-a.py reports 0 across 1784 pages.
+
+Build: 1784 pages, 0 errors.
