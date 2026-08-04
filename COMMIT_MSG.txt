@@ -1,25 +1,20 @@
-fix: remove 153 empty <a> tags in guide pages (no href)
+docs: rewrite README.md to reflect current state (1,784 pages)
 
-Earlier fix scripts replaced href="X" with empty string when the
-target pal/tech was unknown, but left the <a> tag wrapper intact.
-This created <a>text</a> shells with no href, which still got
-the accent color + underline styling but were not clickable.
+Old README was outdated:
+- Said 400+ pals, actually 288
+- Said MDX content, actually .astro files
+- Said scripts/fetch-data.mjs, actually scripts/*.py
+- Said VideoGame/ItemList/FAQPage schema, actually TechArticle/VideoGame/BreadcrumbList
+- Mentioned filters (词条/性格/体型) we don't have
+- No mention of new tier list, guides, calculators, i18n setup, AdSense
+- No mention of known gotchas (slug case, None prefix, empty <a>)
 
-User report: "some underline links can't be clicked, cursor doesn't
-change to pointer hand on hover".
-
-Fixed:
-- 77 empty <a> in 5 ZH guides
-- 76 empty <a> in 5 EN guides
-
-Affected text (now plain text, was fake links):
-- Berry Plantation, Ranch, Pal Gear Workbench, Electric Fence
-- 玩家床, 帕鲁床, 火把
-- Caprity, Petallia, Cattiva, Lifmunk, Foxparks (these names
-  appear multiple times in different contexts)
-
-New tool: scripts/fix-empty-a-tags.py removes all <a> tags
-without href across the site.
-Verify: scripts/verify-no-empty-a.py reports 0 across 1784 pages.
-
-Build: 1784 pages, 0 errors.
+New README covers:
+- Full page inventory (1,784 pages, all routes)
+- Data scale (288/587/40,972)
+- i18n strategy
+- SSH push workflow (HTTPS blocked)
+- Pre-commit checks (scan-all-404, verify-no-empty-a, audit-data-gaps)
+- AdSense + Plausible analytics
+- Known gotchas section (with memory pointer)
+- Updated directory structure (with line counts)
