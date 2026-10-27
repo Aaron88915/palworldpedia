@@ -6,6 +6,13 @@ const lang = 'en';
 
 const guides = [
   {
+    slug: 'palworld-1-0-guide',
+    icon: '🆕',
+    title: 'Palworld 1.0 Complete Guide',
+    desc: 'Level cap 80, Sunreach, the World Tree, 9 tower bosses, Mutation and Awakening explained',
+    keywords: 'Palworld 1.0 new content Sunreach world tree mutation awakening',
+  },
+  {
     slug: 'beginner-guide',
     icon: '🎮',
     title: "Beginner's Guide",
@@ -23,15 +30,15 @@ const guides = [
     slug: 'tech-tree-guide',
     icon: '🔬',
     title: 'Tech Tree Priority',
-    desc: '587 techs grouped must-get / recommended / skip. First 50 levels optimal route',
+    desc: '588 techs grouped must-get / recommended / skip. Lv 1-80 optimal route',
     keywords: 'Palworld tech tree priority unlock',
   },
   {
     slug: 'boss-guide',
     icon: '⚔️',
     title: 'All Boss Strategies',
-    desc: 'All 5 Tower Bosses + Field Bosses + Sakurajima + Feybreak strategies',
-    keywords: 'Palworld boss strategy tower fight',
+    desc: 'All 9 Tower Bosses including Hard difficulty + field bosses + the 1.0 special bosses',
+    keywords: 'Palworld boss strategy tower fight 9 towers',
   },
   {
     slug: 'base-building-guide',
@@ -46,11 +53,11 @@ const guides = [
 <Layout
   lang={lang}
   title={`${t('guides.title', lang)} - Palworld Guide Hub`}
-  description="Palworld English guides hub - beginner walkthrough, breeding combos, tech tree priority, boss strategies, base building. 5 long-form guides for Palworld players."
+  description="Palworld English guides hub - 1.0 complete guide, beginner walkthrough, breeding combos, tech tree priority, boss strategies, base building. 6 long-form guides for Palworld players."
 >
   <header class="page-header">
     <h1>{t('guides.title', lang)}</h1>
-    <p class="text-secondary">Beginner · Breeding · Tech Tree · Bosses · Base Building</p>
+    <p class="text-secondary">1.0 Complete · Beginner · Breeding · Tech Tree · Bosses · Base Building</p>
   </header>
 
   <AdSlot position="inline" />
@@ -73,7 +80,8 @@ const guides = [
     <ul class="tools-list">
       <li><a href="/en/pals/">Paldex</a> - detailed stats, habitats, and uses for all 288 Pals</li>
       <li><a href="/en/breeding/">Breeding Calculator</a> - 4 query modes, 40,972 breeding edges</li>
-      <li><a href="/en/tech-tree/">Tech Tree</a> - all 587 techs with descriptions and materials</li>
+      <li><a href="/en/tech-tree/">Tech Tree</a> - all 588 techs with descriptions, materials and real unlock levels</li>
+      <li><a href="/en/regions/">Region Index</a> - all 80 Palworld 1.0 regions with enemy level ranges</li>
       <li><a href="/en/calculator/power/">Power Calculator</a> - select buildings, get power demand</li>
     </ul>
   </section>

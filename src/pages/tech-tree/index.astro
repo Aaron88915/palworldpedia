@@ -7,7 +7,12 @@ import type { TechNode } from '@data/types';
 const techs = techsData as TechNode[];
 const structures = techs.filter(t => t.category === 'Structures').length;
 const items = techs.filter(t => t.category === 'Items').length;
-const maxCost = Math.max(...techs.map(t => t.cost));
+const maxLevel = Math.max(...techs.map(t => t.unlockLevel ?? 1));
+const levelBuckets = Array.from({ length: Math.ceil(maxLevel / 10) }, (_, i) => {
+  const min = i * 10 + 1;
+  const max = min + 9;
+  return { label: `${min}-${max}`, min, max };
+});
 
 const schema = {
   '@context': 'https://schema.org',
@@ -19,13 +24,13 @@ const schema = {
 
 const config = {
   categories: ['Structures', 'Items'] as const,
-  maxCost,
+  levelBuckets,
 };
 ---
 
 <Layout
-  title="科技树 - 全部 587 个科技点 · Palworld 1.0"
-  description="Palworld 1.0 完整科技树列表。包含所有 Structures（建筑）和 Items（道具）科技点、解锁等级、所需材料。可按类型、等级筛选，按名称搜索。"
+  title={`科技树 - 全部 ${techs.length} 个科技点 · Palworld 1.0`}
+  description="Palworld 1.0 完整科技树列表。包含所有 Structures（建筑）和 Items（道具）科技点、解锁等级（Lv 1-80）、所需材料。可按类型、解锁等级筛选，按名称搜索。"
   schema={schema}
 >
   <header class="page-header">
@@ -54,11 +59,11 @@ const config = {
     </div>
 
     <div class="filter-row">
-      <span class="filter-label">解锁</span>
-      <div class="filter-chips" data-filter-group="cost">
+      <span class="filter-label">解锁等级</span>
+      <div class="filter-chips" data-filter-group="level">
         <button type="button" data-filter-value="" class="chip active">全部</button>
-        {Array.from({length: maxCost}, (_, i) => i + 1).map((c) => (
-          <button type="button" data-filter-value={String(c)} class="chip cost-chip">Lv {c}</button>
+        {levelBuckets.map((b) => (
+          <button type="button" data-filter-value={b.label} class="chip cost-chip">Lv {b.label}</button>
         ))}
       </div>
     </div>
@@ -93,7 +98,7 @@ const config = {
         data-id={t.id}
         data-name={(t.name || '').toLowerCase()}
         data-category={t.category}
-        data-cost={String(t.cost)}
+        data-level={String(t.unlockLevel ?? 1)}
       >
         <div class="card-icon">
           <img
@@ -107,8 +112,9 @@ const config = {
         </div>
         <div class="card-name">{t.name}</div>
         <div class="card-meta">
-          <span class="meta-lv">Lv {t.cost}</span>
+          <span class="meta-lv">Lv {t.unlockLevel ?? 1}</span>
           <span class="meta-type">{t.category}</span>
+          <span class="meta-pts">{t.cost} 点</span>
         </div>
         <div class="card-cta">点击查看详情 →</div>
       </a>
@@ -268,6 +274,12 @@ const config = {
     font-size: 0.6875rem;
     font-weight: 600;
   }
+  .meta-pts {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
   .tech-card[data-category="Structures"] .meta-type {
     background: rgba(94, 179, 245, 0.12);
     color: #5eb3f5;
@@ -300,7 +312,7 @@ const config = {
 </style>
 
 <script is:inline define:vars={{ config }}>
-  const state = { category: '', cost: '', sort: '', q: '' };
+  const state = { category: '', level: '', sort: '', q: '' };
   const search = document.getElementById('tech-search');
   const grid = document.getElementById('tech-grid');
   const cards = Array.from(document.querySelectorAll('.tech-card'));
@@ -313,11 +325,14 @@ const config = {
     let visible = 0;
     cards.forEach(card => {
       const cat = card.dataset.category;
-      const cost = card.dataset.cost;
+      const level = Number(card.dataset.level || 0);
       const name = card.dataset.name || '';
       let match = true;
       if (state.category && cat !== state.category) match = false;
-      if (match && state.cost && cost !== state.cost) match = false;
+      if (match && state.level) {
+        const [lo, hi] = state.level.split('-').map(Number);
+        if (level < lo || level > hi) match = false;
+      }
       if (match && state.q) {
         const q = state.q.toLowerCase();
         if (!name.includes(q) && !cat.toLowerCase().includes(q)) match = false;
@@ -335,16 +350,16 @@ const config = {
     const sortVal = state.sort;
     if (!sortVal) return;
     const sorted = [...cards].sort((a, b) => {
-      const costA = Number(a.dataset.cost);
-      const costB = Number(b.dataset.cost);
+      const levelA = Number(a.dataset.level || 0);
+      const levelB = Number(b.dataset.level || 0);
       const nameA = a.dataset.name || '';
       const nameB = b.dataset.name || '';
       switch (sortVal) {
         case 'level-asc':
-          if (costA !== costB) return costA - costB;
+          if (levelA !== levelB) return levelA - levelB;
           return nameA.localeCompare(nameB);
         case 'level-desc':
-          if (costA !== costB) return costB - costA;
+          if (levelA !== levelB) return levelB - levelA;
           return nameA.localeCompare(nameB);
         case 'name-asc':
           return nameA.localeCompare(nameB);
@@ -370,7 +385,7 @@ const config = {
   function updateActiveChips() {
     const labels = {
       category: state.category,
-      cost: state.cost ? `Lv ${state.cost}` : null,
+      level: state.level ? `Lv ${state.level}` : null,
       sort: ({'level-asc':'等级 ↑','level-desc':'等级 ↓','name-asc':'A-Z','name-desc':'Z-A'})[state.sort] || null,
     };
     const entries = Object.entries(labels).filter(([_, v]) => v);
@@ -416,7 +431,7 @@ const config = {
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       state.category = '';
-      state.cost = '';
+      state.level = '';
       state.sort = '';
       state.q = '';
       if (search) search.value = '';

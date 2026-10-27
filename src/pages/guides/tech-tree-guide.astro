@@ -4,14 +4,14 @@ import AdSlot from '@components/AdSlot.astro';
 ---
 
 <Layout
-  title="Palworld 科技树攻略 - 587 个科技 + 必点优先级"
-  description="Palworld 科技树全攻略。587 个科技按解锁等级分组，标注必点、推荐、可跳过。前 50 级科技升级路线，1 小时看完不踩坑。"
+  title="Palworld 科技树攻略 - 588 个科技 + 必点优先级"
+  description="Palworld 科技树全攻略。588 个科技按解锁等级分组（Lv 1-80），标注必点、推荐、可跳过。1.0 终局科技与升级路线，1 小时看完不踩坑。"
 >
   <article class="guide-content">
     <header class="page-header">
       <p class="breadcrumb"><a href="/guides/">攻略</a> › 科技树</p>
       <h1>🔬 Palworld 科技树：必点 / 推荐 / 跳过 优先级</h1>
-      <p class="text-secondary">587 个科技 · 按解锁等级分组 · 含 1.0 / Sakurajima / Feybreak</p>
+      <p class="text-secondary">588 个科技 · 解锁等级 Lv 1-80 · 含 1.0 / Sakurajima / Feybreak / Sunreach / 世界树</p>
     </header>
 
     <AdSlot position="inline" />
@@ -19,8 +19,8 @@ import AdSlot from '@components/AdSlot.astro';
     <section>
       <h2>科技树机制：解锁等级 + 材料</h2>
       <p>
-        Palworld 科技共 <strong>587 个</strong>，分 <strong>Structures（建筑）</strong> 和 <strong>Items（道具）</strong> 两类。
-        每个科技需要 <strong>解锁等级</strong>（Ancient Technology Points 古科技点数）和 <strong>材料</strong> 双重要求。
+        Palworld 科技共 <strong>588 个</strong>，分 <strong>Structures（建筑）</strong> 和 <strong>Items（道具）</strong> 两类。
+        每个科技需要 <strong>解锁等级</strong>（1.0 起上限为 <strong>Lv 80</strong>）、<strong>古科技点数</strong>和 <strong>材料</strong>三重要求。
       </p>
       <p>
         古科技点数获取方式：击杀 BOSS、开启地图宝箱、捕捉特定帕鲁。前期靠 Penking 等中型 BOSS 大量刷。
@@ -76,17 +76,54 @@ import AdSlot from '@components/AdSlot.astro';
     <AdSlot position="inline" />
 
     <section>
-      <h2>科技树升级路径：前 50 级推荐顺序</h2>
+      <h2>科技树升级路径：Lv 1-80 推荐顺序</h2>
       <ol>
         <li><strong>Lv 1-7</strong>：必点 10 个，把基础打好</li>
         <li><strong>Lv 8-15</strong>：点 Cloth Outfit + Weapon Workbench II，配种科技</li>
         <li><strong>Lv 16-25</strong>：球升级到 Giga Sphere + Cold Outfit 准备 Sakurajima</li>
         <li><strong>Lv 26-40</strong>：Metal Armor + Advanced Weapon，准备 BOSS 战</li>
         <li><strong>Lv 41-50</strong>：Feybreak 入门套装，霓虹套装</li>
+        <li><strong>Lv 51-65</strong>：Hexolite 材料线 + 激光武器，冲塔主 5-6</li>
+        <li><strong>Lv 66-70</strong>：Soralite 天空武器 + Azure Covenant 塔主（Lv 68）</li>
+        <li><strong>Lv 71-80</strong>：古代系列（Ancient Series）+ Paloxite，冲最终塔 Zenara &amp; Astralym</li>
       </ol>
       <p>
         想查具体每个科技需要什么材料？去 <a href="/tech-tree/">科技树全图</a>，
-        587 个科技全部带材料 + 描述 + 解锁等级。
+        588 个科技全部带材料 + 描述 + 真实解锁等级（Lv 1-80）。
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>Lv 51-80：1.0 终局科技清单</h2>
+      <p>1.0 把等级上限提到 80 之后，终局科技分三段解锁，这几组是必点的：</p>
+      <ul>
+        <li>
+          <strong>Lv 51-60 · Hexolite 材料线与高阶枪械</strong>：
+          <a href="/tech-tree/StainlessSteel/">Hexolite</a>（Lv 58）、<a href="/tech-tree/SFArmor/">Hexolite Armor</a>（Lv 59）、
+          <a href="/tech-tree/LaserGatlingGun/">Laser Gatling Gun</a>（Lv 59）、<a href="/tech-tree/EnergyRocketLauncher/">Plasma Cannon</a>（Lv 61）
+        </li>
+        <li>
+          <strong>Lv 61-70 · 云海 / Sky 系列</strong>：
+          <a href="/tech-tree/SkyislandIngot/">Soralite Ingot</a>（Lv 66）、
+          <a href="/tech-tree/SkyBow/">Mechanical Bow</a>（Lv 67）、
+          <a href="/tech-tree/SkyIslandOrePit/">Soralite Quarry</a>（Lv 72）、
+          <a href="/tech-tree/Accessory_JumpCount_Increase2/">Triple Jump Boots</a>（Lv 70）
+        </li>
+        <li>
+          <strong>Lv 71-80 · 古代系列（Ancient Series）</strong>：
+          <a href="/tech-tree/AncientArmor/">Ancient Armor</a>（Lv 68）、
+          <a href="/tech-tree/AncientHelmet/">Ancient Helm</a>（Lv 68）、
+          <a href="/tech-tree/Shield_07/">Ancient Shield</a>（Lv 71）、
+          <a href="/tech-tree/WorldTreeIngot/">Paloxite Ingot</a>（Lv 74）、
+          <a href="/tech-tree/AncientRelicRecycler/">Ancient Relic Recycler</a>（Lv 74）、
+          <a href="/tech-tree/PalSphere_Ancient_2/">Ancient Sphere</a>（Lv 74）
+        </li>
+      </ul>
+      <p>
+        这些是打最终塔主 Zenara &amp; Astralym（Lv 80）的硬门槛，
+        详细的 1.0 内容看 <a href="/guides/palworld-1-0-guide/">Palworld 1.0 全内容攻略</a>。
       </p>
     </section>
 
@@ -105,7 +142,8 @@ import AdSlot from '@components/AdSlot.astro';
     <section class="related-links">
       <h2>立即查看</h2>
       <ul>
-        <li><a href="/tech-tree/">📊 587 个科技全图</a></li>
+        <li><a href="/tech-tree/">📊 588 个科技全图</a></li>
+        <li><a href="/guides/palworld-1-0-guide/">🆕 Palworld 1.0 全内容攻略</a></li>
         <li><a href="/guides/beginner-guide/">🎮 新手入门</a></li>
         <li><a href="/guides/base-building-guide/">🏠 基地布局</a></li>
         <li><a href="/calculator/power/">⚡ 电力计算器</a></li>

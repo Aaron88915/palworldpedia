@@ -1729,12 +1729,13 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -2100,12 +2101,7 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -2287,12 +2283,12 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -2665,12 +2661,7 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -2852,12 +2843,7 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -3041,12 +3027,8 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands",
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -3104,12 +3086,7 @@
     "food": 1,
     "price": 476,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -3167,12 +3144,7 @@
     "food": 1,
     "price": 407,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -3355,12 +3327,13 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -3729,12 +3702,7 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -4657,12 +4625,7 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -4841,12 +4804,7 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -5436,12 +5394,7 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -5622,12 +5575,13 @@
     "food": 1,
     "price": 512,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -5995,12 +5949,7 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -6182,12 +6131,8 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Mount Obsidian",
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -6912,12 +6857,7 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -7852,12 +7792,8 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands",
+      "Twilight Dunes"
     ],
     "nightOnly": false,
     "description": {
@@ -8044,12 +7980,7 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -8440,12 +8371,8 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Feybreak",
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -8628,12 +8555,13 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -9000,12 +8928,7 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -9184,12 +9107,7 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -9370,11 +9288,11 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -9742,12 +9660,13 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -10114,12 +10033,13 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -10482,12 +10402,7 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -10675,12 +10590,13 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -11231,12 +11147,13 @@
     "food": 1,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -11606,12 +11523,7 @@
     "food": 1,
     "price": 421,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -11793,8 +11705,8 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Palpagos Islands",
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -11978,8 +11890,7 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -12159,12 +12070,7 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Sunreach"
     ],
     "nightOnly": false,
     "description": {
@@ -12347,9 +12253,10 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛"
+      "Isle of Silence",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -12713,12 +12620,7 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -12908,12 +12810,8 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands",
+      "The World Tree"
     ],
     "nightOnly": false,
     "description": {
@@ -13091,12 +12989,8 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands",
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -13277,12 +13171,7 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -13663,12 +13552,13 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -14041,12 +13931,13 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -14409,12 +14300,12 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -15143,12 +15034,7 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Sunreach"
     ],
     "nightOnly": false,
     "description": {
@@ -15338,12 +15224,7 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -15528,12 +15409,7 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -15726,12 +15602,7 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -15915,12 +15786,13 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Feybreak",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -16306,11 +16178,13 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Feybreak",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -16693,8 +16567,7 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -16879,12 +16752,7 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -17090,11 +16958,7 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -17282,11 +17146,7 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -17692,9 +17552,7 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛"
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -17876,12 +17734,8 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Feybreak",
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -18062,10 +17916,10 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -18439,11 +18293,11 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -18832,11 +18686,8 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Feybreak",
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -19226,11 +19077,13 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago",
+      "Twilight Dunes"
     ],
     "nightOnly": false,
     "description": {
@@ -19597,11 +19450,11 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -20156,11 +20009,8 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Mount Obsidian",
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -20893,12 +20743,12 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -21273,12 +21123,12 @@
     "food": 8,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -21653,11 +21503,7 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -22212,12 +22058,14 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Feybreak",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago",
+      "Twilight Dunes"
     ],
     "nightOnly": false,
     "description": {
@@ -22607,12 +22455,12 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -23002,10 +22850,7 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Astral Mountains"
     ],
     "nightOnly": false,
     "description": {
@@ -23208,12 +23053,13 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -23970,12 +23816,13 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -24352,11 +24199,7 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Sunreach"
     ],
     "nightOnly": false,
     "description": {
@@ -24544,11 +24387,8 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Mount Obsidian",
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -24931,11 +24771,12 @@
     "food": 2,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -25308,11 +25149,11 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -25699,12 +25540,14 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Feybreak",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -26072,11 +25915,7 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains"
     ],
     "nightOnly": false,
     "description": {
@@ -26280,7 +26119,9 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "Handgun Schematic 4"
+      "Sakurajima",
+      "Sealed Realms",
+      "Twilight Dunes"
     ],
     "nightOnly": false,
     "description": {
@@ -26528,8 +26369,9 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Isle of Silence",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -26815,10 +26657,11 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Astral Mountains",
+      "Feybreak",
+      "Isle of Silence",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -27233,10 +27076,8 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Sakurajima",
+      "Twilight Dunes"
     ],
     "nightOnly": false,
     "description": {
@@ -27968,11 +27809,7 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains"
     ],
     "nightOnly": false,
     "description": {
@@ -28161,11 +27998,8 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Feybreak",
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -28559,12 +28393,7 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -28946,11 +28775,9 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Feybreak",
+      "Mount Obsidian",
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -29138,11 +28965,12 @@
     "food": 8,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "New Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -29510,10 +29338,7 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -29705,12 +29530,8 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Feybreak",
+      "Twilight Dunes"
     ],
     "nightOnly": false,
     "description": {
@@ -29909,12 +29730,13 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -30299,12 +30121,13 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -30574,12 +30397,8 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Palpagos Islands",
+      "The World Tree"
     ],
     "nightOnly": false,
     "description": {
@@ -30788,11 +30607,13 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Feybreak",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago",
+      "Sealed Realms"
     ],
     "nightOnly": false,
     "description": {
@@ -31208,12 +31029,12 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -31619,11 +31440,12 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -32001,10 +31823,7 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -32762,10 +32581,7 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Feybreak"
     ],
     "nightOnly": false,
     "description": {
@@ -32957,10 +32773,11 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Astral Mountains",
+      "Feybreak",
+      "Isle of Silence",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -33511,10 +33328,8 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Palpagos Islands",
+      "The World Tree"
     ],
     "nightOnly": false,
     "description": {
@@ -33726,11 +33541,8 @@
     "food": 8,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Sakurajima",
+      "The World Tree"
     ],
     "nightOnly": false,
     "description": {
@@ -34110,10 +33922,7 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Twilight Dunes"
     ],
     "nightOnly": false,
     "description": {
@@ -34469,10 +34278,9 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Feybreak",
+      "Sakurajima",
+      "Twilight Dunes"
     ],
     "nightOnly": false,
     "description": {
@@ -35034,9 +34842,7 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -35424,9 +35230,7 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -35606,12 +35410,13 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "草原",
-      "雪原"
+      "Astral Mountains",
+      "Eastern Wild Island",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Palpagos Islands",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -35999,11 +35804,11 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -36401,8 +36206,10 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Feybreak",
+      "Isle of Silence",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -37181,10 +36988,10 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -37572,11 +37379,7 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -37794,10 +37597,11 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Astral Mountains",
+      "Feybreak",
+      "Isle of Silence",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -38202,9 +38006,7 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -39011,10 +38813,11 @@
     "food": 8,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Sakurajima",
+      "Sea Breeze Archipelago",
+      "The World Tree"
     ],
     "nightOnly": false,
     "description": {
@@ -39625,10 +39428,8 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Palpagos Islands",
+      "The World Tree"
     ],
     "nightOnly": false,
     "description": {
@@ -39810,10 +39611,11 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Astral Mountains",
+      "Feybreak",
+      "Isle of Silence",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -40182,10 +39984,10 @@
     "food": 8,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -40555,8 +40357,7 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -41308,8 +41109,7 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -41490,8 +41290,8 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Isle of Silence",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -41887,9 +41687,9 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛"
+      "Isle of Silence",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -42273,8 +42073,8 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Feybreak",
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -43274,8 +43074,8 @@
     "food": 8,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Feybreak",
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -43638,9 +43438,7 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -44431,11 +44229,11 @@
     "food": 9,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛",
-      "樱岛",
-      "火山林",
-      "雪原"
+      "Astral Mountains",
+      "Isle of Silence",
+      "Mount Obsidian",
+      "Sakurajima",
+      "Sea Breeze Archipelago"
     ],
     "nightOnly": false,
     "description": {
@@ -45035,8 +44833,7 @@
     "food": 8,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Sakurajima"
     ],
     "nightOnly": false,
     "description": {
@@ -45214,7 +45011,7 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -45393,8 +45190,9 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Isle of Silence",
+      "Sea Breeze Archipelago",
+      "Sunreach"
     ],
     "nightOnly": false,
     "description": {
@@ -45761,7 +45559,7 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -45942,7 +45740,7 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛"
+      "Sunreach"
     ],
     "nightOnly": false,
     "description": {
@@ -46122,7 +45920,7 @@
     "food": 3,
     "price": 0,
     "biomes": [
-      "云海岛"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -46301,8 +46099,7 @@
     "food": 4,
     "price": 0,
     "biomes": [
-      "云海岛",
-      "暗月岛"
+      "Sunreach"
     ],
     "nightOnly": false,
     "description": {
@@ -46484,7 +46281,7 @@
     "food": 5,
     "price": 0,
     "biomes": [
-      "云海岛"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -47030,7 +46827,7 @@
     "food": 7,
     "price": 0,
     "biomes": [
-      "云海岛"
+      "Sunreach"
     ],
     "nightOnly": false,
     "description": {
@@ -47589,7 +47386,7 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛"
+      "Sunreach"
     ],
     "nightOnly": false,
     "description": {
@@ -47769,7 +47566,7 @@
     "food": 6,
     "price": 0,
     "biomes": [
-      "云海岛"
+      "Palpagos Islands"
     ],
     "nightOnly": false,
     "description": {
@@ -47835,7 +47632,7 @@
     "food": 8,
     "price": 0,
     "biomes": [
-      "云海岛"
+      "Sunreach"
     ],
     "nightOnly": false,
     "description": {

@@ -29,3 +29,8 @@ data/raw/
 
 # OS files
 Thumbs.db
+
+# paldb.cc scrape cache (large)
+scripts/_paldb_cache/
+build.log
+NUL

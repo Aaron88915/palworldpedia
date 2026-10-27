@@ -32,7 +32,7 @@ const techSchema = {
   '@context': 'https://schema.org',
   '@type': 'TechArticle',
   headline: `${tech.name} - Palworld Tech`,
-  description: tech.description || `Palworld ${tech.name} (${categoryLabel}) - Unlocks at Lv ${tech.cost}`,
+  description: tech.description || `Palworld ${tech.name} (${categoryLabel}) - Unlocks at Lv ${tech.unlockLevel ?? tech.cost}`,
   articleSection: 'Palworld Tech Tree',
   inLanguage: 'en-US',
   isPartOf: {
@@ -50,7 +50,7 @@ const techSchema = {
 
 <Layout
   lang={lang}
-  title={`${tech.name} - Unlock Lv ${tech.cost} · ${categoryLabel} | Palworld Tech Tree`}
+  title={`${tech.name} - Unlock Lv ${tech.unlockLevel ?? tech.cost} · ${categoryLabel} | Palworld Tech Tree`}
   schema={techSchema}
   description={(() => {
     if (tech.description && tech.description.length > 100) {
@@ -60,7 +60,7 @@ const techSchema = {
     const matPart = matCount > 0 ? `, requires ${matCount} materials` : '';
     const catEn = categoryLabel === 'Structures' ? 'buildable structure' : 'craftable item';
     if (tech.description) {
-      return `Palworld ${tech.name} is a ${catEn}: ${tech.description} Unlocks at Lv ${tech.cost}${matPart}, used in Palworld 1.0.`;
+      return `Palworld ${tech.name} is a ${catEn}: ${tech.description} Unlocks at Lv ${tech.unlockLevel ?? tech.cost}${matPart}, used in Palworld 1.0.`;
     }
     return `Palworld ${tech.name} is a ${catEn}: unlocks at Lv ${tech.cost}${matPart}. Full details on stats and usage for Palworld 1.0.`;
   })()}
@@ -82,7 +82,7 @@ const techSchema = {
         <h1>{tech.name}</h1>
         <div class="tech-detail-meta">
           <span class={`cat-tag cat-${tech.category.toLowerCase()}`}>{tech.category}</span>
-          <span class={`cost-tag cost-${tech.cost}`}>{t('tech.unlockLevel', lang)} {tech.cost}</span>
+          <span class={`cost-tag cost-${tech.unlockLevel ?? tech.cost}`}>{t('tech.unlockLevel', lang)} {tech.unlockLevel ?? tech.cost}</span>
           {tech.product && tech.product !== tech.name && (
             <span class="product-tag">{t('tech.product', lang)}: {tech.product}</span>
           )}
@@ -149,7 +149,7 @@ const techSchema = {
           <a href={`/en/tech-tree/${r.slug}/`} class="related-card">
             <img src={r.icon} alt={r.name} class="related-icon" loading="lazy" />
             <span class="related-name">{r.name}</span>
-            <span class={`cost-tag cost-${r.cost}`}>Lv {r.cost}</span>
+            <span class={`cost-tag cost-${r.unlockLevel ?? r.cost}`}>Lv {r.unlockLevel ?? r.cost}</span>
           </a>
         ))}
       </div>

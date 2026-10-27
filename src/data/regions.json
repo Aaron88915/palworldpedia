@@ -1,0 +1,642 @@
+[
+ {
+  "name": "Rayne Syndicate Oil Rig",
+  "raw": "Lv.55 Rayne Syndicate Oil Rig",
+  "id": "REGION_Oilrig_1",
+  "lvMin": 55,
+  "lvMax": 55,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Desolate Church",
+  "raw": "Desolate Church",
+  "id": "REGION_Grass_1_Church",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Small Settlement",
+  "raw": "Small Settlement",
+  "id": "REGION_Grass_1_Village",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Fisherman's Point",
+  "raw": "Fisherman's Point",
+  "id": "REGION_Volcano_1_Village",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Mount Obsidian"
+ },
+ {
+  "name": "Duneshelter",
+  "raw": "Duneshelter",
+  "id": "REGION_Desert_1_Village",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Twilight Dunes"
+ },
+ {
+  "name": "Rayne Syndicate Test Drilling Rig",
+  "raw": "Lv.30 Rayne Syndicate Test Drilling Rig",
+  "id": "REGION_Oilrig_2",
+  "lvMin": 30,
+  "lvMax": 30,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Ancient Ritual Site",
+  "raw": "Ancient Ritual Site",
+  "id": "REGION_Forest_Ruin",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Mount Obsidian",
+  "raw": "Lv.30-40 Mount Obsidian",
+  "id": "REGION_Volcano_1",
+  "lvMin": 30,
+  "lvMax": 40,
+  "group": "Mount Obsidian"
+ },
+ {
+  "name": "Frostbound Mountains",
+  "raw": "Frostbound Mountains",
+  "id": "REGION_Frost_small",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Astral Mountains"
+ },
+ {
+  "name": "Rayne Syndicate Platform Oil Rig",
+  "raw": "Lv.60 Rayne Syndicate Platform Oil Rig",
+  "id": "REGION_Oilrig_3",
+  "lvMin": 60,
+  "lvMax": 60,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Twilight Dunes",
+  "raw": "Lv.10-25 Twilight Dunes",
+  "id": "REGION_Desert_Small",
+  "lvMin": 10,
+  "lvMax": 25,
+  "group": "Twilight Dunes"
+ },
+ {
+  "name": "Verdant Sream",
+  "raw": "Lv.20-30 Verdant Sream",
+  "id": "REGION_Forest_2",
+  "lvMin": 20,
+  "lvMax": 30,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Azure Woodland",
+  "raw": "Azure Woodland",
+  "id": "REGION_Skyisland05",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Sunreach"
+ },
+ {
+  "name": "The Azure Tapestry",
+  "raw": "The Azure Tapestry",
+  "id": "REGION_Skyisland01",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Sunreach"
+ },
+ {
+  "name": "Dragonmark Peak",
+  "raw": "Dragonmark Peak",
+  "id": "REGION_Skyisland03",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Sunreach"
+ },
+ {
+  "name": "Waterlily Gorge",
+  "raw": "Waterlily Gorge",
+  "id": "REGION_Skyisland02",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Sunreach"
+ },
+ {
+  "name": "Arena",
+  "raw": "Arena",
+  "id": "REGION_Arena",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Scorched Ashland",
+  "raw": "Lv.50-60 Scorched Ashland",
+  "id": "REGION_Darkisland_FT01",
+  "lvMin": 50,
+  "lvMax": 60,
+  "group": "New Islands"
+ },
+ {
+  "name": "Withered Seaside",
+  "raw": "Withered Seaside",
+  "id": "REGION_Darkisland_FT09",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Emberstone Plateau",
+  "raw": "Emberstone Plateau",
+  "id": "REGION_Darkisland11",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Loess Plains",
+  "raw": "Loess Plains",
+  "id": "REGION_Darkisland_FT03",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Crystalized Ancient Tree",
+  "raw": "Crystalized Ancient Tree",
+  "id": "REGION_Darkisland05",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Scorched Hill",
+  "raw": "Scorched Hill",
+  "id": "REGION_Darkisland_FT07",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Deserted Ash Plateau",
+  "raw": "Deserted Ash Plateau",
+  "id": "REGION_Darkisland_FT08",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Frozen Coral Hill",
+  "raw": "Frozen Coral Hill",
+  "id": "REGION_Darkisland_FT10",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Feybreak Shipwreck",
+  "raw": "Feybreak Shipwreck",
+  "id": "REGION_Darkisland03",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "The Oculus Gate, Tower in Sight",
+  "raw": "The Oculus Gate, Tower in Sight",
+  "id": "REGION_Darkisland_FT05",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Stone Pillar Cave",
+  "raw": "Stone Pillar Cave",
+  "id": "REGION_Darkisland08",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Hidden Passage to the Oculus Gate",
+  "raw": "Hidden Passage to the Oculus Gate",
+  "id": "REGION_Darkisland_FT04",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "-",
+  "raw": "-",
+  "id": "REGION_Array",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Golden Hills",
+  "raw": "Golden Hills",
+  "id": "REGION_Grass_3",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Autumn Rocks",
+  "raw": "Autumn Rocks",
+  "id": "REGION_Grass_4",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Fortress Ruins",
+  "raw": "Fortress Ruins",
+  "id": "REGION_Grass_5",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Flying Fish Coast",
+  "raw": "Flying Fish Coast",
+  "id": "REGION_Grass_6",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Gobfin's Turf",
+  "raw": "Gobfin's Turf",
+  "id": "REGION_Grass_7",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Scars of War",
+  "raw": "Lv.10-20 Scars of War",
+  "id": "REGION_Grass_8",
+  "lvMin": 10,
+  "lvMax": 20,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Foot of the Astral Mountains",
+  "raw": "Lv.30-40 Foot of the Astral Mountains",
+  "id": "REGION_Frost_2",
+  "lvMin": 30,
+  "lvMax": 40,
+  "group": "Astral Mountains"
+ },
+ {
+  "name": "Abandoned Ruins",
+  "raw": "Abandoned Ruins",
+  "id": "REGION_Frost_3",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Astral Mountains"
+ },
+ {
+  "name": "Ruined Fortress City",
+  "raw": "Ruined Fortress City",
+  "id": "REGION_Volcano_3",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Mount Obsidian"
+ },
+ {
+  "name": "Dry Sandy Beach",
+  "raw": "Dry Sandy Beach",
+  "id": "REGION_Volcano_4",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Mount Obsidian"
+ },
+ {
+  "name": "Sea Breeze Archipelago Church",
+  "raw": "Sea Breeze Archipelago Church",
+  "id": "REGION_PvP_1_Church",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Sakurajima - Southern Sandbar",
+  "raw": "Lv.40-55 Sakurajima - Southern Sandbar",
+  "id": "REGION_WhiteSand",
+  "lvMin": 40,
+  "lvMax": 55,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Isle of Silence Church Ruins",
+  "raw": "Isle of Silence Church Ruins",
+  "id": "REGION_PvP_2_Church",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Marsh Island Church Ruins",
+  "raw": "Marsh Island Church Ruins",
+  "id": "REGION_PvP_3_Church",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Sunlit Isle",
+  "raw": "Lv.1-10 Sunlit Isle",
+  "id": "REGION_SmallIsland01",
+  "lvMin": 1,
+  "lvMax": 10,
+  "group": "New Islands"
+ },
+ {
+  "name": "Oasis Isle",
+  "raw": "Lv.40-50 Oasis Isle",
+  "id": "REGION_SmallIsland02",
+  "lvMin": 40,
+  "lvMax": 50,
+  "group": "New Islands"
+ },
+ {
+  "name": "Isle of the Glacial Core",
+  "raw": "Lv.50-60 Isle of the Glacial Core",
+  "id": "REGION_SmallIsland03",
+  "lvMin": 50,
+  "lvMax": 60,
+  "group": "New Islands"
+ },
+ {
+  "name": "Frostbitten Isle",
+  "raw": "Lv.10-20 Frostbitten Isle",
+  "id": "REGION_SmallIsland04",
+  "lvMin": 10,
+  "lvMax": 20,
+  "group": "New Islands"
+ },
+ {
+  "name": "Phantom Isle",
+  "raw": "Lv.30-40 Phantom Isle",
+  "id": "REGION_SmallIsland05",
+  "lvMin": 30,
+  "lvMax": 40,
+  "group": "New Islands"
+ },
+ {
+  "name": "Isle of Decayed Treasures",
+  "raw": "Lv.10-20 Isle of Decayed Treasures",
+  "id": "REGION_SmallIsland06",
+  "lvMin": 10,
+  "lvMax": 20,
+  "group": "New Islands"
+ },
+ {
+  "name": "Isle of Eternal Summer",
+  "raw": "Lv.30-45 Isle of Eternal Summer",
+  "id": "REGION_SmallIsland07",
+  "lvMin": 30,
+  "lvMax": 45,
+  "group": "New Islands"
+ },
+ {
+  "name": "Flamepulse Islet",
+  "raw": "Flamepulse Islet",
+  "id": "REGION_New_SmallIsland02",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Islet of Circular Ruins",
+  "raw": "Islet of Circular Ruins",
+  "id": "REGION_New_SmallIsland01",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Scouring Islet",
+  "raw": "Scouring Islet",
+  "id": "REGION_New_SmallIsland03",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Bicornis Islet",
+  "raw": "Bicornis Islet",
+  "id": "REGION_New_SmallIsland04",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Glacial Memento Islet",
+  "raw": "Glacial Memento Islet",
+  "id": "REGION_New_SmallIsland05",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Sandstone Gate Islet",
+  "raw": "Sandstone Gate Islet",
+  "id": "REGION_New_SmallIsland06",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Suncrest Islet",
+  "raw": "Suncrest Islet",
+  "id": "REGION_New_SmallIsland07",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "New Islands"
+ },
+ {
+  "name": "Foot of the World Tree",
+  "raw": "Foot of the World Tree",
+  "id": "REGION_FootOfWorldTree",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "The World Tree"
+ },
+ {
+  "name": "Crescent Moon Shore",
+  "raw": "Lv.15-25 Crescent Moon Shore",
+  "id": "REGION_Forest_1",
+  "lvMin": 15,
+  "lvMax": 25,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Bamboo Groves",
+  "raw": "Lv.10-20 Bamboo Groves",
+  "id": "REGION_Grass_2",
+  "lvMin": 10,
+  "lvMax": 20,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Windswept Island",
+  "raw": "Lv.1-15 Windswept Island",
+  "id": "REGION_Grass_1",
+  "lvMin": 1,
+  "lvMax": 15,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Isle of Silence",
+  "raw": "Lv.1-10 Isle of Silence",
+  "id": "REGION_PvP_2",
+  "lvMin": 1,
+  "lvMax": 10,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Marsh Island",
+  "raw": "Lv.1-10 Marsh Island",
+  "id": "REGION_PvP_5",
+  "lvMin": 1,
+  "lvMax": 10,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Eastern Wild Island",
+  "raw": "Lv.1-10 Eastern Wild Island",
+  "id": "REGION_PvP_4",
+  "lvMin": 1,
+  "lvMax": 10,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Sea Breeze Archipelago",
+  "raw": "Lv.1-10 Sea Breeze Archipelago",
+  "id": "REGION_PvP_1",
+  "lvMin": 1,
+  "lvMax": 10,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "No. 2 Wildlife Sanctuary",
+  "raw": "Lv.40-45 No. 2 Wildlife Sanctuary",
+  "id": "REGION_Preserve2",
+  "lvMin": 40,
+  "lvMax": 45,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "No. 3 Wildlife Sanctuary",
+  "raw": "Lv.40-45 No. 3 Wildlife Sanctuary",
+  "id": "REGION_Preserve3",
+  "lvMin": 40,
+  "lvMax": 45,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Desiccated Dunes",
+  "raw": "Lv.40-50 Desiccated Dunes",
+  "id": "REGION_Desert_1",
+  "lvMin": 40,
+  "lvMax": 50,
+  "group": "Twilight Dunes"
+ },
+ {
+  "name": "Astral Mountains",
+  "raw": "Lv.35-50 Astral Mountains",
+  "id": "REGION_Frost_1",
+  "lvMin": 35,
+  "lvMax": 50,
+  "group": "Astral Mountains"
+ },
+ {
+  "name": "Farcry Marsh",
+  "raw": "Farcry Marsh",
+  "id": "REGION_Skyisland04",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Sunreach"
+ },
+ {
+  "name": "Enchanted Firmament",
+  "raw": "Enchanted Firmament",
+  "id": "REGION_Skyisland07",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Sunreach"
+ },
+ {
+  "name": "Crystalline Archipelago",
+  "raw": "Crystalline Archipelago",
+  "id": "REGION_Skyisland06",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Sunreach"
+ },
+ {
+  "name": "Deep Bamboo Thicket",
+  "raw": "Deep Bamboo Thicket",
+  "id": "REGION_Grass_9",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Foot of the Volcano",
+  "raw": "Foot of the Volcano",
+  "id": "REGION_Volcano_2",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Mount Obsidian"
+ },
+ {
+  "name": "Sakurajima - Mushroom Wetlands",
+  "raw": "Sakurajima - Mushroom Wetlands",
+  "id": "REGION_Mushroom",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Dancing Sakura Shrine",
+  "raw": "Lv.50-55 Dancing Sakura Shrine",
+  "id": "REGION_Sakura",
+  "lvMin": 50,
+  "lvMax": 55,
+  "group": "Sakurajima"
+ },
+ {
+  "name": "Sakurajima - Northern Rock Field",
+  "raw": "Sakurajima - Northern Rock Field",
+  "id": "REGION_RockSand",
+  "lvMin": null,
+  "lvMax": null,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "Isle of Murmurs",
+  "raw": "Lv.1-10 Isle of Murmurs",
+  "id": "REGION_PvP_3",
+  "lvMin": 1,
+  "lvMax": 10,
+  "group": "Palpagos Islands"
+ },
+ {
+  "name": "No. 1 Wildlife Sanctuary",
+  "raw": "Lv.20-25 No. 1 Wildlife Sanctuary",
+  "id": "REGION_Preserve1",
+  "lvMin": 20,
+  "lvMax": 25,
+  "group": "Palpagos Islands"
+ }
+]

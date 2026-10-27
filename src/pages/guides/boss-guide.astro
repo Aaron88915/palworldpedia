@@ -4,107 +4,192 @@ import AdSlot from '@components/AdSlot.astro';
 ---
 
 <Layout
-  title="Palworld BOSS 攻略 - 全塔主 + 野外 BOSS 打法"
-  description="Palworld 全 BOSS 攻略合集。塔主 BOSS（Chillet / Xenolord / Bellanoir 等）、野外 BOSS、稀有 BOSS 打法配队推荐，含 1.0 + Sakurajima + Feybreak。"
+  title="Palworld BOSS 攻略 - 9 座塔主 + 野外 BOSS 打法"
+  description="Palworld 1.0 全部 BOSS 攻略。9 座塔主（Zoe & Grizzbolt、Lily & Lyleen、Saya & Selyne、Auri & Shaolong、Zenara & Astralym 等）普通与困难难度等级血量，配队推荐。"
 >
   <article class="guide-content">
     <header class="page-header">
       <p class="breadcrumb"><a href="/guides/">攻略</a> › BOSS 攻略</p>
-      <h1>⚔️ Palworld BOSS 攻略：塔主 + 野外 + DLC 全打法</h1>
-      <p class="text-secondary">含 1.0 / Sakurajima / Feybreak · 配队 + 道具 + 走位</p>
+      <h1>⚔️ Palworld BOSS 攻略：9 座塔主 + 野外 + 1.0 全打法</h1>
+      <p class="text-secondary">Palworld 1.0 · 等级上限 80 · 每座塔都有「普通 / 困难」两档难度</p>
     </header>
 
     <AdSlot position="inline" />
 
     <section>
-      <h2>BOSS 分类：5 类打法差异</h2>
-      <p>Palworld BOSS 分 5 类，每类准备不同：</p>
-      <ol>
-        <li><strong>塔主 BOSS（5 座塔）</strong>：固定位置，剧情必打</li>
-        <li><strong>野外 BOSS（Alpha Pal）</strong>：随机刷新，野外可见</li>
-        <li><strong>DLC 塔主</strong>：Sakurajima 岛 + Feybreak 岛专属</li>
-        <li><strong>Rampaging 暴走 BOSS</strong>：每天固定时间刷</li>
-        <li><strong>Invasion 入侵 BOSS</strong>：基地被袭击时出现</li>
-      </ol>
-    </section>
-
-    <AdSlot position="inline" />
-
-    <section>
-      <h2>5 座塔主 BOSS 全打法</h2>
-      <h3>塔 1 - Chillet（火草）</h3>
-      <p>第一座塔的 BOSS，难度 ★☆☆☆☆。推荐配队：3 只 20+ 火系 Foxparks 进化型，
-        配 Cattiva 加攻。打法：开局先打它召唤的 2 只小火球，
-        1.5 分钟内结束战斗。</p>
-
-      <h3>塔 2 - Kingpaca（草）</h3>
-      <p>第二座塔，难度 ★★☆☆☆。需要 Kingpaca 25+ 等级。
-        关键：它的 <strong>棉花球</strong> 会减速，带 Blazehowl 这种高速火系绕后输出。</p>
-
-      <h3>塔 3 - Relaxaurus（龙水）</h3>
-      <p>第三座塔 BOSS，难度 ★★★☆☆。弱点是电系。
-        必带 Grizzbolt 30+ 级，先电麻痹再集火。
-        准备 30 个 <strong>Mega Sphere</strong> 捕它，捕获后是中期最强水龙。</p>
-
-      <h3>塔 4 - Mammorest（草）</h3>
-      <p>第四座塔，难度 ★★★★☆。要 50+ 级的暗系输出。
-        配队：Helzephyr + <a href="/pals/silvance/">Silveon</a> + Faleris。
-        它的地震 AOE 会全队伤血，帕鲁之间保持距离分散站位。</p>
-
-      <h3>塔 5 - Necromus（暗）</h3>
-      <p>最终塔 BOSS，难度 ★★★★★。要 60+ 装备 + 70+ 帕鲁。
-        配队：Jormuntide + Frostallion + Jetragon。
-        关键点：它会召唤 Paladius，先杀 Paladius 再打 Necromus。</p>
-    </section>
-
-    <AdSlot position="inline" />
-
-    <section>
-      <h2>DLC BOSS：Sakurajima + Feybreak</h2>
-      <h3>Sakurajima 塔 - Suzaku Aqua</h3>
-      <p>樱岛 DLC 新塔主，水火双系。建议带电系或暗系，60+ 等级。
-        准备 50 个 <strong>Giga Sphere</strong> 尝试捕获，捕获后是水火双修 BOSS。</p>
-
-      <h3>Feybreak 塔 - Xenolord</h3>
-      <p>Feybreak DLC 终极 BOSS，暗龙双系。70+ 装备 + 80 帕鲁才能稳定击杀。
-        走位：它的龙息是扇形 AOE，往后拉距离用单体输出帕鲁点杀。
-        捕获它后整局游戏最肉 + 最高攻击。</p>
-    </section>
-
-    <AdSlot position="inline" />
-
-    <section>
-      <h2>野外 Alpha BOSS 速刷表</h2>
-      <p>野外 BOSS 刷在固定区域，每天 0/6/12/18 点刷新。必刷的 5 个：</p>
+      <h2>先搞懂：塔主 BOSS 有两种难度</h2>
+      <p>Palworld 1.0 一共有 <strong>9 座塔主</strong>。每一座塔的 BOSS 都有两个版本：</p>
       <ul>
-        <li><strong>Penking</strong>（初始岛）：掉落 5-8 个 Ancient Tech Points</li>
-        <li><strong>Caprity Noct</strong>（初始岛）：稀有素材 + 经验</li>
-        <li><strong>Elphidran</strong>（Sakurajima）：电系必备素材</li>
-        <li><strong>Astral Mountain Boss</strong>（Sakurajima）：产稀有金属</li>
-        <li><strong>Feybreak Boss</strong>（Feybreak）：终极材料源</li>
+        <li><strong>普通（Normal）</strong>：等级和你当前进度匹配，用来推进主线。前 5 座塔的普通版分别是 Lv 10 / 20 / 30 / 40 / 50。</li>
+        <li><strong>困难（Hard）</strong>：<strong>Lv 72–80</strong> 的重打版本，血量是普通版的 5–10 倍。这是 1.0 等级上限提到 80 之后的主要去处。</li>
       </ul>
+      <p>
+        最后一座塔（世界树）只有 <strong>Lv 80</strong> 一个版本，没有困难版 —— 它就是 1.0 的最终 BOSS。
+        下面是全部 9 座塔的完整数据（等级与血量取自 paldb.cc 官方数据表）。
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>9 座塔主 BOSS 全表</h2>
+      <ol>
+        <li>
+          <strong>Rayne Syndicate Tower — Zoe &amp; Grizzbolt（电）</strong><br />
+          普通 Lv 10 / HP 12,900 · 困难 Lv 72 / HP 464,000
+        </li>
+        <li>
+          <strong>Free Pal Alliance Tower — Lily &amp; Lyleen（草）</strong><br />
+          普通 Lv 20 / HP 42,500 · 困难 Lv 74 / HP 494,000
+        </li>
+        <li>
+          <strong>Brothers of the Eternal Pyre Tower — Axel &amp; Orserk（龙 / 电）</strong><br />
+          普通 Lv 30 / HP 53,750 · 困难 Lv 76 / HP 514,800
+        </li>
+        <li>
+          <strong>PIDF Tower — Marcus &amp; Faleris（火）</strong><br />
+          普通 Lv 40 / HP 72,900 · 困难 Lv 78 / HP 526,900
+        </li>
+        <li>
+          <strong>PAL Genetic Research Unit Tower — Victor &amp; Shadowbeak（暗）</strong><br />
+          普通 Lv 50 / HP 105,000 · 困难 Lv 80 / HP 570,000
+        </li>
+        <li>
+          <strong>Moonflower Tower — Saya &amp; Selyne（暗 / 中立）</strong><br />
+          普通 Lv 55 / HP 234,900 · 困难 Lv 80 / HP 567,300
+        </li>
+        <li>
+          <strong>Feybreak Tower — Bjorn &amp; Bastigor（冰）</strong><br />
+          普通 Lv 60 / HP 310,000 · 困难 Lv 80 / HP 487,500
+        </li>
+        <li>
+          <strong>Azure Covenant Tower — Auri &amp; Shaolong（龙 / 水）</strong><br />
+          普通 Lv 68 / HP 327,600 · 困难 Lv 80 / HP 501,600
+        </li>
+        <li>
+          <strong>最终塔（地点尚未公布）— Zenara &amp; Astralym</strong><br />
+          Lv 80 / HP 420,000 · 无困难版本
+        </li>
+      </ol>
+      <p>
+        元素克制是通用解法：打<b>电</b>系塔主带龙/地面，打<b>草</b>系带火/冰，打<b>龙</b>系带电/冰，
+        打<b>暗</b>系带龙，打<b>冰</b>系带火/电。困难版血量动辄几十万，
+        建议带 <a href="/tech-tree/Battle_RangeWeapon_RocketLauncher/">Rocket Launcher</a> 这类高伤武器，
+        配合回血帕鲁而不是纯输出阵容。
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>逐个打法要点</h2>
+
+      <h3>塔 1 · Zoe &amp; Grizzbolt（Rayne Syndicate Tower）</h3>
+      <p>
+        开场最好打的塔主：普通版只有 Lv 10，你的初级队伍就能打。电系属性，
+        带龙系或地面系帕鲁可以直接秒掉。困难版 Lv 72 是很多人第一次面对「高难度塔主」，
+        建议先用 Lv 70 的主力队伍试一次熟悉机制。
+      </p>
+
+      <h3>塔 2 · Lily &amp; Lyleen（Free Pal Alliance Tower）</h3>
+      <p>
+        草系，Boss 本体加召唤物两条血线。草系怕火也怕冰，
+        队伍里带 <a href="/pals/faleris/">Faleris</a> 这种高速火系拉开距离输出比较稳。
+        困难版 Lv 74 血量接近 50 万，务必带足回复道具。
+      </p>
+
+      <h3>塔 3 · Axel &amp; Orserk（Brothers of the Eternal Pyre Tower）</h3>
+      <p>
+        龙 + 电双属性，是前期第一座「难啃的骨头」。龙系抗性高，纯物理输出打不动，
+        建议用电系或冰系帕鲁先手控制再集火。
+        两只 Boss 同时在场时注意别被夹击，拉开站位分别处理。
+      </p>
+
+      <h3>塔 4 · Marcus &amp; Faleris（PIDF Tower）</h3>
+      <p>
+        火系塔主。火系怕水也怕龙，
+        <a href="/pals/faleris/">Faleris</a> 系（马）在这关属于对口克制。
+        普通版 Lv 40 依然是正常的推进节奏，装备上 Pal Metal Armor 就够用。
+      </p>
+
+      <h3>塔 5 · Victor &amp; Shadowbeak（PAL Genetic Research Unit Tower）</h3>
+      <p>
+        暗系，普通版就是 Lv 50，第一次真正「需要认真准备」的塔。
+        暗系不吃电克制，用龙系或高单体输出的帕鲁更实在。
+        困难版 Lv 80 / HP 57 万是全塔最高血量之一，需要 Lv 80 满级帕鲁 + 高阶饰品。
+      </p>
+
+      <h3>塔 6 · Saya &amp; Selyne（Moonflower Tower）</h3>
+      <p>
+        暗 + 中立双属性，在月见岛（Moonflower Island）一带。
+        中立系意味着不能用元素克制硬吃，只能靠等级和装备压制。
+        普通版 Lv 55 / HP 23 万，比前面几座明显更肉。
+      </p>
+
+      <h3>塔 7 · Bjorn &amp; Bastigor（Feybreak Tower）</h3>
+      <p>
+        冰系塔主，在 Feybreak 地区。冰系怕火也怕电，
+        带 <a href="/pals/grizzbolt/">Grizzbolt</a> 系雷帕鲁麻痹后输出效率最高。
+        普通版 Lv 60 / HP 31 万，属于 1.0 前 DLC 末期的毕业考试。
+      </p>
+
+      <h3>塔 8 · Auri &amp; Shaolong（Azure Covenant Tower）</h3>
+      <p>
+        <strong>1.0 新增</strong>，位于云海区域（Sunreach）的 Azure Covenant 之塔。
+        龙 + 水双属性，普通版 Lv 68 / HP 32.7 万 —— 也就是说你需要 Lv 68 左右的队伍才能正常打。
+        龙系怕电，用电系帕鲁压制；
+        水系怕电/冰，正好一起解决。困难版直接拉到 Lv 80 / HP 50 万。
+      </p>
+
+      <h3>塔 9 · Zenara &amp; Astralym（最终塔）</h3>
+      <p>
+        <strong>1.0 最终 BOSS</strong>，在世界树（The World Tree）。
+        只有 Lv 80 一个版本，HP 42 万。这是全游戏等级天花板的一战：
+        装备要升到 Ancient Series，饰品要穿满 1.0 新增的 44 件饰品里的高阶款，
+        帕鲁建议用 80 级 + 觉醒（Awakening）的阵容。
+        打之前记得在基地备足 Ancient 系的回复药。
+      </p>
+    </section>
+
+    <AdSlot position="inline" />
+
+    <section>
+      <h2>不是塔主的 4 个特殊 BOSS</h2>
+      <p>除了 9 座塔主，1.0 还有几个独立的高难 BOSS，paldb 也把它们放在塔类页面里：</p>
+      <ul>
+        <li><strong>Legendary Ocean King Panthalus</strong>（水）—— Lv 70 / HP 353,220，具体地点官方数据暂未标注</li>
+        <li><strong>Bewitching Lurker Dandilord</strong>（草 / 暗）—— Lv 78 / HP 6,740，出现在 Rotmist Root</li>
+        <li><strong>Immortal Shade Silvance</strong>（草）—— Lv 78 / HP 7,442，出现在 Shinespore Root</li>
+        <li><strong>Highly Modified Grizzbolt</strong>（电）—— Lv 78 / HP 6,506，出现在 Forbidden Laboratory</li>
+      </ul>
+      <p>
+        这几个血量看着低但等级很高，属于「机制型」挑战而不是磨血，
+        建议按 <a href="/pals/silvance/">Silvance</a> 这类高等级单体输出帕鲁逐个试。
+      </p>
     </section>
 
     <AdSlot position="inline" />
 
     <section>
       <h2>通用 BOSS 战准备清单</h2>
-      <p>无论打哪个 BOSS，这套装备先备好：</p>
       <ul>
         <li>武器：<a href="/tech-tree/Battle_RangeWeapon_AssaultRifle/">Assault Rifle</a> + <a href="/tech-tree/Battle_RangeWeapon_RocketLauncher/">Rocket Launcher</a></li>
-        <li>防具：<a href="/tech-tree/Battle_Armor_Grade_04_Steal_Cold/">Pal Metal Armor</a> 全套</li>
-        <li>消耗品：50 个 <strong>Mega Sphere</strong> + 30 个 <strong>Giga Sphere</strong> + 20 个治疗药</li>
-        <li>配队：3 只主攻 + 1 只治疗 + 1 只辅助</li>
+        <li>防具：Lv 80 阶段换成 Ancient Series（古代系列）护甲</li>
+        <li>消耗品：30 个 <strong>Mega Sphere</strong> + 30 个 <strong>Giga Sphere</strong> + 满背包治疗药</li>
+        <li>配队：3 只主攻 + 1 只治疗 + 1 只辅助，别全带脆皮输出</li>
         <li>陷阱：<a href="/tech-tree/Special_SphereFactory_Black_Grade_02/">Megalasphereline Trap</a> 提高捕获率</li>
+        <li>等级：普通版按塔的等级配平，困难版统一拉到 Lv 80</li>
       </ul>
     </section>
 
     <section class="related-links">
-      <h2>立即使用</h2>
+      <h2>相关攻略</h2>
       <ul>
+        <li><a href="/guides/palworld-1-0-guide/">🆕 Palworld 1.0 全内容攻略</a></li>
         <li><a href="/pals/">📖 帕鲁图鉴（看 BOSS 详细属性）</a></li>
         <li><a href="/breeding/">🧮 配种计算器（配 BOSS 队伍）</a></li>
-        <li><a href="/guides/tech-tree-guide/">🔬 科技树升级路线</a></li>
+        <li><a href="/tech-tree/">🔬 科技树（Lv 1-80 全部科技）</a></li>
+        <li><a href="/guides/tech-tree-guide/">📈 科技树升级路线</a></li>
         <li><a href="/guides/beginner-guide/">🎮 新手入门</a></li>
       </ul>
     </section>
@@ -118,7 +203,7 @@ import AdSlot from '@components/AdSlot.astro';
   .breadcrumb a { color: var(--accent); text-decoration: none; }
   h1 { font-size: 2rem; margin: 0.5rem 0; line-height: 1.3; }
   h2 { font-size: 1.5rem; margin: 2.5rem 0 1rem; color: var(--accent); border-left: 4px solid var(--accent); padding-left: 0.8rem; }
-  h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; color: var(--text-primary); }
+  h3 { font-size: 1.2rem; margin: 1.5rem 0 0.8rem; color: var(--text-primary); }
   p { margin: 0.8rem 0; }
   ul, ol { margin: 0.8rem 0; padding-left: 1.5rem; }
   li { margin: 0.5rem 0; }
