@@ -58,9 +58,9 @@ export interface Pal {
   rarityTier: 'Common' | 'Rare' | 'Epic' | 'Legendary';  // 稀有度分级
   stats: {
     hp: number;
-    attack: { melee: number; ranged: number };
+    attack: { melee: number };       // 帕鲁只有近战攻击属性
     defense: number;
-    speed: number;
+    speed: number;                   // 移动速度（paldb RunSpeed，非 Paldeck 属性）
   };
   workSuitability: Partial<Record<WorkSuitability, number>>;  // 工作适配度
   skills: PalSkill[];              // 主动技能

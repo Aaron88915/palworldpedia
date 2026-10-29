@@ -196,10 +196,12 @@ const schema = {
             <div class="stat-num-big">{featuredPal.stats.defense}</div>
             <div class="stat-label-big">{t('palDetail.defense', lang)}</div>
           </div>
-          <div class="stat-cell-big">
-            <div class="stat-num-big">{featuredPal.stats.speed}</div>
-            <div class="stat-label-big">{t('palDetail.speed', lang)}</div>
-          </div>
+          {featuredPal.stats.speed > 0 && (
+            <div class="stat-cell-big">
+              <div class="stat-num-big">{featuredPal.stats.speed}</div>
+              <div class="stat-label-big">{t('palDetail.speed', lang)}</div>
+            </div>
+          )}
         </div>
         <div class="featured-pal-work">
           <div class="work-label">{t('home.workLabel', lang)}</div>

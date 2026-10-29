@@ -13,8 +13,7 @@
     "stats": {
       "hp": 65,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 80,
       "speed": 0
@@ -77,8 +76,7 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
       "speed": 300
@@ -251,11 +249,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 1,
@@ -398,7 +395,7 @@
       "Ring of Resistance"
     ],
     "food": 1,
-    "price": 0,
+    "price": 421,
     "biomes": [
       "Windswept Island",
       "Sea Breeze Archipelago",
@@ -443,11 +440,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 1,
@@ -602,7 +598,7 @@
       "Ring of Resistance"
     ],
     "food": 1,
-    "price": 0,
+    "price": 436,
     "biomes": [
       "Windswept Island",
       "Sea Breeze Archipelago",
@@ -646,11 +642,10 @@
     "stats": {
       "hp": 60,
       "attack": {
-        "melee": 60,
-        "ranged": 0
+        "melee": 60
       },
       "defense": 60,
-      "speed": 0
+      "speed": 375
     },
     "workSuitability": {
       "farming": 1,
@@ -790,7 +785,7 @@
       "Ring of Resistance"
     ],
     "food": 1,
-    "price": 0,
+    "price": 313,
     "biomes": [
       "Windswept Island",
       "Eastern Wild Island"
@@ -832,11 +827,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 1,
@@ -983,7 +977,7 @@
       "Ring of Grass Resistance"
     ],
     "food": 1,
-    "price": 0,
+    "price": 480,
     "biomes": [
       "Windswept Island",
       "Sea Breeze Archipelago",
@@ -1027,8 +1021,7 @@
     "stats": {
       "hp": 60,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 60,
       "speed": 300
@@ -1211,11 +1204,10 @@
     "stats": {
       "hp": 60,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 60,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 1,
@@ -1354,7 +1346,7 @@
       "Fire"
     ],
     "food": 1,
-    "price": 0,
+    "price": 463,
     "biomes": [
       "Windswept Island",
       "Bamboo Groves",
@@ -1397,11 +1389,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
-      "speed": 0
+      "speed": 350
     },
     "workSuitability": {
       "farming": 1,
@@ -1545,7 +1536,7 @@
       "Mega Sphere"
     ],
     "food": 1,
-    "price": 0,
+    "price": 407,
     "biomes": [
       "Sealed Realms"
     ],
@@ -1586,11 +1577,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 80,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "transporting": 1,
@@ -1727,7 +1717,7 @@
       "Pal Fluids"
     ],
     "food": 2,
-    "price": 0,
+    "price": 521,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -1774,8 +1764,7 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 80,
       "speed": 550
@@ -1959,11 +1948,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 75,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "farming": 2,
@@ -2099,7 +2087,7 @@
       "Farming"
     ],
     "food": 1,
-    "price": 0,
+    "price": 489,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -2140,11 +2128,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 85,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 1,
@@ -2281,7 +2268,7 @@
       "Water"
     ],
     "food": 2,
-    "price": 0,
+    "price": 584,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -2328,11 +2315,10 @@
     "stats": {
       "hp": 85,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 90,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 2,
@@ -2471,7 +2457,7 @@
       "Water"
     ],
     "food": 2,
-    "price": 0,
+    "price": 1254,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -2518,11 +2504,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 75,
-      "speed": 0
+      "speed": 350
     },
     "workSuitability": {
       "transporting": 1,
@@ -2659,7 +2644,7 @@
       "Neutral"
     ],
     "food": 1,
-    "price": 0,
+    "price": 541,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -2700,11 +2685,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 60,
-        "ranged": 0
+        "melee": 60
       },
       "defense": 70,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "watering": 1
@@ -2841,7 +2825,7 @@
       "Ring of Water Resistance"
     ],
     "food": 1,
-    "price": 0,
+    "price": 355,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -2883,11 +2867,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "planting": 1
@@ -3025,7 +3008,7 @@
       "Ring of Earth Resistance"
     ],
     "food": 1,
-    "price": 0,
+    "price": 394,
     "biomes": [
       "Palpagos Islands",
       "Sakurajima"
@@ -3067,8 +3050,7 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 70,
       "speed": 400
@@ -3126,8 +3108,7 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 65,
-        "ranged": 0
+        "melee": 65
       },
       "defense": 65,
       "speed": 400
@@ -3184,11 +3165,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 70,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "generating_electricity": 1
@@ -3325,7 +3305,7 @@
       "Ring of Lightning Resistance"
     ],
     "food": 1,
-    "price": 0,
+    "price": 417,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -3372,11 +3352,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 80,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "cooling": 1
@@ -3511,7 +3490,7 @@
       "Precious Claw"
     ],
     "food": 1,
-    "price": 0,
+    "price": 472,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -3557,11 +3536,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 1,
@@ -3700,7 +3678,7 @@
       "Mining"
     ],
     "food": 1,
-    "price": 0,
+    "price": 436,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -3742,11 +3720,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 70,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "handiwork": 1,
@@ -3887,7 +3864,7 @@
       "Ring of Water Resistance"
     ],
     "food": 1,
-    "price": 0,
+    "price": 463,
     "biomes": [
       "Windswept Hills"
     ],
@@ -3929,11 +3906,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 70,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "handiwork": 1,
@@ -4070,7 +4046,7 @@
       "Electric"
     ],
     "food": 1,
-    "price": 0,
+    "price": 561,
     "biomes": [
       "Windswept Hills"
     ],
@@ -4112,11 +4088,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 95,
-      "speed": 0
+      "speed": 450
     },
     "workSuitability": {
       "handiwork": 2,
@@ -4257,7 +4232,7 @@
       "Precious Pelt"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1442,
     "biomes": [
       "Dungeons"
     ],
@@ -4299,11 +4274,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 100,
-      "speed": 0
+      "speed": 450
     },
     "workSuitability": {
       "handiwork": 2,
@@ -4441,7 +4415,7 @@
       "Electric"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1683,
     "biomes": [
       "Dungeons"
     ],
@@ -4482,11 +4456,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 80,
-      "speed": 0
+      "speed": 380
     },
     "workSuitability": {
       "gathering": 1
@@ -4623,7 +4596,7 @@
       "Ring of Dark Resistance"
     ],
     "food": 1,
-    "price": 0,
+    "price": 443,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -4664,11 +4637,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 90,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "farming": 2
@@ -4802,7 +4774,7 @@
       "Neutral"
     ],
     "food": 2,
-    "price": 0,
+    "price": 791,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -4843,11 +4815,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 90,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "gathering": 2
@@ -4997,7 +4968,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1274,
     "biomes": [
       "Marsh Island",
       "Sealed Realms"
@@ -5039,11 +5010,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 90,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "cooling": 4,
@@ -5207,7 +5177,7 @@
       "Cooling"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1624,
     "biomes": [
       "Marsh Island",
       "Sealed Realms"
@@ -5249,11 +5219,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 60,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 1,
@@ -5392,7 +5361,7 @@
       "Gathering"
     ],
     "food": 1,
-    "price": 0,
+    "price": 397,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -5433,8 +5402,7 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
       "speed": 300
@@ -5621,11 +5589,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 70,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 1,
@@ -5762,7 +5729,7 @@
       "Fire"
     ],
     "food": 1,
-    "price": 0,
+    "price": 526,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -5808,11 +5775,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 70,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "gathering": 1
@@ -5947,7 +5913,7 @@
       "Gathering"
     ],
     "food": 1,
-    "price": 0,
+    "price": 502,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -5988,11 +5954,10 @@
     "stats": {
       "hp": 60,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 80,
-      "speed": 0
+      "speed": 250
     },
     "workSuitability": {
       "handiwork": 1,
@@ -6129,7 +6094,7 @@
       "Fire"
     ],
     "food": 2,
-    "price": 0,
+    "price": 436,
     "biomes": [
       "Mount Obsidian",
       "Palpagos Islands"
@@ -6171,8 +6136,7 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 75,
       "speed": 400
@@ -6351,11 +6315,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 60,
-        "ranged": 0
+        "melee": 60
       },
       "defense": 70,
-      "speed": 0
+      "speed": 475
     },
     "workSuitability": {
       "farming": 1,
@@ -6491,7 +6454,7 @@
       "Farming"
     ],
     "food": 1,
-    "price": 0,
+    "price": 665,
     "biomes": [
       "Windswept Hills"
     ],
@@ -6532,11 +6495,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 65,
-        "ranged": 0
+        "melee": 65
       },
       "defense": 70,
-      "speed": 0
+      "speed": 475
     },
     "workSuitability": {
       "farming": 1,
@@ -6674,7 +6636,7 @@
       "Gold Coin"
     ],
     "food": 1,
-    "price": 0,
+    "price": 385,
     "biomes": [
       "Astral Mountains"
     ],
@@ -6715,11 +6677,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "mining": 1
@@ -6855,7 +6816,7 @@
       "Mining"
     ],
     "food": 1,
-    "price": 0,
+    "price": 443,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -6896,11 +6857,10 @@
     "stats": {
       "hp": 65,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 70,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "kindling": 1
@@ -7037,7 +6997,7 @@
       "Ring of Flame Resistance"
     ],
     "food": 1,
-    "price": 0,
+    "price": 394,
     "biomes": [
       "Windswept Hills"
     ],
@@ -7078,8 +7038,7 @@
     "stats": {
       "hp": 65,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 70,
       "speed": 400
@@ -7264,11 +7223,10 @@
     "stats": {
       "hp": 60,
       "attack": {
-        "melee": 60,
-        "ranged": 0
+        "melee": 60
       },
       "defense": 70,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "transporting": 2,
@@ -7409,7 +7367,7 @@
       "watering"
     ],
     "food": 2,
-    "price": 0,
+    "price": 376,
     "biomes": [
       "Dungeons"
     ],
@@ -7451,11 +7409,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 60,
-        "ranged": 0
+        "melee": 60
       },
       "defense": 70,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "transporting": 2,
@@ -7592,7 +7549,7 @@
       "Water"
     ],
     "food": 2,
-    "price": 0,
+    "price": 421,
     "biomes": [
       "Dungeons"
     ],
@@ -7633,11 +7590,10 @@
     "stats": {
       "hp": 65,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 50,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 1,
@@ -7790,7 +7746,7 @@
       "Mining"
     ],
     "food": 2,
-    "price": 0,
+    "price": 358,
     "biomes": [
       "Palpagos Islands",
       "Twilight Dunes"
@@ -7832,11 +7788,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 80,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "lumbering": 2
@@ -7978,7 +7933,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 2,
-    "price": 0,
+    "price": 791,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -8019,11 +7974,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 80,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "lumbering": 2
@@ -8173,7 +8127,7 @@
       "Ground"
     ],
     "food": 2,
-    "price": 0,
+    "price": 891,
     "biomes": [
       "No. 1 Wildlife Sanctuary"
     ],
@@ -8214,11 +8168,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 75,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "gathering": 1
@@ -8369,7 +8322,7 @@
       "Gathering"
     ],
     "food": 2,
-    "price": 0,
+    "price": 611,
     "biomes": [
       "Feybreak",
       "Palpagos Islands"
@@ -8411,11 +8364,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 90,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "farming": 1,
@@ -8553,7 +8505,7 @@
       "Farming"
     ],
     "food": 2,
-    "price": 0,
+    "price": 1643,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -8600,8 +8552,7 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 90,
       "speed": 400
@@ -8787,11 +8738,10 @@
     "stats": {
       "hp": 60,
       "attack": {
-        "melee": 60,
-        "ranged": 0
+        "melee": 60
       },
       "defense": 60,
-      "speed": 0
+      "speed": 250
     },
     "workSuitability": {
       "cooling": 1,
@@ -8926,7 +8876,7 @@
       "Ice"
     ],
     "food": 1,
-    "price": 0,
+    "price": 313,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -8967,11 +8917,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 90,
-      "speed": 0
+      "speed": 650
     },
     "workSuitability": {
       "cooling": 3,
@@ -9105,7 +9054,7 @@
       "Ice"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1244,
     "biomes": [
       "Sakurajima"
     ],
@@ -9146,11 +9095,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 115,
-      "speed": 0
+      "speed": 320
     },
     "workSuitability": {
       "transporting": 1,
@@ -9286,7 +9234,7 @@
       "Water"
     ],
     "food": 3,
-    "price": 0,
+    "price": 661,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -9332,11 +9280,10 @@
     "stats": {
       "hp": 85,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 125,
-      "speed": 0
+      "speed": 320
     },
     "workSuitability": {
       "transporting": 1,
@@ -9473,7 +9420,7 @@
       "Water"
     ],
     "food": 3,
-    "price": 0,
+    "price": 14950,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -9518,11 +9465,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 1,
@@ -9658,7 +9604,7 @@
       "Ground"
     ],
     "food": 1,
-    "price": 0,
+    "price": 541,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -9705,11 +9651,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 70,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 3,
@@ -9846,7 +9791,7 @@
       "Ice"
     ],
     "food": 1,
-    "price": 0,
+    "price": 728,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -9892,11 +9837,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 90,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "farming": 1
@@ -10031,7 +9975,7 @@
       "Farming"
     ],
     "food": 1,
-    "price": 0,
+    "price": 502,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -10078,11 +10022,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 95,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "farming": 1
@@ -10216,7 +10159,7 @@
       "Ground"
     ],
     "food": 1,
-    "price": 0,
+    "price": 836,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -10262,11 +10205,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 50,
-        "ranged": 0
+        "melee": 50
       },
       "defense": 80,
-      "speed": 0
+      "speed": 580
     },
     "workSuitability": {
       "farming": 2
@@ -10400,7 +10342,7 @@
       "Neutral"
     ],
     "food": 2,
-    "price": 0,
+    "price": 502,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -10442,11 +10384,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 100,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "watering": 4
@@ -10588,7 +10529,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1831,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -10636,11 +10577,10 @@
     "stats": {
       "hp": 115,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 105,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "cooling": 4
@@ -10776,7 +10716,7 @@
       "Dragon"
     ],
     "food": 5,
-    "price": 0,
+    "price": 2109,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -10822,8 +10762,7 @@
     "stats": {
       "hp": 60,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 70,
       "speed": 350
@@ -11003,11 +10942,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "farming": 1,
@@ -11145,7 +11083,7 @@
       "Pal Fluids"
     ],
     "food": 1,
-    "price": 0,
+    "price": 407,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -11192,11 +11130,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "farming": 1,
@@ -11333,7 +11270,7 @@
       "Farming"
     ],
     "food": 1,
-    "price": 0,
+    "price": 407,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -11379,8 +11316,7 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 65,
-        "ranged": 0
+        "melee": 65
       },
       "defense": 70,
       "speed": 245
@@ -11563,11 +11499,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 70,
-      "speed": 0
+      "speed": 240
     },
     "workSuitability": {
       "handiwork": 1,
@@ -11703,7 +11638,7 @@
       "Water"
     ],
     "food": 3,
-    "price": 0,
+    "price": 658,
     "biomes": [
       "Palpagos Islands",
       "Sakurajima"
@@ -11746,11 +11681,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 75,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 1,
@@ -11888,7 +11822,7 @@
       "Dark"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1328,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -11929,11 +11863,10 @@
     "stats": {
       "hp": 65,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 65,
-      "speed": 0
+      "speed": 450
     },
     "workSuitability": {
       "watering": 1,
@@ -12068,7 +12001,7 @@
       "Water"
     ],
     "food": 3,
-    "price": 0,
+    "price": 421,
     "biomes": [
       "Sunreach"
     ],
@@ -12110,11 +12043,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 70,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 2,
@@ -12251,7 +12183,7 @@
       "Dark"
     ],
     "food": 3,
-    "price": 0,
+    "price": 577,
     "biomes": [
       "Isle of Silence",
       "Palpagos Islands",
@@ -12296,11 +12228,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 70,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 2,
@@ -12437,7 +12368,7 @@
       "Neutral"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1612,
     "biomes": [
       "Isle of Silence",
       "Sakurajima",
@@ -12480,11 +12411,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 60,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "gathering": 2
@@ -12618,7 +12548,7 @@
       "Neutral"
     ],
     "food": 2,
-    "price": 0,
+    "price": 502,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -12659,11 +12589,10 @@
     "stats": {
       "hp": 85,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 70,
-      "speed": 0
+      "speed": 360
     },
     "workSuitability": {
       "handiwork": 2,
@@ -12808,7 +12737,7 @@
       "Lumbering"
     ],
     "food": 6,
-    "price": 0,
+    "price": 827,
     "biomes": [
       "Palpagos Islands",
       "The World Tree"
@@ -12850,11 +12779,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 80,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "gathering": 2
@@ -12987,7 +12915,7 @@
       "Neutral"
     ],
     "food": 2,
-    "price": 0,
+    "price": 1012,
     "biomes": [
       "Palpagos Islands",
       "Sakurajima"
@@ -13029,11 +12957,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 80,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "transporting": 2,
@@ -13169,7 +13096,7 @@
       "Dark"
     ],
     "food": 2,
-    "price": 0,
+    "price": 1147,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -13210,11 +13137,10 @@
     "stats": {
       "hp": 60,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 70,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "gathering": 1
@@ -13348,7 +13274,7 @@
       "Neutral"
     ],
     "food": 2,
-    "price": 0,
+    "price": 373,
     "biomes": [
       "Mount Obsidian"
     ],
@@ -13389,11 +13315,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 105,
-      "speed": 0
+      "speed": 720
     },
     "workSuitability": {
       "lumbering": 1,
@@ -13550,7 +13475,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1388,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -13597,11 +13522,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 110,
-      "speed": 0
+      "speed": 720
     },
     "workSuitability": {
       "lumbering": 3,
@@ -13744,7 +13668,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1974,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -13790,11 +13714,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 75,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 2,
@@ -13929,7 +13852,7 @@
       "Water"
     ],
     "food": 2,
-    "price": 0,
+    "price": 850,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -13976,11 +13899,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 75,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 2,
@@ -14115,7 +14037,7 @@
       "Fire"
     ],
     "food": 2,
-    "price": 0,
+    "price": 850,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -14161,11 +14083,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 80,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 2
@@ -14298,7 +14219,7 @@
       "Dark"
     ],
     "food": 3,
-    "price": 0,
+    "price": 842,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -14344,8 +14265,7 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 80,
       "speed": 600
@@ -14528,11 +14448,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 80,
-      "speed": 0
+      "speed": 920
     },
     "workSuitability": {
       "lumbering": 2,
@@ -14670,7 +14589,7 @@
       "Farming"
     ],
     "food": 3,
-    "price": 0,
+    "price": 770,
     "biomes": [
       "Mount Obsidian"
     ],
@@ -14711,11 +14630,10 @@
     "stats": {
       "hp": 85,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 95,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "kindling": 3,
@@ -14852,7 +14770,7 @@
       "Lumbering"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1176,
     "biomes": [
       "Enemies",
       "Astral Mountains"
@@ -14894,11 +14812,10 @@
     "stats": {
       "hp": 60,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 55,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "transporting": 1,
@@ -15032,7 +14949,7 @@
       "Ice"
     ],
     "food": 3,
-    "price": 0,
+    "price": 385,
     "biomes": [
       "Sunreach"
     ],
@@ -15073,11 +14990,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 80,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 2,
@@ -15222,7 +15138,7 @@
       "Lettuce Seeds"
     ],
     "food": 2,
-    "price": 0,
+    "price": 756,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -15263,11 +15179,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 80,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "planting": 2,
@@ -15407,7 +15322,7 @@
       "Wheat Seeds"
     ],
     "food": 2,
-    "price": 0,
+    "price": 534,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -15448,11 +15363,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 70,
-      "speed": 0
+      "speed": 200
     },
     "workSuitability": {
       "generating_electricity": 2,
@@ -15600,7 +15514,7 @@
       "Electric Organ"
     ],
     "food": 3,
-    "price": 0,
+    "price": 556,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -15641,11 +15555,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 90,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "lumbering": 3
@@ -15784,7 +15697,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1205,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -15832,11 +15745,10 @@
     "stats": {
       "hp": 115,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 95,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "watering": 4,
@@ -15971,7 +15883,7 @@
       "Water"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1543,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -16018,11 +15930,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 90,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "transporting": 3,
@@ -16176,7 +16087,7 @@
       "Transporting"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1464,
     "biomes": [
       "Astral Mountains",
       "Feybreak",
@@ -16224,11 +16135,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 95,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "transporting": 3,
@@ -16381,7 +16291,7 @@
       "Transporting"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1624,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -16426,11 +16336,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 110,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "medicine_production": 3
@@ -16565,7 +16474,7 @@
       "Medicine Production"
     ],
     "food": 7,
-    "price": 0,
+    "price": 1744,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -16606,11 +16515,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 120,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 3,
@@ -16750,7 +16658,7 @@
       "Grass"
     ],
     "food": 5,
-    "price": 0,
+    "price": 2095,
     "biomes": [
       "Sakurajima"
     ],
@@ -16791,11 +16699,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 90,
-      "speed": 0
+      "speed": 450
     },
     "workSuitability": {
       "handiwork": 2,
@@ -16956,7 +16863,7 @@
       "Farming"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1166,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -16997,11 +16904,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 100,
-      "speed": 0
+      "speed": 450
     },
     "workSuitability": {
       "handiwork": 4,
@@ -17144,7 +17050,7 @@
       "Gathering"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1769,
     "biomes": [
       "Sakurajima"
     ],
@@ -17185,11 +17091,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 70,
-      "speed": 0
+      "speed": 750
     },
     "workSuitability": {
       "handiwork": 3,
@@ -17372,7 +17277,7 @@
       "Neutral"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1056,
     "biomes": [
       "Mount Obsidian"
     ],
@@ -17413,11 +17318,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 80,
-      "speed": 0
+      "speed": 650
     },
     "workSuitability": {
       "gathering": 3
@@ -17550,7 +17454,7 @@
       "Neutral"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1074,
     "biomes": [
       "Sakurajima"
     ],
@@ -17591,11 +17495,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 100,
-      "speed": 0
+      "speed": 640
     },
     "workSuitability": {
       "handiwork": 3,
@@ -17732,7 +17635,7 @@
       "Dark"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1806,
     "biomes": [
       "Feybreak",
       "Sakurajima"
@@ -17775,11 +17678,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 105,
-      "speed": 0
+      "speed": 250
     },
     "workSuitability": {
       "watering": 3,
@@ -17914,7 +17816,7 @@
       "Water"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1794,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -17959,11 +17861,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 110,
-      "speed": 0
+      "speed": 250
     },
     "workSuitability": {
       "mining": 4,
@@ -18106,7 +18007,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1942,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -18150,11 +18051,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 50,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 2,
@@ -18291,7 +18191,7 @@
       "Dark"
     ],
     "food": 2,
-    "price": 0,
+    "price": 476,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -18336,11 +18236,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 50,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 2,
@@ -18478,7 +18377,7 @@
       "Fire"
     ],
     "food": 2,
-    "price": 0,
+    "price": 493,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -18523,11 +18422,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 90,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "handiwork": 2,
@@ -18684,7 +18582,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1214,
     "biomes": [
       "Feybreak",
       "Palpagos Islands"
@@ -18726,11 +18624,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 90,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "handiwork": 2,
@@ -18896,7 +18793,7 @@
       "Mining"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1284,
     "biomes": [
       "Sakurajima"
     ],
@@ -18937,11 +18834,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 80,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "watering": 3,
@@ -19075,7 +18971,7 @@
       "Water"
     ],
     "food": 3,
-    "price": 0,
+    "price": 968,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -19122,11 +19018,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 100,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "gathering": 3
@@ -19260,7 +19155,7 @@
       "Ground"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1205,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -19305,11 +19200,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 80,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 3,
@@ -19448,7 +19342,7 @@
       "Grass"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1335,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -19494,11 +19388,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 80,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 3,
@@ -19635,7 +19528,7 @@
       "Ground"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1294,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -19680,11 +19573,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 65,
-        "ranged": 0
+        "melee": 65
       },
       "defense": 70,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 2,
@@ -19822,7 +19714,7 @@
       "Grass"
     ],
     "food": 2,
-    "price": 0,
+    "price": 512,
     "biomes": [
       "Marsh Island"
     ],
@@ -19863,11 +19755,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 80,
-      "speed": 0
+      "speed": 440
     },
     "workSuitability": {
       "handiwork": 3,
@@ -20007,7 +19898,7 @@
       "High Grade Technical Manual"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1284,
     "biomes": [
       "Mount Obsidian",
       "Palpagos Islands"
@@ -20050,11 +19941,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 85,
-      "speed": 0
+      "speed": 440
     },
     "workSuitability": {
       "handiwork": 4,
@@ -20189,7 +20079,7 @@
       "Advanced Technical Manual"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1509,
     "biomes": [
       "Sakurajima"
     ],
@@ -20230,11 +20120,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 90,
-      "speed": 0
+      "speed": 440
     },
     "workSuitability": {
       "handiwork": 3,
@@ -20371,7 +20260,7 @@
       "Dark"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1356,
     "biomes": [
       "Dungeons"
     ],
@@ -20413,11 +20302,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 90,
-      "speed": 0
+      "speed": 440
     },
     "workSuitability": {
       "handiwork": 3,
@@ -20555,7 +20443,7 @@
       "Medicine Production"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1675,
     "biomes": [
       "Dungeons"
     ],
@@ -20596,11 +20484,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 100,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "transporting": 4
@@ -20741,7 +20628,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2109,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -20788,11 +20675,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 100,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "transporting": 5
@@ -20927,7 +20813,7 @@
       "Electric"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2469,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -20973,11 +20859,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 105,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "transporting": 3,
@@ -21121,7 +21006,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2041,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -21167,11 +21052,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 105,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "transporting": 3,
@@ -21316,7 +21200,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2484,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -21362,11 +21246,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 90,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "handiwork": 4,
@@ -21501,7 +21384,7 @@
       "Neutral"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1845,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -21542,11 +21425,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 90,
-      "speed": 0
+      "speed": 750
     },
     "workSuitability": {
       "lumbering": 3
@@ -21686,7 +21568,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1659,
     "biomes": [
       "Marsh Island",
       "Sealed Realms",
@@ -21729,8 +21611,7 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 90,
       "speed": 750
@@ -21913,11 +21794,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 90,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "planting": 3,
@@ -22056,7 +21936,7 @@
       "Wheat Seeds"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1315,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -22105,11 +21985,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 90,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "lumbering": 4
@@ -22260,7 +22139,7 @@
       "Lumbering"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1543,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -22306,11 +22185,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 80,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 2,
@@ -22453,7 +22331,7 @@
       "Gathering"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1442,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -22500,11 +22378,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 130,
-        "ranged": 0
+        "melee": 130
       },
       "defense": 80,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 2,
@@ -22659,7 +22536,7 @@
       "Dark"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1857,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -22706,11 +22583,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 85,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "transporting": 1,
@@ -22848,7 +22724,7 @@
       "Water"
     ],
     "food": 3,
-    "price": 0,
+    "price": 798,
     "biomes": [
       "Astral Mountains"
     ],
@@ -22890,11 +22766,10 @@
     "stats": {
       "hp": 150,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 90,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "planting": 4,
@@ -23051,7 +22926,7 @@
       "Gorgeous Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2220,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -23099,11 +22974,10 @@
     "stats": {
       "hp": 150,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 90,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "lumbering": 5,
@@ -23256,7 +23130,7 @@
       "Cooling"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2424,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -23302,11 +23176,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 80,
-      "speed": 0
+      "speed": 250
     },
     "workSuitability": {
       "transporting": 1,
@@ -23442,7 +23315,7 @@
       "Water"
     ],
     "food": 2,
-    "price": 0,
+    "price": 677,
     "biomes": [
       "Windswept Island"
     ],
@@ -23484,11 +23357,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 80,
-      "speed": 0
+      "speed": 250
     },
     "workSuitability": {
       "transporting": 1,
@@ -23626,7 +23498,7 @@
       "Water"
     ],
     "food": 2,
-    "price": 0,
+    "price": 749,
     "biomes": [
       "Windswept Island"
     ],
@@ -23667,11 +23539,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 100,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "handiwork": 3,
@@ -23814,7 +23685,7 @@
       "Transporting"
     ],
     "food": 6,
-    "price": 0,
+    "price": 1769,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -23862,11 +23733,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 100,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "handiwork": 3,
@@ -24011,7 +23881,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2357,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -24057,11 +23927,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 95,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 3,
@@ -24197,7 +24066,7 @@
       "Grass"
     ],
     "food": 7,
-    "price": 0,
+    "price": 1806,
     "biomes": [
       "Sunreach"
     ],
@@ -24239,11 +24108,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 85,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "handiwork": 2,
@@ -24385,7 +24253,7 @@
       "Mining"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1325,
     "biomes": [
       "Mount Obsidian",
       "Palpagos Islands"
@@ -24427,11 +24295,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 85,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "handiwork": 3,
@@ -24585,7 +24452,7 @@
       "Transporting"
     ],
     "food": 5,
-    "price": 0,
+    "price": 2036,
     "biomes": [
       "Wildlife Sanctuary"
     ],
@@ -24626,11 +24493,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 70,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 2,
@@ -24769,7 +24635,7 @@
       "Transporting"
     ],
     "food": 2,
-    "price": 0,
+    "price": 616,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -24815,8 +24681,7 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 75,
       "speed": 400
@@ -25002,11 +24867,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 90,
-      "speed": 0
+      "speed": 850
     },
     "workSuitability": {
       "kindling": 4,
@@ -25147,7 +25011,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1464,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -25193,11 +25057,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 90,
-      "speed": 0
+      "speed": 850
     },
     "workSuitability": {
       "kindling": 4,
@@ -25332,7 +25195,7 @@
       "Dark"
     ],
     "food": 4,
-    "price": 0,
+    "price": 2034,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -25378,11 +25241,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 110,
-      "speed": 0
+      "speed": 650
     },
     "workSuitability": {
       "transporting": 3,
@@ -25538,7 +25400,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2365,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -25587,11 +25449,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 110,
-      "speed": 0
+      "speed": 650
     },
     "workSuitability": {
       "transporting": 3
@@ -25728,7 +25589,7 @@
       "Generating Electricity"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2685,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -25774,11 +25635,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 105,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "cooling": 4,
@@ -25913,7 +25773,7 @@
       "Ice"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1543,
     "biomes": [
       "Astral Mountains"
     ],
@@ -25954,11 +25814,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 80,
-      "speed": 0
+      "speed": 750
     },
     "workSuitability": {
       "transporting": 5,
@@ -26117,7 +25976,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1934,
     "biomes": [
       "Sakurajima",
       "Sealed Realms",
@@ -26160,11 +26019,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 85,
-      "speed": 0
+      "speed": 750
     },
     "workSuitability": {
       "transporting": 5,
@@ -26306,7 +26164,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 5,
-    "price": 0,
+    "price": 2227,
     "biomes": [
       "Sealed Realms"
     ],
@@ -26348,11 +26206,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 105,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "transporting": 2,
@@ -26367,7 +26224,7 @@
       "Water"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2263,
     "biomes": [
       "Isle of Silence",
       "Sakurajima",
@@ -26411,11 +26268,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 130,
-        "ranged": 0
+        "melee": 130
       },
       "defense": 105,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "transporting": 2,
@@ -26431,7 +26287,7 @@
       "Water"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2424,
     "biomes": [
       "Isle of Silence",
       "Sea Breeze Archipelago"
@@ -26473,11 +26329,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 80,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "generating_electricity": 4
@@ -26655,7 +26510,7 @@
       "Electric"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1205,
     "biomes": [
       "Astral Mountains",
       "Feybreak",
@@ -26700,11 +26555,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 80,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "cooling": 3
@@ -26874,7 +26728,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1138,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -26919,11 +26773,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 130,
-      "speed": 0
+      "speed": 1000
     },
     "workSuitability": {
       "lumbering": 3,
@@ -27074,7 +26927,7 @@
       "Coal"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2469,
     "biomes": [
       "Sakurajima",
       "Twilight Dunes"
@@ -27116,11 +26969,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 130,
-      "speed": 0
+      "speed": 1000
     },
     "workSuitability": {
       "lumbering": 3,
@@ -27255,7 +27107,7 @@
       "Ground"
     ],
     "food": 6,
-    "price": 0,
+    "price": 10000,
     "biomes": [
       "Sakurajima"
     ],
@@ -27296,11 +27148,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 70,
-      "speed": 0
+      "speed": 525
     },
     "workSuitability": {
       "transporting": 1,
@@ -27435,7 +27286,7 @@
       "Grass"
     ],
     "food": 2,
-    "price": 0,
+    "price": 702,
     "biomes": [
       "Twilight Dunes"
     ],
@@ -27477,11 +27328,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 70,
-      "speed": 0
+      "speed": 525
     },
     "workSuitability": {
       "transporting": 1,
@@ -27618,7 +27468,7 @@
       "Grass"
     ],
     "food": 2,
-    "price": 0,
+    "price": 749,
     "biomes": [
       "Twilight Dunes"
     ],
@@ -27659,11 +27509,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 110,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "lumbering": 3,
@@ -27807,7 +27656,7 @@
       "Glowing Ancient Relic"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1464,
     "biomes": [
       "Astral Mountains"
     ],
@@ -27848,11 +27697,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 90,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 2,
@@ -27996,7 +27844,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1475,
     "biomes": [
       "Feybreak",
       "Palpagos Islands"
@@ -28038,11 +27886,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 100,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 3,
@@ -28186,7 +28033,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1806,
     "biomes": [
       "Mount Obsidian"
     ],
@@ -28228,11 +28075,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 80,
-      "speed": 0
+      "speed": 750
     },
     "workSuitability": {
       "cooling": 2,
@@ -28391,7 +28237,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1270,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -28433,11 +28279,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 80,
-      "speed": 0
+      "speed": 750
     },
     "workSuitability": {
       "kindling": 4,
@@ -28573,7 +28418,7 @@
       "gathering"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1670,
     "biomes": [
       "Sakurajima"
     ],
@@ -28614,11 +28459,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 120,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "transporting": 5,
@@ -28773,7 +28617,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2263,
     "biomes": [
       "Feybreak",
       "Mount Obsidian",
@@ -28817,11 +28661,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 115,
-      "speed": 0
+      "speed": 650
     },
     "workSuitability": {
       "kindling": 5,
@@ -28963,7 +28806,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2911,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -29010,11 +28853,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 120,
-      "speed": 0
+      "speed": 650
     },
     "workSuitability": {
       "mining": 5,
@@ -29150,7 +28992,7 @@
       "Ground"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3328,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -29195,11 +29037,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 115,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "planting": 4,
@@ -29336,7 +29177,7 @@
       "Grass"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2529,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -29377,11 +29218,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 120,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "mining": 4
@@ -29528,7 +29368,7 @@
       "Mining"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1577,
     "biomes": [
       "Feybreak",
       "Twilight Dunes"
@@ -29570,11 +29410,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 100,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "planting": 5
@@ -29728,7 +29567,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2014,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -29776,11 +29615,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 100,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "watering": 5
@@ -29945,7 +29783,7 @@
       "Planting"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2259,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -29992,11 +29830,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 95,
-      "speed": 0
+      "speed": 450
     },
     "workSuitability": {
       "transporting": 1,
@@ -30119,7 +29956,7 @@
       "Water"
     ],
     "food": 3,
-    "price": 0,
+    "price": 995,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -30166,8 +30003,7 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 100,
       "speed": 450
@@ -30234,11 +30070,10 @@
     "stats": {
       "hp": 130,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 120,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "planting": 5,
@@ -30395,7 +30230,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2862,
     "biomes": [
       "Palpagos Islands",
       "The World Tree"
@@ -30437,11 +30272,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 100,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "kindling": 3
@@ -30605,7 +30439,7 @@
       "Fire"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1744,
     "biomes": [
       "Astral Mountains",
       "Feybreak",
@@ -30652,8 +30486,7 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 105,
       "speed": 700
@@ -30866,11 +30699,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 80,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "kindling": 5,
@@ -31027,7 +30859,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 1794,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -31074,11 +30906,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 80,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "kindling": 5,
@@ -31229,7 +31060,7 @@
       "Lumbering"
     ],
     "food": 6,
-    "price": 0,
+    "price": 1882,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -31276,11 +31107,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 120,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "handiwork": 3,
@@ -31438,7 +31268,7 @@
       "Glowing Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2913,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -31484,11 +31314,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 120,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "handiwork": 2,
@@ -31638,7 +31467,7 @@
       "Transporting"
     ],
     "food": 6,
-    "price": 0,
+    "price": 10000,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -31683,11 +31512,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 100,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "cooling": 4,
@@ -31821,7 +31649,7 @@
       "Ice"
     ],
     "food": 5,
-    "price": 0,
+    "price": 2382,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -31863,11 +31691,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 90,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "handiwork": 5,
@@ -32012,7 +31839,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2347,
     "biomes": [
       "Sealed Realms",
       "Wildlife Sanctuary"
@@ -32054,11 +31881,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 100,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "farming": 3,
@@ -32197,7 +32023,7 @@
       "Farming"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1589,
     "biomes": [
       "Dungeons"
     ],
@@ -32238,11 +32064,10 @@
     "stats": {
       "hp": 115,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 100,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "farming": 4
@@ -32383,7 +32208,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 5,
-    "price": 0,
+    "price": 2094,
     "biomes": [
       "Dungeons"
     ],
@@ -32424,11 +32249,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 80,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "mining": 4,
@@ -32579,7 +32403,7 @@
       "Dark"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1110,
     "biomes": [
       "Feybreak"
     ],
@@ -32620,11 +32444,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 90,
-      "speed": 0
+      "speed": 740
     },
     "workSuitability": {
       "handiwork": 2,
@@ -32771,7 +32594,7 @@
       "Gorgeous Ancient Relic"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1367,
     "biomes": [
       "Astral Mountains",
       "Feybreak",
@@ -32817,11 +32640,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 90,
-      "speed": 0
+      "speed": 740
     },
     "workSuitability": {
       "handiwork": 3,
@@ -32959,7 +32781,7 @@
       "Dark"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1399,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -33003,11 +32825,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 105,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 5,
@@ -33143,7 +32964,7 @@
       "Ice"
     ],
     "food": 5,
-    "price": 0,
+    "price": 2277,
     "biomes": [
       "Astral Mountains"
     ],
@@ -33185,11 +33006,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 105,
-      "speed": 0
+      "speed": 480
     },
     "workSuitability": {
       "handiwork": 5,
@@ -33326,7 +33146,7 @@
       "Ground"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2529,
     "biomes": [
       "Palpagos Islands",
       "The World Tree"
@@ -33369,11 +33189,10 @@
     "stats": {
       "hp": 130,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 100,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "watering": 7
@@ -33539,7 +33358,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3723,
     "biomes": [
       "Sakurajima",
       "The World Tree"
@@ -33582,11 +33401,10 @@
     "stats": {
       "hp": 130,
       "attack": {
-        "melee": 130,
-        "ranged": 0
+        "melee": 130
       },
       "defense": 100,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "kindling": 7
@@ -33735,7 +33553,7 @@
       "Dragon"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3577,
     "biomes": [
       "Feybreak",
       "Mount Obsidian"
@@ -33777,11 +33595,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 105,
-      "speed": 0
+      "speed": 850
     },
     "workSuitability": {
       "kindling": 5
@@ -33920,7 +33737,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2409,
     "biomes": [
       "Twilight Dunes"
     ],
@@ -33961,11 +33778,10 @@
     "stats": {
       "hp": 125,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 105,
-      "speed": 0
+      "speed": 850
     },
     "workSuitability": {
       "watering": 6
@@ -34098,7 +33914,7 @@
       "Water"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2732,
     "biomes": [
       "Astral Mountains"
     ],
@@ -34139,11 +33955,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 80,
-      "speed": 0
+      "speed": 900
     },
     "workSuitability": {
       "gathering": 2
@@ -34276,7 +34091,7 @@
       "Ground"
     ],
     "food": 3,
-    "price": 0,
+    "price": 896,
     "biomes": [
       "Feybreak",
       "Sakurajima",
@@ -34319,11 +34134,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 100,
-      "speed": 0
+      "speed": 900
     },
     "workSuitability": {
       "handiwork": 2,
@@ -34469,7 +34283,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2081,
     "biomes": [
       "No. 2 Wildlife Sanctuary",
       "Sakurajima"
@@ -34512,11 +34326,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 100,
-      "speed": 0
+      "speed": 900
     },
     "workSuitability": {
       "handiwork": 2,
@@ -34654,7 +34467,7 @@
       "Red Berries"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2235,
     "biomes": [
       "Sakurajima"
     ],
@@ -34695,11 +34508,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 80,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 3,
@@ -34840,7 +34652,7 @@
       "Medicine Production"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1261,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -34881,11 +34693,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 90,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "mining": 1
@@ -35020,7 +34831,7 @@
       "Ground"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1152,
     "biomes": [
       "Sakurajima"
     ],
@@ -35061,11 +34872,10 @@
     "stats": {
       "hp": 85,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 85,
-      "speed": 0
+      "speed": 750
     },
     "workSuitability": {
       "gathering": 2
@@ -35228,7 +35038,7 @@
       "Neutral"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1238,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -35269,11 +35079,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 80,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "watering": 4,
@@ -35408,7 +35217,7 @@
       "Aquatic Pal Fluids"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1342,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -35456,11 +35265,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 80,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "kindling": 3,
@@ -35605,7 +35413,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1442,
     "biomes": [
       "Astral Mountains",
       "Eastern Wild Island",
@@ -35652,11 +35460,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 120,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "kindling": 5,
@@ -35802,7 +35609,7 @@
       "Fire"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2576,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -35848,11 +35655,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 130,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "mining": 5,
@@ -36000,7 +35806,7 @@
       "Cooling"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2797,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -36045,11 +35851,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 100,
-      "speed": 0
+      "speed": 900
     },
     "workSuitability": {
       "gathering": 5
@@ -36204,7 +36009,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2014,
     "biomes": [
       "Feybreak",
       "Isle of Silence",
@@ -36248,11 +36053,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 100,
-      "speed": 0
+      "speed": 900
     },
     "workSuitability": {
       "gathering": 7
@@ -36393,7 +36197,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2514,
     "biomes": [
       "Isle of Silence",
       "Sea Breeze Archipelago"
@@ -36435,11 +36239,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 120,
-      "speed": 0
+      "speed": 350
     },
     "workSuitability": {
       "mining": 5
@@ -36586,7 +36389,7 @@
       "Ground"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2306,
     "biomes": [
       "Mount Obsidian"
     ],
@@ -36627,11 +36430,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 120,
-      "speed": 0
+      "speed": 350
     },
     "workSuitability": {
       "mining": 5,
@@ -36787,7 +36589,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2685,
     "biomes": [
       "Mount Obsidian"
     ],
@@ -36828,11 +36630,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 110,
-      "speed": 0
+      "speed": 720
     },
     "workSuitability": {
       "handiwork": 3,
@@ -36986,7 +36787,7 @@
       "Cooling"
     ],
     "food": 7,
-    "price": 0,
+    "price": 1987,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -37030,8 +36831,7 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 110,
       "speed": 720
@@ -37229,11 +37029,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 85,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 2,
@@ -37377,7 +37176,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 5,
-    "price": 0,
+    "price": 927,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -37418,11 +37217,10 @@
     "stats": {
       "hp": 140,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 100,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 3,
@@ -37595,7 +37393,7 @@
       "Glowing Ancient Relic"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2591,
     "biomes": [
       "Astral Mountains",
       "Feybreak",
@@ -37640,11 +37438,10 @@
     "stats": {
       "hp": 140,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 110,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 3,
@@ -37815,7 +37612,7 @@
       "Tomato Seeds"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2743,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -37860,11 +37657,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 90,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "handiwork": 3,
@@ -38004,7 +37800,7 @@
       "Fire"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2041,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -38045,11 +37841,10 @@
     "stats": {
       "hp": 85,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 85,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 4,
@@ -38193,7 +37988,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 7,
-    "price": 0,
+    "price": 1875,
     "biomes": [
       "No. 3 Wildlife Sanctuary"
     ],
@@ -38234,11 +38029,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 120,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "kindling": 6,
@@ -38408,7 +38202,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 3470,
     "biomes": [
       "Mount Obsidian",
       "Wildlife Sanctuary"
@@ -38451,11 +38245,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 130,
-        "ranged": 0
+        "melee": 130
       },
       "defense": 125,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "kindling": 6,
@@ -38607,7 +38400,7 @@
       "Blazamut Ryu Slab"
     ],
     "food": 9,
-    "price": 0,
+    "price": 3651,
     "biomes": [
       "Mount Obsidian",
       "Wildlife Sanctuary"
@@ -38650,11 +38443,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 125,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "transporting": 6,
@@ -38811,7 +38603,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3113,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -38857,11 +38649,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 125,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "transporting": 6,
@@ -39019,7 +38810,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3234,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -39063,11 +38854,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 130,
-        "ranged": 0
+        "melee": 130
       },
       "defense": 100,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "handiwork": 6,
@@ -39239,7 +39029,7 @@
       "Decayed Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3217,
     "biomes": [
       "Twilight Dunes"
     ],
@@ -39280,11 +39070,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 100,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 6,
@@ -39426,7 +39215,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2638,
     "biomes": [
       "Palpagos Islands",
       "The World Tree"
@@ -39469,11 +39258,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 90,
-      "speed": 0
+      "speed": 720
     },
     "workSuitability": {
       "lumbering": 4,
@@ -39609,7 +39397,7 @@
       "Ground"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1649,
     "biomes": [
       "Astral Mountains",
       "Feybreak",
@@ -39655,11 +39443,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 90,
-      "speed": 0
+      "speed": 720
     },
     "workSuitability": {
       "lumbering": 4,
@@ -39794,7 +39581,7 @@
       "Ground"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1773,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -39838,11 +39625,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 135,
-      "speed": 0
+      "speed": 360
     },
     "workSuitability": {
       "mining": 4
@@ -39982,7 +39768,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2436,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -40026,11 +39812,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 140,
-      "speed": 0
+      "speed": 360
     },
     "workSuitability": {
       "mining": 6
@@ -40171,7 +39956,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2945,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -40215,11 +40000,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 100,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 4,
@@ -40355,7 +40139,7 @@
       "Dark"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2182,
     "biomes": [
       "Sakurajima"
     ],
@@ -40396,11 +40180,10 @@
     "stats": {
       "hp": 60,
       "attack": {
-        "melee": 60,
-        "ranged": 0
+        "melee": 60
       },
       "defense": 130,
-      "speed": 0
+      "speed": 2000
     },
     "workSuitability": {
       "gathering": 1,
@@ -40537,7 +40320,7 @@
       "Gathering"
     ],
     "food": 3,
-    "price": 0,
+    "price": 3500,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -40578,11 +40361,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 85,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "transporting": 2,
@@ -40730,7 +40512,7 @@
       "Transporting"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1543,
     "biomes": [
       "Feybreak"
     ],
@@ -40771,11 +40553,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 130,
-      "speed": 0
+      "speed": 790
     },
     "workSuitability": {
       "mining": 4
@@ -40921,7 +40702,7 @@
       "Dragon"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2845,
     "biomes": [
       "Feybreak"
     ],
@@ -40963,11 +40744,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 100,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "handiwork": 1,
@@ -41107,7 +40887,7 @@
       "Dark"
     ],
     "food": 5,
-    "price": 0,
+    "price": 2063,
     "biomes": [
       "Sakurajima"
     ],
@@ -41148,11 +40928,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 105,
-      "speed": 0
+      "speed": 380
     },
     "workSuitability": {
       "handiwork": 4,
@@ -41288,7 +41067,7 @@
       "Transporting"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2594,
     "biomes": [
       "Isle of Silence",
       "Sea Breeze Archipelago"
@@ -41330,11 +41109,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 105,
-      "speed": 0
+      "speed": 380
     },
     "workSuitability": {
       "handiwork": 4,
@@ -41476,7 +41254,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2134,
     "biomes": [
       "Isle of Silence",
       "Sea Breeze Archipelago"
@@ -41518,11 +41296,10 @@
     "stats": {
       "hp": 85,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 85,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "gathering": 2
@@ -41685,7 +41462,7 @@
       "Dark"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1842,
     "biomes": [
       "Isle of Silence",
       "Sakurajima",
@@ -41729,11 +41506,10 @@
     "stats": {
       "hp": 85,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 90,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "cooling": 2,
@@ -41891,7 +41667,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1628,
     "biomes": [
       "Isle of Silence",
       "Sakurajima",
@@ -41934,11 +41710,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 100,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "gathering": 5
@@ -42071,7 +41846,7 @@
       "Dark"
     ],
     "food": 5,
-    "price": 0,
+    "price": 2431,
     "biomes": [
       "Feybreak",
       "Sakurajima"
@@ -42114,11 +41889,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 110,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "watering": 5,
@@ -42262,7 +42036,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2685,
     "biomes": [
       "Astral Mountains",
       "Sea Breeze Archipelago",
@@ -42307,11 +42081,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 110,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "kindling": 5,
@@ -42455,7 +42228,7 @@
       "Glowing Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3097,
     "biomes": [
       "Astral Mountains",
       "Sea Breeze Archipelago",
@@ -42499,11 +42272,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 90,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "handiwork": 5,
@@ -42661,7 +42433,7 @@
       "Transporting"
     ],
     "food": 6,
-    "price": 0,
+    "price": 1947,
     "biomes": [
       "Dungeons"
     ],
@@ -42702,11 +42474,10 @@
     "stats": {
       "hp": 95,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 105,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "handiwork": 6,
@@ -42864,7 +42635,7 @@
       "Dark Radiant Gem"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2484,
     "biomes": [
       "Feybreak"
     ],
@@ -42905,11 +42676,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 110,
-      "speed": 0
+      "speed": 840
     },
     "workSuitability": {
       "gathering": 5
@@ -43072,7 +42842,7 @@
       "Ground"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2622,
     "biomes": [
       "Feybreak",
       "Sakurajima"
@@ -43114,11 +42884,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 100,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 4,
@@ -43255,7 +43024,7 @@
       "Neutral"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1683,
     "biomes": [
       "Sakurajima"
     ],
@@ -43296,11 +43065,10 @@
     "stats": {
       "hp": 115,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 100,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "transporting": 3,
@@ -43436,7 +43204,7 @@
       "Ground"
     ],
     "food": 6,
-    "price": 0,
+    "price": 1812,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -43477,11 +43245,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 100,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "lumbering": 7,
@@ -43623,7 +43390,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2911,
     "biomes": [
       "Feybreak"
     ],
@@ -43664,11 +43431,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 100,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "lumbering": 8,
@@ -43811,7 +43577,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3528,
     "biomes": [
       "Feybreak"
     ],
@@ -43853,11 +43619,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 125,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "handiwork": 3,
@@ -44028,7 +43793,7 @@
       "Gorgeous Ancient Relic"
     ],
     "food": 7,
-    "price": 0,
+    "price": 3794,
     "biomes": [
       "Mount Obsidian",
       "No. 3 Wildlife Sanctuary"
@@ -44070,11 +43835,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 135,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "transporting": 7,
@@ -44227,7 +43991,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 3767,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -44272,11 +44036,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 135,
-      "speed": 0
+      "speed": 550
     },
     "workSuitability": {
       "transporting": 7,
@@ -44431,7 +44194,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 3895,
     "biomes": [
       "Astral Mountains",
       "Isle of Silence",
@@ -44476,11 +44239,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 115,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "lumbering": 6
@@ -44631,7 +44393,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3710,
     "biomes": [
       "Alpha Pals"
     ],
@@ -44672,11 +44434,10 @@
     "stats": {
       "hp": 130,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 110,
-      "speed": 0
+      "speed": 900
     },
     "workSuitability": {
       "gathering": 1,
@@ -44831,7 +44592,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3079,
     "biomes": [
       "Sakurajima"
     ],
@@ -44872,11 +44633,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 80,
-        "ranged": 0
+        "melee": 80
       },
       "defense": 70,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "gathering": 2
@@ -45009,7 +44769,7 @@
       "Neutral"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1684,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -45050,11 +44810,10 @@
     "stats": {
       "hp": 65,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 75,
-      "speed": 0
+      "speed": 360
     },
     "workSuitability": {
       "generating_electricity": 4
@@ -45188,7 +44947,7 @@
       "Electric"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1523,
     "biomes": [
       "Isle of Silence",
       "Sea Breeze Archipelago",
@@ -45232,11 +44991,10 @@
     "stats": {
       "hp": 65,
       "attack": {
-        "melee": 70,
-        "ranged": 0
+        "melee": 70
       },
       "defense": 80,
-      "speed": 0
+      "speed": 360
     },
     "workSuitability": {},
     "skills": [
@@ -45377,7 +45135,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1623,
     "biomes": [
       "Isle of Silence",
       "Sea Breeze Archipelago"
@@ -45419,11 +45177,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 60,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "transporting": 2,
@@ -45557,7 +45314,7 @@
       "Grass"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1610,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -45598,11 +45355,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 80,
-      "speed": 0
+      "speed": 480
     },
     "workSuitability": {
       "handiwork": 3,
@@ -45738,7 +45494,7 @@
       "Ground"
     ],
     "food": 4,
-    "price": 0,
+    "price": 777,
     "biomes": [
       "Sunreach"
     ],
@@ -45779,11 +45535,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 80,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 1,
@@ -45918,7 +45673,7 @@
       "Dark"
     ],
     "food": 3,
-    "price": 0,
+    "price": 1656,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -45959,11 +45714,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 75,
-        "ranged": 0
+        "melee": 75
       },
       "defense": 70,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "generating_electricity": 3
@@ -46097,7 +45851,7 @@
       "Electric"
     ],
     "food": 4,
-    "price": 0,
+    "price": 1611,
     "biomes": [
       "Sunreach"
     ],
@@ -46138,11 +45892,10 @@
     "stats": {
       "hp": 70,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 80,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 3,
@@ -46279,7 +46032,7 @@
       "Dark"
     ],
     "food": 5,
-    "price": 0,
+    "price": 1625,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -46320,11 +46073,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 85,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "watering": 4
@@ -46458,7 +46210,7 @@
       "Water"
     ],
     "food": 6,
-    "price": 0,
+    "price": 1636,
     "biomes": [
       "Sea Breeze Archipelago"
     ],
@@ -46500,11 +46252,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 85,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "watering": 4
@@ -46646,7 +46397,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 1843,
     "biomes": [
       "Sea Breeze Archipelago"
     ],
@@ -46687,11 +46438,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 100,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 6,
@@ -46825,7 +46575,7 @@
       "Neutral"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2464,
     "biomes": [
       "Sunreach"
     ],
@@ -46867,11 +46617,10 @@
     "stats": {
       "hp": 115,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 120,
-      "speed": 0
+      "speed": 1400
     },
     "workSuitability": {
       "transporting": 6
@@ -47012,7 +46761,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 3323,
     "biomes": [
       "Sea Breeze Archipelago",
       "Sealed Realms"
@@ -47055,11 +46804,10 @@
     "stats": {
       "hp": 115,
       "attack": {
-        "melee": 130,
-        "ranged": 0
+        "melee": 130
       },
       "defense": 120,
-      "speed": 0
+      "speed": 1400
     },
     "workSuitability": {
       "transporting": 6,
@@ -47203,7 +46951,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 3521,
     "biomes": [
       "Sea Breeze Archipelago",
       "Sealed Realms"
@@ -47245,11 +46993,10 @@
     "stats": {
       "hp": 75,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 80,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "transporting": 3,
@@ -47384,7 +47131,7 @@
       "Electric"
     ],
     "food": 6,
-    "price": 0,
+    "price": 1963,
     "biomes": [
       "Sunreach"
     ],
@@ -47425,11 +47172,10 @@
     "stats": {
       "hp": 85,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 90,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "planting": 5,
@@ -47564,7 +47310,7 @@
       "Grass"
     ],
     "food": 6,
-    "price": 0,
+    "price": 1844,
     "biomes": [
       "Palpagos Islands"
     ],
@@ -47605,11 +47351,10 @@
     "stats": {
       "hp": 0,
       "attack": {
-        "melee": 0,
-        "ranged": 0
+        "melee": 0
       },
       "defense": 0,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "kindling": 7,
@@ -47630,7 +47375,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3217,
     "biomes": [
       "Sunreach"
     ],
@@ -47672,11 +47417,10 @@
     "stats": {
       "hp": 130,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 120,
-      "speed": 0
+      "speed": 700
     },
     "workSuitability": {
       "watering": 5,
@@ -47818,7 +47562,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 3884,
     "biomes": [
       "Sea Breeze Archipelago",
       "Sealed Realms"
@@ -47860,11 +47604,10 @@
     "stats": {
       "hp": 100,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 100,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "handiwork": 5,
@@ -48008,7 +47751,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3191,
     "biomes": [
       "Palpagos Islands",
       "Sealed Realms"
@@ -48050,11 +47793,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 95,
-      "speed": 0
+      "speed": 950
     },
     "workSuitability": {
       "transporting": 5,
@@ -48196,7 +47938,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 2263,
     "biomes": [
       "Sealed Realms"
     ],
@@ -48237,11 +47979,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 85,
-        "ranged": 0
+        "melee": 85
       },
       "defense": 90,
-      "speed": 0
+      "speed": 450
     },
     "workSuitability": {
       "handiwork": 6,
@@ -48385,7 +48126,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 2680,
     "biomes": [
       "Sealed Realms"
     ],
@@ -48426,11 +48167,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 95,
-        "ranged": 0
+        "melee": 95
       },
       "defense": 90,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 4,
@@ -48574,7 +48314,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 7,
-    "price": 0,
+    "price": 3087,
     "biomes": [
       "Sealed Realms"
     ],
@@ -48616,11 +48356,10 @@
     "stats": {
       "hp": 90,
       "attack": {
-        "melee": 100,
-        "ranged": 0
+        "melee": 100
       },
       "defense": 95,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "handiwork": 4,
@@ -48765,7 +48504,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 7,
-    "price": 0,
+    "price": 2309,
     "biomes": [
       "Sealed Realms"
     ],
@@ -48806,11 +48545,10 @@
     "stats": {
       "hp": 80,
       "attack": {
-        "melee": 90,
-        "ranged": 0
+        "melee": 90
       },
       "defense": 60,
-      "speed": 0
+      "speed": 450
     },
     "workSuitability": {
       "handiwork": 6,
@@ -48953,7 +48691,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 5,
-    "price": 0,
+    "price": 2421,
     "biomes": [
       "Sealed Realms"
     ],
@@ -48995,11 +48733,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 115,
-      "speed": 0
+      "speed": 450
     },
     "workSuitability": {
       "handiwork": 8,
@@ -49144,7 +48881,7 @@
       "Gorgeous Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 3867,
     "biomes": [
       "Sealed Realms"
     ],
@@ -49185,11 +48922,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 100,
-      "speed": 0
+      "speed": 400
     },
     "workSuitability": {
       "handiwork": 6,
@@ -49332,7 +49068,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 4028,
     "biomes": [
       "Sealed Realms"
     ],
@@ -49374,11 +49110,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 125,
-        "ranged": 0
+        "melee": 125
       },
       "defense": 140,
-      "speed": 0
+      "speed": 850
     },
     "workSuitability": {
       "mining": 8
@@ -49531,7 +49266,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4116,
     "biomes": [
       "Sealed Realms"
     ],
@@ -49572,11 +49307,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 105,
-        "ranged": 0
+        "melee": 105
       },
       "defense": 105,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 4,
@@ -49734,7 +49468,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 6,
-    "price": 0,
+    "price": 3524,
     "biomes": [
       "Sealed Realms",
       "Wildlife Sanctuary"
@@ -49776,11 +49510,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 110,
-      "speed": 0
+      "speed": 450
     },
     "workSuitability": {
       "handiwork": 5,
@@ -49953,7 +49686,7 @@
       "Dormant Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3427,
     "biomes": [
       "No. 3 Wildlife Sanctuary"
     ],
@@ -49994,11 +49727,10 @@
     "stats": {
       "hp": 115,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 115,
-      "speed": 0
+      "speed": 450
     },
     "workSuitability": {
       "handiwork": 5,
@@ -50157,7 +49889,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3540,
     "biomes": [
       "Astral Mountains"
     ],
@@ -50198,11 +49930,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 130,
-        "ranged": 0
+        "melee": 130
       },
       "defense": 115,
-      "speed": 0
+      "speed": 900
     },
     "workSuitability": {
       "handiwork": 3,
@@ -50370,7 +50101,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4136,
     "biomes": [
       "Sealed Realms"
     ],
@@ -50411,11 +50142,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 115,
-      "speed": 0
+      "speed": 1000
     },
     "workSuitability": {
       "transporting": 3,
@@ -50570,7 +50300,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 2685,
     "biomes": [
       "No. 3 Wildlife Sanctuary"
     ],
@@ -50611,11 +50341,10 @@
     "stats": {
       "hp": 110,
       "attack": {
-        "melee": 110,
-        "ranged": 0
+        "melee": 110
       },
       "defense": 115,
-      "speed": 0
+      "speed": 1000
     },
     "workSuitability": {
       "transporting": 5,
@@ -50756,7 +50485,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 2797,
     "biomes": [
       "No. 3 Wildlife Sanctuary"
     ],
@@ -50797,11 +50526,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 140,
-      "speed": 0
+      "speed": 1100
     },
     "workSuitability": {
       "gathering": 2
@@ -50959,7 +50687,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3245,
     "biomes": [
       "No. 3 Wildlife Sanctuary"
     ],
@@ -51001,11 +50729,10 @@
     "stats": {
       "hp": 130,
       "attack": {
-        "melee": 115,
-        "ranged": 0
+        "melee": 115
       },
       "defense": 110,
-      "speed": 0
+      "speed": 1000
     },
     "workSuitability": {
       "handiwork": 7,
@@ -51165,7 +50892,7 @@
       "Dormant Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4095,
     "biomes": [
       "Sealed Realms"
     ],
@@ -51206,11 +50933,10 @@
     "stats": {
       "hp": 140,
       "attack": {
-        "melee": 130,
-        "ranged": 0
+        "melee": 130
       },
       "defense": 120,
-      "speed": 0
+      "speed": 750
     },
     "workSuitability": {
       "lumbering": 6,
@@ -51367,7 +51093,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4425,
     "biomes": [
       "Sealed Realms"
     ],
@@ -51409,11 +51135,10 @@
     "stats": {
       "hp": 140,
       "attack": {
-        "melee": 135,
-        "ranged": 0
+        "melee": 135
       },
       "defense": 120,
-      "speed": 0
+      "speed": 1400
     },
     "workSuitability": {
       "watering": 8,
@@ -51557,7 +51282,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4531,
     "biomes": [
       "Sealed Realms"
     ],
@@ -51598,11 +51323,10 @@
     "stats": {
       "hp": 140,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 110,
-      "speed": 0
+      "speed": 500
     },
     "workSuitability": {
       "handiwork": 6,
@@ -51747,7 +51471,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4436,
     "biomes": [
       "Sealed Realms"
     ],
@@ -51789,11 +51513,10 @@
     "stats": {
       "hp": 125,
       "attack": {
-        "melee": 135,
-        "ranged": 0
+        "melee": 135
       },
       "defense": 110,
-      "speed": 0
+      "speed": 1000
     },
     "workSuitability": {
       "handiwork": 6,
@@ -51940,7 +51663,7 @@
       "Glistening Ancient Relic"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4442,
     "biomes": [
       "Sealed Realms"
     ],
@@ -51981,11 +51704,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 150,
-        "ranged": 0
+        "melee": 150
       },
       "defense": 100,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 5,
@@ -52124,7 +51846,7 @@
       "Transporting"
     ],
     "food": 7,
-    "price": 0,
+    "price": 3667,
     "biomes": [
       "Sakurajima"
     ],
@@ -52165,11 +51887,10 @@
     "stats": {
       "hp": 120,
       "attack": {
-        "melee": 150,
-        "ranged": 0
+        "melee": 150
       },
       "defense": 100,
-      "speed": 0
+      "speed": 600
     },
     "workSuitability": {
       "handiwork": 6,
@@ -52320,7 +52041,7 @@
       "Transporting"
     ],
     "food": 7,
-    "price": 0,
+    "price": 3997,
     "biomes": [
       "Sakurajima"
     ],
@@ -52362,11 +52083,10 @@
     "stats": {
       "hp": 130,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 120,
-      "speed": 0
+      "speed": 1700
     },
     "workSuitability": {
       "gathering": 2
@@ -52524,7 +52244,7 @@
       "Xenolord Slab"
     ],
     "food": 8,
-    "price": 0,
+    "price": 3622,
     "biomes": [
       "Feybreak"
     ],
@@ -52565,11 +52285,10 @@
     "stats": {
       "hp": 135,
       "attack": {
-        "melee": 130,
-        "ranged": 0
+        "melee": 130
       },
       "defense": 110,
-      "speed": 0
+      "speed": 900
     },
     "workSuitability": {
       "lumbering": 7,
@@ -52717,7 +52436,7 @@
       "Neutral"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4256,
     "biomes": [
       "Feybreak"
     ],
@@ -52758,11 +52477,10 @@
     "stats": {
       "hp": 130,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 145,
-      "speed": 0
+      "speed": 800
     },
     "workSuitability": {
       "lumbering": 6,
@@ -52951,7 +52669,7 @@
       "Neutral"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4339,
     "biomes": [
       "Twilight Dunes"
     ],
@@ -52992,11 +52710,10 @@
     "stats": {
       "hp": 130,
       "attack": {
-        "melee": 145,
-        "ranged": 0
+        "melee": 145
       },
       "defense": 120,
-      "speed": 0
+      "speed": 1300
     },
     "workSuitability": {
       "lumbering": 6,
@@ -53185,7 +52902,7 @@
       "Dark"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4339,
     "biomes": [
       "Twilight Dunes"
     ],
@@ -53226,11 +52943,10 @@
     "stats": {
       "hp": 140,
       "attack": {
-        "melee": 140,
-        "ranged": 0
+        "melee": 140
       },
       "defense": 120,
-      "speed": 0
+      "speed": 1200
     },
     "workSuitability": {
       "cooling": 7
@@ -53418,7 +53134,7 @@
       "Cooling"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4695,
     "biomes": [
       "Astral Mountains"
     ],
@@ -53459,11 +53175,10 @@
     "stats": {
       "hp": 140,
       "attack": {
-        "melee": 140,
-        "ranged": 0
+        "melee": 140
       },
       "defense": 135,
-      "speed": 0
+      "speed": 1200
     },
     "workSuitability": {
       "gathering": 7
@@ -53666,7 +53381,7 @@
       "Pure Quartz"
     ],
     "food": 9,
-    "price": 0,
+    "price": 5000,
     "biomes": [
       "Astral Mountains"
     ],
@@ -53707,11 +53422,10 @@
     "stats": {
       "hp": 105,
       "attack": {
-        "melee": 145,
-        "ranged": 0
+        "melee": 145
       },
       "defense": 125,
-      "speed": 0
+      "speed": 750
     },
     "workSuitability": {
       "watering": 7
@@ -53885,7 +53599,7 @@
       "Water"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4277,
     "biomes": [
       "Sea Breeze Archipelago",
       "Palpagos Islands"
@@ -53927,11 +53641,10 @@
     "stats": {
       "hp": 115,
       "attack": {
-        "melee": 140,
-        "ranged": 0
+        "melee": 140
       },
       "defense": 120,
-      "speed": 0
+      "speed": 1700
     },
     "workSuitability": {
       "gathering": 8
@@ -54125,7 +53838,7 @@
       "Precious Dragon Stone"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4452,
     "biomes": [
       "Mount Obsidian",
       "Wildlife Sanctuary"
@@ -54167,11 +53880,10 @@
     "stats": {
       "hp": 180,
       "attack": {
-        "melee": 120,
-        "ranged": 0
+        "melee": 120
       },
       "defense": 200,
-      "speed": 0
+      "speed": 3000
     },
     "workSuitability": {},
     "skills": [
@@ -54303,7 +54015,7 @@
       "Water"
     ],
     "food": 9,
-    "price": 0,
+    "price": 4913,
     "biomes": [
       "Sea Breeze Archipelago",
       "Palpagos Islands"

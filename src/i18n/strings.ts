@@ -87,9 +87,8 @@ export const STRINGS = {
     // stat labels
     hp: { zh: 'HP', en: 'HP' },
     meleeAtk: { zh: '近战攻击', en: 'Melee ATK' },
-    rangedAtk: { zh: '远程攻击', en: 'Ranged ATK' },
     defense: { zh: '防御力', en: 'Defense' },
-    speed: { zh: '移动速度', en: 'Speed' },
+    speed: { zh: '移动速度', en: 'Movement Speed' },
     price: { zh: '售价', en: 'Price' },
     gold: { zh: '金币', en: 'Gold' },
     // skill meta

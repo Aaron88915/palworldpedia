@@ -202,10 +202,12 @@ const schema = {
             <div class="stat-num-big">{featuredPal.stats.defense}</div>
             <div class="stat-label-big">防御力</div>
           </div>
-          <div class="stat-cell-big">
-            <div class="stat-num-big">{featuredPal.stats.speed}</div>
-            <div class="stat-label-big">速度</div>
-          </div>
+          {featuredPal.stats.speed > 0 && (
+            <div class="stat-cell-big">
+              <div class="stat-num-big">{featuredPal.stats.speed}</div>
+              <div class="stat-label-big">移动速度</div>
+            </div>
+          )}
         </div>
         <div class="featured-pal-work">
           <div class="work-label">工作适配</div>

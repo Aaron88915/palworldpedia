@@ -22,7 +22,8 @@ const { pal } = Astro.props as { pal: Pal };
 const hpTier = pal.stats.hp >= 150 ? 'S' : pal.stats.hp >= 120 ? 'A' : pal.stats.hp >= 100 ? 'B' : 'C';
 const atkTier = pal.stats.attack.melee >= 110 ? 'S' : pal.stats.attack.melee >= 90 ? 'A' : pal.stats.attack.melee >= 70 ? 'B' : 'C';
 const defTier = pal.stats.defense >= 110 ? 'S' : pal.stats.defense >= 90 ? 'A' : pal.stats.defense >= 70 ? 'B' : 'C';
-const spdTier = pal.stats.speed >= 100 ? 'S' : pal.stats.speed >= 80 ? 'A' : pal.stats.speed >= 60 ? 'B' : 'C';
+// Movement speed (paldb RunSpeed): 288 pals sampled, min 200 / median 550 / max 3000
+const spdTier = pal.stats.speed >= 800 ? 'S' : pal.stats.speed >= 650 ? 'A' : pal.stats.speed >= 500 ? 'B' : 'C';
 
 const palUrl = new URL(`/en/pals/${pal.id}/`, Astro.site).href;
 const palImage = new URL(pal.image, Astro.site).href;
@@ -115,25 +116,24 @@ const relatedPals = (palsData as Pal[])
           <div class={`stat-tier tier-${atkTier}`}>{atkTier}</div>
         </div>
         <div class="stat-card">
-          <div class="stat-label">{t('palDetail.rangedAtk', lang)}</div>
-          <div class="stat-value">{pal.stats.attack.ranged}</div>
-          <div class={`stat-tier tier-${atkTier}`}>{atkTier}</div>
-        </div>
-        <div class="stat-card">
           <div class="stat-label">{t('palDetail.defense', lang)}</div>
           <div class="stat-value">{pal.stats.defense}</div>
           <div class={`stat-tier tier-${defTier}`}>{defTier}</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-label">{t('palDetail.speed', lang)}</div>
-          <div class="stat-value">{pal.stats.speed}</div>
-          <div class={`stat-tier tier-${spdTier}`}>{spdTier}</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">{t('palDetail.price', lang)}</div>
-          <div class="stat-value">{pal.price.toLocaleString()}</div>
-          <div class="text-muted stat-tier">{t('palDetail.gold', lang)}</div>
-        </div>
+        {pal.stats.speed > 0 && (
+          <div class="stat-card">
+            <div class="stat-label">{t('palDetail.speed', lang)}</div>
+            <div class="stat-value">{pal.stats.speed}</div>
+            <div class={`stat-tier tier-${spdTier}`}>{spdTier}</div>
+          </div>
+        )}
+        {pal.price > 0 && (
+          <div class="stat-card">
+            <div class="stat-label">{t('palDetail.price', lang)}</div>
+            <div class="stat-value">{pal.price.toLocaleString()}</div>
+            <div class="text-muted stat-tier">{t('palDetail.gold', lang)}</div>
+          </div>
+        )}
       </div>
     </section>
 
