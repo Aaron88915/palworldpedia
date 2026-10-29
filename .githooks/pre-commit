@@ -1,0 +1,22 @@
+#!/bin/sh
+# Git pre-commit hook: build the site and refuse to commit broken internal links.
+#
+# Enable once per clone:
+#     git config core.hooksPath .githooks
+#
+# Bypass for a one-off commit:
+#     git commit --no-verify
+set -e
+
+cd "$(git rev-parse --show-toplevel)"
+
+if command -v python >/dev/null 2>&1; then
+  PY=python
+elif command -v py >/dev/null 2>&1; then
+  PY=py
+else
+  echo "pre-commit: no python interpreter found, skipping checks"
+  exit 0
+fi
+
+exec "$PY" scripts/pre-commit-check.py

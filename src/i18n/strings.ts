@@ -188,12 +188,14 @@ export const STRINGS = {
 
   // 首页
   home: {
-    badge: { zh: 'PALWORLD · v1.0 SAKURAJIMA', en: 'PALWORLD · v1.0 SAKURAJIMA' },
+    badge: { zh: 'PALWORLD · v1.0 · LEVEL CAP 80', en: 'PALWORLD · v1.0 · LEVEL CAP 80' },
     titleZh: { zh: '幻兽帕鲁', en: 'Palworld' },
     titleAccent: { zh: '最全攻略', en: 'Complete Guide' },
     subtitle: { zh: '只帕鲁 · 配种公式 · 技能 · 词条', en: 'Pals · breeding recipes · skills · passives' },
+    ctaOne: { zh: '🆕 1.0 全内容攻略', en: '🆕 1.0 Complete Guide' },
     ctaBrowse: { zh: '📖 浏览图鉴', en: '📖 Browse Paldex' },
     ctaBreeding: { zh: '🧬 配种计算', en: '🧬 Breeding' },
+    ctaRegions: { zh: '🗺️ 区域图鉴', en: '🗺️ Regions' },
     ctaRarity: { zh: '⭐ 稀有度排名', en: '⭐ Rarity Ranking' },
     statPals: { zh: '只帕鲁', en: 'Pals' },
     statRecipes: { zh: '配种公式', en: 'Recipes' },
