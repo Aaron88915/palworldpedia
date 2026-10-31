@@ -1,31 +1,38 @@
-fix(data): fill real movement speed + base price, drop fake ranged ATK
+feat(content): fill every empty pal description, partner skill and skill description
 
-pals.json carried three fabricated fields that were rendered on all 288 pal
-pages. All three are now backed by paldb.cc (Palworld 1.0 data).
+All 288 pal pages shipped with empty text blocks:
+  * description.zh / description.en  -> the Paldeck description was missing
+    (and a slice of description.zh actually held the English sentence)
+  * partnerSkill.name.zh              -> still the English string
+  * partnerSkill.description          -> empty, or raw wiki markup such as
+    "{{i|Wool}}" and "<br/>"
+  * skills[].description              -> empty on all 2319 skill entries
 
-stats.speed - was 0 for 271/288 pals, so every page showed a "移动速度 0 / C"
-card. The 15 non-zero values were paldb's RunSpeed (200-3000), which confirms
-the field's real meaning. Now filled for 287/288 pals from the Movement block
-of each paldb pal page. Measured distribution: min 200 / median 550 / max 3000,
-so the S/A/B/C thresholds were rebuilt on that scale (>=800 / >=650 / >=500).
-Result: S 45 / A 55 / B 80 / C 107.
+paldb.cc carries every one of them:
+  * the "Summary" card holds the Paldex text
+  * the "Partner Skill" card holds the partner skill name and text
+  * each "Active Skills" card holds the skill text, and the skill's internal
+    id sits in the hover link (?s=Waza%2FEPalWazaID%3A%3AWindCutter)
 
-stats.price - was 0 for 271/288 pals (showing "售价 0 金币"). The value lives in
-the paldb stat row labelled with the Gold Coin item link; its tooltip reads
-"313 - 19900", the game's cheapest and priciest Pal base value. Extracted for
-286/288 pals. Every one of the 16 values we already had agrees with paldb, and
-independent sources confirm the parse: Cattiva 436 (capture.price), Lamball
-421, Chikipi 313, Fuack 376, Jetragon 4452, Frostallion 4695, Dumud Gild
-19900, Turtacle Terra 14950, Mau Cryst 385 (58% of Mau's 665), Kingpaca Cryst
-1624, Gloopie Primo 1612, Croajiro Noct 1254.
+The Chinese site lives under /cn/ - /zh/ 404s. Chinese values are only
+accepted when the source really contains CJK, because some paldb pages still
+fall back to English, and only empty fields are written so existing correct
+data is never overwritten.
 
-stats.attack.ranged - removed. Palworld Pals have a single attack property;
-there is no ranged attack stat. The field was 0 for every pal and rendered a
-meaningless "远程攻击 0" card on all 288 pages. Also dropped from the Pal type
-and the i18n string table.
+Skill matching needed two passes: our stored skill ids come in two flavours -
+the game's internal id for older pals (WindCutter) and a slug built from the
+display name for newer ones (punch-flurry) - so the cards are indexed on both
+the internal id and the display name, and the Chinese page is reached through
+paldb's internal id because its card text is Chinese.
 
-The stat cards for movement speed and price are now only rendered when the
-value exists, so a pal with no source data shows nothing instead of a zero.
+Filled: 287 EN + 287 ZH pal descriptions (287 of the ZH ones were holding
+English), 286 partner skill Chinese names and descriptions, 279 partner skill
+English descriptions cleaned of wiki markup, 2171 EN + 2169 ZH skill
+descriptions, 2167 Chinese skill names.
 
-Verified: 1790 pages built, 0 errors; 0 pages still showing 远程攻击 /
-Ranged ATK; 0 broken internal links.
+Gumoss (Special) has no page of its own on paldb - it is the dungeon variant
+of Gumoss - so it reuses the Gumoss page for its species-level text.
+
+Verified: 1790 pages built, 0 errors; 0 broken internal links; 0 empty <a>
+tags; ZH and EN pal pages now 288/288 with a rendered description, and the EN
+skill descriptions are 2319/2319 complete.
