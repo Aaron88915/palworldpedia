@@ -193,6 +193,26 @@ const relatedPals = (palsData as Pal[])
       </section>
     )}
 
+    {pal.partnerSkill && pal.partnerSkill.name && (pal.partnerSkill.name.en || pal.partnerSkill.name.zh) && (
+      <section class="pal-section">
+        <h2>{t('palDetail.partnerSkill', lang)}</h2>
+        <div class="partner-skill">
+          <div class="partner-skill-name">
+            {pal.partnerSkill.name.en || pal.partnerSkill.name.zh}
+            {pal.partnerSkill.name.zh && pal.partnerSkill.name.zh !== pal.partnerSkill.name.en && (
+              <span class="text-muted">{pal.partnerSkill.name.zh}</span>
+            )}
+          </div>
+          {pal.partnerSkill.description?.en && (
+            <p class="partner-skill-desc">{pal.partnerSkill.description.en}</p>
+          )}
+          {pal.partnerSkill.description?.zh && !pal.partnerSkill.description.en && (
+            <p class="partner-skill-desc">{pal.partnerSkill.description.zh}</p>
+          )}
+        </div>
+      </section>
+    )}
+
     {pal.drops.length > 0 && (
       <section class="pal-section">
         <h2>{t('palDetail.drops', lang)}</h2>
@@ -384,6 +404,10 @@ const relatedPals = (palsData as Pal[])
   .skill-name-en { font-size: 0.75rem; }
   .skill-meta { display: flex; gap: 1rem; font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0.5rem; flex-wrap: wrap; }
   .skill-desc, .passive-desc { color: var(--text-secondary); margin: 0; font-size: 0.875rem; }
+  .partner-skill { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
+  .partner-skill-name { font-weight: 700; margin-bottom: 0.5rem; display: flex; gap: 0.5rem; align-items: baseline; flex-wrap: wrap; }
+  .partner-skill-name .text-muted { font-weight: 400; font-size: 0.875rem; }
+  .partner-skill-desc { color: var(--text-secondary); margin: 0; font-size: 0.9375rem; line-height: 1.6; }
   .passive-name { font-weight: 600; margin-bottom: 0.25rem; }
 
   .drop-list { display: flex; gap: 0.5rem; flex-wrap: wrap; }

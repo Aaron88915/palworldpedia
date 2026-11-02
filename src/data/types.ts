@@ -73,6 +73,11 @@ export interface Pal {
   description: { zh: string; en: string };
   image: string;                   // 图片 URL
   updatedAt: string;               // 数据更新时间 ISO
+  partnerSkill?: {
+    id: string;
+    name: { zh: string; en: string };
+    description: { zh: string; en: string };
+  };
 }
 
 // 配种关系（无向图）

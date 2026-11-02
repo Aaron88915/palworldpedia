@@ -89,6 +89,7 @@ export const STRINGS = {
     meleeAtk: { zh: '近战攻击', en: 'Melee ATK' },
     defense: { zh: '防御力', en: 'Defense' },
     speed: { zh: '移动速度', en: 'Movement Speed' },
+    partnerSkill: { zh: '⭐ 伙伴技能', en: '⭐ Partner Skill' },
     price: { zh: '售价', en: 'Price' },
     gold: { zh: '金币', en: 'Gold' },
     // skill meta

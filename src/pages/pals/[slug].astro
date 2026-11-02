@@ -196,6 +196,27 @@ const relatedPals = (palsData as Pal[])
       </section>
     )}
 
+    <!-- 伙伴技能 -->
+    {pal.partnerSkill && pal.partnerSkill.name && (pal.partnerSkill.name.zh || pal.partnerSkill.name.en) && (
+      <section class="pal-section">
+        <h2>⭐ 伙伴技能</h2>
+        <div class="partner-skill">
+          <div class="partner-skill-name">
+            {pal.partnerSkill.name.zh || pal.partnerSkill.name.en}
+            {pal.partnerSkill.name.en && pal.partnerSkill.name.en !== pal.partnerSkill.name.zh && (
+              <span class="text-muted">{pal.partnerSkill.name.en}</span>
+            )}
+          </div>
+          {pal.partnerSkill.description?.zh && (
+            <p class="partner-skill-desc">{pal.partnerSkill.description.zh}</p>
+          )}
+          {pal.partnerSkill.description?.en && !pal.partnerSkill.description.zh && (
+            <p class="partner-skill-desc">{pal.partnerSkill.description.en}</p>
+          )}
+        </div>
+      </section>
+    )}
+
     <!-- 掉落物 -->
     {pal.drops.length > 0 && (
       <section class="pal-section">
@@ -517,6 +538,34 @@ const relatedPals = (palsData as Pal[])
     color: var(--text-secondary);
     margin: 0;
     font-size: 0.875rem;
+  }
+
+  .partner-skill {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+  }
+
+  .partner-skill-name {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  .partner-skill-name .text-muted {
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+
+  .partner-skill-desc {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.6;
   }
 
   .passive-name {
