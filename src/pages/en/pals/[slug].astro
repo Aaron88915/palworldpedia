@@ -18,6 +18,9 @@ export async function getStaticPaths() {
 }
 
 const { pal } = Astro.props as { pal: Pal };
+// Some Pals (e.g. the Terraria crossover Pals) have no Paldeck entry
+const paldeckNo = pal.paldeckNo > 0 ? pal.paldeckNo : 0;
+const paldeckLabel = paldeckNo > 0 ? `#${paldeckNo.toString().padStart(3, '0')}` : '';
 
 const hpTier = pal.stats.hp >= 150 ? 'S' : pal.stats.hp >= 120 ? 'A' : pal.stats.hp >= 100 ? 'B' : 'C';
 const atkTier = pal.stats.attack.melee >= 110 ? 'S' : pal.stats.attack.melee >= 90 ? 'A' : pal.stats.attack.melee >= 70 ? 'B' : 'C';
@@ -41,7 +44,9 @@ const schema = {
   gameItem: {
     '@type': 'Thing',
     name: pal.name.en,
-    description: `Pal #${pal.paldeckNo} in the Palworld Paldeck.`,
+    description: paldeckNo > 0
+      ? `Pal #${paldeckNo} in the Palworld Paldeck.`
+      : `${pal.name.en} in the Palworld Paldeck.`,
   },
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -57,7 +62,9 @@ const relatedPals = (palsData as Pal[])
 
 <Layout
   lang={lang}
-  title={`${pal.name.en} (${pal.name.zh}) - Pal #${pal.paldeckNo} Stats`}
+  title={paldeckNo > 0
+    ? `${pal.name.en} (${pal.name.zh}) - Pal #${paldeckNo} Stats`
+    : `${pal.name.en} (${pal.name.zh}) - Stats`}
   description={`${pal.name.en} detailed stats: HP ${pal.stats.hp}, ATK ${pal.stats.attack.melee}, DEF ${pal.stats.defense}. Includes skills, passives, habitats, and drops.`}
   image={pal.image}
   schema={schema}
@@ -75,7 +82,7 @@ const relatedPals = (palsData as Pal[])
     <header class="pal-header">
       <PalImage pal={pal} size="large" rounded />
       <div class="pal-header-info">
-        <div class="pal-header-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
+        {paldeckLabel && <div class="pal-header-no">{paldeckLabel}</div>}
         <h1 class="pal-header-name">{pal.name.en}</h1>
         <div class="pal-header-name-en">{pal.name.zh}</div>
         <div class="pal-header-types">
@@ -239,7 +246,7 @@ const relatedPals = (palsData as Pal[])
     <section class="seo-text">
       <h2>{t('palDetail.aboutPal', lang)} {pal.name.en}</h2>
       <p>
-        {pal.name.en} ({pal.name.zh}) is Pal #${pal.paldeckNo} in Palworld, a <strong>{pal.types.map((tp) => PAL_TYPES.find((x) => x.id === tp)?.en).join(' / ')}</strong>-type Pal with HP {pal.stats.hp}, ATK {pal.stats.attack.melee}, and DEF {pal.stats.defense}.
+        {pal.name.en} ({pal.name.zh}) is {paldeckNo > 0 ? `Pal #${paldeckNo}` : 'a Pal'} in Palworld, a <strong>{pal.types.map((tp) => PAL_TYPES.find((x) => x.id === tp)?.en).join(' / ')}</strong>-type Pal with HP {pal.stats.hp}, ATK {pal.stats.attack.melee}, and DEF {pal.stats.defense}.
       </p>
       <p>
         Best suited for: {Object.keys(pal.workSuitability).map((k) => WORK_SUITABILITIES.find((x) => x.id === k)?.en).join(', ') || 'combat'}.
@@ -254,7 +261,9 @@ const relatedPals = (palsData as Pal[])
         <div class="related-grid">
           {relatedPals.map((p) => (
             <a href={`/en/pals/${p.id}/`} class="related-card">
-              <div class="related-no">#{p.paldeckNo.toString().padStart(3, '0')}</div>
+              {p.paldeckNo > 0 && (
+                <div class="related-no">#{p.paldeckNo.toString().padStart(3, '0')}</div>
+              )}
               <div class="related-name">{p.name.en}</div>
               <div class="related-name-en text-muted">{p.name.zh}</div>
             </a>

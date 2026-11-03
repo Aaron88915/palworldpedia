@@ -4,7 +4,7 @@
     "paldeckNo": 0,
     "name": {
       "zh": "绿史莱姆",
-      "en": "Green slime"
+      "en": "Green Slime"
     },
     "types": [
       "grass"
@@ -13,52 +13,59 @@
     "stats": {
       "hp": 65,
       "attack": {
-        "melee": 100
+        "melee": 70
       },
       "defense": 80,
-      "speed": 0
+      "speed": 300
     },
     "workSuitability": {
       "transporting": 1
     },
     "skills": [
       {
-        "id": "slime-press",
+        "id": "slime-press-grass",
         "name": {
-          "zh": "Slime Press",
-          "en": "Slime Press"
+          "zh": "史莱姆重压（草）",
+          "en": "Slime Press (Grass)"
         },
         "level": 1,
         "type": "grass",
-        "power": 0,
-        "cooldown": 0,
+        "power": 50,
+        "cooldown": 1,
         "description": {
-          "zh": "",
-          "en": ""
+          "zh": "绿史莱姆的专用技能。 跳向敌人发动攻击。",
+          "en": "Green Slime's exclusive skill. Leaps toward the enemy and delivers an attack."
         }
       }
     ],
     "passives": [],
     "drops": [
-      "Hallowed Bar",
-      "Transporting"
+      "Hallowed_Bar"
     ],
     "food": 2,
-    "price": 0,
+    "price": 500,
     "biomes": [
-      "Windswept Island",
-      "Marsh Island",
-      "Eastern Wild Island"
+      "The World Tree"
     ],
     "nightOnly": false,
     "description": {
       "zh": "【泰拉瑞亚联动】 来自异世界的怪物。 在这里似乎可以将其驯服。",
       "en": "[Tides of Terraria] A monster from another world, now tameable in this realm."
     },
-    "image": "/images/pals/Green Slime menu.png",
+    "image": "/images/pals/Green Slime.png",
     "breedpower": 0,
-    "updatedAt": "2026-07-28",
-    "partnerSkill": null,
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "slime-body",
+      "name": {
+        "zh": "史莱姆之躯",
+        "en": "Slime Body"
+      },
+      "description": {
+        "zh": "可骑在它的背上移动。 骑乘期间可高高跃起。",
+        "en": "Can be ridden. Can jump high into the air while mounted."
+      }
+    },
     "rarityTier": "Common"
   },
   {
@@ -54042,5 +54049,1124 @@
     "breedRank": 1,
     "breedPower": 20,
     "rarityTier": "Epic"
+  },
+  {
+    "id": "snock-terra",
+    "paldeckNo": 163,
+    "name": {
+      "zh": "金涡蜗",
+      "en": "Snock Terra"
+    },
+    "types": [
+      "electric",
+      "ground"
+    ],
+    "rarity": 3,
+    "stats": {
+      "hp": 65,
+      "attack": {
+        "melee": 70
+      },
+      "defense": 80,
+      "speed": 360
+    },
+    "workSuitability": {
+      "generating_electricity": 4
+    },
+    "skills": [
+      {
+        "id": "shockwave",
+        "name": {
+          "zh": "冲击波",
+          "en": "Shockwave"
+        },
+        "level": 1,
+        "type": "electric",
+        "power": 80,
+        "cooldown": 4,
+        "description": {
+          "zh": "快速放电 给周围造成冲击。",
+          "en": "Quickly discharges electricity, shocking those around it."
+        }
+      },
+      {
+        "id": "stone-cannon",
+        "name": {
+          "zh": "投石",
+          "en": "Stone Cannon"
+        },
+        "level": 7,
+        "type": "ground",
+        "power": 120,
+        "cooldown": 8,
+        "description": {
+          "zh": "将岩石从眼前的地上吸附起来 瞄准敌人并发射。",
+          "en": "Digs up a boulder and hurls it at an enemy."
+        }
+      },
+      {
+        "id": "rockburst",
+        "name": {
+          "zh": "岩爆",
+          "en": "Rockburst"
+        },
+        "level": 15,
+        "type": "ground",
+        "power": 300,
+        "cooldown": 16,
+        "description": {
+          "zh": "撼动地面， 使大块岩石射向四面八方",
+          "en": "Causes the ground to shake before hurling a massive stone mass at its surroundings."
+        }
+      },
+      {
+        "id": "trispark",
+        "name": {
+          "zh": "三相火花",
+          "en": "TriSpark"
+        },
+        "level": 22,
+        "type": "electric",
+        "power": 250,
+        "cooldown": 12,
+        "description": {
+          "zh": "同时发射直线飞行的高速雷球， 和追踪敌人的慢速雷球。",
+          "en": "A high-speed lightning ball that flies in a straight line. Simultaneously fires slow lightning balls that track the enemy."
+        }
+      },
+      {
+        "id": "rock-lance",
+        "name": {
+          "zh": "岩石锐矛",
+          "en": "Rock Lance"
+        },
+        "level": 30,
+        "type": "ground",
+        "power": 400,
+        "cooldown": 20,
+        "description": {
+          "zh": "在敌人的脚边 生成尖锐的岩石长矛。",
+          "en": "Generates a sharp rock spear under an enemy."
+        }
+      },
+      {
+        "id": "sand-twister",
+        "name": {
+          "zh": "沙尘暴",
+          "en": "Sand Twister"
+        },
+        "level": 40,
+        "type": "ground",
+        "power": 500,
+        "cooldown": 24,
+        "description": {
+          "zh": "生成复数个砂龙卷。 龙卷风们将一边自旋一边绕中心旋转。",
+          "en": "Creates multiple sand tornadoes. The tornadoes continuously spin in circles."
+        }
+      },
+      {
+        "id": "shell-charge",
+        "name": {
+          "zh": "涡壳充电",
+          "en": "Shell Charge"
+        },
+        "level": 50,
+        "type": "electric",
+        "power": 500,
+        "cooldown": 24,
+        "description": {
+          "zh": "电涡蜗及亚种的专用技能。 缩入壳中减伤并积蓄电能。 充满后释放电流，对周围敌人造成伤害。 放电后，短时间内自身雷属性技能攻击力提升。",
+          "en": "Snock's exclusive skill. Withdraws into its shell to reduce damage taken while building electric charge. Once fully charged, it discharges, damaging nearby enemies. After discharging, the Attack of this Pal's Electric skills is increased for a limited time."
+        }
+      },
+      {
+        "id": "rocky-impact",
+        "name": {
+          "zh": "震岩",
+          "en": "Rocky Impact"
+        },
+        "level": 70,
+        "type": "ground",
+        "power": 600,
+        "cooldown": 30,
+        "description": {
+          "zh": "震动地面， 并令巨大的岩石飞起。",
+          "en": "Shakes the ground and lifts a massive boulder into the air."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Electric_Organ",
+      "High_Quality_Pal_Oil",
+      "Ground_Radiant_Gem",
+      "World_Tree_Holy_Water",
+      "Electric_Radiant_Gem",
+      "Decayed_Ancient_Relic",
+      "Dormant_Ancient_Relic"
+    ],
+    "food": 4,
+    "price": 1623,
+    "biomes": [
+      "The World Tree"
+    ],
+    "nightOnly": false,
+    "description": {
+      "zh": "将滚烫的金涡蜗放进浴缸， 享受一场火热浴，这在遥远的古代曾经十分流行。 由于近年复古风潮兴起，它也再度成为了火热新趋势。",
+      "en": "Tossing a heated Snock Terra into the bath for a scorching spa was once a fad of the distant past. Owing to a recent revival, it is now quite literally a hot trend."
+    },
+    "image": "/images/pals/Snock Terra.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "grounding-shell",
+      "name": {
+        "zh": "咚咚甲壳",
+        "en": "Grounding Shell"
+      },
+      "description": {
+        "zh": "若它在队伍中，玩家和帕鲁受到的水属性伤害减轻(15~30)%，并且不会陷入浸湿状态。（不可叠加） levelvalue1",
+        "en": "While in party, player and party Pals take (15~30)% less Water damage, and are immune to Soak. (Does not stack) levelvalue1"
+      }
+    },
+    "rarityTier": "Common"
+  },
+  {
+    "id": "ribbuny-botan",
+    "paldeckNo": 44,
+    "name": {
+      "zh": "艾小兔",
+      "en": "Ribbuny Botan"
+    },
+    "types": [
+      "grass"
+    ],
+    "rarity": 1,
+    "stats": {
+      "hp": 80,
+      "attack": {
+        "melee": 65
+      },
+      "defense": 70,
+      "speed": 245
+    },
+    "workSuitability": {
+      "planting": 2
+    },
+    "skills": [
+      {
+        "id": "wind-cutter",
+        "name": {
+          "zh": "风刃",
+          "en": "Wind Cutter"
+        },
+        "level": 1,
+        "type": "grass",
+        "power": 40,
+        "cooldown": 2,
+        "description": {
+          "zh": "发射超高速风刃 瞄准后笔直飞向敌人。",
+          "en": "Fires a high speed blade of wind that flies straight at an enemy."
+        }
+      },
+      {
+        "id": "bog-blast",
+        "name": {
+          "zh": "泥浆投掷",
+          "en": "Bog Blast"
+        },
+        "level": 7,
+        "type": "ground",
+        "power": 40,
+        "cooldown": 2,
+        "description": {
+          "zh": "用黏糊糊的泥巴 瞄准敌人并发射。",
+          "en": "Hurls sticky mud at an enemy."
+        }
+      },
+      {
+        "id": "seed-machine-gun",
+        "name": {
+          "zh": "种子机关枪",
+          "en": "Seed Machine Gun"
+        },
+        "level": 15,
+        "type": "grass",
+        "power": 80,
+        "cooldown": 4,
+        "description": {
+          "zh": "释放大量坚硬的种子 攻击前方的敌人。",
+          "en": "Fires a volley of hard seeds at enemies in front of it."
+        }
+      },
+      {
+        "id": "seed-mine",
+        "name": {
+          "zh": "种子地雷",
+          "en": "Seed Mine"
+        },
+        "level": 22,
+        "type": "grass",
+        "power": 120,
+        "cooldown": 8,
+        "description": {
+          "zh": "发射危险的种子。 碰到敌人会绽开并爆炸。",
+          "en": "Launches a deadly seed. If it hits an enemy, the seed explodes."
+        }
+      },
+      {
+        "id": "wind-edge",
+        "name": {
+          "zh": "烈风切",
+          "en": "Wind Edge"
+        },
+        "level": 30,
+        "type": "grass",
+        "power": 200,
+        "cooldown": 12,
+        "description": {
+          "zh": "扇形射出锐利的风刃。",
+          "en": "Launches sharp blades of air that fan out."
+        }
+      },
+      {
+        "id": "circle-vine",
+        "name": {
+          "zh": "缠根牢狱",
+          "en": "Circle Vine"
+        },
+        "level": 40,
+        "type": "grass",
+        "power": 300,
+        "cooldown": 16,
+        "description": {
+          "zh": "在敌人的位置和其周围刺出尖锐的根刺。",
+          "en": "Sprouts sharp roots in and around the enemy's location."
+        }
+      },
+      {
+        "id": "solar-blast",
+        "name": {
+          "zh": "太阳光束",
+          "en": "Solar Blast"
+        },
+        "level": 50,
+        "type": "grass",
+        "power": 450,
+        "cooldown": 20,
+        "description": {
+          "zh": "积蓄太阳之力 瞄准敌人发射强劲光线。",
+          "en": "Charges solar energy before blasting enemies with a powerful beam."
+        }
+      },
+      {
+        "id": "wind-burst",
+        "name": {
+          "zh": "翠耀罡风",
+          "en": "Wind Burst"
+        },
+        "level": 70,
+        "type": "grass",
+        "power": 600,
+        "cooldown": 30,
+        "description": {
+          "zh": "以自身为中心掀起巨大的风暴漩涡， 发动强力攻击。",
+          "en": "Summons a massive wind vortex around itself and unleashes a powerful attack."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Leather",
+      "Ribbuny_Ribbon",
+      "Carrot_Seeds",
+      "Carrot",
+      "Ancient_Civilization_Parts",
+      "Precious_Pelt",
+      "Verdant_Egg"
+    ],
+    "food": 1,
+    "price": 526,
+    "biomes": [
+      "Sakurajima"
+    ],
+    "nightOnly": false,
+    "description": {
+      "zh": "这种帕鲁的脸上总是挂著微笑。 捣蛋猫偶尔会恶作剧，把它的缎带打成死结， 每到这时，它都会笑眯眯的把捣蛋猫暴揍一顿。",
+      "en": "Always wears a cheerful smile. Sometimes, thanks to Cattiva's pranks, they end up tangled in tentacles and have to fight their way out! Even in tough situations, they keep smiling cheerfully."
+    },
+    "image": "/images/pals/Ribbuny Botan.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "ground-n-pound",
+      "name": {
+        "zh": "暴力青草兔",
+        "en": "Ground 'n' Pound"
+      },
+      "description": {
+        "zh": "若它在队伍中，玩家和帕鲁以草属性攻击克制的属性时伤害提升(25~40)%。（不可叠加） 艾小兔在武器制作台或武器工厂等处工作时，工作效率将会提升(200~400)%。 levelvalue1",
+        "en": "While in party, increases damage dealt by Player and Pals' Grass attacks when hitting the enemy's elemental weakness by (25~40)%. (Does not stack) Increases Ribbuny Botan's efficiency by (200~400)% when working at a Weapon Workbench, Weapon Assembly Line, or other related facilities. levelvalue1"
+      }
+    },
+    "rarityTier": "Common"
+  },
+  {
+    "id": "astralym",
+    "paldeckNo": 204,
+    "name": {
+      "zh": "枯星龙",
+      "en": "Astralym"
+    },
+    "types": [],
+    "rarity": 10,
+    "stats": {
+      "hp": 200,
+      "attack": {
+        "melee": 200
+      },
+      "defense": 200,
+      "speed": 0
+    },
+    "workSuitability": {},
+    "skills": [],
+    "passives": [],
+    "drops": [
+      "Leather",
+      "High_Quality_Pal_Oil",
+      "Ancient_Civilization_Parts",
+      "Precious_Dragon_Stone"
+    ],
+    "food": 9,
+    "price": 10000,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "于遥远过去降临于帕洛斯群岛，神秘的帕鲁迎来其终焉。 作为灾厄带来过无数毁灭，后被长久封印。 最终被某位帕鲁驯养师所击败。",
+      "en": "A shadow of its former self, this mysterious Pal descended upon the Palpagos long ago. Bringing ruin and calamity, it was sealed away for millennia until it was ultimately defeated by a certain Pal Tamer"
+    },
+    "image": "/images/pals/Astralym.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": null,
+    "rarityTier": "Epic"
+  },
+  {
+    "id": "eye-of-cthulhu",
+    "paldeckNo": 0,
+    "name": {
+      "zh": "克苏鲁之眼",
+      "en": "Eye of Cthulhu"
+    },
+    "types": [
+      "dark"
+    ],
+    "rarity": 6,
+    "stats": {
+      "hp": 110,
+      "attack": {
+        "melee": 105
+      },
+      "defense": 95,
+      "speed": 900
+    },
+    "workSuitability": {
+      "transporting": 4
+    },
+    "skills": [
+      {
+        "id": "lock-on-lunge",
+        "name": {
+          "zh": "凝视突击",
+          "en": "Lock-On Lunge"
+        },
+        "level": 1,
+        "type": "dark",
+        "power": 300,
+        "cooldown": 15,
+        "description": {
+          "zh": "克苏鲁之眼的专用技能。 多次朝敌人发起冲锋。",
+          "en": "Eye of Cthulhu's exclusive skill. Repeatedly charges at the enemy."
+        }
+      },
+      {
+        "id": "servant-call",
+        "name": {
+          "zh": "召唤仆从",
+          "en": "Servant Call"
+        },
+        "level": 2,
+        "type": "dark",
+        "power": 300,
+        "cooldown": 10,
+        "description": {
+          "zh": "克苏鲁之眼的专用技能。 召唤4个仆从撞向敌人并造成伤害。仆从会在受到攻击或经过一定时间后消失。",
+          "en": "Eye of Cthulhu's exclusive skill. Summons four Servants that charge at enemies to deal damage. Servants disappear after taking damage or after a short time."
+        }
+      },
+      {
+        "id": "lock-on-lunge",
+        "name": {
+          "zh": "凝视突击",
+          "en": "Lock-On Lunge"
+        },
+        "level": 1,
+        "type": "dark",
+        "power": 300,
+        "cooldown": 15,
+        "description": {
+          "zh": "克苏鲁之眼的专用技能。 多次朝敌人发起冲锋。",
+          "en": "Eye of Cthulhu's exclusive skill. Repeatedly charges at the enemy."
+        }
+      },
+      {
+        "id": "servant-call",
+        "name": {
+          "zh": "召唤仆从",
+          "en": "Servant Call"
+        },
+        "level": 2,
+        "type": "dark",
+        "power": 300,
+        "cooldown": 10,
+        "description": {
+          "zh": "克苏鲁之眼的专用技能。 召唤4个仆从撞向敌人并造成伤害。仆从会在受到攻击或经过一定时间后消失。",
+          "en": "Eye of Cthulhu's exclusive skill. Summons four Servants that charge at enemies to deal damage. Servants disappear after taking damage or after a short time."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Hallowed_Bar"
+    ],
+    "food": 2,
+    "price": 3000,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "【泰拉瑞亚联动】 来自异世界的怪物。 在这里似乎可以将其驯服。",
+      "en": "[Tides of Terraria] A monster from another world, now tameable in this realm."
+    },
+    "image": "/images/pals/Eye of Cthulhu.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "mad-eye-lunge",
+      "name": {
+        "zh": "进击的克苏鲁之眼",
+        "en": "Mad Eye Lunge"
+      },
+      "description": {
+        "zh": "发动后，克苏鲁之眼会向前方突进并攻击锁定的敌人。 levelvalue1",
+        "en": "When activated, Eye of Cthulhu charges and attacks targeted enemy. levelvalue1"
+      }
+    },
+    "rarityTier": "Rare"
+  },
+  {
+    "id": "demon-eye",
+    "paldeckNo": 0,
+    "name": {
+      "zh": "恶魔眼",
+      "en": "Demon Eye"
+    },
+    "types": [
+      "dark"
+    ],
+    "rarity": 3,
+    "stats": {
+      "hp": 105,
+      "attack": {
+        "melee": 110
+      },
+      "defense": 95,
+      "speed": 300
+    },
+    "workSuitability": {
+      "transporting": 1
+    },
+    "skills": [
+      {
+        "id": "ocular-rush",
+        "name": {
+          "zh": "眼球突击",
+          "en": "Ocular Rush"
+        },
+        "level": 1,
+        "type": "dark",
+        "power": 60,
+        "cooldown": 1,
+        "description": {
+          "zh": "恶魔眼的专用技能。 朝敌人发起冲锋。撞到地面或墙壁时会反弹。",
+          "en": "Demon Eye's exclusive skill. Charges at the enemy, bouncing off the ground or walls on impact."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Hallowed_Bar"
+    ],
+    "food": 2,
+    "price": 750,
+    "biomes": [],
+    "nightOnly": false,
+    "description": {
+      "zh": "【泰拉瑞亚联动】 来自异世界的怪物。 在这里似乎可以将其驯服。",
+      "en": "[Tides of Terraria] A monster from another world, now tameable in this realm."
+    },
+    "image": "/images/pals/Demon Eye.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "demonic-sight",
+      "name": {
+        "zh": "恶魔的视野",
+        "en": "Demonic Sight"
+      },
+      "description": {
+        "zh": "若它在队伍中，暗属性帕鲁的攻击力会提升(15~30)%。（不可叠加） levelvalue1",
+        "en": "While in party, increases Attack of Dark Pals by (15~30)%. (Does not stack) levelvalue1"
+      }
+    },
+    "rarityTier": "Common"
+  },
+  {
+    "id": "blue-slime",
+    "paldeckNo": 0,
+    "name": {
+      "zh": "蓝史莱姆",
+      "en": "Blue Slime"
+    },
+    "types": [
+      "water"
+    ],
+    "rarity": 3,
+    "stats": {
+      "hp": 70,
+      "attack": {
+        "melee": 70
+      },
+      "defense": 80,
+      "speed": 300
+    },
+    "workSuitability": {
+      "transporting": 1
+    },
+    "skills": [
+      {
+        "id": "slime-press-water",
+        "name": {
+          "zh": "史莱姆重压（水）",
+          "en": "Slime Press (Water)"
+        },
+        "level": 1,
+        "type": "water",
+        "power": 50,
+        "cooldown": 1,
+        "description": {
+          "zh": "蓝史莱姆的专用技能。 跳向敌人发动攻击。",
+          "en": "Blue Slime's exclusive skill. Leaps toward the enemy and delivers an attack."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Hallowed_Bar"
+    ],
+    "food": 2,
+    "price": 600,
+    "biomes": [
+      "The World Tree"
+    ],
+    "nightOnly": false,
+    "description": {
+      "zh": "【泰拉瑞亚联动】 来自异世界的怪物。 在这里似乎可以将其驯服。",
+      "en": "[Tides of Terraria] A monster from another world, now tameable in this realm."
+    },
+    "image": "/images/pals/Blue Slime.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "slime-body",
+      "name": {
+        "zh": "史莱姆之躯",
+        "en": "Slime Body"
+      },
+      "description": {
+        "zh": "可骑在它的背上移动。 骑乘期间可高高跃起。",
+        "en": "Can be ridden. Can jump high into the air while mounted."
+      }
+    },
+    "rarityTier": "Common"
+  },
+  {
+    "id": "purple-slime",
+    "paldeckNo": 0,
+    "name": {
+      "zh": "紫史莱姆",
+      "en": "Purple Slime"
+    },
+    "types": [
+      "dark"
+    ],
+    "rarity": 3,
+    "stats": {
+      "hp": 75,
+      "attack": {
+        "melee": 70
+      },
+      "defense": 80,
+      "speed": 300
+    },
+    "workSuitability": {
+      "transporting": 1
+    },
+    "skills": [
+      {
+        "id": "slime-press-dark",
+        "name": {
+          "zh": "史莱姆重压（暗）",
+          "en": "Slime Press (Dark)"
+        },
+        "level": 1,
+        "type": "dark",
+        "power": 50,
+        "cooldown": 1,
+        "description": {
+          "zh": "紫史莱姆的专用技能。 跳向敌人发动攻击。",
+          "en": "Purple Slime's exclusive skill. Leaps toward the enemy and delivers an attack."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Hallowed_Bar"
+    ],
+    "food": 3,
+    "price": 800,
+    "biomes": [
+      "The World Tree"
+    ],
+    "nightOnly": false,
+    "description": {
+      "zh": "【泰拉瑞亚联动】 来自异世界的怪物。 在这里似乎可以将其驯服。",
+      "en": "[Tides of Terraria] A monster from another world, now tameable in this realm."
+    },
+    "image": "/images/pals/Purple Slime.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "slime-body",
+      "name": {
+        "zh": "史莱姆之躯",
+        "en": "Slime Body"
+      },
+      "description": {
+        "zh": "可骑在它的背上移动。 骑乘期间可高高跃起。",
+        "en": "Can be ridden. Can jump high into the air while mounted."
+      }
+    },
+    "rarityTier": "Common"
+  },
+  {
+    "id": "rainbow-slime",
+    "paldeckNo": 0,
+    "name": {
+      "zh": "彩虹史莱姆",
+      "en": "Rainbow Slime"
+    },
+    "types": [
+      "neutral"
+    ],
+    "rarity": 4,
+    "stats": {
+      "hp": 105,
+      "attack": {
+        "melee": 95
+      },
+      "defense": 105,
+      "speed": 300
+    },
+    "workSuitability": {
+      "transporting": 1
+    },
+    "skills": [
+      {
+        "id": "slime-press-rainbow",
+        "name": {
+          "zh": "史莱姆重压（彩虹）",
+          "en": "Slime Press (Rainbow)"
+        },
+        "level": 1,
+        "type": "neutral",
+        "power": 100,
+        "cooldown": 1,
+        "description": {
+          "zh": "彩虹史莱姆的专用技能。 跳向敌人发动攻击。",
+          "en": "Rainbow Slime's exclusive skill. Leaps toward the enemy and delivers an attack."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Hallowed_Bar"
+    ],
+    "food": 3,
+    "price": 1500,
+    "biomes": [
+      "The World Tree"
+    ],
+    "nightOnly": false,
+    "description": {
+      "zh": "【泰拉瑞亚联动】 来自异世界的怪物。 在这里似乎可以将其驯服。",
+      "en": "[Tides of Terraria] A monster from another world, now tameable in this realm."
+    },
+    "image": "/images/pals/Rainbow Slime.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "slime-body",
+      "name": {
+        "zh": "史莱姆之躯",
+        "en": "Slime Body"
+      },
+      "description": {
+        "zh": "可骑在它的背上移动。 骑乘期间可高高跃起。",
+        "en": "Can be ridden. Can jump high into the air while mounted."
+      }
+    },
+    "rarityTier": "Common"
+  },
+  {
+    "id": "red-slime",
+    "paldeckNo": 0,
+    "name": {
+      "zh": "红史莱姆",
+      "en": "Red Slime"
+    },
+    "types": [
+      "fire"
+    ],
+    "rarity": 3,
+    "stats": {
+      "hp": 70,
+      "attack": {
+        "melee": 75
+      },
+      "defense": 85,
+      "speed": 300
+    },
+    "workSuitability": {
+      "transporting": 1
+    },
+    "skills": [
+      {
+        "id": "slime-press-fire",
+        "name": {
+          "zh": "史莱姆重压（火）",
+          "en": "Slime Press (Fire)"
+        },
+        "level": 1,
+        "type": "fire",
+        "power": 50,
+        "cooldown": 1,
+        "description": {
+          "zh": "红史莱姆的专用技能。 跳向敌人发动攻击。",
+          "en": "Red Slime's exclusive skill. Leaps toward the enemy and delivers an attack."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Hallowed_Bar"
+    ],
+    "food": 3,
+    "price": 700,
+    "biomes": [
+      "The World Tree"
+    ],
+    "nightOnly": false,
+    "description": {
+      "zh": "【泰拉瑞亚联动】 来自异世界的怪物。 在这里似乎可以将其驯服。",
+      "en": "[Tides of Terraria] A monster from another world, now tameable in this realm."
+    },
+    "image": "/images/pals/Red Slime.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "slime-body",
+      "name": {
+        "zh": "史莱姆之躯",
+        "en": "Slime Body"
+      },
+      "description": {
+        "zh": "可骑在它的背上移动。 骑乘期间可高高跃起。",
+        "en": "Can be ridden. Can jump high into the air while mounted."
+      }
+    },
+    "rarityTier": "Common"
+  },
+  {
+    "id": "illuminant-slime",
+    "paldeckNo": 0,
+    "name": {
+      "zh": "夜明史莱姆",
+      "en": "Illuminant Slime"
+    },
+    "types": [
+      "neutral"
+    ],
+    "rarity": 4,
+    "stats": {
+      "hp": 80,
+      "attack": {
+        "melee": 75
+      },
+      "defense": 85,
+      "speed": 300
+    },
+    "workSuitability": {
+      "transporting": 1
+    },
+    "skills": [
+      {
+        "id": "slime-press-neutral",
+        "name": {
+          "zh": "史莱姆重压（无）",
+          "en": "Slime Press (Neutral)"
+        },
+        "level": 1,
+        "type": "neutral",
+        "power": 50,
+        "cooldown": 1,
+        "description": {
+          "zh": "夜明史莱姆的专用技能。 跳向敌人发动攻击。",
+          "en": "Illuminant Slime's exclusive skill. Leaps toward the enemy and delivers an attack."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Hallowed_Bar"
+    ],
+    "food": 3,
+    "price": 900,
+    "biomes": [
+      "The World Tree"
+    ],
+    "nightOnly": false,
+    "description": {
+      "zh": "【泰拉瑞亚联动】 来自异世界的怪物。 在这里似乎可以将其驯服。",
+      "en": "[Tides of Terraria] A monster from another world, now tameable in this realm."
+    },
+    "image": "/images/pals/Illuminant Slime.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "slime-body",
+      "name": {
+        "zh": "史莱姆之躯",
+        "en": "Slime Body"
+      },
+      "description": {
+        "zh": "可骑在它的背上移动。 骑乘期间可高高跃起。",
+        "en": "Can be ridden. Can jump high into the air while mounted."
+      }
+    },
+    "rarityTier": "Common"
+  },
+  {
+    "id": "enchanted-sword",
+    "paldeckNo": 0,
+    "name": {
+      "zh": "附魔剑",
+      "en": "Enchanted Sword"
+    },
+    "types": [
+      "neutral"
+    ],
+    "rarity": 3,
+    "stats": {
+      "hp": 95,
+      "attack": {
+        "melee": 105
+      },
+      "defense": 90,
+      "speed": 600
+    },
+    "workSuitability": {
+      "lumbering": 1
+    },
+    "skills": [
+      {
+        "id": "sword-charge",
+        "name": {
+          "zh": "剑舞冲锋",
+          "en": "Sword Charge"
+        },
+        "level": 1,
+        "type": "neutral",
+        "power": 80,
+        "cooldown": 1,
+        "description": {
+          "zh": "附魔剑的专用技能。 朝敌人发动突刺攻击。",
+          "en": "Enchanted Sword's exclusive skill. Lunges forward to deliver a sharp thrust."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Hallowed_Bar"
+    ],
+    "food": 2,
+    "price": 1250,
+    "biomes": [
+      "The World Tree"
+    ],
+    "nightOnly": false,
+    "description": {
+      "zh": "【泰拉瑞亚联动】 来自异世界的怪物。 在这里似乎可以将其驯服。",
+      "en": "[Tides of Terraria] A monster from another world, now tameable in this realm."
+    },
+    "image": "/images/pals/Enchanted Sword.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "enchant",
+      "name": {
+        "zh": "附魔",
+        "en": "Enchant"
+      },
+      "description": {
+        "zh": "若它在队伍中，击倒暗属性帕鲁时获得的掉落道具增加(40~80)%。（不可叠加） levelvalue1",
+        "en": "While in party, Dark Pals drop (40~80)% more items when defeated. (Does not stack) levelvalue1"
+      }
+    },
+    "rarityTier": "Common"
+  },
+  {
+    "id": "cave-bat",
+    "paldeckNo": 0,
+    "name": {
+      "zh": "洞穴蝙蝠",
+      "en": "Cave Bat"
+    },
+    "types": [
+      "neutral"
+    ],
+    "rarity": 3,
+    "stats": {
+      "hp": 65,
+      "attack": {
+        "melee": 75
+      },
+      "defense": 80,
+      "speed": 300
+    },
+    "workSuitability": {
+      "gathering": 1
+    },
+    "skills": [
+      {
+        "id": "winged-assault",
+        "name": {
+          "zh": "蝙蝠袭击",
+          "en": "Winged Assault"
+        },
+        "level": 1,
+        "type": "neutral",
+        "power": 70,
+        "cooldown": 1,
+        "description": {
+          "zh": "洞穴蝙蝠的专用技能。 利用全身扑向敌人发起进攻。撞到地面或墙壁时会反弹。",
+          "en": "Cave Bat's exclusive skill. Using its whole body, it lunges at the enemy, bouncing off the ground or walls on impact."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Hallowed_Bar"
+    ],
+    "food": 2,
+    "price": 1000,
+    "biomes": [
+      "The World Tree"
+    ],
+    "nightOnly": false,
+    "description": {
+      "zh": "【泰拉瑞亚联动】 来自异世界的怪物。 在这里似乎可以将其驯服。",
+      "en": "[Tides of Terraria] A monster from another world, now tameable in this realm."
+    },
+    "image": "/images/pals/Cave Bat.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "bat-backup",
+      "name": {
+        "zh": "支援蝙蝠",
+        "en": "Bat Backup"
+      },
+      "description": {
+        "zh": "若它在队伍中，就会出现在玩家身边。 它会自动前去拾取附近的道具。 Lv.Range1200022500330004350054000levelvalue1",
+        "en": "While in party, appears near the player. Automatically picks up nearby items. Lv.Range1200022500330004350054000levelvalue1"
+      }
+    },
+    "rarityTier": "Common"
+  },
+  {
+    "id": "illuminant-bat",
+    "paldeckNo": 0,
+    "name": {
+      "zh": "夜明蝙蝠",
+      "en": "Illuminant Bat"
+    },
+    "types": [
+      "neutral"
+    ],
+    "rarity": 4,
+    "stats": {
+      "hp": 80,
+      "attack": {
+        "melee": 80
+      },
+      "defense": 95,
+      "speed": 300
+    },
+    "workSuitability": {
+      "gathering": 1
+    },
+    "skills": [
+      {
+        "id": "winged-assault",
+        "name": {
+          "zh": "蝙蝠袭击",
+          "en": "Winged Assault"
+        },
+        "level": 1,
+        "type": "neutral",
+        "power": 70,
+        "cooldown": 1,
+        "description": {
+          "zh": "洞穴蝙蝠的专用技能。 利用全身扑向敌人发起进攻。撞到地面或墙壁时会反弹。",
+          "en": "Cave Bat's exclusive skill. Using its whole body, it lunges at the enemy, bouncing off the ground or walls on impact."
+        }
+      }
+    ],
+    "passives": [],
+    "drops": [
+      "Hallowed_Bar"
+    ],
+    "food": 2,
+    "price": 1250,
+    "biomes": [
+      "The World Tree"
+    ],
+    "nightOnly": false,
+    "description": {
+      "zh": "【泰拉瑞亚联动】 来自异世界的怪物。 在这里似乎可以将其驯服。",
+      "en": "[Tides of Terraria] A monster from another world, now tameable in this realm."
+    },
+    "image": "/images/pals/Illuminant Bat.png",
+    "updatedAt": "2026-10-29",
+    "partnerSkill": {
+      "id": "bat-backup",
+      "name": {
+        "zh": "支援蝙蝠",
+        "en": "Bat Backup"
+      },
+      "description": {
+        "zh": "若它在队伍中，就会出现在玩家身边。 它会自动前去拾取附近的道具。 Lv.Range1200022500330004350054000levelvalue1",
+        "en": "While in party, appears near the player. Automatically picks up nearby items. Lv.Range1200022500330004350054000levelvalue1"
+      }
+    },
+    "rarityTier": "Common"
   }
 ]

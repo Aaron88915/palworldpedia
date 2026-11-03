@@ -1,14 +1,28 @@
-feat(ui): show the partner skill on every pal page
+feat(pals): add the 13 Palworld 1.0 Pals we were missing
 
-pals.json already carried a partnerSkill block for every pal, but nothing in
-src/ ever rendered it - it was dead data. The partner skill is one of the most
-looked-up Paldex entries, so it now gets its own section between the passive
-skills and the drop table.
+paldb.cc's live roster lists 299 Pals; our data had 288. The 13 missing are the
+1.0 additions - Astralym (the World Tree dragon), Snock Terra and Ribbuny
+Botan, the Yakushima bosses and monsters, and the Terraria crossover Pals.
 
-The Chinese page shows the Chinese name plus the English one in muted text and
-the Chinese description; the English page does the mirror image. A pal without
-a partner skill (only Green slime) simply has no section, and the description
-falls back to the other language when one side is missing.
+Built from paldb rather than by hand:
+  * hover card    -> Paldeck number, element(s), work suitability
+  * pal page      -> stats, price, active skills, drops, partner skill,
+                     Paldex description
+  * /cn/ pal page -> the Chinese equivalents
+  * spawner table -> the regions the Pal spawns in
+  * paldb CDN     -> the icon, converted to PNG like the other 290 images
 
-Also added the partnerSkill field to the Pal type, which it never had, and
-the section styling.
+Green Slime was already on the site but had taken its attack from the wrong
+paldb row (the 1st-level weapon attack instead of the Pal's own attack), with
+no movement speed and no price. It is refreshed from paldb as well - it turns
+out to be one of the Terraria crossover Pals, which is also why the ten other
+Terraria Pals share its "【泰拉瑞亚联动】" description.
+
+Pals that are not in the Paldex (all the Terraria crossover ones) have no
+Paldeck number, so the number is hidden on those pages instead of showing
+"#000" or "第 0 号帕鲁" - in the header badge, the title, the meta description
+and the schema.
+
+Verified: 1816 pages built, 0 errors; 0 broken internal links; 0 empty <a>
+tags; every one of the 301 Pals still has both a Chinese and an English
+description.

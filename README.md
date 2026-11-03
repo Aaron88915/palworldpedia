@@ -6,8 +6,8 @@
 ## 站点概况
 
 - **域名**：palworldpedia.cc（GitHub Pages + Cloudflare DNS）
-- **内容**：288 只帕鲁图鉴 + 588 个科技树 + 80 个地图区域 + 配种计算器 + 电力计算器 + 强度排行 + 6 篇长文 SEO 攻略（中英双语）
-- **总页面**：1,790（ZH + EN 全镜像 + 通用页）
+- **内容**：301 只帕鲁图鉴 + 588 个科技树 + 80 个地图区域 + 配种计算器 + 电力计算器 + 强度排行 + 6 篇长文 SEO 攻略（中英双语）
+- **总页面**：1,816（ZH + EN 全镜像 + 通用页）
 - **数据版本**：Palworld **1.0**（2026-07-10 正式版，补丁 1.100.427），最新补丁 v1.0.5
 - **目标受众**：Palworld 玩家，搜攻略和工具的搜索流量
 - **变现**：Google AdSense（3 个广告位/页：top + inline + bottom）
@@ -24,7 +24,7 @@
 
 | 路径 | 功能 | SEO 价值 |
 |---|---|---|
-| `/pals/` | 288 只帕鲁图鉴 + 6 维筛选 | ⭐⭐⭐ |
+| `/pals/` | 301 只帕鲁图鉴 + 6 维筛选 | ⭐⭐⭐ |
 | `/pals/<id>/` | 单帕鲁详情（属性 / 技能 / 词条 / 掉落 / 配种 CTA） | ⭐⭐⭐ |
 | `/breeding/` | 配种计算器（正向 / 反向 / 最短路径 / Path Finder 4 模式） | ⭐⭐⭐ |
 | `/tech-tree/` | 588 科技列表（按真实解锁等级 Lv 1-80 筛选） | ⭐⭐⭐ |
@@ -43,7 +43,7 @@
 
 ```
 src/data/
-├── pals.json          288 帕鲁（含 1.0 变种），biomes 全部为英文官方区域名
+├── pals.json          301 帕鲁（含 1.0 变种与泰拉瑞亚联动帕鲁），biomes 全部为英文官方区域名
 ├── tech.json          588 科技（结构 217 + 道具 371），每条含真实 unlockLevel（Lv 1-80）
 ├── regions.json       80 个 1.0 官方区域（名称 / 等级区间 / 所属大区）
 ├── pal-tiers.json     286 条 S/A/B/C/D 评分
@@ -56,7 +56,7 @@ src/data/
 ```bash
 npm install
 npm run dev          # 本地预览 http://localhost:4321
-npm run build        # 产出 dist/（约 11s，1790 页）
+npm run build        # 产出 dist/（约 11s，1816 页）
 npm run preview      # 预览构建结果
 ```
 
@@ -102,7 +102,7 @@ hook 会跑一次完整 build（约 11s）再校验，坏链接 / 空 `<a>` 会�
 ```
 src/
 ├── data/                          # JSON 数据
-│   ├── pals.json                 # 288 帕鲁
+│   ├── pals.json                 # 301 帕鲁
 │   ├── tech.json                 # 588 科技（含 unlockLevel）
 │   ├── regions.json              # 80 个区域
 │   ├── pal-tiers.json            # tier 评分
@@ -138,7 +138,11 @@ scripts/                          # 工具脚本
 ├── audit-data-gaps.py           # 数据缺口审计
 ├── merge-tech.py                # 从 paldb.cc 合并权威科技树
 ├── rebuild-biomes.py            # 从 paldb.cc spawner 表重建帕鲁区域
-├── fetch-all-pal-regions.py     # 抓 288 个帕鲁页的 Map 卡片
+├── fetch-all-pal-regions.py     # 抓 301 个帕鲁页的 Map 卡片
+├── fill-pal-speed.py            # 用 paldb RunSpeed 修正移动速度
+├── fill-pal-price.py            # 用 paldb 金币行修正基础售价
+├── fill-pal-content.py          # 补全帕鲁描述 / 伙伴技能 / 2319 条技能描述
+├── add-new-pals.py              # 新增 1.0 新帕鲁（含泰拉瑞亚联动帕鲁）
 ├── parse-towers.py              # 解析 9 座塔主名单
 └── ssh-push-*.py                # SSH 推送（443 端口 fallback）
 ```
@@ -149,10 +153,14 @@ scripts/                          # 工具脚本
 - 拿不到权威来源时，用**宽区域**（Palpagos Islands / Sakurajima / Sunreach / The World Tree …）而不是猜细粒度
 - 关键字段语义：`tech.cost` = 古科技点价格（1-9），`tech.unlockLevel` = 玩家解锁等级（1-80）
 - 帕鲁 `biomes` 必须是**英文官方区域名**（游戏内栖息地中文名不能进 EN 页）
+- 帕鲁 `stats.speed` = **移动速度**（paldb RunSpeed，200-3000），不是 Paldeck 属性
+- 帕鲁 `price` = **基础价值**（paldb 金币行，313-19900），不是商店实时售价
+- 帕鲁**没有远程攻击属性**，不存在 ranged 字段
+- 泰拉瑞亚联动帕鲁（Green Slime / Blue Slime / Eye of Cthulhu 等）不在图鉴编号内，页面不显示编号，不编造
 
 ## SEO 关键策略
 
-- **每个帕鲁独立 URL**：`/pals/lifmunk/` 288 张 SEO 页面
+- **每个帕鲁独立 URL**：`/pals/lifmunk/` 301 张 SEO 页面
 - **每个科技独立 URL**：`/tech-tree/Battle_Cloth/` 588 张 SEO 页面
 - **区域长尾**：`/regions/` 覆盖 "Palworld Sunreach / World Tree / area levels" 等搜索词
 - **6 篇长文攻略**：每篇 1500-2500 字中文 + EN，H2 + 48+ 内部链接
@@ -163,7 +171,7 @@ scripts/                          # 工具脚本
 
 ## 变现
 
-- **AdSense**：3 个广告位/页（top + inline ×1-N + bottom），全站 1790 页 100% 覆盖，client `ca-pub-6473783239192829`
+- **AdSense**：3 个广告位/页（top + inline ×1-N + bottom），全站 1816 页 100% 覆盖，client `ca-pub-6473783239192829`
 - **Plausible Analytics**（待启用）：域名已绑定，但 Plausible.io 需注册付费 $9/mo
 - **Cloudflare Web Analytics**（备选）：免费，需在 CF 后台开站并取 beacon token
 

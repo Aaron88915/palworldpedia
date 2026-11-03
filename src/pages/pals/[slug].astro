@@ -15,6 +15,9 @@ export async function getStaticPaths() {
 }
 
 const { pal } = Astro.props as { pal: Pal };
+// 部分帕鲁（如泰拉瑞亚联动帕鲁）不在图鉴编号内，此时不显示编号
+const paldeckNo = pal.paldeckNo > 0 ? pal.paldeckNo : 0;
+const paldeckLabel = paldeckNo > 0 ? `#${paldeckNo.toString().padStart(3, '0')}` : '';
 
 // 计算 HP 等级标签
 const hpTier = pal.stats.hp >= 150 ? 'S' : pal.stats.hp >= 120 ? 'A' : pal.stats.hp >= 100 ? 'B' : 'C';
@@ -38,7 +41,9 @@ const schema = {
   gameItem: {
     '@type': 'Thing',
     name: pal.name.en,
-    description: `Pal #${pal.paldeckNo} in the Palworld Paldeck.`,
+    description: paldeckNo > 0
+      ? `Pal #${paldeckNo} in the Palworld Paldeck.`
+      : `${pal.name.en} in the Palworld Paldeck.`,
   },
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -54,8 +59,10 @@ const relatedPals = (palsData as Pal[])
 ---
 
 <Layout
-  title={`${pal.name.zh} (${pal.name.en}) - Pal #${pal.paldeckNo} 详细数据`}
-  description={`${pal.name.zh}（${pal.name.en}）是 Palworld 第 ${pal.paldeckNo} 号帕鲁，HP ${pal.stats.hp}、攻击力 ${pal.stats.attack.melee}、防御力 ${pal.stats.defense}。包含技能、词条、捕捉位置、掉落物、工作适配等完整数据。`}
+  title={paldeckNo > 0
+    ? `${pal.name.zh} (${pal.name.en}) - Pal #${paldeckNo} 详细数据`
+    : `${pal.name.zh} (${pal.name.en}) - 详细数据`}
+  description={`${pal.name.zh}（${pal.name.en}）是 Palworld ${paldeckNo > 0 ? `第 ${paldeckNo} 号` : ''}帕鲁，HP ${pal.stats.hp}、攻击力 ${pal.stats.attack.melee}、防御力 ${pal.stats.defense}。包含技能、词条、捕捉位置、掉落物、工作适配等完整数据。`}
   image={pal.image}
   schema={schema}
 >
@@ -73,7 +80,7 @@ const relatedPals = (palsData as Pal[])
     <header class="pal-header">
       <PalImage pal={pal} size="large" rounded />
       <div class="pal-header-info">
-        <div class="pal-header-no">#{pal.paldeckNo.toString().padStart(3, '0')}</div>
+        {paldeckLabel && <div class="pal-header-no">{paldeckLabel}</div>}
         <h1 class="pal-header-name">{pal.name.zh}</h1>
         <div class="pal-header-name-en">{pal.name.en}</div>
         <div class="pal-header-types">
@@ -246,7 +253,7 @@ const relatedPals = (palsData as Pal[])
     <section class="seo-text">
       <h2>关于 {pal.name.zh}</h2>
       <p>
-        {pal.name.zh}（{pal.name.en}）是 Palworld 中的第 {pal.paldeckNo} 号帕鲁，
+        {pal.name.zh}（{pal.name.en}）是 Palworld 中的{paldeckNo > 0 ? `第 ${paldeckNo} 号` : ''}帕鲁，
         属于 <strong>{pal.types.map((t) => PAL_TYPES.find((x) => x.id === t)?.zh).join(' / ')}</strong> 属性。
         HP 为 {pal.stats.hp}，攻击力 {pal.stats.attack.melee}，防御力 {pal.stats.defense}。
       </p>
@@ -264,7 +271,9 @@ const relatedPals = (palsData as Pal[])
         <div class="related-grid">
           {relatedPals.map((p) => (
             <a href={`/pals/${p.id}/`} class="related-card">
-              <div class="related-no">#{p.paldeckNo.toString().padStart(3, '0')}</div>
+              {p.paldeckNo > 0 && (
+                <div class="related-no">#{p.paldeckNo.toString().padStart(3, '0')}</div>
+              )}
               <div class="related-name">{p.name.zh}</div>
               <div class="related-name-en text-muted">{p.name.en}</div>
             </a>
